@@ -108,7 +108,7 @@ message MinGasPriceResponse {
 }
 
 message BlockRequest {
-    int64 height = 1;
+    uint64 height = 1;
 }
 message BlockResponse {
     string hash = 1;
@@ -155,7 +155,7 @@ message BlockResponse {
 }
 
 message MaxGasRequest {
-    int32 height = 1;
+    uint64 height = 1;
 }
 message MaxGasResponse {
     string max_gas = 3;
@@ -163,7 +163,7 @@ message MaxGasResponse {
 
 message AddressRequest {
     string address = 1;
-    int32 height = 2;
+    uint64 height = 2;
 }
 message AddressResponse {
     map<string, string> balance = 1;
@@ -172,7 +172,7 @@ message AddressResponse {
 
 message AddressesRequest {
     repeated string addresses = 1;
-    int32 height = 2;
+    uint64 height = 2;
 }
 message AddressesResponse {
     message Result {
@@ -185,7 +185,7 @@ message AddressesResponse {
 
 message CandidateRequest {
     string public_key = 1;
-    int32 height = 2;
+    uint64 height = 2;
 }
 message CandidateResponse {
     string reward_address = 1;
@@ -203,7 +203,7 @@ message CandidateResponse {
 }
 
 message CandidatesRequest {
-    int32 height = 1;
+    uint64 height = 1;
     bool include_stakes = 2;
 }
 message CandidatesResponse {
@@ -211,7 +211,7 @@ message CandidatesResponse {
 }
 
 message CoinInfoRequest {
-    int32 height = 1;
+    uint64 height = 1;
     string symbol = 2;
 }
 message CoinInfoResponse {
@@ -266,7 +266,7 @@ message EstimateCoinBuyRequest {
     string coin_to_buy = 1;
     string coin_to_sell = 2;
     string value_to_buy = 3;
-    int32 height = 4;
+    uint64 height = 4;
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
@@ -277,7 +277,7 @@ message EstimateCoinSellRequest {
     string coin_to_sell = 1;
     string coin_to_buy = 2;
     string value_to_sell = 3;
-    int32 height = 4;
+    uint64 height = 4;
 }
 message EstimateCoinSellResponse {
     string will_get = 1;
@@ -292,7 +292,7 @@ message EstimateCoinSellAllRequest {
     string coin_to_buy = 2;
     string value_to_sell = 3;
     uint64 gas_price = 4;
-    int32 height = 5;
+    uint64 height = 5;
 }
 
 message EstimateTxCommissionResponse {
@@ -300,11 +300,11 @@ message EstimateTxCommissionResponse {
 }
 message EstimateTxCommissionRequest {
     string tx = 1;
-    int32 height = 2;
+    uint64 height = 2;
 }
 
 message EventsRequest {
-    uint32 height = 1;
+    uint64 height = 1;
 }
 message EventsResponse {
     message Event {
@@ -316,7 +316,7 @@ message EventsResponse {
 
 message MissedBlocksRequest {
     string public_key = 1;
-    int32 height = 2;
+    uint64 height = 2;
 }
 message MissedBlocksResponse {
     string missed_blocks = 1;
@@ -334,7 +334,7 @@ message UnconfirmedTxsRequest {
 }
 
 message ValidatorsRequest {
-    int64 height = 1;
+    uint64 height = 1;
     int32 page = 2;
     int32 per_page = 3;
 }
@@ -349,7 +349,6 @@ message ValidatorsResponse {
 message SubscribeRequest {
     string query = 1;
 }
-
 message SubscribeResponse {
     string query = 1;
     google.protobuf.Struct data = 2;
@@ -360,6 +359,12 @@ message SubscribeResponse {
     repeated Event events = 3;
 }
 
+message HaltsRequest {
+    uint64 height = 1;
+}
+message HaltsResponse {
+    repeated string votes = 1;
+}
 
 service ApiService {
     rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse) {
@@ -368,6 +373,12 @@ service ApiService {
         };
     }
 
+
+    rpc Halts (HaltsRequest) returns (HaltsResponse) {
+        option (google.api.http) = {
+            get: "/halts"
+        };
+    }
     rpc Genesis (google.protobuf.Empty) returns (GenesisResponse) {
         option (google.api.http) = {
             get: "/genesis"
