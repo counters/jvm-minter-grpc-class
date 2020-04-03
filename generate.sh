@@ -5,14 +5,7 @@ cd "$(dirname "$0")" || exit
 protoc -I/usr/local/include -I. \
     -I"$GOPATH"/src \
     -I"$GOPATH"/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-    --go_out=plugins=grpc:. ./api.proto
-
-protoc -I/usr/local/include -I. \
-    -I"$GOPATH"/src \
-    -I"$GOPATH"/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-    --grpc-gateway_out=logtostderr=true:. ./api.proto
-
-protoc -I/usr/local/include -I. \
-    -I"$GOPATH"/src \
-    -I"$GOPATH"/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-    --swagger_out=logtostderr=true:. ./api.proto
+    -I"$GOPATH"/src/github.com/grpc-ecosystem/grpc-gateway \
+    --grpc-gateway_out=logtostderr=true:./api_pb \
+     --swagger_out=allow_merge=true,merge_file_name=api:. \
+     --go_out=plugins=grpc:./api_pb ./*.proto
