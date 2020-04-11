@@ -519,7 +519,7 @@
     },
     "/send_transaction": {
       "post": {
-        "operationId": "SendPostTransaction",
+        "operationId": "SendTransaction2",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -545,7 +545,7 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "operationId": "SendGetTransaction",
+        "operationId": "SendTransaction",
         "responses": {
           "200": {
             "description": "A successful response.",
