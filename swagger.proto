@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+import "protoc-gen-swagger/options/annotations.proto";
+
+package api_pb;
+
+option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
+    info: {
+        title: "Minter Node API v2"
+        description: ""
+        terms_of_service: ""
+        version: "1.1"
+        contact: {
+            name: "Klimov Sergey"
+            url: "https://github.com/klim0v"
+            email: "klim0v-sergey@yandex.ru"
+        };
+}
+;
+schemes
+:
+[
+HTTP
+,
+HTTPS
+,
+WS
+,
+WSS
+]
+consumes
+:
+"application/json"
+produces
+:
+"application/json"
+responses
+:
+{
+key
+:
+"404"
+value
+:
+{
+description
+:
+"Returned when the resource does not exist."
+schema
+:
+{
+json_schema
+:
+{
+type
+:
+STRING
+}
+;
+}
+;
+}
+;
+}
+;
+}
+;
