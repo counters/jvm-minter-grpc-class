@@ -1,8 +1,14 @@
 syntax = "proto3";
 
 import "protoc-gen-swagger/options/annotations.proto";
+import "google/rpc/status.proto";
 
 package api_pb;
+
+// fix warning: Import google/rpc/status.proto is unused.
+message _ {
+    google.rpc.Status _ = 1;
+}
 
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     info: {
@@ -15,53 +21,21 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
             url: "https://github.com/klim0v"
             email: "klim0v-sergey@yandex.ru"
         };
-}
-;
-schemes
-:
-[
-HTTP
-,
-HTTPS
-,
-WS
-,
-WSS
-]
-consumes
-:
-"application/json"
-produces
-:
-"application/json"
-responses
-:
-{
-key
-:
-"404"
-value
-:
-{
-description
-:
-"Returned when the resource does not exist."
-schema
-:
-{
-json_schema
-:
-{
-type
-:
-STRING
-}
-;
-}
-;
-}
-;
-}
-;
-}
-;
+    };
+    host: "minter-node-1.testnet.minter.network:8843"
+    schemes: [HTTP,HTTPS,WS,WSS]
+    consumes: "application/json"
+    produces: "application/json"
+    responses: {
+        key: "default"
+        value: {
+            description: ""
+            schema: {
+                json_schema: {
+                    ref: ".google.rpc.Status"
+                };
+            };
+        };
+    };
+};
+

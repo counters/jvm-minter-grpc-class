@@ -9,6 +9,7 @@
       "email": "klim0v-sergey@yandex.ru"
     }
   },
+  "host": "minter-node-1.testnet.minter.network:8843",
   "schemes": [
     "http",
     "https",
@@ -32,11 +33,10 @@
               "$ref": "#/definitions/api_pbAddressResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -70,11 +70,10 @@
               "$ref": "#/definitions/api_pbAddressesResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -112,11 +111,10 @@
               "$ref": "#/definitions/api_pbBlockResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -144,11 +142,10 @@
               "$ref": "#/definitions/api_pbCandidateResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -182,11 +179,10 @@
               "$ref": "#/definitions/api_pbCandidatesResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -221,11 +217,10 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -259,11 +254,10 @@
               "$ref": "#/definitions/api_pbEstimateCoinBuyResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -309,11 +303,10 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -359,11 +352,10 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellAllResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -416,11 +408,10 @@
               "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -454,11 +445,10 @@
               "$ref": "#/definitions/api_pbEventsResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -486,11 +476,10 @@
               "$ref": "#/definitions/api_pbGenesisResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -509,11 +498,10 @@
               "$ref": "#/definitions/api_pbHaltsResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -541,11 +529,10 @@
               "$ref": "#/definitions/api_pbMaxGasResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -573,11 +560,10 @@
               "$ref": "#/definitions/api_pbMinGasPriceResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -596,11 +582,10 @@
               "$ref": "#/definitions/api_pbMissedBlocksResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -634,11 +619,10 @@
               "$ref": "#/definitions/api_pbNetInfoResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -657,11 +641,10 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -690,11 +673,10 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -721,11 +703,10 @@
               "$ref": "#/definitions/api_pbStatusResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -744,11 +725,10 @@
               "$ref": "#/x-stream-definitions/api_pbSubscribeResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -775,11 +755,10 @@
               "$ref": "#/definitions/api_pbTransactionResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -806,11 +785,10 @@
               "$ref": "#/definitions/api_pbTransactionsResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -851,11 +829,10 @@
               "$ref": "#/definitions/api_pbUnconfirmedTxsResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -883,11 +860,10 @@
               "$ref": "#/definitions/api_pbValidatorsResponse"
             }
           },
-          "404": {
-            "description": "Returned when the resource does not exist.",
+          "default": {
+            "description": "",
             "schema": {
-              "type": "string",
-              "format": "string"
+              "$ref": "#/definitions/rpcStatus"
             }
           }
         },
@@ -1737,6 +1713,29 @@
       ],
       "default": "NULL_VALUE",
       "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code]."
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\n[google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client."
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          },
+          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use."
+        }
+      },
+      "description": "- Simple to use and understand for most users\n- Flexible enough to meet unexpected needs\n\n# Overview\n\nThe `Status` message contains three pieces of data: error code, error message,\nand error details. The error code should be an enum value of\n[google.rpc.Code][google.rpc.Code], but it may accept additional error codes if needed.  The\nerror message should be a developer-facing English message that helps\ndevelopers *understand* and *resolve* the error. If a localized user-facing\nerror message is needed, put the localized message in the error details or\nlocalize it in the client. The optional error details may contain arbitrary\ninformation about the error. There is a predefined set of error detail types\nin the package `google.rpc` that can be used for common error conditions.\n\n# Language mapping\n\nThe `Status` message is the logical representation of the error model, but it\nis not necessarily the actual wire format. When the `Status` message is\nexposed in different client libraries and different wire protocols, it can be\nmapped differently. For example, it will likely be mapped to some exceptions\nin Java, but more likely mapped to some error codes in C.\n\n# Other uses\n\nThe error model and the `Status` message can be used in a variety of\nenvironments, either with or without APIs, to provide a\nconsistent developer experience across different environments.\n\nExample uses of this error model include:\n\n- Partial errors. If a service needs to return partial errors to the client,\n    it may embed the `Status` in the normal response to indicate the partial\n    errors.\n\n- Workflow errors. A typical workflow has multiple steps. Each step may\n    have a `Status` message for error reporting.\n\n- Batch operations. If a client uses batch request and batch response, the\n    `Status` message should be used directly inside batch response, one for\n    each error sub-response.\n\n- Asynchronous operations. If an API call embeds asynchronous operation\n    results in its response, the status of those operations should be\n    represented directly using the `Status` message.\n\n- Logging. If some API errors are stored in logs, the message `Status` could\n    be used directly after any stripping needed for security/privacy reasons.",
+      "title": "The `Status` type defines a logical error model that is suitable for different\nprogramming environments, including REST APIs and RPC APIs. It is used by\n[gRPC](https://github.com/grpc). The error model is designed to be:"
     },
     "runtimeStreamError": {
       "type": "object",
