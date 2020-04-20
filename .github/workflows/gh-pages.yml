@@ -1,0 +1,41 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+        env:
+          RUNNER_TEMP: "abc"
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm install -g redoc-cli
+
+      - name: Build
+        run: redoc-cli bundle ./api.swagger.json && mkdir -p ./Output && mv redoc-static.html ./Output
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.5.5
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: klim0v/test-doc
+          publish_branch: master
+          publish_dir: ./Output
