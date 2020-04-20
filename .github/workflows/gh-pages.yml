@@ -30,12 +30,12 @@ jobs:
       - run: npm install -g redoc-cli
 
       - name: Build
-        run: redoc-cli bundle ./api.swagger.json && mkdir -p ./Output && mv redoc-static.html ./Output
+        run: redoc-cli bundle ./api.swagger.json && mkdir -p ./Output && mv redoc-static.html ./Output/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.5.5
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: klim0v/test-doc
+          external_repository: MinterTeam/node-gateway-api-v2-doc
           publish_branch: master
           publish_dir: ./Output
