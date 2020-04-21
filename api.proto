@@ -365,102 +365,121 @@ message HaltsResponse {
 }
 
 service ApiService {
+    //Subscribe returns a subscription for events by query.
     rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse) {
         option (google.api.http) = {
             get: "/subscribe"
         };
     }
-
+    //Halts
     rpc Halts (HaltsRequest) returns (HaltsResponse) {
         option (google.api.http) = {
             get: "/halts"
         };
     }
+    //Genesis returns genesis file.
     rpc Genesis (google.protobuf.Empty) returns (GenesisResponse) {
         option (google.api.http) = {
             get: "/genesis"
         };
     }
+    //MinGasPrice returns current min gas price.
     rpc MinGasPrice (google.protobuf.Empty) returns (MinGasPriceResponse) {
         option (google.api.http) = {
             get: "/min_gas_price"
         };
     }
+    //NetInfo returns network info
     rpc NetInfo (google.protobuf.Empty) returns (NetInfoResponse) {
         option (google.api.http) = {
             get: "/net_info"
         };
     }
+    //Status returns node status including pubkey, latest block.
     rpc Status (google.protobuf.Empty) returns (StatusResponse) {
         option (google.api.http) = {
             get: "/status"
         };
     }
+    //Address returns coins list, balance and transaction count of an address.
     rpc Address (AddressRequest) returns (AddressResponse) {
         option (google.api.http) = {
             get: "/address/{address}"
         };
     }
+    //Addresses returns list of addresses.
     rpc Addresses (AddressesRequest) returns (AddressesResponse) {
         option (google.api.http) = {
             get: "/addresses"
         };
     }
+    //Block returns block data at given height.
     rpc Block (BlockRequest) returns (BlockResponse) {
         option (google.api.http) = {
             get: "/block/{height}"
         };
     }
+    //Candidate returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.
     rpc Candidate (CandidateRequest) returns (CandidateResponse) {
         option (google.api.http) = {
             get: "/candidate/{public_key}"
         };
     }
+    //Candidates returns list of candidates.
     rpc Candidates (CandidatesRequest) returns (CandidatesResponse) {
         option (google.api.http) = {
             get: "/candidates"
         };
     }
+    //CoinInfo returns information about coin. Note: this method does not return information about base coins (MNT and BIP).
     rpc CoinInfo (CoinInfoRequest) returns (CoinInfoResponse) {
         option (google.api.http) = {
             get: "/coin_info/{symbol}"
         };
     }
+    //EstimateCoinBuy return estimate of buy coin transaction.
     rpc EstimateCoinBuy (EstimateCoinBuyRequest) returns (EstimateCoinBuyResponse) {
         option (google.api.http) = {
             get: "/estimate_coin_buy"
         };
     }
+    //EstimateCoinSell return estimate of sell coin transaction.
     rpc EstimateCoinSell (EstimateCoinSellRequest) returns (EstimateCoinSellResponse) {
         option (google.api.http) = {
             get: "/estimate_coin_sell"
         };
     }
+    //EstimateCoinSellAll return estimate of sell all coin transaction.
     rpc EstimateCoinSellAll (EstimateCoinSellAllRequest) returns (EstimateCoinSellAllResponse) {
         option (google.api.http) = {
             get: "/estimate_coin_sell_all"
         };
     }
+    //EstimateTxCommission return estimate of transaction.
     rpc EstimateTxCommission (EstimateTxCommissionRequest) returns (EstimateTxCommissionResponse) {
         option (google.api.http) = {
             get: "/estimate_tx_commission/{tx}"
         };
     }
+    //Events returns events at given height.
     rpc Events (EventsRequest) returns (EventsResponse) {
         option (google.api.http) = {
             get: "/events/{height}"
         };
     }
+    //MaxGas returns current max gas.
     rpc MaxGas (MaxGasRequest) returns (MaxGasResponse) {
         option (google.api.http) = {
             get: "/max_gas"
         };
     }
+    //MissedBlocks returns missed blocks by validator public key.
     rpc MissedBlocks (MissedBlocksRequest) returns (MissedBlocksResponse) {
         option (google.api.http) = {
             get: "/missed_blocks/{public_key}"
         };
     }
+    //SendTransaction returns the result of sending signed tx.
     rpc SendTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
         option (google.api.http) = {
             get: "/send_transaction/{tx}"
@@ -470,21 +489,25 @@ service ApiService {
             }
         };
     }
+    //Transaction returns transaction info.
     rpc Transaction (TransactionRequest) returns (TransactionResponse) {
         option (google.api.http) = {
             get: "/transaction/{hash}"
         };
     }
+    //Transactions return transactions by query.
     rpc Transactions (TransactionsRequest) returns (TransactionsResponse) {
         option (google.api.http) = {
             get: "/transactions"
         };
     }
+    //UnconfirmedTxs returns unconfirmed transactions.
     rpc UnconfirmedTxs (UnconfirmedTxsRequest) returns (UnconfirmedTxsResponse) {
         option (google.api.http) = {
             get: "/unconfirmed_txs"
         };
     }
+    //Validators returns list of active validators.
     rpc Validators (ValidatorsRequest) returns (ValidatorsResponse) {
         option (google.api.http) = {
             get: "/validators"

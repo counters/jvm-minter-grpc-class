@@ -5,11 +5,6 @@ import "google/rpc/status.proto";
 
 package api_pb;
 
-// fix warning: Import google/rpc/status.proto is unused.
-message _ {
-    google.rpc.Status _ = 1;
-}
-
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     info: {
         title: "Minter Node API v2"
