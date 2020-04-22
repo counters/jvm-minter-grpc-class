@@ -479,6 +479,12 @@ service ApiService {
             get: "/missed_blocks/{public_key}"
         };
     }
+    rpc SendGetTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
+        option deprecated = true;
+    }
+    rpc SendPostTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
+        option deprecated = true;
+    }
     //SendTransaction returns the result of sending signed tx.
     rpc SendTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
         option (google.api.http) = {
