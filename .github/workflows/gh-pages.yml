@@ -40,7 +40,7 @@ jobs:
         run: go list -f "{{ .Dir }} protobuf-import/src/{{ .Path }}" -m all | xargs -L1 -- ln -s
       - run: go generate
         env:
-          GOPATH: /home/runner/work/grpc-gateway-example/grpc-gateway-example/protobuf-import
+          GOPATH: /home/runner/work/node-grpc-gateway/node-grpc-gateway/protobuf-import
       - run: rm -rf protobuf-import
 
       - name: Commit changes
