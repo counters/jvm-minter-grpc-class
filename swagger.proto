@@ -8,7 +8,6 @@ package api_pb;
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     info: {
         title: "Minter Node API v2"
-        description: ""
         license: {
             name: "MIT"
             url: 'https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE'
@@ -20,7 +19,6 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
             email: "klim0v-sergey@yandex.ru"
         };
     };
-    host: "minter-node-1.testnet.minter.network:8843"
     schemes: [HTTP,HTTPS,WS,WSS]
     consumes: "application/json"
     produces: "application/json"
