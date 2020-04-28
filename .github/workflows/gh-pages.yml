@@ -51,7 +51,7 @@ jobs:
       - run: cp api.swagger.json docs/swagger.json
 
       - name: Generate static assets for OpenAPI UI
-         run: statik -m -f -src docs/
+        run: statik -m -f -src docs/
 
 #todo      - run: rm -rf docs
 
