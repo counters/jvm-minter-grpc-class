@@ -26,6 +26,7 @@ jobs:
           github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
           github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
           github.com/golang/protobuf/protoc-gen-go
+          github.com/rakyll/statik
 
       - run: set -emou pipefail
       - name: Set parent directory to hold all the symlinks
@@ -42,6 +43,17 @@ jobs:
         env:
           GOPATH: /home/runner/work/node-grpc-gateway/node-grpc-gateway/protobuf-import
       - run: rm -rf protobuf-import
+
+      - run: mkdir -p docs
+      - run: echo $HTML > docs/index.html
+        env:
+         HTML: "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Title</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css' /></head><body><div id='swagger-ui'></div></body><script src='https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js'></script><script>SwaggerUIBundle({url: 'swagger.json',dom_id: '#swagger-ui',presets: [SwaggerUIBundle.presets.apis,SwaggerUIBundle.SwaggerUIStandalonePreset]})</script></html>"
+      - run: cp api.swagger.json docs/swagger.json
+
+      - name: Generate static assets for OpenAPI UI
+         run: statik -m -f -src docs/
+
+#todo      - run: rm -rf docs
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
