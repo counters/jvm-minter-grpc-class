@@ -15,9 +15,7 @@
   },
   "schemes": [
     "http",
-    "https",
-    "ws",
-    "wss"
+    "https"
   ],
   "consumes": [
     "application/json"
