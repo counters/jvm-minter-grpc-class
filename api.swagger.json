@@ -13,7 +13,6 @@
       "url": "https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE"
     }
   },
-  "host": "minter-node-1.testnet.minter.network:8843",
   "schemes": [
     "http",
     "https",
