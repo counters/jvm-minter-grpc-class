@@ -3744,9 +3744,7 @@ func init() {
 	proto.RegisterType((*HaltsResponse)(nil), "api_pb.HaltsResponse")
 }
 
-func init() {
-	proto.RegisterFile("api.proto", fileDescriptor_00212fb1f9d3bf1c)
-}
+func init() { proto.RegisterFile("api.proto", fileDescriptor_00212fb1f9d3bf1c) }
 
 var fileDescriptor_00212fb1f9d3bf1c = []byte{
 	// 3531 bytes of a gzipped FileDescriptorProto
@@ -3975,11 +3973,11 @@ var fileDescriptor_00212fb1f9d3bf1c = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConnInterface
+var _ grpc.ClientConn
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion4
 
 // ApiServiceClient is the client API for ApiService service.
 //
@@ -4030,6 +4028,8 @@ type ApiServiceClient interface {
 	// Deprecated: Do not use.
 	SendPostTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
 	//SendTransaction returns the result of sending signed tx.
+	//To ensure that transaction was successfully committed to the blockchain,
+	//you need to find the transaction by the hash and ensure that the status code equals to 0.
 	SendTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
 	//Transaction returns transaction info.
 	Transaction(ctx context.Context, in *TransactionRequest, opts ...grpc.CallOption) (*TransactionResponse, error)
@@ -4042,10 +4042,10 @@ type ApiServiceClient interface {
 }
 
 type apiServiceClient struct {
-	cc grpc.ClientConnInterface
+	cc *grpc.ClientConn
 }
 
-func NewApiServiceClient(cc grpc.ClientConnInterface) ApiServiceClient {
+func NewApiServiceClient(cc *grpc.ClientConn) ApiServiceClient {
 	return &apiServiceClient{cc}
 }
 
@@ -4355,6 +4355,8 @@ type ApiServiceServer interface {
 	// Deprecated: Do not use.
 	SendPostTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
 	//SendTransaction returns the result of sending signed tx.
+	//To ensure that transaction was successfully committed to the blockchain,
+	//you need to find the transaction by the hash and ensure that the status code equals to 0.
 	SendTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
 	//Transaction returns transaction info.
 	Transaction(context.Context, *TransactionRequest) (*TransactionResponse, error)
