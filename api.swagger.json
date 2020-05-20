@@ -26,7 +26,6 @@
   "paths": {
     "/address/{address}": {
       "get": {
-        "summary": "Address returns coins list, balance and transaction count of an address.",
         "operationId": "Address",
         "responses": {
           "200": {
@@ -36,9 +35,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -64,7 +63,6 @@
     },
     "/addresses": {
       "get": {
-        "summary": "Addresses returns list of addresses.",
         "operationId": "Addresses",
         "responses": {
           "200": {
@@ -74,9 +72,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -106,7 +104,6 @@
     },
     "/block/{height}": {
       "get": {
-        "summary": "Block returns block data at given height.",
         "operationId": "Block",
         "responses": {
           "200": {
@@ -116,9 +113,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -138,7 +135,6 @@
     },
     "/candidate/{public_key}": {
       "get": {
-        "summary": "Candidate returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.",
         "operationId": "Candidate",
         "responses": {
           "200": {
@@ -148,9 +144,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -176,7 +172,6 @@
     },
     "/candidates": {
       "get": {
-        "summary": "Candidates returns list of candidates.",
         "operationId": "Candidates",
         "responses": {
           "200": {
@@ -186,9 +181,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -215,7 +210,6 @@
     },
     "/coin_info/{symbol}": {
       "get": {
-        "summary": "CoinInfo returns information about coin. Note: this method does not return information about base coins (MNT and BIP).",
         "operationId": "CoinInfo",
         "responses": {
           "200": {
@@ -225,9 +219,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -253,7 +247,6 @@
     },
     "/estimate_coin_buy": {
       "get": {
-        "summary": "EstimateCoinBuy return estimate of buy coin transaction.",
         "operationId": "EstimateCoinBuy",
         "responses": {
           "200": {
@@ -263,9 +256,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -303,7 +296,6 @@
     },
     "/estimate_coin_sell": {
       "get": {
-        "summary": "EstimateCoinSell return estimate of sell coin transaction.",
         "operationId": "EstimateCoinSell",
         "responses": {
           "200": {
@@ -313,9 +305,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -353,7 +345,6 @@
     },
     "/estimate_coin_sell_all": {
       "get": {
-        "summary": "EstimateCoinSellAll return estimate of sell all coin transaction.",
         "operationId": "EstimateCoinSellAll",
         "responses": {
           "200": {
@@ -363,9 +354,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -410,7 +401,6 @@
     },
     "/estimate_tx_commission/{tx}": {
       "get": {
-        "summary": "EstimateTxCommission return estimate of transaction.",
         "operationId": "EstimateTxCommission",
         "responses": {
           "200": {
@@ -420,9 +410,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -448,7 +438,6 @@
     },
     "/events/{height}": {
       "get": {
-        "summary": "Events returns events at given height.",
         "operationId": "Events",
         "responses": {
           "200": {
@@ -458,9 +447,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -480,7 +469,6 @@
     },
     "/genesis": {
       "get": {
-        "summary": "Genesis returns genesis file.",
         "operationId": "Genesis",
         "responses": {
           "200": {
@@ -490,9 +478,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -503,7 +491,6 @@
     },
     "/halts": {
       "get": {
-        "summary": "Halts",
         "operationId": "Halts",
         "responses": {
           "200": {
@@ -513,9 +500,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -535,7 +522,6 @@
     },
     "/max_gas": {
       "get": {
-        "summary": "MaxGas returns current max gas.",
         "operationId": "MaxGas",
         "responses": {
           "200": {
@@ -545,9 +531,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -567,7 +553,6 @@
     },
     "/min_gas_price": {
       "get": {
-        "summary": "MinGasPrice returns current min gas price.",
         "operationId": "MinGasPrice",
         "responses": {
           "200": {
@@ -577,9 +562,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -590,7 +575,6 @@
     },
     "/missed_blocks/{public_key}": {
       "get": {
-        "summary": "MissedBlocks returns missed blocks by validator public key.",
         "operationId": "MissedBlocks",
         "responses": {
           "200": {
@@ -600,9 +584,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -628,7 +612,6 @@
     },
     "/net_info": {
       "get": {
-        "summary": "NetInfo returns network info",
         "operationId": "NetInfo",
         "responses": {
           "200": {
@@ -638,9 +621,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -651,7 +634,6 @@
     },
     "/send_transaction": {
       "post": {
-        "summary": "SendTransaction returns the result of sending signed tx.\nTo ensure that transaction was successfully committed to the blockchain,\nyou need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction2",
         "responses": {
           "200": {
@@ -661,9 +643,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -684,7 +666,6 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "summary": "SendTransaction returns the result of sending signed tx.\nTo ensure that transaction was successfully committed to the blockchain,\nyou need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction",
         "responses": {
           "200": {
@@ -694,9 +675,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -715,7 +696,6 @@
     },
     "/status": {
       "get": {
-        "summary": "Status returns node status including pubkey, latest block.",
         "operationId": "Status",
         "responses": {
           "200": {
@@ -725,9 +705,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -738,19 +718,27 @@
     },
     "/subscribe": {
       "get": {
-        "summary": "Subscribe returns a subscription for events by query.",
         "operationId": "Subscribe",
         "responses": {
           "200": {
             "description": "A successful response.(streaming responses)",
             "schema": {
-              "$ref": "#/x-stream-definitions/api_pbSubscribeResponse"
+              "type": "object",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/api_pbSubscribeResponse"
+                },
+                "error": {
+                  "$ref": "#/definitions/runtimeStreamError"
+                }
+              },
+              "title": "Stream result of api_pbSubscribeResponse"
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -769,7 +757,6 @@
     },
     "/transaction/{hash}": {
       "get": {
-        "summary": "Transaction returns transaction info.",
         "operationId": "Transaction",
         "responses": {
           "200": {
@@ -779,9 +766,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -800,7 +787,6 @@
     },
     "/transactions": {
       "get": {
-        "summary": "Transactions return transactions by query.",
         "operationId": "Transactions",
         "responses": {
           "200": {
@@ -810,9 +796,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -845,7 +831,6 @@
     },
     "/unconfirmed_txs": {
       "get": {
-        "summary": "UnconfirmedTxs returns unconfirmed transactions.",
         "operationId": "UnconfirmedTxs",
         "responses": {
           "200": {
@@ -855,9 +840,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -877,7 +862,6 @@
     },
     "/validators": {
       "get": {
-        "summary": "Validators returns list of active validators.",
         "operationId": "Validators",
         "responses": {
           "200": {
@@ -887,9 +871,9 @@
             }
           },
           "default": {
-            "description": "",
+            "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/rpcStatus"
+              "$ref": "#/definitions/runtimeError"
             }
           }
         },
@@ -1740,28 +1724,26 @@
       "default": "NULL_VALUE",
       "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
     },
-    "rpcStatus": {
+    "runtimeError": {
       "type": "object",
       "properties": {
+        "error": {
+          "type": "string"
+        },
         "code": {
           "type": "integer",
-          "format": "int32",
-          "description": "The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code]."
+          "format": "int32"
         },
         "message": {
-          "type": "string",
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\n[google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client."
+          "type": "string"
         },
         "details": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/protobufAny"
-          },
-          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use."
+          }
         }
-      },
-      "description": "- Simple to use and understand for most users\n- Flexible enough to meet unexpected needs\n\n# Overview\n\nThe `Status` message contains three pieces of data: error code, error message,\nand error details. The error code should be an enum value of\n[google.rpc.Code][google.rpc.Code], but it may accept additional error codes if needed.  The\nerror message should be a developer-facing English message that helps\ndevelopers *understand* and *resolve* the error. If a localized user-facing\nerror message is needed, put the localized message in the error details or\nlocalize it in the client. The optional error details may contain arbitrary\ninformation about the error. There is a predefined set of error detail types\nin the package `google.rpc` that can be used for common error conditions.\n\n# Language mapping\n\nThe `Status` message is the logical representation of the error model, but it\nis not necessarily the actual wire format. When the `Status` message is\nexposed in different client libraries and different wire protocols, it can be\nmapped differently. For example, it will likely be mapped to some exceptions\nin Java, but more likely mapped to some error codes in C.\n\n# Other uses\n\nThe error model and the `Status` message can be used in a variety of\nenvironments, either with or without APIs, to provide a\nconsistent developer experience across different environments.\n\nExample uses of this error model include:\n\n- Partial errors. If a service needs to return partial errors to the client,\n    it may embed the `Status` in the normal response to indicate the partial\n    errors.\n\n- Workflow errors. A typical workflow has multiple steps. Each step may\n    have a `Status` message for error reporting.\n\n- Batch operations. If a client uses batch request and batch response, the\n    `Status` message should be used directly inside batch response, one for\n    each error sub-response.\n\n- Asynchronous operations. If an API call embeds asynchronous operation\n    results in its response, the status of those operations should be\n    represented directly using the `Status` message.\n\n- Logging. If some API errors are stored in logs, the message `Status` could\n    be used directly after any stripping needed for security/privacy reasons.",
-      "title": "The `Status` type defines a logical error model that is suitable for different\nprogramming environments, including REST APIs and RPC APIs. It is used by\n[gRPC](https://github.com/grpc). The error model is designed to be:"
+      }
     },
     "runtimeStreamError": {
       "type": "object",
@@ -1787,20 +1769,6 @@
           }
         }
       }
-    }
-  },
-  "x-stream-definitions": {
-    "api_pbSubscribeResponse": {
-      "type": "object",
-      "properties": {
-        "result": {
-          "$ref": "#/definitions/api_pbSubscribeResponse"
-        },
-        "error": {
-          "$ref": "#/definitions/runtimeStreamError"
-        }
-      },
-      "title": "Stream result of api_pbSubscribeResponse"
     }
   }
 }
