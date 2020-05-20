@@ -53,8 +53,6 @@ jobs:
       - name: Generate static assets for OpenAPI UI
         run: statik -m -f -src docs/
 
-      - run: rm -rf docs
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
