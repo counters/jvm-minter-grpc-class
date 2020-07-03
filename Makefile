@@ -1,9 +1,13 @@
 all:
-			mkdir -p "api_pb"
-			protoc -I/usr/local/include -I. \
-				-I${GOPATH}/src \
-				-I${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-				-I${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway \
-				--grpc-gateway_out=logtostderr=true:./api_pb \
-				--swagger_out=allow_merge=true,merge_file_name=api:. \
-				--go_out=plugins=grpc:./api_pb ./*.proto
+	go mod tidy
+	go install \
+		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
+		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
+		github.com/golang/protobuf/protoc-gen-go \
+		github.com/rakyll/statik
+	mkdir -p api_pb
+	protoc -I. \
+		--grpc-gateway_out=logtostderr=true:./api_pb \
+		--swagger_out=allow_merge=true,merge_file_name=api:./docs \
+		--go_out=plugins=grpc:./api_pb ./*.proto
+	statik -m -f -src docs/

@@ -5,7 +5,7 @@
     "version": "1.1",
     "contact": {
       "name": "Klimov Sergey",
-      "url": "https://github.com/klim0v",
+      "url": "https://klim0v.github.io/",
       "email": "klim0v-sergey@yandex.ru"
     },
     "license": {
@@ -26,7 +26,7 @@
   "paths": {
     "/address/{address}": {
       "get": {
-        "operationId": "Address",
+        "operationId": "ApiService_Address",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -54,6 +54,13 @@
             "required": false,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "delegated",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "format": "boolean"
           }
         ],
         "tags": [
@@ -63,7 +70,7 @@
     },
     "/addresses": {
       "get": {
-        "operationId": "Addresses",
+        "operationId": "ApiService_Addresses",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -95,6 +102,13 @@
             "required": false,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "delegated",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "format": "boolean"
           }
         ],
         "tags": [
@@ -104,7 +118,7 @@
     },
     "/block/{height}": {
       "get": {
-        "operationId": "Block",
+        "operationId": "ApiService_Block",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -126,6 +140,25 @@
             "required": true,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "transactions",
+                "missed",
+                "block_reward",
+                "size",
+                "proposer",
+                "validators",
+                "evidence"
+              ]
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -135,7 +168,7 @@
     },
     "/candidate/{public_key}": {
       "get": {
-        "operationId": "Candidate",
+        "operationId": "ApiService_Candidate",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -172,7 +205,7 @@
     },
     "/candidates": {
       "get": {
-        "operationId": "Candidates",
+        "operationId": "ApiService_Candidates",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -201,6 +234,19 @@
             "required": false,
             "type": "boolean",
             "format": "boolean"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "_",
+              "CandidateOff",
+              "CandidateOn",
+              "ValidatorOn"
+            ],
+            "default": "_"
           }
         ],
         "tags": [
@@ -210,7 +256,7 @@
     },
     "/coin_info/{symbol}": {
       "get": {
-        "operationId": "CoinInfo",
+        "operationId": "ApiService_CoinInfo",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -247,7 +293,7 @@
     },
     "/estimate_coin_buy": {
       "get": {
-        "operationId": "EstimateCoinBuy",
+        "operationId": "ApiService_EstimateCoinBuy",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -296,7 +342,7 @@
     },
     "/estimate_coin_sell": {
       "get": {
-        "operationId": "EstimateCoinSell",
+        "operationId": "ApiService_EstimateCoinSell",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -345,7 +391,7 @@
     },
     "/estimate_coin_sell_all": {
       "get": {
-        "operationId": "EstimateCoinSellAll",
+        "operationId": "ApiService_EstimateCoinSellAll",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -399,9 +445,90 @@
         ]
       }
     },
+    "/estimate_tx_commission": {
+      "get": {
+        "operationId": "ApiService_EstimateTxCommission2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tx",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "data.gas_coin",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "data.type",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "_",
+              "Send",
+              "SellCoin",
+              "SellAllCoin",
+              "BuyCoin",
+              "CreateCoin",
+              "DeclareCandidacy",
+              "Delegate",
+              "Unbond",
+              "RedeemCheck",
+              "SetCandidateOnline",
+              "SetCandidateOffline",
+              "CreateMultisig",
+              "Multisend",
+              "EditCandidate"
+            ],
+            "default": "_"
+          },
+          {
+            "name": "data.payload",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "data.mtxs",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/estimate_tx_commission/{tx}": {
       "get": {
-        "operationId": "EstimateTxCommission",
+        "operationId": "ApiService_EstimateTxCommission",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -424,6 +551,50 @@
             "type": "string"
           },
           {
+            "name": "data.gas_coin",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "data.type",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "_",
+              "Send",
+              "SellCoin",
+              "SellAllCoin",
+              "BuyCoin",
+              "CreateCoin",
+              "DeclareCandidacy",
+              "Delegate",
+              "Unbond",
+              "RedeemCheck",
+              "SetCandidateOnline",
+              "SetCandidateOffline",
+              "CreateMultisig",
+              "Multisend",
+              "EditCandidate"
+            ],
+            "default": "_"
+          },
+          {
+            "name": "data.payload",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "data.mtxs",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
             "name": "height",
             "in": "query",
             "required": false,
@@ -438,7 +609,7 @@
     },
     "/events/{height}": {
       "get": {
-        "operationId": "Events",
+        "operationId": "ApiService_Events",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -460,6 +631,52 @@
             "required": true,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
+    "/frozen": {
+      "get": {
+        "operationId": "ApiService_Frozen",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/api_pbFrozenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "address",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coin",
+            "in": "query",
+            "required": false,
+            "type": "string"
           }
         ],
         "tags": [
@@ -469,7 +686,7 @@
     },
     "/genesis": {
       "get": {
-        "operationId": "Genesis",
+        "operationId": "ApiService_Genesis",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -491,7 +708,7 @@
     },
     "/halts": {
       "get": {
-        "operationId": "Halts",
+        "operationId": "ApiService_Halts",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -522,7 +739,7 @@
     },
     "/max_gas": {
       "get": {
-        "operationId": "MaxGas",
+        "operationId": "ApiService_MaxGas",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -553,7 +770,7 @@
     },
     "/min_gas_price": {
       "get": {
-        "operationId": "MinGasPrice",
+        "operationId": "ApiService_MinGasPrice",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -575,7 +792,7 @@
     },
     "/missed_blocks/{public_key}": {
       "get": {
-        "operationId": "MissedBlocks",
+        "operationId": "ApiService_MissedBlocks",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -612,7 +829,7 @@
     },
     "/net_info": {
       "get": {
-        "operationId": "NetInfo",
+        "operationId": "ApiService_NetInfo",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -634,7 +851,7 @@
     },
     "/send_transaction": {
       "post": {
-        "operationId": "SendTransaction2",
+        "operationId": "ApiService_SendTransaction2",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -666,7 +883,7 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "operationId": "SendTransaction",
+        "operationId": "ApiService_SendTransaction",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -694,9 +911,58 @@
         ]
       }
     },
+    "/stakes": {
+      "get": {
+        "operationId": "ApiService_Stakes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/api_pbStakesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "public_key",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coin",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/status": {
       "get": {
-        "operationId": "Status",
+        "operationId": "ApiService_Status",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -718,7 +984,7 @@
     },
     "/subscribe": {
       "get": {
-        "operationId": "Subscribe",
+        "operationId": "ApiService_Subscribe",
         "responses": {
           "200": {
             "description": "A successful response.(streaming responses)",
@@ -757,7 +1023,7 @@
     },
     "/transaction/{hash}": {
       "get": {
-        "operationId": "Transaction",
+        "operationId": "ApiService_Transaction",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -787,7 +1053,7 @@
     },
     "/transactions": {
       "get": {
-        "operationId": "Transactions",
+        "operationId": "ApiService_Transactions",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -831,7 +1097,7 @@
     },
     "/unconfirmed_txs": {
       "get": {
-        "operationId": "UnconfirmedTxs",
+        "operationId": "ApiService_UnconfirmedTxs",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -862,7 +1128,7 @@
     },
     "/validators": {
       "get": {
-        "operationId": "Validators",
+        "operationId": "ApiService_Validators",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -907,6 +1173,19 @@
     }
   },
   "definitions": {
+    "BlockRequestField": {
+      "type": "string",
+      "enum": [
+        "transactions",
+        "missed",
+        "block_reward",
+        "size",
+        "proposer",
+        "validators",
+        "evidence"
+      ],
+      "default": "transactions"
+    },
     "BlockResponseEvidenceEvidence": {
       "type": "object",
       "properties": {
@@ -972,23 +1251,6 @@
           "type": "string"
         },
         "log": {
-          "type": "string"
-        }
-      }
-    },
-    "CandidateResponseStake": {
-      "type": "object",
-      "properties": {
-        "owner": {
-          "type": "string"
-        },
-        "coin": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        },
-        "bip_value": {
           "type": "string"
         }
       }
@@ -1068,6 +1330,66 @@
           "type": "string"
         },
         "time_iota_ms": {
+          "type": "string"
+        }
+      }
+    },
+    "EstimateTxCommissionRequestTransactionData": {
+      "type": "object",
+      "properties": {
+        "gas_coin": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/EstimateTxCommissionRequestTransactionDataType"
+        },
+        "payload": {
+          "type": "string",
+          "format": "byte"
+        },
+        "mtxs": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "EstimateTxCommissionRequestTransactionDataType": {
+      "type": "string",
+      "enum": [
+        "_",
+        "Send",
+        "SellCoin",
+        "SellAllCoin",
+        "BuyCoin",
+        "CreateCoin",
+        "DeclareCandidacy",
+        "Delegate",
+        "Unbond",
+        "RedeemCheck",
+        "SetCandidateOnline",
+        "SetCandidateOffline",
+        "CreateMultisig",
+        "Multisend",
+        "EditCandidate"
+      ],
+      "default": "_"
+    },
+    "FrozenResponseFrozen": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "candidate_key": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string"
+        },
+        "value": {
           "type": "string"
         }
       }
@@ -1171,16 +1493,56 @@
         }
       }
     },
+    "api_pbAddressBalance": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "api_pbAddressDelegatedBalance": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        },
+        "delegate_bip_value": {
+          "type": "string"
+        }
+      }
+    },
     "api_pbAddressResponse": {
       "type": "object",
       "properties": {
         "balance": {
           "type": "object",
           "additionalProperties": {
-            "type": "string"
+            "$ref": "#/definitions/api_pbAddressBalance"
+          }
+        },
+        "delegated": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/api_pbAddressDelegatedBalance"
+          }
+        },
+        "total": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
         "transactions_count": {
+          "type": "string"
+        },
+        "bip_value": {
           "type": "string"
         }
       }
@@ -1189,8 +1551,8 @@
       "type": "object",
       "properties": {
         "addresses": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "$ref": "#/definitions/api_pbAddressesResponseResult"
           }
         }
@@ -1199,16 +1561,28 @@
     "api_pbAddressesResponseResult": {
       "type": "object",
       "properties": {
-        "address": {
-          "type": "string"
-        },
         "balance": {
           "type": "object",
           "additionalProperties": {
-            "type": "string"
+            "$ref": "#/definitions/api_pbAddressBalance"
+          }
+        },
+        "delegated": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/api_pbAddressDelegatedBalance"
+          }
+        },
+        "total": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
         "transactions_count": {
+          "type": "string"
+        },
+        "bip_value": {
           "type": "string"
         }
       }
@@ -1251,6 +1625,12 @@
         },
         "evidence": {
           "$ref": "#/definitions/api_pbBlockResponseEvidence"
+        },
+        "missed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1292,16 +1672,52 @@
         "commission": {
           "type": "string"
         },
+        "used_slots": {
+          "type": "string"
+        },
+        "uniq_users": {
+          "type": "string"
+        },
+        "min_stake": {
+          "type": "string"
+        },
         "stakes": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CandidateResponseStake"
+            "$ref": "#/definitions/api_pbCandidateResponseStake"
           }
         },
         "status": {
           "type": "string"
         }
       }
+    },
+    "api_pbCandidateResponseStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "api_pbCandidateStatus": {
+      "type": "string",
+      "enum": [
+        "_",
+        "CandidateOff",
+        "CandidateOn",
+        "ValidatorOn"
+      ],
+      "default": "_"
     },
     "api_pbCandidatesResponse": {
       "type": "object",
@@ -1391,6 +1807,17 @@
         },
         "value": {
           "type": "object"
+        }
+      }
+    },
+    "api_pbFrozenResponse": {
+      "type": "object",
+      "properties": {
+        "frozen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FrozenResponseFrozen"
+          }
         }
       }
     },
@@ -1530,6 +1957,37 @@
         }
       }
     },
+    "api_pbStakesResponse": {
+      "type": "object",
+      "properties": {
+        "stakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/api_pbStakesResponseStake"
+          }
+        }
+      }
+    },
+    "api_pbStakesResponseStake": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "pub_key": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
     "api_pbStatusResponse": {
       "type": "object",
       "properties": {
@@ -1549,6 +2007,9 @@
           "type": "string"
         },
         "keep_last_states": {
+          "type": "string"
+        },
+        "total_slashed": {
           "type": "string"
         },
         "catching_up": {

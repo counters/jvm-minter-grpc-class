@@ -6,6 +6,8 @@ import "google/protobuf/struct.proto";
 
 package api_pb;
 
+option go_package = ".;api_pb";
+
 message NodeInfo {
     message ProtocolVersion {
         string p2p = 3;
@@ -72,6 +74,7 @@ message StatusResponse {
     string latest_block_height = 3;
     string latest_block_time = 4;
     string keep_last_states = 5;
+    string total_slashed = 10;
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
@@ -107,6 +110,16 @@ message MinGasPriceResponse {
 
 message BlockRequest {
     uint64 height = 1;
+    enum Field {
+        transactions = 0;
+        missed = 1;
+        block_reward = 2;
+        size = 3;
+        proposer = 4;
+        validators = 5;
+        evidence = 6;
+    }
+    repeated Field fields = 2;
 }
 message BlockResponse {
     string hash = 1;
@@ -150,6 +163,7 @@ message BlockResponse {
         repeated Evidence evidence = 1;
     }
     Evidence evidence = 11;
+    repeated string missed = 12;
 }
 
 message MaxGasRequest {
@@ -162,25 +176,50 @@ message MaxGasResponse {
 message AddressRequest {
     string address = 1;
     uint64 height = 2;
+    bool delegated = 4;
+    reserved "frozen", "total";
+}
+message AddressBalance {
+    string value = 2;
+    string bip_value = 3;
+}
+
+message AddressDelegatedBalance {
+    string value = 2;
+    string bip_value = 3;
+    string delegate_bip_value = 4;
 }
 message AddressResponse {
-    map<string, string> balance = 1;
+    map<string, AddressBalance> balance = 1;
+    map<string, AddressDelegatedBalance> delegated = 3;
+    map<string, AddressBalance> total = 4;
     string transactions_count = 2;
+    string bip_value = 5;
 }
 
 message AddressesRequest {
     repeated string addresses = 1;
     uint64 height = 2;
+    bool delegated = 4;
+    reserved "frozen", "total";
 }
 message AddressesResponse {
     message Result {
-        string address = 1;
-        map<string, string> balance = 2;
+        map<string, AddressBalance> balance = 2;
+        map<string, AddressDelegatedBalance> delegated = 6;
+        map<string, AddressBalance> total = 4;
         string transactions_count = 3;
+        string bip_value = 5;
     }
-    repeated Result addresses = 3;
+    map<string, Result> addresses = 3;
 }
 
+enum CandidateStatus {
+    _ = 0;
+    CandidateOff = 1;
+    CandidateOn = 2;
+    ValidatorOn = 3;
+}
 message CandidateRequest {
     string public_key = 1;
     uint64 height = 2;
@@ -190,6 +229,9 @@ message CandidateResponse {
     string total_stake = 2;
     string public_key = 3;
     string commission = 4;
+    string used_slots = 7;
+    string uniq_users = 8;
+    string min_stake = 9;
     message Stake {
         string owner = 1;
         string coin = 2;
@@ -203,6 +245,8 @@ message CandidateResponse {
 message CandidatesRequest {
     uint64 height = 1;
     bool include_stakes = 2;
+    CandidateStatus status = 3;
+
 }
 message CandidatesResponse {
     repeated CandidateResponse candidates = 3;
@@ -297,12 +341,39 @@ message EstimateTxCommissionResponse {
     string commission = 1;
 }
 message EstimateTxCommissionRequest {
-    string tx = 1;
+    message TransactionData {
+        string gas_coin = 3;
+        enum Type {
+            _ = 0;
+            Send = 1;
+            SellCoin = 2;
+            SellAllCoin = 3;
+            BuyCoin = 4;
+            CreateCoin = 5;
+            DeclareCandidacy = 6;
+            Delegate = 7;
+            Unbond = 8;
+            RedeemCheck = 9;
+            SetCandidateOnline = 10;
+            SetCandidateOffline = 11;
+            CreateMultisig = 12;
+            Multisend = 13;
+            EditCandidate = 14;
+        }
+        Type type = 4;
+        bytes payload = 5;
+        int64 mtxs = 6;
+    }
+    oneof Transaction {
+        string tx = 1;
+        TransactionData data = 3;
+    }
     uint64 height = 2;
 }
 
 message EventsRequest {
     uint64 height = 1;
+    repeated string search = 2;
 }
 message EventsResponse {
     message Event {
@@ -362,6 +433,38 @@ message HaltsRequest {
 }
 message HaltsResponse {
     repeated string votes = 1;
+}
+
+message FrozenRequest {
+    string address = 1;
+    string coin = 2;
+}
+message FrozenResponse {
+    message Frozen {
+        string height = 1;
+        string address = 2;
+        string candidate_key = 3;
+        string coin = 4;
+        string value = 5;
+    }
+    repeated Frozen frozen = 1;
+}
+
+message StakesRequest {
+    string public_key = 1;
+    string coin = 2;
+    string address = 3;
+    uint64 height = 4;
+}
+message StakesResponse {
+    message Stake {
+        string address = 1;
+        string pub_key = 2;
+        string coin = 3;
+        string value = 4;
+        string bip_value = 5;
+    }
+    repeated Stake stakes = 1;
 }
 
 service ApiService {
@@ -459,6 +562,9 @@ service ApiService {
     rpc EstimateTxCommission (EstimateTxCommissionRequest) returns (EstimateTxCommissionResponse) {
         option (google.api.http) = {
             get: "/estimate_tx_commission/{tx}"
+            additional_bindings {
+                get: "/estimate_tx_commission"
+            }
         };
     }
     //Events returns events at given height.
@@ -478,12 +584,6 @@ service ApiService {
         option (google.api.http) = {
             get: "/missed_blocks/{public_key}"
         };
-    }
-    rpc SendGetTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
-        option deprecated = true;
-    }
-    rpc SendPostTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
-        option deprecated = true;
     }
     //SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
     rpc SendTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
@@ -518,5 +618,17 @@ service ApiService {
         option (google.api.http) = {
             get: "/validators"
         };
+    }
+    //Validators returns frozen balance.
+    rpc Frozen (FrozenRequest) returns (FrozenResponse) {
+        option (google.api.http) = {
+            get: "/frozen"
+        };
+    }
+    //Stakes
+    rpc Stakes (StakesRequest) returns (StakesResponse) {
+        option (google.api.http) = {
+                get: "/stakes"
+            };
     }
 }

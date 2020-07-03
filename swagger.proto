@@ -1,9 +1,10 @@
 syntax = "proto3";
 
 import "protoc-gen-swagger/options/annotations.proto";
-import "google/rpc/status.proto";
 
 package api_pb;
+
+option go_package = ".;api_pb";
 
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     info: {
@@ -15,23 +16,12 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
         version: "1.1"
         contact: {
             name: "Klimov Sergey"
-            url: "https://github.com/klim0v"
+            url: "https://klim0v.github.io/"
             email: "klim0v-sergey@yandex.ru"
         };
     };
     schemes: [HTTP,HTTPS]
     consumes: "application/json"
     produces: "application/json"
-    responses: {
-        key: "default"
-        value: {
-            description: ""
-            schema: {
-                json_schema: {
-                    ref: ".google.rpc.Status"
-                };
-            };
-        };
-    };
 };
 

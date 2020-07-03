@@ -1,9 +1,6 @@
 name: github pages
 
-on:
-  push:
-    branches:
-      - master
+on: release
 
 jobs:
   deploy:
@@ -11,59 +8,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Protoc
-        uses: arduino/setup-protoc@master
-        with:
-          version: '3.x'
-
-      - uses: actions/setup-go@v2
-        with:
-          go-version: '^1.14.0'
-
-      - run: go mod tidy
-      - run: go install
-          github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
-          github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
-          github.com/golang/protobuf/protoc-gen-go
-          github.com/rakyll/statik
-
-      - run: set -emou pipefail
-      - name: Set parent directory to hold all the symlinks
-        run: mkdir -p "protobuf-import"
-      - name: Remove any existing symlinks & empty directories
-        run: find "protobuf-import" -type l -delete && find "protobuf-import" -type d -empty -delete
-      - name: Download all the required dependencies
-        run: go mod download
-      - name: Get all the modules we use and create required directory structure
-        run: go list -f "protobuf-import/src/{{ .Path }}" -m all | xargs -L1 dirname | sort | uniq | xargs mkdir -p
-      - name: Create symlinks
-        run: go list -f "{{ .Dir }} protobuf-import/src/{{ .Path }}" -m all | xargs -L1 -- ln -s
-      - run: go generate
-        env:
-          GOPATH: /home/runner/work/node-grpc-gateway/node-grpc-gateway/protobuf-import
-      - run: rm -rf protobuf-import
-
-      - run: mkdir -p docs
-      - run: echo $HTML > docs/index.html
-        env:
-         HTML: "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Minter Node API v2</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css' /></head><body><div id='swagger-ui'></div></body><script src='https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js'></script><script>SwaggerUIBundle({url: 'swagger.json',dom_id: '#swagger-ui',presets: [SwaggerUIBundle.presets.apis,SwaggerUIBundle.SwaggerUIStandalonePreset]})</script></html>"
-      - run: cp api.swagger.json docs/swagger.json
-
-      - name: Generate static assets for OpenAPI UI
-        run: statik -m -f -src docs/
-
-      - run: rm -rf docs
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v4
-        with:
-          author_name: Github Actions
-          author_email: klim0v-sergey@yandex.ru
-          message: "generate files"
-          add: "."
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v1
