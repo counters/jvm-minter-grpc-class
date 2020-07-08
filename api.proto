@@ -628,7 +628,7 @@ service ApiService {
     //Stakes
     rpc Stakes (StakesRequest) returns (StakesResponse) {
         option (google.api.http) = {
-                get: "/stakes"
+                get: "/stakes/{public_key}"
             };
     }
 }

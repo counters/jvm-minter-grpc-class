@@ -1221,12 +1221,30 @@ func local_request_ApiService_Frozen_0(ctx context.Context, marshaler runtime.Ma
 }
 
 var (
-	filter_ApiService_Stakes_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
+	filter_ApiService_Stakes_0 = &utilities.DoubleArray{Encoding: map[string]int{"public_key": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
 )
 
 func request_ApiService_Stakes_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq StakesRequest
 	var metadata runtime.ServerMetadata
+
+	var (
+		val string
+		ok  bool
+		err error
+		_   = err
+	)
+
+	val, ok = pathParams["public_key"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "public_key")
+	}
+
+	protoReq.PublicKey, err = runtime.String(val)
+
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "public_key", err)
+	}
 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
@@ -1243,6 +1261,24 @@ func request_ApiService_Stakes_0(ctx context.Context, marshaler runtime.Marshale
 func local_request_ApiService_Stakes_0(ctx context.Context, marshaler runtime.Marshaler, server ApiServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq StakesRequest
 	var metadata runtime.ServerMetadata
+
+	var (
+		val string
+		ok  bool
+		err error
+		_   = err
+	)
+
+	val, ok = pathParams["public_key"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "public_key")
+	}
+
+	protoReq.PublicKey, err = runtime.String(val)
+
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "public_key", err)
+	}
 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
@@ -2467,7 +2503,7 @@ var (
 
 	pattern_ApiService_Frozen_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"frozen"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_ApiService_Stakes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"stakes"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_ApiService_Stakes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"stakes", "public_key"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

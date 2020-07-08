@@ -911,7 +911,7 @@
         ]
       }
     },
-    "/stakes": {
+    "/stakes/{public_key}": {
       "get": {
         "operationId": "ApiService_Stakes",
         "responses": {
@@ -931,8 +931,8 @@
         "parameters": [
           {
             "name": "public_key",
-            "in": "query",
-            "required": false,
+            "in": "path",
+            "required": true,
             "type": "string"
           },
           {
