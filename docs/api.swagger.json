@@ -310,16 +310,18 @@
         },
         "parameters": [
           {
-            "name": "coin_to_buy",
+            "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
-            "name": "coin_to_sell",
+            "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
             "name": "value_to_buy",
@@ -359,16 +361,18 @@
         },
         "parameters": [
           {
-            "name": "coin_to_sell",
+            "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
-            "name": "coin_to_buy",
+            "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
             "name": "value_to_sell",
@@ -408,16 +412,18 @@
         },
         "parameters": [
           {
-            "name": "coin_to_sell",
+            "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
-            "name": "coin_to_buy",
+            "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
             "name": "value_to_sell",
@@ -470,10 +476,11 @@
             "type": "string"
           },
           {
-            "name": "data.gas_coin",
+            "name": "data.gas_coin_id",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
             "name": "data.type",
@@ -495,7 +502,9 @@
               "SetCandidateOffline",
               "CreateMultisig",
               "Multisend",
-              "EditCandidate"
+              "EditCandidate",
+              "RecreateCoin",
+              "ChangeOwner"
             ],
             "default": "_"
           },
@@ -551,10 +560,11 @@
             "type": "string"
           },
           {
-            "name": "data.gas_coin",
+            "name": "data.gas_coin_id",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           },
           {
             "name": "data.type",
@@ -576,7 +586,9 @@
               "SetCandidateOffline",
               "CreateMultisig",
               "Multisend",
-              "EditCandidate"
+              "EditCandidate",
+              "RecreateCoin",
+              "ChangeOwner"
             ],
             "default": "_"
           },
@@ -1337,8 +1349,9 @@
     "EstimateTxCommissionRequestTransactionData": {
       "type": "object",
       "properties": {
-        "gas_coin": {
-          "type": "string"
+        "gas_coin_id": {
+          "type": "integer",
+          "format": "int64"
         },
         "type": {
           "$ref": "#/definitions/EstimateTxCommissionRequestTransactionDataType"
@@ -1370,7 +1383,9 @@
         "SetCandidateOffline",
         "CreateMultisig",
         "Multisend",
-        "EditCandidate"
+        "EditCandidate",
+        "RecreateCoin",
+        "ChangeOwner"
       ],
       "default": "_"
     },
@@ -1496,6 +1511,9 @@
     "api_pbAddressBalance": {
       "type": "object",
       "properties": {
+        "coin": {
+          "$ref": "#/definitions/api_pbCoin"
+        },
         "value": {
           "type": "string"
         },
@@ -1507,6 +1525,9 @@
     "api_pbAddressDelegatedBalance": {
       "type": "object",
       "properties": {
+        "coin": {
+          "$ref": "#/definitions/api_pbCoin"
+        },
         "value": {
           "type": "string"
         },
@@ -1522,20 +1543,20 @@
       "type": "object",
       "properties": {
         "balance": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
         "delegated": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressDelegatedBalance"
           }
         },
         "total": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
@@ -1562,20 +1583,20 @@
       "type": "object",
       "properties": {
         "balance": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
         "delegated": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressDelegatedBalance"
           }
         },
         "total": {
-          "type": "object",
-          "additionalProperties": {
+          "type": "array",
+          "items": {
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
@@ -1699,7 +1720,7 @@
           "type": "string"
         },
         "coin": {
-          "type": "string"
+          "$ref": "#/definitions/api_pbCoin"
         },
         "value": {
           "type": "string"
@@ -1730,9 +1751,23 @@
         }
       }
     },
+    "api_pbCoin": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        }
+      }
+    },
     "api_pbCoinInfoResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "name": {
           "type": "string"
         },
@@ -1746,6 +1781,9 @@
           "type": "string"
         },
         "reserve_balance": {
+          "type": "string"
+        },
+        "owner_address": {
           "type": "string"
         }
       }

@@ -8,6 +8,11 @@ package api_pb;
 
 option go_package = ".;api_pb";
 
+message Coin {
+    string id = 1;
+    string symbol = 2;
+}
+
 message NodeInfo {
     message ProtocolVersion {
         string p2p = 3;
@@ -180,19 +185,21 @@ message AddressRequest {
     reserved "frozen", "total";
 }
 message AddressBalance {
+    Coin coin = 1;
     string value = 2;
     string bip_value = 3;
 }
 
 message AddressDelegatedBalance {
+    Coin coin = 1;
     string value = 2;
     string bip_value = 3;
     string delegate_bip_value = 4;
 }
 message AddressResponse {
-    map<string, AddressBalance> balance = 1;
-    map<string, AddressDelegatedBalance> delegated = 3;
-    map<string, AddressBalance> total = 4;
+    repeated AddressBalance balance = 1;
+    repeated AddressDelegatedBalance delegated = 3;
+    repeated AddressBalance total = 4;
     string transactions_count = 2;
     string bip_value = 5;
 }
@@ -205,9 +212,9 @@ message AddressesRequest {
 }
 message AddressesResponse {
     message Result {
-        map<string, AddressBalance> balance = 2;
-        map<string, AddressDelegatedBalance> delegated = 6;
-        map<string, AddressBalance> total = 4;
+        repeated AddressBalance balance = 2;
+        repeated AddressDelegatedBalance delegated = 6;
+        repeated AddressBalance total = 4;
         string transactions_count = 3;
         string bip_value = 5;
     }
@@ -234,7 +241,7 @@ message CandidateResponse {
     string min_stake = 9;
     message Stake {
         string owner = 1;
-        string coin = 2;
+        Coin coin = 2;
         string value = 3;
         string bip_value = 4;
     }
@@ -257,11 +264,13 @@ message CoinInfoRequest {
     string symbol = 2;
 }
 message CoinInfoResponse {
+    string id = 6;
     string name = 1;
     string symbol = 2;
     string volume = 3;
     string crr = 4;
     string reserve_balance = 5;
+    string owner_address = 7;
 }
 
 message SendTransactionResponse {
@@ -305,8 +314,8 @@ message TransactionsRequest {
 }
 
 message EstimateCoinBuyRequest {
-    string coin_to_buy = 1;
-    string coin_to_sell = 2;
+    uint32 coin_id_to_buy = 1;
+    uint32 coin_id_to_sell = 2;
     string value_to_buy = 3;
     uint64 height = 4;
 }
@@ -316,8 +325,8 @@ message EstimateCoinBuyResponse {
 }
 
 message EstimateCoinSellRequest {
-    string coin_to_sell = 1;
-    string coin_to_buy = 2;
+    uint32 coin_id_to_sell = 1;
+    uint32 coin_id_to_buy = 2;
     string value_to_sell = 3;
     uint64 height = 4;
 }
@@ -326,15 +335,16 @@ message EstimateCoinSellResponse {
     string commission = 2;
 }
 
-message EstimateCoinSellAllResponse {
-    string will_get = 1;
-}
+
 message EstimateCoinSellAllRequest {
-    string coin_to_sell = 1;
-    string coin_to_buy = 2;
+    uint32 coin_id_to_sell = 1;
+    uint32 coin_id_to_buy = 2;
     string value_to_sell = 3;
     uint64 gas_price = 4;
     uint64 height = 5;
+}
+message EstimateCoinSellAllResponse {
+    string will_get = 1;
 }
 
 message EstimateTxCommissionResponse {
@@ -342,7 +352,7 @@ message EstimateTxCommissionResponse {
 }
 message EstimateTxCommissionRequest {
     message TransactionData {
-        string gas_coin = 3;
+        uint32 gas_coin_id = 3;
         enum Type {
             _ = 0;
             Send = 1;
@@ -359,6 +369,8 @@ message EstimateTxCommissionRequest {
             CreateMultisig = 12;
             Multisend = 13;
             EditCandidate = 14;
+            RecreateCoin = 15;
+            ChangeOwner = 16;
         }
         Type type = 4;
         bytes payload = 5;
