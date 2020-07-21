@@ -254,6 +254,44 @@
         ]
       }
     },
+    "/coin_id/{id}": {
+      "get": {
+        "operationId": "ApiService_CoinId",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/api_pbCoinInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/coin_info/{symbol}": {
       "get": {
         "operationId": "ApiService_CoinInfo",
@@ -1781,6 +1819,9 @@
           "type": "string"
         },
         "reserve_balance": {
+          "type": "string"
+        },
+        "max_supply": {
           "type": "string"
         },
         "owner_address": {

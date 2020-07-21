@@ -259,6 +259,10 @@ message CandidatesResponse {
     repeated CandidateResponse candidates = 3;
 }
 
+message CoinIdRequest {
+    uint64 height = 1;
+    uint32 id = 2;
+}
 message CoinInfoRequest {
     uint64 height = 1;
     string symbol = 2;
@@ -270,6 +274,7 @@ message CoinInfoResponse {
     string volume = 3;
     string crr = 4;
     string reserve_balance = 5;
+    string max_supply = 8;
     string owner_address = 7;
 }
 
@@ -546,7 +551,13 @@ service ApiService {
             get: "/candidates"
         };
     }
-    //CoinInfo returns information about coin. Note: this method does not return information about base coins (MNT and BIP).
+    //CoinId returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
+    rpc CoinId (CoinIdRequest) returns (CoinInfoResponse) {
+        option (google.api.http) = {
+            get: "/coin_id/{id}"
+        };
+    }
+    //CoinInfo returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).
     rpc CoinInfo (CoinInfoRequest) returns (CoinInfoResponse) {
         option (google.api.http) = {
             get: "/coin_info/{symbol}"
