@@ -728,12 +728,7 @@ func request_ApiService_EstimateTxCommission_0(ctx context.Context, marshaler ru
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "tx")
 	}
 
-	if protoReq.Transaction == nil {
-		protoReq.Transaction = &EstimateTxCommissionRequest_Tx{}
-	} else if _, ok := protoReq.Transaction.(*EstimateTxCommissionRequest_Tx); !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "expect type: *EstimateTxCommissionRequest_Tx, but: %t\n", protoReq.Transaction)
-	}
-	protoReq.Transaction.(*EstimateTxCommissionRequest_Tx).Tx, err = runtime.String(val)
+	protoReq.Tx, err = runtime.String(val)
 
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "tx", err)
@@ -767,12 +762,7 @@ func local_request_ApiService_EstimateTxCommission_0(ctx context.Context, marsha
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "tx")
 	}
 
-	if protoReq.Transaction == nil {
-		protoReq.Transaction = &EstimateTxCommissionRequest_Tx{}
-	} else if _, ok := protoReq.Transaction.(*EstimateTxCommissionRequest_Tx); !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "expect type: *EstimateTxCommissionRequest_Tx, but: %t\n", protoReq.Transaction)
-	}
-	protoReq.Transaction.(*EstimateTxCommissionRequest_Tx).Tx, err = runtime.String(val)
+	protoReq.Tx, err = runtime.String(val)
 
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "tx", err)

@@ -359,7 +359,7 @@ message EstimateTxCommissionRequest {
     message TransactionData {
         uint32 gas_coin_id = 3;
         enum Type {
-            _ = 0;
+            unknown = 0;
             Send = 1;
             SellCoin = 2;
             SellAllCoin = 3;
@@ -381,10 +381,8 @@ message EstimateTxCommissionRequest {
         bytes payload = 5;
         int64 mtxs = 6;
     }
-    oneof Transaction {
-        string tx = 1;
-        TransactionData data = 3;
-    }
+    string tx = 1;
+    TransactionData data = 3;
     uint64 height = 2;
 }
 
