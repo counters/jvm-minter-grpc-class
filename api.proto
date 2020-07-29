@@ -552,7 +552,7 @@ service ApiService {
     //CoinId returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
     rpc CoinId (CoinIdRequest) returns (CoinInfoResponse) {
         option (google.api.http) = {
-            get: "/coin_id/{id}"
+            get: "/coin_info_by_id/{id}"
         };
     }
     //CoinInfo returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).

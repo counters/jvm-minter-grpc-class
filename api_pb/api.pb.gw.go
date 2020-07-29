@@ -2573,7 +2573,7 @@ var (
 
 	pattern_ApiService_Candidates_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"candidates"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_ApiService_CoinId_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"coin_id", "id"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_ApiService_CoinId_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"coin_info_by_id", "id"}, "", runtime.AssumeColonVerbOpt(true)))
 
 	pattern_ApiService_CoinInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"coin_info", "symbol"}, "", runtime.AssumeColonVerbOpt(true)))
 
