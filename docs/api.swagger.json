@@ -961,55 +961,6 @@
         ]
       }
     },
-    "/stakes/{public_key}": {
-      "get": {
-        "operationId": "ApiService_Stakes",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/api_pbStakesResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "public_key",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "coin",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "address",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "uint64"
-          }
-        ],
-        "tags": [
-          "ApiService"
-        ]
-      }
-    },
     "/status": {
       "get": {
         "operationId": "ApiService_Status",
@@ -1301,6 +1252,23 @@
           "type": "string"
         },
         "log": {
+          "type": "string"
+        }
+      }
+    },
+    "CandidateResponseStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/api_pbCoin"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
           "type": "string"
         }
       }
@@ -1743,27 +1711,10 @@
         "stakes": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbCandidateResponseStake"
+            "$ref": "#/definitions/CandidateResponseStake"
           }
         },
         "status": {
-          "type": "string"
-        }
-      }
-    },
-    "api_pbCandidateResponseStake": {
-      "type": "object",
-      "properties": {
-        "owner": {
-          "type": "string"
-        },
-        "coin": {
-          "$ref": "#/definitions/api_pbCoin"
-        },
-        "value": {
-          "type": "string"
-        },
-        "bip_value": {
           "type": "string"
         }
       }
@@ -2032,37 +1983,6 @@
           "type": "string"
         },
         "hash": {
-          "type": "string"
-        }
-      }
-    },
-    "api_pbStakesResponse": {
-      "type": "object",
-      "properties": {
-        "stakes": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/api_pbStakesResponseStake"
-          }
-        }
-      }
-    },
-    "api_pbStakesResponseStake": {
-      "type": "object",
-      "properties": {
-        "address": {
-          "type": "string"
-        },
-        "pub_key": {
-          "type": "string"
-        },
-        "coin": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        },
-        "bip_value": {
           "type": "string"
         }
       }
