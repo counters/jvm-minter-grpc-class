@@ -293,7 +293,7 @@
     },
     "/coin_info_by_id/{id}": {
       "get": {
-        "operationId": "ApiService_CoinId",
+        "operationId": "ApiService_CoinInfoById",
         "responses": {
           "200": {
             "description": "A successful response.",

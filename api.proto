@@ -533,8 +533,8 @@ service ApiService {
             get: "/candidates"
         };
     }
-    //CoinId returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
-    rpc CoinId (CoinIdRequest) returns (CoinInfoResponse) {
+    //CoinInfoById returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
+    rpc CoinInfoById (CoinIdRequest) returns (CoinInfoResponse) {
         option (google.api.http) = {
             get: "/coin_info_by_id/{id}"
         };
