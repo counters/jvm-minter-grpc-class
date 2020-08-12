@@ -1226,7 +1226,7 @@
           "type": "string"
         },
         "data": {
-          "type": "object"
+          "$ref": "#/definitions/protobufAny"
         },
         "payload": {
           "type": "string",
@@ -2088,7 +2088,7 @@
           "type": "string"
         },
         "data": {
-          "type": "object"
+          "$ref": "#/definitions/protobufAny"
         },
         "payload": {
           "type": "string",

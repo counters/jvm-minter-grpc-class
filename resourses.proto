@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+import "api.proto";
+import "google/protobuf/wrappers.proto";
+
+package api_pb;
+
+option go_package = ".;api_pb";
+
+message SendData {
+    Coin coin = 1;
+    string to = 2;
+    string value = 3;
+}
+
+message SellCoinData {
+    Coin coin_to_sell = 1;
+    string value_to_sell = 2;
+    Coin coin_to_buy = 3;
+    string minimum_value_to_buy = 4;
+}
+
+message SellAllCoinData {
+    Coin coin_to_sell = 1;
+    Coin coin_to_buy = 2;
+    string minimum_value_to_buy = 3;
+}
+
+message BuyCoin {
+    Coin coin_to_buy = 1;
+    string value_to_buy = 2;
+    Coin coin_to_sell = 3;
+    string maximum_value_to_sell = 4;
+}
+
+message CreateCoinData {
+    string name = 1;
+    string symbol = 2;
+    string initial_amount = 3;
+    string initial_reserve = 4;
+    string constant_reserve_ratio = 5;
+    string max_supply = 6;
+}
+
+message DeclareCandidacyData {
+    string address = 1;
+    string pub_key = 2;
+    string commission = 3;
+    Coin coin = 4;
+    string stake = 5;
+}
+
+message DelegateData {
+    string pub_key = 1;
+    Coin coin = 2;
+    string value = 3;
+}
+
+message UnbondData {
+    string pub_key = 1;
+    Coin coin = 2;
+    string value = 3;
+}
+
+message RedeemCheckData {
+    string raw_check = 1;
+    string proof = 2;
+}
+
+message SetCandidateOnData {
+    string pub_key = 1;
+}
+
+message SetCandidateOffData {
+    string pub_key = 1;
+}
+
+message CreateMultisigData {
+    string threshold = 1;
+    repeated string weights = 2;
+    repeated string addresses = 3;
+}
+
+message MultiSendData {
+    repeated SendData list = 1;
+}
+
+message EditCandidateData {
+    string pub_key = 1;
+    google.protobuf.StringValue new_pub_key = 2;
+    string reward_address = 3;
+    string owner_address = 4;
+    string control_address = 5;
+}
+
+message SetHaltBlockData {
+    string pub_key = 1;
+    string height = 2;
+}
+
+message RecreateCoinData {
+    string symbol = 1;
+    string initial_amount = 2;
+    string initial_reserve = 3;
+    string constant_reserve_ratio = 4;
+    string max_supply = 5;
+}
+
+message ChangeOwnerData {
+    string symbol = 1;
+    string new_owner = 2;
+}
+
+message EditMultisigOwnersData {
+    string multisig_address = 1;
+    repeated string weight = 2;
+    repeated string addresses = 3;
+}
+
+message PriceVoteData {
+    string price = 1;
+}

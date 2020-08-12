@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/struct.proto";
+import "google/protobuf/any.proto";
 import "google/protobuf/wrappers.proto";
 
 package api_pb;
@@ -140,7 +141,7 @@ message BlockResponse {
         string nonce = 4;
         string gas_price = 5;
         string type = 6;
-        google.protobuf.Struct data = 7;
+        google.protobuf.Any data = 7;
         bytes payload = 8;
         bytes service_data = 9;
         string gas = 10;
@@ -300,7 +301,7 @@ message TransactionResponse {
     string gas_price = 8;
     string gas_coin = 9;
     string type = 10;
-    google.protobuf.Struct data = 11;
+    google.protobuf.Any data = 11;
     bytes payload = 12;
     map<string, string> tags = 13;
     string code = 14;
