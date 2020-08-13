@@ -1171,6 +1171,49 @@
           "ApiService"
         ]
       }
+    },
+    "/waitlist/{public_key}/{address}": {
+      "get": {
+        "operationId": "ApiService_WaitList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/api_pbWaitListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/runtimeError"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "public_key",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "address",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
     }
   },
   "definitions": {
@@ -1511,6 +1554,17 @@
           "items": {
             "$ref": "#/definitions/ConnectionStatusChannel"
           }
+        }
+      }
+    },
+    "WaitListResponseWait": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "$ref": "#/definitions/api_pbCoin"
+        },
+        "value": {
+          "type": "string"
         }
       }
     },
@@ -2158,6 +2212,17 @@
         },
         "voting_power": {
           "type": "string"
+        }
+      }
+    },
+    "api_pbWaitListResponse": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListResponseWait"
+          }
         }
       }
     },

@@ -467,6 +467,19 @@ message FrozenResponse {
     repeated Frozen frozen = 1;
 }
 
+message WaitListRequest {
+    string public_key = 1;
+    string address = 2;
+    uint64 height = 3;
+}
+message WaitListResponse {
+    message Wait {
+        Coin coin = 1;
+        string value = 2;
+    }
+    repeated Wait list = 1;
+}
+
 service ApiService {
     //Subscribe returns a subscription for events by query.
     rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse) {
@@ -629,6 +642,12 @@ service ApiService {
     rpc Frozen (FrozenRequest) returns (FrozenResponse) {
         option (google.api.http) = {
             get: "/frozen"
+        };
+    }
+    //Validators returns frozen balance.
+    rpc WaitList (WaitListRequest) returns (WaitListResponse) {
+        option (google.api.http) = {
+            get: "/waitlist/{public_key}/{address}"
         };
     }
 }
