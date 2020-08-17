@@ -1620,7 +1620,7 @@
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
-        "transactions_count": {
+        "transaction_count": {
           "type": "string"
         },
         "bip_value": {
@@ -1660,7 +1660,7 @@
             "$ref": "#/definitions/api_pbAddressBalance"
           }
         },
-        "transactions_count": {
+        "transaction_count": {
           "type": "string"
         },
         "bip_value": {
@@ -1680,7 +1680,7 @@
         "time": {
           "type": "string"
         },
-        "transactions_count": {
+        "transaction_count": {
           "type": "string"
         },
         "transactions": {
@@ -2176,7 +2176,7 @@
     "api_pbUnconfirmedTxsResponse": {
       "type": "object",
       "properties": {
-        "transactions_count": {
+        "transaction_count": {
           "type": "string"
         },
         "total_transactions": {

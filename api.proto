@@ -132,7 +132,7 @@ message BlockResponse {
     string hash = 1;
     string height = 2;
     string time = 3;
-    string transactions_count = 4;
+    string transaction_count = 4;
 
     message Transaction {
         string hash = 1;
@@ -202,7 +202,7 @@ message AddressResponse {
     repeated AddressBalance balance = 1;
     repeated AddressDelegatedBalance delegated = 3;
     repeated AddressBalance total = 4;
-    string transactions_count = 2;
+    string transaction_count = 2;
     string bip_value = 5;
 }
 
@@ -217,7 +217,7 @@ message AddressesResponse {
         repeated AddressBalance balance = 2;
         repeated AddressDelegatedBalance delegated = 6;
         repeated AddressBalance total = 4;
-        string transactions_count = 3;
+        string transaction_count = 3;
         string bip_value = 5;
     }
     map<string, Result> addresses = 3;
@@ -410,7 +410,7 @@ message MissedBlocksResponse {
 }
 
 message UnconfirmedTxsResponse {
-    string transactions_count = 1;
+    string transaction_count = 1;
     string total_transactions = 2;
     string total_bytes = 3;
     repeated string transactions = 4;
