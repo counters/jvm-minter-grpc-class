@@ -112,10 +112,9 @@ message ChangeCoinOwnerData {
 }
 
 message EditMultisigOwnersData {
-    string multisig_address = 1;
-    string threshold = 2;
-    repeated string weights = 3;
-    repeated string addresses = 4;
+    string threshold = 1;
+    repeated string weights = 2;
+    repeated string addresses = 3;
 }
 
 message PriceVoteData {
