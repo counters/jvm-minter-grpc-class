@@ -106,15 +106,16 @@ message RecreateCoinData {
     string max_supply = 5;
 }
 
-message ChangeOwnerData {
+message ChangeCoinOwnerData {
     string symbol = 1;
     string new_owner = 2;
 }
 
 message EditMultisigOwnersData {
     string multisig_address = 1;
-    repeated string weight = 2;
-    repeated string addresses = 3;
+    string threshold = 2;
+    repeated string weights = 3;
+    repeated string addresses = 4;
 }
 
 message PriceVoteData {
