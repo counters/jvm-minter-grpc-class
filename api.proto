@@ -249,6 +249,7 @@ message CandidateResponse {
     }
     repeated Stake stakes = 5;
     string status = 6;
+    string owner_address = 10;
 }
 
 message CandidatesRequest {

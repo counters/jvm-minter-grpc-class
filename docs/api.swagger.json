@@ -1770,6 +1770,9 @@
         },
         "status": {
           "type": "string"
+        },
+        "owner_address": {
+          "type": "string"
         }
       }
     },
