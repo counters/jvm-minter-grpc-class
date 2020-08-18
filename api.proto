@@ -235,6 +235,7 @@ message CandidateRequest {
 }
 message CandidateResponse {
     string reward_address = 1;
+    string owner_address = 10;
     string total_stake = 2;
     string public_key = 3;
     string commission = 4;
@@ -249,7 +250,6 @@ message CandidateResponse {
     }
     repeated Stake stakes = 5;
     string status = 6;
-    string owner_address = 10;
 }
 
 message CandidatesRequest {

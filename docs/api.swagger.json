@@ -1744,6 +1744,9 @@
         "reward_address": {
           "type": "string"
         },
+        "owner_address": {
+          "type": "string"
+        },
         "total_stake": {
           "type": "string"
         },
@@ -1769,9 +1772,6 @@
           }
         },
         "status": {
-          "type": "string"
-        },
-        "owner_address": {
           "type": "string"
         }
       }
