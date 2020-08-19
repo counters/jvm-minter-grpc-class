@@ -1379,6 +1379,7 @@ func local_request_ApiService_WaitList_0(ctx context.Context, marshaler runtime.
 // RegisterApiServiceHandlerServer registers the http handlers for service ApiService to "mux".
 // UnaryRPC     :call ApiServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
+// Note that using this registration option will cause many gRPC library features (such as grpc.SendHeader, etc) to stop working. Consider using RegisterApiServiceHandlerFromEndpoint instead.
 func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server ApiServiceServer) error {
 
 	mux.Handle("GET", pattern_ApiService_Subscribe_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
