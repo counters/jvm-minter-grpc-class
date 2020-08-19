@@ -1202,7 +1202,7 @@
     },
     "/waitlist/{public_key}/{address}": {
       "get": {
-        "summary": "Validators returns frozen balance.",
+        "summary": "WaitList returns the list of address stakes in waitlist.",
         "operationId": "ApiService_WaitList",
         "responses": {
           "200": {

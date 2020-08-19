@@ -645,7 +645,7 @@ service ApiService {
             get: "/frozen"
         };
     }
-    //Validators returns frozen balance.
+    //WaitList returns the list of address stakes in waitlist.
     rpc WaitList (WaitListRequest) returns (WaitListResponse) {
         option (google.api.http) = {
             get: "/waitlist/{public_key}/{address}"
