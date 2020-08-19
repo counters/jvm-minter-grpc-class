@@ -26,7 +26,7 @@
   "paths": {
     "/address/{address}": {
       "get": {
-        "summary": "Address returns coins list, balance and transaction count of an address.",
+        "summary": "Returns coins list, balance and transaction count of an address.",
         "operationId": "ApiService_Address",
         "responses": {
           "200": {
@@ -71,7 +71,7 @@
     },
     "/addresses": {
       "get": {
-        "summary": "Addresses returns list of addresses.",
+        "summary": "Returns list of addresses.",
         "operationId": "ApiService_Addresses",
         "responses": {
           "200": {
@@ -120,7 +120,7 @@
     },
     "/block/{height}": {
       "get": {
-        "summary": "Block returns block data at given height.",
+        "summary": "Returns block data at given height.",
         "operationId": "ApiService_Block",
         "responses": {
           "200": {
@@ -171,7 +171,7 @@
     },
     "/candidate/{public_key}": {
       "get": {
-        "summary": "Candidate returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.",
+        "summary": "Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.",
         "operationId": "ApiService_Candidate",
         "responses": {
           "200": {
@@ -209,7 +209,7 @@
     },
     "/candidates": {
       "get": {
-        "summary": "Candidates returns list of candidates.",
+        "summary": "Returns list of candidates.",
         "operationId": "ApiService_Candidates",
         "responses": {
           "200": {
@@ -261,7 +261,7 @@
     },
     "/coin_info/{symbol}": {
       "get": {
-        "summary": "CoinInfo returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).",
+        "summary": "Returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).",
         "operationId": "ApiService_CoinInfo",
         "responses": {
           "200": {
@@ -299,7 +299,7 @@
     },
     "/coin_info_by_id/{id}": {
       "get": {
-        "summary": "CoinInfoById returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).",
+        "summary": "Returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).",
         "operationId": "ApiService_CoinInfoById",
         "responses": {
           "200": {
@@ -338,7 +338,7 @@
     },
     "/estimate_coin_buy": {
       "get": {
-        "summary": "EstimateCoinBuy return estimate of buy coin transaction.",
+        "summary": "Return estimate of buy coin transaction.",
         "operationId": "ApiService_EstimateCoinBuy",
         "responses": {
           "200": {
@@ -390,7 +390,7 @@
     },
     "/estimate_coin_sell": {
       "get": {
-        "summary": "EstimateCoinSell return estimate of sell coin transaction.",
+        "summary": "Return estimate of sell coin transaction.",
         "operationId": "ApiService_EstimateCoinSell",
         "responses": {
           "200": {
@@ -442,7 +442,7 @@
     },
     "/estimate_coin_sell_all": {
       "get": {
-        "summary": "EstimateCoinSellAll return estimate of sell all coin transaction.",
+        "summary": "Return estimate of sell all coin transaction.",
         "operationId": "ApiService_EstimateCoinSellAll",
         "responses": {
           "200": {
@@ -501,7 +501,7 @@
     },
     "/estimate_tx_commission": {
       "get": {
-        "summary": "EstimateTxCommission return estimate of transaction.",
+        "summary": "Return estimate of transaction.",
         "operationId": "ApiService_EstimateTxCommission2",
         "responses": {
           "200": {
@@ -586,7 +586,7 @@
     },
     "/estimate_tx_commission/{tx}": {
       "get": {
-        "summary": "EstimateTxCommission return estimate of transaction.",
+        "summary": "Return estimate of transaction.",
         "operationId": "ApiService_EstimateTxCommission",
         "responses": {
           "200": {
@@ -671,7 +671,7 @@
     },
     "/events/{height}": {
       "get": {
-        "summary": "Events returns events at given height.",
+        "summary": "Returns events at given height.",
         "operationId": "ApiService_Events",
         "responses": {
           "200": {
@@ -713,7 +713,7 @@
     },
     "/frozen": {
       "get": {
-        "summary": "Frozen returns frozen balance.",
+        "summary": "Returns frozen balance.",
         "operationId": "ApiService_Frozen",
         "responses": {
           "200": {
@@ -750,7 +750,7 @@
     },
     "/genesis": {
       "get": {
-        "summary": "Genesis returns genesis file.",
+        "summary": "Returns genesis file.",
         "operationId": "ApiService_Genesis",
         "responses": {
           "200": {
@@ -805,7 +805,7 @@
     },
     "/max_gas": {
       "get": {
-        "summary": "MaxGas returns current max gas.",
+        "summary": "Returns current max gas.",
         "operationId": "ApiService_MaxGas",
         "responses": {
           "200": {
@@ -837,7 +837,7 @@
     },
     "/min_gas_price": {
       "get": {
-        "summary": "MinGasPrice returns current min gas price.",
+        "summary": "Returns current min gas price.",
         "operationId": "ApiService_MinGasPrice",
         "responses": {
           "200": {
@@ -860,7 +860,7 @@
     },
     "/missed_blocks/{public_key}": {
       "get": {
-        "summary": "MissedBlocks returns missed blocks by validator public key.",
+        "summary": "Returns missed blocks by validator public key.",
         "operationId": "ApiService_MissedBlocks",
         "responses": {
           "200": {
@@ -898,7 +898,7 @@
     },
     "/net_info": {
       "get": {
-        "summary": "NetInfo returns network info",
+        "summary": "Returns network info",
         "operationId": "ApiService_NetInfo",
         "responses": {
           "200": {
@@ -921,7 +921,7 @@
     },
     "/send_transaction": {
       "post": {
-        "summary": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "ApiService_SendTransaction2",
         "responses": {
           "200": {
@@ -954,7 +954,7 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "summary": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "ApiService_SendTransaction",
         "responses": {
           "200": {
@@ -985,7 +985,7 @@
     },
     "/status": {
       "get": {
-        "summary": "Status returns node status including pubkey, latest block.",
+        "summary": "Returns node status including pubkey, latest block.",
         "operationId": "ApiService_Status",
         "responses": {
           "200": {
@@ -1008,7 +1008,7 @@
     },
     "/subscribe": {
       "get": {
-        "summary": "Subscribe returns a subscription for events by query.",
+        "summary": "Returns a subscription for events by query.",
         "operationId": "ApiService_Subscribe",
         "responses": {
           "200": {
@@ -1048,7 +1048,7 @@
     },
     "/transaction/{hash}": {
       "get": {
-        "summary": "Transaction returns transaction info.",
+        "summary": "Returns transaction info.",
         "operationId": "ApiService_Transaction",
         "responses": {
           "200": {
@@ -1079,7 +1079,7 @@
     },
     "/transactions": {
       "get": {
-        "summary": "Transactions return transactions by query.",
+        "summary": "Return transactions by query.",
         "operationId": "ApiService_Transactions",
         "responses": {
           "200": {
@@ -1124,7 +1124,7 @@
     },
     "/unconfirmed_txs": {
       "get": {
-        "summary": "UnconfirmedTxs returns unconfirmed transactions.",
+        "summary": "Returns unconfirmed transactions.",
         "operationId": "ApiService_UnconfirmedTxs",
         "responses": {
           "200": {
@@ -1156,7 +1156,7 @@
     },
     "/validators": {
       "get": {
-        "summary": "Validators returns list of active validators.",
+        "summary": "Returns list of active validators.",
         "operationId": "ApiService_Validators",
         "responses": {
           "200": {
@@ -1202,7 +1202,7 @@
     },
     "/waitlist/{public_key}/{address}": {
       "get": {
-        "summary": "WaitList returns the list of address stakes in waitlist.",
+        "summary": "Returns the list of address stakes in waitlist.",
         "operationId": "ApiService_WaitList",
         "responses": {
           "200": {
