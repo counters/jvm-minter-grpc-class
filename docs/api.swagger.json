@@ -713,7 +713,7 @@
     },
     "/frozen": {
       "get": {
-        "summary": "Validators returns frozen balance.",
+        "summary": "Frozen returns frozen balance.",
         "operationId": "ApiService_Frozen",
         "responses": {
           "200": {
