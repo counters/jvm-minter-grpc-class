@@ -99,11 +99,12 @@ message SetHaltBlockData {
 }
 
 message RecreateCoinData {
-    string symbol = 1;
-    string initial_amount = 2;
-    string initial_reserve = 3;
-    string constant_reserve_ratio = 4;
-    string max_supply = 5;
+    string name = 1;
+    string symbol = 2;
+    string initial_amount = 3;
+    string initial_reserve = 4;
+    string constant_reserve_ratio = 5;
+    string max_supply = 6;
 }
 
 message ChangeCoinOwnerData {
