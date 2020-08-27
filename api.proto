@@ -236,6 +236,7 @@ message CandidateRequest {
 message CandidateResponse {
     string reward_address = 1;
     string owner_address = 10;
+    string control_address = 11;
     string total_stake = 2;
     string public_key = 3;
     string commission = 4;
