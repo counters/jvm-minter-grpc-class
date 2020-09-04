@@ -411,11 +411,23 @@
             "format": "int64"
           },
           {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "coin_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "string"
           },
           {
             "name": "value_to_buy",
@@ -462,6 +474,19 @@
         },
         "parameters": [
           {
+            "name": "coin_id_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
@@ -469,11 +494,10 @@
             "format": "int64"
           },
           {
-            "name": "coin_id_to_buy",
+            "name": "coin_to_sell",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string"
           },
           {
             "name": "value_to_sell",
@@ -520,6 +544,19 @@
         },
         "parameters": [
           {
+            "name": "coin_id_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
@@ -527,11 +564,10 @@
             "format": "int64"
           },
           {
-            "name": "coin_id_to_buy",
+            "name": "coin_to_sell",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string"
           },
           {
             "name": "value_to_sell",

@@ -74,6 +74,7 @@ message NetInfoResponse {
     }
     repeated Peer peers = 3;
 }
+
 message StatusResponse {
     string version = 8;
     string latest_block_hash = 1;
@@ -191,7 +192,6 @@ message AddressBalance {
     string value = 2;
     string bip_value = 3;
 }
-
 message AddressDelegatedBalance {
     Coin coin = 1;
     string value = 2;
@@ -323,8 +323,14 @@ message TransactionsRequest {
 }
 
 message EstimateCoinBuyRequest {
-    uint32 coin_id_to_buy = 1;
-    uint32 coin_id_to_sell = 2;
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 5;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
     string value_to_buy = 3;
     uint64 height = 4;
 }
@@ -334,8 +340,14 @@ message EstimateCoinBuyResponse {
 }
 
 message EstimateCoinSellRequest {
-    uint32 coin_id_to_sell = 1;
-    uint32 coin_id_to_buy = 2;
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 5;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
     string value_to_sell = 3;
     uint64 height = 4;
 }
@@ -346,8 +358,14 @@ message EstimateCoinSellResponse {
 
 
 message EstimateCoinSellAllRequest {
-    uint32 coin_id_to_sell = 1;
-    uint32 coin_id_to_buy = 2;
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 7;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
     string value_to_sell = 3;
     uint64 gas_price = 4;
     uint64 height = 5;
