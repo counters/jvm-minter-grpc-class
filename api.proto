@@ -360,33 +360,7 @@ message EstimateTxCommissionResponse {
     string commission = 1;
 }
 message EstimateTxCommissionRequest {
-    message TransactionData {
-        uint32 gas_coin_id = 3;
-        enum Type {
-            unknown = 0;
-            Send = 1;
-            SellCoin = 2;
-            SellAllCoin = 3;
-            BuyCoin = 4;
-            CreateCoin = 5;
-            DeclareCandidacy = 6;
-            Delegate = 7;
-            Unbond = 8;
-            RedeemCheck = 9;
-            SetCandidateOnline = 10;
-            SetCandidateOffline = 11;
-            CreateMultisig = 12;
-            Multisend = 13;
-            EditCandidate = 14;
-            RecreateCoin = 15;
-            ChangeOwner = 16;
-        }
-        Type type = 4;
-        bytes payload = 5;
-        int64 mtxs = 6;
-    }
     string tx = 1;
-    TransactionData data = 3;
     uint64 height = 2;
 }
 
@@ -583,9 +557,6 @@ service ApiService {
     rpc EstimateTxCommission (EstimateTxCommissionRequest) returns (EstimateTxCommissionResponse) {
         option (google.api.http) = {
             get: "/estimate_tx_commission/{tx}"
-            additional_bindings {
-                get: "/estimate_tx_commission"
-            }
         };
     }
     //Returns events at given height.

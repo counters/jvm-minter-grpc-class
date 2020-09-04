@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.1",
+    "version": "1.2",
     "contact": {
       "name": "Klimov Sergey",
       "url": "https://klim0v.github.io/",
@@ -35,10 +35,16 @@
               "$ref": "#/definitions/api_pbAddressResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -80,10 +86,16 @@
               "$ref": "#/definitions/api_pbAddressesResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -129,10 +141,16 @@
               "$ref": "#/definitions/api_pbBlockResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -180,10 +198,16 @@
               "$ref": "#/definitions/api_pbCandidateResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -218,10 +242,16 @@
               "$ref": "#/definitions/api_pbCandidatesResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -270,10 +300,16 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -308,10 +344,16 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -347,10 +389,16 @@
               "$ref": "#/definitions/api_pbEstimateCoinBuyResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -399,10 +447,16 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -451,10 +505,16 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellAllResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -499,91 +559,6 @@
         ]
       }
     },
-    "/estimate_tx_commission": {
-      "get": {
-        "summary": "Return estimate of transaction.",
-        "operationId": "ApiService_EstimateTxCommission2",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "tx",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "data.gas_coin_id",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "data.type",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "unknown",
-              "Send",
-              "SellCoin",
-              "SellAllCoin",
-              "BuyCoin",
-              "CreateCoin",
-              "DeclareCandidacy",
-              "Delegate",
-              "Unbond",
-              "RedeemCheck",
-              "SetCandidateOnline",
-              "SetCandidateOffline",
-              "CreateMultisig",
-              "Multisend",
-              "EditCandidate",
-              "RecreateCoin",
-              "ChangeOwner"
-            ],
-            "default": "unknown"
-          },
-          {
-            "name": "data.payload",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "byte"
-          },
-          {
-            "name": "data.mtxs",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "int64"
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "uint64"
-          }
-        ],
-        "tags": [
-          "ApiService"
-        ]
-      }
-    },
     "/estimate_tx_commission/{tx}": {
       "get": {
         "summary": "Return estimate of transaction.",
@@ -595,10 +570,16 @@
               "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -608,53 +589,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "data.gas_coin_id",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "data.type",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "unknown",
-              "Send",
-              "SellCoin",
-              "SellAllCoin",
-              "BuyCoin",
-              "CreateCoin",
-              "DeclareCandidacy",
-              "Delegate",
-              "Unbond",
-              "RedeemCheck",
-              "SetCandidateOnline",
-              "SetCandidateOffline",
-              "CreateMultisig",
-              "Multisend",
-              "EditCandidate",
-              "RecreateCoin",
-              "ChangeOwner"
-            ],
-            "default": "unknown"
-          },
-          {
-            "name": "data.payload",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "byte"
-          },
-          {
-            "name": "data.mtxs",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "format": "int64"
           },
           {
             "name": "height",
@@ -680,10 +614,16 @@
               "$ref": "#/definitions/api_pbEventsResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -722,10 +662,16 @@
               "$ref": "#/definitions/api_pbFrozenResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -759,10 +705,16 @@
               "$ref": "#/definitions/api_pbGenesisResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -782,10 +734,16 @@
               "$ref": "#/definitions/api_pbHaltsResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -814,10 +772,16 @@
               "$ref": "#/definitions/api_pbMaxGasResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -846,10 +810,16 @@
               "$ref": "#/definitions/api_pbMinGasPriceResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -869,10 +839,16 @@
               "$ref": "#/definitions/api_pbMissedBlocksResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -907,10 +883,16 @@
               "$ref": "#/definitions/api_pbNetInfoResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -930,10 +912,16 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -963,10 +951,16 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -994,10 +988,16 @@
               "$ref": "#/definitions/api_pbStatusResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1026,10 +1026,16 @@
               "title": "Stream result of api_pbSubscribeResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1057,10 +1063,16 @@
               "$ref": "#/definitions/api_pbTransactionResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1088,10 +1100,16 @@
               "$ref": "#/definitions/api_pbTransactionsResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1133,10 +1151,16 @@
               "$ref": "#/definitions/api_pbUnconfirmedTxsResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1165,10 +1189,16 @@
               "$ref": "#/definitions/api_pbValidatorsResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1211,10 +1241,16 @@
               "$ref": "#/definitions/api_pbWaitListResponse"
             }
           },
+          "400": {
+            "description": "An unexpected error response",
+            "schema": {
+              "$ref": "#/definitions/api_pbErrorBody"
+            }
+          },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/runtimeError"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1423,49 +1459,6 @@
           "type": "string"
         }
       }
-    },
-    "EstimateTxCommissionRequestTransactionData": {
-      "type": "object",
-      "properties": {
-        "gas_coin_id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "type": {
-          "$ref": "#/definitions/EstimateTxCommissionRequestTransactionDataType"
-        },
-        "payload": {
-          "type": "string",
-          "format": "byte"
-        },
-        "mtxs": {
-          "type": "string",
-          "format": "int64"
-        }
-      }
-    },
-    "EstimateTxCommissionRequestTransactionDataType": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "Send",
-        "SellCoin",
-        "SellAllCoin",
-        "BuyCoin",
-        "CreateCoin",
-        "DeclareCandidacy",
-        "Delegate",
-        "Unbond",
-        "RedeemCheck",
-        "SetCandidateOnline",
-        "SetCandidateOffline",
-        "CreateMultisig",
-        "Multisend",
-        "EditCandidate",
-        "RecreateCoin",
-        "ChangeOwner"
-      ],
-      "default": "unknown"
     },
     "FrozenResponseFrozen": {
       "type": "object",
@@ -1869,6 +1862,31 @@
         }
       }
     },
+    "api_pbErrorBody": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/api_pbErrorBodyError"
+        }
+      }
+    },
+    "api_pbErrorBodyError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "api_pbEstimateCoinBuyResponse": {
       "type": "object",
       "properties": {
@@ -2261,6 +2279,27 @@
         }
       }
     },
+    "gatewayruntimeError": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -2283,27 +2322,6 @@
       ],
       "default": "NULL_VALUE",
       "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
-    },
-    "runtimeError": {
-      "type": "object",
-      "properties": {
-        "error": {
-          "type": "string"
-        },
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "details": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/protobufAny"
-          }
-        }
-      }
     },
     "runtimeStreamError": {
       "type": "object",
