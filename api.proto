@@ -39,6 +39,7 @@ message NetInfoResponse {
     repeated string listeners = 1;
     string count_peers = 2;
     message Peer {
+        string latest_block_height = 5;
         NodeInfo node_info = 4;
         bool is_outbound = 1;
         message ConnectionStatus {
