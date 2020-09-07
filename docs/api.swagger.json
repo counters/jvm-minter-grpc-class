@@ -1555,6 +1555,9 @@
     "NetInfoResponsePeer": {
       "type": "object",
       "properties": {
+        "latest_block_height": {
+          "type": "string"
+        },
         "node_info": {
           "$ref": "#/definitions/api_pbNodeInfo"
         },
