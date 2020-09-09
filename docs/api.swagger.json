@@ -1544,7 +1544,7 @@
     "GenesisResponseConsensusParamsValidator": {
       "type": "object",
       "properties": {
-        "public_key_types": {
+        "pub_key_types": {
           "type": "array",
           "items": {
             "type": "string"
