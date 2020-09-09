@@ -104,7 +104,7 @@ message GenesisResponse {
         }
         Evidence evidence = 2;
         message Validator {
-            repeated string public_key_types = 1;
+            repeated string pub_key_types = 1;
         }
         Validator validator = 3;
     }
