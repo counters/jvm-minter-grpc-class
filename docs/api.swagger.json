@@ -41,8 +41,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -98,8 +98,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -159,8 +159,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -222,8 +222,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -272,8 +272,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -336,8 +336,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -386,8 +386,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -437,8 +437,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -513,8 +513,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -589,8 +589,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -672,8 +672,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -722,8 +722,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -776,8 +776,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -825,8 +825,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -860,8 +860,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -904,8 +904,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -948,8 +948,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -983,8 +983,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1033,8 +1033,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1068,8 +1068,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1113,8 +1113,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1156,8 +1156,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1200,8 +1200,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1243,8 +1243,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1286,8 +1286,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1343,8 +1343,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1387,8 +1387,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
@@ -1445,8 +1445,8 @@
               "$ref": "#/definitions/api_pbErrorBody",
               "example": {
                 "error": {
-                  "code": "500",
-                  "message": "failed to marshal error message"
+                  "code": "504",
+                  "message": "context deadline exceeded"
                 }
               }
             }
