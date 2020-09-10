@@ -33,12 +33,15 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     consumes: "application/json"
     produces: "application/json"
     responses: {
-            key: "400"
+            key: "500"
             value: {
                 description: "An unexpected error response"
                 schema: {
                     json_schema: {
                         ref: ".api_pb.ErrorBody"
+                    };
+                    example: {
+                        value: "{\"error\": {\"code\": \"504\", \"message\": \"context deadline exceeded\"}}"
                     };
                 };
             };

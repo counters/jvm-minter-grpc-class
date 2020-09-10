@@ -35,16 +35,22 @@
               "$ref": "#/definitions/api_pbAddressResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -86,16 +92,22 @@
               "$ref": "#/definitions/api_pbAddressesResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -141,16 +153,22 @@
               "$ref": "#/definitions/api_pbBlockResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -198,16 +216,22 @@
               "$ref": "#/definitions/api_pbCandidateResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -242,16 +266,22 @@
               "$ref": "#/definitions/api_pbCandidatesResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -300,16 +330,22 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -344,16 +380,22 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -389,16 +431,22 @@
               "$ref": "#/definitions/api_pbEstimateCoinBuyResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -459,16 +507,22 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -529,16 +583,22 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellAllResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -606,16 +666,22 @@
               "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -650,16 +716,22 @@
               "$ref": "#/definitions/api_pbEventsResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -698,16 +770,22 @@
               "$ref": "#/definitions/api_pbFrozenResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -741,16 +819,22 @@
               "$ref": "#/definitions/api_pbGenesisResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -770,16 +854,22 @@
               "$ref": "#/definitions/api_pbHaltsResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -808,16 +898,22 @@
               "$ref": "#/definitions/api_pbMaxGasResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -846,16 +942,22 @@
               "$ref": "#/definitions/api_pbMinGasPriceResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -875,16 +977,22 @@
               "$ref": "#/definitions/api_pbMissedBlocksResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -919,16 +1027,22 @@
               "$ref": "#/definitions/api_pbNetInfoResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -948,16 +1062,22 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -987,16 +1107,22 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1024,16 +1150,22 @@
               "$ref": "#/definitions/api_pbStatusResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1062,16 +1194,22 @@
               "title": "Stream result of api_pbSubscribeResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1099,16 +1237,22 @@
               "$ref": "#/definitions/api_pbTransactionResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1136,16 +1280,22 @@
               "$ref": "#/definitions/api_pbTransactionsResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1187,16 +1337,22 @@
               "$ref": "#/definitions/api_pbUnconfirmedTxsResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1225,16 +1381,22 @@
               "$ref": "#/definitions/api_pbValidatorsResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
@@ -1277,16 +1439,22 @@
               "$ref": "#/definitions/api_pbWaitListResponse"
             }
           },
-          "400": {
+          "500": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/api_pbErrorBody",
+              "example": {
+                "error": {
+                  "code": "500",
+                  "message": "failed to marshal error message"
+                }
+              }
             }
           },
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/gatewayruntimeError"
+              "$ref": "#/definitions/api_pbErrorBody"
             }
           }
         },
