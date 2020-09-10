@@ -7264,9 +7264,9 @@ type ApiServiceClient interface {
 	Candidate(ctx context.Context, in *CandidateRequest, opts ...grpc.CallOption) (*CandidateResponse, error)
 	//Returns list of candidates.
 	Candidates(ctx context.Context, in *CandidatesRequest, opts ...grpc.CallOption) (*CandidatesResponse, error)
-	//Returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
+	//Returns information about coin ID.
 	CoinInfoById(ctx context.Context, in *CoinIdRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
-	//Returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).
+	//Returns information about coin symbol.
 	CoinInfo(ctx context.Context, in *CoinInfoRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
 	//Return estimate of buy coin transaction.
 	EstimateCoinBuy(ctx context.Context, in *EstimateCoinBuyRequest, opts ...grpc.CallOption) (*EstimateCoinBuyResponse, error)
@@ -7596,9 +7596,9 @@ type ApiServiceServer interface {
 	Candidate(context.Context, *CandidateRequest) (*CandidateResponse, error)
 	//Returns list of candidates.
 	Candidates(context.Context, *CandidatesRequest) (*CandidatesResponse, error)
-	//Returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).
+	//Returns information about coin ID.
 	CoinInfoById(context.Context, *CoinIdRequest) (*CoinInfoResponse, error)
-	//Returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).
+	//Returns information about coin symbol.
 	CoinInfo(context.Context, *CoinInfoRequest) (*CoinInfoResponse, error)
 	//Return estimate of buy coin transaction.
 	EstimateCoinBuy(context.Context, *EstimateCoinBuyRequest) (*EstimateCoinBuyResponse, error)

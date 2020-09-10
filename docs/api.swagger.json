@@ -291,7 +291,7 @@
     },
     "/coin_info/{symbol}": {
       "get": {
-        "summary": "Returns information about coin symbol. Note: this method does not return information about base coins (MNT and BIP).",
+        "summary": "Returns information about coin symbol.",
         "operationId": "ApiService_CoinInfo",
         "responses": {
           "200": {
@@ -335,7 +335,7 @@
     },
     "/coin_info_by_id/{id}": {
       "get": {
-        "summary": "Returns information about coin ID. Note: this method does not return information about base coins (MNT and BIP).",
+        "summary": "Returns information about coin ID.",
         "operationId": "ApiService_CoinInfoById",
         "responses": {
           "200": {
