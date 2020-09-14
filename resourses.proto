@@ -106,7 +106,7 @@ message RecreateCoinData {
     string max_supply = 6;
 }
 
-message ChangeCoinOwnerData {
+message EditCoinOwnerData {
     string symbol = 1;
     string new_owner = 2;
 }
@@ -121,7 +121,7 @@ message PriceVoteData {
     string price = 1;
 }
 
-message EditCandidatePubKeyData {
+message EditCandidatePublicKeyData {
     string pub_key = 1;
     string new_pub_key = 2;
 }
