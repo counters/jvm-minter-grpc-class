@@ -87,7 +87,6 @@ message MultiSendData {
 
 message EditCandidateData {
     string pub_key = 1;
-    google.protobuf.StringValue new_pub_key = 2;
     string reward_address = 3;
     string owner_address = 4;
     string control_address = 5;
@@ -120,4 +119,9 @@ message EditMultisigOwnersData {
 
 message PriceVoteData {
     string price = 1;
+}
+
+message EditCandidatePubKeyData {
+    string pub_key = 1;
+    string new_pub_key = 2;
 }
