@@ -111,7 +111,7 @@ message EditCoinOwnerData {
     string new_owner = 2;
 }
 
-message EditMultisigOwnersData {
+message EditMultisigData {
     string threshold = 1;
     repeated string weights = 2;
     repeated string addresses = 3;
