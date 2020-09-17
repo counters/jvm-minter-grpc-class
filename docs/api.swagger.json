@@ -756,7 +756,7 @@
         ]
       }
     },
-    "/frozen": {
+    "/frozen/{address}": {
       "get": {
         "summary": "Returns frozen balance.",
         "operationId": "ApiService_Frozen",
@@ -789,8 +789,8 @@
         "parameters": [
           {
             "name": "address",
-            "in": "query",
-            "required": false,
+            "in": "path",
+            "required": true,
             "type": "string"
           },
           {
