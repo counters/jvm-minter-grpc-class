@@ -633,7 +633,7 @@ service ApiService {
     //Returns frozen balance.
     rpc Frozen (FrozenRequest) returns (FrozenResponse) {
         option (google.api.http) = {
-            get: "/frozen"
+            get: "/frozen/{address}"
         };
     }
     //Returns the list of address stakes in waitlist.
