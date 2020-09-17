@@ -72,8 +72,7 @@
             "name": "delegated",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "format": "boolean"
+            "type": "boolean"
           }
         ],
         "tags": [
@@ -133,8 +132,7 @@
             "name": "delegated",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "format": "boolean"
+            "type": "boolean"
           }
         ],
         "tags": [
@@ -297,8 +295,7 @@
             "name": "include_stakes",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "format": "boolean"
+            "type": "boolean"
           },
           {
             "name": "status",
@@ -1609,8 +1606,7 @@
       "type": "object",
       "properties": {
         "active": {
-          "type": "boolean",
-          "format": "boolean"
+          "type": "boolean"
         },
         "start": {
           "type": "string"
@@ -1730,8 +1726,7 @@
           "$ref": "#/definitions/api_pbNodeInfo"
         },
         "is_outbound": {
-          "type": "boolean",
-          "format": "boolean"
+          "type": "boolean"
         },
         "connection_status": {
           "$ref": "#/definitions/PeerConnectionStatus"
@@ -1962,8 +1957,7 @@
           "type": "string"
         },
         "signed": {
-          "type": "boolean",
-          "format": "boolean"
+          "type": "boolean"
         }
       }
     },
@@ -2227,8 +2221,7 @@
       "type": "object",
       "properties": {
         "listening": {
-          "type": "boolean",
-          "format": "boolean"
+          "type": "boolean"
         },
         "listeners": {
           "type": "array",
@@ -2326,8 +2319,7 @@
           "type": "string"
         },
         "catching_up": {
-          "type": "boolean",
-          "format": "boolean"
+          "type": "boolean"
         },
         "public_key": {
           "type": "string"

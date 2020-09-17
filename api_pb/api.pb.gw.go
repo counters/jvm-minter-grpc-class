@@ -21,6 +21,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
+	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 )
 
@@ -31,6 +32,7 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 var _ = descriptor.ForMessage
+var _ = metadata.Join
 
 var (
 	filter_ApiService_Subscribe_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
@@ -1343,7 +1345,7 @@ func local_request_ApiService_WaitList_0(ctx context.Context, marshaler runtime.
 // RegisterApiServiceHandlerServer registers the http handlers for service ApiService to "mux".
 // UnaryRPC     :call ApiServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
-// Note that using this registration option will cause many gRPC library features (such as grpc.SendHeader, etc) to stop working. Consider using RegisterApiServiceHandlerFromEndpoint instead.
+// Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterApiServiceHandlerFromEndpoint instead.
 func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server ApiServiceServer) error {
 
 	mux.Handle("GET", pattern_ApiService_Subscribe_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -1356,6 +1358,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Halts_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1363,6 +1367,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Halts_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1376,6 +1381,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Genesis_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1383,6 +1390,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Genesis_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1396,6 +1404,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_MinGasPrice_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1403,6 +1413,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_MinGasPrice_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1416,6 +1427,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_NetInfo_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1423,6 +1436,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_NetInfo_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1436,6 +1450,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Status_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1443,6 +1459,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Status_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1456,6 +1473,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Address_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1463,6 +1482,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Address_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1476,6 +1496,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Addresses_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1483,6 +1505,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Addresses_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1496,6 +1519,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Block_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1503,6 +1528,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Block_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1516,6 +1542,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Candidate_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1523,6 +1551,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Candidate_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1536,6 +1565,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Candidates_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1543,6 +1574,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Candidates_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1556,6 +1588,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_CoinInfoById_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1563,6 +1597,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_CoinInfoById_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1576,6 +1611,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_CoinInfo_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1583,6 +1620,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_CoinInfo_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1596,6 +1634,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_EstimateCoinBuy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1603,6 +1643,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_EstimateCoinBuy_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1616,6 +1657,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_EstimateCoinSell_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1623,6 +1666,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_EstimateCoinSell_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1636,6 +1680,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_EstimateCoinSellAll_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1643,6 +1689,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_EstimateCoinSellAll_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1656,6 +1703,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_EstimateTxCommission_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1663,6 +1712,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_EstimateTxCommission_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1676,6 +1726,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Events_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1683,6 +1735,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Events_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1696,6 +1749,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_MaxGas_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1703,6 +1758,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_MaxGas_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1716,6 +1772,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_MissedBlocks_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1723,6 +1781,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_MissedBlocks_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1736,6 +1795,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_SendTransaction_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1743,6 +1804,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_SendTransaction_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1756,6 +1818,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("POST", pattern_ApiService_SendTransaction_1, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1763,6 +1827,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_SendTransaction_1(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1776,6 +1841,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Transaction_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1783,6 +1850,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Transaction_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1796,6 +1864,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Transactions_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1803,6 +1873,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Transactions_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1816,6 +1887,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_UnconfirmedTxs_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1823,6 +1896,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_UnconfirmedTxs_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1836,6 +1910,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Validators_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1843,6 +1919,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Validators_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1856,6 +1933,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_Frozen_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1863,6 +1942,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_Frozen_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
@@ -1876,6 +1956,8 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 	mux.Handle("GET", pattern_ApiService_WaitList_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
 		if err != nil {
@@ -1883,6 +1965,7 @@ func RegisterApiServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 			return
 		}
 		resp, md, err := local_request_ApiService_WaitList_0(rctx, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
