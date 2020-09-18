@@ -285,7 +285,6 @@ message CoinInfoResponse {
 
 message SendTransactionResponse {
     string code = 1;
-    string data = 2;
     string log = 3;
     string hash = 4;
 }
