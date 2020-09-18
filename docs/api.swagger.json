@@ -2283,9 +2283,6 @@
         "code": {
           "type": "string"
         },
-        "data": {
-          "type": "string"
-        },
         "log": {
           "type": "string"
         },
