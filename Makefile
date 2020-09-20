@@ -11,5 +11,6 @@ all:
 		--swagger_out=allow_merge=true,merge_file_name=api:./docs \
 		--go_out=plugins=grpc:./api_pb ./*.proto
 	sed -i 's/\/gatewayruntimeError/\/api_pbErrorBody/g' docs/api.swagger.json
+	sed -i 's/api_pb//g' docs/api.swagger.json
 	sed -i 's/ApiService_//g' docs/api.swagger.json
 	statik -m -f -src docs/
