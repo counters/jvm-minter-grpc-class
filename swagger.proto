@@ -24,17 +24,21 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
         };
         version: "1.2"
         contact: {
-            name: "Klimov Sergey"
-            url: "https://klim0v.github.io/"
+            name: "Minter gRPC-Gateway"
+            url: "https://github.com/MinterTeam/node-grpc-gateway"
             email: "klim0v-sergey@yandex.ru"
         };
     };
     base_path: "/v2"
+    external_docs: {
+        url: "https://www.minter.network/docs";
+        description: "More about Minter blockchain";
+    }
     schemes: [HTTP,HTTPS]
     consumes: "application/json"
     produces: "application/json"
     responses: {
-        key: "500"
+        key: "504"
         value: {
             description: "An unexpected error response"
             schema: {

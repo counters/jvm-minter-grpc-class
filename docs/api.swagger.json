@@ -4,8 +4,8 @@
     "title": "Minter Node API v2",
     "version": "1.2",
     "contact": {
-      "name": "Klimov Sergey",
-      "url": "https://klim0v.github.io/",
+      "name": "Minter gRPC-Gateway",
+      "url": "https://github.com/MinterTeam/node-grpc-gateway",
       "email": "klim0v-sergey@yandex.ru"
     },
     "license": {
@@ -28,7 +28,7 @@
     "/address/{address}": {
       "get": {
         "summary": "Returns coins list, balance and transaction count of an address.",
-        "operationId": "Address",
+        "operationId": "ApiService_Address",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -36,7 +36,7 @@
               "$ref": "#/definitions/api_pbAddressResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -51,7 +51,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -84,7 +84,7 @@
     "/addresses": {
       "get": {
         "summary": "Returns list of addresses.",
-        "operationId": "Addresses",
+        "operationId": "ApiService_Addresses",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -92,7 +92,7 @@
               "$ref": "#/definitions/api_pbAddressesResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -107,7 +107,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -144,7 +144,7 @@
     "/block/{height}": {
       "get": {
         "summary": "Returns block data at given height.",
-        "operationId": "Block",
+        "operationId": "ApiService_Block",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -152,7 +152,7 @@
               "$ref": "#/definitions/api_pbBlockResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -167,7 +167,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -207,7 +207,7 @@
     "/candidate/{public_key}": {
       "get": {
         "summary": "Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.",
-        "operationId": "Candidate",
+        "operationId": "ApiService_Candidate",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -215,7 +215,7 @@
               "$ref": "#/definitions/api_pbCandidateResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -230,7 +230,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -257,7 +257,7 @@
     "/candidates": {
       "get": {
         "summary": "Returns list of candidates.",
-        "operationId": "Candidates",
+        "operationId": "ApiService_Candidates",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -265,7 +265,7 @@
               "$ref": "#/definitions/api_pbCandidatesResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -280,7 +280,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -320,7 +320,7 @@
     "/coin_info/{symbol}": {
       "get": {
         "summary": "Returns information about coin symbol.",
-        "operationId": "CoinInfo",
+        "operationId": "ApiService_CoinInfo",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -328,7 +328,7 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -343,7 +343,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -370,7 +370,7 @@
     "/coin_info_by_id/{id}": {
       "get": {
         "summary": "Returns information about coin ID.",
-        "operationId": "CoinInfoById",
+        "operationId": "ApiService_CoinInfoById",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -378,7 +378,7 @@
               "$ref": "#/definitions/api_pbCoinInfoResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -393,7 +393,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -421,7 +421,7 @@
     "/estimate_coin_buy": {
       "get": {
         "summary": "Return estimate of buy coin transaction.",
-        "operationId": "EstimateCoinBuy",
+        "operationId": "ApiService_EstimateCoinBuy",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -429,7 +429,7 @@
               "$ref": "#/definitions/api_pbEstimateCoinBuyResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -444,7 +444,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -497,7 +497,7 @@
     "/estimate_coin_sell": {
       "get": {
         "summary": "Return estimate of sell coin transaction.",
-        "operationId": "EstimateCoinSell",
+        "operationId": "ApiService_EstimateCoinSell",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -505,7 +505,7 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -520,7 +520,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -573,7 +573,7 @@
     "/estimate_coin_sell_all": {
       "get": {
         "summary": "Return estimate of sell all coin transaction.",
-        "operationId": "EstimateCoinSellAll",
+        "operationId": "ApiService_EstimateCoinSellAll",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -581,7 +581,7 @@
               "$ref": "#/definitions/api_pbEstimateCoinSellAllResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -596,7 +596,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -656,7 +656,7 @@
     "/estimate_tx_commission/{tx}": {
       "get": {
         "summary": "Return estimate of transaction.",
-        "operationId": "EstimateTxCommission",
+        "operationId": "ApiService_EstimateTxCommission",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -664,7 +664,7 @@
               "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -679,7 +679,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -706,7 +706,7 @@
     "/events/{height}": {
       "get": {
         "summary": "Returns events at given height.",
-        "operationId": "Events",
+        "operationId": "ApiService_Events",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -714,7 +714,7 @@
               "$ref": "#/definitions/api_pbEventsResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -729,7 +729,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -760,7 +760,7 @@
     "/frozen/{address}": {
       "get": {
         "summary": "Returns frozen balance.",
-        "operationId": "Frozen",
+        "operationId": "ApiService_Frozen",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -768,7 +768,7 @@
               "$ref": "#/definitions/api_pbFrozenResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -783,7 +783,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -795,10 +795,11 @@
             "type": "string"
           },
           {
-            "name": "coin",
+            "name": "coin_id",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           }
         ],
         "tags": [
@@ -809,7 +810,7 @@
     "/genesis": {
       "get": {
         "summary": "Returns genesis file.",
-        "operationId": "Genesis",
+        "operationId": "ApiService_Genesis",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -817,7 +818,7 @@
               "$ref": "#/definitions/api_pbGenesisResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -832,7 +833,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -844,7 +845,7 @@
     "/halts": {
       "get": {
         "summary": "Halts",
-        "operationId": "Halts",
+        "operationId": "ApiService_Halts",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -852,7 +853,7 @@
               "$ref": "#/definitions/api_pbHaltsResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -867,7 +868,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -888,7 +889,7 @@
     "/max_gas": {
       "get": {
         "summary": "Returns current max gas.",
-        "operationId": "MaxGas",
+        "operationId": "ApiService_MaxGas",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -896,7 +897,7 @@
               "$ref": "#/definitions/api_pbMaxGasResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -911,7 +912,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -932,7 +933,7 @@
     "/min_gas_price": {
       "get": {
         "summary": "Returns current min gas price.",
-        "operationId": "MinGasPrice",
+        "operationId": "ApiService_MinGasPrice",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -940,7 +941,7 @@
               "$ref": "#/definitions/api_pbMinGasPriceResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -955,7 +956,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -967,7 +968,7 @@
     "/missed_blocks/{public_key}": {
       "get": {
         "summary": "Returns missed blocks by validator public key.",
-        "operationId": "MissedBlocks",
+        "operationId": "ApiService_MissedBlocks",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -975,7 +976,7 @@
               "$ref": "#/definitions/api_pbMissedBlocksResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -990,7 +991,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1017,7 +1018,7 @@
     "/net_info": {
       "get": {
         "summary": "Returns network info",
-        "operationId": "NetInfo",
+        "operationId": "ApiService_NetInfo",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1025,7 +1026,7 @@
               "$ref": "#/definitions/api_pbNetInfoResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1040,7 +1041,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1052,7 +1053,7 @@
     "/send_transaction": {
       "post": {
         "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
-        "operationId": "SendTransaction2",
+        "operationId": "ApiService_SendTransaction2",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1060,7 +1061,7 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1075,7 +1076,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1097,7 +1098,7 @@
     "/send_transaction/{tx}": {
       "get": {
         "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
-        "operationId": "SendTransaction",
+        "operationId": "ApiService_SendTransaction",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1105,7 +1106,7 @@
               "$ref": "#/definitions/api_pbSendTransactionResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1120,7 +1121,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1140,7 +1141,7 @@
     "/status": {
       "get": {
         "summary": "Returns node status including pubkey, latest block.",
-        "operationId": "Status",
+        "operationId": "ApiService_Status",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1148,7 +1149,7 @@
               "$ref": "#/definitions/api_pbStatusResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1163,7 +1164,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1175,7 +1176,7 @@
     "/subscribe": {
       "get": {
         "summary": "Returns a subscription for events by query.",
-        "operationId": "Subscribe",
+        "operationId": "ApiService_Subscribe",
         "responses": {
           "200": {
             "description": "A successful response.(streaming responses)",
@@ -1192,7 +1193,7 @@
               "title": "Stream result of api_pbSubscribeResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1207,7 +1208,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1227,7 +1228,7 @@
     "/transaction/{hash}": {
       "get": {
         "summary": "Returns transaction info.",
-        "operationId": "Transaction",
+        "operationId": "ApiService_Transaction",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1235,7 +1236,7 @@
               "$ref": "#/definitions/api_pbTransactionResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1250,7 +1251,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1270,7 +1271,7 @@
     "/transactions": {
       "get": {
         "summary": "Return transactions by query.",
-        "operationId": "Transactions",
+        "operationId": "ApiService_Transactions",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1278,7 +1279,7 @@
               "$ref": "#/definitions/api_pbTransactionsResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1293,7 +1294,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1327,7 +1328,7 @@
     "/unconfirmed_txs": {
       "get": {
         "summary": "Returns unconfirmed transactions.",
-        "operationId": "UnconfirmedTxs",
+        "operationId": "ApiService_UnconfirmedTxs",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1335,7 +1336,7 @@
               "$ref": "#/definitions/api_pbUnconfirmedTxsResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1350,7 +1351,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1371,7 +1372,7 @@
     "/validators": {
       "get": {
         "summary": "Returns list of active validators.",
-        "operationId": "Validators",
+        "operationId": "ApiService_Validators",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1379,7 +1380,7 @@
               "$ref": "#/definitions/api_pbValidatorsResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1394,7 +1395,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1429,7 +1430,7 @@
     "/waitlist/{public_key}/{address}": {
       "get": {
         "summary": "Returns the list of address stakes in waitlist.",
-        "operationId": "WaitList",
+        "operationId": "ApiService_WaitList",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1437,7 +1438,7 @@
               "$ref": "#/definitions/api_pbWaitListResponse"
             }
           },
-          "500": {
+          "504": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/api_pbErrorBody",
@@ -1452,7 +1453,7 @@
           "default": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/gatewayruntimeError"
             }
           }
         },
@@ -1674,7 +1675,7 @@
           "type": "string"
         },
         "coin": {
-          "type": "string"
+          "$ref": "#/definitions/api_pbCoin"
         },
         "value": {
           "type": "string"
@@ -2026,6 +2027,10 @@
     },
     "api_pbCoin": {
       "type": "object",
+      "example": {
+        "id": "0",
+        "symbol": "BIP"
+      },
       "properties": {
         "id": {
           "type": "string"
@@ -2037,6 +2042,16 @@
     },
     "api_pbCoinInfoResponse": {
       "type": "object",
+      "example": {
+        "id": "0",
+        "name": "",
+        "symbol": "BIP",
+        "volume": "0",
+        "crr": "0",
+        "reserve_balance": "0",
+        "max_supply": "10000000000000000000000000000",
+        "owner_address": null
+      },
       "properties": {
         "id": {
           "type": "string"
@@ -2272,6 +2287,9 @@
     },
     "api_pbSendTransactionRequest": {
       "type": "object",
+      "example": {
+        "tx": "0xf87d1d02018005adec808a5355504552544553543989056bc75e2d631000008a043c33c19375648000000a893635c9adc5dea00000808001b845f8431ba05c0e7d2eba83f2400d9cbdb3416eef0911d07280ac20442f9b70a10cfa4af214a04d11424c028e6ffeef5bf0a98830130c80ed1472a1bd1debf56cc07e47325fe2"
+      },
       "properties": {
         "tx": {
           "type": "string"
@@ -2280,6 +2298,11 @@
     },
     "api_pbSendTransactionResponse": {
       "type": "object",
+      "example": {
+        "code": "0",
+        "log": "",
+        "hash": "Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb"
+      },
       "properties": {
         "code": {
           "type": "string"
@@ -2290,6 +2313,10 @@
         "hash": {
           "type": "string"
         }
+      },
+      "externalDocs": {
+        "description": "More about Minter transactions",
+        "url": "https://www.minter.network/docs#transactions"
       }
     },
     "api_pbStatusResponse": {
@@ -2545,5 +2572,9 @@
         }
       }
     }
+  },
+  "externalDocs": {
+    "description": "More about Minter blockchain",
+    "url": "https://www.minter.network/docs"
   }
 }

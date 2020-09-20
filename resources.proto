@@ -1,10 +1,521 @@
 syntax = "proto3";
 
-import "api.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/wrappers.proto";
+import "protoc-gen-swagger/options/annotations.proto";
 
 package api_pb;
 
 option go_package = ".;api_pb";
+
+message Coin {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"id\": \"0\", \"symbol\": \"BIP\"}"
+        }
+    };
+    string id = 1;
+    string symbol = 2;
+}
+
+message NodeInfo {
+    message ProtocolVersion {
+        string p2p = 3;
+        string block = 1;
+        string app = 2;
+    }
+    ProtocolVersion protocol_version = 8;
+    string id = 1;
+    string listen_addr = 2;
+    string network = 3;
+    string version = 4;
+    string channels = 5;
+    string moniker = 6;
+    message Other {
+        string tx_index = 2;
+        string rpc_address = 1;
+    }
+    Other other = 7;
+}
+message NetInfoResponse {
+    bool listening = 4;
+    repeated string listeners = 1;
+    string count_peers = 2;
+    message Peer {
+        google.protobuf.StringValue latest_block_height = 5;
+        NodeInfo node_info = 4;
+        bool is_outbound = 1;
+        message ConnectionStatus {
+            string duration = 4;
+            message Monitor {
+                bool active = 13;
+                string start = 1;
+                string duration = 2;
+                string idle = 3;
+                string bytes = 4;
+                string samples = 5;
+                string inst_rate = 6;
+                string cur_rate = 7;
+                string avg_rate = 8;
+                string peak_rate = 9;
+                string bytes_rem = 10;
+                string time_rem = 11;
+                string progress = 12;
+            }
+            Monitor SendMonitor = 1;
+            Monitor RecvMonitor = 2;
+            message Channel {
+                string id = 5;
+                string send_queue_capacity = 1;
+                string send_queue_size = 2;
+                string priority = 3;
+                string recently_sent = 4;
+            }
+            repeated Channel channels = 3;
+        }
+        ConnectionStatus connection_status = 2;
+        string remote_ip = 3;
+    }
+    repeated Peer peers = 3;
+}
+
+message StatusResponse {
+    string version = 8;
+    string latest_block_hash = 1;
+    string latest_app_hash = 2;
+    string latest_block_height = 3;
+    string latest_block_time = 4;
+    string keep_last_states = 5;
+    string total_slashed = 10;
+    bool catching_up = 6;
+    string public_key = 7;
+    string node_id = 9;
+}
+message GenesisResponse {
+    string genesis_time = 1;
+    string chain_id = 2;
+    message ConsensusParams {
+        message Block {
+            string max_bytes = 1;
+            string max_gas = 2;
+            string time_iota_ms = 3;
+        }
+        Block block = 1;
+        message Evidence {
+            string max_age_num_blocks = 1;
+            string max_age_duration = 2;
+        }
+        Evidence evidence = 2;
+        message Validator {
+            repeated string pub_key_types = 1;
+        }
+        Validator validator = 3;
+    }
+    ConsensusParams consensus_params = 3;
+    string app_hash = 4;
+    google.protobuf.Struct app_state = 5;
+}
+
+message MinGasPriceResponse {
+    string min_gas_price = 3;
+}
+
+message BlockRequest {
+    uint64 height = 1;
+    enum Field {
+        transactions = 0;
+        missed = 1;
+        block_reward = 2;
+        size = 3;
+        proposer = 4;
+        validators = 5;
+        evidence = 6;
+    }
+    repeated Field fields = 2;
+}
+message BlockResponse {
+    string hash = 1;
+    string height = 2;
+    string time = 3;
+    string transaction_count = 4;
+
+    message Transaction {
+        string hash = 1;
+        string raw_tx = 2;
+        string from = 3;
+        string nonce = 4;
+        string gas_price = 5;
+        string type = 6;
+        google.protobuf.Any data = 7;
+        bytes payload = 8;
+        bytes service_data = 9;
+        string gas = 10;
+        string gas_coin = 11;
+        map<string, string> tags = 12;
+        string code = 13;
+        string log = 14;
+    }
+
+    repeated Transaction transactions = 6;
+    string block_reward = 7;
+    string size = 8;
+    string proposer = 9;
+    message Validator {
+        string public_key = 1;
+        bool signed = 2;
+    }
+    repeated Validator validators = 10;
+    message Evidence {
+        message Evidence {
+            string height = 1;
+            string time = 2;
+            string address = 3;
+            string hash = 4;
+        }
+        repeated Evidence evidence = 1;
+    }
+    Evidence evidence = 11;
+    repeated string missed = 12;
+}
+
+message MaxGasRequest {
+    uint64 height = 1;
+}
+message MaxGasResponse {
+    string max_gas = 3;
+}
+
+message AddressRequest {
+    string address = 1;
+    uint64 height = 2;
+    bool delegated = 4;
+    reserved "frozen", "total";
+}
+message AddressBalance {
+    Coin coin = 1;
+    string value = 2;
+    string bip_value = 3;
+}
+message AddressDelegatedBalance {
+    Coin coin = 1;
+    string value = 2;
+    string bip_value = 3;
+    string delegate_bip_value = 4;
+}
+message AddressResponse {
+    repeated AddressBalance balance = 1;
+    repeated AddressDelegatedBalance delegated = 3;
+    repeated AddressBalance total = 4;
+    string transaction_count = 2;
+    string bip_value = 5;
+}
+
+message AddressesRequest {
+    repeated string addresses = 1;
+    uint64 height = 2;
+    bool delegated = 4;
+    reserved "frozen", "total";
+}
+message AddressesResponse {
+    message Result {
+        repeated AddressBalance balance = 2;
+        repeated AddressDelegatedBalance delegated = 6;
+        repeated AddressBalance total = 4;
+        string transaction_count = 3;
+        string bip_value = 5;
+    }
+    map<string, Result> addresses = 3;
+}
+
+enum CandidateStatus {
+    _ = 0;
+    CandidateOff = 1;
+    CandidateOn = 2;
+    ValidatorOn = 3;
+}
+message CandidateRequest {
+    string public_key = 1;
+    uint64 height = 2;
+}
+message CandidateResponse {
+    string reward_address = 1;
+    string owner_address = 10;
+    string control_address = 11;
+    string total_stake = 2;
+    string public_key = 3;
+    string commission = 4;
+    string used_slots = 7;
+    string uniq_users = 8;
+    string min_stake = 9;
+    message Stake {
+        string owner = 1;
+        Coin coin = 2;
+        string value = 3;
+        string bip_value = 4;
+    }
+    repeated Stake stakes = 5;
+    string status = 6;
+}
+
+message CandidatesRequest {
+    uint64 height = 1;
+    bool include_stakes = 2;
+    CandidateStatus status = 3;
+
+}
+message CandidatesResponse {
+    repeated CandidateResponse candidates = 3;
+}
+
+message CoinIdRequest {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"id\":\"0\"}"
+        }
+    };
+    uint64 height = 1;
+    uint32 id = 2;
+}
+message CoinInfoRequest {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"symbol\":\"BIP\"}"
+        }
+    };
+    uint64 height = 1;
+    string symbol = 2;
+}
+message CoinInfoResponse {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"id\":\"0\",\"name\":\"\",\"symbol\":\"BIP\",\"volume\":\"0\",\"crr\":\"0\",\"reserve_balance\":\"0\",\"max_supply\":\"10000000000000000000000000000\",\"owner_address\":null}"
+        }
+    };
+    string id = 6;
+    string name = 1;
+    string symbol = 2;
+    string volume = 3;
+    string crr = 4;
+    string reserve_balance = 5;
+    string max_supply = 8;
+    google.protobuf.StringValue owner_address = 7;
+}
+
+message SendTransactionResponse {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        external_docs: {
+            url: "https://www.minter.network/docs#transactions";
+            description: "More about Minter transactions";
+        }
+        example: {
+            value: "{\"code\":\"0\",\"log\":\"\",\"hash\":\"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb\"}"
+        }
+    };
+    string code = 1;
+    string log = 3;
+    string hash = 4;
+}
+message SendTransactionRequest {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"tx\":\"0xf87d1d02018005adec808a5355504552544553543989056bc75e2d631000008a043c33c19375648000000a893635c9adc5dea00000808001b845f8431ba05c0e7d2eba83f2400d9cbdb3416eef0911d07280ac20442f9b70a10cfa4af214a04d11424c028e6ffeef5bf0a98830130c80ed1472a1bd1debf56cc07e47325fe2\"}"
+        }
+    };
+    string tx = 1;
+}
+
+message TransactionResponse {
+    string hash = 1;
+    string raw_tx = 2;
+    string height = 3;
+    string index = 4;
+    string from = 5;
+    string nonce = 6;
+    string gas = 7;
+    string gas_price = 8;
+    string gas_coin = 9;
+    string type = 10;
+    google.protobuf.Any data = 11;
+    bytes payload = 12;
+    map<string, string> tags = 13;
+    string code = 14;
+    string log = 15;
+}
+message TransactionRequest {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"hash\":\"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb\"}"
+        }
+    };
+    string hash = 1;
+}
+
+message TransactionsResponse {
+    repeated TransactionResponse transactions = 3;
+}
+message TransactionsRequest {
+    string query = 1;
+    int32 page = 2;
+    int32 per_page = 3;
+}
+
+message EstimateCoinBuyRequest {
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 5;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
+    string value_to_buy = 3;
+    uint64 height = 4;
+}
+message EstimateCoinBuyResponse {
+    string will_pay = 1;
+    string commission = 2;
+}
+
+message EstimateCoinSellRequest {
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 5;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
+    string value_to_sell = 3;
+    uint64 height = 4;
+}
+message EstimateCoinSellResponse {
+    string will_get = 1;
+    string commission = 2;
+}
+
+
+message EstimateCoinSellAllRequest {
+    oneof buy {
+        uint32 coin_id_to_buy = 1;
+        string coin_to_buy = 7;
+    }
+    oneof sell {
+        uint32 coin_id_to_sell = 2;
+        string coin_to_sell = 6;
+    }
+    string value_to_sell = 3;
+    uint64 gas_price = 4;
+    uint64 height = 5;
+}
+message EstimateCoinSellAllResponse {
+    string will_get = 1;
+}
+
+message EstimateTxCommissionResponse {
+    string commission = 1;
+}
+message EstimateTxCommissionRequest {
+    string tx = 1;
+    uint64 height = 2;
+}
+
+message EventsRequest {
+    uint64 height = 1;
+    repeated string search = 2;
+}
+message EventsResponse {
+    message Event {
+        string type = 1;
+        google.protobuf.Struct value = 2;
+    }
+    repeated Event events = 1;
+}
+
+message MissedBlocksRequest {
+    string public_key = 1;
+    uint64 height = 2;
+}
+message MissedBlocksResponse {
+    string missed_blocks = 1;
+    string missed_blocks_count = 2;
+}
+
+message UnconfirmedTxsResponse {
+    string transaction_count = 1;
+    string total_transactions = 2;
+    string total_bytes = 3;
+    repeated string transactions = 4;
+}
+message UnconfirmedTxsRequest {
+    int32 limit = 1;
+}
+
+message ValidatorsRequest {
+    uint64 height = 1;
+    int32 page = 2;
+    int32 per_page = 3;
+}
+message ValidatorsResponse {
+    message Result {
+        string public_key = 1;
+        string voting_power = 2;
+    }
+    repeated Result validators = 3;
+}
+
+message SubscribeRequest {
+    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
+        example: {
+            value: "{\"query\":\"tm.event = 'NewBlock'\"}"
+        }
+    };
+    string query = 1;
+}
+message SubscribeResponse {
+    string query = 1;
+    google.protobuf.Struct data = 2;
+    message Event {
+        string key = 1;
+        repeated string events = 2;
+    }
+    repeated Event events = 3;
+}
+
+message HaltsRequest {
+    uint64 height = 1;
+}
+message HaltsResponse {
+    repeated string votes = 1;
+}
+
+message FrozenRequest {
+    string address = 1;
+    google.protobuf.UInt32Value coin_id = 2;
+}
+message FrozenResponse {
+    message Frozen {
+        string height = 1;
+        string address = 2;
+        string candidate_key = 3;
+        Coin coin = 4;
+        string value = 5;
+    }
+    repeated Frozen frozen = 1;
+}
+
+message WaitListRequest {
+    string public_key = 1;
+    string address = 2;
+    uint64 height = 3;
+}
+message WaitListResponse {
+    message Wait {
+        Coin coin = 1;
+        string value = 2;
+    }
+    repeated Wait list = 1;
+}
 
 message SendData {
     Coin coin = 1;
