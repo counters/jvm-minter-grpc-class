@@ -25,7 +25,7 @@ jobs:
       - run: npm install -g redoc-cli
 
       - name: Build
-        run: redoc-cli bundle ./api.swagger.json && mkdir -p ./Output && mv redoc-static.html ./Output/index.html
+        run: redoc-cli bundle ./docs/api.swagger.json && mkdir -p ./Output && mv redoc-static.html ./Output/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.5.5
