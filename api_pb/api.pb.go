@@ -375,7 +375,7 @@ type ApiServiceClient interface {
 	Addresses(ctx context.Context, in *AddressesRequest, opts ...grpc.CallOption) (*AddressesResponse, error)
 	//Returns block data at given height.
 	Block(ctx context.Context, in *BlockRequest, opts ...grpc.CallOption) (*BlockResponse, error)
-	//Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.
+	//Returns candidate’s info by provided public_key.
 	Candidate(ctx context.Context, in *CandidateRequest, opts ...grpc.CallOption) (*CandidateResponse, error)
 	//Returns list of candidates.
 	Candidates(ctx context.Context, in *CandidatesRequest, opts ...grpc.CallOption) (*CandidatesResponse, error)
@@ -707,7 +707,7 @@ type ApiServiceServer interface {
 	Addresses(context.Context, *AddressesRequest) (*AddressesResponse, error)
 	//Returns block data at given height.
 	Block(context.Context, *BlockRequest) (*BlockResponse, error)
-	//Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.
+	//Returns candidate’s info by provided public_key.
 	Candidate(context.Context, *CandidateRequest) (*CandidateResponse, error)
 	//Returns list of candidates.
 	Candidates(context.Context, *CandidatesRequest) (*CandidatesResponse, error)

@@ -206,7 +206,7 @@
     },
     "/candidate/{public_key}": {
       "get": {
-        "summary": "Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.",
+        "summary": "Returns candidate’s info by provided public_key.",
         "operationId": "Candidate",
         "responses": {
           "200": {
