@@ -63,7 +63,7 @@ service ApiService {
             get: "/block/{height}"
         };
     }
-    //Returns candidate’s info by provided public_key. It will respond with 404 code if candidate is not found.
+    //Returns candidate’s info by provided public_key.
     rpc Candidate (CandidateRequest) returns (CandidateResponse) {
         option (google.api.http) = {
             get: "/candidate/{public_key}"
