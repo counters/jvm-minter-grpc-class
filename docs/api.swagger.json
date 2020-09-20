@@ -33,13 +33,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbAddressResponse"
+              "$ref": "#/definitions/AddressResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -51,7 +51,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -89,13 +89,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbAddressesResponse"
+              "$ref": "#/definitions/AddressesResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -107,7 +107,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -149,13 +149,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbBlockResponse"
+              "$ref": "#/definitions/BlockResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -167,7 +167,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -212,13 +212,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbCandidateResponse"
+              "$ref": "#/definitions/CandidateResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -230,7 +230,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -262,13 +262,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbCandidatesResponse"
+              "$ref": "#/definitions/CandidatesResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -280,7 +280,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -325,13 +325,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbCoinInfoResponse"
+              "$ref": "#/definitions/CoinInfoResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -343,7 +343,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -375,13 +375,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbCoinInfoResponse"
+              "$ref": "#/definitions/CoinInfoResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -393,7 +393,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -426,13 +426,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbEstimateCoinBuyResponse"
+              "$ref": "#/definitions/EstimateCoinBuyResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -444,7 +444,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -502,13 +502,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbEstimateCoinSellResponse"
+              "$ref": "#/definitions/EstimateCoinSellResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -520,7 +520,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -578,13 +578,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbEstimateCoinSellAllResponse"
+              "$ref": "#/definitions/EstimateCoinSellAllResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -596,7 +596,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -661,13 +661,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbEstimateTxCommissionResponse"
+              "$ref": "#/definitions/EstimateTxCommissionResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -679,7 +679,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -711,13 +711,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbEventsResponse"
+              "$ref": "#/definitions/EventsResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -729,7 +729,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -765,13 +765,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbFrozenResponse"
+              "$ref": "#/definitions/FrozenResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -783,7 +783,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -815,13 +815,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbGenesisResponse"
+              "$ref": "#/definitions/GenesisResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -833,7 +833,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -850,13 +850,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbHaltsResponse"
+              "$ref": "#/definitions/HaltsResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -868,7 +868,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -894,13 +894,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbMaxGasResponse"
+              "$ref": "#/definitions/MaxGasResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -912,7 +912,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -938,13 +938,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbMinGasPriceResponse"
+              "$ref": "#/definitions/MinGasPriceResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -956,7 +956,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -973,13 +973,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbMissedBlocksResponse"
+              "$ref": "#/definitions/MissedBlocksResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -991,7 +991,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1023,13 +1023,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbNetInfoResponse"
+              "$ref": "#/definitions/NetInfoResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1041,7 +1041,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1058,13 +1058,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbSendTransactionResponse"
+              "$ref": "#/definitions/SendTransactionResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1076,7 +1076,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1086,7 +1086,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/api_pbSendTransactionRequest"
+              "$ref": "#/definitions/SendTransactionRequest"
             }
           }
         ],
@@ -1103,13 +1103,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbSendTransactionResponse"
+              "$ref": "#/definitions/SendTransactionResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1121,7 +1121,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1146,13 +1146,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbStatusResponse"
+              "$ref": "#/definitions/StatusResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1164,7 +1164,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1184,19 +1184,19 @@
               "type": "object",
               "properties": {
                 "result": {
-                  "$ref": "#/definitions/api_pbSubscribeResponse"
+                  "$ref": "#/definitions/SubscribeResponse"
                 },
                 "error": {
                   "$ref": "#/definitions/runtimeStreamError"
                 }
               },
-              "title": "Stream result of api_pbSubscribeResponse"
+              "title": "Stream result of SubscribeResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1208,7 +1208,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1233,13 +1233,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbTransactionResponse"
+              "$ref": "#/definitions/TransactionResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1251,7 +1251,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1276,13 +1276,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbTransactionsResponse"
+              "$ref": "#/definitions/TransactionsResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1294,7 +1294,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1333,13 +1333,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbUnconfirmedTxsResponse"
+              "$ref": "#/definitions/UnconfirmedTxsResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1351,7 +1351,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1377,13 +1377,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbValidatorsResponse"
+              "$ref": "#/definitions/ValidatorsResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1395,7 +1395,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1435,13 +1435,13 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/api_pbWaitListResponse"
+              "$ref": "#/definitions/WaitListResponse"
             }
           },
           "504": {
             "description": "An unexpected error response",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody",
+              "$ref": "#/definitions/ErrorBody",
               "example": {
                 "error": {
                   "code": "504",
@@ -1453,7 +1453,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "#/definitions/api_pbErrorBody"
+              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1574,7 +1574,7 @@
           "type": "string"
         },
         "coin": {
-          "$ref": "#/definitions/api_pbCoin"
+          "$ref": "#/definitions/Coin"
         },
         "value": {
           "type": "string"
@@ -1675,7 +1675,7 @@
           "type": "string"
         },
         "coin": {
-          "$ref": "#/definitions/api_pbCoin"
+          "$ref": "#/definitions/Coin"
         },
         "value": {
           "type": "string"
@@ -1725,7 +1725,7 @@
           "type": "string"
         },
         "node_info": {
-          "$ref": "#/definitions/api_pbNodeInfo"
+          "$ref": "#/definitions/NodeInfo"
         },
         "is_outbound": {
           "type": "boolean"
@@ -1787,18 +1787,18 @@
       "type": "object",
       "properties": {
         "coin": {
-          "$ref": "#/definitions/api_pbCoin"
+          "$ref": "#/definitions/Coin"
         },
         "value": {
           "type": "string"
         }
       }
     },
-    "api_pbAddressBalance": {
+    "AddressBalance": {
       "type": "object",
       "properties": {
         "coin": {
-          "$ref": "#/definitions/api_pbCoin"
+          "$ref": "#/definitions/Coin"
         },
         "value": {
           "type": "string"
@@ -1808,11 +1808,11 @@
         }
       }
     },
-    "api_pbAddressDelegatedBalance": {
+    "AddressDelegatedBalance": {
       "type": "object",
       "properties": {
         "coin": {
-          "$ref": "#/definitions/api_pbCoin"
+          "$ref": "#/definitions/Coin"
         },
         "value": {
           "type": "string"
@@ -1825,25 +1825,25 @@
         }
       }
     },
-    "api_pbAddressResponse": {
+    "AddressResponse": {
       "type": "object",
       "properties": {
         "balance": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressBalance"
+            "$ref": "#/definitions/AddressBalance"
           }
         },
         "delegated": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressDelegatedBalance"
+            "$ref": "#/definitions/AddressDelegatedBalance"
           }
         },
         "total": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressBalance"
+            "$ref": "#/definitions/AddressBalance"
           }
         },
         "transaction_count": {
@@ -1854,36 +1854,36 @@
         }
       }
     },
-    "api_pbAddressesResponse": {
+    "AddressesResponse": {
       "type": "object",
       "properties": {
         "addresses": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "#/definitions/api_pbAddressesResponseResult"
+            "$ref": "#/definitions/AddressesResponseResult"
           }
         }
       }
     },
-    "api_pbAddressesResponseResult": {
+    "AddressesResponseResult": {
       "type": "object",
       "properties": {
         "balance": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressBalance"
+            "$ref": "#/definitions/AddressBalance"
           }
         },
         "delegated": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressDelegatedBalance"
+            "$ref": "#/definitions/AddressDelegatedBalance"
           }
         },
         "total": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbAddressBalance"
+            "$ref": "#/definitions/AddressBalance"
           }
         },
         "transaction_count": {
@@ -1894,7 +1894,7 @@
         }
       }
     },
-    "api_pbBlockResponse": {
+    "BlockResponse": {
       "type": "object",
       "properties": {
         "hash": {
@@ -1927,11 +1927,11 @@
         "validators": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbBlockResponseValidator"
+            "$ref": "#/definitions/BlockResponseValidator"
           }
         },
         "evidence": {
-          "$ref": "#/definitions/api_pbBlockResponseEvidence"
+          "$ref": "#/definitions/BlockResponseEvidence"
         },
         "missed": {
           "type": "array",
@@ -1941,7 +1941,7 @@
         }
       }
     },
-    "api_pbBlockResponseEvidence": {
+    "BlockResponseEvidence": {
       "type": "object",
       "properties": {
         "evidence": {
@@ -1952,7 +1952,7 @@
         }
       }
     },
-    "api_pbBlockResponseValidator": {
+    "BlockResponseValidator": {
       "type": "object",
       "properties": {
         "public_key": {
@@ -1963,7 +1963,7 @@
         }
       }
     },
-    "api_pbCandidateResponse": {
+    "CandidateResponse": {
       "type": "object",
       "properties": {
         "reward_address": {
@@ -2004,7 +2004,7 @@
         }
       }
     },
-    "api_pbCandidateStatus": {
+    "CandidateStatus": {
       "type": "string",
       "enum": [
         "_",
@@ -2014,18 +2014,18 @@
       ],
       "default": "_"
     },
-    "api_pbCandidatesResponse": {
+    "CandidatesResponse": {
       "type": "object",
       "properties": {
         "candidates": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbCandidateResponse"
+            "$ref": "#/definitions/CandidateResponse"
           }
         }
       }
     },
-    "api_pbCoin": {
+    "Coin": {
       "type": "object",
       "example": {
         "id": "0",
@@ -2040,7 +2040,7 @@
         }
       }
     },
-    "api_pbCoinInfoResponse": {
+    "CoinInfoResponse": {
       "type": "object",
       "example": {
         "id": "0",
@@ -2079,15 +2079,15 @@
         }
       }
     },
-    "api_pbErrorBody": {
+    "ErrorBody": {
       "type": "object",
       "properties": {
         "error": {
-          "$ref": "#/definitions/api_pbErrorBodyError"
+          "$ref": "#/definitions/ErrorBodyError"
         }
       }
     },
-    "api_pbErrorBodyError": {
+    "ErrorBodyError": {
       "type": "object",
       "properties": {
         "code": {
@@ -2104,7 +2104,7 @@
         }
       }
     },
-    "api_pbEstimateCoinBuyResponse": {
+    "EstimateCoinBuyResponse": {
       "type": "object",
       "properties": {
         "will_pay": {
@@ -2115,7 +2115,7 @@
         }
       }
     },
-    "api_pbEstimateCoinSellAllResponse": {
+    "EstimateCoinSellAllResponse": {
       "type": "object",
       "properties": {
         "will_get": {
@@ -2123,7 +2123,7 @@
         }
       }
     },
-    "api_pbEstimateCoinSellResponse": {
+    "EstimateCoinSellResponse": {
       "type": "object",
       "properties": {
         "will_get": {
@@ -2134,7 +2134,7 @@
         }
       }
     },
-    "api_pbEstimateTxCommissionResponse": {
+    "EstimateTxCommissionResponse": {
       "type": "object",
       "properties": {
         "commission": {
@@ -2142,18 +2142,18 @@
         }
       }
     },
-    "api_pbEventsResponse": {
+    "EventsResponse": {
       "type": "object",
       "properties": {
         "events": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbEventsResponseEvent"
+            "$ref": "#/definitions/EventsResponseEvent"
           }
         }
       }
     },
-    "api_pbEventsResponseEvent": {
+    "EventsResponseEvent": {
       "type": "object",
       "properties": {
         "type": {
@@ -2164,7 +2164,7 @@
         }
       }
     },
-    "api_pbFrozenResponse": {
+    "FrozenResponse": {
       "type": "object",
       "properties": {
         "frozen": {
@@ -2175,7 +2175,7 @@
         }
       }
     },
-    "api_pbGenesisResponse": {
+    "GenesisResponse": {
       "type": "object",
       "properties": {
         "genesis_time": {
@@ -2195,7 +2195,7 @@
         }
       }
     },
-    "api_pbHaltsResponse": {
+    "HaltsResponse": {
       "type": "object",
       "properties": {
         "votes": {
@@ -2206,7 +2206,7 @@
         }
       }
     },
-    "api_pbMaxGasResponse": {
+    "MaxGasResponse": {
       "type": "object",
       "properties": {
         "max_gas": {
@@ -2214,7 +2214,7 @@
         }
       }
     },
-    "api_pbMinGasPriceResponse": {
+    "MinGasPriceResponse": {
       "type": "object",
       "properties": {
         "min_gas_price": {
@@ -2222,7 +2222,7 @@
         }
       }
     },
-    "api_pbMissedBlocksResponse": {
+    "MissedBlocksResponse": {
       "type": "object",
       "properties": {
         "missed_blocks": {
@@ -2233,7 +2233,7 @@
         }
       }
     },
-    "api_pbNetInfoResponse": {
+    "NetInfoResponse": {
       "type": "object",
       "properties": {
         "listening": {
@@ -2256,7 +2256,7 @@
         }
       }
     },
-    "api_pbNodeInfo": {
+    "NodeInfo": {
       "type": "object",
       "properties": {
         "protocol_version": {
@@ -2285,7 +2285,7 @@
         }
       }
     },
-    "api_pbSendTransactionRequest": {
+    "SendTransactionRequest": {
       "type": "object",
       "example": {
         "tx": "0xf87d1d02018005adec808a5355504552544553543989056bc75e2d631000008a043c33c19375648000000a893635c9adc5dea00000808001b845f8431ba05c0e7d2eba83f2400d9cbdb3416eef0911d07280ac20442f9b70a10cfa4af214a04d11424c028e6ffeef5bf0a98830130c80ed1472a1bd1debf56cc07e47325fe2"
@@ -2296,7 +2296,7 @@
         }
       }
     },
-    "api_pbSendTransactionResponse": {
+    "SendTransactionResponse": {
       "type": "object",
       "example": {
         "code": "0",
@@ -2319,7 +2319,7 @@
         "url": "https://www.minter.network/docs#transactions"
       }
     },
-    "api_pbStatusResponse": {
+    "StatusResponse": {
       "type": "object",
       "properties": {
         "version": {
@@ -2354,7 +2354,7 @@
         }
       }
     },
-    "api_pbSubscribeResponse": {
+    "SubscribeResponse": {
       "type": "object",
       "properties": {
         "query": {
@@ -2366,12 +2366,12 @@
         "events": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbSubscribeResponseEvent"
+            "$ref": "#/definitions/SubscribeResponseEvent"
           }
         }
       }
     },
-    "api_pbSubscribeResponseEvent": {
+    "SubscribeResponseEvent": {
       "type": "object",
       "properties": {
         "key": {
@@ -2385,7 +2385,7 @@
         }
       }
     },
-    "api_pbTransactionResponse": {
+    "TransactionResponse": {
       "type": "object",
       "properties": {
         "hash": {
@@ -2439,18 +2439,18 @@
         }
       }
     },
-    "api_pbTransactionsResponse": {
+    "TransactionsResponse": {
       "type": "object",
       "properties": {
         "transactions": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbTransactionResponse"
+            "$ref": "#/definitions/TransactionResponse"
           }
         }
       }
     },
-    "api_pbUnconfirmedTxsResponse": {
+    "UnconfirmedTxsResponse": {
       "type": "object",
       "properties": {
         "transaction_count": {
@@ -2470,18 +2470,18 @@
         }
       }
     },
-    "api_pbValidatorsResponse": {
+    "ValidatorsResponse": {
       "type": "object",
       "properties": {
         "validators": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/api_pbValidatorsResponseResult"
+            "$ref": "#/definitions/ValidatorsResponseResult"
           }
         }
       }
     },
-    "api_pbValidatorsResponseResult": {
+    "ValidatorsResponseResult": {
       "type": "object",
       "properties": {
         "public_key": {
@@ -2492,7 +2492,7 @@
         }
       }
     },
-    "api_pbWaitListResponse": {
+    "WaitListResponse": {
       "type": "object",
       "properties": {
         "list": {
