@@ -296,10 +296,6 @@ message CoinInfoResponse {
 
 message SendTransactionResponse {
     option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-        external_docs: {
-            url: "https://www.minter.network/docs#transactions";
-            description: "More about Minter transactions";
-        }
         example_string: "{\"code\":\"0\",\"log\":\"\",\"hash\":\"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb\"}"
     };
     string code = 1;
