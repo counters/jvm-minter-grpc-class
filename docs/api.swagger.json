@@ -14,10 +14,6 @@
     }
   },
   "basePath": "/v2",
-  "schemes": [
-    "http",
-    "https"
-  ],
   "consumes": [
     "application/json"
   ],
@@ -58,6 +54,7 @@
         "parameters": [
           {
             "name": "address",
+            "description": "Begins with 'Mx'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -114,6 +111,7 @@
         "parameters": [
           {
             "name": "addresses",
+            "description": "Begins with 'Mx'",
             "in": "query",
             "required": false,
             "type": "array",
@@ -237,6 +235,7 @@
         "parameters": [
           {
             "name": "public_key",
+            "description": "Begins with 'Mp'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -790,6 +789,7 @@
         "parameters": [
           {
             "name": "address",
+            "description": "Begins with 'Mx'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -844,7 +844,7 @@
     },
     "/halts": {
       "get": {
-        "summary": "Halts",
+        "summary": "Returns the candidate votes for stopping the network at block.",
         "operationId": "Halts",
         "responses": {
           "200": {
@@ -998,6 +998,7 @@
         "parameters": [
           {
             "name": "public_key",
+            "description": "Begins with 'Mp'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1132,6 +1133,7 @@
         "parameters": [
           {
             "name": "tx",
+            "description": "Begins with '0x'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1184,6 +1186,7 @@
     "/subscribe": {
       "get": {
         "summary": "Returns a subscription for events by query.",
+        "description": "Only supported in WS and gRPC methods",
         "operationId": "Subscribe",
         "responses": {
           "200": {
@@ -1223,10 +1226,10 @@
         "parameters": [
           {
             "name": "query",
+            "description": "tm.event = 'NewBlock' or tm.event = 'Tx'",
             "in": "query",
             "required": false,
-            "type": "string",
-            "default": "tm.event = 'NewBlock'"
+            "type": "string"
           }
         ],
         "tags": [
@@ -1267,6 +1270,7 @@
         "parameters": [
           {
             "name": "hash",
+            "description": "Begins with 'Mt'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1469,12 +1473,14 @@
         "parameters": [
           {
             "name": "public_key",
+            "description": "Begins with 'Mp'",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "address",
+            "description": "Begins with 'Mx'",
             "in": "path",
             "required": true,
             "type": "string"
@@ -2302,7 +2308,7 @@
       "properties": {
         "tx": {
           "type": "string",
-          "pattern": "^(0x)[a-fA-F0-9]{1,}$"
+          "description": "Begins with '0x'"
         }
       }
     },
