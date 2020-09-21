@@ -15,8 +15,11 @@ service ApiService {
         option (google.api.http) = {
             get: "/subscribe"
         };
+        option (grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
+            description: "Only supported in WS and gRPC methods"
+        };
     }
-    //Halts
+    //Returns the candidate votes for stopping the network at block.
     rpc Halts (HaltsRequest) returns (HaltsResponse) {
         option (google.api.http) = {
             get: "/halts"

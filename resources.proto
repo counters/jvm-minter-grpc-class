@@ -185,7 +185,9 @@ message MaxGasResponse {
 }
 
 message AddressRequest {
-    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
+    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mx'"
+    }];
     uint64 height = 2;
     bool delegated = 4;
     reserved "frozen", "total";
@@ -210,7 +212,9 @@ message AddressResponse {
 }
 
 message AddressesRequest {
-    repeated string addresses = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
+    repeated string addresses = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mx'"
+    }];
     uint64 height = 2;
     bool delegated = 4;
     reserved "frozen", "total";
@@ -233,7 +237,9 @@ enum CandidateStatus {
     ValidatorOn = 3;
 }
 message CandidateRequest {
-    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mp'"
+    }];
     uint64 height = 2;
 }
 message CandidateResponse {
@@ -306,7 +312,9 @@ message SendTransactionRequest {
     option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
         example_string: "{\"tx\":\"0xf87d1d02018005adec808a5355504552544553543989056bc75e2d631000008a043c33c19375648000000a893635c9adc5dea00000808001b845f8431ba05c0e7d2eba83f2400d9cbdb3416eef0911d07280ac20442f9b70a10cfa4af214a04d11424c028e6ffeef5bf0a98830130c80ed1472a1bd1debf56cc07e47325fe2\"}"
     };
-    string tx = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(0x)[a-fA-F0-9]{1,}$"}];
+    string tx = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with '0x'"
+    }];
 }
 
 message TransactionResponse {
@@ -327,7 +335,9 @@ message TransactionResponse {
     string log = 15;
 }
 message TransactionRequest {
-    string hash = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mt)[a-fA-F0-9]{64}$"}];
+    string hash = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mt'"
+    }];
 }
 
 message TransactionsResponse {
@@ -412,7 +422,9 @@ message EventsResponse {
 }
 
 message MissedBlocksRequest {
-    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mp'"
+    }];
     uint64 height = 2;
 }
 message MissedBlocksResponse {
@@ -444,7 +456,9 @@ message ValidatorsResponse {
 }
 
 message SubscribeRequest {
-    string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {default: "tm.event = 'NewBlock'"}];
+    string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "tm.event = 'NewBlock' or tm.event = 'Tx'"
+    }];
 }
 message SubscribeResponse {
     string query = 1;
@@ -464,7 +478,9 @@ message HaltsResponse {
 }
 
 message FrozenRequest {
-    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
+    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mx'"
+    }];
     google.protobuf.UInt32Value coin_id = 2;
 }
 message FrozenResponse {
@@ -479,8 +495,12 @@ message FrozenResponse {
 }
 
 message WaitListRequest {
-    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
-    string address = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mp'"
+    }];
+    string address = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        description: "Begins with 'Mx'"
+    }];
     uint64 height = 3;
 }
 message WaitListResponse {
