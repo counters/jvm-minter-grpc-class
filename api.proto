@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 import "resources.proto";
 import "google/api/annotations.proto";
+import "protoc-gen-swagger/options/annotations.proto";
 
 package api_pb;
 
@@ -136,6 +137,12 @@ service ApiService {
             additional_bindings {
                 post: "/send_transaction"
                 body: "*"
+            }
+        };
+        option (grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
+            external_docs: {
+                url: "https://www.minter.network/docs#transactions"
+                description: "More about Minter transactions"
             }
         };
     }

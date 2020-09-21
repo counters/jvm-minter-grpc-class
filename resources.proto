@@ -185,7 +185,7 @@ message MaxGasResponse {
 }
 
 message AddressRequest {
-    string address = 1;
+    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
     uint64 height = 2;
     bool delegated = 4;
     reserved "frozen", "total";
@@ -210,7 +210,7 @@ message AddressResponse {
 }
 
 message AddressesRequest {
-    repeated string addresses = 1;
+    repeated string addresses = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
     uint64 height = 2;
     bool delegated = 4;
     reserved "frozen", "total";
@@ -227,13 +227,13 @@ message AddressesResponse {
 }
 
 enum CandidateStatus {
-    _ = 0;
+    CandidateStatusUNKNOWN = 0;
     CandidateOff = 1;
     CandidateOn = 2;
     ValidatorOn = 3;
 }
 message CandidateRequest {
-    string public_key = 1;
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
     uint64 height = 2;
 }
 message CandidateResponse {
@@ -295,9 +295,6 @@ message CoinInfoResponse {
 }
 
 message SendTransactionResponse {
-    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-        example_string: "{\"code\":\"0\",\"log\":\"\",\"hash\":\"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb\"}"
-    };
     string code = 1;
     string log = 3;
     string hash = 4;
@@ -306,7 +303,7 @@ message SendTransactionRequest {
     option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
         example_string: "{\"tx\":\"0xf87d1d02018005adec808a5355504552544553543989056bc75e2d631000008a043c33c19375648000000a893635c9adc5dea00000808001b845f8431ba05c0e7d2eba83f2400d9cbdb3416eef0911d07280ac20442f9b70a10cfa4af214a04d11424c028e6ffeef5bf0a98830130c80ed1472a1bd1debf56cc07e47325fe2\"}"
     };
-    string tx = 1;
+    string tx = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(0x)[a-fA-F0-9]{1,}$"}];
 }
 
 message TransactionResponse {
@@ -327,10 +324,7 @@ message TransactionResponse {
     string log = 15;
 }
 message TransactionRequest {
-    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-        example_string: "{\"hash\":\"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb\"}"
-    };
-    string hash = 1;
+    string hash = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mt)[a-fA-F0-9]{64}$"}];
 }
 
 message TransactionsResponse {
@@ -415,7 +409,7 @@ message EventsResponse {
 }
 
 message MissedBlocksRequest {
-    string public_key = 1;
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
     uint64 height = 2;
 }
 message MissedBlocksResponse {
@@ -447,10 +441,7 @@ message ValidatorsResponse {
 }
 
 message SubscribeRequest {
-    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-        example_string: "{\"query\":\"tm.event = 'NewBlock'\"}"
-    };
-    string query = 1;
+    string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {default: "tm.event = 'NewBlock'"}];
 }
 message SubscribeResponse {
     string query = 1;
@@ -470,7 +461,7 @@ message HaltsResponse {
 }
 
 message FrozenRequest {
-    string address = 1;
+    string address = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
     google.protobuf.UInt32Value coin_id = 2;
 }
 message FrozenResponse {
@@ -485,8 +476,8 @@ message FrozenResponse {
 }
 
 message WaitListRequest {
-    string public_key = 1;
-    string address = 2;
+    string public_key = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mp)[a-fA-F0-9]{64}$"}];
+    string address = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {pattern: "^(Mx)[a-fA-F0-9]{40}$"}];
     uint64 height = 3;
 }
 message WaitListResponse {
