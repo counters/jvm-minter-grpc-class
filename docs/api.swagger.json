@@ -304,12 +304,12 @@
             "required": false,
             "type": "string",
             "enum": [
-              "_",
+              "CandidateStatusUNKNOWN",
               "CandidateOff",
               "CandidateOn",
               "ValidatorOn"
             ],
-            "default": "_"
+            "default": "CandidateStatusUNKNOWN"
           }
         ],
         "tags": [
@@ -1092,7 +1092,11 @@
         ],
         "tags": [
           "ApiService"
-        ]
+        ],
+        "externalDocs": {
+          "description": "More about Minter transactions",
+          "url": "https://www.minter.network/docs#transactions"
+        }
       }
     },
     "/send_transaction/{tx}": {
@@ -1135,7 +1139,11 @@
         ],
         "tags": [
           "ApiService"
-        ]
+        ],
+        "externalDocs": {
+          "description": "More about Minter transactions",
+          "url": "https://www.minter.network/docs#transactions"
+        }
       }
     },
     "/status": {
@@ -1217,7 +1225,8 @@
             "name": "query",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "default": "tm.event = 'NewBlock'"
           }
         ],
         "tags": [
@@ -2007,12 +2016,12 @@
     "CandidateStatus": {
       "type": "string",
       "enum": [
-        "_",
+        "CandidateStatusUNKNOWN",
         "CandidateOff",
         "CandidateOn",
         "ValidatorOn"
       ],
-      "default": "_"
+      "default": "CandidateStatusUNKNOWN"
     },
     "CandidatesResponse": {
       "type": "object",
@@ -2292,17 +2301,13 @@
       },
       "properties": {
         "tx": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^(0x)[a-fA-F0-9]{1,}$"
         }
       }
     },
     "SendTransactionResponse": {
       "type": "object",
-      "example": {
-        "code": "0",
-        "log": "",
-        "hash": "Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb"
-      },
       "properties": {
         "code": {
           "type": "string"
