@@ -2313,10 +2313,6 @@
         "hash": {
           "type": "string"
         }
-      },
-      "externalDocs": {
-        "description": "More about Minter transactions",
-        "url": "https://www.minter.network/docs#transactions"
       }
     },
     "StatusResponse": {
