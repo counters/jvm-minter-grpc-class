@@ -34,6 +34,7 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
         url: "https://www.minter.network/docs";
         description: "More about Minter blockchain";
     }
+    schemes: [HTTP,HTTPS]
     consumes: "application/json"
     produces: "application/json"
     responses: {
