@@ -882,15 +882,15 @@
         ]
       }
     },
-    "/max_gas": {
+    "/max_gas_price": {
       "get": {
         "summary": "Returns current max gas.",
-        "operationId": "MaxGas",
+        "operationId": "MaxGasPrice",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/MaxGasResponse"
+              "$ref": "#/definitions/MaxGasPriceResponse"
             }
           },
           "504": {
@@ -1491,6 +1491,138 @@
     }
   },
   "definitions": {
+    "AppStateCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reward_address": {
+          "type": "string"
+        },
+        "owner_address": {
+          "type": "string"
+        },
+        "control_address": {
+          "type": "string"
+        },
+        "total_bip_stake": {
+          "type": "string"
+        },
+        "pub_key": {
+          "type": "string"
+        },
+        "commission": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "stakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidateStake"
+          }
+        },
+        "updates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidateStake"
+          }
+        },
+        "status": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "AppStateCandidateStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateFrozenFund": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "address": {
+          "type": "string"
+        },
+        "candidate_key": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateHaltBlock": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "candidate_key": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateValidators": {
+      "type": "object",
+      "properties": {
+        "total_bip_stake": {
+          "type": "string"
+        },
+        "pub_key": {
+          "type": "string"
+        },
+        "accum_reward": {
+          "type": "string"
+        },
+        "absent_times": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateWaitlist": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
     "BlockRequestField": {
       "type": "string",
       "enum": [
@@ -1508,7 +1640,8 @@
       "type": "object",
       "properties": {
         "height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "time": {
           "type": "string"
@@ -1534,13 +1667,16 @@
           "type": "string"
         },
         "nonce": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "gas_price": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"
@@ -1554,10 +1690,11 @@
           "format": "byte"
         },
         "gas": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "gas_coin": {
-          "type": "string"
+          "$ref": "#/definitions/Coin"
         },
         "tags": {
           "type": "object",
@@ -1566,26 +1703,10 @@
           }
         },
         "code": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "log": {
-          "type": "string"
-        }
-      }
-    },
-    "CandidateResponseStake": {
-      "type": "object",
-      "properties": {
-        "owner": {
-          "type": "string"
-        },
-        "coin": {
-          "$ref": "#/definitions/Coin"
-        },
-        "value": {
-          "type": "string"
-        },
-        "bip_value": {
           "type": "string"
         }
       }
@@ -1594,19 +1715,24 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "send_queue_capacity": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "send_queue_size": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "priority": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "recently_sent": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -1620,37 +1746,48 @@
           "type": "string"
         },
         "duration": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "idle": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "bytes": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "samples": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "inst_rate": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "cur_rate": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "avg_rate": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "peak_rate": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "bytes_rem": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "time_rem": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "progress": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -1658,13 +1795,16 @@
       "type": "object",
       "properties": {
         "max_bytes": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "max_gas": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "time_iota_ms": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -1672,7 +1812,8 @@
       "type": "object",
       "properties": {
         "height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "address": {
           "type": "string"
@@ -1684,6 +1825,102 @@
           "$ref": "#/definitions/Coin"
         },
         "value": {
+          "type": "string"
+        }
+      }
+    },
+    "GenesisResponseAppState": {
+      "type": "object",
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "start_height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "validators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateValidators"
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidate"
+          }
+        },
+        "coins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GenesisResponseAppStateCoin"
+          }
+        },
+        "frozen_funds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateFrozenFund"
+          }
+        },
+        "waitlist": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateWaitlist"
+          }
+        },
+        "halt_blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateHaltBlock"
+          }
+        },
+        "used_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "max_gas": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "total_slashed": {
+          "type": "string"
+        }
+      }
+    },
+    "GenesisResponseAppStateCoin": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "string"
+        },
+        "crr": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reserve": {
+          "type": "string"
+        },
+        "max_supply": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner_address": {
           "type": "string"
         }
       }
@@ -1706,10 +1943,12 @@
       "type": "object",
       "properties": {
         "max_age_num_blocks": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "max_age_duration": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -1728,7 +1967,8 @@
       "type": "object",
       "properties": {
         "latest_block_height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "node_info": {
           "$ref": "#/definitions/NodeInfo"
@@ -1759,13 +1999,16 @@
       "type": "object",
       "properties": {
         "p2p": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "block": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "app": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -1773,7 +2016,8 @@
       "type": "object",
       "properties": {
         "duration": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "SendMonitor": {
           "$ref": "#/definitions/ConnectionStatusMonitor"
@@ -1853,7 +2097,8 @@
           }
         },
         "transaction_count": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "bip_value": {
           "type": "string"
@@ -1893,7 +2138,8 @@
           }
         },
         "transaction_count": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "bip_value": {
           "type": "string"
@@ -1907,13 +2153,15 @@
           "type": "string"
         },
         "height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "time": {
           "type": "string"
         },
         "transaction_count": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "transactions": {
           "type": "array",
@@ -1925,7 +2173,8 @@
           "type": "string"
         },
         "size": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "proposer": {
           "type": "string"
@@ -1988,13 +2237,16 @@
           "type": "string"
         },
         "commission": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "used_slots": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "uniq_users": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "min_stake": {
           "type": "string"
@@ -2006,6 +2258,24 @@
           }
         },
         "status": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "CandidateResponseStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
           "type": "string"
         }
       }
@@ -2039,7 +2309,8 @@
       },
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "symbol": {
           "type": "string"
@@ -2060,7 +2331,8 @@
       },
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "name": {
           "type": "string"
@@ -2072,7 +2344,8 @@
           "type": "string"
         },
         "crr": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "reserve_balance": {
           "type": "string"
@@ -2197,7 +2470,7 @@
           "type": "string"
         },
         "app_state": {
-          "type": "object"
+          "$ref": "#/definitions/GenesisResponseAppState"
         }
       }
     },
@@ -2212,11 +2485,12 @@
         }
       }
     },
-    "MaxGasResponse": {
+    "MaxGasPriceResponse": {
       "type": "object",
       "properties": {
-        "max_gas": {
-          "type": "string"
+        "max_gas_price": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2224,7 +2498,8 @@
       "type": "object",
       "properties": {
         "min_gas_price": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2235,7 +2510,8 @@
           "type": "string"
         },
         "missed_blocks_count": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2252,7 +2528,8 @@
           }
         },
         "count_peers": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "peers": {
           "type": "array",
@@ -2308,7 +2585,8 @@
       },
       "properties": {
         "code": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "log": {
           "type": "string"
@@ -2331,13 +2609,15 @@
           "type": "string"
         },
         "latest_block_height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "latest_block_time": {
           "type": "string"
         },
         "keep_last_states": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "total_slashed": {
           "type": "string"
@@ -2394,28 +2674,34 @@
           "type": "string"
         },
         "height": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "index": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "from": {
           "type": "string"
         },
         "nonce": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "gas": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "gas_price": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "gas_coin": {
-          "type": "string"
+          "$ref": "#/definitions/Coin"
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"
@@ -2431,7 +2717,8 @@
           }
         },
         "code": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "log": {
           "type": "string"
@@ -2453,13 +2740,16 @@
       "type": "object",
       "properties": {
         "transaction_count": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "total_transactions": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "total_bytes": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "transactions": {
           "type": "array",
@@ -2487,7 +2777,8 @@
           "type": "string"
         },
         "voting_power": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
