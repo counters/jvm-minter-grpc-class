@@ -1491,6 +1491,27 @@
     }
   },
   "definitions": {
+    "AccountMultisigData": {
+      "type": "object"
+    },
+    "AppStateAccount": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "string"
+        },
+        "nonce": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "multisig_data": {
+          "$ref": "#/definitions/AccountMultisigData"
+        }
+      }
+    },
     "AppStateCandidate": {
       "type": "object",
       "properties": {
@@ -1867,6 +1888,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateWaitlist"
+          }
+        },
+        "accounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateAccount"
           }
         },
         "halt_blocks": {
