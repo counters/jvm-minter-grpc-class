@@ -1491,6 +1491,18 @@
     }
   },
   "definitions": {
+    "AccountBalance": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
     "AccountMultisigData": {
       "type": "object"
     },
@@ -1501,7 +1513,10 @@
           "type": "string"
         },
         "balance": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountBalance"
+          }
         },
         "nonce": {
           "type": "string",
