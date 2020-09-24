@@ -1504,7 +1504,26 @@
       }
     },
     "AccountMultisigData": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "weights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     },
     "AppStateAccount": {
       "type": "object",
