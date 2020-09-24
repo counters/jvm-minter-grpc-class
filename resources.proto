@@ -182,7 +182,7 @@ message GenesisResponse {
                 uint64 coin = 1;
                 string value = 2;
             }
-            string balance = 2;
+            repeated Balance balance = 2;
             uint64 nonce = 3;
             message MultisigData {
 
