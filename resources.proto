@@ -176,6 +176,21 @@ message GenesisResponse {
         }
         repeated Waitlist waitlist = 13;
 
+        message Account {
+            string address = 1;
+            message Balance {
+                uint64 coin = 1;
+                string value = 2;
+            }
+            string balance = 2;
+            uint64 nonce = 3;
+            message MultisigData {
+
+            }
+            MultisigData multisig_data = 4;
+        }
+        repeated Account accounts = 14;
+
         message HaltBlock {
             uint64 height = 1;
             string candidate_key = 2;
