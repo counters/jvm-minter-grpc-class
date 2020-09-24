@@ -410,7 +410,10 @@ type ApiServiceClient interface {
 	MaxGasPrice(ctx context.Context, in *MaxGasPriceRequest, opts ...grpc.CallOption) (*MaxGasPriceResponse, error)
 	//Returns missed blocks by validator public key.
 	MissedBlocks(ctx context.Context, in *MissedBlocksRequest, opts ...grpc.CallOption) (*MissedBlocksResponse, error)
-	//Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//Returns the result of sending signed tx.
+	//
+	//To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//
 	SendTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
 	//Returns transaction info.
 	Transaction(ctx context.Context, in *TransactionRequest, opts ...grpc.CallOption) (*TransactionResponse, error)
@@ -742,7 +745,10 @@ type ApiServiceServer interface {
 	MaxGasPrice(context.Context, *MaxGasPriceRequest) (*MaxGasPriceResponse, error)
 	//Returns missed blocks by validator public key.
 	MissedBlocks(context.Context, *MissedBlocksRequest) (*MissedBlocksResponse, error)
-	//Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//Returns the result of sending signed tx.
+	//
+	//To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//
 	SendTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
 	//Returns transaction info.
 	Transaction(context.Context, *TransactionRequest) (*TransactionResponse, error)

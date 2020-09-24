@@ -1048,7 +1048,8 @@
     },
     "/send_transaction": {
       "post": {
-        "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "Returns the result of sending signed tx.",
+        "description": "To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction2",
         "responses": {
           "200": {
@@ -1097,7 +1098,8 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "summary": "Returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "Returns the result of sending signed tx.",
+        "description": "To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction",
         "responses": {
           "200": {
