@@ -118,7 +118,7 @@ message GenesisResponse {
 
         message Validators {
             string total_bip_stake = 4;
-            string pub_key = 1;
+            string public_key = 1;
             string accum_reward = 2;
             string absent_times = 3;
         }
@@ -130,7 +130,7 @@ message GenesisResponse {
             string owner_address = 2;
             string control_address = 3;
             string total_bip_stake = 4;
-            string pub_key = 5;
+            string public_key = 5;
             uint64 commission = 6;
 
             message Stake {
