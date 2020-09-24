@@ -1510,7 +1510,7 @@
         "total_bip_stake": {
           "type": "string"
         },
-        "pub_key": {
+        "public_key": {
           "type": "string"
         },
         "commission": {
@@ -1593,7 +1593,7 @@
         "total_bip_stake": {
           "type": "string"
         },
-        "pub_key": {
+        "public_key": {
           "type": "string"
         },
         "accum_reward": {
