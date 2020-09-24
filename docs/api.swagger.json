@@ -398,8 +398,8 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "height",
@@ -449,8 +449,8 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_buy",
@@ -462,8 +462,8 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_sell",
@@ -525,8 +525,8 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_buy",
@@ -538,8 +538,8 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_sell",
@@ -601,8 +601,8 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_buy",
@@ -614,8 +614,8 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           },
           {
             "name": "coin_to_sell",
@@ -794,8 +794,8 @@
             "name": "coin_id",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "uint64"
           }
         ],
         "tags": [
@@ -1716,23 +1716,23 @@
       "properties": {
         "id": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "send_queue_capacity": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "send_queue_size": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "priority": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "recently_sent": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         }
       }
     },
@@ -1747,43 +1747,43 @@
         },
         "duration": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "idle": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "bytes": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "samples": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "inst_rate": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "cur_rate": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "avg_rate": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "peak_rate": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "bytes_rem": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "time_rem": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "progress": {
           "type": "string",
@@ -1796,15 +1796,15 @@
       "properties": {
         "max_bytes": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "max_gas": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "time_iota_ms": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         }
       }
     },
@@ -1944,11 +1944,11 @@
       "properties": {
         "max_age_num_blocks": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "max_age_duration": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         }
       }
     },
@@ -2511,7 +2511,7 @@
         },
         "missed_blocks_count": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         }
       }
     },
@@ -2529,7 +2529,7 @@
         },
         "count_peers": {
           "type": "string",
-          "format": "uint64"
+          "format": "int64"
         },
         "peers": {
           "type": "array",
