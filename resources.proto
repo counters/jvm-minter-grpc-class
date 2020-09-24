@@ -185,7 +185,9 @@ message GenesisResponse {
             repeated Balance balance = 2;
             uint64 nonce = 3;
             message MultisigData {
-
+                uint64 threshold = 1;
+                repeated uint64 weights = 2;
+                repeated string addresses = 3;
             }
             MultisigData multisig_data = 4;
         }
