@@ -533,7 +533,7 @@ message HaltsRequest {
     uint64 height = 1;
 }
 message HaltsResponse {
-    repeated string votes = 1;
+    repeated string public_keys = 1;
 }
 
 message FrozenRequest {
