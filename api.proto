@@ -122,9 +122,9 @@ service ApiService {
         };
     }
     //Returns current max gas.
-    rpc MaxGas (MaxGasRequest) returns (MaxGasResponse) {
+    rpc MaxGasPrice (MaxGasPriceRequest) returns (MaxGasPriceResponse) {
         option (google.api.http) = {
-            get: "/max_gas"
+            get: "/max_gas_price"
         };
     }
     //Returns missed blocks by validator public key.
