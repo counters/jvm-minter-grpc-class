@@ -185,7 +185,7 @@ service ApiService {
     //Returns the list of address stakes in waitlist.
     rpc WaitList (WaitListRequest) returns (WaitListResponse) {
         option (google.api.http) = {
-            get: "/waitlist/{public_key}/{address}"
+            get: "/waitlist/{address}"
         };
     }
 }
