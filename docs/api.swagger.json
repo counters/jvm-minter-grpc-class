@@ -1435,7 +1435,7 @@
         ]
       }
     },
-    "/waitlist/{public_key}/{address}": {
+    "/waitlist/{address}": {
       "get": {
         "summary": "Returns the list of address stakes in waitlist.",
         "operationId": "WaitList",
@@ -1467,15 +1467,15 @@
         },
         "parameters": [
           {
-            "name": "public_key",
+            "name": "address",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
-            "name": "address",
-            "in": "path",
-            "required": true,
+            "name": "public_key",
+            "in": "query",
+            "required": false,
             "type": "string"
           },
           {

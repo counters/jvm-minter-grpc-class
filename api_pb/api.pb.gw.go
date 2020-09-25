@@ -1285,7 +1285,7 @@ func local_request_ApiService_Frozen_0(ctx context.Context, marshaler runtime.Ma
 }
 
 var (
-	filter_ApiService_WaitList_0 = &utilities.DoubleArray{Encoding: map[string]int{"public_key": 0, "address": 1}, Base: []int{1, 1, 2, 0, 0}, Check: []int{0, 1, 1, 2, 3}}
+	filter_ApiService_WaitList_0 = &utilities.DoubleArray{Encoding: map[string]int{"address": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
 )
 
 func request_ApiService_WaitList_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1298,17 +1298,6 @@ func request_ApiService_WaitList_0(ctx context.Context, marshaler runtime.Marsha
 		err error
 		_   = err
 	)
-
-	val, ok = pathParams["public_key"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "public_key")
-	}
-
-	protoReq.PublicKey, err = runtime.String(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "public_key", err)
-	}
 
 	val, ok = pathParams["address"]
 	if !ok {
@@ -1343,17 +1332,6 @@ func local_request_ApiService_WaitList_0(ctx context.Context, marshaler runtime.
 		err error
 		_   = err
 	)
-
-	val, ok = pathParams["public_key"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "public_key")
-	}
-
-	protoReq.PublicKey, err = runtime.String(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "public_key", err)
-	}
 
 	val, ok = pathParams["address"]
 	if !ok {
@@ -2671,7 +2649,7 @@ var (
 
 	pattern_ApiService_Frozen_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"frozen", "address"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_ApiService_WaitList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"waitlist", "public_key", "address"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_ApiService_WaitList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"waitlist", "address"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (
