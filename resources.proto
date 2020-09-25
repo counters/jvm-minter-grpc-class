@@ -575,6 +575,7 @@ message WaitListRequest {
 }
 message WaitListResponse {
     message Wait {
+        string public_key = 3;
         Coin coin = 1;
         string value = 2;
     }
