@@ -2668,6 +2668,9 @@
         "version": {
           "type": "string"
         },
+        "network": {
+          "type": "string"
+        },
         "latest_block_hash": {
           "type": "string"
         },
