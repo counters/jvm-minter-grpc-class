@@ -80,6 +80,7 @@ message NetInfoResponse {
 
 message StatusResponse {
     string version = 8;
+    string network = 11;
     string latest_block_hash = 1;
     string latest_app_hash = 2;
     uint64 latest_block_height = 3;
