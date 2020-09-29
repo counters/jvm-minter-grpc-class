@@ -300,12 +300,11 @@
             "required": false,
             "type": "string",
             "enum": [
-              "CandidateStatusUNKNOWN",
-              "CandidateOff",
-              "CandidateOn",
-              "ValidatorOn"
+              "all",
+              "off",
+              "on"
             ],
-            "default": "CandidateStatusUNKNOWN"
+            "default": "all"
           }
         ],
         "tags": [
@@ -2201,7 +2200,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AddressBalance"
-          }
+          },
+          "description": "Sum of balance and delegated by coins."
         },
         "transaction_count": {
           "type": "string",
@@ -2349,12 +2349,11 @@
     "CandidateStatus": {
       "type": "string",
       "enum": [
-        "CandidateStatusUNKNOWN",
-        "CandidateOff",
-        "CandidateOn",
-        "ValidatorOn"
+        "all",
+        "off",
+        "on"
       ],
-      "default": "CandidateStatusUNKNOWN"
+      "default": "all"
     },
     "CandidatesResponse": {
       "type": "object",
