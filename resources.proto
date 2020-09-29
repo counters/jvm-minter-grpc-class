@@ -280,7 +280,6 @@ message AddressRequest {
     string address = 1;
     uint64 height = 2;
     bool delegated = 4;
-    reserved "frozen", "total";
 }
 message AddressBalance {
     Coin coin = 1;
@@ -305,12 +304,12 @@ message AddressesRequest {
     repeated string addresses = 1;
     uint64 height = 2;
     bool delegated = 4;
-    reserved "frozen", "total";
 }
 message AddressesResponse {
     message Result {
         repeated AddressBalance balance = 2;
         repeated AddressDelegatedBalance delegated = 6;
+        // Sum of balance and delegated by coins.
         repeated AddressBalance total = 4;
         uint64 transaction_count = 3;
         string bip_value = 5;
@@ -319,10 +318,9 @@ message AddressesResponse {
 }
 
 enum CandidateStatus {
-    CandidateStatusUNKNOWN = 0;
-    CandidateOff = 1;
-    CandidateOn = 2;
-    ValidatorOn = 3;
+    all = 0;
+    off = 1;
+    on = 2;
 }
 message CandidateRequest {
     string public_key = 1;
