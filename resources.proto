@@ -519,8 +519,6 @@ message UnconfirmedTxsRequest {
 
 message ValidatorsRequest {
     uint64 height = 1;
-    int32 page = 2;
-    int32 per_page = 3;
 }
 message ValidatorsResponse {
     message Result {
