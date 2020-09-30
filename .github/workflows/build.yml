@@ -12,11 +12,11 @@ jobs:
       - name: Install Protoc
         uses: arduino/setup-protoc@master
         with:
-          version: '3.12'
+          version: '3.13'
 
       - uses: actions/setup-go@v2
         with:
-          go-version: '1.14'
+          go-version: '1.15'
 
       - run: go generate gen.go
 

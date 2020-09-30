@@ -37,7 +37,7 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     consumes: "application/json"
     produces: "application/json"
     responses: {
-        key: "504"
+        key: "default"
         value: {
             description: "An unexpected error response"
             schema: {

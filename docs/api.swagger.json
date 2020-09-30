@@ -32,7 +32,7 @@
               "$ref": "#/definitions/AddressResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -42,12 +42,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -88,7 +82,7 @@
               "$ref": "#/definitions/AddressesResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -98,12 +92,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -148,7 +136,7 @@
               "$ref": "#/definitions/BlockResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -158,12 +146,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -211,7 +193,7 @@
               "$ref": "#/definitions/CandidateResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -221,12 +203,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -261,7 +237,7 @@
               "$ref": "#/definitions/CandidatesResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -271,12 +247,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -323,7 +293,7 @@
               "$ref": "#/definitions/CoinInfoResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -333,12 +303,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -373,7 +337,7 @@
               "$ref": "#/definitions/CoinInfoResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -383,12 +347,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -424,7 +382,7 @@
               "$ref": "#/definitions/EstimateCoinBuyResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -434,12 +392,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -500,7 +452,7 @@
               "$ref": "#/definitions/EstimateCoinSellResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -510,12 +462,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -576,7 +522,7 @@
               "$ref": "#/definitions/EstimateCoinSellAllResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -586,12 +532,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -659,7 +599,7 @@
               "$ref": "#/definitions/EstimateTxCommissionResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -669,12 +609,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -709,7 +643,7 @@
               "$ref": "#/definitions/EventsResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -719,12 +653,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -763,7 +691,7 @@
               "$ref": "#/definitions/FrozenResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -773,12 +701,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -813,7 +735,7 @@
               "$ref": "#/definitions/GenesisResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -823,12 +745,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -848,7 +764,7 @@
               "$ref": "#/definitions/HaltsResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -858,12 +774,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -892,7 +802,7 @@
               "$ref": "#/definitions/MaxGasPriceResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -902,12 +812,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -936,7 +840,7 @@
               "$ref": "#/definitions/MinGasPriceResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -946,12 +850,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -971,7 +869,7 @@
               "$ref": "#/definitions/MissedBlocksResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -981,12 +879,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1021,7 +913,7 @@
               "$ref": "#/definitions/NetInfoResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1031,12 +923,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1057,7 +943,7 @@
               "$ref": "#/definitions/SendTransactionResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1067,12 +953,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1107,7 +987,7 @@
               "$ref": "#/definitions/SendTransactionResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1117,12 +997,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1154,7 +1028,7 @@
               "$ref": "#/definitions/StatusResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1164,12 +1038,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1199,7 +1067,7 @@
               "title": "Stream result of SubscribeResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1209,12 +1077,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1243,7 +1105,7 @@
               "$ref": "#/definitions/TransactionResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1253,12 +1115,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1286,7 +1142,7 @@
               "$ref": "#/definitions/TransactionsResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1296,12 +1152,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1343,7 +1193,7 @@
               "$ref": "#/definitions/UnconfirmedTxsResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1353,12 +1203,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1387,7 +1231,7 @@
               "$ref": "#/definitions/ValidatorsResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1397,12 +1241,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -1431,7 +1269,7 @@
               "$ref": "#/definitions/WaitListResponse"
             }
           },
-          "504": {
+          "default": {
             "description": "An unexpected error response",
             "schema": {
               "$ref": "#/definitions/ErrorBody",
@@ -1441,12 +1279,6 @@
                   "message": "context deadline exceeded"
                 }
               }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
             }
           }
         },
@@ -2843,27 +2675,6 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/WaitListResponseWait"
-          }
-        }
-      }
-    },
-    "gatewayruntimeError": {
-      "type": "object",
-      "properties": {
-        "error": {
-          "type": "string"
-        },
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "details": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/protobufAny"
           }
         }
       }

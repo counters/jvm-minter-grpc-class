@@ -8,9 +8,7 @@ all:
 	mkdir -p api_pb
 	protoc -I. \
 		--grpc-gateway_out=logtostderr=true:./api_pb \
-		--swagger_out=allow_merge=true,merge_file_name=api:./docs \
+		--swagger_out=disable_default_errors=true,simple_operation_ids=true,allow_merge=true,fqn_for_swagger_name=false,merge_file_name=api:./docs \
 		--go_out=plugins=grpc:./api_pb ./*.proto
-	sed -i 's/\/gatewayruntimeError/\/api_pbErrorBody/g' docs/api.swagger.json
 	sed -i 's/api_pb//g' docs/api.swagger.json
-	sed -i 's/ApiService_//g' docs/api.swagger.json
 	statik -m -f -src docs/
