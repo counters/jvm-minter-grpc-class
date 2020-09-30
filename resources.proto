@@ -502,7 +502,6 @@ message EstimateCoinSellAllRequest {
     string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         required: 'value_to_sell'
     }];
-    uint64 gas_price = 4;
     uint64 height = 5 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         type: INTEGER
     }];
