@@ -56,14 +56,15 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
             "name": "delegated",
             "in": "query",
             "required": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -99,7 +100,7 @@
           {
             "name": "addresses",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -110,7 +111,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -217,7 +218,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -255,7 +256,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -317,7 +318,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -362,7 +363,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -432,7 +433,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -495,14 +496,14 @@
           {
             "name": "value_to_sell",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -565,7 +566,7 @@
           {
             "name": "value_to_sell",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -579,7 +580,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -623,7 +624,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -715,7 +716,7 @@
             "name": "coin_id",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -753,7 +754,7 @@
         ]
       }
     },
-    "/halts": {
+    "/halts/{height}": {
       "get": {
         "summary": "Returns the candidate votes for stopping the network at block.",
         "operationId": "Halts",
@@ -780,8 +781,8 @@
         "parameters": [
           {
             "name": "height",
-            "in": "query",
-            "required": false,
+            "in": "path",
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -820,7 +821,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -893,7 +894,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -1085,7 +1086,7 @@
             "name": "query",
             "description": "tm.event = 'NewBlock' or tm.event = 'Tx'",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -1159,7 +1160,7 @@
           {
             "name": "query",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1167,14 +1168,16 @@
             "in": "query",
             "required": false,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "default": "1"
           },
           {
             "name": "per_page",
             "in": "query",
             "required": false,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "default": "30"
           }
         ],
         "tags": [
@@ -1210,9 +1213,10 @@
           {
             "name": "limit",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "default": "30"
           }
         ],
         "tags": [
@@ -1249,7 +1253,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -1299,7 +1303,7 @@
             "name": "height",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -1584,6 +1588,15 @@
           "type": "string"
         }
       }
+    },
+    "CandidatesRequestCandidateStatus": {
+      "type": "string",
+      "enum": [
+        "all",
+        "off",
+        "on"
+      ],
+      "default": "all"
     },
     "ConnectionStatusChannel": {
       "type": "object",
@@ -2163,15 +2176,6 @@
           "type": "string"
         }
       }
-    },
-    "CandidateStatus": {
-      "type": "string",
-      "enum": [
-        "all",
-        "off",
-        "on"
-      ],
-      "default": "all"
     },
     "CandidatesResponse": {
       "type": "object",
