@@ -212,7 +212,9 @@ message MinGasPriceResponse {
 }
 
 message BlockRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     enum Field {
         transactions = 0;
         missed = 1;
@@ -270,7 +272,9 @@ message BlockResponse {
 }
 
 message MaxGasPriceRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message MaxGasPriceResponse {
     uint64 max_gas_price = 3;
@@ -278,8 +282,12 @@ message MaxGasPriceResponse {
 
 message AddressRequest {
     string address = 1;
-    uint64 height = 2;
-    bool delegated = 4;
+    uint64 height = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    bool delegated = 4 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message AddressBalance {
     Coin coin = 1;
@@ -301,8 +309,12 @@ message AddressResponse {
 }
 
 message AddressesRequest {
-    repeated string addresses = 1;
-    uint64 height = 2;
+    repeated string addresses = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        required: 'addresses'
+    }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     bool delegated = 4;
 }
 message AddressesResponse {
@@ -317,14 +329,11 @@ message AddressesResponse {
     map<string, Result> addresses = 3;
 }
 
-enum CandidateStatus {
-    all = 0;
-    off = 1;
-    on = 2;
-}
 message CandidateRequest {
     string public_key = 1;
-    uint64 height = 2;
+    uint64 height = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message CandidateResponse {
     string reward_address = 1;
@@ -347,10 +356,16 @@ message CandidateResponse {
 }
 
 message CandidatesRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     bool include_stakes = 2;
+    enum CandidateStatus {
+        all = 0;
+        off = 1;
+        on = 2;
+    }
     CandidateStatus status = 3;
-
 }
 message CandidatesResponse {
     repeated CandidateResponse candidates = 3;
@@ -360,14 +375,15 @@ message CoinIdRequest {
     option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
         example_string: "{\"id\":\"0\"}"
     };
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     uint64 id = 2;
 }
 message CoinInfoRequest {
-    option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-        example_string: "{\"symbol\":\"BIP\"}"
-    };
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     string symbol = 2;
 }
 message CoinInfoResponse {
@@ -421,9 +437,16 @@ message TransactionsResponse {
     repeated TransactionResponse transactions = 3;
 }
 message TransactionsRequest {
-    string query = 1;
-    int32 page = 2;
-    int32 per_page = 3;
+    string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        required: 'query'
+    }];
+    int32 page = 2  [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+        default: '1'
+    }];
+    int32 per_page = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        default: '30'
+    }];
 }
 
 message EstimateCoinBuyRequest {
@@ -436,7 +459,9 @@ message EstimateCoinBuyRequest {
         string coin_to_sell = 6;
     }
     string value_to_buy = 3;
-    uint64 height = 4;
+    uint64 height = 4 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
@@ -452,8 +477,12 @@ message EstimateCoinSellRequest {
         uint64 coin_id_to_sell = 2;
         string coin_to_sell = 6;
     }
-    string value_to_sell = 3;
-    uint64 height = 4;
+    string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        required: 'value_to_sell'
+    }];
+    uint64 height = 4 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message EstimateCoinSellResponse {
     string will_get = 1;
@@ -470,9 +499,13 @@ message EstimateCoinSellAllRequest {
         uint64 coin_id_to_sell = 2;
         string coin_to_sell = 6;
     }
-    string value_to_sell = 3;
+    string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        required: 'value_to_sell'
+    }];
     uint64 gas_price = 4;
-    uint64 height = 5;
+    uint64 height = 5 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message EstimateCoinSellAllResponse {
     string will_get = 1;
@@ -482,12 +515,18 @@ message EstimateTxCommissionResponse {
     string commission = 1;
 }
 message EstimateTxCommissionRequest {
-    string tx = 1;
-    uint64 height = 2;
+    string tx = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        required: 'tx'
+    }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 
 message EventsRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     repeated string search = 2;
 }
 message EventsResponse {
@@ -500,7 +539,9 @@ message EventsResponse {
 
 message MissedBlocksRequest {
     string public_key = 1;
-    uint64 height = 2;
+    uint64 height = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message MissedBlocksResponse {
     string missed_blocks = 1;
@@ -514,11 +555,16 @@ message UnconfirmedTxsResponse {
     repeated string transactions = 4;
 }
 message UnconfirmedTxsRequest {
-    int32 limit = 1;
+    int32 limit = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        default: '30'
+        required: 'limit'
+    }];
 }
 
 message ValidatorsRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message ValidatorsResponse {
     message Result {
@@ -531,6 +577,7 @@ message ValidatorsResponse {
 message SubscribeRequest {
     string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         description: "tm.event = 'NewBlock' or tm.event = 'Tx'"
+        required: 'query'
     }];
 }
 message SubscribeResponse {
@@ -544,7 +591,9 @@ message SubscribeResponse {
 }
 
 message HaltsRequest {
-    uint64 height = 1;
+    uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message HaltsResponse {
     repeated string public_keys = 1;
@@ -552,7 +601,9 @@ message HaltsResponse {
 
 message FrozenRequest {
     string address = 1;
-    google.protobuf.UInt64Value coin_id = 2;
+    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message FrozenResponse {
     message Frozen {
@@ -568,7 +619,9 @@ message FrozenResponse {
 message WaitListRequest {
     string public_key = 1;
     string address = 2;
-    uint64 height = 3;
+    uint64 height = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+         type: INTEGER
+    }];
 }
 message WaitListResponse {
     message Wait {
