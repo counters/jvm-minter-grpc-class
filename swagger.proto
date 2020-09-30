@@ -39,7 +39,7 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
     responses: {
         key: "default"
         value: {
-            description: "An unexpected error response"
+            description: "An unexpected error response."
             schema: {
                 json_schema: {
                     ref: ".api_pb.ErrorBody"
