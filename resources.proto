@@ -166,7 +166,7 @@ message GenesisResponse {
         message FrozenFund {
             uint64 height = 5;
             string address = 1;
-            string candidate_key = 2;
+            google.protobuf.StringValue candidate_key = 2;
             uint64 coin = 3;
             string value = 4;
         }
