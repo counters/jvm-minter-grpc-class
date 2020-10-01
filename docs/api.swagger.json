@@ -1862,7 +1862,8 @@
       "properties": {
         "latest_block_height": {
           "type": "string",
-          "format": "uint64"
+          "format": "uint64",
+          "title": "Unknown while client is in fast_syncing mode"
         },
         "node_info": {
           "$ref": "#/definitions/NodeInfo"
@@ -2026,7 +2027,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AddressDelegatedBalance"
-          }
+          },
+          "title": "Filled in when requesting delegator steaks"
         },
         "total": {
           "type": "array",
@@ -2139,21 +2141,26 @@
           "format": "uint64"
         },
         "used_slots": {
-          "type": "string",
-          "format": "uint64"
+          "type": "integer",
+          "format": "uint64",
+          "title": "To be completed when requesting candidate steaks"
         },
         "uniq_users": {
-          "type": "string",
-          "format": "uint64"
+          "type": "integer",
+          "format": "uint64",
+          "title": "To be completed when requesting candidate steaks"
         },
         "min_stake": {
-          "type": "string"
+          "type": "integer",
+          "format": "uint64",
+          "title": "To be completed when requesting candidate steaks"
         },
         "stakes": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/CandidateResponseStake"
-          }
+          },
+          "title": "To be completed when requesting candidate steaks"
         },
         "status": {
           "type": "string",
