@@ -159,7 +159,7 @@ message GenesisResponse {
             string reserve = 5;
             string max_supply = 6;
             uint64 version = 7;
-            string owner_address = 8;
+            google.protobuf.StringValue owner_address = 8;
         }
         repeated Coin coins = 5;
 
