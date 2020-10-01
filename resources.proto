@@ -353,9 +353,7 @@ message CandidateResponse {
         type: INTEGER
     }];
     // To be completed when requesting candidate steaks
-    google.protobuf.UInt64Value min_stake = 9 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    google.protobuf.StringValue min_stake = 9;
     message Stake {
         string owner = 1;
         Coin coin = 2;
