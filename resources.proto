@@ -41,6 +41,7 @@ message NetInfoResponse {
     repeated string listeners = 1;
     int64 count_peers = 2;
     message Peer {
+        // Unknown while client is in fast_syncing mode
         google.protobuf.UInt64Value latest_block_height = 5;
         NodeInfo node_info = 4;
         bool is_outbound = 1;
@@ -320,6 +321,7 @@ message AddressesRequest {
 message AddressesResponse {
     message Result {
         repeated AddressBalance balance = 2;
+        // Filled in when requesting delegator steaks
         repeated AddressDelegatedBalance delegated = 6;
         // Sum of balance and delegated by coins.
         repeated AddressBalance total = 4;
@@ -342,15 +344,25 @@ message CandidateResponse {
     string total_stake = 2;
     string public_key = 3;
     uint64 commission = 4;
-    uint64 used_slots = 7;
-    uint64 uniq_users = 8;
-    string min_stake = 9;
+    // To be completed when requesting candidate steaks
+    google.protobuf.UInt64Value used_slots = 7 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    // To be completed when requesting candidate steaks
+    google.protobuf.UInt64Value uniq_users = 8 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    // To be completed when requesting candidate steaks
+    google.protobuf.UInt64Value min_stake = 9 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     message Stake {
         string owner = 1;
         Coin coin = 2;
         string value = 3;
         string bip_value = 4;
     }
+    // To be completed when requesting candidate steaks
     repeated Stake stakes = 5;
     uint64 status = 6;
 }
@@ -506,7 +518,6 @@ message EstimateCoinSellAllRequest {
         type: INTEGER
         default: '1'
     }];
-
     uint64 height = 5 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         type: INTEGER
     }];
