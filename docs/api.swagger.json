@@ -1861,7 +1861,7 @@
       "type": "object",
       "properties": {
         "latest_block_height": {
-          "type": "string",
+          "type": "integer",
           "format": "uint64",
           "title": "Unknown while client is in fast_syncing mode"
         },
