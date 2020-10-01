@@ -440,7 +440,7 @@ message TransactionsRequest {
     string query = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         required: 'query'
     }];
-    int32 page = 2  [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+    int32 page = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         type: INTEGER
         default: '1'
     }];
@@ -502,6 +502,11 @@ message EstimateCoinSellAllRequest {
     string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         required: 'value_to_sell'
     }];
+    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        type: INTEGER
+        default: '1'
+    }];
+
     uint64 height = 5 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         type: INTEGER
     }];
