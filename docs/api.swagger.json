@@ -570,6 +570,14 @@
             "type": "string"
           },
           {
+            "name": "gas_price",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64",
+            "default": "1"
+          },
+          {
             "name": "height",
             "in": "query",
             "required": false,
