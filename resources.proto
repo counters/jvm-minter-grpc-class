@@ -42,7 +42,9 @@ message NetInfoResponse {
     int64 count_peers = 2;
     message Peer {
         // Unknown while client is in fast_syncing mode
-        google.protobuf.UInt64Value latest_block_height = 5;
+        google.protobuf.UInt64Value latest_block_height = 5 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         NodeInfo node_info = 4;
         bool is_outbound = 1;
         message ConnectionStatus {
