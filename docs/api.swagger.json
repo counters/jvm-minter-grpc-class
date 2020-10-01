@@ -2151,8 +2151,7 @@
           "title": "To be completed when requesting candidate steaks"
         },
         "min_stake": {
-          "type": "integer",
-          "format": "uint64",
+          "type": "string",
           "title": "To be completed when requesting candidate steaks"
         },
         "stakes": {
