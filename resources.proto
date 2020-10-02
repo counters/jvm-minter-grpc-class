@@ -371,7 +371,9 @@ message CandidatesRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
         type: INTEGER
     }];
-    bool include_stakes = 2;
+    bool include_stakes = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+        default: 'false'
+    }];
     enum CandidateStatus {
         all = 0;
         off = 1;
@@ -463,11 +465,15 @@ message TransactionsRequest {
 
 message EstimateCoinBuyRequest {
     oneof buy {
-        uint64 coin_id_to_buy = 1;
+        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_buy = 5;
     }
     oneof sell {
-        uint64 coin_id_to_sell = 2;
+        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_sell = 6;
     }
     string value_to_buy = 3;
@@ -482,11 +488,15 @@ message EstimateCoinBuyResponse {
 
 message EstimateCoinSellRequest {
     oneof buy {
-        uint64 coin_id_to_buy = 1;
+        uint64 coin_id_to_buy = 1[(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_buy = 5;
     }
     oneof sell {
-        uint64 coin_id_to_sell = 2;
+        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_sell = 6;
     }
     string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
@@ -504,11 +514,15 @@ message EstimateCoinSellResponse {
 
 message EstimateCoinSellAllRequest {
     oneof buy {
-        uint64 coin_id_to_buy = 1;
+        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_buy = 7;
     }
     oneof sell {
-        uint64 coin_id_to_sell = 2;
+        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
+            type: INTEGER
+        }];
         string coin_to_sell = 6;
     }
     string value_to_sell = 3 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
