@@ -263,7 +263,8 @@
             "name": "include_stakes",
             "in": "query",
             "required": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": "false"
           },
           {
             "name": "status",
@@ -401,7 +402,7 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -414,7 +415,7 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -471,7 +472,7 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -484,7 +485,7 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -541,7 +542,7 @@
             "name": "coin_id_to_buy",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
@@ -554,7 +555,7 @@
             "name": "coin_id_to_sell",
             "in": "query",
             "required": false,
-            "type": "string",
+            "type": "integer",
             "format": "uint64"
           },
           {
