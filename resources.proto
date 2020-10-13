@@ -262,13 +262,7 @@ message BlockResponse {
     }
     repeated Validator validators = 10;
     message Evidence {
-        message Evidence {
-            uint64 height = 1;
-            string time = 2;
-            string address = 3;
-            string hash = 4;
-        }
-        repeated Evidence evidence = 1;
+        repeated google.protobuf.Struct evidence = 1;
     }
     Evidence evidence = 11;
     repeated string missed = 12;
