@@ -1516,24 +1516,6 @@
       ],
       "default": "transactions"
     },
-    "BlockResponseEvidenceEvidence": {
-      "type": "object",
-      "properties": {
-        "height": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "time": {
-          "type": "string"
-        },
-        "address": {
-          "type": "string"
-        },
-        "hash": {
-          "type": "string"
-        }
-      }
-    },
     "BlockResponseTransaction": {
       "type": "object",
       "properties": {
@@ -2103,7 +2085,7 @@
         "evidence": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/BlockResponseEvidenceEvidence"
+            "type": "object"
           }
         }
       }
