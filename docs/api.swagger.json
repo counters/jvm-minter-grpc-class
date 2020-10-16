@@ -1911,6 +1911,20 @@
         }
       }
     },
+    "SubscribeResponseEvent": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "WaitListResponseWait": {
       "type": "object",
       "properties": {
@@ -2304,19 +2318,8 @@
         "events": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/EventsResponseEvent"
+            "type": "object"
           }
-        }
-      }
-    },
-    "EventsResponseEvent": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string"
-        },
-        "value": {
-          "type": "object"
         }
       }
     },
@@ -2526,20 +2529,6 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/SubscribeResponseEvent"
-          }
-        }
-      }
-    },
-    "SubscribeResponseEvent": {
-      "type": "object",
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "events": {
-          "type": "array",
-          "items": {
-            "type": "string"
           }
         }
       }
