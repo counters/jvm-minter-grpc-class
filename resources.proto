@@ -553,11 +553,7 @@ message EventsRequest {
     repeated string search = 2;
 }
 message EventsResponse {
-    message Event {
-        string type = 1;
-        google.protobuf.Struct value = 2;
-    }
-    repeated Event events = 1;
+    repeated google.protobuf.Struct events = 1;
 }
 
 message MissedBlocksRequest {
