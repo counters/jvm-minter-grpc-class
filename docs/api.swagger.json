@@ -2138,12 +2138,12 @@
           "format": "uint64"
         },
         "used_slots": {
-          "type": "integer",
+          "type": "string",
           "format": "uint64",
           "title": "To be completed when requesting candidate steaks"
         },
         "uniq_users": {
-          "type": "integer",
+          "type": "string",
           "format": "uint64",
           "title": "To be completed when requesting candidate steaks"
         },
