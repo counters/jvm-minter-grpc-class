@@ -341,13 +341,9 @@ message CandidateResponse {
     string public_key = 3;
     uint64 commission = 4;
     // To be completed when requesting candidate steaks
-    google.protobuf.UInt64Value used_slots = 7 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    google.protobuf.UInt64Value used_slots = 7;
     // To be completed when requesting candidate steaks
-    google.protobuf.UInt64Value uniq_users = 8 [(grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    google.protobuf.UInt64Value uniq_users = 8;
     // To be completed when requesting candidate steaks
     google.protobuf.StringValue min_stake = 9;
     message Stake {
