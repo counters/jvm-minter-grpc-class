@@ -1446,6 +1446,10 @@
         "candidate_key": {
           "type": "string"
         },
+        "candidate_id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "coin": {
           "type": "string",
           "format": "uint64"
