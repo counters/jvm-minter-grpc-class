@@ -1,14 +1,16 @@
 all:
 	go mod tidy
 	go install \
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
-		github.com/golang/protobuf/protoc-gen-go \
+		github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
+		github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
+		google.golang.org/protobuf/cmd/protoc-gen-go \
+		google.golang.org/grpc/cmd/protoc-gen-go-grpc \
 		github.com/rakyll/statik
 	mkdir -p api_pb
-	protoc -I. \
-		--grpc-gateway_out=logtostderr=true:./api_pb \
-		--swagger_out=disable_default_errors=true,simple_operation_ids=true,allow_merge=true,fqn_for_swagger_name=false,merge_file_name=api:./docs \
-		--go_out=plugins=grpc:./api_pb ./*.proto
-	sed -i 's/api_pb//g' docs/api.swagger.json
+	protoc -I . \
+		--go_out ./api_pb \
+		--grpc-gateway_out=logtostderr=true,generate_unbound_methods=true:./api_pb \
+		--openapiv2_out=json_names_for_fields=false,disable_default_errors=true,simple_operation_ids=true,allow_merge=true,merge_file_name=api:./docs \
+		--go-grpc_out=./api_pb ./*.proto
+	sed -i '' 's/api_pb//g' docs/api.swagger.json
 	statik -m -f -src docs/

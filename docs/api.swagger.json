@@ -1064,7 +1064,7 @@
                   "$ref": "#/definitions/SubscribeResponse"
                 },
                 "error": {
-                  "$ref": "#/definitions/runtimeStreamError"
+                  "$ref": "#/definitions/rpcStatus"
                 }
               },
               "title": "Stream result of SubscribeResponse"
@@ -1683,6 +1683,23 @@
         }
       }
     },
+    "ErrorBodyError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "FrozenResponseFrozen": {
       "type": "object",
       "properties": {
@@ -2261,23 +2278,6 @@
         }
       }
     },
-    "ErrorBodyError": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "string"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "EstimateCoinBuyResponse": {
       "type": "object",
       "properties": {
@@ -2688,31 +2688,6 @@
       ],
       "default": "NULL_VALUE",
       "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
-    },
-    "runtimeStreamError": {
-      "type": "object",
-      "properties": {
-        "grpc_code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "http_code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "http_status": {
-          "type": "string"
-        },
-        "details": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/protobufAny"
-          }
-        }
-      }
     }
   },
   "externalDocs": {

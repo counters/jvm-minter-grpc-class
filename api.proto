@@ -3,7 +3,7 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 import "resources.proto";
 import "google/api/annotations.proto";
-import "protoc-gen-swagger/options/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 package api_pb;
 
@@ -15,7 +15,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/subscribe"
         };
-        option (grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
             description: "Only supported in WS and gRPC methods"
         };
     }
@@ -145,7 +145,7 @@ service ApiService {
                 body: "*"
             }
         };
-        option (grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
             external_docs: {
                 url: "https://www.minter.network/docs#transactions"
                 description: "More about Minter transactions"

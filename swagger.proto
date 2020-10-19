@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "protoc-gen-swagger/options/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 package api_pb;
 
@@ -15,7 +15,7 @@ message ErrorBody {
     Error error = 1;
 }
 
-option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
     info: {
         title: "Minter Node API v2"
         license: {
@@ -44,7 +44,7 @@ option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
                 json_schema: {
                     ref: ".api_pb.ErrorBody"
                 };
-                example_string: "{\"error\": {\"code\": \"504\", \"message\": \"context deadline exceeded\"}}"
+                example: "{\"error\": {\"code\": \"504\", \"message\": \"context deadline exceeded\"}}"
             };
         };
     };
