@@ -167,6 +167,7 @@ message GenesisResponse {
             uint64 height = 5;
             string address = 1;
             google.protobuf.StringValue candidate_key = 2;
+            uint64 candidate_id = 6;
             uint64 coin = 3;
             string value = 4;
         }
