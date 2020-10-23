@@ -427,7 +427,7 @@
           {
             "name": "value_to_buy",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1215,7 +1215,7 @@
           {
             "name": "limit",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "integer",
             "format": "int32",
             "default": "30"
