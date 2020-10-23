@@ -44,7 +44,7 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
                 json_schema: {
                     ref: ".api_pb.ErrorBody"
                 };
-                example: "{\"error\": {\"code\": \"504\", \"message\": \"context deadline exceeded\"}}"
+                example: "{\"error\": {\"code\": \"504\", \"message\": \"context deadline exceeded\", \"data\": {\"operation\":\"ABC\"}}}"
             };
         };
     };
