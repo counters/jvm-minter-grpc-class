@@ -39,7 +39,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -97,7 +100,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -159,7 +165,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -216,7 +225,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -260,7 +272,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -317,7 +332,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -361,7 +379,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -406,7 +427,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -476,7 +500,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -546,7 +573,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -624,7 +654,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -668,7 +701,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -716,7 +752,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -760,7 +799,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -789,7 +831,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -827,7 +872,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -865,7 +913,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -894,7 +945,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -938,7 +992,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -968,7 +1025,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1012,7 +1072,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1053,7 +1116,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1092,7 +1158,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1130,7 +1199,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1167,7 +1239,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1220,7 +1295,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1259,7 +1337,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1297,7 +1378,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
