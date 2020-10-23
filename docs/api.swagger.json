@@ -65,6 +65,13 @@
             "required": false,
             "type": "boolean",
             "default": "false"
+          },
+          {
+            "name": "bip_value",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -118,7 +125,15 @@
             "name": "delegated",
             "in": "query",
             "required": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "bip_value",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
