@@ -286,16 +286,19 @@ message AddressRequest {
     bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         default: "false"
     }];
+    bool bip_value = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message AddressBalance {
     Coin coin = 1;
     string value = 2;
-    string bip_value = 3;
+    google.protobuf.StringValue bip_value = 3;
 }
 message AddressDelegatedBalance {
     Coin coin = 1;
     string value = 2;
-    string bip_value = 3;
+    google.protobuf.StringValue bip_value = 3;
     string delegate_bip_value = 4;
 }
 message AddressResponse {
@@ -303,7 +306,7 @@ message AddressResponse {
     repeated AddressDelegatedBalance delegated = 3;
     repeated AddressBalance total = 4;
     uint64 transaction_count = 2;
-    string bip_value = 5;
+    google.protobuf.StringValue bip_value = 5;
 }
 
 message AddressesRequest {
@@ -313,7 +316,12 @@ message AddressesRequest {
     uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    bool delegated = 4;
+    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
+    bool bip_value = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message AddressesResponse {
     message Result {
@@ -481,7 +489,7 @@ message EstimateCoinBuyResponse {
 
 message EstimateCoinSellRequest {
     oneof buy {
-        uint64 coin_id_to_buy = 1[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
             type: INTEGER
         }];
         string coin_to_buy = 5;
