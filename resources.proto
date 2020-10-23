@@ -467,7 +467,9 @@ message EstimateCoinBuyRequest {
         }];
         string coin_to_sell = 6;
     }
-    string value_to_buy = 3;
+    string value_to_buy = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'value_to_buy'
+    }];
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
@@ -573,7 +575,6 @@ message UnconfirmedTxsResponse {
 message UnconfirmedTxsRequest {
     int32 limit = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         default: '30'
-        required: 'limit'
     }];
 }
 
