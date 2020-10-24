@@ -293,12 +293,12 @@ message AddressRequest {
 message AddressBalance {
     Coin coin = 1;
     string value = 2;
-    google.protobuf.StringValue bip_value = 3;
+    google.protobuf.StringValue bip_value = 5;
 }
 message AddressDelegatedBalance {
     Coin coin = 1;
     string value = 2;
-    google.protobuf.StringValue bip_value = 3;
+    google.protobuf.StringValue bip_value = 5;
     string delegate_bip_value = 4;
 }
 message AddressResponse {
@@ -306,7 +306,7 @@ message AddressResponse {
     repeated AddressDelegatedBalance delegated = 3;
     repeated AddressBalance total = 4;
     uint64 transaction_count = 2;
-    google.protobuf.StringValue bip_value = 5;
+    google.protobuf.StringValue bip_value = 6;
 }
 
 message AddressesRequest {
