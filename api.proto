@@ -188,4 +188,14 @@ service ApiService {
             get: "/waitlist/{address}"
         };
     }
+
+    //Returns the list of example transactions in block.
+    rpc TestBlock (google.protobuf.Empty) returns (BlockResponse) {
+        option (google.api.http) = {
+            get: "/test/block"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+            description: "Only testnet mode"
+        };
+    }
 }
