@@ -1181,6 +1181,39 @@
         ]
       }
     },
+    "/test/block": {
+      "get": {
+        "summary": "Returns the list of example transactions in block.",
+        "description": "Only testnet mode",
+        "operationId": "TestBlock",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlockResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/transaction/{hash}": {
       "get": {
         "summary": "Returns transaction info.",

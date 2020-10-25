@@ -75,6 +75,8 @@ type ApiServiceClient interface {
 	Frozen(ctx context.Context, in *FrozenRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
 	//Returns the list of address stakes in waitlist.
 	WaitList(ctx context.Context, in *WaitListRequest, opts ...grpc.CallOption) (*WaitListResponse, error)
+	//Returns the list of example transactions in block.
+	TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
 }
 
 type apiServiceClient struct {
@@ -351,6 +353,15 @@ func (c *apiServiceClient) WaitList(ctx context.Context, in *WaitListRequest, op
 	return out, nil
 }
 
+func (c *apiServiceClient) TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error) {
+	out := new(BlockResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/TestBlock", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -412,6 +423,8 @@ type ApiServiceServer interface {
 	Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error)
 	//Returns the list of address stakes in waitlist.
 	WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error)
+	//Returns the list of example transactions in block.
+	TestBlock(context.Context, *empty.Empty) (*BlockResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -499,6 +512,9 @@ func (UnimplementedApiServiceServer) Frozen(context.Context, *FrozenRequest) (*F
 }
 func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WaitList not implemented")
+}
+func (UnimplementedApiServiceServer) TestBlock(context.Context, *empty.Empty) (*BlockResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TestBlock not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1002,6 +1018,24 @@ func _ApiService_WaitList_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(empty.Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).TestBlock(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/TestBlock",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).TestBlock(ctx, req.(*empty.Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _ApiService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api_pb.ApiService",
 	HandlerType: (*ApiServiceServer)(nil),
@@ -1109,6 +1143,10 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "WaitList",
 			Handler:    _ApiService_WaitList_Handler,
+		},
+		{
+			MethodName: "TestBlock",
+			Handler:    _ApiService_TestBlock_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
