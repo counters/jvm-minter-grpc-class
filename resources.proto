@@ -293,11 +293,13 @@ message AddressRequest {
 message AddressBalance {
     Coin coin = 1;
     string value = 2;
+    // Filled in when request bip_value
     google.protobuf.StringValue bip_value = 5;
 }
 message AddressDelegatedBalance {
     Coin coin = 1;
     string value = 2;
+    // Filled in when request bip_value
     google.protobuf.StringValue bip_value = 5;
     string delegate_bip_value = 4;
 }
@@ -306,6 +308,7 @@ message AddressResponse {
     repeated AddressDelegatedBalance delegated = 3;
     repeated AddressBalance total = 4;
     uint64 transaction_count = 2;
+    // Filled in when request bip_value
     google.protobuf.StringValue bip_value = 6;
 }
 
@@ -326,9 +329,9 @@ message AddressesRequest {
 message AddressesResponse {
     message Result {
         repeated AddressBalance balance = 2;
-        // Filled in when requesting delegator steaks
+        // Filled in when request delegated
         repeated AddressDelegatedBalance delegated = 6;
-        // Sum of balance and delegated by coins.
+        // Sum of balance and delegated by coins. Filled in when request delegated
         repeated AddressBalance total = 4;
         uint64 transaction_count = 3;
         string bip_value = 5;
@@ -337,23 +340,31 @@ message AddressesResponse {
 }
 
 message CandidateRequest {
+    // Public key of a candidate
     string public_key = 1;
+    // Blockchain state height for the current request. Optional, the last default state of the node is used
     uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
 }
 message CandidateResponse {
+    // Address where validator’s rewards go to.
     string reward_address = 1;
+    // Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
     string owner_address = 10;
+    // Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
     string control_address = 11;
+    // Total stake of a candidate
     string total_stake = 2;
+    // Public key of a candidate
     string public_key = 3;
+    // Commission (from 0 to 100) from rewards which delegators will pay to validator
     uint64 commission = 4;
-    // To be completed when requesting candidate steaks
+    // Number of occupied steak slots. Note: filled in when request includes_stakes
     google.protobuf.UInt64Value used_slots = 7;
-    // To be completed when requesting candidate steaks
+    // Number of unique wallets in steaks. Note: filled in when request includes_stakes
     google.protobuf.UInt64Value uniq_users = 8;
-    // To be completed when requesting candidate steaks
+    // Smallest steak size. Note: filled in when request includes_stakes
     google.protobuf.StringValue min_stake = 9;
     message Stake {
         string owner = 1;
@@ -361,8 +372,9 @@ message CandidateResponse {
         string value = 3;
         string bip_value = 4;
     }
-    // To be completed when requesting candidate steaks
+    // List of stakes. Note: filled in when request includes_stakes
     repeated Stake stakes = 5;
+    // Candidate status. Available values: offline = 1, online = 2, validator = 3
     uint64 status = 6;
 }
 

@@ -973,8 +973,9 @@ type AddressBalance struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Coin     *Coin                 `protobuf:"bytes,1,opt,name=coin,proto3" json:"coin,omitempty"`
-	Value    string                `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Coin  *Coin  `protobuf:"bytes,1,opt,name=coin,proto3" json:"coin,omitempty"`
+	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	// Filled in when request bip_value
 	BipValue *wrappers.StringValue `protobuf:"bytes,5,opt,name=bip_value,json=bipValue,proto3" json:"bip_value,omitempty"`
 }
 
@@ -1036,8 +1037,9 @@ type AddressDelegatedBalance struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Coin             *Coin                 `protobuf:"bytes,1,opt,name=coin,proto3" json:"coin,omitempty"`
-	Value            string                `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Coin  *Coin  `protobuf:"bytes,1,opt,name=coin,proto3" json:"coin,omitempty"`
+	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	// Filled in when request bip_value
 	BipValue         *wrappers.StringValue `protobuf:"bytes,5,opt,name=bip_value,json=bipValue,proto3" json:"bip_value,omitempty"`
 	DelegateBipValue string                `protobuf:"bytes,4,opt,name=delegate_bip_value,json=delegateBipValue,proto3" json:"delegate_bip_value,omitempty"`
 }
@@ -1111,7 +1113,8 @@ type AddressResponse struct {
 	Delegated        []*AddressDelegatedBalance `protobuf:"bytes,3,rep,name=delegated,proto3" json:"delegated,omitempty"`
 	Total            []*AddressBalance          `protobuf:"bytes,4,rep,name=total,proto3" json:"total,omitempty"`
 	TransactionCount uint64                     `protobuf:"varint,2,opt,name=transaction_count,json=transactionCount,proto3" json:"transaction_count,omitempty"`
-	BipValue         *wrappers.StringValue      `protobuf:"bytes,6,opt,name=bip_value,json=bipValue,proto3" json:"bip_value,omitempty"`
+	// Filled in when request bip_value
+	BipValue *wrappers.StringValue `protobuf:"bytes,6,opt,name=bip_value,json=bipValue,proto3" json:"bip_value,omitempty"`
 }
 
 func (x *AddressResponse) Reset() {
@@ -1304,8 +1307,10 @@ type CandidateRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Public key of a candidate
 	PublicKey string `protobuf:"bytes,1,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
-	Height    uint64 `protobuf:"varint,2,opt,name=height,proto3" json:"height,omitempty"`
+	// Blockchain state height for the current request. Optional, the last default state of the node is used
+	Height uint64 `protobuf:"varint,2,opt,name=height,proto3" json:"height,omitempty"`
 }
 
 func (x *CandidateRequest) Reset() {
@@ -1359,21 +1364,28 @@ type CandidateResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RewardAddress  string `protobuf:"bytes,1,opt,name=reward_address,json=rewardAddress,proto3" json:"reward_address,omitempty"`
-	OwnerAddress   string `protobuf:"bytes,10,opt,name=owner_address,json=ownerAddress,proto3" json:"owner_address,omitempty"`
+	// Address where validator’s rewards go to.
+	RewardAddress string `protobuf:"bytes,1,opt,name=reward_address,json=rewardAddress,proto3" json:"reward_address,omitempty"`
+	// Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
+	OwnerAddress string `protobuf:"bytes,10,opt,name=owner_address,json=ownerAddress,proto3" json:"owner_address,omitempty"`
+	// Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
 	ControlAddress string `protobuf:"bytes,11,opt,name=control_address,json=controlAddress,proto3" json:"control_address,omitempty"`
-	TotalStake     string `protobuf:"bytes,2,opt,name=total_stake,json=totalStake,proto3" json:"total_stake,omitempty"`
-	PublicKey      string `protobuf:"bytes,3,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
-	Commission     uint64 `protobuf:"varint,4,opt,name=commission,proto3" json:"commission,omitempty"`
-	// To be completed when requesting candidate steaks
+	// Total stake of a candidate
+	TotalStake string `protobuf:"bytes,2,opt,name=total_stake,json=totalStake,proto3" json:"total_stake,omitempty"`
+	// Public key of a candidate
+	PublicKey string `protobuf:"bytes,3,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
+	// Commission (from 0 to 100) from rewards which delegators will pay to validator
+	Commission uint64 `protobuf:"varint,4,opt,name=commission,proto3" json:"commission,omitempty"`
+	// Number of occupied steak slots. Note: filled in when request includes_stakes
 	UsedSlots *wrappers.UInt64Value `protobuf:"bytes,7,opt,name=used_slots,json=usedSlots,proto3" json:"used_slots,omitempty"`
-	// To be completed when requesting candidate steaks
+	// Number of unique wallets in steaks. Note: filled in when request includes_stakes
 	UniqUsers *wrappers.UInt64Value `protobuf:"bytes,8,opt,name=uniq_users,json=uniqUsers,proto3" json:"uniq_users,omitempty"`
-	// To be completed when requesting candidate steaks
+	// Smallest steak size. Note: filled in when request includes_stakes
 	MinStake *wrappers.StringValue `protobuf:"bytes,9,opt,name=min_stake,json=minStake,proto3" json:"min_stake,omitempty"`
-	// To be completed when requesting candidate steaks
+	// List of stakes. Note: filled in when request includes_stakes
 	Stakes []*CandidateResponse_Stake `protobuf:"bytes,5,rep,name=stakes,proto3" json:"stakes,omitempty"`
-	Status uint64                     `protobuf:"varint,6,opt,name=status,proto3" json:"status,omitempty"`
+	// Candidate status. Available values: offline = 1, online = 2, validator = 3
+	Status uint64 `protobuf:"varint,6,opt,name=status,proto3" json:"status,omitempty"`
 }
 
 func (x *CandidateResponse) Reset() {
@@ -6891,9 +6903,9 @@ type AddressesResponse_Result struct {
 	unknownFields protoimpl.UnknownFields
 
 	Balance []*AddressBalance `protobuf:"bytes,2,rep,name=balance,proto3" json:"balance,omitempty"`
-	// Filled in when requesting delegator steaks
+	// Filled in when request delegated
 	Delegated []*AddressDelegatedBalance `protobuf:"bytes,6,rep,name=delegated,proto3" json:"delegated,omitempty"`
-	// Sum of balance and delegated by coins.
+	// Sum of balance and delegated by coins. Filled in when request delegated
 	Total            []*AddressBalance `protobuf:"bytes,4,rep,name=total,proto3" json:"total,omitempty"`
 	TransactionCount uint64            `protobuf:"varint,3,opt,name=transaction_count,json=transactionCount,proto3" json:"transaction_count,omitempty"`
 	BipValue         string            `protobuf:"bytes,5,opt,name=bip_value,json=bipValue,proto3" json:"bip_value,omitempty"`
