@@ -18,23 +18,41 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ApiServiceClient interface {
-	// Returns a subscription for events by query. Only supported in WS and gRPC methods.
+	// Subscribe
+	//
+	// Subscribe returns a subscription for events by query. Only supported in WS and gRPC methods.
 	Subscribe(ctx context.Context, in *SubscribeRequest, opts ...grpc.CallOption) (ApiService_SubscribeClient, error)
-	// Returns the candidate votes for stopping the network at block.
+	// Halts
+	//
+	// Halts returns the candidate votes for stopping the network at block.
 	Halts(ctx context.Context, in *HaltsRequest, opts ...grpc.CallOption) (*HaltsResponse, error)
-	// Returns genesis file.
+	// Genesis
+	//
+	// Genesis returns genesis file.
 	Genesis(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GenesisResponse, error)
-	// Returns current min gas price.
+	// MinGasPrice
+	//
+	// MinGasPrice returns current min gas price.
 	MinGasPrice(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*MinGasPriceResponse, error)
-	// Returns network info
+	// NetInfo
+	//
+	// NetInfo returns network info
 	NetInfo(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*NetInfoResponse, error)
-	// Returns node status including pubkey, latest block.
+	// Status
+	//
+	// Status returns node status including pubkey, latest block.
 	Status(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*StatusResponse, error)
-	// Returns coins list, balance and transaction count of an address.
+	// Address
+	//
+	// Address returns coins list, balance and transaction count of an address.
 	Address(ctx context.Context, in *AddressRequest, opts ...grpc.CallOption) (*AddressResponse, error)
-	// Returns list of addresses.
+	// Addresses
+	//
+	// Addresses returns list of addresses.
 	Addresses(ctx context.Context, in *AddressesRequest, opts ...grpc.CallOption) (*AddressesResponse, error)
-	// Returns block data at given height.
+	// Block
+	//
+	// Block returns block data at given height.
 	Block(ctx context.Context, in *BlockRequest, opts ...grpc.CallOption) (*BlockResponse, error)
 	// Candidate
 	//
@@ -42,44 +60,78 @@ type ApiServiceClient interface {
 	//
 	// {{import "fields.md"}}
 	Candidate(ctx context.Context, in *CandidateRequest, opts ...grpc.CallOption) (*CandidateResponse, error)
-	// Returns list of candidates.
-	Candidates(ctx context.Context, in *CandidatesRequest, opts ...grpc.CallOption) (*CandidatesResponse, error)
-	// Returns information about coin ID.
-	CoinInfoById(ctx context.Context, in *CoinIdRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
-	// Returns information about coin symbol.
-	CoinInfo(ctx context.Context, in *CoinInfoRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
-	//Return estimate of buy coin transaction.
-	EstimateCoinBuy(ctx context.Context, in *EstimateCoinBuyRequest, opts ...grpc.CallOption) (*EstimateCoinBuyResponse, error)
-	//Return estimate of sell coin transaction.
-	EstimateCoinSell(ctx context.Context, in *EstimateCoinSellRequest, opts ...grpc.CallOption) (*EstimateCoinSellResponse, error)
-	//Return estimate of sell all coin transaction.
-	EstimateCoinSellAll(ctx context.Context, in *EstimateCoinSellAllRequest, opts ...grpc.CallOption) (*EstimateCoinSellAllResponse, error)
-	//Return estimate of transaction.
-	EstimateTxCommission(ctx context.Context, in *EstimateTxCommissionRequest, opts ...grpc.CallOption) (*EstimateTxCommissionResponse, error)
-	// Returns events at given height.
-	Events(ctx context.Context, in *EventsRequest, opts ...grpc.CallOption) (*EventsResponse, error)
-	// Returns current max gas.
-	MaxGasPrice(ctx context.Context, in *MaxGasPriceRequest, opts ...grpc.CallOption) (*MaxGasPriceResponse, error)
-	// Returns missed blocks by validator public key.
-	MissedBlocks(ctx context.Context, in *MissedBlocksRequest, opts ...grpc.CallOption) (*MissedBlocksResponse, error)
-	// Returns the result of sending signed tx.
+	// Candidates
 	//
-	//To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	// Candidates returns list of candidates.
+	Candidates(ctx context.Context, in *CandidatesRequest, opts ...grpc.CallOption) (*CandidatesResponse, error)
+	// CoinInfoById
+	//
+	// CoinInfoById returns information about coin ID.
+	CoinInfoById(ctx context.Context, in *CoinIdRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
+	// CoinInfo
+	//
+	// CoinInfo returns information about coin symbol.
+	CoinInfo(ctx context.Context, in *CoinInfoRequest, opts ...grpc.CallOption) (*CoinInfoResponse, error)
+	// EstimateCoinBuy
+	//
+	// EstimateCoinBuy returns estimate of buy coin transaction.
+	EstimateCoinBuy(ctx context.Context, in *EstimateCoinBuyRequest, opts ...grpc.CallOption) (*EstimateCoinBuyResponse, error)
+	// EstimateCoinSell
+	//
+	// EstimateCoinSell returns estimate of sell coin transaction.
+	EstimateCoinSell(ctx context.Context, in *EstimateCoinSellRequest, opts ...grpc.CallOption) (*EstimateCoinSellResponse, error)
+	// EstimateCoinSellAll
+	//
+	// EstimateCoinSellAll returns estimate of sell all coin transaction.
+	EstimateCoinSellAll(ctx context.Context, in *EstimateCoinSellAllRequest, opts ...grpc.CallOption) (*EstimateCoinSellAllResponse, error)
+	// EstimateTxCommission
+	//
+	// EstimateTxCommission returns estimate of transaction.
+	EstimateTxCommission(ctx context.Context, in *EstimateTxCommissionRequest, opts ...grpc.CallOption) (*EstimateTxCommissionResponse, error)
+	// Events
+	//
+	// Events returns events at given height.
+	Events(ctx context.Context, in *EventsRequest, opts ...grpc.CallOption) (*EventsResponse, error)
+	// MaxGasPrice
+	//
+	// MaxGasPrice returns current max gas.
+	MaxGasPrice(ctx context.Context, in *MaxGasPriceRequest, opts ...grpc.CallOption) (*MaxGasPriceResponse, error)
+	// MissedBlocks
+	//
+	// MissedBlocks returns missed blocks by validator public key.
+	MissedBlocks(ctx context.Context, in *MissedBlocksRequest, opts ...grpc.CallOption) (*MissedBlocksResponse, error)
+	// SendTransaction
+	//
+	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
 	//
 	SendTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
-	// Returns transaction info.
+	// Transaction
+	//
+	// Transaction returns transaction info.
 	Transaction(ctx context.Context, in *TransactionRequest, opts ...grpc.CallOption) (*TransactionResponse, error)
-	//Return transactions by query.
+	// Transactions
+	//
+	// Transactions returns transactions by query.
 	Transactions(ctx context.Context, in *TransactionsRequest, opts ...grpc.CallOption) (*TransactionsResponse, error)
-	// Returns unconfirmed transactions.
+	// UnconfirmedTxs
+	//
+	// UnconfirmedTxs returns unconfirmed transactions.
 	UnconfirmedTxs(ctx context.Context, in *UnconfirmedTxsRequest, opts ...grpc.CallOption) (*UnconfirmedTxsResponse, error)
-	// Returns list of active validators.
+	// Validators
+	//
+	// Validators returns list of active validators.
 	Validators(ctx context.Context, in *ValidatorsRequest, opts ...grpc.CallOption) (*ValidatorsResponse, error)
-	// Returns frozen balance.
+	// Frozen
+	//
+	// Frozen returns frozen balance.
 	Frozen(ctx context.Context, in *FrozenRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
-	// Returns the list of address stakes in waitlist.
+	// WaitList
+	//
+	// WaitList returns the list of address stakes in waitlist.
 	WaitList(ctx context.Context, in *WaitListRequest, opts ...grpc.CallOption) (*WaitListResponse, error)
-	// Returns the list of example transactions in block. Available only testnet mode.
+	// TestBlock
+	//
+	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
 }
 
@@ -370,23 +422,41 @@ func (c *apiServiceClient) TestBlock(ctx context.Context, in *empty.Empty, opts 
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
 type ApiServiceServer interface {
-	// Returns a subscription for events by query. Only supported in WS and gRPC methods.
+	// Subscribe
+	//
+	// Subscribe returns a subscription for events by query. Only supported in WS and gRPC methods.
 	Subscribe(*SubscribeRequest, ApiService_SubscribeServer) error
-	// Returns the candidate votes for stopping the network at block.
+	// Halts
+	//
+	// Halts returns the candidate votes for stopping the network at block.
 	Halts(context.Context, *HaltsRequest) (*HaltsResponse, error)
-	// Returns genesis file.
+	// Genesis
+	//
+	// Genesis returns genesis file.
 	Genesis(context.Context, *empty.Empty) (*GenesisResponse, error)
-	// Returns current min gas price.
+	// MinGasPrice
+	//
+	// MinGasPrice returns current min gas price.
 	MinGasPrice(context.Context, *empty.Empty) (*MinGasPriceResponse, error)
-	// Returns network info
+	// NetInfo
+	//
+	// NetInfo returns network info
 	NetInfo(context.Context, *empty.Empty) (*NetInfoResponse, error)
-	// Returns node status including pubkey, latest block.
+	// Status
+	//
+	// Status returns node status including pubkey, latest block.
 	Status(context.Context, *empty.Empty) (*StatusResponse, error)
-	// Returns coins list, balance and transaction count of an address.
+	// Address
+	//
+	// Address returns coins list, balance and transaction count of an address.
 	Address(context.Context, *AddressRequest) (*AddressResponse, error)
-	// Returns list of addresses.
+	// Addresses
+	//
+	// Addresses returns list of addresses.
 	Addresses(context.Context, *AddressesRequest) (*AddressesResponse, error)
-	// Returns block data at given height.
+	// Block
+	//
+	// Block returns block data at given height.
 	Block(context.Context, *BlockRequest) (*BlockResponse, error)
 	// Candidate
 	//
@@ -394,44 +464,78 @@ type ApiServiceServer interface {
 	//
 	// {{import "fields.md"}}
 	Candidate(context.Context, *CandidateRequest) (*CandidateResponse, error)
-	// Returns list of candidates.
-	Candidates(context.Context, *CandidatesRequest) (*CandidatesResponse, error)
-	// Returns information about coin ID.
-	CoinInfoById(context.Context, *CoinIdRequest) (*CoinInfoResponse, error)
-	// Returns information about coin symbol.
-	CoinInfo(context.Context, *CoinInfoRequest) (*CoinInfoResponse, error)
-	//Return estimate of buy coin transaction.
-	EstimateCoinBuy(context.Context, *EstimateCoinBuyRequest) (*EstimateCoinBuyResponse, error)
-	//Return estimate of sell coin transaction.
-	EstimateCoinSell(context.Context, *EstimateCoinSellRequest) (*EstimateCoinSellResponse, error)
-	//Return estimate of sell all coin transaction.
-	EstimateCoinSellAll(context.Context, *EstimateCoinSellAllRequest) (*EstimateCoinSellAllResponse, error)
-	//Return estimate of transaction.
-	EstimateTxCommission(context.Context, *EstimateTxCommissionRequest) (*EstimateTxCommissionResponse, error)
-	// Returns events at given height.
-	Events(context.Context, *EventsRequest) (*EventsResponse, error)
-	// Returns current max gas.
-	MaxGasPrice(context.Context, *MaxGasPriceRequest) (*MaxGasPriceResponse, error)
-	// Returns missed blocks by validator public key.
-	MissedBlocks(context.Context, *MissedBlocksRequest) (*MissedBlocksResponse, error)
-	// Returns the result of sending signed tx.
+	// Candidates
 	//
-	//To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	// Candidates returns list of candidates.
+	Candidates(context.Context, *CandidatesRequest) (*CandidatesResponse, error)
+	// CoinInfoById
+	//
+	// CoinInfoById returns information about coin ID.
+	CoinInfoById(context.Context, *CoinIdRequest) (*CoinInfoResponse, error)
+	// CoinInfo
+	//
+	// CoinInfo returns information about coin symbol.
+	CoinInfo(context.Context, *CoinInfoRequest) (*CoinInfoResponse, error)
+	// EstimateCoinBuy
+	//
+	// EstimateCoinBuy returns estimate of buy coin transaction.
+	EstimateCoinBuy(context.Context, *EstimateCoinBuyRequest) (*EstimateCoinBuyResponse, error)
+	// EstimateCoinSell
+	//
+	// EstimateCoinSell returns estimate of sell coin transaction.
+	EstimateCoinSell(context.Context, *EstimateCoinSellRequest) (*EstimateCoinSellResponse, error)
+	// EstimateCoinSellAll
+	//
+	// EstimateCoinSellAll returns estimate of sell all coin transaction.
+	EstimateCoinSellAll(context.Context, *EstimateCoinSellAllRequest) (*EstimateCoinSellAllResponse, error)
+	// EstimateTxCommission
+	//
+	// EstimateTxCommission returns estimate of transaction.
+	EstimateTxCommission(context.Context, *EstimateTxCommissionRequest) (*EstimateTxCommissionResponse, error)
+	// Events
+	//
+	// Events returns events at given height.
+	Events(context.Context, *EventsRequest) (*EventsResponse, error)
+	// MaxGasPrice
+	//
+	// MaxGasPrice returns current max gas.
+	MaxGasPrice(context.Context, *MaxGasPriceRequest) (*MaxGasPriceResponse, error)
+	// MissedBlocks
+	//
+	// MissedBlocks returns missed blocks by validator public key.
+	MissedBlocks(context.Context, *MissedBlocksRequest) (*MissedBlocksResponse, error)
+	// SendTransaction
+	//
+	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
 	//
 	SendTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
-	// Returns transaction info.
+	// Transaction
+	//
+	// Transaction returns transaction info.
 	Transaction(context.Context, *TransactionRequest) (*TransactionResponse, error)
-	//Return transactions by query.
+	// Transactions
+	//
+	// Transactions returns transactions by query.
 	Transactions(context.Context, *TransactionsRequest) (*TransactionsResponse, error)
-	// Returns unconfirmed transactions.
+	// UnconfirmedTxs
+	//
+	// UnconfirmedTxs returns unconfirmed transactions.
 	UnconfirmedTxs(context.Context, *UnconfirmedTxsRequest) (*UnconfirmedTxsResponse, error)
-	// Returns list of active validators.
+	// Validators
+	//
+	// Validators returns list of active validators.
 	Validators(context.Context, *ValidatorsRequest) (*ValidatorsResponse, error)
-	// Returns frozen balance.
+	// Frozen
+	//
+	// Frozen returns frozen balance.
 	Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error)
-	// Returns the list of address stakes in waitlist.
+	// WaitList
+	//
+	// WaitList returns the list of address stakes in waitlist.
 	WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error)
-	// Returns the list of example transactions in block. Available only testnet mode.
+	// TestBlock
+	//
+	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(context.Context, *empty.Empty) (*BlockResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
