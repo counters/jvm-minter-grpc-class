@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.2",
+    "version": "1.2.1",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -1172,7 +1172,7 @@
                   "$ref": "#/definitions/SubscribeResponse"
                 },
                 "error": {
-                  "$ref": "#/definitions/rpcStatus"
+                  "$ref": ""
                 }
               },
               "title": "Stream result of SubscribeResponse"
