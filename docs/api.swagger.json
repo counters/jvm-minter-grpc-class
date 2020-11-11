@@ -23,7 +23,8 @@
   "paths": {
     "/address/{address}": {
       "get": {
-        "summary": "Returns coins list, balance and transaction count of an address.",
+        "summary": "Address",
+        "description": "Address returns coins list, balance and transaction count of an address.",
         "operationId": "Address",
         "responses": {
           "200": {
@@ -39,7 +40,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -74,7 +78,8 @@
     },
     "/addresses": {
       "get": {
-        "summary": "Returns list of addresses.",
+        "summary": "Addresses",
+        "description": "Addresses returns list of addresses.",
         "operationId": "Addresses",
         "responses": {
           "200": {
@@ -90,7 +95,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -118,7 +126,8 @@
             "name": "delegated",
             "in": "query",
             "required": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -128,7 +137,8 @@
     },
     "/block/{height}": {
       "get": {
-        "summary": "Returns block data at given height.",
+        "summary": "Block",
+        "description": "Block returns block data at given height.",
         "operationId": "Block",
         "responses": {
           "200": {
@@ -144,7 +154,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -185,7 +198,8 @@
     },
     "/candidate/{public_key}": {
       "get": {
-        "summary": "Returns candidate’s info by provided public_key.",
+        "summary": "Candidate",
+        "description": "Candidate returns candidate’s info by provided public key.\n\n## Fields of response\n| Name      | Description                  |\n| --------- | ---------------------------- | \n| reward_address | Address where validator’s rewards go to. | \n| owner_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate. | \n| control_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. | \n| total_stake | Total stake of a candidate | \n| public_key | Public key of a candidate | \n| commission | Commission (from 0 to 100) from rewards which delegators will pay to validator | \n| used_slots | Number of occupied steak slots. Note: filled in when request includes_stakes | \n| uniq_users | Number of unique wallets in steaks. Note: filled in when request includes_stakes | \n| min_stake | Smallest steak size. Note: filled in when request includes_stakes | \n| stakes | List of stakes. Note: filled in when request includes_stakes | \n| status | Candidate status. Available values: offline = 1, online = 2 | \n| validator | Is a validator at the current height |",
         "operationId": "Candidate",
         "responses": {
           "200": {
@@ -201,7 +215,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -210,16 +227,26 @@
         "parameters": [
           {
             "name": "public_key",
+            "description": "Public key of a candidate",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "height",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
             "in": "query",
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "not_show_stakes",
+            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled.",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -229,7 +256,8 @@
     },
     "/candidates": {
       "get": {
-        "summary": "Returns list of candidates.",
+        "summary": "Candidates",
+        "description": "Candidates returns list of candidates.",
         "operationId": "Candidates",
         "responses": {
           "200": {
@@ -245,7 +273,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -254,6 +285,7 @@
         "parameters": [
           {
             "name": "height",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -261,6 +293,15 @@
           },
           {
             "name": "include_stakes",
+            "description": "Calculate field values used_slots, uniq_users, min_stake.",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "not_show_stakes",
+            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used.",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -286,7 +327,8 @@
     },
     "/coin_info/{symbol}": {
       "get": {
-        "summary": "Returns information about coin symbol.",
+        "summary": "CoinInfo",
+        "description": "CoinInfo returns information about coin symbol.",
         "operationId": "CoinInfo",
         "responses": {
           "200": {
@@ -302,7 +344,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -330,7 +375,8 @@
     },
     "/coin_info_by_id/{id}": {
       "get": {
-        "summary": "Returns information about coin ID.",
+        "summary": "CoinInfoById",
+        "description": "CoinInfoById returns information about coin ID.",
         "operationId": "CoinInfoById",
         "responses": {
           "200": {
@@ -346,7 +392,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -375,7 +424,8 @@
     },
     "/estimate_coin_buy": {
       "get": {
-        "summary": "Return estimate of buy coin transaction.",
+        "summary": "EstimateCoinBuy",
+        "description": "EstimateCoinBuy returns estimate of buy coin transaction.",
         "operationId": "EstimateCoinBuy",
         "responses": {
           "200": {
@@ -391,7 +441,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -427,7 +480,7 @@
           {
             "name": "value_to_buy",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -445,7 +498,8 @@
     },
     "/estimate_coin_sell": {
       "get": {
-        "summary": "Return estimate of sell coin transaction.",
+        "summary": "EstimateCoinSell",
+        "description": "EstimateCoinSell returns estimate of sell coin transaction.",
         "operationId": "EstimateCoinSell",
         "responses": {
           "200": {
@@ -461,7 +515,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -515,7 +572,8 @@
     },
     "/estimate_coin_sell_all": {
       "get": {
-        "summary": "Return estimate of sell all coin transaction.",
+        "summary": "EstimateCoinSellAll",
+        "description": "EstimateCoinSellAll returns estimate of sell all coin transaction.",
         "operationId": "EstimateCoinSellAll",
         "responses": {
           "200": {
@@ -531,7 +589,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -593,7 +654,8 @@
     },
     "/estimate_tx_commission/{tx}": {
       "get": {
-        "summary": "Return estimate of transaction.",
+        "summary": "EstimateTxCommission",
+        "description": "EstimateTxCommission returns estimate of transaction.",
         "operationId": "EstimateTxCommission",
         "responses": {
           "200": {
@@ -609,7 +671,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -637,7 +702,8 @@
     },
     "/events/{height}": {
       "get": {
-        "summary": "Returns events at given height.",
+        "summary": "Events",
+        "description": "Events returns events at given height.",
         "operationId": "Events",
         "responses": {
           "200": {
@@ -653,7 +719,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -669,6 +738,7 @@
           },
           {
             "name": "search",
+            "description": "Array of public keys of validators and wallet addresses of validators for filtering.",
             "in": "query",
             "required": false,
             "type": "array",
@@ -685,7 +755,8 @@
     },
     "/frozen/{address}": {
       "get": {
-        "summary": "Returns frozen balance.",
+        "summary": "Frozen",
+        "description": "Frozen returns frozen balance.",
         "operationId": "Frozen",
         "responses": {
           "200": {
@@ -701,7 +772,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -729,7 +803,8 @@
     },
     "/genesis": {
       "get": {
-        "summary": "Returns genesis file.",
+        "summary": "Genesis",
+        "description": "Genesis returns genesis file.",
         "operationId": "Genesis",
         "responses": {
           "200": {
@@ -745,7 +820,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -758,7 +836,8 @@
     },
     "/halts/{height}": {
       "get": {
-        "summary": "Returns the candidate votes for stopping the network at block.",
+        "summary": "Halts",
+        "description": "Halts returns the candidate votes for stopping the network at block.",
         "operationId": "Halts",
         "responses": {
           "200": {
@@ -774,7 +853,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -796,7 +878,8 @@
     },
     "/max_gas_price": {
       "get": {
-        "summary": "Returns current max gas.",
+        "summary": "MaxGasPrice",
+        "description": "MaxGasPrice returns current max gas.",
         "operationId": "MaxGasPrice",
         "responses": {
           "200": {
@@ -812,7 +895,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -834,7 +920,8 @@
     },
     "/min_gas_price": {
       "get": {
-        "summary": "Returns current min gas price.",
+        "summary": "MinGasPrice",
+        "description": "MinGasPrice returns current min gas price.",
         "operationId": "MinGasPrice",
         "responses": {
           "200": {
@@ -850,7 +937,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -863,7 +953,8 @@
     },
     "/missed_blocks/{public_key}": {
       "get": {
-        "summary": "Returns missed blocks by validator public key.",
+        "summary": "MissedBlocks",
+        "description": "MissedBlocks returns missed blocks by validator public key.",
         "operationId": "MissedBlocks",
         "responses": {
           "200": {
@@ -879,7 +970,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -907,7 +1001,8 @@
     },
     "/net_info": {
       "get": {
-        "summary": "Returns network info",
+        "summary": "NetInfo",
+        "description": "NetInfo returns network info",
         "operationId": "NetInfo",
         "responses": {
           "200": {
@@ -923,7 +1018,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -936,8 +1034,8 @@
     },
     "/send_transaction": {
       "post": {
-        "summary": "Returns the result of sending signed tx.",
-        "description": "To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "SendTransaction",
+        "description": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction2",
         "responses": {
           "200": {
@@ -953,7 +1051,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -980,8 +1081,8 @@
     },
     "/send_transaction/{tx}": {
       "get": {
-        "summary": "Returns the result of sending signed tx.",
-        "description": "To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "summary": "SendTransaction",
+        "description": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
         "operationId": "SendTransaction",
         "responses": {
           "200": {
@@ -997,7 +1098,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1022,7 +1126,8 @@
     },
     "/status": {
       "get": {
-        "summary": "Returns node status including pubkey, latest block.",
+        "summary": "Status",
+        "description": "Status returns node status including pubkey, latest block.",
         "operationId": "Status",
         "responses": {
           "200": {
@@ -1038,7 +1143,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1051,8 +1159,8 @@
     },
     "/subscribe": {
       "get": {
-        "summary": "Returns a subscription for events by query.",
-        "description": "Only supported in WS and gRPC methods",
+        "summary": "Subscribe",
+        "description": "Subscribe returns a subscription for events by query. Only supported in WS and gRPC methods.",
         "operationId": "Subscribe",
         "responses": {
           "200": {
@@ -1064,7 +1172,7 @@
                   "$ref": "#/definitions/SubscribeResponse"
                 },
                 "error": {
-                  "$ref": "#/definitions/runtimeStreamError"
+                  "$ref": "#/definitions/rpcStatus"
                 }
               },
               "title": "Stream result of SubscribeResponse"
@@ -1077,7 +1185,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1097,9 +1208,43 @@
         ]
       }
     },
+    "/test/block": {
+      "get": {
+        "summary": "TestBlock",
+        "description": "TestBlock returns the list of example transactions in block. Available only testnet mode.",
+        "operationId": "TestBlock",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlockResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/transaction/{hash}": {
       "get": {
-        "summary": "Returns transaction info.",
+        "summary": "Transaction",
+        "description": "Transaction returns transaction info.",
         "operationId": "Transaction",
         "responses": {
           "200": {
@@ -1115,7 +1260,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1136,7 +1284,8 @@
     },
     "/transactions": {
       "get": {
-        "summary": "Return transactions by query.",
+        "summary": "Transactions",
+        "description": "Transactions returns transactions by query.",
         "operationId": "Transactions",
         "responses": {
           "200": {
@@ -1152,7 +1301,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1189,7 +1341,8 @@
     },
     "/unconfirmed_txs": {
       "get": {
-        "summary": "Returns unconfirmed transactions.",
+        "summary": "UnconfirmedTxs",
+        "description": "UnconfirmedTxs returns unconfirmed transactions.",
         "operationId": "UnconfirmedTxs",
         "responses": {
           "200": {
@@ -1205,7 +1358,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1215,7 +1371,7 @@
           {
             "name": "limit",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "integer",
             "format": "int32",
             "default": "30"
@@ -1228,7 +1384,8 @@
     },
     "/validators": {
       "get": {
-        "summary": "Returns list of active validators.",
+        "summary": "Validators",
+        "description": "Validators returns list of active validators.",
         "operationId": "Validators",
         "responses": {
           "200": {
@@ -1244,7 +1401,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1266,7 +1426,8 @@
     },
     "/waitlist/{address}": {
       "get": {
-        "summary": "Returns the list of address stakes in waitlist.",
+        "summary": "WaitList",
+        "description": "WaitList returns the list of address stakes in waitlist.",
         "operationId": "WaitList",
         "responses": {
           "200": {
@@ -1282,7 +1443,10 @@
               "example": {
                 "error": {
                   "code": "504",
-                  "message": "context deadline exceeded"
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
                 }
               }
             }
@@ -1683,6 +1847,23 @@
         }
       }
     },
+    "ErrorBodyError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "FrozenResponseFrozen": {
       "type": "object",
       "properties": {
@@ -2029,14 +2210,14 @@
           "items": {
             "$ref": "#/definitions/AddressDelegatedBalance"
           },
-          "title": "Filled in when requesting delegator steaks"
+          "title": "Filled in when request delegated"
         },
         "total": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/AddressBalance"
           },
-          "description": "Sum of balance and delegated by coins."
+          "title": "Sum of balance and delegated by coins. Filled in when request delegated"
         },
         "transaction_count": {
           "type": "string",
@@ -2123,48 +2304,59 @@
       "type": "object",
       "properties": {
         "reward_address": {
-          "type": "string"
+          "type": "string",
+          "description": "Address where validator’s rewards go to."
         },
         "owner_address": {
-          "type": "string"
+          "type": "string",
+          "description": "Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate."
         },
         "control_address": {
-          "type": "string"
+          "type": "string",
+          "description": "Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction."
         },
         "total_stake": {
-          "type": "string"
+          "type": "string",
+          "title": "Total stake of a candidate"
         },
         "public_key": {
-          "type": "string"
+          "type": "string",
+          "title": "Public key of a candidate"
         },
         "commission": {
           "type": "string",
-          "format": "uint64"
+          "format": "uint64",
+          "title": "Commission (from 0 to 100) from rewards which delegators will pay to validator"
         },
         "used_slots": {
           "type": "string",
           "format": "uint64",
-          "title": "To be completed when requesting candidate steaks"
+          "title": "Number of occupied steak slots. Note: filled in when request includes_stakes"
         },
         "uniq_users": {
           "type": "string",
           "format": "uint64",
-          "title": "To be completed when requesting candidate steaks"
+          "title": "Number of unique wallets in steaks. Note: filled in when request includes_stakes"
         },
         "min_stake": {
           "type": "string",
-          "title": "To be completed when requesting candidate steaks"
+          "title": "Smallest steak size. Note: filled in when request includes_stakes"
         },
         "stakes": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/CandidateResponseStake"
           },
-          "title": "To be completed when requesting candidate steaks"
+          "title": "List of stakes. Note: filled in when request includes_stakes"
         },
         "status": {
           "type": "string",
-          "format": "uint64"
+          "format": "uint64",
+          "title": "Candidate status. Available values: offline = 1, online = 2"
+        },
+        "validator": {
+          "type": "boolean",
+          "title": "Is a validator at the current height"
         }
       }
     },
@@ -2258,23 +2450,6 @@
       "properties": {
         "error": {
           "$ref": "#/definitions/ErrorBodyError"
-        }
-      }
-    },
-    "ErrorBodyError": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "string"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
         }
       }
     },
@@ -2688,31 +2863,6 @@
       ],
       "default": "NULL_VALUE",
       "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
-    },
-    "runtimeStreamError": {
-      "type": "object",
-      "properties": {
-        "grpc_code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "http_code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "http_status": {
-          "type": "string"
-        },
-        "details": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/protobufAny"
-          }
-        }
-      }
     }
   },
   "externalDocs": {
