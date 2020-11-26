@@ -4,10 +4,10 @@ package api_pb
 
 import (
 	context "context"
-	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -29,19 +29,19 @@ type ApiServiceClient interface {
 	// Genesis
 	//
 	// Genesis returns genesis file.
-	Genesis(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GenesisResponse, error)
+	Genesis(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*GenesisResponse, error)
 	// MinGasPrice
 	//
 	// MinGasPrice returns current min gas price.
-	MinGasPrice(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*MinGasPriceResponse, error)
+	MinGasPrice(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*MinGasPriceResponse, error)
 	// NetInfo
 	//
 	// NetInfo returns network info
-	NetInfo(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*NetInfoResponse, error)
+	NetInfo(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*NetInfoResponse, error)
 	// Status
 	//
 	// Status returns node status including pubkey, latest block.
-	Status(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*StatusResponse, error)
+	Status(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*StatusResponse, error)
 	// Address
 	//
 	// Address returns coins list, balance and transaction count of an address.
@@ -132,7 +132,7 @@ type ApiServiceClient interface {
 	// TestBlock
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
-	TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
+	TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
 }
 
 type apiServiceClient struct {
@@ -184,7 +184,7 @@ func (c *apiServiceClient) Halts(ctx context.Context, in *HaltsRequest, opts ...
 	return out, nil
 }
 
-func (c *apiServiceClient) Genesis(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GenesisResponse, error) {
+func (c *apiServiceClient) Genesis(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*GenesisResponse, error) {
 	out := new(GenesisResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Genesis", in, out, opts...)
 	if err != nil {
@@ -193,7 +193,7 @@ func (c *apiServiceClient) Genesis(ctx context.Context, in *empty.Empty, opts ..
 	return out, nil
 }
 
-func (c *apiServiceClient) MinGasPrice(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*MinGasPriceResponse, error) {
+func (c *apiServiceClient) MinGasPrice(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*MinGasPriceResponse, error) {
 	out := new(MinGasPriceResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/MinGasPrice", in, out, opts...)
 	if err != nil {
@@ -202,7 +202,7 @@ func (c *apiServiceClient) MinGasPrice(ctx context.Context, in *empty.Empty, opt
 	return out, nil
 }
 
-func (c *apiServiceClient) NetInfo(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*NetInfoResponse, error) {
+func (c *apiServiceClient) NetInfo(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*NetInfoResponse, error) {
 	out := new(NetInfoResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/NetInfo", in, out, opts...)
 	if err != nil {
@@ -211,7 +211,7 @@ func (c *apiServiceClient) NetInfo(ctx context.Context, in *empty.Empty, opts ..
 	return out, nil
 }
 
-func (c *apiServiceClient) Status(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*StatusResponse, error) {
+func (c *apiServiceClient) Status(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*StatusResponse, error) {
 	out := new(StatusResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Status", in, out, opts...)
 	if err != nil {
@@ -409,7 +409,7 @@ func (c *apiServiceClient) WaitList(ctx context.Context, in *WaitListRequest, op
 	return out, nil
 }
 
-func (c *apiServiceClient) TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error) {
+func (c *apiServiceClient) TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error) {
 	out := new(BlockResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/TestBlock", in, out, opts...)
 	if err != nil {
@@ -433,19 +433,19 @@ type ApiServiceServer interface {
 	// Genesis
 	//
 	// Genesis returns genesis file.
-	Genesis(context.Context, *empty.Empty) (*GenesisResponse, error)
+	Genesis(context.Context, *emptypb.Empty) (*GenesisResponse, error)
 	// MinGasPrice
 	//
 	// MinGasPrice returns current min gas price.
-	MinGasPrice(context.Context, *empty.Empty) (*MinGasPriceResponse, error)
+	MinGasPrice(context.Context, *emptypb.Empty) (*MinGasPriceResponse, error)
 	// NetInfo
 	//
 	// NetInfo returns network info
-	NetInfo(context.Context, *empty.Empty) (*NetInfoResponse, error)
+	NetInfo(context.Context, *emptypb.Empty) (*NetInfoResponse, error)
 	// Status
 	//
 	// Status returns node status including pubkey, latest block.
-	Status(context.Context, *empty.Empty) (*StatusResponse, error)
+	Status(context.Context, *emptypb.Empty) (*StatusResponse, error)
 	// Address
 	//
 	// Address returns coins list, balance and transaction count of an address.
@@ -536,7 +536,7 @@ type ApiServiceServer interface {
 	// TestBlock
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
-	TestBlock(context.Context, *empty.Empty) (*BlockResponse, error)
+	TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -550,16 +550,16 @@ func (UnimplementedApiServiceServer) Subscribe(*SubscribeRequest, ApiService_Sub
 func (UnimplementedApiServiceServer) Halts(context.Context, *HaltsRequest) (*HaltsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Halts not implemented")
 }
-func (UnimplementedApiServiceServer) Genesis(context.Context, *empty.Empty) (*GenesisResponse, error) {
+func (UnimplementedApiServiceServer) Genesis(context.Context, *emptypb.Empty) (*GenesisResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Genesis not implemented")
 }
-func (UnimplementedApiServiceServer) MinGasPrice(context.Context, *empty.Empty) (*MinGasPriceResponse, error) {
+func (UnimplementedApiServiceServer) MinGasPrice(context.Context, *emptypb.Empty) (*MinGasPriceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MinGasPrice not implemented")
 }
-func (UnimplementedApiServiceServer) NetInfo(context.Context, *empty.Empty) (*NetInfoResponse, error) {
+func (UnimplementedApiServiceServer) NetInfo(context.Context, *emptypb.Empty) (*NetInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NetInfo not implemented")
 }
-func (UnimplementedApiServiceServer) Status(context.Context, *empty.Empty) (*StatusResponse, error) {
+func (UnimplementedApiServiceServer) Status(context.Context, *emptypb.Empty) (*StatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Status not implemented")
 }
 func (UnimplementedApiServiceServer) Address(context.Context, *AddressRequest) (*AddressResponse, error) {
@@ -625,7 +625,7 @@ func (UnimplementedApiServiceServer) Frozen(context.Context, *FrozenRequest) (*F
 func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WaitList not implemented")
 }
-func (UnimplementedApiServiceServer) TestBlock(context.Context, *empty.Empty) (*BlockResponse, error) {
+func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TestBlock not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
@@ -681,7 +681,7 @@ func _ApiService_Halts_Handler(srv interface{}, ctx context.Context, dec func(in
 }
 
 func _ApiService_Genesis_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -693,13 +693,13 @@ func _ApiService_Genesis_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: "/api_pb.ApiService/Genesis",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).Genesis(ctx, req.(*empty.Empty))
+		return srv.(ApiServiceServer).Genesis(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _ApiService_MinGasPrice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -711,13 +711,13 @@ func _ApiService_MinGasPrice_Handler(srv interface{}, ctx context.Context, dec f
 		FullMethod: "/api_pb.ApiService/MinGasPrice",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).MinGasPrice(ctx, req.(*empty.Empty))
+		return srv.(ApiServiceServer).MinGasPrice(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _ApiService_NetInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -729,13 +729,13 @@ func _ApiService_NetInfo_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: "/api_pb.ApiService/NetInfo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).NetInfo(ctx, req.(*empty.Empty))
+		return srv.(ApiServiceServer).NetInfo(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _ApiService_Status_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -747,7 +747,7 @@ func _ApiService_Status_Handler(srv interface{}, ctx context.Context, dec func(i
 		FullMethod: "/api_pb.ApiService/Status",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).Status(ctx, req.(*empty.Empty))
+		return srv.(ApiServiceServer).Status(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1131,7 +1131,7 @@ func _ApiService_WaitList_Handler(srv interface{}, ctx context.Context, dec func
 }
 
 func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1143,7 +1143,7 @@ func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec fun
 		FullMethod: "/api_pb.ApiService/TestBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).TestBlock(ctx, req.(*empty.Empty))
+		return srv.(ApiServiceServer).TestBlock(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
