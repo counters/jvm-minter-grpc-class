@@ -133,6 +133,18 @@ type ApiServiceClient interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
+	// Pairs
+	//
+	//
+	Pairs(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*PairsResponse, error)
+	// Pair
+	//
+	//
+	Pair(ctx context.Context, in *PairRequest, opts ...grpc.CallOption) (*PairResponse, error)
+	// PairFromProvider
+	//
+	//
+	PairFromProvider(ctx context.Context, in *PairFromProviderRequest, opts ...grpc.CallOption) (*PairFromProviderResponse, error)
 }
 
 type apiServiceClient struct {
@@ -418,6 +430,33 @@ func (c *apiServiceClient) TestBlock(ctx context.Context, in *empty.Empty, opts 
 	return out, nil
 }
 
+func (c *apiServiceClient) Pairs(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*PairsResponse, error) {
+	out := new(PairsResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Pairs", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) Pair(ctx context.Context, in *PairRequest, opts ...grpc.CallOption) (*PairResponse, error) {
+	out := new(PairResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Pair", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) PairFromProvider(ctx context.Context, in *PairFromProviderRequest, opts ...grpc.CallOption) (*PairFromProviderResponse, error) {
+	out := new(PairFromProviderResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/PairFromProvider", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -537,6 +576,18 @@ type ApiServiceServer interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(context.Context, *empty.Empty) (*BlockResponse, error)
+	// Pairs
+	//
+	//
+	Pairs(context.Context, *empty.Empty) (*PairsResponse, error)
+	// Pair
+	//
+	//
+	Pair(context.Context, *PairRequest) (*PairResponse, error)
+	// PairFromProvider
+	//
+	//
+	PairFromProvider(context.Context, *PairFromProviderRequest) (*PairFromProviderResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -627,6 +678,15 @@ func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest)
 }
 func (UnimplementedApiServiceServer) TestBlock(context.Context, *empty.Empty) (*BlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TestBlock not implemented")
+}
+func (UnimplementedApiServiceServer) Pairs(context.Context, *empty.Empty) (*PairsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Pairs not implemented")
+}
+func (UnimplementedApiServiceServer) Pair(context.Context, *PairRequest) (*PairResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Pair not implemented")
+}
+func (UnimplementedApiServiceServer) PairFromProvider(context.Context, *PairFromProviderRequest) (*PairFromProviderResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PairFromProvider not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1148,6 +1208,60 @@ func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_Pairs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(empty.Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).Pairs(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/Pairs",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).Pairs(ctx, req.(*empty.Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_Pair_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PairRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).Pair(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/Pair",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).Pair(ctx, req.(*PairRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_PairFromProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PairFromProviderRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).PairFromProvider(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/PairFromProvider",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).PairFromProvider(ctx, req.(*PairFromProviderRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _ApiService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api_pb.ApiService",
 	HandlerType: (*ApiServiceServer)(nil),
@@ -1259,6 +1373,18 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "TestBlock",
 			Handler:    _ApiService_TestBlock_Handler,
+		},
+		{
+			MethodName: "Pairs",
+			Handler:    _ApiService_Pairs_Handler,
+		},
+		{
+			MethodName: "Pair",
+			Handler:    _ApiService_Pair_Handler,
+		},
+		{
+			MethodName: "PairFromProvider",
+			Handler:    _ApiService_PairFromProvider_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.2.1",
+    "version": "1.3",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -13,7 +13,6 @@
       "url": "https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE"
     }
   },
-  "basePath": "/v2",
   "consumes": [
     "application/json"
   ],
@@ -1208,6 +1207,140 @@
         ]
       }
     },
+    "/swap/pairs": {
+      "get": {
+        "summary": "Pairs",
+        "operationId": "Pairs",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PairsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
+    "/swap/pairs/{x}/{y}": {
+      "get": {
+        "summary": "Pair",
+        "operationId": "Pair",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PairResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
+    "/swap/pairs/{x}/{y}/{provider}": {
+      "get": {
+        "summary": "PairFromProvider",
+        "operationId": "PairFromProvider",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PairFromProviderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "provider",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/test/block": {
       "get": {
         "summary": "TestBlock",
@@ -2075,6 +2208,17 @@
         }
       }
     },
+    "PairsResponsePair": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "$ref": "#/definitions/Coin"
+        },
+        "y": {
+          "$ref": "#/definitions/Coin"
+        }
+      }
+    },
     "PeerConnectionStatus": {
       "type": "object",
       "properties": {
@@ -2624,6 +2768,45 @@
         },
         "other": {
           "$ref": "#/definitions/NodeInfoOther"
+        }
+      }
+    },
+    "PairFromProviderResponse": {
+      "type": "object",
+      "properties": {
+        "x_volume": {
+          "type": "string"
+        },
+        "y_volume": {
+          "type": "string"
+        },
+        "stake": {
+          "type": "string"
+        }
+      }
+    },
+    "PairResponse": {
+      "type": "object",
+      "properties": {
+        "x_volume": {
+          "type": "string"
+        },
+        "y_volume": {
+          "type": "string"
+        },
+        "stakes": {
+          "type": "string"
+        }
+      }
+    },
+    "PairsResponse": {
+      "type": "object",
+      "properties": {
+        "pairs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PairsResponsePair"
+          }
         }
       }
     },
