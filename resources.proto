@@ -17,6 +17,36 @@ message Coin {
     string symbol = 2;
 }
 
+message PairsResponse {
+    message Pair {
+        Coin x = 1;
+        Coin y = 2;
+    }
+    repeated Pair pairs = 1;
+}
+
+message PairRequest {
+    uint64 x = 1;
+    uint64 y = 2;
+}
+message PairResponse {
+    string x_volume = 1;
+    string y_volume = 2;
+    string stakes = 3;
+}
+
+
+message PairFromProviderRequest {
+    uint64 x = 1;
+    uint64 y = 2;
+    string provider = 3;
+}
+message PairFromProviderResponse {
+    string x_volume = 1;
+    string y_volume = 2;
+    string stake = 3;
+}
+
 message NodeInfo {
     message ProtocolVersion {
         uint64 p2p = 3;

@@ -27,7 +27,7 @@ service ApiService {
             get: "/halts/{height}"
         };
     }
-    
+
     // Genesis
     //
     // Genesis returns genesis file.
@@ -204,11 +204,9 @@ service ApiService {
                 body: "*"
             }
         };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
-            external_docs: {
-                url: "https://www.minter.network/docs#transactions"
-                description: "More about Minter transactions"
-            }
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).external_docs = {
+            url: "https://www.minter.network/docs#transactions"
+            description: "More about Minter transactions"
         };
     }
 
@@ -274,4 +272,32 @@ service ApiService {
             get: "/test/block"
         };
     }
+
+    // Pairs
+    //
+    //
+    rpc Pairs (google.protobuf.Empty) returns (PairsResponse) {
+        option (google.api.http) = {
+            get: "/swap/pairs"
+        };
+    }
+
+    // Pair
+    //
+    //
+    rpc Pair (PairRequest) returns (PairResponse) {
+        option (google.api.http) = {
+            get: "/swap/pairs/{x}/{y}"
+        };
+    }
+
+    // PairFromProvider
+    //
+    //
+    rpc PairFromProvider (PairFromProviderRequest) returns (PairFromProviderResponse) {
+        option (google.api.http) = {
+            get: "/swap/pairs/{x}/{y}/{provider}"
+        };
+    }
+
 }
