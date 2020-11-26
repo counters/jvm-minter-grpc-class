@@ -29,6 +29,7 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
             email: "sk@minter.org"
         };
     };
+    base_path: "/v2"
     external_docs: {
         url: "https://www.minter.network/docs";
         description: "More about Minter blockchain";
