@@ -13,6 +13,7 @@
       "url": "https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE"
     }
   },
+  "basePath": "/v2",
   "consumes": [
     "application/json"
   ],
