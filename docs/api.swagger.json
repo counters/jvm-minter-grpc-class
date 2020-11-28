@@ -2775,10 +2775,10 @@
     "PairFromProviderResponse": {
       "type": "object",
       "properties": {
-        "reserve0": {
+        "amount0": {
           "type": "string"
         },
-        "reserve1": {
+        "amount1": {
           "type": "string"
         },
         "balance": {
