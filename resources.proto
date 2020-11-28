@@ -19,32 +19,32 @@ message Coin {
 
 message PairsResponse {
     message Pair {
-        Coin x = 1;
-        Coin y = 2;
+        Coin coin0 = 1;
+        Coin coin1 = 2;
     }
     repeated Pair pairs = 1;
 }
 
 message PairRequest {
-    uint64 x = 1;
-    uint64 y = 2;
+    uint64 coin0 = 1;
+    uint64 coin1 = 2;
 }
 message PairResponse {
-    string x_volume = 1;
-    string y_volume = 2;
-    string stakes = 3;
+    string reserve0 = 1;
+    string reserve1 = 2;
+    string total_supply = 3;
 }
 
 
 message PairFromProviderRequest {
-    uint64 x = 1;
-    uint64 y = 2;
+    uint64 coin0 = 1;
+    uint64 coin1 = 2;
     string provider = 3;
 }
 message PairFromProviderResponse {
-    string x_volume = 1;
-    string y_volume = 2;
-    string stake = 3;
+    string reserve0 = 1;
+    string reserve1 = 2;
+    string balance = 3;
 }
 
 message NodeInfo {
