@@ -42,8 +42,8 @@ message PairFromProviderRequest {
     string provider = 3;
 }
 message PairFromProviderResponse {
-    string reserve0 = 1;
-    string reserve1 = 2;
+    string amount0 = 1;
+    string amount1 = 2;
     string balance = 3;
 }
 
