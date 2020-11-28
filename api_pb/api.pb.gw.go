@@ -1393,24 +1393,24 @@ func request_ApiService_Pair_0(ctx context.Context, marshaler runtime.Marshaler,
 		_   = err
 	)
 
-	val, ok = pathParams["x"]
+	val, ok = pathParams["coin0"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "x")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin0")
 	}
 
-	protoReq.X, err = runtime.Uint64(val)
+	protoReq.Coin0, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "x", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin0", err)
 	}
 
-	val, ok = pathParams["y"]
+	val, ok = pathParams["coin1"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "y")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin1")
 	}
 
-	protoReq.Y, err = runtime.Uint64(val)
+	protoReq.Coin1, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "y", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin1", err)
 	}
 
 	msg, err := client.Pair(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -1429,24 +1429,24 @@ func local_request_ApiService_Pair_0(ctx context.Context, marshaler runtime.Mars
 		_   = err
 	)
 
-	val, ok = pathParams["x"]
+	val, ok = pathParams["coin0"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "x")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin0")
 	}
 
-	protoReq.X, err = runtime.Uint64(val)
+	protoReq.Coin0, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "x", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin0", err)
 	}
 
-	val, ok = pathParams["y"]
+	val, ok = pathParams["coin1"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "y")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin1")
 	}
 
-	protoReq.Y, err = runtime.Uint64(val)
+	protoReq.Coin1, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "y", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin1", err)
 	}
 
 	msg, err := server.Pair(ctx, &protoReq)
@@ -1465,24 +1465,24 @@ func request_ApiService_PairFromProvider_0(ctx context.Context, marshaler runtim
 		_   = err
 	)
 
-	val, ok = pathParams["x"]
+	val, ok = pathParams["coin0"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "x")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin0")
 	}
 
-	protoReq.X, err = runtime.Uint64(val)
+	protoReq.Coin0, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "x", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin0", err)
 	}
 
-	val, ok = pathParams["y"]
+	val, ok = pathParams["coin1"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "y")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin1")
 	}
 
-	protoReq.Y, err = runtime.Uint64(val)
+	protoReq.Coin1, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "y", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin1", err)
 	}
 
 	val, ok = pathParams["provider"]
@@ -1511,24 +1511,24 @@ func local_request_ApiService_PairFromProvider_0(ctx context.Context, marshaler 
 		_   = err
 	)
 
-	val, ok = pathParams["x"]
+	val, ok = pathParams["coin0"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "x")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin0")
 	}
 
-	protoReq.X, err = runtime.Uint64(val)
+	protoReq.Coin0, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "x", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin0", err)
 	}
 
-	val, ok = pathParams["y"]
+	val, ok = pathParams["coin1"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "y")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "coin1")
 	}
 
-	protoReq.Y, err = runtime.Uint64(val)
+	protoReq.Coin1, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "y", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "coin1", err)
 	}
 
 	val, ok = pathParams["provider"]
@@ -3017,9 +3017,9 @@ var (
 
 	pattern_ApiService_Pairs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"swap", "pairs"}, ""))
 
-	pattern_ApiService_Pair_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3}, []string{"swap", "pairs", "x", "y"}, ""))
+	pattern_ApiService_Pair_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3}, []string{"swap", "pairs", "coin0", "coin1"}, ""))
 
-	pattern_ApiService_PairFromProvider_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"swap", "pairs", "x", "y", "provider"}, ""))
+	pattern_ApiService_PairFromProvider_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"swap", "pairs", "coin0", "coin1", "provider"}, ""))
 )
 
 var (

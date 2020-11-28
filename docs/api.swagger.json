@@ -1240,7 +1240,7 @@
         ]
       }
     },
-    "/swap/pairs/{x}/{y}": {
+    "/swap/pairs/{coin0}/{coin1}": {
       "get": {
         "summary": "Pair",
         "operationId": "Pair",
@@ -1269,14 +1269,14 @@
         },
         "parameters": [
           {
-            "name": "x",
+            "name": "coin0",
             "in": "path",
             "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
-            "name": "y",
+            "name": "coin1",
             "in": "path",
             "required": true,
             "type": "string",
@@ -1288,7 +1288,7 @@
         ]
       }
     },
-    "/swap/pairs/{x}/{y}/{provider}": {
+    "/swap/pairs/{coin0}/{coin1}/{provider}": {
       "get": {
         "summary": "PairFromProvider",
         "operationId": "PairFromProvider",
@@ -1317,14 +1317,14 @@
         },
         "parameters": [
           {
-            "name": "x",
+            "name": "coin0",
             "in": "path",
             "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
-            "name": "y",
+            "name": "coin1",
             "in": "path",
             "required": true,
             "type": "string",
@@ -2212,10 +2212,10 @@
     "PairsResponsePair": {
       "type": "object",
       "properties": {
-        "x": {
+        "coin0": {
           "$ref": "#/definitions/Coin"
         },
-        "y": {
+        "coin1": {
           "$ref": "#/definitions/Coin"
         }
       }
@@ -2775,13 +2775,13 @@
     "PairFromProviderResponse": {
       "type": "object",
       "properties": {
-        "x_volume": {
+        "reserve0": {
           "type": "string"
         },
-        "y_volume": {
+        "reserve1": {
           "type": "string"
         },
-        "stake": {
+        "balance": {
           "type": "string"
         }
       }
@@ -2789,13 +2789,13 @@
     "PairResponse": {
       "type": "object",
       "properties": {
-        "x_volume": {
+        "reserve0": {
           "type": "string"
         },
-        "y_volume": {
+        "reserve1": {
           "type": "string"
         },
-        "stakes": {
+        "total_supply": {
           "type": "string"
         }
       }
