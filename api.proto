@@ -287,7 +287,7 @@ service ApiService {
     //
     rpc Pair (PairRequest) returns (PairResponse) {
         option (google.api.http) = {
-            get: "/swap/pairs/{x}/{y}"
+            get: "/swap/pairs/{coin0}/{coin1}"
         };
     }
 
@@ -296,7 +296,7 @@ service ApiService {
     //
     rpc PairFromProvider (PairFromProviderRequest) returns (PairFromProviderResponse) {
         option (google.api.http) = {
-            get: "/swap/pairs/{x}/{y}/{provider}"
+            get: "/swap/pairs/{coin0}/{coin1}/{provider}"
         };
     }
 
