@@ -1208,47 +1208,15 @@
         ]
       }
     },
-    "/swap/pairs": {
+    "/swap_pool/{coin0}/{coin1}": {
       "get": {
-        "summary": "Pairs",
-        "operationId": "Pairs",
+        "summary": "SwapPool",
+        "operationId": "SwapPool",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/PairsResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody",
-              "example": {
-                "error": {
-                  "code": "504",
-                  "message": "context deadline exceeded",
-                  "data": {
-                    "operation": "ABC"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "ApiService"
-        ]
-      }
-    },
-    "/swap/pairs/{coin0}/{coin1}": {
-      "get": {
-        "summary": "Pair",
-        "operationId": "Pair",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/PairResponse"
+              "$ref": "#/definitions/SwapPoolResponse"
             }
           },
           "default": {
@@ -1288,15 +1256,15 @@
         ]
       }
     },
-    "/swap/pairs/{coin0}/{coin1}/{provider}": {
+    "/swap_pool/{coin0}/{coin1}/{provider}": {
       "get": {
-        "summary": "PairFromProvider",
-        "operationId": "PairFromProvider",
+        "summary": "SwapPoolFromProvider",
+        "operationId": "SwapPoolFromProvider",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/PairFromProviderResponse"
+              "$ref": "#/definitions/SwapPoolFromProviderResponse"
             }
           },
           "default": {
@@ -2209,17 +2177,6 @@
         }
       }
     },
-    "PairsResponsePair": {
-      "type": "object",
-      "properties": {
-        "coin0": {
-          "$ref": "#/definitions/Coin"
-        },
-        "coin1": {
-          "$ref": "#/definitions/Coin"
-        }
-      }
-    },
     "PeerConnectionStatus": {
       "type": "object",
       "properties": {
@@ -2772,45 +2729,6 @@
         }
       }
     },
-    "PairFromProviderResponse": {
-      "type": "object",
-      "properties": {
-        "reserve0": {
-          "type": "string"
-        },
-        "reserve1": {
-          "type": "string"
-        },
-        "balance": {
-          "type": "string"
-        }
-      }
-    },
-    "PairResponse": {
-      "type": "object",
-      "properties": {
-        "reserve0": {
-          "type": "string"
-        },
-        "reserve1": {
-          "type": "string"
-        },
-        "total_supply": {
-          "type": "string"
-        }
-      }
-    },
-    "PairsResponse": {
-      "type": "object",
-      "properties": {
-        "pairs": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/PairsResponsePair"
-          }
-        }
-      }
-    },
     "SendTransactionRequest": {
       "type": "object",
       "properties": {
@@ -2893,6 +2811,34 @@
           "items": {
             "$ref": "#/definitions/SubscribeResponseEvent"
           }
+        }
+      }
+    },
+    "SwapPoolFromProviderResponse": {
+      "type": "object",
+      "properties": {
+        "amount0": {
+          "type": "string"
+        },
+        "amount1": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "string"
+        }
+      }
+    },
+    "SwapPoolResponse": {
+      "type": "object",
+      "properties": {
+        "reserve0": {
+          "type": "string"
+        },
+        "reserve1": {
+          "type": "string"
+        },
+        "total_supply": {
+          "type": "string"
         }
       }
     },
