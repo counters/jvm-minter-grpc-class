@@ -18,21 +18,23 @@ message Coin {
 }
 
 message SwapPoolRequest {
-    uint64 token = 1;
+    uint64 coin0 = 1;
+    uint64 coin1 = 2;
 }
 message SwapPoolResponse {
-    string reserve_hub = 1;
-    string reserve_token = 2;
+    string reserve0 = 1;
+    string reserve1 = 2;
     string total_supply = 3;
 }
 
 message SwapPoolFromProviderRequest {
-    uint64 token = 1;
+    uint64 coin0 = 1;
+    uint64 coin1 = 2;
     string provider = 3;
 }
 message SwapPoolFromProviderResponse {
-    string amount_hub = 1;
-    string amount_token = 2;
+    string amount0 = 1;
+    string amount1 = 2;
     string balance = 3;
 }
 
