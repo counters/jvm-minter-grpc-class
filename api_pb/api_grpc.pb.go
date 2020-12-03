@@ -133,18 +133,14 @@ type ApiServiceClient interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
-	// Pairs
+	// SwapPool
 	//
 	//
-	Pairs(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*PairsResponse, error)
-	// Pair
+	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// SwapPoolFromProvider
 	//
 	//
-	Pair(ctx context.Context, in *PairRequest, opts ...grpc.CallOption) (*PairResponse, error)
-	// PairFromProvider
-	//
-	//
-	PairFromProvider(ctx context.Context, in *PairFromProviderRequest, opts ...grpc.CallOption) (*PairFromProviderResponse, error)
+	SwapPoolFromProvider(ctx context.Context, in *SwapPoolFromProviderRequest, opts ...grpc.CallOption) (*SwapPoolFromProviderResponse, error)
 }
 
 type apiServiceClient struct {
@@ -430,27 +426,18 @@ func (c *apiServiceClient) TestBlock(ctx context.Context, in *emptypb.Empty, opt
 	return out, nil
 }
 
-func (c *apiServiceClient) Pairs(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*PairsResponse, error) {
-	out := new(PairsResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Pairs", in, out, opts...)
+func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
+	out := new(SwapPoolResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *apiServiceClient) Pair(ctx context.Context, in *PairRequest, opts ...grpc.CallOption) (*PairResponse, error) {
-	out := new(PairResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Pair", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *apiServiceClient) PairFromProvider(ctx context.Context, in *PairFromProviderRequest, opts ...grpc.CallOption) (*PairFromProviderResponse, error) {
-	out := new(PairFromProviderResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/PairFromProvider", in, out, opts...)
+func (c *apiServiceClient) SwapPoolFromProvider(ctx context.Context, in *SwapPoolFromProviderRequest, opts ...grpc.CallOption) (*SwapPoolFromProviderResponse, error) {
+	out := new(SwapPoolFromProviderResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolFromProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -576,18 +563,14 @@ type ApiServiceServer interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error)
-	// Pairs
+	// SwapPool
 	//
 	//
-	Pairs(context.Context, *emptypb.Empty) (*PairsResponse, error)
-	// Pair
+	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
+	// SwapPoolFromProvider
 	//
 	//
-	Pair(context.Context, *PairRequest) (*PairResponse, error)
-	// PairFromProvider
-	//
-	//
-	PairFromProvider(context.Context, *PairFromProviderRequest) (*PairFromProviderResponse, error)
+	SwapPoolFromProvider(context.Context, *SwapPoolFromProviderRequest) (*SwapPoolFromProviderResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -679,14 +662,11 @@ func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest)
 func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TestBlock not implemented")
 }
-func (UnimplementedApiServiceServer) Pairs(context.Context, *emptypb.Empty) (*PairsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Pairs not implemented")
+func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
 }
-func (UnimplementedApiServiceServer) Pair(context.Context, *PairRequest) (*PairResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Pair not implemented")
-}
-func (UnimplementedApiServiceServer) PairFromProvider(context.Context, *PairFromProviderRequest) (*PairFromProviderResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PairFromProvider not implemented")
+func (UnimplementedApiServiceServer) SwapPoolFromProvider(context.Context, *SwapPoolFromProviderRequest) (*SwapPoolFromProviderResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolFromProvider not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1208,56 +1188,38 @@ func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_Pairs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(emptypb.Empty)
+func _ApiService_SwapPool_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).Pairs(ctx, in)
+		return srv.(ApiServiceServer).SwapPool(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/Pairs",
+		FullMethod: "/api_pb.ApiService/SwapPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).Pairs(ctx, req.(*emptypb.Empty))
+		return srv.(ApiServiceServer).SwapPool(ctx, req.(*SwapPoolRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_Pair_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PairRequest)
+func _ApiService_SwapPoolFromProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolFromProviderRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).Pair(ctx, in)
+		return srv.(ApiServiceServer).SwapPoolFromProvider(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/Pair",
+		FullMethod: "/api_pb.ApiService/SwapPoolFromProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).Pair(ctx, req.(*PairRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ApiService_PairFromProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PairFromProviderRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ApiServiceServer).PairFromProvider(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/api_pb.ApiService/PairFromProvider",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).PairFromProvider(ctx, req.(*PairFromProviderRequest))
+		return srv.(ApiServiceServer).SwapPoolFromProvider(ctx, req.(*SwapPoolFromProviderRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1375,16 +1337,12 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_TestBlock_Handler,
 		},
 		{
-			MethodName: "Pairs",
-			Handler:    _ApiService_Pairs_Handler,
+			MethodName: "SwapPool",
+			Handler:    _ApiService_SwapPool_Handler,
 		},
 		{
-			MethodName: "Pair",
-			Handler:    _ApiService_Pair_Handler,
-		},
-		{
-			MethodName: "PairFromProvider",
-			Handler:    _ApiService_PairFromProvider_Handler,
+			MethodName: "SwapPoolFromProvider",
+			Handler:    _ApiService_SwapPoolFromProvider_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
