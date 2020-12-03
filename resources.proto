@@ -17,33 +17,22 @@ message Coin {
     string symbol = 2;
 }
 
-message PairsResponse {
-    message Pair {
-        Coin coin0 = 1;
-        Coin coin1 = 2;
-    }
-    repeated Pair pairs = 1;
+message SwapPoolRequest {
+    uint64 token = 1;
 }
-
-message PairRequest {
-    uint64 coin0 = 1;
-    uint64 coin1 = 2;
-}
-message PairResponse {
-    string reserve0 = 1;
-    string reserve1 = 2;
+message SwapPoolResponse {
+    string reserve_hub = 1;
+    string reserve_token = 2;
     string total_supply = 3;
 }
 
-
-message PairFromProviderRequest {
-    uint64 coin0 = 1;
-    uint64 coin1 = 2;
+message SwapPoolFromProviderRequest {
+    uint64 token = 1;
     string provider = 3;
 }
-message PairFromProviderResponse {
-    string amount0 = 1;
-    string amount1 = 2;
+message SwapPoolFromProviderResponse {
+    string amount_hub = 1;
+    string amount_token = 2;
     string balance = 3;
 }
 

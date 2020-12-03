@@ -273,30 +273,21 @@ service ApiService {
         };
     }
 
-    // Pairs
+    // SwapPool
     //
     //
-    rpc Pairs (google.protobuf.Empty) returns (PairsResponse) {
+    rpc SwapPool (SwapPoolRequest) returns (SwapPoolResponse) {
         option (google.api.http) = {
-            get: "/swap/pairs"
+            get: "/swap_pool/{token}"
         };
     }
 
-    // Pair
+    // SwapPoolFromProvider
     //
     //
-    rpc Pair (PairRequest) returns (PairResponse) {
+    rpc SwapPoolFromProvider (SwapPoolFromProviderRequest) returns (SwapPoolFromProviderResponse) {
         option (google.api.http) = {
-            get: "/swap/pairs/{coin0}/{coin1}"
-        };
-    }
-
-    // PairFromProvider
-    //
-    //
-    rpc PairFromProvider (PairFromProviderRequest) returns (PairFromProviderResponse) {
-        option (google.api.http) = {
-            get: "/swap/pairs/{coin0}/{coin1}/{provider}"
+            get: "/swap_pool/{token}/{provider}"
         };
     }
 
