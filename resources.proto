@@ -517,6 +517,9 @@ message EstimateCoinBuyRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    bool from_pool = 7 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
@@ -541,6 +544,9 @@ message EstimateCoinSellRequest {
     }];
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
+    }];
+    bool from_pool = 7 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
     }];
 }
 message EstimateCoinSellResponse {
@@ -571,6 +577,9 @@ message EstimateCoinSellAllRequest {
     }];
     uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
+    }];
+    bool from_pool = 8 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
     }];
 }
 message EstimateCoinSellAllResponse {
