@@ -602,7 +602,7 @@ message EventsRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    // Array of public keys of validators and wallet addresses of validators for filtering
+    // Array of public keys of validators and wallet addresses of delegators for filtering
     repeated string search = 2;
 }
 message EventsResponse {
