@@ -489,6 +489,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "from_pool",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -563,6 +570,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "from_pool",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -645,6 +659,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "from_pool",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
