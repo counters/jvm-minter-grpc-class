@@ -759,7 +759,7 @@
           },
           {
             "name": "search",
-            "description": "Array of public keys of validators and wallet addresses of validators for filtering.",
+            "description": "Array of public keys of validators and wallet addresses of delegators for filtering.",
             "in": "query",
             "required": false,
             "type": "array",

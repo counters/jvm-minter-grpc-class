@@ -3208,7 +3208,7 @@ type EventsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Height uint64 `protobuf:"varint,1,opt,name=height,proto3" json:"height,omitempty"`
-	// Array of public keys of validators and wallet addresses of validators for filtering
+	// Array of public keys of validators and wallet addresses of delegators for filtering
 	Search []string `protobuf:"bytes,2,rep,name=search,proto3" json:"search,omitempty"`
 }
 
