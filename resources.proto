@@ -177,7 +177,7 @@ message GenesisResponse {
             string symbol = 2;
             string volume = 3;
             uint64 crr = 4;
-            google.protobuf.StringValue reserve = 5;
+            string reserve = 5;
             string max_supply = 6;
             uint64 version = 7;
             google.protobuf.StringValue owner_address = 8;
@@ -444,7 +444,7 @@ message CoinInfoResponse {
     string symbol = 2;
     string volume = 3;
     uint64 crr = 4;
-    google.protobuf.StringValue reserve_balance = 5;
+    string reserve_balance = 5;
     string max_supply = 8;
     google.protobuf.StringValue owner_address = 7;
 }
@@ -733,7 +733,7 @@ message CreateCoinData {
     string name = 1;
     string symbol = 2;
     string initial_amount = 3;
-    google.protobuf.StringValue initial_reserve = 4;
+    string initial_reserve = 4;
     uint64 constant_reserve_ratio = 5;
     string max_supply = 6;
 }
@@ -797,7 +797,7 @@ message RecreateCoinData {
     string name = 1;
     string symbol = 2;
     string initial_amount = 3;
-    google.protobuf.StringValue initial_reserve = 4;
+    string initial_reserve = 4;
     uint64 constant_reserve_ratio = 5;
     string max_supply = 6;
 }
@@ -833,8 +833,8 @@ message RemoveSwapPoolData {
     Coin coin0 = 1;
     Coin coin1 = 2;
     string liquidity = 3;
-    google.protobuf.StringValue min_volume0 = 4;
-    google.protobuf.StringValue min_volume1 = 5;
+    string minimum_volume0 = 4;
+    string minimum_volume1 = 5;
 }
 
 message SellSwapPoolData {
