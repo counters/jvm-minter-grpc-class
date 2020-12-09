@@ -821,3 +821,38 @@ message EditCandidatePublicKeyData {
     string pub_key = 1;
     string new_pub_key = 2;
 }
+
+message AddSwapPoolData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string volume0 = 3;
+    string max_volume1 = 4;
+}
+
+message RemoveSwapPoolData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string liquidity = 3;
+    google.protobuf.StringValue min_volume0 = 4;
+    google.protobuf.StringValue min_volume1 = 5;
+}
+
+message SellSwapPoolData {
+    Coin coin_to_sell = 1;
+    string value_to_sell = 2;
+    Coin coin_to_buy = 3;
+    string minimum_value_to_buy = 4;
+}
+
+message SellAllSwapPoolData {
+    Coin coin_to_sell = 1;
+    Coin coin_to_buy = 2;
+    string minimum_value_to_buy = 3;
+}
+
+message BuySwapPoolData {
+    Coin coin_to_buy = 1;
+    string value_to_buy = 2;
+    Coin coin_to_sell = 3;
+    string maximum_value_to_sell = 4;
+}
