@@ -5295,6 +5295,361 @@ func (x *EditCandidatePublicKeyData) GetNewPubKey() string {
 	return ""
 }
 
+type AddSwapPoolData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Coin0      *Coin  `protobuf:"bytes,1,opt,name=coin0,proto3" json:"coin0,omitempty"`
+	Coin1      *Coin  `protobuf:"bytes,2,opt,name=coin1,proto3" json:"coin1,omitempty"`
+	Volume0    string `protobuf:"bytes,3,opt,name=volume0,proto3" json:"volume0,omitempty"`
+	MaxVolume1 string `protobuf:"bytes,4,opt,name=max_volume1,json=maxVolume1,proto3" json:"max_volume1,omitempty"`
+}
+
+func (x *AddSwapPoolData) Reset() {
+	*x = AddSwapPoolData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_resources_proto_msgTypes[77]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddSwapPoolData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddSwapPoolData) ProtoMessage() {}
+
+func (x *AddSwapPoolData) ProtoReflect() protoreflect.Message {
+	mi := &file_resources_proto_msgTypes[77]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddSwapPoolData.ProtoReflect.Descriptor instead.
+func (*AddSwapPoolData) Descriptor() ([]byte, []int) {
+	return file_resources_proto_rawDescGZIP(), []int{77}
+}
+
+func (x *AddSwapPoolData) GetCoin0() *Coin {
+	if x != nil {
+		return x.Coin0
+	}
+	return nil
+}
+
+func (x *AddSwapPoolData) GetCoin1() *Coin {
+	if x != nil {
+		return x.Coin1
+	}
+	return nil
+}
+
+func (x *AddSwapPoolData) GetVolume0() string {
+	if x != nil {
+		return x.Volume0
+	}
+	return ""
+}
+
+func (x *AddSwapPoolData) GetMaxVolume1() string {
+	if x != nil {
+		return x.MaxVolume1
+	}
+	return ""
+}
+
+type RemoveSwapPoolData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Coin0      *Coin                   `protobuf:"bytes,1,opt,name=coin0,proto3" json:"coin0,omitempty"`
+	Coin1      *Coin                   `protobuf:"bytes,2,opt,name=coin1,proto3" json:"coin1,omitempty"`
+	Liquidity  string                  `protobuf:"bytes,3,opt,name=liquidity,proto3" json:"liquidity,omitempty"`
+	MinVolume0 *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=min_volume0,json=minVolume0,proto3" json:"min_volume0,omitempty"`
+	MinVolume1 *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=min_volume1,json=minVolume1,proto3" json:"min_volume1,omitempty"`
+}
+
+func (x *RemoveSwapPoolData) Reset() {
+	*x = RemoveSwapPoolData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_resources_proto_msgTypes[78]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RemoveSwapPoolData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RemoveSwapPoolData) ProtoMessage() {}
+
+func (x *RemoveSwapPoolData) ProtoReflect() protoreflect.Message {
+	mi := &file_resources_proto_msgTypes[78]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RemoveSwapPoolData.ProtoReflect.Descriptor instead.
+func (*RemoveSwapPoolData) Descriptor() ([]byte, []int) {
+	return file_resources_proto_rawDescGZIP(), []int{78}
+}
+
+func (x *RemoveSwapPoolData) GetCoin0() *Coin {
+	if x != nil {
+		return x.Coin0
+	}
+	return nil
+}
+
+func (x *RemoveSwapPoolData) GetCoin1() *Coin {
+	if x != nil {
+		return x.Coin1
+	}
+	return nil
+}
+
+func (x *RemoveSwapPoolData) GetLiquidity() string {
+	if x != nil {
+		return x.Liquidity
+	}
+	return ""
+}
+
+func (x *RemoveSwapPoolData) GetMinVolume0() *wrapperspb.StringValue {
+	if x != nil {
+		return x.MinVolume0
+	}
+	return nil
+}
+
+func (x *RemoveSwapPoolData) GetMinVolume1() *wrapperspb.StringValue {
+	if x != nil {
+		return x.MinVolume1
+	}
+	return nil
+}
+
+type SellSwapPoolData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CoinToSell        *Coin  `protobuf:"bytes,1,opt,name=coin_to_sell,json=coinToSell,proto3" json:"coin_to_sell,omitempty"`
+	ValueToSell       string `protobuf:"bytes,2,opt,name=value_to_sell,json=valueToSell,proto3" json:"value_to_sell,omitempty"`
+	CoinToBuy         *Coin  `protobuf:"bytes,3,opt,name=coin_to_buy,json=coinToBuy,proto3" json:"coin_to_buy,omitempty"`
+	MinimumValueToBuy string `protobuf:"bytes,4,opt,name=minimum_value_to_buy,json=minimumValueToBuy,proto3" json:"minimum_value_to_buy,omitempty"`
+}
+
+func (x *SellSwapPoolData) Reset() {
+	*x = SellSwapPoolData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_resources_proto_msgTypes[79]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SellSwapPoolData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SellSwapPoolData) ProtoMessage() {}
+
+func (x *SellSwapPoolData) ProtoReflect() protoreflect.Message {
+	mi := &file_resources_proto_msgTypes[79]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SellSwapPoolData.ProtoReflect.Descriptor instead.
+func (*SellSwapPoolData) Descriptor() ([]byte, []int) {
+	return file_resources_proto_rawDescGZIP(), []int{79}
+}
+
+func (x *SellSwapPoolData) GetCoinToSell() *Coin {
+	if x != nil {
+		return x.CoinToSell
+	}
+	return nil
+}
+
+func (x *SellSwapPoolData) GetValueToSell() string {
+	if x != nil {
+		return x.ValueToSell
+	}
+	return ""
+}
+
+func (x *SellSwapPoolData) GetCoinToBuy() *Coin {
+	if x != nil {
+		return x.CoinToBuy
+	}
+	return nil
+}
+
+func (x *SellSwapPoolData) GetMinimumValueToBuy() string {
+	if x != nil {
+		return x.MinimumValueToBuy
+	}
+	return ""
+}
+
+type SellAllSwapPoolData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CoinToSell        *Coin  `protobuf:"bytes,1,opt,name=coin_to_sell,json=coinToSell,proto3" json:"coin_to_sell,omitempty"`
+	CoinToBuy         *Coin  `protobuf:"bytes,2,opt,name=coin_to_buy,json=coinToBuy,proto3" json:"coin_to_buy,omitempty"`
+	MinimumValueToBuy string `protobuf:"bytes,3,opt,name=minimum_value_to_buy,json=minimumValueToBuy,proto3" json:"minimum_value_to_buy,omitempty"`
+}
+
+func (x *SellAllSwapPoolData) Reset() {
+	*x = SellAllSwapPoolData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_resources_proto_msgTypes[80]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SellAllSwapPoolData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SellAllSwapPoolData) ProtoMessage() {}
+
+func (x *SellAllSwapPoolData) ProtoReflect() protoreflect.Message {
+	mi := &file_resources_proto_msgTypes[80]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SellAllSwapPoolData.ProtoReflect.Descriptor instead.
+func (*SellAllSwapPoolData) Descriptor() ([]byte, []int) {
+	return file_resources_proto_rawDescGZIP(), []int{80}
+}
+
+func (x *SellAllSwapPoolData) GetCoinToSell() *Coin {
+	if x != nil {
+		return x.CoinToSell
+	}
+	return nil
+}
+
+func (x *SellAllSwapPoolData) GetCoinToBuy() *Coin {
+	if x != nil {
+		return x.CoinToBuy
+	}
+	return nil
+}
+
+func (x *SellAllSwapPoolData) GetMinimumValueToBuy() string {
+	if x != nil {
+		return x.MinimumValueToBuy
+	}
+	return ""
+}
+
+type BuySwapPoolData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CoinToBuy          *Coin  `protobuf:"bytes,1,opt,name=coin_to_buy,json=coinToBuy,proto3" json:"coin_to_buy,omitempty"`
+	ValueToBuy         string `protobuf:"bytes,2,opt,name=value_to_buy,json=valueToBuy,proto3" json:"value_to_buy,omitempty"`
+	CoinToSell         *Coin  `protobuf:"bytes,3,opt,name=coin_to_sell,json=coinToSell,proto3" json:"coin_to_sell,omitempty"`
+	MaximumValueToSell string `protobuf:"bytes,4,opt,name=maximum_value_to_sell,json=maximumValueToSell,proto3" json:"maximum_value_to_sell,omitempty"`
+}
+
+func (x *BuySwapPoolData) Reset() {
+	*x = BuySwapPoolData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_resources_proto_msgTypes[81]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *BuySwapPoolData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BuySwapPoolData) ProtoMessage() {}
+
+func (x *BuySwapPoolData) ProtoReflect() protoreflect.Message {
+	mi := &file_resources_proto_msgTypes[81]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BuySwapPoolData.ProtoReflect.Descriptor instead.
+func (*BuySwapPoolData) Descriptor() ([]byte, []int) {
+	return file_resources_proto_rawDescGZIP(), []int{81}
+}
+
+func (x *BuySwapPoolData) GetCoinToBuy() *Coin {
+	if x != nil {
+		return x.CoinToBuy
+	}
+	return nil
+}
+
+func (x *BuySwapPoolData) GetValueToBuy() string {
+	if x != nil {
+		return x.ValueToBuy
+	}
+	return ""
+}
+
+func (x *BuySwapPoolData) GetCoinToSell() *Coin {
+	if x != nil {
+		return x.CoinToSell
+	}
+	return nil
+}
+
+func (x *BuySwapPoolData) GetMaximumValueToSell() string {
+	if x != nil {
+		return x.MaximumValueToSell
+	}
+	return ""
+}
+
 type NodeInfo_ProtocolVersion struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -5308,7 +5663,7 @@ type NodeInfo_ProtocolVersion struct {
 func (x *NodeInfo_ProtocolVersion) Reset() {
 	*x = NodeInfo_ProtocolVersion{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[77]
+		mi := &file_resources_proto_msgTypes[82]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5321,7 +5676,7 @@ func (x *NodeInfo_ProtocolVersion) String() string {
 func (*NodeInfo_ProtocolVersion) ProtoMessage() {}
 
 func (x *NodeInfo_ProtocolVersion) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[77]
+	mi := &file_resources_proto_msgTypes[82]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5370,7 +5725,7 @@ type NodeInfo_Other struct {
 func (x *NodeInfo_Other) Reset() {
 	*x = NodeInfo_Other{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[78]
+		mi := &file_resources_proto_msgTypes[83]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5383,7 +5738,7 @@ func (x *NodeInfo_Other) String() string {
 func (*NodeInfo_Other) ProtoMessage() {}
 
 func (x *NodeInfo_Other) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[78]
+	mi := &file_resources_proto_msgTypes[83]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5429,7 +5784,7 @@ type NetInfoResponse_Peer struct {
 func (x *NetInfoResponse_Peer) Reset() {
 	*x = NetInfoResponse_Peer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[79]
+		mi := &file_resources_proto_msgTypes[84]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5442,7 +5797,7 @@ func (x *NetInfoResponse_Peer) String() string {
 func (*NetInfoResponse_Peer) ProtoMessage() {}
 
 func (x *NetInfoResponse_Peer) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[79]
+	mi := &file_resources_proto_msgTypes[84]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5507,7 +5862,7 @@ type NetInfoResponse_Peer_ConnectionStatus struct {
 func (x *NetInfoResponse_Peer_ConnectionStatus) Reset() {
 	*x = NetInfoResponse_Peer_ConnectionStatus{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[80]
+		mi := &file_resources_proto_msgTypes[85]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5520,7 +5875,7 @@ func (x *NetInfoResponse_Peer_ConnectionStatus) String() string {
 func (*NetInfoResponse_Peer_ConnectionStatus) ProtoMessage() {}
 
 func (x *NetInfoResponse_Peer_ConnectionStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[80]
+	mi := &file_resources_proto_msgTypes[85]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5587,7 +5942,7 @@ type NetInfoResponse_Peer_ConnectionStatus_Monitor struct {
 func (x *NetInfoResponse_Peer_ConnectionStatus_Monitor) Reset() {
 	*x = NetInfoResponse_Peer_ConnectionStatus_Monitor{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[81]
+		mi := &file_resources_proto_msgTypes[86]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5600,7 +5955,7 @@ func (x *NetInfoResponse_Peer_ConnectionStatus_Monitor) String() string {
 func (*NetInfoResponse_Peer_ConnectionStatus_Monitor) ProtoMessage() {}
 
 func (x *NetInfoResponse_Peer_ConnectionStatus_Monitor) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[81]
+	mi := &file_resources_proto_msgTypes[86]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5722,7 +6077,7 @@ type NetInfoResponse_Peer_ConnectionStatus_Channel struct {
 func (x *NetInfoResponse_Peer_ConnectionStatus_Channel) Reset() {
 	*x = NetInfoResponse_Peer_ConnectionStatus_Channel{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[82]
+		mi := &file_resources_proto_msgTypes[87]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5735,7 +6090,7 @@ func (x *NetInfoResponse_Peer_ConnectionStatus_Channel) String() string {
 func (*NetInfoResponse_Peer_ConnectionStatus_Channel) ProtoMessage() {}
 
 func (x *NetInfoResponse_Peer_ConnectionStatus_Channel) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[82]
+	mi := &file_resources_proto_msgTypes[87]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5799,7 +6154,7 @@ type GenesisResponse_ConsensusParams struct {
 func (x *GenesisResponse_ConsensusParams) Reset() {
 	*x = GenesisResponse_ConsensusParams{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[83]
+		mi := &file_resources_proto_msgTypes[88]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5812,7 +6167,7 @@ func (x *GenesisResponse_ConsensusParams) String() string {
 func (*GenesisResponse_ConsensusParams) ProtoMessage() {}
 
 func (x *GenesisResponse_ConsensusParams) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[83]
+	mi := &file_resources_proto_msgTypes[88]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5871,7 +6226,7 @@ type GenesisResponse_AppState struct {
 func (x *GenesisResponse_AppState) Reset() {
 	*x = GenesisResponse_AppState{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[84]
+		mi := &file_resources_proto_msgTypes[89]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5884,7 +6239,7 @@ func (x *GenesisResponse_AppState) String() string {
 func (*GenesisResponse_AppState) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[84]
+	mi := &file_resources_proto_msgTypes[89]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5997,7 +6352,7 @@ type GenesisResponse_ConsensusParams_Block struct {
 func (x *GenesisResponse_ConsensusParams_Block) Reset() {
 	*x = GenesisResponse_ConsensusParams_Block{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[85]
+		mi := &file_resources_proto_msgTypes[90]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6010,7 +6365,7 @@ func (x *GenesisResponse_ConsensusParams_Block) String() string {
 func (*GenesisResponse_ConsensusParams_Block) ProtoMessage() {}
 
 func (x *GenesisResponse_ConsensusParams_Block) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[85]
+	mi := &file_resources_proto_msgTypes[90]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6059,7 +6414,7 @@ type GenesisResponse_ConsensusParams_Evidence struct {
 func (x *GenesisResponse_ConsensusParams_Evidence) Reset() {
 	*x = GenesisResponse_ConsensusParams_Evidence{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[86]
+		mi := &file_resources_proto_msgTypes[91]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6072,7 +6427,7 @@ func (x *GenesisResponse_ConsensusParams_Evidence) String() string {
 func (*GenesisResponse_ConsensusParams_Evidence) ProtoMessage() {}
 
 func (x *GenesisResponse_ConsensusParams_Evidence) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[86]
+	mi := &file_resources_proto_msgTypes[91]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6113,7 +6468,7 @@ type GenesisResponse_ConsensusParams_Validator struct {
 func (x *GenesisResponse_ConsensusParams_Validator) Reset() {
 	*x = GenesisResponse_ConsensusParams_Validator{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[87]
+		mi := &file_resources_proto_msgTypes[92]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6126,7 +6481,7 @@ func (x *GenesisResponse_ConsensusParams_Validator) String() string {
 func (*GenesisResponse_ConsensusParams_Validator) ProtoMessage() {}
 
 func (x *GenesisResponse_ConsensusParams_Validator) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[87]
+	mi := &file_resources_proto_msgTypes[92]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6163,7 +6518,7 @@ type GenesisResponse_AppState_Validators struct {
 func (x *GenesisResponse_AppState_Validators) Reset() {
 	*x = GenesisResponse_AppState_Validators{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[88]
+		mi := &file_resources_proto_msgTypes[93]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6176,7 +6531,7 @@ func (x *GenesisResponse_AppState_Validators) String() string {
 func (*GenesisResponse_AppState_Validators) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Validators) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[88]
+	mi := &file_resources_proto_msgTypes[93]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6240,7 +6595,7 @@ type GenesisResponse_AppState_Candidate struct {
 func (x *GenesisResponse_AppState_Candidate) Reset() {
 	*x = GenesisResponse_AppState_Candidate{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[89]
+		mi := &file_resources_proto_msgTypes[94]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6253,7 +6608,7 @@ func (x *GenesisResponse_AppState_Candidate) String() string {
 func (*GenesisResponse_AppState_Candidate) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Candidate) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[89]
+	mi := &file_resources_proto_msgTypes[94]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6358,7 +6713,7 @@ type GenesisResponse_AppState_Coin struct {
 func (x *GenesisResponse_AppState_Coin) Reset() {
 	*x = GenesisResponse_AppState_Coin{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[90]
+		mi := &file_resources_proto_msgTypes[95]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6371,7 +6726,7 @@ func (x *GenesisResponse_AppState_Coin) String() string {
 func (*GenesisResponse_AppState_Coin) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Coin) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[90]
+	mi := &file_resources_proto_msgTypes[95]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6466,7 +6821,7 @@ type GenesisResponse_AppState_FrozenFund struct {
 func (x *GenesisResponse_AppState_FrozenFund) Reset() {
 	*x = GenesisResponse_AppState_FrozenFund{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[91]
+		mi := &file_resources_proto_msgTypes[96]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6479,7 +6834,7 @@ func (x *GenesisResponse_AppState_FrozenFund) String() string {
 func (*GenesisResponse_AppState_FrozenFund) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_FrozenFund) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[91]
+	mi := &file_resources_proto_msgTypes[96]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6551,7 +6906,7 @@ type GenesisResponse_AppState_Waitlist struct {
 func (x *GenesisResponse_AppState_Waitlist) Reset() {
 	*x = GenesisResponse_AppState_Waitlist{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[92]
+		mi := &file_resources_proto_msgTypes[97]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6564,7 +6919,7 @@ func (x *GenesisResponse_AppState_Waitlist) String() string {
 func (*GenesisResponse_AppState_Waitlist) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Waitlist) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[92]
+	mi := &file_resources_proto_msgTypes[97]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6622,7 +6977,7 @@ type GenesisResponse_AppState_Account struct {
 func (x *GenesisResponse_AppState_Account) Reset() {
 	*x = GenesisResponse_AppState_Account{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[93]
+		mi := &file_resources_proto_msgTypes[98]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6635,7 +6990,7 @@ func (x *GenesisResponse_AppState_Account) String() string {
 func (*GenesisResponse_AppState_Account) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Account) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[93]
+	mi := &file_resources_proto_msgTypes[98]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6691,7 +7046,7 @@ type GenesisResponse_AppState_HaltBlock struct {
 func (x *GenesisResponse_AppState_HaltBlock) Reset() {
 	*x = GenesisResponse_AppState_HaltBlock{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[94]
+		mi := &file_resources_proto_msgTypes[99]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6704,7 +7059,7 @@ func (x *GenesisResponse_AppState_HaltBlock) String() string {
 func (*GenesisResponse_AppState_HaltBlock) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_HaltBlock) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[94]
+	mi := &file_resources_proto_msgTypes[99]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6748,7 +7103,7 @@ type GenesisResponse_AppState_Candidate_Stake struct {
 func (x *GenesisResponse_AppState_Candidate_Stake) Reset() {
 	*x = GenesisResponse_AppState_Candidate_Stake{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[95]
+		mi := &file_resources_proto_msgTypes[100]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6761,7 +7116,7 @@ func (x *GenesisResponse_AppState_Candidate_Stake) String() string {
 func (*GenesisResponse_AppState_Candidate_Stake) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Candidate_Stake) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[95]
+	mi := &file_resources_proto_msgTypes[100]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6817,7 +7172,7 @@ type GenesisResponse_AppState_Account_Balance struct {
 func (x *GenesisResponse_AppState_Account_Balance) Reset() {
 	*x = GenesisResponse_AppState_Account_Balance{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[96]
+		mi := &file_resources_proto_msgTypes[101]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6830,7 +7185,7 @@ func (x *GenesisResponse_AppState_Account_Balance) String() string {
 func (*GenesisResponse_AppState_Account_Balance) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Account_Balance) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[96]
+	mi := &file_resources_proto_msgTypes[101]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6873,7 +7228,7 @@ type GenesisResponse_AppState_Account_MultisigData struct {
 func (x *GenesisResponse_AppState_Account_MultisigData) Reset() {
 	*x = GenesisResponse_AppState_Account_MultisigData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[97]
+		mi := &file_resources_proto_msgTypes[102]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6886,7 +7241,7 @@ func (x *GenesisResponse_AppState_Account_MultisigData) String() string {
 func (*GenesisResponse_AppState_Account_MultisigData) ProtoMessage() {}
 
 func (x *GenesisResponse_AppState_Account_MultisigData) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[97]
+	mi := &file_resources_proto_msgTypes[102]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6947,7 +7302,7 @@ type BlockResponse_Transaction struct {
 func (x *BlockResponse_Transaction) Reset() {
 	*x = BlockResponse_Transaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[98]
+		mi := &file_resources_proto_msgTypes[103]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6960,7 +7315,7 @@ func (x *BlockResponse_Transaction) String() string {
 func (*BlockResponse_Transaction) ProtoMessage() {}
 
 func (x *BlockResponse_Transaction) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[98]
+	mi := &file_resources_proto_msgTypes[103]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7086,7 +7441,7 @@ type BlockResponse_Validator struct {
 func (x *BlockResponse_Validator) Reset() {
 	*x = BlockResponse_Validator{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[99]
+		mi := &file_resources_proto_msgTypes[104]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7099,7 +7454,7 @@ func (x *BlockResponse_Validator) String() string {
 func (*BlockResponse_Validator) ProtoMessage() {}
 
 func (x *BlockResponse_Validator) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[99]
+	mi := &file_resources_proto_msgTypes[104]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7140,7 +7495,7 @@ type BlockResponse_Evidence struct {
 func (x *BlockResponse_Evidence) Reset() {
 	*x = BlockResponse_Evidence{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[100]
+		mi := &file_resources_proto_msgTypes[105]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7153,7 +7508,7 @@ func (x *BlockResponse_Evidence) String() string {
 func (*BlockResponse_Evidence) ProtoMessage() {}
 
 func (x *BlockResponse_Evidence) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[100]
+	mi := &file_resources_proto_msgTypes[105]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7193,7 +7548,7 @@ type AddressesResponse_Result struct {
 func (x *AddressesResponse_Result) Reset() {
 	*x = AddressesResponse_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[102]
+		mi := &file_resources_proto_msgTypes[107]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7206,7 +7561,7 @@ func (x *AddressesResponse_Result) String() string {
 func (*AddressesResponse_Result) ProtoMessage() {}
 
 func (x *AddressesResponse_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[102]
+	mi := &file_resources_proto_msgTypes[107]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7271,7 +7626,7 @@ type CandidateResponse_Stake struct {
 func (x *CandidateResponse_Stake) Reset() {
 	*x = CandidateResponse_Stake{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[104]
+		mi := &file_resources_proto_msgTypes[109]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7284,7 +7639,7 @@ func (x *CandidateResponse_Stake) String() string {
 func (*CandidateResponse_Stake) ProtoMessage() {}
 
 func (x *CandidateResponse_Stake) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[104]
+	mi := &file_resources_proto_msgTypes[109]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7340,7 +7695,7 @@ type ValidatorsResponse_Result struct {
 func (x *ValidatorsResponse_Result) Reset() {
 	*x = ValidatorsResponse_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[106]
+		mi := &file_resources_proto_msgTypes[111]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7353,7 +7708,7 @@ func (x *ValidatorsResponse_Result) String() string {
 func (*ValidatorsResponse_Result) ProtoMessage() {}
 
 func (x *ValidatorsResponse_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[106]
+	mi := &file_resources_proto_msgTypes[111]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7395,7 +7750,7 @@ type SubscribeResponse_Event struct {
 func (x *SubscribeResponse_Event) Reset() {
 	*x = SubscribeResponse_Event{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[107]
+		mi := &file_resources_proto_msgTypes[112]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7408,7 +7763,7 @@ func (x *SubscribeResponse_Event) String() string {
 func (*SubscribeResponse_Event) ProtoMessage() {}
 
 func (x *SubscribeResponse_Event) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[107]
+	mi := &file_resources_proto_msgTypes[112]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7453,7 +7808,7 @@ type FrozenResponse_Frozen struct {
 func (x *FrozenResponse_Frozen) Reset() {
 	*x = FrozenResponse_Frozen{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[108]
+		mi := &file_resources_proto_msgTypes[113]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7466,7 +7821,7 @@ func (x *FrozenResponse_Frozen) String() string {
 func (*FrozenResponse_Frozen) ProtoMessage() {}
 
 func (x *FrozenResponse_Frozen) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[108]
+	mi := &file_resources_proto_msgTypes[113]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7530,7 +7885,7 @@ type WaitListResponse_Wait struct {
 func (x *WaitListResponse_Wait) Reset() {
 	*x = WaitListResponse_Wait{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_resources_proto_msgTypes[109]
+		mi := &file_resources_proto_msgTypes[114]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7543,7 +7898,7 @@ func (x *WaitListResponse_Wait) String() string {
 func (*WaitListResponse_Wait) ProtoMessage() {}
 
 func (x *WaitListResponse_Wait) ProtoReflect() protoreflect.Message {
-	mi := &file_resources_proto_msgTypes[109]
+	mi := &file_resources_proto_msgTypes[114]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8641,9 +8996,69 @@ var file_resources_proto_rawDesc = []byte{
 	0x44, 0x61, 0x74, 0x61, 0x12, 0x17, 0x0a, 0x07, 0x70, 0x75, 0x62, 0x5f, 0x6b, 0x65, 0x79, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x70, 0x75, 0x62, 0x4b, 0x65, 0x79, 0x12, 0x1e, 0x0a,
 	0x0b, 0x6e, 0x65, 0x77, 0x5f, 0x70, 0x75, 0x62, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x09, 0x6e, 0x65, 0x77, 0x50, 0x75, 0x62, 0x4b, 0x65, 0x79, 0x42, 0x0a, 0x5a,
-	0x08, 0x2e, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x28, 0x09, 0x52, 0x09, 0x6e, 0x65, 0x77, 0x50, 0x75, 0x62, 0x4b, 0x65, 0x79, 0x22, 0x94, 0x01,
+	0x0a, 0x0f, 0x41, 0x64, 0x64, 0x53, 0x77, 0x61, 0x70, 0x50, 0x6f, 0x6f, 0x6c, 0x44, 0x61, 0x74,
+	0x61, 0x12, 0x22, 0x0a, 0x05, 0x63, 0x6f, 0x69, 0x6e, 0x30, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x05,
+	0x63, 0x6f, 0x69, 0x6e, 0x30, 0x12, 0x22, 0x0a, 0x05, 0x63, 0x6f, 0x69, 0x6e, 0x31, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f,
+	0x69, 0x6e, 0x52, 0x05, 0x63, 0x6f, 0x69, 0x6e, 0x31, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x6f, 0x6c,
+	0x75, 0x6d, 0x65, 0x30, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x6f, 0x6c, 0x75,
+	0x6d, 0x65, 0x30, 0x12, 0x1f, 0x0a, 0x0b, 0x6d, 0x61, 0x78, 0x5f, 0x76, 0x6f, 0x6c, 0x75, 0x6d,
+	0x65, 0x31, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x6d, 0x61, 0x78, 0x56, 0x6f, 0x6c,
+	0x75, 0x6d, 0x65, 0x31, 0x22, 0xf8, 0x01, 0x0a, 0x12, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x53,
+	0x77, 0x61, 0x70, 0x50, 0x6f, 0x6f, 0x6c, 0x44, 0x61, 0x74, 0x61, 0x12, 0x22, 0x0a, 0x05, 0x63,
+	0x6f, 0x69, 0x6e, 0x30, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69,
+	0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x05, 0x63, 0x6f, 0x69, 0x6e, 0x30, 0x12,
+	0x22, 0x0a, 0x05, 0x63, 0x6f, 0x69, 0x6e, 0x31, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c,
+	0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x05, 0x63, 0x6f,
+	0x69, 0x6e, 0x31, 0x12, 0x1c, 0x0a, 0x09, 0x6c, 0x69, 0x71, 0x75, 0x69, 0x64, 0x69, 0x74, 0x79,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6c, 0x69, 0x71, 0x75, 0x69, 0x64, 0x69, 0x74,
+	0x79, 0x12, 0x3d, 0x0a, 0x0b, 0x6d, 0x69, 0x6e, 0x5f, 0x76, 0x6f, 0x6c, 0x75, 0x6d, 0x65, 0x30,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56,
+	0x61, 0x6c, 0x75, 0x65, 0x52, 0x0a, 0x6d, 0x69, 0x6e, 0x56, 0x6f, 0x6c, 0x75, 0x6d, 0x65, 0x30,
+	0x12, 0x3d, 0x0a, 0x0b, 0x6d, 0x69, 0x6e, 0x5f, 0x76, 0x6f, 0x6c, 0x75, 0x6d, 0x65, 0x31, 0x18,
+	0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56, 0x61,
+	0x6c, 0x75, 0x65, 0x52, 0x0a, 0x6d, 0x69, 0x6e, 0x56, 0x6f, 0x6c, 0x75, 0x6d, 0x65, 0x31, 0x22,
+	0xc5, 0x01, 0x0a, 0x10, 0x53, 0x65, 0x6c, 0x6c, 0x53, 0x77, 0x61, 0x70, 0x50, 0x6f, 0x6f, 0x6c,
+	0x44, 0x61, 0x74, 0x61, 0x12, 0x2e, 0x0a, 0x0c, 0x63, 0x6f, 0x69, 0x6e, 0x5f, 0x74, 0x6f, 0x5f,
+	0x73, 0x65, 0x6c, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69,
+	0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x0a, 0x63, 0x6f, 0x69, 0x6e, 0x54, 0x6f,
+	0x53, 0x65, 0x6c, 0x6c, 0x12, 0x22, 0x0a, 0x0d, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x6f,
+	0x5f, 0x73, 0x65, 0x6c, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x76, 0x61, 0x6c,
+	0x75, 0x65, 0x54, 0x6f, 0x53, 0x65, 0x6c, 0x6c, 0x12, 0x2c, 0x0a, 0x0b, 0x63, 0x6f, 0x69, 0x6e,
+	0x5f, 0x74, 0x6f, 0x5f, 0x62, 0x75, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e,
+	0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x09, 0x63, 0x6f, 0x69,
+	0x6e, 0x54, 0x6f, 0x42, 0x75, 0x79, 0x12, 0x2f, 0x0a, 0x14, 0x6d, 0x69, 0x6e, 0x69, 0x6d, 0x75,
+	0x6d, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x6f, 0x5f, 0x62, 0x75, 0x79, 0x18, 0x04,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x11, 0x6d, 0x69, 0x6e, 0x69, 0x6d, 0x75, 0x6d, 0x56, 0x61, 0x6c,
+	0x75, 0x65, 0x54, 0x6f, 0x42, 0x75, 0x79, 0x22, 0xa4, 0x01, 0x0a, 0x13, 0x53, 0x65, 0x6c, 0x6c,
+	0x41, 0x6c, 0x6c, 0x53, 0x77, 0x61, 0x70, 0x50, 0x6f, 0x6f, 0x6c, 0x44, 0x61, 0x74, 0x61, 0x12,
+	0x2e, 0x0a, 0x0c, 0x63, 0x6f, 0x69, 0x6e, 0x5f, 0x74, 0x6f, 0x5f, 0x73, 0x65, 0x6c, 0x6c, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43,
+	0x6f, 0x69, 0x6e, 0x52, 0x0a, 0x63, 0x6f, 0x69, 0x6e, 0x54, 0x6f, 0x53, 0x65, 0x6c, 0x6c, 0x12,
+	0x2c, 0x0a, 0x0b, 0x63, 0x6f, 0x69, 0x6e, 0x5f, 0x74, 0x6f, 0x5f, 0x62, 0x75, 0x79, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x43, 0x6f,
+	0x69, 0x6e, 0x52, 0x09, 0x63, 0x6f, 0x69, 0x6e, 0x54, 0x6f, 0x42, 0x75, 0x79, 0x12, 0x2f, 0x0a,
+	0x14, 0x6d, 0x69, 0x6e, 0x69, 0x6d, 0x75, 0x6d, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74,
+	0x6f, 0x5f, 0x62, 0x75, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x11, 0x6d, 0x69, 0x6e,
+	0x69, 0x6d, 0x75, 0x6d, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x54, 0x6f, 0x42, 0x75, 0x79, 0x22, 0xc4,
+	0x01, 0x0a, 0x0f, 0x42, 0x75, 0x79, 0x53, 0x77, 0x61, 0x70, 0x50, 0x6f, 0x6f, 0x6c, 0x44, 0x61,
+	0x74, 0x61, 0x12, 0x2c, 0x0a, 0x0b, 0x63, 0x6f, 0x69, 0x6e, 0x5f, 0x74, 0x6f, 0x5f, 0x62, 0x75,
+	0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62,
+	0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x09, 0x63, 0x6f, 0x69, 0x6e, 0x54, 0x6f, 0x42, 0x75, 0x79,
+	0x12, 0x20, 0x0a, 0x0c, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x6f, 0x5f, 0x62, 0x75, 0x79,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x54, 0x6f, 0x42,
+	0x75, 0x79, 0x12, 0x2e, 0x0a, 0x0c, 0x63, 0x6f, 0x69, 0x6e, 0x5f, 0x74, 0x6f, 0x5f, 0x73, 0x65,
+	0x6c, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70,
+	0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x0a, 0x63, 0x6f, 0x69, 0x6e, 0x54, 0x6f, 0x53, 0x65,
+	0x6c, 0x6c, 0x12, 0x31, 0x0a, 0x15, 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x75, 0x6d, 0x5f, 0x76, 0x61,
+	0x6c, 0x75, 0x65, 0x5f, 0x74, 0x6f, 0x5f, 0x73, 0x65, 0x6c, 0x6c, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x12, 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x75, 0x6d, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x54,
+	0x6f, 0x53, 0x65, 0x6c, 0x6c, 0x42, 0x0a, 0x5a, 0x08, 0x2e, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70,
+	0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -8659,7 +9074,7 @@ func file_resources_proto_rawDescGZIP() []byte {
 }
 
 var file_resources_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_resources_proto_msgTypes = make([]protoimpl.MessageInfo, 110)
+var file_resources_proto_msgTypes = make([]protoimpl.MessageInfo, 115)
 var file_resources_proto_goTypes = []interface{}{
 	(BlockRequest_Field)(0),                               // 0: api_pb.BlockRequest.Field
 	(CandidatesRequest_CandidateStatus)(0),                // 1: api_pb.CandidatesRequest.CandidateStatus
@@ -8740,79 +9155,84 @@ var file_resources_proto_goTypes = []interface{}{
 	(*EditMultisigData)(nil),                              // 76: api_pb.EditMultisigData
 	(*PriceVoteData)(nil),                                 // 77: api_pb.PriceVoteData
 	(*EditCandidatePublicKeyData)(nil),                    // 78: api_pb.EditCandidatePublicKeyData
-	(*NodeInfo_ProtocolVersion)(nil),                      // 79: api_pb.NodeInfo.ProtocolVersion
-	(*NodeInfo_Other)(nil),                                // 80: api_pb.NodeInfo.Other
-	(*NetInfoResponse_Peer)(nil),                          // 81: api_pb.NetInfoResponse.Peer
-	(*NetInfoResponse_Peer_ConnectionStatus)(nil),         // 82: api_pb.NetInfoResponse.Peer.ConnectionStatus
-	(*NetInfoResponse_Peer_ConnectionStatus_Monitor)(nil), // 83: api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
-	(*NetInfoResponse_Peer_ConnectionStatus_Channel)(nil), // 84: api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel
-	(*GenesisResponse_ConsensusParams)(nil),               // 85: api_pb.GenesisResponse.ConsensusParams
-	(*GenesisResponse_AppState)(nil),                      // 86: api_pb.GenesisResponse.AppState
-	(*GenesisResponse_ConsensusParams_Block)(nil),         // 87: api_pb.GenesisResponse.ConsensusParams.Block
-	(*GenesisResponse_ConsensusParams_Evidence)(nil),      // 88: api_pb.GenesisResponse.ConsensusParams.Evidence
-	(*GenesisResponse_ConsensusParams_Validator)(nil),     // 89: api_pb.GenesisResponse.ConsensusParams.Validator
-	(*GenesisResponse_AppState_Validators)(nil),           // 90: api_pb.GenesisResponse.AppState.Validators
-	(*GenesisResponse_AppState_Candidate)(nil),            // 91: api_pb.GenesisResponse.AppState.Candidate
-	(*GenesisResponse_AppState_Coin)(nil),                 // 92: api_pb.GenesisResponse.AppState.Coin
-	(*GenesisResponse_AppState_FrozenFund)(nil),           // 93: api_pb.GenesisResponse.AppState.FrozenFund
-	(*GenesisResponse_AppState_Waitlist)(nil),             // 94: api_pb.GenesisResponse.AppState.Waitlist
-	(*GenesisResponse_AppState_Account)(nil),              // 95: api_pb.GenesisResponse.AppState.Account
-	(*GenesisResponse_AppState_HaltBlock)(nil),            // 96: api_pb.GenesisResponse.AppState.HaltBlock
-	(*GenesisResponse_AppState_Candidate_Stake)(nil),      // 97: api_pb.GenesisResponse.AppState.Candidate.Stake
-	(*GenesisResponse_AppState_Account_Balance)(nil),      // 98: api_pb.GenesisResponse.AppState.Account.Balance
-	(*GenesisResponse_AppState_Account_MultisigData)(nil), // 99: api_pb.GenesisResponse.AppState.Account.MultisigData
-	(*BlockResponse_Transaction)(nil),                     // 100: api_pb.BlockResponse.Transaction
-	(*BlockResponse_Validator)(nil),                       // 101: api_pb.BlockResponse.Validator
-	(*BlockResponse_Evidence)(nil),                        // 102: api_pb.BlockResponse.Evidence
-	nil,                                                   // 103: api_pb.BlockResponse.Transaction.TagsEntry
-	(*AddressesResponse_Result)(nil),                      // 104: api_pb.AddressesResponse.Result
-	nil,                                                   // 105: api_pb.AddressesResponse.AddressesEntry
-	(*CandidateResponse_Stake)(nil),                       // 106: api_pb.CandidateResponse.Stake
-	nil,                                                   // 107: api_pb.TransactionResponse.TagsEntry
-	(*ValidatorsResponse_Result)(nil),                     // 108: api_pb.ValidatorsResponse.Result
-	(*SubscribeResponse_Event)(nil),                       // 109: api_pb.SubscribeResponse.Event
-	(*FrozenResponse_Frozen)(nil),                         // 110: api_pb.FrozenResponse.Frozen
-	(*WaitListResponse_Wait)(nil),                         // 111: api_pb.WaitListResponse.Wait
-	(*wrapperspb.UInt64Value)(nil),                        // 112: google.protobuf.UInt64Value
-	(*wrapperspb.StringValue)(nil),                        // 113: google.protobuf.StringValue
-	(*anypb.Any)(nil),                                     // 114: google.protobuf.Any
-	(*structpb.Struct)(nil),                               // 115: google.protobuf.Struct
+	(*AddSwapPoolData)(nil),                               // 79: api_pb.AddSwapPoolData
+	(*RemoveSwapPoolData)(nil),                            // 80: api_pb.RemoveSwapPoolData
+	(*SellSwapPoolData)(nil),                              // 81: api_pb.SellSwapPoolData
+	(*SellAllSwapPoolData)(nil),                           // 82: api_pb.SellAllSwapPoolData
+	(*BuySwapPoolData)(nil),                               // 83: api_pb.BuySwapPoolData
+	(*NodeInfo_ProtocolVersion)(nil),                      // 84: api_pb.NodeInfo.ProtocolVersion
+	(*NodeInfo_Other)(nil),                                // 85: api_pb.NodeInfo.Other
+	(*NetInfoResponse_Peer)(nil),                          // 86: api_pb.NetInfoResponse.Peer
+	(*NetInfoResponse_Peer_ConnectionStatus)(nil),         // 87: api_pb.NetInfoResponse.Peer.ConnectionStatus
+	(*NetInfoResponse_Peer_ConnectionStatus_Monitor)(nil), // 88: api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
+	(*NetInfoResponse_Peer_ConnectionStatus_Channel)(nil), // 89: api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel
+	(*GenesisResponse_ConsensusParams)(nil),               // 90: api_pb.GenesisResponse.ConsensusParams
+	(*GenesisResponse_AppState)(nil),                      // 91: api_pb.GenesisResponse.AppState
+	(*GenesisResponse_ConsensusParams_Block)(nil),         // 92: api_pb.GenesisResponse.ConsensusParams.Block
+	(*GenesisResponse_ConsensusParams_Evidence)(nil),      // 93: api_pb.GenesisResponse.ConsensusParams.Evidence
+	(*GenesisResponse_ConsensusParams_Validator)(nil),     // 94: api_pb.GenesisResponse.ConsensusParams.Validator
+	(*GenesisResponse_AppState_Validators)(nil),           // 95: api_pb.GenesisResponse.AppState.Validators
+	(*GenesisResponse_AppState_Candidate)(nil),            // 96: api_pb.GenesisResponse.AppState.Candidate
+	(*GenesisResponse_AppState_Coin)(nil),                 // 97: api_pb.GenesisResponse.AppState.Coin
+	(*GenesisResponse_AppState_FrozenFund)(nil),           // 98: api_pb.GenesisResponse.AppState.FrozenFund
+	(*GenesisResponse_AppState_Waitlist)(nil),             // 99: api_pb.GenesisResponse.AppState.Waitlist
+	(*GenesisResponse_AppState_Account)(nil),              // 100: api_pb.GenesisResponse.AppState.Account
+	(*GenesisResponse_AppState_HaltBlock)(nil),            // 101: api_pb.GenesisResponse.AppState.HaltBlock
+	(*GenesisResponse_AppState_Candidate_Stake)(nil),      // 102: api_pb.GenesisResponse.AppState.Candidate.Stake
+	(*GenesisResponse_AppState_Account_Balance)(nil),      // 103: api_pb.GenesisResponse.AppState.Account.Balance
+	(*GenesisResponse_AppState_Account_MultisigData)(nil), // 104: api_pb.GenesisResponse.AppState.Account.MultisigData
+	(*BlockResponse_Transaction)(nil),                     // 105: api_pb.BlockResponse.Transaction
+	(*BlockResponse_Validator)(nil),                       // 106: api_pb.BlockResponse.Validator
+	(*BlockResponse_Evidence)(nil),                        // 107: api_pb.BlockResponse.Evidence
+	nil,                                                   // 108: api_pb.BlockResponse.Transaction.TagsEntry
+	(*AddressesResponse_Result)(nil),                      // 109: api_pb.AddressesResponse.Result
+	nil,                                                   // 110: api_pb.AddressesResponse.AddressesEntry
+	(*CandidateResponse_Stake)(nil),                       // 111: api_pb.CandidateResponse.Stake
+	nil,                                                   // 112: api_pb.TransactionResponse.TagsEntry
+	(*ValidatorsResponse_Result)(nil),                     // 113: api_pb.ValidatorsResponse.Result
+	(*SubscribeResponse_Event)(nil),                       // 114: api_pb.SubscribeResponse.Event
+	(*FrozenResponse_Frozen)(nil),                         // 115: api_pb.FrozenResponse.Frozen
+	(*WaitListResponse_Wait)(nil),                         // 116: api_pb.WaitListResponse.Wait
+	(*wrapperspb.UInt64Value)(nil),                        // 117: google.protobuf.UInt64Value
+	(*wrapperspb.StringValue)(nil),                        // 118: google.protobuf.StringValue
+	(*anypb.Any)(nil),                                     // 119: google.protobuf.Any
+	(*structpb.Struct)(nil),                               // 120: google.protobuf.Struct
 }
 var file_resources_proto_depIdxs = []int32{
-	79,  // 0: api_pb.NodeInfo.protocol_version:type_name -> api_pb.NodeInfo.ProtocolVersion
-	80,  // 1: api_pb.NodeInfo.other:type_name -> api_pb.NodeInfo.Other
-	81,  // 2: api_pb.NetInfoResponse.peers:type_name -> api_pb.NetInfoResponse.Peer
-	85,  // 3: api_pb.GenesisResponse.consensus_params:type_name -> api_pb.GenesisResponse.ConsensusParams
-	86,  // 4: api_pb.GenesisResponse.app_state:type_name -> api_pb.GenesisResponse.AppState
+	84,  // 0: api_pb.NodeInfo.protocol_version:type_name -> api_pb.NodeInfo.ProtocolVersion
+	85,  // 1: api_pb.NodeInfo.other:type_name -> api_pb.NodeInfo.Other
+	86,  // 2: api_pb.NetInfoResponse.peers:type_name -> api_pb.NetInfoResponse.Peer
+	90,  // 3: api_pb.GenesisResponse.consensus_params:type_name -> api_pb.GenesisResponse.ConsensusParams
+	91,  // 4: api_pb.GenesisResponse.app_state:type_name -> api_pb.GenesisResponse.AppState
 	0,   // 5: api_pb.BlockRequest.fields:type_name -> api_pb.BlockRequest.Field
-	100, // 6: api_pb.BlockResponse.transactions:type_name -> api_pb.BlockResponse.Transaction
-	101, // 7: api_pb.BlockResponse.validators:type_name -> api_pb.BlockResponse.Validator
-	102, // 8: api_pb.BlockResponse.evidence:type_name -> api_pb.BlockResponse.Evidence
+	105, // 6: api_pb.BlockResponse.transactions:type_name -> api_pb.BlockResponse.Transaction
+	106, // 7: api_pb.BlockResponse.validators:type_name -> api_pb.BlockResponse.Validator
+	107, // 8: api_pb.BlockResponse.evidence:type_name -> api_pb.BlockResponse.Evidence
 	2,   // 9: api_pb.AddressBalance.coin:type_name -> api_pb.Coin
 	2,   // 10: api_pb.AddressDelegatedBalance.coin:type_name -> api_pb.Coin
 	17,  // 11: api_pb.AddressResponse.balance:type_name -> api_pb.AddressBalance
 	18,  // 12: api_pb.AddressResponse.delegated:type_name -> api_pb.AddressDelegatedBalance
 	17,  // 13: api_pb.AddressResponse.total:type_name -> api_pb.AddressBalance
-	105, // 14: api_pb.AddressesResponse.addresses:type_name -> api_pb.AddressesResponse.AddressesEntry
-	112, // 15: api_pb.CandidateResponse.used_slots:type_name -> google.protobuf.UInt64Value
-	112, // 16: api_pb.CandidateResponse.uniq_users:type_name -> google.protobuf.UInt64Value
-	113, // 17: api_pb.CandidateResponse.min_stake:type_name -> google.protobuf.StringValue
-	106, // 18: api_pb.CandidateResponse.stakes:type_name -> api_pb.CandidateResponse.Stake
+	110, // 14: api_pb.AddressesResponse.addresses:type_name -> api_pb.AddressesResponse.AddressesEntry
+	117, // 15: api_pb.CandidateResponse.used_slots:type_name -> google.protobuf.UInt64Value
+	117, // 16: api_pb.CandidateResponse.uniq_users:type_name -> google.protobuf.UInt64Value
+	118, // 17: api_pb.CandidateResponse.min_stake:type_name -> google.protobuf.StringValue
+	111, // 18: api_pb.CandidateResponse.stakes:type_name -> api_pb.CandidateResponse.Stake
 	1,   // 19: api_pb.CandidatesRequest.status:type_name -> api_pb.CandidatesRequest.CandidateStatus
 	23,  // 20: api_pb.CandidatesResponse.candidates:type_name -> api_pb.CandidateResponse
-	113, // 21: api_pb.CoinInfoResponse.reserve_balance:type_name -> google.protobuf.StringValue
-	113, // 22: api_pb.CoinInfoResponse.owner_address:type_name -> google.protobuf.StringValue
+	118, // 21: api_pb.CoinInfoResponse.reserve_balance:type_name -> google.protobuf.StringValue
+	118, // 22: api_pb.CoinInfoResponse.owner_address:type_name -> google.protobuf.StringValue
 	2,   // 23: api_pb.TransactionResponse.gas_coin:type_name -> api_pb.Coin
-	114, // 24: api_pb.TransactionResponse.data:type_name -> google.protobuf.Any
-	107, // 25: api_pb.TransactionResponse.tags:type_name -> api_pb.TransactionResponse.TagsEntry
+	119, // 24: api_pb.TransactionResponse.data:type_name -> google.protobuf.Any
+	112, // 25: api_pb.TransactionResponse.tags:type_name -> api_pb.TransactionResponse.TagsEntry
 	31,  // 26: api_pb.TransactionsResponse.transactions:type_name -> api_pb.TransactionResponse
-	115, // 27: api_pb.EventsResponse.events:type_name -> google.protobuf.Struct
-	108, // 28: api_pb.ValidatorsResponse.validators:type_name -> api_pb.ValidatorsResponse.Result
-	115, // 29: api_pb.SubscribeResponse.data:type_name -> google.protobuf.Struct
-	109, // 30: api_pb.SubscribeResponse.events:type_name -> api_pb.SubscribeResponse.Event
-	112, // 31: api_pb.FrozenRequest.coin_id:type_name -> google.protobuf.UInt64Value
-	110, // 32: api_pb.FrozenResponse.frozen:type_name -> api_pb.FrozenResponse.Frozen
-	111, // 33: api_pb.WaitListResponse.list:type_name -> api_pb.WaitListResponse.Wait
+	120, // 27: api_pb.EventsResponse.events:type_name -> google.protobuf.Struct
+	113, // 28: api_pb.ValidatorsResponse.validators:type_name -> api_pb.ValidatorsResponse.Result
+	120, // 29: api_pb.SubscribeResponse.data:type_name -> google.protobuf.Struct
+	114, // 30: api_pb.SubscribeResponse.events:type_name -> api_pb.SubscribeResponse.Event
+	117, // 31: api_pb.FrozenRequest.coin_id:type_name -> google.protobuf.UInt64Value
+	115, // 32: api_pb.FrozenResponse.frozen:type_name -> api_pb.FrozenResponse.Frozen
+	116, // 33: api_pb.WaitListResponse.list:type_name -> api_pb.WaitListResponse.Wait
 	2,   // 34: api_pb.SendData.coin:type_name -> api_pb.Coin
 	2,   // 35: api_pb.SellCoinData.coin_to_sell:type_name -> api_pb.Coin
 	2,   // 36: api_pb.SellCoinData.coin_to_buy:type_name -> api_pb.Coin
@@ -8820,51 +9240,63 @@ var file_resources_proto_depIdxs = []int32{
 	2,   // 38: api_pb.SellAllCoinData.coin_to_buy:type_name -> api_pb.Coin
 	2,   // 39: api_pb.BuyCoinData.coin_to_buy:type_name -> api_pb.Coin
 	2,   // 40: api_pb.BuyCoinData.coin_to_sell:type_name -> api_pb.Coin
-	113, // 41: api_pb.CreateCoinData.initial_reserve:type_name -> google.protobuf.StringValue
+	118, // 41: api_pb.CreateCoinData.initial_reserve:type_name -> google.protobuf.StringValue
 	2,   // 42: api_pb.DeclareCandidacyData.coin:type_name -> api_pb.Coin
 	2,   // 43: api_pb.DelegateData.coin:type_name -> api_pb.Coin
 	2,   // 44: api_pb.UnbondData.coin:type_name -> api_pb.Coin
 	59,  // 45: api_pb.MultiSendData.list:type_name -> api_pb.SendData
-	113, // 46: api_pb.RecreateCoinData.initial_reserve:type_name -> google.protobuf.StringValue
-	112, // 47: api_pb.NetInfoResponse.Peer.latest_block_height:type_name -> google.protobuf.UInt64Value
-	7,   // 48: api_pb.NetInfoResponse.Peer.node_info:type_name -> api_pb.NodeInfo
-	82,  // 49: api_pb.NetInfoResponse.Peer.connection_status:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus
-	83,  // 50: api_pb.NetInfoResponse.Peer.ConnectionStatus.SendMonitor:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
-	83,  // 51: api_pb.NetInfoResponse.Peer.ConnectionStatus.RecvMonitor:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
-	84,  // 52: api_pb.NetInfoResponse.Peer.ConnectionStatus.channels:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel
-	87,  // 53: api_pb.GenesisResponse.ConsensusParams.block:type_name -> api_pb.GenesisResponse.ConsensusParams.Block
-	88,  // 54: api_pb.GenesisResponse.ConsensusParams.evidence:type_name -> api_pb.GenesisResponse.ConsensusParams.Evidence
-	89,  // 55: api_pb.GenesisResponse.ConsensusParams.validator:type_name -> api_pb.GenesisResponse.ConsensusParams.Validator
-	90,  // 56: api_pb.GenesisResponse.AppState.validators:type_name -> api_pb.GenesisResponse.AppState.Validators
-	91,  // 57: api_pb.GenesisResponse.AppState.candidates:type_name -> api_pb.GenesisResponse.AppState.Candidate
-	92,  // 58: api_pb.GenesisResponse.AppState.coins:type_name -> api_pb.GenesisResponse.AppState.Coin
-	93,  // 59: api_pb.GenesisResponse.AppState.frozen_funds:type_name -> api_pb.GenesisResponse.AppState.FrozenFund
-	94,  // 60: api_pb.GenesisResponse.AppState.waitlist:type_name -> api_pb.GenesisResponse.AppState.Waitlist
-	95,  // 61: api_pb.GenesisResponse.AppState.accounts:type_name -> api_pb.GenesisResponse.AppState.Account
-	96,  // 62: api_pb.GenesisResponse.AppState.halt_blocks:type_name -> api_pb.GenesisResponse.AppState.HaltBlock
-	97,  // 63: api_pb.GenesisResponse.AppState.Candidate.stakes:type_name -> api_pb.GenesisResponse.AppState.Candidate.Stake
-	97,  // 64: api_pb.GenesisResponse.AppState.Candidate.updates:type_name -> api_pb.GenesisResponse.AppState.Candidate.Stake
-	113, // 65: api_pb.GenesisResponse.AppState.Coin.reserve:type_name -> google.protobuf.StringValue
-	113, // 66: api_pb.GenesisResponse.AppState.Coin.owner_address:type_name -> google.protobuf.StringValue
-	113, // 67: api_pb.GenesisResponse.AppState.FrozenFund.candidate_key:type_name -> google.protobuf.StringValue
-	98,  // 68: api_pb.GenesisResponse.AppState.Account.balance:type_name -> api_pb.GenesisResponse.AppState.Account.Balance
-	99,  // 69: api_pb.GenesisResponse.AppState.Account.multisig_data:type_name -> api_pb.GenesisResponse.AppState.Account.MultisigData
-	114, // 70: api_pb.BlockResponse.Transaction.data:type_name -> google.protobuf.Any
-	2,   // 71: api_pb.BlockResponse.Transaction.gas_coin:type_name -> api_pb.Coin
-	103, // 72: api_pb.BlockResponse.Transaction.tags:type_name -> api_pb.BlockResponse.Transaction.TagsEntry
-	115, // 73: api_pb.BlockResponse.Evidence.evidence:type_name -> google.protobuf.Struct
-	17,  // 74: api_pb.AddressesResponse.Result.balance:type_name -> api_pb.AddressBalance
-	18,  // 75: api_pb.AddressesResponse.Result.delegated:type_name -> api_pb.AddressDelegatedBalance
-	17,  // 76: api_pb.AddressesResponse.Result.total:type_name -> api_pb.AddressBalance
-	104, // 77: api_pb.AddressesResponse.AddressesEntry.value:type_name -> api_pb.AddressesResponse.Result
-	2,   // 78: api_pb.CandidateResponse.Stake.coin:type_name -> api_pb.Coin
-	2,   // 79: api_pb.FrozenResponse.Frozen.coin:type_name -> api_pb.Coin
-	2,   // 80: api_pb.WaitListResponse.Wait.coin:type_name -> api_pb.Coin
-	81,  // [81:81] is the sub-list for method output_type
-	81,  // [81:81] is the sub-list for method input_type
-	81,  // [81:81] is the sub-list for extension type_name
-	81,  // [81:81] is the sub-list for extension extendee
-	0,   // [0:81] is the sub-list for field type_name
+	118, // 46: api_pb.RecreateCoinData.initial_reserve:type_name -> google.protobuf.StringValue
+	2,   // 47: api_pb.AddSwapPoolData.coin0:type_name -> api_pb.Coin
+	2,   // 48: api_pb.AddSwapPoolData.coin1:type_name -> api_pb.Coin
+	2,   // 49: api_pb.RemoveSwapPoolData.coin0:type_name -> api_pb.Coin
+	2,   // 50: api_pb.RemoveSwapPoolData.coin1:type_name -> api_pb.Coin
+	118, // 51: api_pb.RemoveSwapPoolData.min_volume0:type_name -> google.protobuf.StringValue
+	118, // 52: api_pb.RemoveSwapPoolData.min_volume1:type_name -> google.protobuf.StringValue
+	2,   // 53: api_pb.SellSwapPoolData.coin_to_sell:type_name -> api_pb.Coin
+	2,   // 54: api_pb.SellSwapPoolData.coin_to_buy:type_name -> api_pb.Coin
+	2,   // 55: api_pb.SellAllSwapPoolData.coin_to_sell:type_name -> api_pb.Coin
+	2,   // 56: api_pb.SellAllSwapPoolData.coin_to_buy:type_name -> api_pb.Coin
+	2,   // 57: api_pb.BuySwapPoolData.coin_to_buy:type_name -> api_pb.Coin
+	2,   // 58: api_pb.BuySwapPoolData.coin_to_sell:type_name -> api_pb.Coin
+	117, // 59: api_pb.NetInfoResponse.Peer.latest_block_height:type_name -> google.protobuf.UInt64Value
+	7,   // 60: api_pb.NetInfoResponse.Peer.node_info:type_name -> api_pb.NodeInfo
+	87,  // 61: api_pb.NetInfoResponse.Peer.connection_status:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus
+	88,  // 62: api_pb.NetInfoResponse.Peer.ConnectionStatus.SendMonitor:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
+	88,  // 63: api_pb.NetInfoResponse.Peer.ConnectionStatus.RecvMonitor:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor
+	89,  // 64: api_pb.NetInfoResponse.Peer.ConnectionStatus.channels:type_name -> api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel
+	92,  // 65: api_pb.GenesisResponse.ConsensusParams.block:type_name -> api_pb.GenesisResponse.ConsensusParams.Block
+	93,  // 66: api_pb.GenesisResponse.ConsensusParams.evidence:type_name -> api_pb.GenesisResponse.ConsensusParams.Evidence
+	94,  // 67: api_pb.GenesisResponse.ConsensusParams.validator:type_name -> api_pb.GenesisResponse.ConsensusParams.Validator
+	95,  // 68: api_pb.GenesisResponse.AppState.validators:type_name -> api_pb.GenesisResponse.AppState.Validators
+	96,  // 69: api_pb.GenesisResponse.AppState.candidates:type_name -> api_pb.GenesisResponse.AppState.Candidate
+	97,  // 70: api_pb.GenesisResponse.AppState.coins:type_name -> api_pb.GenesisResponse.AppState.Coin
+	98,  // 71: api_pb.GenesisResponse.AppState.frozen_funds:type_name -> api_pb.GenesisResponse.AppState.FrozenFund
+	99,  // 72: api_pb.GenesisResponse.AppState.waitlist:type_name -> api_pb.GenesisResponse.AppState.Waitlist
+	100, // 73: api_pb.GenesisResponse.AppState.accounts:type_name -> api_pb.GenesisResponse.AppState.Account
+	101, // 74: api_pb.GenesisResponse.AppState.halt_blocks:type_name -> api_pb.GenesisResponse.AppState.HaltBlock
+	102, // 75: api_pb.GenesisResponse.AppState.Candidate.stakes:type_name -> api_pb.GenesisResponse.AppState.Candidate.Stake
+	102, // 76: api_pb.GenesisResponse.AppState.Candidate.updates:type_name -> api_pb.GenesisResponse.AppState.Candidate.Stake
+	118, // 77: api_pb.GenesisResponse.AppState.Coin.reserve:type_name -> google.protobuf.StringValue
+	118, // 78: api_pb.GenesisResponse.AppState.Coin.owner_address:type_name -> google.protobuf.StringValue
+	118, // 79: api_pb.GenesisResponse.AppState.FrozenFund.candidate_key:type_name -> google.protobuf.StringValue
+	103, // 80: api_pb.GenesisResponse.AppState.Account.balance:type_name -> api_pb.GenesisResponse.AppState.Account.Balance
+	104, // 81: api_pb.GenesisResponse.AppState.Account.multisig_data:type_name -> api_pb.GenesisResponse.AppState.Account.MultisigData
+	119, // 82: api_pb.BlockResponse.Transaction.data:type_name -> google.protobuf.Any
+	2,   // 83: api_pb.BlockResponse.Transaction.gas_coin:type_name -> api_pb.Coin
+	108, // 84: api_pb.BlockResponse.Transaction.tags:type_name -> api_pb.BlockResponse.Transaction.TagsEntry
+	120, // 85: api_pb.BlockResponse.Evidence.evidence:type_name -> google.protobuf.Struct
+	17,  // 86: api_pb.AddressesResponse.Result.balance:type_name -> api_pb.AddressBalance
+	18,  // 87: api_pb.AddressesResponse.Result.delegated:type_name -> api_pb.AddressDelegatedBalance
+	17,  // 88: api_pb.AddressesResponse.Result.total:type_name -> api_pb.AddressBalance
+	109, // 89: api_pb.AddressesResponse.AddressesEntry.value:type_name -> api_pb.AddressesResponse.Result
+	2,   // 90: api_pb.CandidateResponse.Stake.coin:type_name -> api_pb.Coin
+	2,   // 91: api_pb.FrozenResponse.Frozen.coin:type_name -> api_pb.Coin
+	2,   // 92: api_pb.WaitListResponse.Wait.coin:type_name -> api_pb.Coin
+	93,  // [93:93] is the sub-list for method output_type
+	93,  // [93:93] is the sub-list for method input_type
+	93,  // [93:93] is the sub-list for extension type_name
+	93,  // [93:93] is the sub-list for extension extendee
+	0,   // [0:93] is the sub-list for field type_name
 }
 
 func init() { file_resources_proto_init() }
@@ -9798,7 +10230,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[77].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NodeInfo_ProtocolVersion); i {
+			switch v := v.(*AddSwapPoolData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9810,7 +10242,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[78].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NodeInfo_Other); i {
+			switch v := v.(*RemoveSwapPoolData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9822,7 +10254,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[79].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NetInfoResponse_Peer); i {
+			switch v := v.(*SellSwapPoolData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9834,7 +10266,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[80].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus); i {
+			switch v := v.(*SellAllSwapPoolData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9846,7 +10278,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[81].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus_Monitor); i {
+			switch v := v.(*BuySwapPoolData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9858,7 +10290,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[82].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus_Channel); i {
+			switch v := v.(*NodeInfo_ProtocolVersion); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9870,7 +10302,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[83].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_ConsensusParams); i {
+			switch v := v.(*NodeInfo_Other); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9882,7 +10314,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[84].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState); i {
+			switch v := v.(*NetInfoResponse_Peer); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9894,7 +10326,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[85].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_ConsensusParams_Block); i {
+			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9906,7 +10338,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[86].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_ConsensusParams_Evidence); i {
+			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus_Monitor); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9918,7 +10350,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[87].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_ConsensusParams_Validator); i {
+			switch v := v.(*NetInfoResponse_Peer_ConnectionStatus_Channel); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9930,7 +10362,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[88].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Validators); i {
+			switch v := v.(*GenesisResponse_ConsensusParams); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9942,7 +10374,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[89].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Candidate); i {
+			switch v := v.(*GenesisResponse_AppState); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9954,7 +10386,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[90].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Coin); i {
+			switch v := v.(*GenesisResponse_ConsensusParams_Block); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9966,7 +10398,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[91].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_FrozenFund); i {
+			switch v := v.(*GenesisResponse_ConsensusParams_Evidence); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9978,7 +10410,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[92].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Waitlist); i {
+			switch v := v.(*GenesisResponse_ConsensusParams_Validator); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -9990,7 +10422,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[93].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Account); i {
+			switch v := v.(*GenesisResponse_AppState_Validators); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10002,7 +10434,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[94].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_HaltBlock); i {
+			switch v := v.(*GenesisResponse_AppState_Candidate); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10014,7 +10446,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[95].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Candidate_Stake); i {
+			switch v := v.(*GenesisResponse_AppState_Coin); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10026,7 +10458,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[96].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Account_Balance); i {
+			switch v := v.(*GenesisResponse_AppState_FrozenFund); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10038,7 +10470,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[97].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenesisResponse_AppState_Account_MultisigData); i {
+			switch v := v.(*GenesisResponse_AppState_Waitlist); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10050,7 +10482,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[98].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BlockResponse_Transaction); i {
+			switch v := v.(*GenesisResponse_AppState_Account); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10062,7 +10494,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[99].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BlockResponse_Validator); i {
+			switch v := v.(*GenesisResponse_AppState_HaltBlock); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10074,7 +10506,19 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[100].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BlockResponse_Evidence); i {
+			switch v := v.(*GenesisResponse_AppState_Candidate_Stake); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[101].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GenesisResponse_AppState_Account_Balance); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10086,7 +10530,19 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[102].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AddressesResponse_Result); i {
+			switch v := v.(*GenesisResponse_AppState_Account_MultisigData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[103].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BlockResponse_Transaction); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10098,7 +10554,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[104].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CandidateResponse_Stake); i {
+			switch v := v.(*BlockResponse_Validator); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10109,8 +10565,8 @@ func file_resources_proto_init() {
 				return nil
 			}
 		}
-		file_resources_proto_msgTypes[106].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ValidatorsResponse_Result); i {
+		file_resources_proto_msgTypes[105].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BlockResponse_Evidence); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10122,19 +10578,7 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[107].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SubscribeResponse_Event); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_resources_proto_msgTypes[108].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FrozenResponse_Frozen); i {
+			switch v := v.(*AddressesResponse_Result); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -10146,6 +10590,54 @@ func file_resources_proto_init() {
 			}
 		}
 		file_resources_proto_msgTypes[109].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CandidateResponse_Stake); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[111].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ValidatorsResponse_Result); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[112].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SubscribeResponse_Event); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[113].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FrozenResponse_Frozen); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_resources_proto_msgTypes[114].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WaitListResponse_Wait); i {
 			case 0:
 				return &v.state
@@ -10182,7 +10674,7 @@ func file_resources_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_resources_proto_rawDesc,
 			NumEnums:      2,
-			NumMessages:   110,
+			NumMessages:   115,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
