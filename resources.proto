@@ -20,6 +20,9 @@ message Coin {
 message SwapPoolRequest {
     uint64 coin0 = 1;
     uint64 coin1 = 2;
+    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message SwapPoolResponse {
     string reserve0 = 1;
@@ -27,12 +30,15 @@ message SwapPoolResponse {
     string total_supply = 3;
 }
 
-message SwapPoolFromProviderRequest {
+message SwapPoolProviderRequest {
     uint64 coin0 = 1;
     uint64 coin1 = 2;
     string provider = 3;
+    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
-message SwapPoolFromProviderResponse {
+message SwapPoolProviderResponse {
     string amount0 = 1;
     string amount1 = 2;
     string balance = 3;

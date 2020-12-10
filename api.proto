@@ -282,10 +282,10 @@ service ApiService {
         };
     }
 
-    // SwapPoolFromProvider
+    // SwapPoolProvider
     //
     //
-    rpc SwapPoolFromProvider (SwapPoolFromProviderRequest) returns (SwapPoolFromProviderResponse) {
+    rpc SwapPoolProvider (SwapPoolProviderRequest) returns (SwapPoolProviderResponse) {
         option (google.api.http) = {
             get: "/swap_pool/{coin0}/{coin1}/{provider}"
         };
