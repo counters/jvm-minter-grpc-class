@@ -137,10 +137,10 @@ type ApiServiceClient interface {
 	//
 	//
 	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
-	// SwapPoolFromProvider
+	// SwapPoolProvider
 	//
 	//
-	SwapPoolFromProvider(ctx context.Context, in *SwapPoolFromProviderRequest, opts ...grpc.CallOption) (*SwapPoolFromProviderResponse, error)
+	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolProviderResponse, error)
 }
 
 type apiServiceClient struct {
@@ -435,9 +435,9 @@ func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, op
 	return out, nil
 }
 
-func (c *apiServiceClient) SwapPoolFromProvider(ctx context.Context, in *SwapPoolFromProviderRequest, opts ...grpc.CallOption) (*SwapPoolFromProviderResponse, error) {
-	out := new(SwapPoolFromProviderResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolFromProvider", in, out, opts...)
+func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolProviderResponse, error) {
+	out := new(SwapPoolProviderResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -567,10 +567,10 @@ type ApiServiceServer interface {
 	//
 	//
 	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
-	// SwapPoolFromProvider
+	// SwapPoolProvider
 	//
 	//
-	SwapPoolFromProvider(context.Context, *SwapPoolFromProviderRequest) (*SwapPoolFromProviderResponse, error)
+	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolProviderResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -665,8 +665,8 @@ func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) 
 func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
 }
-func (UnimplementedApiServiceServer) SwapPoolFromProvider(context.Context, *SwapPoolFromProviderRequest) (*SwapPoolFromProviderResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolFromProvider not implemented")
+func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolProviderResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1206,20 +1206,20 @@ func _ApiService_SwapPool_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_SwapPoolFromProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SwapPoolFromProviderRequest)
+func _ApiService_SwapPoolProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolProviderRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).SwapPoolFromProvider(ctx, in)
+		return srv.(ApiServiceServer).SwapPoolProvider(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/SwapPoolFromProvider",
+		FullMethod: "/api_pb.ApiService/SwapPoolProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).SwapPoolFromProvider(ctx, req.(*SwapPoolFromProviderRequest))
+		return srv.(ApiServiceServer).SwapPoolProvider(ctx, req.(*SwapPoolProviderRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1341,8 +1341,8 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_SwapPool_Handler,
 		},
 		{
-			MethodName: "SwapPoolFromProvider",
-			Handler:    _ApiService_SwapPoolFromProvider_Handler,
+			MethodName: "SwapPoolProvider",
+			Handler:    _ApiService_SwapPoolProvider_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
