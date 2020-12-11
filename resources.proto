@@ -832,7 +832,7 @@ message AddSwapPoolData {
     Coin coin0 = 1;
     Coin coin1 = 2;
     string volume0 = 3;
-    string max_volume1 = 4;
+    string maximum_volume1 = 4;
 }
 
 message RemoveSwapPoolData {
