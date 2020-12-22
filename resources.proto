@@ -862,3 +862,15 @@ message BuySwapPoolData {
     Coin coin_to_sell = 3;
     string maximum_value_to_sell = 4;
 }
+
+message EditCommissionData {
+    string pub_key = 1;
+    uint64 commission = 2;
+}
+
+message MoveStakeData {
+    string from = 1;
+    string to = 2;
+    Coin coin = 3;
+    string value = 4;
+}
