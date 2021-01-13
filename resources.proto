@@ -419,6 +419,7 @@ message CandidatesRequest {
         all = 0;
         off = 1;
         on = 2;
+        validator = 3;
     }
     CandidateStatus status = 3;
 }
@@ -504,6 +505,13 @@ message TransactionsRequest {
     }];
 }
 
+
+enum SwapFrom {
+    optimal = 0;
+    bancor = 1;
+    pool = 2;
+}
+
 message EstimateCoinBuyRequest {
     oneof buy {
         uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
@@ -523,9 +531,7 @@ message EstimateCoinBuyRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    bool from_pool = 7 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        default: "false"
-    }];
+    SwapFrom swap_from = 8;
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
@@ -551,15 +557,12 @@ message EstimateCoinSellRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    bool from_pool = 7 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        default: "false"
-    }];
+    SwapFrom swap_from = 8;
 }
 message EstimateCoinSellResponse {
     string will_get = 1;
     string commission = 2;
 }
-
 
 message EstimateCoinSellAllRequest {
     oneof buy {
@@ -584,17 +587,12 @@ message EstimateCoinSellAllRequest {
     uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    bool from_pool = 8 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        default: "false"
-    }];
+    SwapFrom swap_from = 8;
 }
 message EstimateCoinSellAllResponse {
     string will_get = 1;
 }
 
-message EstimateTxCommissionResponse {
-    string commission = 1;
-}
 message EstimateTxCommissionRequest {
     string tx = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'tx'
@@ -602,6 +600,9 @@ message EstimateTxCommissionRequest {
     uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+}
+message EstimateTxCommissionResponse {
+    string commission = 1;
 }
 
 message EventsRequest {
