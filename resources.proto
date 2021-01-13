@@ -863,7 +863,7 @@ message BuySwapPoolData {
     string maximum_value_to_sell = 4;
 }
 
-message EditCommissionData {
+message EditCandidateCommission {
     string pub_key = 1;
     uint64 commission = 2;
 }
