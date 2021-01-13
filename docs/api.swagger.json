@@ -315,7 +315,8 @@
             "enum": [
               "all",
               "off",
-              "on"
+              "on",
+              "validator"
             ],
             "default": "all"
           }
@@ -491,11 +492,16 @@
             "format": "uint64"
           },
           {
-            "name": "from_pool",
+            "name": "swap_from",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "default": "false"
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
           }
         ],
         "tags": [
@@ -572,11 +578,16 @@
             "format": "uint64"
           },
           {
-            "name": "from_pool",
+            "name": "swap_from",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "default": "false"
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
           }
         ],
         "tags": [
@@ -661,11 +672,16 @@
             "format": "uint64"
           },
           {
-            "name": "from_pool",
+            "name": "swap_from",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "default": "false"
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
           }
         ],
         "tags": [
@@ -1883,7 +1899,8 @@
       "enum": [
         "all",
         "off",
-        "on"
+        "on",
+        "validator"
       ],
       "default": "all"
     },
@@ -2848,6 +2865,15 @@
           }
         }
       }
+    },
+    "SwapFrom": {
+      "type": "string",
+      "enum": [
+        "optimal",
+        "bancor",
+        "pool"
+      ],
+      "default": "optimal"
     },
     "SwapPoolProviderResponse": {
       "type": "object",
