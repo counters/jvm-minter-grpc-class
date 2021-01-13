@@ -873,7 +873,7 @@ message MoveStakeData {
     string from = 1;
     string to = 2;
     Coin coin = 3;
-    string value = 4;
+    string stake = 4;
 }
 
 message MintTokenData {
