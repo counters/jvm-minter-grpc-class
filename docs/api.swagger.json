@@ -2884,7 +2884,7 @@
         "amount1": {
           "type": "string"
         },
-        "balance": {
+        "liquidity": {
           "type": "string"
         }
       }
@@ -2898,7 +2898,7 @@
         "reserve1": {
           "type": "string"
         },
-        "total_supply": {
+        "liquidity": {
           "type": "string"
         }
       }
