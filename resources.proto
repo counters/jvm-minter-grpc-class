@@ -27,7 +27,7 @@ message SwapPoolRequest {
 message SwapPoolResponse {
     string reserve0 = 1;
     string reserve1 = 2;
-    string total_supply = 3;
+    string liquidity = 3;
 }
 
 message SwapPoolProviderRequest {
@@ -41,7 +41,7 @@ message SwapPoolProviderRequest {
 message SwapPoolProviderResponse {
     string amount0 = 1;
     string amount1 = 2;
-    string balance = 3;
+    string liquidity = 3;
 }
 
 message NodeInfo {
