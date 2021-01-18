@@ -807,14 +807,14 @@ message EditCandidatePublicKeyData {
     string new_pub_key = 2;
 }
 
-message AddSwapPoolData {
+message AddLiquidityData {
     Coin coin0 = 1;
     Coin coin1 = 2;
     string volume0 = 3;
     string maximum_volume1 = 4;
 }
 
-message RemoveSwapPoolData {
+message RemoveLiquidityData {
     Coin coin0 = 1;
     Coin coin1 = 2;
     string liquidity = 3;
@@ -881,3 +881,18 @@ message RecreateTokenData {
     bool mintable = 5;
     bool burnable = 6;
 }
+
+message PriceCommissionData {
+    string send = 1;
+    reserved 2 to 27;
+    Coin coin = 28;
+    string pub_key = 29;
+    uint64 height = 30;
+}
+
+message UpdateNetworkData {
+    string version = 1;
+    string pub_key = 2;
+    uint64 height = 3;
+}
+
