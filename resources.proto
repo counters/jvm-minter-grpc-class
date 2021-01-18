@@ -458,6 +458,7 @@ message TransactionResponse {
     uint64 type = 10;
     google.protobuf.Any data = 11;
     bytes payload = 12;
+    bytes service_data = 16;
     map<string, string> tags = 13;
     uint64 code = 14;
     string log = 15;
