@@ -25,11 +25,10 @@ message SwapPoolRequest {
     }];
 }
 message SwapPoolResponse {
-    string reserve0 = 1;
-    string reserve1 = 2;
+    string amount0 = 1;
+    string amount1 = 2;
     string liquidity = 3;
 }
-
 message SwapPoolProviderRequest {
     uint64 coin0 = 1;
     uint64 coin1 = 2;
@@ -37,11 +36,6 @@ message SwapPoolProviderRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-}
-message SwapPoolProviderResponse {
-    string amount0 = 1;
-    string amount1 = 2;
-    string liquidity = 3;
 }
 
 message NodeInfo {
@@ -263,24 +257,7 @@ message BlockResponse {
     string time = 3;
     uint64 transaction_count = 4;
 
-    message Transaction {
-        string hash = 1;
-        string raw_tx = 2;
-        string from = 3;
-        uint64 nonce = 4;
-        uint64 gas_price = 5;
-        uint64 type = 6;
-        google.protobuf.Any data = 7;
-        bytes payload = 8;
-        bytes service_data = 9;
-        uint64 gas = 10;
-        Coin gas_coin = 11;
-        map<string, string> tags = 12;
-        uint64 code = 13;
-        string log = 14;
-    }
-
-    repeated Transaction transactions = 6;
+    repeated TransactionResponse transactions = 6;
     string block_reward = 7;
     uint64 size = 8;
     string proposer = 9;
