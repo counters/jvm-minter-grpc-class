@@ -1313,7 +1313,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/SwapPoolProviderResponse"
+              "$ref": "#/definitions/SwapPoolResponse"
             }
           },
           "default": {
@@ -1842,63 +1842,6 @@
       ],
       "default": "transactions"
     },
-    "BlockResponseTransaction": {
-      "type": "object",
-      "properties": {
-        "hash": {
-          "type": "string"
-        },
-        "raw_tx": {
-          "type": "string"
-        },
-        "from": {
-          "type": "string"
-        },
-        "nonce": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "gas_price": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "type": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "data": {
-          "$ref": "#/definitions/protobufAny"
-        },
-        "payload": {
-          "type": "string",
-          "format": "byte"
-        },
-        "service_data": {
-          "type": "string",
-          "format": "byte"
-        },
-        "gas": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "gas_coin": {
-          "$ref": "#/definitions/Coin"
-        },
-        "tags": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "code": {
-          "type": "string",
-          "format": "uint64"
-        },
-        "log": {
-          "type": "string"
-        }
-      }
-    },
     "CandidatesRequestCandidateStatus": {
       "type": "string",
       "enum": [
@@ -2407,7 +2350,7 @@
         "transactions": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/BlockResponseTransaction"
+            "$ref": "#/definitions/TransactionResponse"
           }
         },
         "block_reward": {
@@ -2880,27 +2823,13 @@
       ],
       "default": "optimal"
     },
-    "SwapPoolProviderResponse": {
+    "SwapPoolResponse": {
       "type": "object",
       "properties": {
         "amount0": {
           "type": "string"
         },
         "amount1": {
-          "type": "string"
-        },
-        "liquidity": {
-          "type": "string"
-        }
-      }
-    },
-    "SwapPoolResponse": {
-      "type": "object",
-      "properties": {
-        "reserve0": {
-          "type": "string"
-        },
-        "reserve1": {
           "type": "string"
         },
         "liquidity": {

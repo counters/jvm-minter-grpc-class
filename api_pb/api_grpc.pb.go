@@ -140,7 +140,7 @@ type ApiServiceClient interface {
 	// SwapPoolProvider
 	//
 	//
-	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolProviderResponse, error)
+	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
 }
 
 type apiServiceClient struct {
@@ -435,8 +435,8 @@ func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, op
 	return out, nil
 }
 
-func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolProviderResponse, error) {
-	out := new(SwapPoolProviderResponse)
+func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
+	out := new(SwapPoolResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -570,7 +570,7 @@ type ApiServiceServer interface {
 	// SwapPoolProvider
 	//
 	//
-	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolProviderResponse, error)
+	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -665,7 +665,7 @@ func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) 
 func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
 }
-func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolProviderResponse, error) {
+func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
