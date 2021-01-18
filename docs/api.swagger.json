@@ -2883,6 +2883,10 @@
           "type": "string",
           "format": "byte"
         },
+        "service_data": {
+          "type": "string",
+          "format": "byte"
+        },
         "tags": {
           "type": "object",
           "additionalProperties": {
