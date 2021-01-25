@@ -300,4 +300,13 @@ service ApiService {
         };
     }
 
+    // PriceVotes
+    //
+    //
+    rpc PriceVotes (PriceVotesRequest) returns (PriceVotesResponse) {
+        option (google.api.http) = {
+            get: "/price_votes/{height}"
+        };
+    }
+
 }

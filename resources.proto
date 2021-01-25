@@ -17,6 +17,20 @@ message Coin {
     string symbol = 2;
 }
 
+message PriceVotesRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
+message PriceVotesResponse {
+    message Vote {
+        PriceCommissionData price = 2;
+        repeated string public_keys = 1;
+    }
+    repeated Vote price_votes = 1;
+}
+
 message PriceCommissionRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
