@@ -39,7 +39,7 @@ var file_api_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2d, 0x67, 0x65, 0x6e, 0x2d, 0x6f, 0x70, 0x65, 0x6e,
 	0x61, 0x70, 0x69, 0x76, 0x32, 0x2f, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x61, 0x6e,
 	0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32,
-	0xce, 0x17, 0x0a, 0x0a, 0x41, 0x70, 0x69, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x56,
+	0xbe, 0x18, 0x0a, 0x0a, 0x41, 0x70, 0x69, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x56,
 	0x0a, 0x09, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x12, 0x18, 0x2e, 0x61, 0x70,
 	0x69, 0x5f, 0x70, 0x62, 0x2e, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x53,
@@ -228,6 +228,13 @@ var file_api_proto_rawDesc = []byte{
 	0x65, 0x22, 0x2d, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x27, 0x12, 0x25, 0x2f, 0x73, 0x77, 0x61, 0x70,
 	0x5f, 0x70, 0x6f, 0x6f, 0x6c, 0x2f, 0x7b, 0x63, 0x6f, 0x69, 0x6e, 0x30, 0x7d, 0x2f, 0x7b, 0x63,
 	0x6f, 0x69, 0x6e, 0x31, 0x7d, 0x2f, 0x7b, 0x70, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x7d,
+	0x12, 0x6e, 0x0a, 0x0f, 0x50, 0x72, 0x69, 0x63, 0x65, 0x43, 0x6f, 0x6d, 0x6d, 0x69, 0x73, 0x73,
+	0x69, 0x6f, 0x6e, 0x12, 0x1e, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x50, 0x72, 0x69,
+	0x63, 0x65, 0x43, 0x6f, 0x6d, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x1f, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x50, 0x72, 0x69,
+	0x63, 0x65, 0x43, 0x6f, 0x6d, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1a, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x14, 0x12, 0x12, 0x2f, 0x70,
+	0x72, 0x69, 0x63, 0x65, 0x5f, 0x63, 0x6f, 0x6d, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73,
 	0x42, 0x0a, 0x5a, 0x08, 0x2e, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x33,
 }
@@ -259,33 +266,35 @@ var file_api_proto_goTypes = []interface{}{
 	(*WaitListRequest)(nil),              // 23: api_pb.WaitListRequest
 	(*SwapPoolRequest)(nil),              // 24: api_pb.SwapPoolRequest
 	(*SwapPoolProviderRequest)(nil),      // 25: api_pb.SwapPoolProviderRequest
-	(*SubscribeResponse)(nil),            // 26: api_pb.SubscribeResponse
-	(*HaltsResponse)(nil),                // 27: api_pb.HaltsResponse
-	(*GenesisResponse)(nil),              // 28: api_pb.GenesisResponse
-	(*MinGasPriceResponse)(nil),          // 29: api_pb.MinGasPriceResponse
-	(*NetInfoResponse)(nil),              // 30: api_pb.NetInfoResponse
-	(*StatusResponse)(nil),               // 31: api_pb.StatusResponse
-	(*AddressResponse)(nil),              // 32: api_pb.AddressResponse
-	(*AddressesResponse)(nil),            // 33: api_pb.AddressesResponse
-	(*BlockResponse)(nil),                // 34: api_pb.BlockResponse
-	(*CandidateResponse)(nil),            // 35: api_pb.CandidateResponse
-	(*CandidatesResponse)(nil),           // 36: api_pb.CandidatesResponse
-	(*CoinInfoResponse)(nil),             // 37: api_pb.CoinInfoResponse
-	(*EstimateCoinBuyResponse)(nil),      // 38: api_pb.EstimateCoinBuyResponse
-	(*EstimateCoinSellResponse)(nil),     // 39: api_pb.EstimateCoinSellResponse
-	(*EstimateCoinSellAllResponse)(nil),  // 40: api_pb.EstimateCoinSellAllResponse
-	(*EstimateTxCommissionResponse)(nil), // 41: api_pb.EstimateTxCommissionResponse
-	(*EventsResponse)(nil),               // 42: api_pb.EventsResponse
-	(*MaxGasPriceResponse)(nil),          // 43: api_pb.MaxGasPriceResponse
-	(*MissedBlocksResponse)(nil),         // 44: api_pb.MissedBlocksResponse
-	(*SendTransactionResponse)(nil),      // 45: api_pb.SendTransactionResponse
-	(*TransactionResponse)(nil),          // 46: api_pb.TransactionResponse
-	(*TransactionsResponse)(nil),         // 47: api_pb.TransactionsResponse
-	(*UnconfirmedTxsResponse)(nil),       // 48: api_pb.UnconfirmedTxsResponse
-	(*ValidatorsResponse)(nil),           // 49: api_pb.ValidatorsResponse
-	(*FrozenResponse)(nil),               // 50: api_pb.FrozenResponse
-	(*WaitListResponse)(nil),             // 51: api_pb.WaitListResponse
-	(*SwapPoolResponse)(nil),             // 52: api_pb.SwapPoolResponse
+	(*PriceCommissionRequest)(nil),       // 26: api_pb.PriceCommissionRequest
+	(*SubscribeResponse)(nil),            // 27: api_pb.SubscribeResponse
+	(*HaltsResponse)(nil),                // 28: api_pb.HaltsResponse
+	(*GenesisResponse)(nil),              // 29: api_pb.GenesisResponse
+	(*MinGasPriceResponse)(nil),          // 30: api_pb.MinGasPriceResponse
+	(*NetInfoResponse)(nil),              // 31: api_pb.NetInfoResponse
+	(*StatusResponse)(nil),               // 32: api_pb.StatusResponse
+	(*AddressResponse)(nil),              // 33: api_pb.AddressResponse
+	(*AddressesResponse)(nil),            // 34: api_pb.AddressesResponse
+	(*BlockResponse)(nil),                // 35: api_pb.BlockResponse
+	(*CandidateResponse)(nil),            // 36: api_pb.CandidateResponse
+	(*CandidatesResponse)(nil),           // 37: api_pb.CandidatesResponse
+	(*CoinInfoResponse)(nil),             // 38: api_pb.CoinInfoResponse
+	(*EstimateCoinBuyResponse)(nil),      // 39: api_pb.EstimateCoinBuyResponse
+	(*EstimateCoinSellResponse)(nil),     // 40: api_pb.EstimateCoinSellResponse
+	(*EstimateCoinSellAllResponse)(nil),  // 41: api_pb.EstimateCoinSellAllResponse
+	(*EstimateTxCommissionResponse)(nil), // 42: api_pb.EstimateTxCommissionResponse
+	(*EventsResponse)(nil),               // 43: api_pb.EventsResponse
+	(*MaxGasPriceResponse)(nil),          // 44: api_pb.MaxGasPriceResponse
+	(*MissedBlocksResponse)(nil),         // 45: api_pb.MissedBlocksResponse
+	(*SendTransactionResponse)(nil),      // 46: api_pb.SendTransactionResponse
+	(*TransactionResponse)(nil),          // 47: api_pb.TransactionResponse
+	(*TransactionsResponse)(nil),         // 48: api_pb.TransactionsResponse
+	(*UnconfirmedTxsResponse)(nil),       // 49: api_pb.UnconfirmedTxsResponse
+	(*ValidatorsResponse)(nil),           // 50: api_pb.ValidatorsResponse
+	(*FrozenResponse)(nil),               // 51: api_pb.FrozenResponse
+	(*WaitListResponse)(nil),             // 52: api_pb.WaitListResponse
+	(*SwapPoolResponse)(nil),             // 53: api_pb.SwapPoolResponse
+	(*PriceCommissionResponse)(nil),      // 54: api_pb.PriceCommissionResponse
 }
 var file_api_proto_depIdxs = []int32{
 	0,  // 0: api_pb.ApiService.Subscribe:input_type -> api_pb.SubscribeRequest
@@ -318,38 +327,40 @@ var file_api_proto_depIdxs = []int32{
 	2,  // 27: api_pb.ApiService.TestBlock:input_type -> google.protobuf.Empty
 	24, // 28: api_pb.ApiService.SwapPool:input_type -> api_pb.SwapPoolRequest
 	25, // 29: api_pb.ApiService.SwapPoolProvider:input_type -> api_pb.SwapPoolProviderRequest
-	26, // 30: api_pb.ApiService.Subscribe:output_type -> api_pb.SubscribeResponse
-	27, // 31: api_pb.ApiService.Halts:output_type -> api_pb.HaltsResponse
-	28, // 32: api_pb.ApiService.Genesis:output_type -> api_pb.GenesisResponse
-	29, // 33: api_pb.ApiService.MinGasPrice:output_type -> api_pb.MinGasPriceResponse
-	30, // 34: api_pb.ApiService.NetInfo:output_type -> api_pb.NetInfoResponse
-	31, // 35: api_pb.ApiService.Status:output_type -> api_pb.StatusResponse
-	32, // 36: api_pb.ApiService.Address:output_type -> api_pb.AddressResponse
-	33, // 37: api_pb.ApiService.Addresses:output_type -> api_pb.AddressesResponse
-	34, // 38: api_pb.ApiService.Block:output_type -> api_pb.BlockResponse
-	35, // 39: api_pb.ApiService.Candidate:output_type -> api_pb.CandidateResponse
-	36, // 40: api_pb.ApiService.Candidates:output_type -> api_pb.CandidatesResponse
-	37, // 41: api_pb.ApiService.CoinInfoById:output_type -> api_pb.CoinInfoResponse
-	37, // 42: api_pb.ApiService.CoinInfo:output_type -> api_pb.CoinInfoResponse
-	38, // 43: api_pb.ApiService.EstimateCoinBuy:output_type -> api_pb.EstimateCoinBuyResponse
-	39, // 44: api_pb.ApiService.EstimateCoinSell:output_type -> api_pb.EstimateCoinSellResponse
-	40, // 45: api_pb.ApiService.EstimateCoinSellAll:output_type -> api_pb.EstimateCoinSellAllResponse
-	41, // 46: api_pb.ApiService.EstimateTxCommission:output_type -> api_pb.EstimateTxCommissionResponse
-	42, // 47: api_pb.ApiService.Events:output_type -> api_pb.EventsResponse
-	43, // 48: api_pb.ApiService.MaxGasPrice:output_type -> api_pb.MaxGasPriceResponse
-	44, // 49: api_pb.ApiService.MissedBlocks:output_type -> api_pb.MissedBlocksResponse
-	45, // 50: api_pb.ApiService.SendTransaction:output_type -> api_pb.SendTransactionResponse
-	46, // 51: api_pb.ApiService.Transaction:output_type -> api_pb.TransactionResponse
-	47, // 52: api_pb.ApiService.Transactions:output_type -> api_pb.TransactionsResponse
-	48, // 53: api_pb.ApiService.UnconfirmedTxs:output_type -> api_pb.UnconfirmedTxsResponse
-	49, // 54: api_pb.ApiService.Validators:output_type -> api_pb.ValidatorsResponse
-	50, // 55: api_pb.ApiService.Frozen:output_type -> api_pb.FrozenResponse
-	51, // 56: api_pb.ApiService.WaitList:output_type -> api_pb.WaitListResponse
-	34, // 57: api_pb.ApiService.TestBlock:output_type -> api_pb.BlockResponse
-	52, // 58: api_pb.ApiService.SwapPool:output_type -> api_pb.SwapPoolResponse
-	52, // 59: api_pb.ApiService.SwapPoolProvider:output_type -> api_pb.SwapPoolResponse
-	30, // [30:60] is the sub-list for method output_type
-	0,  // [0:30] is the sub-list for method input_type
+	26, // 30: api_pb.ApiService.PriceCommission:input_type -> api_pb.PriceCommissionRequest
+	27, // 31: api_pb.ApiService.Subscribe:output_type -> api_pb.SubscribeResponse
+	28, // 32: api_pb.ApiService.Halts:output_type -> api_pb.HaltsResponse
+	29, // 33: api_pb.ApiService.Genesis:output_type -> api_pb.GenesisResponse
+	30, // 34: api_pb.ApiService.MinGasPrice:output_type -> api_pb.MinGasPriceResponse
+	31, // 35: api_pb.ApiService.NetInfo:output_type -> api_pb.NetInfoResponse
+	32, // 36: api_pb.ApiService.Status:output_type -> api_pb.StatusResponse
+	33, // 37: api_pb.ApiService.Address:output_type -> api_pb.AddressResponse
+	34, // 38: api_pb.ApiService.Addresses:output_type -> api_pb.AddressesResponse
+	35, // 39: api_pb.ApiService.Block:output_type -> api_pb.BlockResponse
+	36, // 40: api_pb.ApiService.Candidate:output_type -> api_pb.CandidateResponse
+	37, // 41: api_pb.ApiService.Candidates:output_type -> api_pb.CandidatesResponse
+	38, // 42: api_pb.ApiService.CoinInfoById:output_type -> api_pb.CoinInfoResponse
+	38, // 43: api_pb.ApiService.CoinInfo:output_type -> api_pb.CoinInfoResponse
+	39, // 44: api_pb.ApiService.EstimateCoinBuy:output_type -> api_pb.EstimateCoinBuyResponse
+	40, // 45: api_pb.ApiService.EstimateCoinSell:output_type -> api_pb.EstimateCoinSellResponse
+	41, // 46: api_pb.ApiService.EstimateCoinSellAll:output_type -> api_pb.EstimateCoinSellAllResponse
+	42, // 47: api_pb.ApiService.EstimateTxCommission:output_type -> api_pb.EstimateTxCommissionResponse
+	43, // 48: api_pb.ApiService.Events:output_type -> api_pb.EventsResponse
+	44, // 49: api_pb.ApiService.MaxGasPrice:output_type -> api_pb.MaxGasPriceResponse
+	45, // 50: api_pb.ApiService.MissedBlocks:output_type -> api_pb.MissedBlocksResponse
+	46, // 51: api_pb.ApiService.SendTransaction:output_type -> api_pb.SendTransactionResponse
+	47, // 52: api_pb.ApiService.Transaction:output_type -> api_pb.TransactionResponse
+	48, // 53: api_pb.ApiService.Transactions:output_type -> api_pb.TransactionsResponse
+	49, // 54: api_pb.ApiService.UnconfirmedTxs:output_type -> api_pb.UnconfirmedTxsResponse
+	50, // 55: api_pb.ApiService.Validators:output_type -> api_pb.ValidatorsResponse
+	51, // 56: api_pb.ApiService.Frozen:output_type -> api_pb.FrozenResponse
+	52, // 57: api_pb.ApiService.WaitList:output_type -> api_pb.WaitListResponse
+	35, // 58: api_pb.ApiService.TestBlock:output_type -> api_pb.BlockResponse
+	53, // 59: api_pb.ApiService.SwapPool:output_type -> api_pb.SwapPoolResponse
+	53, // 60: api_pb.ApiService.SwapPoolProvider:output_type -> api_pb.SwapPoolResponse
+	54, // 61: api_pb.ApiService.PriceCommission:output_type -> api_pb.PriceCommissionResponse
+	31, // [31:62] is the sub-list for method output_type
+	0,  // [0:31] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name

@@ -1074,6 +1074,47 @@
         ]
       }
     },
+    "/price_commissions": {
+      "get": {
+        "summary": "PriceCommission",
+        "operationId": "PriceCommission",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PriceCommissionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "ApiService"
+        ]
+      }
+    },
     "/send_transaction": {
       "post": {
         "summary": "SendTransaction",
@@ -2726,6 +2767,101 @@
         },
         "other": {
           "$ref": "#/definitions/NodeInfoOther"
+        }
+      }
+    },
+    "PriceCommissionResponse": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "payload_byte": {
+          "type": "string"
+        },
+        "send": {
+          "type": "string"
+        },
+        "convert": {
+          "type": "string"
+        },
+        "create_ticker3": {
+          "type": "string"
+        },
+        "create_ticker4": {
+          "type": "string"
+        },
+        "create_ticker5": {
+          "type": "string"
+        },
+        "create_ticker6": {
+          "type": "string"
+        },
+        "create_ticker7_10": {
+          "type": "string"
+        },
+        "recreate_ticker": {
+          "type": "string"
+        },
+        "declare_candidacy": {
+          "type": "string"
+        },
+        "delegate": {
+          "type": "string"
+        },
+        "unbond": {
+          "type": "string"
+        },
+        "redeem_check": {
+          "type": "string"
+        },
+        "toggle_candidate_status": {
+          "type": "string"
+        },
+        "create_multisig": {
+          "type": "string"
+        },
+        "multisend_delta": {
+          "type": "string"
+        },
+        "edit_candidate": {
+          "type": "string"
+        },
+        "set_halt_block": {
+          "type": "string"
+        },
+        "edit_ticker_owner": {
+          "type": "string"
+        },
+        "edit_multisig": {
+          "type": "string"
+        },
+        "price_vote": {
+          "type": "string"
+        },
+        "edit_candidate_public_key": {
+          "type": "string"
+        },
+        "add_liquidity": {
+          "type": "string"
+        },
+        "remove_liquidity": {
+          "type": "string"
+        },
+        "edit_candidate_commission": {
+          "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "edit_token_emission": {
+          "type": "string"
+        },
+        "price_commission": {
+          "type": "string"
+        },
+        "update_network": {
+          "type": "string"
         }
       }
     },

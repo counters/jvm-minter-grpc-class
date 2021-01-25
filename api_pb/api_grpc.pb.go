@@ -141,6 +141,10 @@ type ApiServiceClient interface {
 	//
 	//
 	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// PriceCommission
+	//
+	//
+	PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error)
 }
 
 type apiServiceClient struct {
@@ -444,6 +448,15 @@ func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolPro
 	return out, nil
 }
 
+func (c *apiServiceClient) PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error) {
+	out := new(PriceCommissionResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/PriceCommission", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -571,6 +584,10 @@ type ApiServiceServer interface {
 	//
 	//
 	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error)
+	// PriceCommission
+	//
+	//
+	PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -667,6 +684,9 @@ func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest)
 }
 func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
+}
+func (UnimplementedApiServiceServer) PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PriceCommission not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1224,6 +1244,24 @@ func _ApiService_SwapPoolProvider_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_PriceCommission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PriceCommissionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).PriceCommission(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/PriceCommission",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).PriceCommission(ctx, req.(*PriceCommissionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _ApiService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api_pb.ApiService",
 	HandlerType: (*ApiServiceServer)(nil),
@@ -1343,6 +1381,10 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SwapPoolProvider",
 			Handler:    _ApiService_SwapPoolProvider_Handler,
+		},
+		{
+			MethodName: "PriceCommission",
+			Handler:    _ApiService_PriceCommission_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
