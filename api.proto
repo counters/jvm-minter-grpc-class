@@ -291,4 +291,13 @@ service ApiService {
         };
     }
 
+    // PriceCommission
+    //
+    //
+    rpc PriceCommission (PriceCommissionRequest) returns (PriceCommissionResponse) {
+        option (google.api.http) = {
+            get: "/price_commissions"
+        };
+    }
+
 }

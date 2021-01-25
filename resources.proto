@@ -17,6 +17,44 @@ message Coin {
     string symbol = 2;
 }
 
+message PriceCommissionRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message PriceCommissionResponse {
+    Coin coin = 3;
+    string payload_byte = 4;
+    string send = 5;
+    string convert = 6;
+    string create_ticker3 = 7;
+    string create_ticker4 = 8;
+    string create_ticker5 = 9;
+    string create_ticker6 = 10;
+    string create_ticker7_10 = 11;
+    string recreate_ticker = 12;
+    string declare_candidacy = 13;
+    string delegate = 14;
+    string unbond = 15;
+    string redeem_check = 16;
+    string toggle_candidate_status = 17;
+    string create_multisig = 18;
+    string multisend_delta = 19;
+    string edit_candidate = 20;
+    string set_halt_block = 21;
+    string edit_ticker_owner = 22;
+    string edit_multisig = 23;
+    string price_vote = 24;
+    string edit_candidate_public_key = 25;
+    string add_liquidity = 26;
+    string remove_liquidity = 27;
+    string edit_candidate_commission = 28;
+    string move_stake = 29;
+    string edit_token_emission = 30;
+    string price_commission = 31;
+    string update_network = 32;
+}
+
 message SwapPoolRequest {
     uint64 coin0 = 1;
     uint64 coin1 = 2;
@@ -883,16 +921,43 @@ message RecreateTokenData {
 }
 
 message PriceCommissionData {
-    string send = 1;
-    reserved 2 to 27;
-    Coin coin = 28;
-    string pub_key = 29;
-    uint64 height = 30;
+    string pub_key = 1;
+    uint64 height = 2;
+    Coin coin = 3;
+    string payload_byte = 4;
+    string send = 5;
+    string convert = 6;
+    string create_ticker3 = 7;
+    string create_ticker4 = 8;
+    string create_ticker5 = 9;
+    string create_ticker6 = 10;
+    string create_ticker7_10 = 11;
+    string recreate_ticker = 12;
+    string declare_candidacy = 13;
+    string delegate = 14;
+    string unbond = 15;
+    string redeem_check = 16;
+    string toggle_candidate_status = 17;
+    string create_multisig = 18;
+    string multisend_delta = 19;
+    string edit_candidate = 20;
+    string set_halt_block = 21;
+    string edit_ticker_owner = 22;
+    string edit_multisig = 23;
+    string price_vote = 24;
+    string edit_candidate_public_key = 25;
+    string add_liquidity = 26;
+    string remove_liquidity = 27;
+    string edit_candidate_commission = 28;
+    string move_stake = 29;
+    string edit_token_emission = 30;
+    string price_commission = 31;
+    string update_network = 32;
 }
 
 message UpdateNetworkData {
-    string version = 1;
-    string pub_key = 2;
-    uint64 height = 3;
+    string pub_key = 1;
+    uint64 height = 2;
+    string version = 3;
 }
 
