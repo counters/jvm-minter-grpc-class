@@ -25,7 +25,7 @@ message PriceVotesRequest {
 
 message PriceVotesResponse {
     message Vote {
-        PriceCommissionData price = 2;
+        PriceCommissionResponse price = 2;
         repeated string public_keys = 1;
     }
     repeated Vote price_votes = 1;
