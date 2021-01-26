@@ -73,7 +73,8 @@ message PriceCommissionResponse {
     string remove_liquidity = 27;
     string edit_candidate_commission = 28;
     string move_stake = 29;
-    string edit_token_emission = 30;
+    string mint_token = 46;
+    string burn_token = 47;
     string price_commission = 31;
     string update_network = 32;
 }
@@ -982,7 +983,8 @@ message PriceCommissionData {
     string remove_liquidity = 27;
     string edit_candidate_commission = 28;
     string move_stake = 29;
-    string edit_token_emission = 30;
+    string mint_token = 46;
+    string burn_token = 47;
     string price_commission = 31;
     string update_network = 32;
 }
