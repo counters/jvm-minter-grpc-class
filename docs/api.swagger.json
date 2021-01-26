@@ -2837,7 +2837,22 @@
         "send": {
           "type": "string"
         },
-        "convert": {
+        "buy_bancor": {
+          "type": "string"
+        },
+        "sell_bancor": {
+          "type": "string"
+        },
+        "sell_all_bancor": {
+          "type": "string"
+        },
+        "buy_pool": {
+          "type": "string"
+        },
+        "sell_pool": {
+          "type": "string"
+        },
+        "sell_all_pool": {
           "type": "string"
         },
         "create_ticker3": {
@@ -2855,7 +2870,16 @@
         "create_ticker7_10": {
           "type": "string"
         },
-        "recreate_ticker": {
+        "create_coin": {
+          "type": "string"
+        },
+        "create_token": {
+          "type": "string"
+        },
+        "recreate_coin": {
+          "type": "string"
+        },
+        "recreate_token": {
           "type": "string"
         },
         "declare_candidacy": {
@@ -2870,7 +2894,10 @@
         "redeem_check": {
           "type": "string"
         },
-        "toggle_candidate_status": {
+        "set_candidate_on": {
+          "type": "string"
+        },
+        "set_candidate_off": {
           "type": "string"
         },
         "create_multisig": {
