@@ -2936,7 +2936,10 @@
         "move_stake": {
           "type": "string"
         },
-        "edit_token_emission": {
+        "mint_token": {
+          "type": "string"
+        },
+        "burn_token": {
           "type": "string"
         },
         "price_commission": {
