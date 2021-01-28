@@ -952,7 +952,7 @@ message RecreateTokenData {
     bool burnable = 6;
 }
 
-message PriceCommissionData {
+message VoteCommissionData {
     string pub_key = 1;
     uint64 height = 2;
     Coin coin = 3;
@@ -998,7 +998,7 @@ message PriceCommissionData {
     string update_network = 32;
 }
 
-message UpdateNetworkData {
+message VoteUpdateData {
     string pub_key = 1;
     uint64 height = 2;
     string version = 3;
