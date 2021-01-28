@@ -2924,6 +2924,9 @@
         "edit_candidate_public_key": {
           "type": "string"
         },
+        "create_liquidity": {
+          "type": "string"
+        },
         "add_liquidity": {
           "type": "string"
         },
