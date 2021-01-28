@@ -69,7 +69,7 @@ message PriceCommissionResponse {
     string edit_multisig = 23;
     string price_vote = 24;
     string edit_candidate_public_key = 25;
-    string create_liquidity = 48;
+    string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
@@ -870,7 +870,7 @@ message EditCandidatePublicKeyData {
     string new_pub_key = 2;
 }
 
-message CreateLiquidityData {
+message CreateSwapPoolData {
     Coin coin0 = 1;
     Coin coin1 = 2;
     string volume0 = 3;
@@ -987,7 +987,7 @@ message PriceCommissionData {
     string edit_multisig = 23;
     string price_vote = 24;
     string edit_candidate_public_key = 25;
-    string create_liquidity = 48;
+    string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
