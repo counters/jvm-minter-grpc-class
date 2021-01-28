@@ -69,8 +69,9 @@ message PriceCommissionResponse {
     string edit_multisig = 23;
     string price_vote = 24;
     string edit_candidate_public_key = 25;
-    string add_liquidity = 26;
-    string remove_liquidity = 27;
+    string create_liquidity = 48;
+    string add_liquidity = 49;
+    string remove_liquidity = 50;
     string edit_candidate_commission = 28;
     string move_stake = 29;
     string mint_token = 46;
@@ -869,6 +870,13 @@ message EditCandidatePublicKeyData {
     string new_pub_key = 2;
 }
 
+message CreateLiquidityData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string volume0 = 3;
+    string volume1 = 4;
+}
+
 message AddLiquidityData {
     Coin coin0 = 1;
     Coin coin1 = 2;
@@ -979,8 +987,9 @@ message PriceCommissionData {
     string edit_multisig = 23;
     string price_vote = 24;
     string edit_candidate_public_key = 25;
-    string add_liquidity = 26;
-    string remove_liquidity = 27;
+    string create_liquidity = 48;
+    string add_liquidity = 49;
+    string remove_liquidity = 50;
     string edit_candidate_commission = 28;
     string move_stake = 29;
     string mint_token = 46;
