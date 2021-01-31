@@ -62,7 +62,8 @@ message PriceCommissionResponse {
     string set_candidate_on = 44;
     string set_candidate_off = 45;
     string create_multisig = 18;
-    string multisend_delta = 19;
+    string multisend_base = 51;
+    string multisend_delta = 52;
     string edit_candidate = 20;
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
@@ -980,7 +981,8 @@ message VoteCommissionData {
     string set_candidate_on = 44;
     string set_candidate_off = 45;
     string create_multisig = 18;
-    string multisend_delta = 19;
+    string multisend_base = 51;
+    string multisend_delta = 52;
     string edit_candidate = 20;
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
