@@ -2903,6 +2903,9 @@
         "create_multisig": {
           "type": "string"
         },
+        "multisend_base": {
+          "type": "string"
+        },
         "multisend_delta": {
           "type": "string"
         },
