@@ -196,7 +196,7 @@
             "collectionFormat": "multi"
           },
           {
-            "name": "failed",
+            "name": "failed_txs",
             "in": "query",
             "required": false,
             "type": "boolean",
