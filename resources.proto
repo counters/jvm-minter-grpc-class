@@ -77,8 +77,8 @@ message PriceCommissionResponse {
     string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
-    string price_commission = 31;
-    string update_network = 32;
+    string vote_price = 31;
+    string vote_update = 32;
 }
 
 message SwapPoolRequest {
@@ -996,8 +996,8 @@ message VoteCommissionData {
     string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
-    string price_commission = 31;
-    string update_network = 32;
+    string vote_price = 31;
+    string vote_update = 32;
 }
 
 message VoteUpdateData {
