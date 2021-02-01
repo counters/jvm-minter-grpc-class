@@ -2948,10 +2948,10 @@
         "burn_token": {
           "type": "string"
         },
-        "price_commission": {
+        "vote_price": {
           "type": "string"
         },
-        "update_network": {
+        "vote_update": {
           "type": "string"
         }
       }
