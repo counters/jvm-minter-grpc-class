@@ -314,6 +314,7 @@ message BlockRequest {
         evidence = 6;
     }
     repeated Field fields = 2;
+    bool failed = 3;
 }
 message BlockResponse {
     string hash = 1;
