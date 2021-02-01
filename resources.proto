@@ -314,7 +314,9 @@ message BlockRequest {
         evidence = 6;
     }
     repeated Field fields = 2;
-    bool failed = 3;
+    bool failed = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message BlockResponse {
     string hash = 1;
