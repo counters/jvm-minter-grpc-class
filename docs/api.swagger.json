@@ -194,6 +194,12 @@
               ]
             },
             "collectionFormat": "multi"
+          },
+          {
+            "name": "failed",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
           }
         ],
         "tags": [
