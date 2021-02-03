@@ -798,7 +798,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Event"
         ]
       }
     },
@@ -1284,7 +1284,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
