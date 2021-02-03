@@ -17,6 +17,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/subscribe"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "WebSockets";
     }
 
     // Halts 
@@ -26,6 +27,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/halts/{height}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
 
     // Genesis
@@ -35,6 +37,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/genesis"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // MinGasPrice
@@ -44,6 +47,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/min_gas_price"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // NetInfo
@@ -53,6 +57,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/net_info"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Status
@@ -71,6 +76,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/address/{address}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }
 
     // Addresses
@@ -80,6 +86,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/addresses"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }
 
     // Block
@@ -89,6 +96,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/block/{height}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Candidate
@@ -100,6 +108,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/candidate/{public_key}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";
     }
 
     // Candidates
@@ -109,6 +118,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/candidates"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";
     }
 
     // CoinInfoById
@@ -118,6 +128,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/coin_info_by_id/{id}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // CoinInfo
@@ -127,6 +138,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/coin_info/{symbol}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // EstimateCoinBuy
@@ -136,6 +148,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_buy"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // EstimateCoinSell
@@ -145,6 +158,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_sell"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // EstimateCoinSellAll
@@ -154,6 +168,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_sell_all"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // EstimateTxCommission
@@ -163,6 +178,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_tx_commission/{tx}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // Events
@@ -181,6 +197,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/max_gas_price"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // MissedBlocks
@@ -190,6 +207,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/missed_blocks/{public_key}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";
     }
 
     // SendTransaction
@@ -208,6 +226,7 @@ service ApiService {
             url: "https://www.minter.network/docs#transactions"
             description: "More about Minter transactions"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Transaction
@@ -217,6 +236,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/transaction/{hash}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Transactions
@@ -226,6 +246,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/transactions"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // UnconfirmedTxs
@@ -235,6 +256,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/unconfirmed_txs"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Validators
@@ -244,6 +266,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/validators"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";
     }
 
     // Frozen
@@ -253,6 +276,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/frozen/{address}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }
 
     // WaitList
@@ -262,6 +286,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/waitlist/{address}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }
 
     // TestBlock
@@ -271,6 +296,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/test/block"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Test";
     }
 
     // SwapPool
@@ -280,6 +306,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/swap_pool/{coin0}/{coin1}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // SwapPoolProvider
@@ -289,6 +316,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/swap_pool/{coin0}/{coin1}/{provider}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
     // PriceCommission
@@ -298,6 +326,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/price_commissions"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // PriceVotes
@@ -307,6 +336,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/price_votes/{height}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
 
 }
