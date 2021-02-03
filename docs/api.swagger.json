@@ -2955,7 +2955,7 @@
         "burn_token": {
           "type": "string"
         },
-        "vote_price": {
+        "vote_commission": {
           "type": "string"
         },
         "vote_update": {
