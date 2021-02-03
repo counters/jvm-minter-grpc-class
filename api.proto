@@ -67,6 +67,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/status"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
     // Address
@@ -188,6 +189,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/events/{height}"
         };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Event";
     }
 
     // MaxGasPrice
