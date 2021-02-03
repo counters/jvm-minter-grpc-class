@@ -77,7 +77,7 @@ message PriceCommissionResponse {
     string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
-    string vote_price = 31;
+    string vote_commission = 31;
     string vote_update = 32;
 }
 
@@ -999,7 +999,7 @@ message VoteCommissionData {
     string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
-    string vote_price = 31;
+    string vote_commission = 31;
     string vote_update = 32;
 }
 
