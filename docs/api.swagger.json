@@ -2727,6 +2727,10 @@
         "chain_id": {
           "type": "string"
         },
+        "initial_height": {
+          "type": "string",
+          "format": "uint64"
+        },
         "consensus_params": {
           "$ref": "#/definitions/GenesisResponseConsensusParams"
         },
