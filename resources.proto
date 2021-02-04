@@ -182,6 +182,7 @@ message StatusResponse {
 message GenesisResponse {
     string genesis_time = 1;
     string chain_id = 2;
+    uint64 initial_height = 6;
     message ConsensusParams {
         message Block {
             int64 max_bytes = 1;
@@ -200,7 +201,7 @@ message GenesisResponse {
         Validator validator = 3;
     }
     ConsensusParams consensus_params = 3;
-    string app_hash = 4;
+    google.protobuf.StringValue app_hash = 4;
     message AppState {
         string note = 10;
         uint64 start_height = 1;
