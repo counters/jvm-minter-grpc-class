@@ -201,7 +201,7 @@ message GenesisResponse {
         Validator validator = 3;
     }
     ConsensusParams consensus_params = 3;
-    google.protobuf.StringValue app_hash = 4;
+    string app_hash = 4;
     message AppState {
         string note = 10;
         uint64 start_height = 1;
