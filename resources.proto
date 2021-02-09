@@ -213,8 +213,6 @@ message GenesisResponse {
     string app_hash = 4;
     message AppState {
         string note = 10;
-        uint64 start_height = 1;
-
         message Validators {
             string total_bip_stake = 4;
             string public_key = 1;
