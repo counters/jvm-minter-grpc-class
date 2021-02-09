@@ -84,11 +84,10 @@ message PriceCommissionResponse {
 message SwapPoolRequest {
     uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
-    }];;
+    }];
     uint64 coin1 = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    ;
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
