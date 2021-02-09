@@ -2082,10 +2082,6 @@
         "note": {
           "type": "string"
         },
-        "start_height": {
-          "type": "string",
-          "format": "uint64"
-        },
         "validators": {
           "type": "array",
           "items": {
