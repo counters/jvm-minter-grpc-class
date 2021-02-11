@@ -603,6 +603,19 @@
             "format": "uint64"
           },
           {
+            "name": "coin_id_commission",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_commission",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "swap_from",
             "in": "query",
             "required": false,
