@@ -615,6 +615,12 @@ message EstimateCoinSellRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    oneof commission {
+        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }];
+        string coin_commission = 10;
+    }
     SwapFrom swap_from = 8;
 }
 message EstimateCoinSellResponse {
