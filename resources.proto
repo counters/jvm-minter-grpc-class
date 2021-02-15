@@ -922,22 +922,19 @@ message RemoveLiquidityData {
 }
 
 message SellSwapPoolData {
-    Coin coin_to_sell = 1;
+    repeated Coin coins = 1;
     string value_to_sell = 2;
-    Coin coin_to_buy = 3;
     string minimum_value_to_buy = 4;
 }
 
 message SellAllSwapPoolData {
-    Coin coin_to_sell = 1;
-    Coin coin_to_buy = 2;
+    repeated Coin coins = 1;
     string minimum_value_to_buy = 3;
 }
 
 message BuySwapPoolData {
-    Coin coin_to_buy = 1;
+    repeated Coin coins = 1;
     string value_to_buy = 2;
-    Coin coin_to_sell = 3;
     string maximum_value_to_sell = 4;
 }
 
