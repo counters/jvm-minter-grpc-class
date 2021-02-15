@@ -2879,13 +2879,22 @@
         "sell_all_bancor": {
           "type": "string"
         },
-        "buy_pool": {
+        "buy_pool_base": {
           "type": "string"
         },
-        "sell_pool": {
+        "buy_pool_delta": {
           "type": "string"
         },
-        "sell_all_pool": {
+        "sell_pool_base": {
+          "type": "string"
+        },
+        "sell_pool_delta": {
+          "type": "string"
+        },
+        "sell_all_pool_base": {
+          "type": "string"
+        },
+        "sell_all_pool_delta": {
           "type": "string"
         },
         "create_ticker3": {
