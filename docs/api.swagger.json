@@ -2688,6 +2688,9 @@
         },
         "commission": {
           "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
         }
       }
     },
@@ -2696,6 +2699,9 @@
       "properties": {
         "will_get": {
           "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
         }
       }
     },
@@ -2707,6 +2713,9 @@
         },
         "commission": {
           "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
         }
       }
     },
