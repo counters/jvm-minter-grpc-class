@@ -344,7 +344,7 @@ service ApiService {
     // Blocks
     //
     //
-    rpc Blocks (BlocksRequest) returns (PriceVotesResponse) {
+    rpc Blocks (BlocksRequest) returns (BlocksResponse) {
         option (google.api.http) = {
             get: "/blocks"
         };
