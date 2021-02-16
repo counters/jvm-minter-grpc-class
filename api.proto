@@ -341,4 +341,13 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
 
+    // Blocks
+    //
+    //
+    rpc Blocks (BlocksRequest) returns (PriceVotesResponse) {
+        option (google.api.http) = {
+            get: "/blocks"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
+    }
 }

@@ -17,6 +17,25 @@ message Coin {
     string symbol = 2;
 }
 
+
+message BlocksRequest {
+    uint64 from_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'from_height'
+        type: INTEGER
+    }];
+    uint64 to_height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'to_height'
+        type: INTEGER
+    }];
+    repeated BlockField fields = 3;
+    bool failed_txs = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
+}
+message BlocksResponse {
+    repeated BlockResponse blocks = 1;
+}
+
 message PriceVotesRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
@@ -310,20 +329,20 @@ message MinGasPriceResponse {
     uint64 min_gas_price = 3;
 }
 
+enum BlockField {
+    transactions = 0;
+    missed = 1;
+    block_reward = 2;
+    size = 3;
+    proposer = 4;
+    validators = 5;
+    evidence = 6;
+}
 message BlockRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    enum Field {
-        transactions = 0;
-        missed = 1;
-        block_reward = 2;
-        size = 3;
-        proposer = 4;
-        validators = 5;
-        evidence = 6;
-    }
-    repeated Field fields = 2;
+    repeated BlockField fields = 2;
     bool failed_txs = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         default: "false"
     }];
