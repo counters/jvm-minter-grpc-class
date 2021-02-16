@@ -216,7 +216,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/PriceVotesResponse"
+              "$ref": "#/definitions/BlocksResponse"
             }
           },
           "default": {
@@ -2598,6 +2598,17 @@
         },
         "signed": {
           "type": "boolean"
+        }
+      }
+    },
+    "BlocksResponse": {
+      "type": "object",
+      "properties": {
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BlockResponse"
+          }
         }
       }
     },

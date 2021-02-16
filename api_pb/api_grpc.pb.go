@@ -152,7 +152,7 @@ type ApiServiceClient interface {
 	// Blocks
 	//
 	//
-	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error)
+	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error)
 }
 
 type apiServiceClient struct {
@@ -474,8 +474,8 @@ func (c *apiServiceClient) PriceVotes(ctx context.Context, in *PriceVotesRequest
 	return out, nil
 }
 
-func (c *apiServiceClient) Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error) {
-	out := new(PriceVotesResponse)
+func (c *apiServiceClient) Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error) {
+	out := new(BlocksResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Blocks", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -621,7 +621,7 @@ type ApiServiceServer interface {
 	// Blocks
 	//
 	//
-	Blocks(context.Context, *BlocksRequest) (*PriceVotesResponse, error)
+	Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -725,7 +725,7 @@ func (UnimplementedApiServiceServer) PriceCommission(context.Context, *PriceComm
 func (UnimplementedApiServiceServer) PriceVotes(context.Context, *PriceVotesRequest) (*PriceVotesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PriceVotes not implemented")
 }
-func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*PriceVotesResponse, error) {
+func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Blocks not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
