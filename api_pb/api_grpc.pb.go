@@ -149,6 +149,10 @@ type ApiServiceClient interface {
 	//
 	//
 	PriceVotes(ctx context.Context, in *PriceVotesRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error)
+	// Blocks
+	//
+	//
+	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error)
 }
 
 type apiServiceClient struct {
@@ -470,6 +474,15 @@ func (c *apiServiceClient) PriceVotes(ctx context.Context, in *PriceVotesRequest
 	return out, nil
 }
 
+func (c *apiServiceClient) Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error) {
+	out := new(PriceVotesResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Blocks", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -605,6 +618,10 @@ type ApiServiceServer interface {
 	//
 	//
 	PriceVotes(context.Context, *PriceVotesRequest) (*PriceVotesResponse, error)
+	// Blocks
+	//
+	//
+	Blocks(context.Context, *BlocksRequest) (*PriceVotesResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -707,6 +724,9 @@ func (UnimplementedApiServiceServer) PriceCommission(context.Context, *PriceComm
 }
 func (UnimplementedApiServiceServer) PriceVotes(context.Context, *PriceVotesRequest) (*PriceVotesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PriceVotes not implemented")
+}
+func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*PriceVotesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Blocks not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1300,6 +1320,24 @@ func _ApiService_PriceVotes_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_Blocks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BlocksRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).Blocks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/Blocks",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).Blocks(ctx, req.(*BlocksRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _ApiService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api_pb.ApiService",
 	HandlerType: (*ApiServiceServer)(nil),
@@ -1427,6 +1465,10 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PriceVotes",
 			Handler:    _ApiService_PriceVotes_Handler,
+		},
+		{
+			MethodName: "Blocks",
+			Handler:    _ApiService_Blocks_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

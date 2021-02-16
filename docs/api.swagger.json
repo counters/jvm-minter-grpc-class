@@ -208,6 +208,80 @@
         ]
       }
     },
+    "/blocks": {
+      "get": {
+        "summary": "Blocks",
+        "operationId": "Blocks",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PriceVotesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "from_height",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "to_height",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "transactions",
+                "missed",
+                "block_reward",
+                "size",
+                "proposer",
+                "validators",
+                "evidence"
+              ]
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "failed_txs",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
     "/candidate/{public_key}": {
       "get": {
         "summary": "Candidate",
@@ -1944,19 +2018,6 @@
         }
       }
     },
-    "BlockRequestField": {
-      "type": "string",
-      "enum": [
-        "transactions",
-        "missed",
-        "block_reward",
-        "size",
-        "proposer",
-        "validators",
-        "evidence"
-      ],
-      "default": "transactions"
-    },
     "CandidatesRequestCandidateStatus": {
       "type": "string",
       "enum": [
@@ -2454,6 +2515,19 @@
           "type": "string"
         }
       }
+    },
+    "BlockField": {
+      "type": "string",
+      "enum": [
+        "transactions",
+        "missed",
+        "block_reward",
+        "size",
+        "proposer",
+        "validators",
+        "evidence"
+      ],
+      "default": "transactions"
     },
     "BlockResponse": {
       "type": "object",
