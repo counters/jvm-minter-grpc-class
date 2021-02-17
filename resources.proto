@@ -612,9 +612,7 @@ message EstimateCoinBuyRequest {
         string coin_commission = 10;
     }
     SwapFrom swap_from = 8;
-    repeated uint64 route = 11 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    repeated uint64 route = 11;
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
@@ -648,9 +646,7 @@ message EstimateCoinSellRequest {
         string coin_commission = 10;
     }
     SwapFrom swap_from = 8;
-    repeated uint64 route = 11 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    repeated uint64 route = 11;
 }
 message EstimateCoinSellResponse {
     string will_get = 1;
@@ -682,10 +678,7 @@ message EstimateCoinSellAllRequest {
         type: INTEGER
     }];
     SwapFrom swap_from = 8;
-
-    repeated uint64 route = 11 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
-    }];
+    repeated uint64 route = 11;
 }
 message EstimateCoinSellAllResponse {
     string will_get = 1;
