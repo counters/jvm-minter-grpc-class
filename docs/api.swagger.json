@@ -606,11 +606,12 @@
             "name": "route",
             "in": "query",
             "required": false,
-            "type": "integer",
+            "type": "array",
             "items": {
               "type": "string",
               "format": "uint64"
-            }
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -715,11 +716,12 @@
             "name": "route",
             "in": "query",
             "required": false,
-            "type": "integer",
+            "type": "array",
             "items": {
               "type": "string",
               "format": "uint64"
-            }
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -819,11 +821,12 @@
             "name": "route",
             "in": "query",
             "required": false,
-            "type": "integer",
+            "type": "array",
             "items": {
               "type": "string",
               "format": "uint64"
-            }
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
