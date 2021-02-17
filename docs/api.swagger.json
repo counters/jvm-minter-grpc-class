@@ -601,6 +601,17 @@
               "pool"
             ],
             "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -700,6 +711,17 @@
               "pool"
             ],
             "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -794,6 +816,17 @@
               "pool"
             ],
             "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
