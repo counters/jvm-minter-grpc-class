@@ -3090,11 +3090,9 @@
         "edit_multisig": {
           "type": "string"
         },
-        "price_vote": {
-          "type": "string"
-        },
         "edit_candidate_public_key": {
-          "type": "string"
+          "type": "string",
+          "title": "string price_vote = 24;"
         },
         "create_swap_pool": {
           "type": "string"
@@ -3108,11 +3106,9 @@
         "edit_candidate_commission": {
           "type": "string"
         },
-        "move_stake": {
-          "type": "string"
-        },
         "mint_token": {
-          "type": "string"
+          "type": "string",
+          "title": "string move_stake = 29;"
         },
         "burn_token": {
           "type": "string"
