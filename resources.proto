@@ -90,13 +90,13 @@ message PriceCommissionResponse {
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
     string edit_multisig = 23;
-    string price_vote = 24;
+//    string price_vote = 24;
     string edit_candidate_public_key = 25;
     string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
-    string move_stake = 29;
+//    string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
     string vote_commission = 31;
@@ -912,9 +912,9 @@ message EditMultisigData {
     repeated string addresses = 3;
 }
 
-message PriceVoteData {
-    string price = 1;
-}
+//message PriceVoteData {
+//    string price = 1;
+//}
 
 message EditCandidatePublicKeyData {
     string pub_key = 1;
@@ -965,12 +965,12 @@ message EditCandidateCommission {
     uint64 commission = 2;
 }
 
-message MoveStakeData {
-    string from = 1;
-    string to = 2;
-    Coin coin = 3;
-    string stake = 4;
-}
+//message MoveStakeData {
+//    string from = 1;
+//    string to = 2;
+//    Coin coin = 3;
+//    string stake = 4;
+//}
 
 message MintTokenData {
     Coin coin = 1;
@@ -1037,13 +1037,13 @@ message VoteCommissionData {
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
     string edit_multisig = 23;
-    string price_vote = 24;
+//    string price_vote = 24;
     string edit_candidate_public_key = 25;
     string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
-    string move_stake = 29;
+//    string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
     string vote_commission = 31;
