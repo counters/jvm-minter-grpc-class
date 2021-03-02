@@ -1977,6 +1977,159 @@
         }
       }
     },
+    "AppStateCommission": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "payload_byte": {
+          "type": "string"
+        },
+        "send": {
+          "type": "string"
+        },
+        "buy_bancor": {
+          "type": "string"
+        },
+        "sell_bancor": {
+          "type": "string"
+        },
+        "sell_all_bancor": {
+          "type": "string"
+        },
+        "buy_pool_base": {
+          "type": "string"
+        },
+        "buy_pool_delta": {
+          "type": "string"
+        },
+        "sell_pool_base": {
+          "type": "string"
+        },
+        "sell_pool_delta": {
+          "type": "string"
+        },
+        "sell_all_pool_base": {
+          "type": "string"
+        },
+        "sell_all_pool_delta": {
+          "type": "string"
+        },
+        "create_ticker3": {
+          "type": "string"
+        },
+        "create_ticker4": {
+          "type": "string"
+        },
+        "create_ticker5": {
+          "type": "string"
+        },
+        "create_ticker6": {
+          "type": "string"
+        },
+        "create_ticker7_10": {
+          "type": "string"
+        },
+        "create_coin": {
+          "type": "string"
+        },
+        "create_token": {
+          "type": "string"
+        },
+        "recreate_coin": {
+          "type": "string"
+        },
+        "recreate_token": {
+          "type": "string"
+        },
+        "declare_candidacy": {
+          "type": "string"
+        },
+        "delegate": {
+          "type": "string"
+        },
+        "unbond": {
+          "type": "string"
+        },
+        "redeem_check": {
+          "type": "string"
+        },
+        "set_candidate_on": {
+          "type": "string"
+        },
+        "set_candidate_off": {
+          "type": "string"
+        },
+        "create_multisig": {
+          "type": "string"
+        },
+        "multisend_base": {
+          "type": "string"
+        },
+        "multisend_delta": {
+          "type": "string"
+        },
+        "edit_candidate": {
+          "type": "string"
+        },
+        "set_halt_block": {
+          "type": "string"
+        },
+        "edit_ticker_owner": {
+          "type": "string"
+        },
+        "edit_multisig": {
+          "type": "string"
+        },
+        "edit_candidate_public_key": {
+          "type": "string"
+        },
+        "create_swap_pool": {
+          "type": "string"
+        },
+        "add_liquidity": {
+          "type": "string"
+        },
+        "remove_liquidity": {
+          "type": "string"
+        },
+        "edit_candidate_commission": {
+          "type": "string"
+        },
+        "mint_token": {
+          "type": "string"
+        },
+        "burn_token": {
+          "type": "string"
+        },
+        "vote_commission": {
+          "type": "string"
+        },
+        "vote_update": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateCommissionVote": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commission": {
+          "$ref": "#/definitions/AppStateCommission"
+        }
+      }
+    },
     "AppStateFrozenFund": {
       "type": "object",
       "properties": {
@@ -2012,6 +2165,29 @@
         },
         "candidate_key": {
           "type": "string"
+        }
+      }
+    },
+    "AppStatePool": {
+      "type": "object",
+      "properties": {
+        "coin0": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin1": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reserve0": {
+          "type": "string"
+        },
+        "reserve1": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2244,6 +2420,24 @@
             "$ref": "#/definitions/AppStateHaltBlock"
           }
         },
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStatePool"
+          }
+        },
+        "commissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCommission"
+          }
+        },
+        "commission_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCommissionVote"
+          }
+        },
         "used_checks": {
           "type": "array",
           "items": {
@@ -2291,6 +2485,12 @@
         },
         "owner_address": {
           "type": "string"
+        },
+        "mintable": {
+          "type": "boolean"
+        },
+        "burnable": {
+          "type": "boolean"
         }
       }
     },
@@ -3091,8 +3291,7 @@
           "type": "string"
         },
         "edit_candidate_public_key": {
-          "type": "string",
-          "title": "string price_vote = 24;"
+          "type": "string"
         },
         "create_swap_pool": {
           "type": "string"
@@ -3107,8 +3306,7 @@
           "type": "string"
         },
         "mint_token": {
-          "type": "string",
-          "title": "string move_stake = 29;"
+          "type": "string"
         },
         "burn_token": {
           "type": "string"
