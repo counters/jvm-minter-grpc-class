@@ -2426,11 +2426,8 @@
             "$ref": "#/definitions/AppStatePool"
           }
         },
-        "commissions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AppStateCommission"
-          }
+        "commission": {
+          "$ref": "#/definitions/AppStateCommission"
         },
         "commission_votes": {
           "type": "array",
