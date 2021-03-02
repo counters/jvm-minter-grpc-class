@@ -372,7 +372,7 @@ message GenesisResponse {
             string vote_commission = 31;
             string vote_update = 32;
         }
-        repeated Commission commissions = 16;
+        Commission commission = 16;
 
         message CommissionVote {
             uint64 height = 1;
