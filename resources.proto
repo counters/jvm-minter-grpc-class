@@ -90,13 +90,11 @@ message PriceCommissionResponse {
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
     string edit_multisig = 23;
-//    string price_vote = 24;
     string edit_candidate_public_key = 25;
     string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
-//    string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
     string vote_commission = 31;
@@ -274,6 +272,8 @@ message GenesisResponse {
             string max_supply = 6;
             uint64 version = 7;
             google.protobuf.StringValue owner_address = 8;
+            bool mintable = 10;
+            bool burnable = 11;
         }
         repeated Coin coins = 5;
 
@@ -317,6 +317,69 @@ message GenesisResponse {
             string candidate_key = 2;
         }
         repeated HaltBlock halt_blocks = 12;
+
+        message Pool {
+            uint64 coin0 = 1;
+            uint64 coin1 = 2;
+            string reserve0 = 3;
+            string reserve1 = 4;
+            uint64 id = 5;
+        }
+        repeated Pool pools = 15;
+
+        message Commission {
+            uint64 coin = 3;
+            string payload_byte = 4;
+            string send = 5;
+            string buy_bancor = 38;
+            string sell_bancor = 39;
+            string sell_all_bancor = 40;
+            string buy_pool_base = 41;
+            string buy_pool_delta = 53;
+            string sell_pool_base = 42;
+            string sell_pool_delta = 54;
+            string sell_all_pool_base = 43;
+            string sell_all_pool_delta = 55;
+            string create_ticker3 = 7;
+            string create_ticker4 = 8;
+            string create_ticker5 = 9;
+            string create_ticker6 = 10;
+            string create_ticker7_10 = 11;
+            string create_coin = 34;
+            string create_token = 35;
+            string recreate_coin = 36;
+            string recreate_token = 37;
+            string declare_candidacy = 13;
+            string delegate = 14;
+            string unbond = 15;
+            string redeem_check = 16;
+            string set_candidate_on = 44;
+            string set_candidate_off = 45;
+            string create_multisig = 18;
+            string multisend_base = 51;
+            string multisend_delta = 52;
+            string edit_candidate = 20;
+            string set_halt_block = 21;
+            string edit_ticker_owner = 22;
+            string edit_multisig = 23;
+            string edit_candidate_public_key = 25;
+            string create_swap_pool = 48;
+            string add_liquidity = 49;
+            string remove_liquidity = 50;
+            string edit_candidate_commission = 28;
+            string mint_token = 46;
+            string burn_token = 47;
+            string vote_commission = 31;
+            string vote_update = 32;
+        }
+        repeated Commission commissions = 16;
+
+        message CommissionVote {
+            uint64 height = 1;
+            repeated string votes = 2;
+            Commission commission = 3;
+        }
+        repeated CommissionVote commission_votes = 17;
 
         repeated string used_checks = 11;
         uint64 max_gas = 7;
@@ -912,10 +975,6 @@ message EditMultisigData {
     repeated string addresses = 3;
 }
 
-//message PriceVoteData {
-//    string price = 1;
-//}
-
 message EditCandidatePublicKeyData {
     string pub_key = 1;
     string new_pub_key = 2;
@@ -964,13 +1023,6 @@ message EditCandidateCommission {
     string pub_key = 1;
     uint64 commission = 2;
 }
-
-//message MoveStakeData {
-//    string from = 1;
-//    string to = 2;
-//    Coin coin = 3;
-//    string stake = 4;
-//}
 
 message MintTokenData {
     Coin coin = 1;
@@ -1037,13 +1089,11 @@ message VoteCommissionData {
     string set_halt_block = 21;
     string edit_ticker_owner = 22;
     string edit_multisig = 23;
-//    string price_vote = 24;
     string edit_candidate_public_key = 25;
     string create_swap_pool = 48;
     string add_liquidity = 49;
     string remove_liquidity = 50;
     string edit_candidate_commission = 28;
-//    string move_stake = 29;
     string mint_token = 46;
     string burn_token = 47;
     string vote_commission = 31;
