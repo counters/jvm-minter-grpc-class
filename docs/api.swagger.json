@@ -2029,6 +2029,9 @@
         "create_ticker6": {
           "type": "string"
         },
+        "create_ticker7_10": {
+          "type": "string"
+        },
         "create_coin": {
           "type": "string"
         },
@@ -3228,6 +3231,9 @@
           "type": "string"
         },
         "create_ticker6": {
+          "type": "string"
+        },
+        "create_ticker7_10": {
           "type": "string"
         },
         "create_coin": {
