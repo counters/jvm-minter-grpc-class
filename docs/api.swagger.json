@@ -3471,8 +3471,7 @@
           "$ref": "#/definitions/Coin"
         },
         "type": {
-          "type": "string",
-          "format": "byte"
+          "type": "string"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"
