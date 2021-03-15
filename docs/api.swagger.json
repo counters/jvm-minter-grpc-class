@@ -3472,7 +3472,7 @@
         },
         "type": {
           "type": "string",
-          "format": "uint64"
+          "format": "byte"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"
