@@ -1637,7 +1637,7 @@ func local_request_ApiService_VersionNetwork_0(ctx context.Context, marshaler ru
 }
 
 var (
-	filter_ApiService_CommissionVotes_0 = &utilities.DoubleArray{Encoding: map[string]int{"height": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+	filter_ApiService_CommissionVotes_0 = &utilities.DoubleArray{Encoding: map[string]int{"target_version": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
 )
 
 func request_ApiService_CommissionVotes_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1651,14 +1651,14 @@ func request_ApiService_CommissionVotes_0(ctx context.Context, marshaler runtime
 		_   = err
 	)
 
-	val, ok = pathParams["height"]
+	val, ok = pathParams["target_version"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "height")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "target_version")
 	}
 
-	protoReq.Height, err = runtime.Uint64(val)
+	protoReq.TargetVersion, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "height", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "target_version", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1684,14 +1684,14 @@ func local_request_ApiService_CommissionVotes_0(ctx context.Context, marshaler r
 		_   = err
 	)
 
-	val, ok = pathParams["height"]
+	val, ok = pathParams["target_version"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "height")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "target_version")
 	}
 
-	protoReq.Height, err = runtime.Uint64(val)
+	protoReq.TargetVersion, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "height", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "target_version", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1707,7 +1707,7 @@ func local_request_ApiService_CommissionVotes_0(ctx context.Context, marshaler r
 }
 
 var (
-	filter_ApiService_UpdateVotes_0 = &utilities.DoubleArray{Encoding: map[string]int{"height": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+	filter_ApiService_UpdateVotes_0 = &utilities.DoubleArray{Encoding: map[string]int{"target_version": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
 )
 
 func request_ApiService_UpdateVotes_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1721,14 +1721,14 @@ func request_ApiService_UpdateVotes_0(ctx context.Context, marshaler runtime.Mar
 		_   = err
 	)
 
-	val, ok = pathParams["height"]
+	val, ok = pathParams["target_version"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "height")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "target_version")
 	}
 
-	protoReq.Height, err = runtime.Uint64(val)
+	protoReq.TargetVersion, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "height", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "target_version", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1754,14 +1754,14 @@ func local_request_ApiService_UpdateVotes_0(ctx context.Context, marshaler runti
 		_   = err
 	)
 
-	val, ok = pathParams["height"]
+	val, ok = pathParams["target_version"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "height")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "target_version")
 	}
 
-	protoReq.Height, err = runtime.Uint64(val)
+	protoReq.TargetVersion, err = runtime.Uint64(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "height", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "target_version", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -3461,9 +3461,9 @@ var (
 
 	pattern_ApiService_VersionNetwork_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"version_network"}, ""))
 
-	pattern_ApiService_CommissionVotes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"commission_votes", "height"}, ""))
+	pattern_ApiService_CommissionVotes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"commission_votes", "target_version"}, ""))
 
-	pattern_ApiService_UpdateVotes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"update_votes", "height"}, ""))
+	pattern_ApiService_UpdateVotes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"update_votes", "target_version"}, ""))
 
 	pattern_ApiService_Blocks_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"blocks"}, ""))
 )

@@ -73,11 +73,11 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           }
         ],
         "tags": [
-          "ApiService"
+          "Balance"
         ]
       }
     },
@@ -132,11 +132,11 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           }
         ],
         "tags": [
-          "ApiService"
+          "Balance"
         ]
       }
     },
@@ -200,11 +200,11 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -274,11 +274,11 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -332,11 +332,11 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           }
         ],
         "tags": [
-          "ApiService"
+          "Validator"
         ]
       }
     },
@@ -383,7 +383,7 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           },
           {
             "name": "not_show_stakes",
@@ -391,7 +391,7 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "default": false
+            "default": "false"
           },
           {
             "name": "status",
@@ -408,7 +408,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Validator"
         ]
       }
     },
@@ -456,7 +456,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -505,11 +505,11 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
-    "/commission_votes/{height}": {
+    "/commission_votes/{target_version}": {
       "get": {
         "summary": "CommissionVotes",
         "operationId": "CommissionVotes",
@@ -538,14 +538,14 @@
         },
         "parameters": [
           {
-            "name": "height",
+            "name": "target_version",
             "in": "path",
             "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
-            "name": "target_version",
+            "name": "height",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -553,7 +553,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Vote"
         ]
       }
     },
@@ -663,7 +663,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -773,7 +773,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -844,7 +844,7 @@
             "required": false,
             "type": "integer",
             "format": "uint64",
-            "default": 1
+            "default": "1"
           },
           {
             "name": "height",
@@ -878,7 +878,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -926,7 +926,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Price"
         ]
       }
     },
@@ -979,7 +979,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Event"
         ]
       }
     },
@@ -1027,7 +1027,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Balance"
         ]
       }
     },
@@ -1060,7 +1060,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1102,7 +1102,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Vote"
         ]
       }
     },
@@ -1144,7 +1144,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Price"
         ]
       }
     },
@@ -1177,7 +1177,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Price"
         ]
       }
     },
@@ -1225,7 +1225,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Validator"
         ]
       }
     },
@@ -1258,7 +1258,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1299,7 +1299,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Price"
         ]
       }
     },
@@ -1342,7 +1342,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ],
         "externalDocs": {
           "description": "More about Minter transactions",
@@ -1387,7 +1387,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ],
         "externalDocs": {
           "description": "More about Minter transactions",
@@ -1424,7 +1424,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1475,7 +1475,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "WebSockets"
         ]
       }
     },
@@ -1530,7 +1530,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -1591,7 +1591,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Coin"
         ]
       }
     },
@@ -1624,7 +1624,7 @@
           }
         },
         "tags": [
-          "ApiService"
+          "Test"
         ]
       }
     },
@@ -1665,7 +1665,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1710,7 +1710,7 @@
             "required": false,
             "type": "integer",
             "format": "int32",
-            "default": 1
+            "default": "1"
           },
           {
             "name": "per_page",
@@ -1718,11 +1718,11 @@
             "required": false,
             "type": "integer",
             "format": "int32",
-            "default": 30
+            "default": "30"
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1761,15 +1761,15 @@
             "required": false,
             "type": "integer",
             "format": "int32",
-            "default": 30
+            "default": "30"
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
-    "/update_votes/{height}": {
+    "/update_votes/{target_version}": {
       "get": {
         "summary": "UpdateVotes",
         "operationId": "UpdateVotes",
@@ -1798,14 +1798,14 @@
         },
         "parameters": [
           {
-            "name": "height",
+            "name": "target_version",
             "in": "path",
             "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
-            "name": "target_version",
+            "name": "height",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -1813,7 +1813,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Vote"
         ]
       }
     },
@@ -1855,7 +1855,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Validator"
         ]
       }
     },
@@ -1896,7 +1896,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Blockchain"
         ]
       }
     },
@@ -1950,7 +1950,7 @@
           }
         ],
         "tags": [
-          "ApiService"
+          "Balance"
         ]
       }
     }
