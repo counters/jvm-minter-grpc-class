@@ -37,7 +37,10 @@ message BlocksResponse {
 }
 
 message CommissionVotesRequest {
-    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    uint64 target_version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
 }
@@ -51,9 +54,13 @@ message CommissionVotesResponse {
 }
 
 message UpdateVotesRequest {
-    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    uint64 target_version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+
 }
 
 message UpdateVotesResponse {

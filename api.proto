@@ -354,7 +354,7 @@ service ApiService {
     // UpdateVotes
     //
     //
-    rpc UpdateVotes (UpdateVotesRequest) returns (CommissionVotesResponse) {
+    rpc UpdateVotes (UpdateVotesRequest) returns (UpdateVotesResponse) {
         option (google.api.http) = {
             get: "/update_votes/{height}"
         };
