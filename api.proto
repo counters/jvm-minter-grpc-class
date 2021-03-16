@@ -346,7 +346,7 @@ service ApiService {
     //
     rpc CommissionVotes (CommissionVotesRequest) returns (CommissionVotesResponse) {
         option (google.api.http) = {
-            get: "/commission_votes/{height}"
+            get: "/commission_votes/{target_version}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
@@ -356,7 +356,7 @@ service ApiService {
     //
     rpc UpdateVotes (UpdateVotesRequest) returns (UpdateVotesResponse) {
         option (google.api.http) = {
-            get: "/update_votes/{height}"
+            get: "/update_votes/{target_version}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
