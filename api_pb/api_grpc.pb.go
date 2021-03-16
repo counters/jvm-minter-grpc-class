@@ -145,10 +145,18 @@ type ApiServiceClient interface {
 	//
 	//
 	PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error)
-	// PriceVotes
+	// VersionNetwork
 	//
 	//
-	PriceVotes(ctx context.Context, in *PriceVotesRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error)
+	VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error)
+	// CommissionVotes
+	//
+	//
+	CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
+	// UpdateVotes
+	//
+	//
+	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
 	// Blocks
 	//
 	//
@@ -465,9 +473,27 @@ func (c *apiServiceClient) PriceCommission(ctx context.Context, in *PriceCommiss
 	return out, nil
 }
 
-func (c *apiServiceClient) PriceVotes(ctx context.Context, in *PriceVotesRequest, opts ...grpc.CallOption) (*PriceVotesResponse, error) {
-	out := new(PriceVotesResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/PriceVotes", in, out, opts...)
+func (c *apiServiceClient) VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error) {
+	out := new(VersionNetworkResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/VersionNetwork", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error) {
+	out := new(CommissionVotesResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/CommissionVotes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error) {
+	out := new(CommissionVotesResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/UpdateVotes", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -614,10 +640,18 @@ type ApiServiceServer interface {
 	//
 	//
 	PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error)
-	// PriceVotes
+	// VersionNetwork
 	//
 	//
-	PriceVotes(context.Context, *PriceVotesRequest) (*PriceVotesResponse, error)
+	VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error)
+	// CommissionVotes
+	//
+	//
+	CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error)
+	// UpdateVotes
+	//
+	//
+	UpdateVotes(context.Context, *UpdateVotesRequest) (*CommissionVotesResponse, error)
 	// Blocks
 	//
 	//
@@ -722,8 +756,14 @@ func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPool
 func (UnimplementedApiServiceServer) PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PriceCommission not implemented")
 }
-func (UnimplementedApiServiceServer) PriceVotes(context.Context, *PriceVotesRequest) (*PriceVotesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PriceVotes not implemented")
+func (UnimplementedApiServiceServer) VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method VersionNetwork not implemented")
+}
+func (UnimplementedApiServiceServer) CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommissionVotes not implemented")
+}
+func (UnimplementedApiServiceServer) UpdateVotes(context.Context, *UpdateVotesRequest) (*CommissionVotesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateVotes not implemented")
 }
 func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Blocks not implemented")
@@ -1302,20 +1342,56 @@ func _ApiService_PriceCommission_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_PriceVotes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PriceVotesRequest)
+func _ApiService_VersionNetwork_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(VersionNetworkRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).PriceVotes(ctx, in)
+		return srv.(ApiServiceServer).VersionNetwork(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/PriceVotes",
+		FullMethod: "/api_pb.ApiService/VersionNetwork",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).PriceVotes(ctx, req.(*PriceVotesRequest))
+		return srv.(ApiServiceServer).VersionNetwork(ctx, req.(*VersionNetworkRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_CommissionVotes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommissionVotesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).CommissionVotes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/CommissionVotes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).CommissionVotes(ctx, req.(*CommissionVotesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_UpdateVotes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateVotesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).UpdateVotes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/UpdateVotes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).UpdateVotes(ctx, req.(*UpdateVotesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1463,8 +1539,16 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_PriceCommission_Handler,
 		},
 		{
-			MethodName: "PriceVotes",
-			Handler:    _ApiService_PriceVotes_Handler,
+			MethodName: "VersionNetwork",
+			Handler:    _ApiService_VersionNetwork_Handler,
+		},
+		{
+			MethodName: "CommissionVotes",
+			Handler:    _ApiService_CommissionVotes_Handler,
+		},
+		{
+			MethodName: "UpdateVotes",
+			Handler:    _ApiService_UpdateVotes_Handler,
 		},
 		{
 			MethodName: "Blocks",

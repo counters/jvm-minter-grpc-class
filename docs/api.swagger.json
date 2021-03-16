@@ -509,6 +509,47 @@
         ]
       }
     },
+    "/commission_votes/{height}": {
+      "get": {
+        "summary": "CommissionVotes",
+        "operationId": "CommissionVotes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CommissionVotesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Vote"
+        ]
+      }
+    },
     "/estimate_coin_buy": {
       "get": {
         "summary": "EstimateCoinBuy",
@@ -1255,47 +1296,6 @@
         ]
       }
     },
-    "/price_votes/{height}": {
-      "get": {
-        "summary": "PriceVotes",
-        "operationId": "PriceVotes",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/PriceVotesResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody",
-              "example": {
-                "error": {
-                  "code": "504",
-                  "message": "context deadline exceeded",
-                  "data": {
-                    "operation": "ABC"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "height",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uint64"
-          }
-        ],
-        "tags": [
-          "Vote"
-        ]
-      }
-    },
     "/send_transaction": {
       "post": {
         "summary": "SendTransaction",
@@ -1762,6 +1762,47 @@
         ]
       }
     },
+    "/update_votes/{height}": {
+      "get": {
+        "summary": "UpdateVotes",
+        "operationId": "UpdateVotes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CommissionVotesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Vote"
+        ]
+      }
+    },
     "/validators": {
       "get": {
         "summary": "Validators",
@@ -1801,6 +1842,47 @@
         ],
         "tags": [
           "Validator"
+        ]
+      }
+    },
+    "/version_network": {
+      "get": {
+        "summary": "VersionNetwork",
+        "operationId": "VersionNetwork",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/VersionNetworkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Blockchain"
         ]
       }
     },
@@ -2600,20 +2682,6 @@
         }
       }
     },
-    "PriceVotesResponseVote": {
-      "type": "object",
-      "properties": {
-        "price": {
-          "$ref": "#/definitions/PriceCommissionResponse"
-        },
-        "public_keys": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "SubscribeResponseEvent": {
       "type": "object",
       "properties": {
@@ -2987,6 +3055,31 @@
         }
       }
     },
+    "CommissionVotesResponse": {
+      "type": "object",
+      "properties": {
+        "price_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommissionVotesResponseVote"
+          }
+        }
+      }
+    },
+    "CommissionVotesResponseVote": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "$ref": "#/definitions/PriceCommissionResponse"
+        },
+        "public_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "ErrorBody": {
       "type": "object",
       "properties": {
@@ -3316,17 +3409,6 @@
         }
       }
     },
-    "PriceVotesResponse": {
-      "type": "object",
-      "properties": {
-        "price_votes": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/PriceVotesResponseVote"
-          }
-        }
-      }
-    },
     "SendTransactionRequest": {
       "type": "object",
       "properties": {
@@ -3553,6 +3635,14 @@
         "voting_power": {
           "type": "string",
           "format": "uint64"
+        }
+      }
+    },
+    "VersionNetworkResponse": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
         }
       }
     },
