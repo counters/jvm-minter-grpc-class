@@ -3058,7 +3058,7 @@
     "CommissionVotesResponse": {
       "type": "object",
       "properties": {
-        "price_votes": {
+        "votes": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/CommissionVotesResponseVote"
