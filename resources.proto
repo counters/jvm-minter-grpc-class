@@ -36,18 +36,42 @@ message BlocksResponse {
     repeated BlockResponse blocks = 1;
 }
 
-message PriceVotesRequest {
+message CommissionVotesRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
 }
 
-message PriceVotesResponse {
+message CommissionVotesResponse {
     message Vote {
         PriceCommissionResponse price = 2;
         repeated string public_keys = 1;
     }
     repeated Vote price_votes = 1;
+}
+
+message UpdateVotesRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
+message UpdateVotesResponse {
+    message Vote {
+        string version = 2;
+        repeated string public_keys = 1;
+    }
+    repeated Vote update_votes = 1;
+}
+
+message VersionNetworkRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
+message VersionNetworkResponse {
+    string version = 3;
 }
 
 message PriceCommissionRequest {

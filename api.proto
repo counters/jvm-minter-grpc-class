@@ -331,12 +331,32 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
-    // PriceVotes
+    // VersionNetwork
     //
     //
-    rpc PriceVotes (PriceVotesRequest) returns (PriceVotesResponse) {
+    rpc VersionNetwork (VersionNetworkRequest) returns (VersionNetworkResponse) {
         option (google.api.http) = {
-            get: "/price_votes/{height}"
+            get: "/version_network"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
+    }
+
+    // CommissionVotes
+    //
+    //
+    rpc CommissionVotes (CommissionVotesRequest) returns (CommissionVotesResponse) {
+        option (google.api.http) = {
+            get: "/commission_votes/{height}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
+    }
+
+    // UpdateVotes
+    //
+    //
+    rpc UpdateVotes (UpdateVotesRequest) returns (CommissionVotesResponse) {
+        option (google.api.http) = {
+            get: "/update_votes/{height}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";
     }
