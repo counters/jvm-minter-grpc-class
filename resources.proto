@@ -47,7 +47,7 @@ message CommissionVotesResponse {
         PriceCommissionResponse price = 2;
         repeated string public_keys = 1;
     }
-    repeated Vote price_votes = 1;
+    repeated Vote votes = 1;
 }
 
 message UpdateVotesRequest {
@@ -61,7 +61,7 @@ message UpdateVotesResponse {
         string version = 2;
         repeated string public_keys = 1;
     }
-    repeated Vote update_votes = 1;
+    repeated Vote votes = 1;
 }
 
 message VersionNetworkRequest {
