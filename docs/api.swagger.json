@@ -543,6 +543,13 @@
             "required": true,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "target_version",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
           }
         ],
         "tags": [
@@ -1770,7 +1777,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/CommissionVotesResponse"
+              "$ref": "#/definitions/UpdateVotesResponse"
             }
           },
           "default": {
@@ -1795,6 +1802,13 @@
             "in": "path",
             "required": true,
             "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "target_version",
+            "in": "query",
+            "required": false,
+            "type": "integer",
             "format": "uint64"
           }
         ],
@@ -3608,6 +3622,31 @@
           "format": "uint64"
         },
         "transactions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UpdateVotesResponse": {
+      "type": "object",
+      "properties": {
+        "votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UpdateVotesResponseVote"
+          }
+        }
+      }
+    },
+    "UpdateVotesResponseVote": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "public_keys": {
           "type": "array",
           "items": {
             "type": "string"

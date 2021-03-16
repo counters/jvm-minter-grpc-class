@@ -156,7 +156,7 @@ type ApiServiceClient interface {
 	// UpdateVotes
 	//
 	//
-	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
+	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error)
 	// Blocks
 	//
 	//
@@ -491,8 +491,8 @@ func (c *apiServiceClient) CommissionVotes(ctx context.Context, in *CommissionVo
 	return out, nil
 }
 
-func (c *apiServiceClient) UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error) {
-	out := new(CommissionVotesResponse)
+func (c *apiServiceClient) UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error) {
+	out := new(UpdateVotesResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/UpdateVotes", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -651,7 +651,7 @@ type ApiServiceServer interface {
 	// UpdateVotes
 	//
 	//
-	UpdateVotes(context.Context, *UpdateVotesRequest) (*CommissionVotesResponse, error)
+	UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error)
 	// Blocks
 	//
 	//
@@ -762,7 +762,7 @@ func (UnimplementedApiServiceServer) VersionNetwork(context.Context, *VersionNet
 func (UnimplementedApiServiceServer) CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommissionVotes not implemented")
 }
-func (UnimplementedApiServiceServer) UpdateVotes(context.Context, *UpdateVotesRequest) (*CommissionVotesResponse, error) {
+func (UnimplementedApiServiceServer) UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateVotes not implemented")
 }
 func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error) {
