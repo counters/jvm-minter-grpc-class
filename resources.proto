@@ -72,12 +72,10 @@ message UpdateVotesResponse {
 }
 
 message VersionNetworkRequest {
-    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
-    }];
 }
 
 message VersionNetworkResponse {
+    string current = 1;
     message Version {
         string name = 1;
         uint64 height = 2;
