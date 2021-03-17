@@ -320,6 +320,8 @@ message GenesisResponse {
         }
         repeated FrozenFund frozen_funds = 6;
 
+        repeated string block_list_candidates = 18;
+
         message Waitlist {
             uint64 candidate_id = 1;
             string owner = 2;
