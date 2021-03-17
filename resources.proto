@@ -645,7 +645,8 @@ message TransactionResponse {
     uint64 gas = 7;
     uint64 gas_price = 8;
     Coin gas_coin = 9;
-    string type = 10;
+    string hex_type = 17;
+    uint64 type = 10;
     google.protobuf.Any data = 11;
     bytes payload = 12;
     bytes service_data = 16;
