@@ -2710,6 +2710,18 @@
         }
       }
     },
+    "VersionNetworkResponseVersion": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
     "WaitListResponseWait": {
       "type": "object",
       "properties": {
@@ -3684,8 +3696,11 @@
     "VersionNetworkResponse": {
       "type": "object",
       "properties": {
-        "version": {
-          "type": "string"
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VersionNetworkResponseVersion"
+          }
         }
       }
     },
