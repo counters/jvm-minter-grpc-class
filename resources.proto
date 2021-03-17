@@ -78,7 +78,11 @@ message VersionNetworkRequest {
 }
 
 message VersionNetworkResponse {
-    string version = 3;
+    message Version {
+        string name = 1;
+        uint64 height = 2;
+    }
+    repeated Version versions = 3;
 }
 
 message PriceCommissionRequest {
