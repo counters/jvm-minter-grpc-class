@@ -2489,6 +2489,12 @@
             "$ref": "#/definitions/AppStateFrozenFund"
           }
         },
+        "block_list_candidates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "waitlist": {
           "type": "array",
           "items": {
