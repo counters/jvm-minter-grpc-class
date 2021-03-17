@@ -3566,7 +3566,7 @@
         "gas_coin": {
           "$ref": "#/definitions/Coin"
         },
-        "hex_type": {
+        "type_hex": {
           "type": "string"
         },
         "type": {
