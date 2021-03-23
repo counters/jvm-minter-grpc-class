@@ -285,7 +285,7 @@
     "/candidate/{public_key}": {
       "get": {
         "summary": "Candidate",
-        "description": "Candidate returns candidate’s info by provided public key.\n\n## Fields of response\n| Name      | Description                  |\n| --------- | ---------------------------- | \n| reward_address | Address where validator’s rewards go to. | \n| owner_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate. | \n| control_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. | \n| total_stake | Total stake of a candidate | \n| public_key | Public key of a candidate | \n| commission | Commission (from 0 to 100) from rewards which delegators will pay to validator | \n| used_slots | Number of occupied steak slots. Note: filled in when request includes_stakes | \n| uniq_users | Number of unique wallets in steaks. Note: filled in when request includes_stakes | \n| min_stake | Smallest steak size. Note: filled in when request includes_stakes | \n| stakes | List of stakes. Note: filled in when request includes_stakes | \n| status | Candidate status. Available values: offline = 1, online = 2 | \n| validator | Is a validator at the current height |",
+        "description": "Candidate returns candidate’s info by provided public key.\n\n## Fields of response\n| Name      | Description                  |\n| --------- | ---------------------------- | \n| reward_address | Address where validator’s rewards go to. | \n| owner_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate. | \n| control_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. | \n| total_stake | Total stake of a candidate | \n| public_key | Public key of a candidate | \n| commission | Commission (from 0 to 100) from rewards which delegators will pay to validator | \n| used_slots | Number of occupied steak slots. Note: filled in when request includes_stakes | \n| uniq_users | Number of unique wallets in steaks. Note: filled in when request includes_stakes | \n| min_stake | Smallest steak size. Note: filled in when request includes_stakes | \n| stakes | List of stakes. Note: filled in when request includes_stakes | \n| status | Candidate status. Available values: offline = 1, online = 2 | \n| validator | Is a validator at the current height | \n| jailed_until |  |",
         "operationId": "Candidate",
         "responses": {
           "200": {
@@ -2990,6 +2990,9 @@
         "validator": {
           "type": "boolean",
           "title": "Is a validator at the current height"
+        },
+        "jailed_until": {
+          "type": "boolean"
         }
       }
     },
