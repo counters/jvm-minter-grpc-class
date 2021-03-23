@@ -571,6 +571,7 @@ message CandidateResponse {
     uint64 status = 6;
     // Is a validator at the current height
     bool validator = 12;
+    bool jailed_until = 13;
 }
 
 message CandidatesRequest {
