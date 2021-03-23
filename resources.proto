@@ -626,6 +626,8 @@ message CoinInfoResponse {
     string reserve_balance = 5;
     string max_supply = 8;
     google.protobuf.StringValue owner_address = 7;
+    bool mintable = 9;
+    bool burnable = 10;
 }
 
 message SendTransactionResponse {
