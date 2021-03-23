@@ -2992,7 +2992,8 @@
           "title": "Is a validator at the current height"
         },
         "jailed_until": {
-          "type": "boolean"
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
