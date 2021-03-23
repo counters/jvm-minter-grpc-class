@@ -3079,6 +3079,12 @@
         },
         "owner_address": {
           "type": "string"
+        },
+        "mintable": {
+          "type": "boolean"
+        },
+        "burnable": {
+          "type": "boolean"
         }
       }
     },
