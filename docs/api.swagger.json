@@ -3479,6 +3479,10 @@
         "network": {
           "type": "string"
         },
+        "initial_height": {
+          "type": "string",
+          "format": "uint64"
+        },
         "latest_block_hash": {
           "type": "string"
         },
