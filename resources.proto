@@ -240,6 +240,7 @@ message StatusResponse {
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
+    string moniker = 13;
 }
 message GenesisResponse {
     string genesis_time = 1;
