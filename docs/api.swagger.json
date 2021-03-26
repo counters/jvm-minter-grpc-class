@@ -3511,6 +3511,9 @@
         },
         "node_id": {
           "type": "string"
+        },
+        "moniker": {
+          "type": "string"
         }
       }
     },
