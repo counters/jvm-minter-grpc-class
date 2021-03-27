@@ -1024,6 +1024,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
           }
         ],
         "tags": [
