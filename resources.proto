@@ -878,6 +878,9 @@ message FrozenRequest {
     google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 message FrozenResponse {
     message Frozen {
