@@ -712,7 +712,6 @@ message EstimateCoinBuyRequest {
     oneof commission {
         uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
             type: INTEGER
-            default: '0'
         }];
         string coin_commission = 10;
     }
@@ -747,7 +746,6 @@ message EstimateCoinSellRequest {
     oneof commission {
         uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
             type: INTEGER
-            default: '0'
         }];
         string coin_commission = 10;
     }
