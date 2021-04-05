@@ -543,6 +543,7 @@ message CandidateRequest {
     }];
 }
 message CandidateResponse {
+    uint64 id = 14;
     // Address where validator’s rewards go to.
     string reward_address = 1;
     // Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
