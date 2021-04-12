@@ -17,6 +17,152 @@ message Coin {
     string symbol = 2;
 }
 
+
+message BlocksRequest {
+    uint64 from_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'from_height'
+        type: INTEGER
+    }];
+    uint64 to_height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'to_height'
+        type: INTEGER
+    }];
+    repeated BlockField fields = 3;
+    bool failed_txs = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
+}
+message BlocksResponse {
+    repeated BlockResponse blocks = 1;
+}
+
+message CommissionVotesRequest {
+    uint64 target_version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
+message CommissionVotesResponse {
+    message Vote {
+        PriceCommissionResponse price = 2;
+        repeated string public_keys = 1;
+    }
+    repeated Vote votes = 1;
+}
+
+message UpdateVotesRequest {
+    uint64 target_version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+
+}
+
+message UpdateVotesResponse {
+    message Vote {
+        string version = 2;
+        repeated string public_keys = 1;
+    }
+    repeated Vote votes = 1;
+}
+
+message VersionNetworkRequest {
+}
+
+message VersionNetworkResponse {
+    string current = 1;
+    message Version {
+        string name = 1;
+        uint64 height = 2;
+    }
+    repeated Version versions = 3;
+}
+
+message PriceCommissionRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message PriceCommissionResponse {
+    Coin coin = 3;
+    string payload_byte = 4;
+    string send = 5;
+    string buy_bancor = 38;
+    string sell_bancor = 39;
+    string sell_all_bancor = 40;
+    string buy_pool_base = 41;
+    string buy_pool_delta = 53;
+    string sell_pool_base = 42;
+    string sell_pool_delta = 54;
+    string sell_all_pool_base = 43;
+    string sell_all_pool_delta = 55;
+    string create_ticker3 = 7;
+    string create_ticker4 = 8;
+    string create_ticker5 = 9;
+    string create_ticker6 = 10;
+    string create_ticker7_10 = 11;
+    string create_coin = 34;
+    string create_token = 35;
+    string recreate_coin = 36;
+    string recreate_token = 37;
+    string declare_candidacy = 13;
+    string delegate = 14;
+    string unbond = 15;
+    string redeem_check = 16;
+    string set_candidate_on = 44;
+    string set_candidate_off = 45;
+    string create_multisig = 18;
+    string multisend_base = 51;
+    string multisend_delta = 52;
+    string edit_candidate = 20;
+    string set_halt_block = 21;
+    string edit_ticker_owner = 22;
+    string edit_multisig = 23;
+    string edit_candidate_public_key = 25;
+    string create_swap_pool = 48;
+    string add_liquidity = 49;
+    string remove_liquidity = 50;
+    string edit_candidate_commission = 28;
+    string mint_token = 46;
+    string burn_token = 47;
+    string vote_commission = 31;
+    string vote_update = 32;
+}
+
+message SwapPoolRequest {
+    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 coin1 = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message SwapPoolResponse {
+    string amount0 = 1;
+    string amount1 = 2;
+    string liquidity = 3;
+}
+message SwapPoolProviderRequest {
+    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 coin1 = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    string provider = 3;
+    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
 message NodeInfo {
     message ProtocolVersion {
         uint64 p2p = 3;
@@ -84,6 +230,7 @@ message NetInfoResponse {
 message StatusResponse {
     string version = 8;
     string network = 11;
+    uint64 initial_height = 12;
     string latest_block_hash = 1;
     string latest_app_hash = 2;
     uint64 latest_block_height = 3;
@@ -93,10 +240,12 @@ message StatusResponse {
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
+    string moniker = 13;
 }
 message GenesisResponse {
     string genesis_time = 1;
     string chain_id = 2;
+    uint64 initial_height = 6;
     message ConsensusParams {
         message Block {
             int64 max_bytes = 1;
@@ -118,8 +267,6 @@ message GenesisResponse {
     string app_hash = 4;
     message AppState {
         string note = 10;
-        uint64 start_height = 1;
-
         message Validators {
             string total_bip_stake = 4;
             string public_key = 1;
@@ -160,6 +307,8 @@ message GenesisResponse {
             string max_supply = 6;
             uint64 version = 7;
             google.protobuf.StringValue owner_address = 8;
+            bool mintable = 10;
+            bool burnable = 11;
         }
         repeated Coin coins = 5;
 
@@ -172,6 +321,8 @@ message GenesisResponse {
             string value = 4;
         }
         repeated FrozenFund frozen_funds = 6;
+
+        repeated string block_list_candidates = 18;
 
         message Waitlist {
             uint64 candidate_id = 1;
@@ -204,6 +355,69 @@ message GenesisResponse {
         }
         repeated HaltBlock halt_blocks = 12;
 
+        message Pool {
+            uint64 coin0 = 1;
+            uint64 coin1 = 2;
+            string reserve0 = 3;
+            string reserve1 = 4;
+            uint64 id = 5;
+        }
+        repeated Pool pools = 15;
+
+        message Commission {
+            uint64 coin = 3;
+            string payload_byte = 4;
+            string send = 5;
+            string buy_bancor = 38;
+            string sell_bancor = 39;
+            string sell_all_bancor = 40;
+            string buy_pool_base = 41;
+            string buy_pool_delta = 53;
+            string sell_pool_base = 42;
+            string sell_pool_delta = 54;
+            string sell_all_pool_base = 43;
+            string sell_all_pool_delta = 55;
+            string create_ticker3 = 7;
+            string create_ticker4 = 8;
+            string create_ticker5 = 9;
+            string create_ticker6 = 10;
+            string create_ticker7_10 = 11;
+            string create_coin = 34;
+            string create_token = 35;
+            string recreate_coin = 36;
+            string recreate_token = 37;
+            string declare_candidacy = 13;
+            string delegate = 14;
+            string unbond = 15;
+            string redeem_check = 16;
+            string set_candidate_on = 44;
+            string set_candidate_off = 45;
+            string create_multisig = 18;
+            string multisend_base = 51;
+            string multisend_delta = 52;
+            string edit_candidate = 20;
+            string set_halt_block = 21;
+            string edit_ticker_owner = 22;
+            string edit_multisig = 23;
+            string edit_candidate_public_key = 25;
+            string create_swap_pool = 48;
+            string add_liquidity = 49;
+            string remove_liquidity = 50;
+            string edit_candidate_commission = 28;
+            string mint_token = 46;
+            string burn_token = 47;
+            string vote_commission = 31;
+            string vote_update = 32;
+        }
+        Commission commission = 16;
+
+        message CommissionVote {
+            uint64 height = 1;
+            repeated string votes = 2;
+            Commission commission = 3;
+        }
+        repeated CommissionVote commission_votes = 17;
+
         repeated string used_checks = 11;
         uint64 max_gas = 7;
         string total_slashed = 8;
@@ -215,20 +429,23 @@ message MinGasPriceResponse {
     uint64 min_gas_price = 3;
 }
 
+enum BlockField {
+    transactions = 0;
+    missed = 1;
+    block_reward = 2;
+    size = 3;
+    proposer = 4;
+    validators = 5;
+    evidence = 6;
+}
 message BlockRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    enum Field {
-        transactions = 0;
-        missed = 1;
-        block_reward = 2;
-        size = 3;
-        proposer = 4;
-        validators = 5;
-        evidence = 6;
-    }
-    repeated Field fields = 2;
+    repeated BlockField fields = 2;
+    bool failed_txs = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message BlockResponse {
     string hash = 1;
@@ -236,24 +453,7 @@ message BlockResponse {
     string time = 3;
     uint64 transaction_count = 4;
 
-    message Transaction {
-        string hash = 1;
-        string raw_tx = 2;
-        string from = 3;
-        uint64 nonce = 4;
-        uint64 gas_price = 5;
-        uint64 type = 6;
-        google.protobuf.Any data = 7;
-        bytes payload = 8;
-        bytes service_data = 9;
-        uint64 gas = 10;
-        Coin gas_coin = 11;
-        map<string, string> tags = 12;
-        uint64 code = 13;
-        string log = 14;
-    }
-
-    repeated Transaction transactions = 6;
+    repeated TransactionResponse transactions = 6;
     string block_reward = 7;
     uint64 size = 8;
     string proposer = 9;
@@ -343,6 +543,7 @@ message CandidateRequest {
     }];
 }
 message CandidateResponse {
+    uint64 id = 14;
     // Address where validator’s rewards go to.
     string reward_address = 1;
     // Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
@@ -373,6 +574,7 @@ message CandidateResponse {
     uint64 status = 6;
     // Is a validator at the current height
     bool validator = 12;
+    uint64 jailed_until = 13;
 }
 
 message CandidatesRequest {
@@ -392,6 +594,7 @@ message CandidatesRequest {
         all = 0;
         off = 1;
         on = 2;
+        validator = 3;
     }
     CandidateStatus status = 3;
 }
@@ -426,6 +629,8 @@ message CoinInfoResponse {
     string reserve_balance = 5;
     string max_supply = 8;
     google.protobuf.StringValue owner_address = 7;
+    bool mintable = 9;
+    bool burnable = 10;
 }
 
 message SendTransactionResponse {
@@ -450,9 +655,11 @@ message TransactionResponse {
     uint64 gas = 7;
     uint64 gas_price = 8;
     Coin gas_coin = 9;
+    string type_hex = 17;
     uint64 type = 10;
     google.protobuf.Any data = 11;
     bytes payload = 12;
+    bytes service_data = 16;
     map<string, string> tags = 13;
     uint64 code = 14;
     string log = 15;
@@ -477,6 +684,13 @@ message TransactionsRequest {
     }];
 }
 
+
+enum SwapFrom {
+    optimal = 0;
+    bancor = 1;
+    pool = 2;
+}
+
 message EstimateCoinBuyRequest {
     oneof buy {
         uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
@@ -496,10 +710,19 @@ message EstimateCoinBuyRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    oneof commission {
+        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }];
+        string coin_commission = 10;
+    }
+    SwapFrom swap_from = 8;
+    repeated uint64 route = 11;
 }
 message EstimateCoinBuyResponse {
     string will_pay = 1;
     string commission = 2;
+    SwapFrom swap_from = 3;
 }
 
 message EstimateCoinSellRequest {
@@ -521,12 +744,20 @@ message EstimateCoinSellRequest {
     uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    oneof commission {
+        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }];
+        string coin_commission = 10;
+    }
+    SwapFrom swap_from = 8;
+    repeated uint64 route = 11;
 }
 message EstimateCoinSellResponse {
     string will_get = 1;
     string commission = 2;
+    SwapFrom swap_from = 3;
 }
-
 
 message EstimateCoinSellAllRequest {
     oneof buy {
@@ -551,14 +782,14 @@ message EstimateCoinSellAllRequest {
     uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    SwapFrom swap_from = 8;
+    repeated uint64 route = 11;
 }
 message EstimateCoinSellAllResponse {
     string will_get = 1;
+    SwapFrom swap_from = 2;
 }
 
-message EstimateTxCommissionResponse {
-    string commission = 1;
-}
 message EstimateTxCommissionRequest {
     string tx = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'tx'
@@ -567,12 +798,15 @@ message EstimateTxCommissionRequest {
         type: INTEGER
     }];
 }
+message EstimateTxCommissionResponse {
+    string commission = 1;
+}
 
 message EventsRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    // Array of public keys of validators and wallet addresses of validators for filtering
+    // Array of public keys of validators and wallet addresses of delegators for filtering
     repeated string search = 2;
 }
 message EventsResponse {
@@ -643,6 +877,9 @@ message HaltsResponse {
 message FrozenRequest {
     string address = 1;
     google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
 }
@@ -783,11 +1020,134 @@ message EditMultisigData {
     repeated string addresses = 3;
 }
 
-message PriceVoteData {
-    string price = 1;
-}
-
 message EditCandidatePublicKeyData {
     string pub_key = 1;
     string new_pub_key = 2;
 }
+
+message CreateSwapPoolData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string volume0 = 3;
+    string volume1 = 4;
+}
+
+message AddLiquidityData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string volume0 = 3;
+    string maximum_volume1 = 4;
+}
+
+message RemoveLiquidityData {
+    Coin coin0 = 1;
+    Coin coin1 = 2;
+    string liquidity = 3;
+    string minimum_volume0 = 4;
+    string minimum_volume1 = 5;
+}
+
+message SellSwapPoolData {
+    repeated Coin coins = 1;
+    string value_to_sell = 2;
+    string minimum_value_to_buy = 4;
+}
+
+message SellAllSwapPoolData {
+    repeated Coin coins = 1;
+    string minimum_value_to_buy = 3;
+}
+
+message BuySwapPoolData {
+    repeated Coin coins = 1;
+    string value_to_buy = 2;
+    string maximum_value_to_sell = 4;
+}
+
+message EditCandidateCommission {
+    string pub_key = 1;
+    uint64 commission = 2;
+}
+
+message MintTokenData {
+    Coin coin = 1;
+    string value = 2;
+}
+
+message BurnTokenData {
+    Coin coin = 1;
+    string value = 2;
+}
+
+message CreateTokenData {
+    string name = 1;
+    string symbol = 2;
+    string initial_amount = 3;
+    string max_supply = 4;
+    bool mintable = 5;
+    bool burnable = 6;
+}
+
+message RecreateTokenData {
+    string name = 1;
+    string symbol = 2;
+    string initial_amount = 3;
+    string max_supply = 4;
+    bool mintable = 5;
+    bool burnable = 6;
+}
+
+message VoteCommissionData {
+    string pub_key = 1;
+    uint64 height = 2;
+    Coin coin = 3;
+    string payload_byte = 4;
+    string send = 5;
+    string buy_bancor = 38;
+    string sell_bancor = 39;
+    string sell_all_bancor = 40;
+    string buy_pool_base = 41;
+    string buy_pool_delta = 53;
+    string sell_pool_base = 42;
+    string sell_pool_delta = 54;
+    string sell_all_pool_base = 43;
+    string sell_all_pool_delta = 55;
+    string create_ticker3 = 7;
+    string create_ticker4 = 8;
+    string create_ticker5 = 9;
+    string create_ticker6 = 10;
+    string create_ticker7_10 = 11;
+    string create_coin = 34;
+    string create_token = 35;
+    string recreate_coin = 36;
+    string recreate_token = 37;
+    string declare_candidacy = 13;
+    string delegate = 14;
+    string unbond = 15;
+    string redeem_check = 16;
+    string set_candidate_on = 44;
+    string set_candidate_off = 45;
+    string create_multisig = 18;
+    string multisend_base = 51;
+    string multisend_delta = 52;
+    string edit_candidate = 20;
+    string set_halt_block = 21;
+    string edit_ticker_owner = 22;
+    string edit_multisig = 23;
+    string edit_candidate_public_key = 25;
+    string create_swap_pool = 48;
+    string add_liquidity = 49;
+    string remove_liquidity = 50;
+    string edit_candidate_commission = 28;
+    string mint_token = 46;
+    string burn_token = 47;
+    string vote_commission = 31;
+    string vote_update = 32;
+}
+
+message VoteUpdateData {
+    string pub_key = 1;
+    uint64 height = 2;
+    string version = 3;
+}
+

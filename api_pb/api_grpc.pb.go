@@ -133,6 +133,34 @@ type ApiServiceClient interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
+	// SwapPool
+	//
+	//
+	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// SwapPoolProvider
+	//
+	//
+	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// PriceCommission
+	//
+	//
+	PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error)
+	// VersionNetwork
+	//
+	//
+	VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error)
+	// CommissionVotes
+	//
+	//
+	CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
+	// UpdateVotes
+	//
+	//
+	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error)
+	// Blocks
+	//
+	//
+	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error)
 }
 
 type apiServiceClient struct {
@@ -418,6 +446,69 @@ func (c *apiServiceClient) TestBlock(ctx context.Context, in *emptypb.Empty, opt
 	return out, nil
 }
 
+func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
+	out := new(SwapPoolResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPool", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
+	out := new(SwapPoolResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolProvider", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error) {
+	out := new(PriceCommissionResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/PriceCommission", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error) {
+	out := new(VersionNetworkResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/VersionNetwork", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error) {
+	out := new(CommissionVotesResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/CommissionVotes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error) {
+	out := new(UpdateVotesResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/UpdateVotes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error) {
+	out := new(BlocksResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Blocks", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -537,6 +628,34 @@ type ApiServiceServer interface {
 	//
 	// TestBlock returns the list of example transactions in block. Available only testnet mode.
 	TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error)
+	// SwapPool
+	//
+	//
+	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
+	// SwapPoolProvider
+	//
+	//
+	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error)
+	// PriceCommission
+	//
+	//
+	PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error)
+	// VersionNetwork
+	//
+	//
+	VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error)
+	// CommissionVotes
+	//
+	//
+	CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error)
+	// UpdateVotes
+	//
+	//
+	UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error)
+	// Blocks
+	//
+	//
+	Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -627,6 +746,27 @@ func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest)
 }
 func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TestBlock not implemented")
+}
+func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
+}
+func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
+}
+func (UnimplementedApiServiceServer) PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PriceCommission not implemented")
+}
+func (UnimplementedApiServiceServer) VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method VersionNetwork not implemented")
+}
+func (UnimplementedApiServiceServer) CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommissionVotes not implemented")
+}
+func (UnimplementedApiServiceServer) UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateVotes not implemented")
+}
+func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Blocks not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1148,6 +1288,132 @@ func _ApiService_TestBlock_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_SwapPool_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).SwapPool(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/SwapPool",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).SwapPool(ctx, req.(*SwapPoolRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_SwapPoolProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolProviderRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).SwapPoolProvider(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/SwapPoolProvider",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).SwapPoolProvider(ctx, req.(*SwapPoolProviderRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_PriceCommission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PriceCommissionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).PriceCommission(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/PriceCommission",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).PriceCommission(ctx, req.(*PriceCommissionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_VersionNetwork_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(VersionNetworkRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).VersionNetwork(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/VersionNetwork",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).VersionNetwork(ctx, req.(*VersionNetworkRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_CommissionVotes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommissionVotesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).CommissionVotes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/CommissionVotes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).CommissionVotes(ctx, req.(*CommissionVotesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_UpdateVotes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateVotesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).UpdateVotes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/UpdateVotes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).UpdateVotes(ctx, req.(*UpdateVotesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_Blocks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BlocksRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).Blocks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/Blocks",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).Blocks(ctx, req.(*BlocksRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _ApiService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api_pb.ApiService",
 	HandlerType: (*ApiServiceServer)(nil),
@@ -1259,6 +1525,34 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "TestBlock",
 			Handler:    _ApiService_TestBlock_Handler,
+		},
+		{
+			MethodName: "SwapPool",
+			Handler:    _ApiService_SwapPool_Handler,
+		},
+		{
+			MethodName: "SwapPoolProvider",
+			Handler:    _ApiService_SwapPoolProvider_Handler,
+		},
+		{
+			MethodName: "PriceCommission",
+			Handler:    _ApiService_PriceCommission_Handler,
+		},
+		{
+			MethodName: "VersionNetwork",
+			Handler:    _ApiService_VersionNetwork_Handler,
+		},
+		{
+			MethodName: "CommissionVotes",
+			Handler:    _ApiService_CommissionVotes_Handler,
+		},
+		{
+			MethodName: "UpdateVotes",
+			Handler:    _ApiService_UpdateVotes_Handler,
+		},
+		{
+			MethodName: "Blocks",
+			Handler:    _ApiService_Blocks_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
