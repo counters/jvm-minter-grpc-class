@@ -2050,6 +2050,14 @@
         "status": {
           "type": "string",
           "format": "int64"
+        },
+        "jailed_until": {
+          "type": "string",
+          "format": "int64"
+        },
+        "last_edit_commission_height": {
+          "type": "string",
+          "format": "int64"
         }
       }
     },
