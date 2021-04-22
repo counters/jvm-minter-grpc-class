@@ -293,6 +293,8 @@ message GenesisResponse {
             repeated Stake stakes = 7;
             repeated Stake updates = 8;
             int64 status = 9;
+            int64 jailed_until = 11;
+            int64 last_edit_commission_height = 12;
         }
 
         repeated Candidate candidates = 3;
