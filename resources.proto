@@ -132,6 +132,7 @@ message PriceCommissionResponse {
     string burn_token = 47;
     string vote_commission = 31;
     string vote_update = 32;
+    string failed_tx = 56;
 }
 
 message SwapPoolRequest {
@@ -410,6 +411,7 @@ message GenesisResponse {
             string burn_token = 47;
             string vote_commission = 31;
             string vote_update = 32;
+            string failed_tx = 56;
         }
         Commission commission = 16;
 
@@ -1145,11 +1147,19 @@ message VoteCommissionData {
     string burn_token = 47;
     string vote_commission = 31;
     string vote_update = 32;
+    string failed_tx = 56;
 }
 
 message VoteUpdateData {
     string pub_key = 1;
     uint64 height = 2;
     string version = 3;
+}
+
+message AddOrderSwapPoolData {
+    Coin coin_to_sell = 1;
+    string value_to_sell = 2;
+    Coin coin_to_buy = 3;
+    string value_to_buy = 4;
 }
 
