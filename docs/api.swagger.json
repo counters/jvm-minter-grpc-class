@@ -2480,6 +2480,9 @@
     "GenesisResponseAppState": {
       "type": "object",
       "properties": {
+        "version": {
+          "type": "string"
+        },
         "note": {
           "type": "string"
         },
