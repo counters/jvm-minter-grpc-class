@@ -267,6 +267,7 @@ message GenesisResponse {
     ConsensusParams consensus_params = 3;
     string app_hash = 4;
     message AppState {
+        string version = 19;
         string note = 10;
         message Validators {
             string total_bip_stake = 4;
