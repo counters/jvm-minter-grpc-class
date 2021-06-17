@@ -2214,6 +2214,12 @@
         },
         "failed_tx": {
           "type": "string"
+        },
+        "add_limit_order": {
+          "type": "string"
+        },
+        "remove_limit_order": {
+          "type": "string"
         }
       }
     },
@@ -3466,6 +3472,12 @@
           "type": "string"
         },
         "failed_tx": {
+          "type": "string"
+        },
+        "add_limit_order": {
+          "type": "string"
+        },
+        "remove_limit_order": {
           "type": "string"
         }
       }
