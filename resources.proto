@@ -132,6 +132,9 @@ message PriceCommissionResponse {
     string burn_token = 47;
     string vote_commission = 31;
     string vote_update = 32;
+    string failed_tx = 56;
+    string add_limit_order = 57;
+    string remove_limit_order = 58;
 }
 
 message SwapPoolRequest {
@@ -266,6 +269,7 @@ message GenesisResponse {
     ConsensusParams consensus_params = 3;
     string app_hash = 4;
     message AppState {
+        string version = 19;
         string note = 10;
         message Validators {
             string total_bip_stake = 4;
@@ -410,6 +414,9 @@ message GenesisResponse {
             string burn_token = 47;
             string vote_commission = 31;
             string vote_update = 32;
+            string failed_tx = 56;
+            string add_limit_order = 57;
+            string remove_limit_order = 58;
         }
         Commission commission = 16;
 
@@ -1145,11 +1152,21 @@ message VoteCommissionData {
     string burn_token = 47;
     string vote_commission = 31;
     string vote_update = 32;
+    string failed_tx = 56;
+    string add_limit_order = 57;
+    string remove_limit_order = 58;
 }
 
 message VoteUpdateData {
     string pub_key = 1;
     uint64 height = 2;
     string version = 3;
+}
+
+message AddOrderSwapPoolData {
+    Coin coin_to_sell = 1;
+    string value_to_sell = 2;
+    Coin coin_to_buy = 3;
+    string value_to_buy = 4;
 }
 
