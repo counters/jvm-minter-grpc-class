@@ -2818,6 +2818,9 @@
         },
         "bip_value": {
           "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
         }
       }
     },
@@ -3283,6 +3286,28 @@
         "missed_blocks_count": {
           "type": "string",
           "format": "int64"
+        }
+      }
+    },
+    "Multisig": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "weights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
