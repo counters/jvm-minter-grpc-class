@@ -541,6 +541,7 @@ message AddressesResponse {
         repeated AddressBalance total = 4;
         uint64 transaction_count = 3;
         string bip_value = 5;
+        Multisig multisig = 7;
     }
     map<string, Result> addresses = 3;
 }
