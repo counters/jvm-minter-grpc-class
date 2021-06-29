@@ -2864,6 +2864,9 @@
         },
         "bip_value": {
           "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
         }
       }
     },
