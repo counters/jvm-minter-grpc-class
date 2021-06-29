@@ -34,3 +34,5 @@ jobs:
           external_repository: MinterTeam/node-gateway-api-v2-doc
           publish_branch: master
           publish_dir: ./Output
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
