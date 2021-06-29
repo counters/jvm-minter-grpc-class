@@ -513,6 +513,12 @@ message AddressResponse {
     repeated AddressBalance total = 4;
     uint64 transaction_count = 2;
     string bip_value = 5;
+    Multisig multisig = 6;
+}
+message Multisig {
+    uint64 threshold = 1;
+    repeated uint64 weights = 2;
+    repeated string addresses = 3;
 }
 
 message AddressesRequest {
