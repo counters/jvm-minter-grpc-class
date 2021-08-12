@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.4",
+    "version": "1.4.1",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -2866,6 +2866,9 @@
         },
         "bip_value": {
           "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
         }
       }
     },
@@ -2909,6 +2912,9 @@
         },
         "bip_value": {
           "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
         }
       }
     },
@@ -3355,6 +3361,28 @@
         "missed_blocks_count": {
           "type": "string",
           "format": "int64"
+        }
+      }
+    },
+    "Multisig": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "weights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
