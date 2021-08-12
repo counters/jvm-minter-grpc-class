@@ -1161,6 +1161,121 @@
         ]
       }
     },
+    "/limit_orders": {
+      "get": {
+        "summary": "LimitOrders",
+        "operationId": "LimitOrders",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrdersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/limit_orders/{sell_coin}/{buy_coin}": {
+      "get": {
+        "summary": "LimitOrderList",
+        "operationId": "LimitOrderList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrderListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "3"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/max_gas_price": {
       "get": {
         "summary": "MaxGasPrice",
@@ -3310,9 +3425,25 @@
         }
       }
     },
+    "LimitOrderListResponse": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        }
+      }
+    },
     "LimitOrderResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "coin_sell": {
           "$ref": "#/definitions/Coin"
         },
@@ -3331,6 +3462,17 @@
         "height": {
           "type": "string",
           "format": "uint64"
+        }
+      }
+    },
+    "LimitOrdersResponse": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
+          }
         }
       }
     },
