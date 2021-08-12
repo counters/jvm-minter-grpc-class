@@ -384,7 +384,7 @@ service ApiService {
     // LimitOrderList
     //
     //
-    rpc LimitOrders (LimitOrderListRequest) returns (LimitOrderListResponse) {
+    rpc LimitOrderList (LimitOrderListRequest) returns (LimitOrderListResponse) {
         option (google.api.http) = {
             get: "/limit_orders/{sell_coin}/{buy_coin}"
         };
