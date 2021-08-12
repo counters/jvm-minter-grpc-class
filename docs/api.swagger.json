@@ -1113,6 +1113,54 @@
         ]
       }
     },
+    "/limit_order/{order_id}": {
+      "get": {
+        "summary": "LimitOrder",
+        "operationId": "LimitOrder",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/max_gas_price": {
       "get": {
         "summary": "MaxGasPrice",
@@ -3253,6 +3301,30 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "LimitOrderResponse": {
+      "type": "object",
+      "properties": {
+        "coin_sell": {
+          "$ref": "#/definitions/Coin"
+        },
+        "coin_buy": {
+          "$ref": "#/definitions/Coin"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
