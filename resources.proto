@@ -88,6 +88,9 @@ message LimitOrderListRequest {
 message LimitOrderListResponse {
     repeated uint64 ids = 1;
 }
+message LimitOrderListResponse {
+    repeated LimitOrderResponse orders = 1;
+}
 
 
 message LimitOrdersRequest {
@@ -97,7 +100,7 @@ message LimitOrdersRequest {
     }];
 }
 message LimitOrdersResponse {
-    repeated LimitOrderResponse orders = 2;
+    repeated LimitOrderResponse orders = 1;
 }
 
 message UpdateVotesRequest {

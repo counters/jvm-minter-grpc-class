@@ -391,6 +391,16 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
+    // LimitOrderIDList
+    //
+    //
+    rpc LimitOrderIDList (LimitOrderListRequest) returns (LimitOrderIDListResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders/{sell_coin}/{buy_coin}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
     // LimitOrders
     //
     //
