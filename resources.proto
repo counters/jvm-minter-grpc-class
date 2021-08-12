@@ -85,7 +85,7 @@ message LimitOrderListRequest {
         type: INTEGER
     }];
 }
-message LimitOrderListResponse {
+message LimitOrderIDListResponse {
     repeated uint64 ids = 1;
 }
 message LimitOrderListResponse {
