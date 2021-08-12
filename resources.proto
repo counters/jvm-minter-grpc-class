@@ -62,6 +62,7 @@ message LimitOrderRequest {
     }];
 }
 message LimitOrderResponse {
+    uint64 id = 7;
     Coin coin_sell = 1;
     Coin coin_buy = 2;
     string want_sell = 3;
@@ -69,6 +70,36 @@ message LimitOrderResponse {
     string owner = 5;
     uint64 height = 6;
 }
+
+message LimitOrderListRequest {
+    uint64 sell_coin = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 buy_coin = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    int32 limit = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: '3'
+    }];
+    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message LimitOrderListResponse {
+    repeated uint64 ids = 1;
+}
+
+
+message LimitOrdersRequest {
+    repeated uint64 ids = 1;
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message LimitOrdersResponse {
+    repeated LimitOrderResponse orders = 2;
+}
+
 message UpdateVotesRequest {
     uint64 target_version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER

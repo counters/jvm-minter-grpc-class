@@ -380,4 +380,24 @@ service ApiService {
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
+
+    // LimitOrderList
+    //
+    //
+    rpc LimitOrders (LimitOrderListRequest) returns (LimitOrderListResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders/{sell_coin}/{buy_coin}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
+    // LimitOrders
+    //
+    //
+    rpc LimitOrders (LimitOrdersRequest) returns (LimitOrdersResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
 }
