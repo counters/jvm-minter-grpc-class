@@ -370,4 +370,14 @@ service ApiService {
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
+
+    // LimitOrder
+    //
+    //
+    rpc LimitOrder (LimitOrderRequest) returns (LimitOrderResponse) {
+        option (google.api.http) = {
+            get: "/limit_order/{order_id}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
 }
