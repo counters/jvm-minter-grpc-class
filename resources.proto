@@ -71,7 +71,7 @@ message LimitOrderResponse {
     uint64 height = 6;
 }
 
-message LimitOrderListRequest {
+message LimitOrdersOfPoolRequest {
     uint64 sell_coin = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
@@ -85,10 +85,7 @@ message LimitOrderListRequest {
         type: INTEGER
     }];
 }
-message LimitOrderIDListResponse {
-    repeated uint64 ids = 1;
-}
-message LimitOrderListResponse {
+message LimitOrdersOfPoolResponse {
     repeated LimitOrderResponse orders = 1;
 }
 
