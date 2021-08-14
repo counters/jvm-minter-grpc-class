@@ -1215,13 +1215,13 @@
     },
     "/limit_orders/{sell_coin}/{buy_coin}": {
       "get": {
-        "summary": "LimitOrderIDList",
-        "operationId": "LimitOrderIDList",
+        "summary": "LimitOrdersOfPool",
+        "operationId": "LimitOrdersOfPool",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/LimitOrderIDListResponse"
+              "$ref": "#/definitions/LimitOrdersOfPoolResponse"
             }
           },
           "default": {
@@ -3425,29 +3425,6 @@
         }
       }
     },
-    "LimitOrderIDListResponse": {
-      "type": "object",
-      "properties": {
-        "ids": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uint64"
-          }
-        }
-      }
-    },
-    "LimitOrderListResponse": {
-      "type": "object",
-      "properties": {
-        "orders": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LimitOrderResponse"
-          }
-        }
-      }
-    },
     "LimitOrderResponse": {
       "type": "object",
       "properties": {
@@ -3473,6 +3450,17 @@
         "height": {
           "type": "string",
           "format": "uint64"
+        }
+      }
+    },
+    "LimitOrdersOfPoolResponse": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
+          }
         }
       }
     },

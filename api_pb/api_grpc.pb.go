@@ -165,14 +165,10 @@ type ApiServiceClient interface {
 	//
 	//
 	LimitOrder(ctx context.Context, in *LimitOrderRequest, opts ...grpc.CallOption) (*LimitOrderResponse, error)
-	// LimitOrderList
+	// LimitOrdersOfPool
 	//
 	//
-	LimitOrderList(ctx context.Context, in *LimitOrderListRequest, opts ...grpc.CallOption) (*LimitOrderListResponse, error)
-	// LimitOrderIDList
-	//
-	//
-	LimitOrderIDList(ctx context.Context, in *LimitOrderListRequest, opts ...grpc.CallOption) (*LimitOrderIDListResponse, error)
+	LimitOrdersOfPool(ctx context.Context, in *LimitOrdersOfPoolRequest, opts ...grpc.CallOption) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
 	//
@@ -534,18 +530,9 @@ func (c *apiServiceClient) LimitOrder(ctx context.Context, in *LimitOrderRequest
 	return out, nil
 }
 
-func (c *apiServiceClient) LimitOrderList(ctx context.Context, in *LimitOrderListRequest, opts ...grpc.CallOption) (*LimitOrderListResponse, error) {
-	out := new(LimitOrderListResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/LimitOrderList", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *apiServiceClient) LimitOrderIDList(ctx context.Context, in *LimitOrderListRequest, opts ...grpc.CallOption) (*LimitOrderIDListResponse, error) {
-	out := new(LimitOrderIDListResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/LimitOrderIDList", in, out, opts...)
+func (c *apiServiceClient) LimitOrdersOfPool(ctx context.Context, in *LimitOrdersOfPoolRequest, opts ...grpc.CallOption) (*LimitOrdersOfPoolResponse, error) {
+	out := new(LimitOrdersOfPoolResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/LimitOrdersOfPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -712,14 +699,10 @@ type ApiServiceServer interface {
 	//
 	//
 	LimitOrder(context.Context, *LimitOrderRequest) (*LimitOrderResponse, error)
-	// LimitOrderList
+	// LimitOrdersOfPool
 	//
 	//
-	LimitOrderList(context.Context, *LimitOrderListRequest) (*LimitOrderListResponse, error)
-	// LimitOrderIDList
-	//
-	//
-	LimitOrderIDList(context.Context, *LimitOrderListRequest) (*LimitOrderIDListResponse, error)
+	LimitOrdersOfPool(context.Context, *LimitOrdersOfPoolRequest) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
 	//
@@ -839,11 +822,8 @@ func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*B
 func (UnimplementedApiServiceServer) LimitOrder(context.Context, *LimitOrderRequest) (*LimitOrderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LimitOrder not implemented")
 }
-func (UnimplementedApiServiceServer) LimitOrderList(context.Context, *LimitOrderListRequest) (*LimitOrderListResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method LimitOrderList not implemented")
-}
-func (UnimplementedApiServiceServer) LimitOrderIDList(context.Context, *LimitOrderListRequest) (*LimitOrderIDListResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method LimitOrderIDList not implemented")
+func (UnimplementedApiServiceServer) LimitOrdersOfPool(context.Context, *LimitOrdersOfPoolRequest) (*LimitOrdersOfPoolResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LimitOrdersOfPool not implemented")
 }
 func (UnimplementedApiServiceServer) LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LimitOrders not implemented")
@@ -1512,38 +1492,20 @@ func _ApiService_LimitOrder_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_LimitOrderList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LimitOrderListRequest)
+func _ApiService_LimitOrdersOfPool_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LimitOrdersOfPoolRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).LimitOrderList(ctx, in)
+		return srv.(ApiServiceServer).LimitOrdersOfPool(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/LimitOrderList",
+		FullMethod: "/api_pb.ApiService/LimitOrdersOfPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).LimitOrderList(ctx, req.(*LimitOrderListRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ApiService_LimitOrderIDList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LimitOrderListRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ApiServiceServer).LimitOrderIDList(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/api_pb.ApiService/LimitOrderIDList",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).LimitOrderIDList(ctx, req.(*LimitOrderListRequest))
+		return srv.(ApiServiceServer).LimitOrdersOfPool(ctx, req.(*LimitOrdersOfPoolRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1711,12 +1673,8 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_LimitOrder_Handler,
 		},
 		{
-			MethodName: "LimitOrderList",
-			Handler:    _ApiService_LimitOrderList_Handler,
-		},
-		{
-			MethodName: "LimitOrderIDList",
-			Handler:    _ApiService_LimitOrderIDList_Handler,
+			MethodName: "LimitOrdersOfPool",
+			Handler:    _ApiService_LimitOrdersOfPool_Handler,
 		},
 		{
 			MethodName: "LimitOrders",
