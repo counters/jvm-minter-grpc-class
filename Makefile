@@ -10,7 +10,7 @@ all:
 	buf generate
 	rm -rf api_pb/*
 	mv ./gen/go/* ./api_pb/
-	rm ./gen/openapiv2/api.swagger.json
+	rm ./docs/api.swagger.json
 	mv ./gen/openapiv2/api.swagger.json ./docs/
 	sed -i 's~api_pb~~g' ./docs/api.swagger.json
 	sed -i 's~#/definitions/rpcStatus~~g' ./docs/api.swagger.json
