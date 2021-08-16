@@ -102,6 +102,7 @@ message UpdateCommissionsEvent {
 message OrderExpiredEvent {
     uint64 id = 1;
     string owner = 2;
-
+    uint64 coin = 3;
+    string amount = 4;
 }
 
