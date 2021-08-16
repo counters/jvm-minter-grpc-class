@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api_pb;
 
-option go_package = ".;api_pb";
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
 
 message JailEvent {
     string validator_pub_key = 1;

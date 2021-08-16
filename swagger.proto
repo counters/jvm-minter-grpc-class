@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "protoc-gen-openapiv2/options/annotations.proto";
-
 package api_pb;
 
-option go_package = ".;api_pb";
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
+
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 message ErrorBody {
     message Error {
@@ -22,7 +22,7 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
             name: "MIT"
             url: 'https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE'
         };
-        version: "1.4.1"
+        version: "1.5.1"
         contact: {
             name: "Minter gRPC-Gateway"
             url: "https://github.com/MinterTeam/node-grpc-gateway"

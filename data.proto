@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "resources.proto";
-
 package api_pb;
 
-option go_package = ".;api_pb";
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
+
+import "resources.proto";
 
 message SendData {
     Coin coin = 1;
