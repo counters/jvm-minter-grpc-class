@@ -3896,12 +3896,10 @@
         "type_hex": {
           "type": "string"
         },
-        "type_name": {
-          "type": "string"
-        },
         "type": {
           "type": "string",
-          "format": "uint64"
+          "format": "uint64",
+          "title": "string type_name = 18;"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"
