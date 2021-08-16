@@ -764,7 +764,7 @@ message TransactionResponse {
         AddLimitOrder                = 35;
         RemoveLimitOrder             = 36;
     }
-    string type_name = 18;
+    //    string type_name = 18;
     uint64 type = 10;
     google.protobuf.Any data = 11;
     bytes payload = 12;
