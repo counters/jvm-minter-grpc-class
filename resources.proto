@@ -70,6 +70,7 @@ message LimitOrderResponse {
     Coin coin_buy = 2;
     string want_sell = 3;
     string want_buy = 4;
+    string price = 8;
     string owner = 5;
     uint64 height = 6;
 }
