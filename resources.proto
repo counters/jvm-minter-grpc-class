@@ -90,6 +90,7 @@ message LimitOrdersOfPoolRequest {
     }];
 }
 message LimitOrdersOfPoolResponse {
+    string pool_price = 2;
     repeated LimitOrderResponse orders = 1;
 }
 
@@ -199,6 +200,7 @@ message SwapPoolRequest {
     }];
 }
 message SwapPoolResponse {
+    string price = 4;
     string amount0 = 1;
     string amount1 = 2;
     string liquidity = 3;
