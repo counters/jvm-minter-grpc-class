@@ -3479,6 +3479,9 @@
     "LimitOrdersOfPoolResponse": {
       "type": "object",
       "properties": {
+        "pool_price": {
+          "type": "string"
+        },
         "orders": {
           "type": "array",
           "items": {
@@ -3850,6 +3853,9 @@
     "SwapPoolResponse": {
       "type": "object",
       "properties": {
+        "price": {
+          "type": "string"
+        },
         "amount0": {
           "type": "string"
         },
