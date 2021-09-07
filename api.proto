@@ -376,7 +376,7 @@ service ApiService {
     //
     rpc BestTradeExactIn (GetBestTradeExactRequest) returns (GetBestTradeExactResponse) {
         option (google.api.http) = {
-            get: "/best_trade/{in_coin}/{out_coin}/input/{volume}"
+            get: "/best_trade/{in_coin}/{out_coin}/input/{amount}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
@@ -386,7 +386,7 @@ service ApiService {
     //
     rpc BestTradeExactOut (GetBestTradeExactRequest) returns (GetBestTradeExactResponse) {
         option (google.api.http) = {
-            get: "/best_trade/{in_coin}/{out_coin}/output/{volume}"
+            get: "/best_trade/{in_coin}/{out_coin}/output/{amount}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
