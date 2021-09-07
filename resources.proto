@@ -33,13 +33,9 @@ message BestTradeRequest {
 }
 
 message BestTradeResponse {
-    message route {
-        repeated uint64 path = 1;
-        string result = 2;
-        string price = 3;
-        string next_price = 4;
-    }
-   repeated route routes = 1;
+    repeated uint64 path = 1;
+    string result = 2;
+    string price = 3;
 }
 
 message BlocksRequest {
