@@ -1795,7 +1795,7 @@ func local_request_ApiService_Blocks_0(ctx context.Context, marshaler runtime.Ma
 }
 
 var (
-	filter_ApiService_BestTradeInput_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "amount": 2}, Base: []int{1, 1, 2, 3, 0, 0, 0}, Check: []int{0, 1, 1, 1, 2, 3, 4}}
+	filter_ApiService_BestTradeInput_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "type": 2, "amount": 3}, Base: []int{1, 1, 2, 3, 4, 0, 0, 0, 0}, Check: []int{0, 1, 1, 1, 1, 2, 3, 4, 5}}
 )
 
 func request_ApiService_BestTradeInput_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1804,6 +1804,7 @@ func request_ApiService_BestTradeInput_0(ctx context.Context, marshaler runtime.
 
 	var (
 		val string
+		e   int32
 		ok  bool
 		err error
 		_   = err
@@ -1828,6 +1829,18 @@ func request_ApiService_BestTradeInput_0(ctx context.Context, marshaler runtime.
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
+
+	val, ok = pathParams["type"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
+	}
+
+	e, err = runtime.Enum(val, BestTradeRequest_Type_value)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
+	}
+
+	protoReq.Type = BestTradeRequest_Type(e)
 
 	val, ok = pathParams["amount"]
 	if !ok {
@@ -1857,6 +1870,7 @@ func local_request_ApiService_BestTradeInput_0(ctx context.Context, marshaler ru
 
 	var (
 		val string
+		e   int32
 		ok  bool
 		err error
 		_   = err
@@ -1881,6 +1895,18 @@ func local_request_ApiService_BestTradeInput_0(ctx context.Context, marshaler ru
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
+
+	val, ok = pathParams["type"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
+	}
+
+	e, err = runtime.Enum(val, BestTradeRequest_Type_value)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
+	}
+
+	protoReq.Type = BestTradeRequest_Type(e)
 
 	val, ok = pathParams["amount"]
 	if !ok {
@@ -3781,7 +3807,7 @@ var (
 
 	pattern_ApiService_Blocks_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"blocks"}, ""))
 
-	pattern_ApiService_BestTradeInput_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "input", "amount"}, ""))
+	pattern_ApiService_BestTradeInput_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "type", "amount"}, ""))
 
 	pattern_ApiService_BestTradeOutput_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "type", "amount"}, ""))
 )
