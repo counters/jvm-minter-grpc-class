@@ -2460,6 +2460,27 @@
         }
       }
     },
+    "BestTradeResponseroute": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "result": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "next_price": {
+          "type": "string"
+        }
+      }
+    },
     "CandidatesRequestCandidateStatus": {
       "type": "string",
       "enum": [
@@ -2995,15 +3016,11 @@
     "BestTradeResponse": {
       "type": "object",
       "properties": {
-        "path": {
+        "routes": {
           "type": "array",
           "items": {
-            "type": "string",
-            "format": "uint64"
+            "$ref": "#/definitions/BestTradeResponseroute"
           }
-        },
-        "result": {
-          "type": "string"
         }
       }
     },
