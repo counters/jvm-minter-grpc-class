@@ -22,7 +22,12 @@ message BestTradeRequest {
     uint64 in_coin = 1;
     uint64 out_coin = 2;
     string amount = 3;
-    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    enum Type {
+        input = 0;
+        output = 1;
+    }
+    Type type = 4;
+    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
 }
