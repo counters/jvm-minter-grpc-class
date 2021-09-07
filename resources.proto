@@ -158,6 +158,16 @@ message PriceCommissionResponse {
     string remove_limit_order = 58;
 }
 
+
+message SwapPoolsRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message SwapPoolsResponse {
+    repeated SwapPoolResponse pools = 1;
+}
+
 message SwapPoolRequest {
     uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
