@@ -1673,6 +1673,47 @@
         ]
       }
     },
+    "/swap_pools": {
+      "get": {
+        "summary": "SwapPools",
+        "operationId": "SwapPools",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/test/block": {
       "get": {
         "summary": "TestBlock",
@@ -3719,6 +3760,17 @@
         },
         "liquidity": {
           "type": "string"
+        }
+      }
+    },
+    "SwapPoolsResponse": {
+      "type": "object",
+      "properties": {
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolResponse"
+          }
         }
       }
     },
