@@ -161,14 +161,14 @@ type ApiServiceClient interface {
 	//
 	//
 	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error)
-	// BestTradeExactIn
+	// BestTradeInput
 	//
 	//
-	BestTradeExactIn(ctx context.Context, in *GetBestTradeExactRequest, opts ...grpc.CallOption) (*GetBestTradeExactResponse, error)
-	// BestTradeExactOut
+	BestTradeInput(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
+	// BestTradeOutput
 	//
 	//
-	BestTradeExactOut(ctx context.Context, in *GetBestTradeExactRequest, opts ...grpc.CallOption) (*GetBestTradeExactResponse, error)
+	BestTradeOutput(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
 }
 
 type apiServiceClient struct {
@@ -517,18 +517,18 @@ func (c *apiServiceClient) Blocks(ctx context.Context, in *BlocksRequest, opts .
 	return out, nil
 }
 
-func (c *apiServiceClient) BestTradeExactIn(ctx context.Context, in *GetBestTradeExactRequest, opts ...grpc.CallOption) (*GetBestTradeExactResponse, error) {
-	out := new(GetBestTradeExactResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTradeExactIn", in, out, opts...)
+func (c *apiServiceClient) BestTradeInput(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error) {
+	out := new(BestTradeResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTradeInput", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *apiServiceClient) BestTradeExactOut(ctx context.Context, in *GetBestTradeExactRequest, opts ...grpc.CallOption) (*GetBestTradeExactResponse, error) {
-	out := new(GetBestTradeExactResponse)
-	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTradeExactOut", in, out, opts...)
+func (c *apiServiceClient) BestTradeOutput(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error) {
+	out := new(BestTradeResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTradeOutput", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -682,14 +682,14 @@ type ApiServiceServer interface {
 	//
 	//
 	Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error)
-	// BestTradeExactIn
+	// BestTradeInput
 	//
 	//
-	BestTradeExactIn(context.Context, *GetBestTradeExactRequest) (*GetBestTradeExactResponse, error)
-	// BestTradeExactOut
+	BestTradeInput(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
+	// BestTradeOutput
 	//
 	//
-	BestTradeExactOut(context.Context, *GetBestTradeExactRequest) (*GetBestTradeExactResponse, error)
+	BestTradeOutput(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -802,11 +802,11 @@ func (UnimplementedApiServiceServer) UpdateVotes(context.Context, *UpdateVotesRe
 func (UnimplementedApiServiceServer) Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Blocks not implemented")
 }
-func (UnimplementedApiServiceServer) BestTradeExactIn(context.Context, *GetBestTradeExactRequest) (*GetBestTradeExactResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method BestTradeExactIn not implemented")
+func (UnimplementedApiServiceServer) BestTradeInput(context.Context, *BestTradeRequest) (*BestTradeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BestTradeInput not implemented")
 }
-func (UnimplementedApiServiceServer) BestTradeExactOut(context.Context, *GetBestTradeExactRequest) (*GetBestTradeExactResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method BestTradeExactOut not implemented")
+func (UnimplementedApiServiceServer) BestTradeOutput(context.Context, *BestTradeRequest) (*BestTradeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BestTradeOutput not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1454,38 +1454,38 @@ func _ApiService_Blocks_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_BestTradeExactIn_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetBestTradeExactRequest)
+func _ApiService_BestTradeInput_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BestTradeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).BestTradeExactIn(ctx, in)
+		return srv.(ApiServiceServer).BestTradeInput(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/BestTradeExactIn",
+		FullMethod: "/api_pb.ApiService/BestTradeInput",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).BestTradeExactIn(ctx, req.(*GetBestTradeExactRequest))
+		return srv.(ApiServiceServer).BestTradeInput(ctx, req.(*BestTradeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ApiService_BestTradeExactOut_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetBestTradeExactRequest)
+func _ApiService_BestTradeOutput_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BestTradeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ApiServiceServer).BestTradeExactOut(ctx, in)
+		return srv.(ApiServiceServer).BestTradeOutput(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api_pb.ApiService/BestTradeExactOut",
+		FullMethod: "/api_pb.ApiService/BestTradeOutput",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ApiServiceServer).BestTradeExactOut(ctx, req.(*GetBestTradeExactRequest))
+		return srv.(ApiServiceServer).BestTradeOutput(ctx, req.(*BestTradeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1631,12 +1631,12 @@ var _ApiService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_Blocks_Handler,
 		},
 		{
-			MethodName: "BestTradeExactIn",
-			Handler:    _ApiService_BestTradeExactIn_Handler,
+			MethodName: "BestTradeInput",
+			Handler:    _ApiService_BestTradeInput_Handler,
 		},
 		{
-			MethodName: "BestTradeExactOut",
-			Handler:    _ApiService_BestTradeExactOut_Handler,
+			MethodName: "BestTradeOutput",
+			Handler:    _ApiService_BestTradeOutput_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

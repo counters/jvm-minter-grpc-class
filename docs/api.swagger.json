@@ -142,13 +142,13 @@
     },
     "/best_trade/{in_coin}/{out_coin}/input/{amount}": {
       "get": {
-        "summary": "BestTradeExactIn",
-        "operationId": "BestTradeExactIn",
+        "summary": "BestTradeInput",
+        "operationId": "BestTradeInput",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/GetBestTradeExactResponse"
+              "$ref": "#/definitions/BestTradeResponse"
             }
           },
           "default": {
@@ -203,13 +203,13 @@
     },
     "/best_trade/{in_coin}/{out_coin}/output/{amount}": {
       "get": {
-        "summary": "BestTradeExactOut",
-        "operationId": "BestTradeExactOut",
+        "summary": "BestTradeOutput",
+        "operationId": "BestTradeOutput",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/GetBestTradeExactResponse"
+              "$ref": "#/definitions/BestTradeResponse"
             }
           },
           "default": {
@@ -2992,6 +2992,21 @@
         }
       }
     },
+    "BestTradeResponse": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "result": {
+          "type": "string"
+        }
+      }
+    },
     "BlockField": {
       "type": "string",
       "enum": [
@@ -3370,21 +3385,6 @@
         },
         "app_state": {
           "$ref": "#/definitions/GenesisResponseAppState"
-        }
-      }
-    },
-    "GetBestTradeExactResponse": {
-      "type": "object",
-      "properties": {
-        "path": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uint64"
-          }
-        },
-        "result": {
-          "type": "string"
         }
       }
     },
