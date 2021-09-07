@@ -140,7 +140,7 @@
         ]
       }
     },
-    "/best_trade/{in_coin}/{out_coin}/input/{volume}": {
+    "/best_trade/{in_coin}/{out_coin}/input/{amount}": {
       "get": {
         "summary": "BestTradeExactIn",
         "operationId": "BestTradeExactIn",
@@ -183,7 +183,7 @@
             "format": "uint64"
           },
           {
-            "name": "volume",
+            "name": "amount",
             "in": "path",
             "required": true,
             "type": "string"
@@ -201,7 +201,7 @@
         ]
       }
     },
-    "/best_trade/{in_coin}/{out_coin}/output/{volume}": {
+    "/best_trade/{in_coin}/{out_coin}/output/{amount}": {
       "get": {
         "summary": "BestTradeExactOut",
         "operationId": "BestTradeExactOut",
@@ -244,7 +244,7 @@
             "format": "uint64"
           },
           {
-            "name": "volume",
+            "name": "amount",
             "in": "path",
             "required": true,
             "type": "string"

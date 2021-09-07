@@ -1795,7 +1795,7 @@ func local_request_ApiService_Blocks_0(ctx context.Context, marshaler runtime.Ma
 }
 
 var (
-	filter_ApiService_BestTradeExactIn_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "volume": 2}, Base: []int{1, 1, 2, 3, 0, 0, 0}, Check: []int{0, 1, 1, 1, 2, 3, 4}}
+	filter_ApiService_BestTradeExactIn_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "amount": 2}, Base: []int{1, 1, 2, 3, 0, 0, 0}, Check: []int{0, 1, 1, 1, 2, 3, 4}}
 )
 
 func request_ApiService_BestTradeExactIn_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1829,14 +1829,14 @@ func request_ApiService_BestTradeExactIn_0(ctx context.Context, marshaler runtim
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
 
-	val, ok = pathParams["volume"]
+	val, ok = pathParams["amount"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "volume")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "amount")
 	}
 
-	protoReq.Volume, err = runtime.String(val)
+	protoReq.Amount, err = runtime.String(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "volume", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "amount", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1882,14 +1882,14 @@ func local_request_ApiService_BestTradeExactIn_0(ctx context.Context, marshaler 
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
 
-	val, ok = pathParams["volume"]
+	val, ok = pathParams["amount"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "volume")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "amount")
 	}
 
-	protoReq.Volume, err = runtime.String(val)
+	protoReq.Amount, err = runtime.String(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "volume", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "amount", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1905,7 +1905,7 @@ func local_request_ApiService_BestTradeExactIn_0(ctx context.Context, marshaler 
 }
 
 var (
-	filter_ApiService_BestTradeExactOut_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "volume": 2}, Base: []int{1, 1, 2, 3, 0, 0, 0}, Check: []int{0, 1, 1, 1, 2, 3, 4}}
+	filter_ApiService_BestTradeExactOut_0 = &utilities.DoubleArray{Encoding: map[string]int{"in_coin": 0, "out_coin": 1, "amount": 2}, Base: []int{1, 1, 2, 3, 0, 0, 0}, Check: []int{0, 1, 1, 1, 2, 3, 4}}
 )
 
 func request_ApiService_BestTradeExactOut_0(ctx context.Context, marshaler runtime.Marshaler, client ApiServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -1939,14 +1939,14 @@ func request_ApiService_BestTradeExactOut_0(ctx context.Context, marshaler runti
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
 
-	val, ok = pathParams["volume"]
+	val, ok = pathParams["amount"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "volume")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "amount")
 	}
 
-	protoReq.Volume, err = runtime.String(val)
+	protoReq.Amount, err = runtime.String(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "volume", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "amount", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -1992,14 +1992,14 @@ func local_request_ApiService_BestTradeExactOut_0(ctx context.Context, marshaler
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "out_coin", err)
 	}
 
-	val, ok = pathParams["volume"]
+	val, ok = pathParams["amount"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "volume")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "amount")
 	}
 
-	protoReq.Volume, err = runtime.String(val)
+	protoReq.Amount, err = runtime.String(val)
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "volume", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "amount", err)
 	}
 
 	if err := req.ParseForm(); err != nil {
@@ -3755,9 +3755,9 @@ var (
 
 	pattern_ApiService_Blocks_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"blocks"}, ""))
 
-	pattern_ApiService_BestTradeExactIn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "input", "volume"}, ""))
+	pattern_ApiService_BestTradeExactIn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "input", "amount"}, ""))
 
-	pattern_ApiService_BestTradeExactOut_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "output", "volume"}, ""))
+	pattern_ApiService_BestTradeExactOut_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"best_trade", "in_coin", "out_coin", "output", "amount"}, ""))
 )
 
 var (
