@@ -371,22 +371,12 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
-    // BestTradeInput
+    // BestTrade
     //
     //
-    rpc BestTradeInput (BestTradeRequest) returns (BestTradeResponse) {
+    rpc BestTrade (BestTradeRequest) returns (BestTradeResponse) {
         option (google.api.http) = {
-            get: "/best_trade/{in_coin}/{out_coin}/{type}/{amount}"
-        };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
-    }
-
-    // BestTradeOutput
-    //
-    //
-    rpc BestTradeOutput (BestTradeRequest) returns (BestTradeResponse) {
-        option (google.api.http) = {
-            get: "/best_trade/{in_coin}/{out_coin}/{type}/{amount}"
+            get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }

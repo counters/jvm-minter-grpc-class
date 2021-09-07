@@ -19,8 +19,8 @@ message Coin {
 
 
 message BestTradeRequest {
-    uint64 in_coin = 1;
-    uint64 out_coin = 2;
+    uint64 sell_coin = 1;
+    uint64 buy_coin = 2;
     string amount = 3;
     enum Type {
         input = 0;
