@@ -18,7 +18,7 @@ message Coin {
 }
 
 
-message GetBestTradeExactRequest {
+message BestTradeRequest {
     uint64 in_coin = 1;
     uint64 out_coin = 2;
     string amount = 3;
@@ -27,7 +27,7 @@ message GetBestTradeExactRequest {
     }];
 }
 
-message GetBestTradeExactResponse {
+message BestTradeResponse {
     repeated uint64 path = 1;
     string result = 2;
 }
