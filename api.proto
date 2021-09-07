@@ -370,4 +370,24 @@ service ApiService {
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
+
+    // BestTradeExactIn
+    //
+    //
+    rpc BestTradeExactIn (GetBestTradeExactRequest) returns (GetBestTradeExactResponse) {
+        option (google.api.http) = {
+            get: "/best_trade/{in_coin}/{out_coin}/input/{volume}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
+    // BestTradeExactOut
+    //
+    //
+    rpc BestTradeExactOut (GetBestTradeExactRequest) returns (GetBestTradeExactResponse) {
+        option (google.api.http) = {
+            get: "/best_trade/{in_coin}/{out_coin}/output/{volume}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
 }
