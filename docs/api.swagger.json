@@ -140,10 +140,10 @@
         ]
       }
     },
-    "/best_trade/{in_coin}/{out_coin}/{type}/{amount}": {
+    "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}": {
       "get": {
-        "summary": "BestTradeOutput",
-        "operationId": "BestTradeOutput",
+        "summary": "BestTrade",
+        "operationId": "BestTrade",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -169,14 +169,14 @@
         },
         "parameters": [
           {
-            "name": "in_coin",
+            "name": "sell_coin",
             "in": "path",
             "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
-            "name": "out_coin",
+            "name": "buy_coin",
             "in": "path",
             "required": true,
             "type": "string",
