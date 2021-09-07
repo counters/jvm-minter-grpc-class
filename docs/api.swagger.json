@@ -189,6 +189,17 @@
             "type": "string"
           },
           {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "input",
+              "output"
+            ],
+            "default": "input"
+          },
+          {
             "name": "height",
             "in": "query",
             "required": false,
@@ -201,7 +212,7 @@
         ]
       }
     },
-    "/best_trade/{in_coin}/{out_coin}/output/{amount}": {
+    "/best_trade/{in_coin}/{out_coin}/{type}/{amount}": {
       "get": {
         "summary": "BestTradeOutput",
         "operationId": "BestTradeOutput",
@@ -242,6 +253,16 @@
             "required": true,
             "type": "string",
             "format": "uint64"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "input",
+              "output"
+            ]
           },
           {
             "name": "amount",
@@ -3012,6 +3033,14 @@
           "$ref": "#/definitions/Multisig"
         }
       }
+    },
+    "BestTradeRequestType": {
+      "type": "string",
+      "enum": [
+        "input",
+        "output"
+      ],
+      "default": "input"
     },
     "BestTradeResponse": {
       "type": "object",
