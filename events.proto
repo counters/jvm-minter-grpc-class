@@ -9,6 +9,10 @@ message JailEvent {
     uint64 jailed_until = 2;
 }
 
+message RemoveCandidateEvent {
+    string candidate_pub_key = 1;
+}
+
 message RewardEvent {
     enum Role {
         Validator = 0;
