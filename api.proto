@@ -1,13 +1,12 @@
 syntax = "proto3";
 
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
+package api_pb;
+
 import "google/protobuf/empty.proto";
 import "resources.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
-
-package api_pb;
-
-option go_package = ".;api_pb";
 
 service ApiService {
     // Subscribe
@@ -369,5 +368,35 @@ service ApiService {
             get: "/blocks"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
+    }
+
+    // LimitOrder
+    //
+    //
+    rpc LimitOrder (LimitOrderRequest) returns (LimitOrderResponse) {
+        option (google.api.http) = {
+            get: "/limit_order/{order_id}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
+    // LimitOrdersOfPool
+    //
+    //
+    rpc LimitOrdersOfPool (LimitOrdersOfPoolRequest) returns (LimitOrdersOfPoolResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders/{sell_coin}/{buy_coin}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
+    // LimitOrders
+    //
+    //
+    rpc LimitOrders (LimitOrdersRequest) returns (LimitOrdersResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 }

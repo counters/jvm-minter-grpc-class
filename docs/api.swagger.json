@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -201,6 +201,13 @@
             "required": false,
             "type": "boolean",
             "default": "false"
+          },
+          {
+            "name": "events",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -271,6 +278,13 @@
           },
           {
             "name": "failed_txs",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "events",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -1110,6 +1124,169 @@
         ],
         "tags": [
           "Vote"
+        ]
+      }
+    },
+    "/limit_order/{order_id}": {
+      "get": {
+        "summary": "LimitOrder",
+        "operationId": "LimitOrder",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/limit_orders": {
+      "get": {
+        "summary": "LimitOrders",
+        "operationId": "LimitOrders",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrdersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/limit_orders/{sell_coin}/{buy_coin}": {
+      "get": {
+        "summary": "LimitOrdersOfPool",
+        "operationId": "LimitOrdersOfPool",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrdersOfPoolResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "3"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
         ]
       }
     },
@@ -2930,6 +3107,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
         }
       }
     },
@@ -3258,6 +3441,62 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        }
+      }
+    },
+    "LimitOrderResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin_sell": {
+          "$ref": "#/definitions/Coin"
+        },
+        "coin_buy": {
+          "$ref": "#/definitions/Coin"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "LimitOrdersOfPoolResponse": {
+      "type": "object",
+      "properties": {
+        "pool_price": {
+          "type": "string"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
+          }
+        }
+      }
+    },
+    "LimitOrdersResponse": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
           }
         }
       }
@@ -3614,6 +3853,9 @@
     "SwapPoolResponse": {
       "type": "object",
       "properties": {
+        "price": {
+          "type": "string"
+        },
         "amount0": {
           "type": "string"
         },
@@ -3665,7 +3907,8 @@
         },
         "type": {
           "type": "string",
-          "format": "uint64"
+          "format": "uint64",
+          "title": "string type_name = 18;"
         },
         "data": {
           "$ref": "#/definitions/protobufAny"

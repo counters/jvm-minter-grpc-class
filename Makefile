@@ -7,11 +7,11 @@ all:
 		google.golang.org/grpc/cmd/protoc-gen-go-grpc \
 		github.com/rakyll/statik
 	mkdir -p api_pb
-	protoc -I . \
-		--go_out ./api_pb \
-		--grpc-gateway_out=logtostderr=true,generate_unbound_methods=true:./api_pb \
-		--openapiv2_out=use_go_templates=true,json_names_for_fields=false,disable_default_errors=true,simple_operation_ids=true,allow_merge=true,merge_file_name=api:./docs \
-		--go-grpc_out=./api_pb ./*.proto
-	sed -i 's~api_pb~~g' docs/api.swagger.json
-	sed -i 's~#/definitions/rpcStatus~~g' docs/api.swagger.json
+	buf generate
+	rm -rf api_pb/*
+	mv ./gen/go/* ./api_pb/
+	rm ./docs/api.swagger.json
+	mv ./gen/openapiv2/api.swagger.json ./docs/
+	sed -i 's~api_pb~~g' ./docs/api.swagger.json
+	sed -i 's~#/definitions/rpcStatus~~g' ./docs/api.swagger.json
 	statik -m -f -src docs/
