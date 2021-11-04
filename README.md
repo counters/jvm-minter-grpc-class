@@ -2,7 +2,7 @@
 Kotlin &amp; Java class for gRPC client
 
 Use
-- fix proto files `node-grpc-gateway/*.proto` (@TODO)
+ **@TODO**
 
 ```shell
 
