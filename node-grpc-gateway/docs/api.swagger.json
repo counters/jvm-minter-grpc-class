@@ -1,0 +1,4074 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Minter Node API v2",
+    "version": "1.5.0",
+    "contact": {
+      "name": "Minter gRPC-Gateway",
+      "url": "https://github.com/MinterTeam/node-grpc-gateway",
+      "email": "sk@minter.org"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE"
+    }
+  },
+  "tags": [
+    {
+      "name": "ApiService"
+    }
+  ],
+  "basePath": "/v2",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/address/{address}": {
+      "get": {
+        "summary": "Address",
+        "description": "Address returns coins list, balance and transaction count of an address.",
+        "operationId": "Address",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/AddressResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "address",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "delegated",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    },
+    "/addresses": {
+      "get": {
+        "summary": "Addresses",
+        "description": "Addresses returns list of addresses.",
+        "operationId": "Addresses",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/AddressesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "addresses",
+            "in": "query",
+            "required": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "delegated",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    },
+    "/block/{height}": {
+      "get": {
+        "summary": "Block",
+        "description": "Block returns block data at given height.",
+        "operationId": "Block",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlockResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "transactions",
+                "missed",
+                "block_reward",
+                "size",
+                "proposer",
+                "validators",
+                "evidence"
+              ]
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "failed_txs",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "events",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/blocks": {
+      "get": {
+        "summary": "Blocks",
+        "operationId": "Blocks",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlocksResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "from_height",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "to_height",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "transactions",
+                "missed",
+                "block_reward",
+                "size",
+                "proposer",
+                "validators",
+                "evidence"
+              ]
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "failed_txs",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "events",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/candidate/{public_key}": {
+      "get": {
+        "summary": "Candidate",
+        "description": "Candidate returns candidate’s info by provided public key.\n\n## Fields of response\n| Name      | Description                  |\n| --------- | ---------------------------- | \n| id |  | \n| reward_address | Address where validator’s rewards go to. | \n| owner_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate. | \n| control_address | Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. | \n| total_stake | Total stake of a candidate | \n| public_key | Public key of a candidate | \n| commission | Commission (from 0 to 100) from rewards which delegators will pay to validator | \n| used_slots | Number of occupied steak slots. Note: filled in when request includes_stakes | \n| uniq_users | Number of unique wallets in steaks. Note: filled in when request includes_stakes | \n| min_stake | Smallest steak size. Note: filled in when request includes_stakes | \n| stakes | List of stakes. Note: filled in when request includes_stakes | \n| status | Candidate status. Available values: offline = 1, online = 2 | \n| validator | Is a validator at the current height | \n| jailed_until |  |",
+        "operationId": "Candidate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CandidateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "public_key",
+            "description": "Public key of a candidate",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "not_show_stakes",
+            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled.",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Validator"
+        ]
+      }
+    },
+    "/candidates": {
+      "get": {
+        "summary": "Candidates",
+        "description": "Candidates returns list of candidates.",
+        "operationId": "Candidates",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CandidatesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "include_stakes",
+            "description": "Calculate field values used_slots, uniq_users, min_stake.",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "not_show_stakes",
+            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used.",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all",
+              "off",
+              "on",
+              "validator"
+            ],
+            "default": "all"
+          }
+        ],
+        "tags": [
+          "Validator"
+        ]
+      }
+    },
+    "/coin_info/{symbol}": {
+      "get": {
+        "summary": "CoinInfo",
+        "description": "CoinInfo returns information about coin symbol.",
+        "operationId": "CoinInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CoinInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/coin_info_by_id/{id}": {
+      "get": {
+        "summary": "CoinInfoById",
+        "description": "CoinInfoById returns information about coin ID.",
+        "operationId": "CoinInfoById",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CoinInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/commission_votes/{target_version}": {
+      "get": {
+        "summary": "CommissionVotes",
+        "operationId": "CommissionVotes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CommissionVotesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "target_version",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Vote"
+        ]
+      }
+    },
+    "/estimate_coin_buy": {
+      "get": {
+        "summary": "EstimateCoinBuy",
+        "description": "EstimateCoinBuy returns estimate of buy coin transaction.",
+        "operationId": "EstimateCoinBuy",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/EstimateCoinBuyResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "coin_id_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coin_id_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "value_to_buy",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_id_commission",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_commission",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "swap_from",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/estimate_coin_sell": {
+      "get": {
+        "summary": "EstimateCoinSell",
+        "description": "EstimateCoinSell returns estimate of sell coin transaction.",
+        "operationId": "EstimateCoinSell",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/EstimateCoinSellResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "coin_id_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coin_id_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "value_to_sell",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_id_commission",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_commission",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "swap_from",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/estimate_coin_sell_all": {
+      "get": {
+        "summary": "EstimateCoinSellAll",
+        "description": "EstimateCoinSellAll returns estimate of sell all coin transaction.",
+        "operationId": "EstimateCoinSellAll",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/EstimateCoinSellAllResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "coin_id_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_buy",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coin_id_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "coin_to_sell",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "value_to_sell",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gas_price",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64",
+            "default": "1"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "swap_from",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "optimal",
+              "bancor",
+              "pool"
+            ],
+            "default": "optimal"
+          },
+          {
+            "name": "route",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/estimate_tx_commission/{tx}": {
+      "get": {
+        "summary": "EstimateTxCommission",
+        "description": "EstimateTxCommission returns estimate of transaction.",
+        "operationId": "EstimateTxCommission",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/EstimateTxCommissionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tx",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Price"
+        ]
+      }
+    },
+    "/events/{height}": {
+      "get": {
+        "summary": "Events",
+        "description": "Events returns events at given height.",
+        "operationId": "Events",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/EventsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "search",
+            "description": "Array of public keys of validators and wallet addresses of delegators for filtering.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "Event"
+        ]
+      }
+    },
+    "/frozen/{address}": {
+      "get": {
+        "summary": "Frozen",
+        "description": "Frozen returns frozen balance.",
+        "operationId": "Frozen",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/FrozenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "address",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "coin_id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    },
+    "/genesis": {
+      "get": {
+        "summary": "Genesis",
+        "description": "Genesis returns genesis file.",
+        "operationId": "Genesis",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GenesisResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/halts/{height}": {
+      "get": {
+        "summary": "Halts",
+        "description": "Halts returns the candidate votes for stopping the network at block.",
+        "operationId": "Halts",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/HaltsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Vote"
+        ]
+      }
+    },
+    "/limit_order/{order_id}": {
+      "get": {
+        "summary": "LimitOrder",
+        "operationId": "LimitOrder",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrderResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "order_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/limit_orders": {
+      "get": {
+        "summary": "LimitOrders",
+        "operationId": "LimitOrders",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrdersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/limit_orders/{sell_coin}/{buy_coin}": {
+      "get": {
+        "summary": "LimitOrdersOfPool",
+        "operationId": "LimitOrdersOfPool",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LimitOrdersOfPoolResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "3"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/max_gas_price": {
+      "get": {
+        "summary": "MaxGasPrice",
+        "description": "MaxGasPrice returns current max gas.",
+        "operationId": "MaxGasPrice",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/MaxGasPriceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Price"
+        ]
+      }
+    },
+    "/min_gas_price": {
+      "get": {
+        "summary": "MinGasPrice",
+        "description": "MinGasPrice returns current min gas price.",
+        "operationId": "MinGasPrice",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/MinGasPriceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Price"
+        ]
+      }
+    },
+    "/missed_blocks/{public_key}": {
+      "get": {
+        "summary": "MissedBlocks",
+        "description": "MissedBlocks returns missed blocks by validator public key.",
+        "operationId": "MissedBlocks",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/MissedBlocksResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "public_key",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Validator"
+        ]
+      }
+    },
+    "/net_info": {
+      "get": {
+        "summary": "NetInfo",
+        "description": "NetInfo returns network info",
+        "operationId": "NetInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/NetInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/price_commissions": {
+      "get": {
+        "summary": "PriceCommission",
+        "operationId": "PriceCommission",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PriceCommissionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Price"
+        ]
+      }
+    },
+    "/send_transaction": {
+      "post": {
+        "summary": "SendTransaction",
+        "description": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "operationId": "SendTransaction2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SendTransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendTransactionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ],
+        "externalDocs": {
+          "description": "More about Minter transactions",
+          "url": "https://www.minter.network/docs#transactions"
+        }
+      }
+    },
+    "/send_transaction/{tx}": {
+      "get": {
+        "summary": "SendTransaction",
+        "description": "SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.",
+        "operationId": "SendTransaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SendTransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tx",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ],
+        "externalDocs": {
+          "description": "More about Minter transactions",
+          "url": "https://www.minter.network/docs#transactions"
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "summary": "Status",
+        "description": "Status returns node status including pubkey, latest block.",
+        "operationId": "Status",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatusResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/subscribe": {
+      "get": {
+        "summary": "Subscribe",
+        "description": "Subscribe returns a subscription for events by query. Only supported in WS and gRPC methods.",
+        "operationId": "Subscribe",
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/SubscribeResponse"
+                },
+                "error": {
+                  "$ref": ""
+                }
+              },
+              "title": "Stream result of SubscribeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "query",
+            "description": "tm.event = 'NewBlock' or tm.event = 'Tx'",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "WebSockets"
+        ]
+      }
+    },
+    "/swap_pool/{coin0}/{coin1}": {
+      "get": {
+        "summary": "SwapPool",
+        "operationId": "SwapPool",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "coin0",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "coin1",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/swap_pool/{coin0}/{coin1}/{provider}": {
+      "get": {
+        "summary": "SwapPoolProvider",
+        "operationId": "SwapPoolProvider",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "coin0",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "coin1",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "provider",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/test/block": {
+      "get": {
+        "summary": "TestBlock",
+        "description": "TestBlock returns the list of example transactions in block. Available only testnet mode.",
+        "operationId": "TestBlock",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlockResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Test"
+        ]
+      }
+    },
+    "/transaction/{hash}": {
+      "get": {
+        "summary": "Transaction",
+        "description": "Transaction returns transaction info.",
+        "operationId": "Transaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/TransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "hash",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/transactions": {
+      "get": {
+        "summary": "Transactions",
+        "description": "Transactions returns transactions by query.",
+        "operationId": "Transactions",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/TransactionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "1"
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "30"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/unconfirmed_txs": {
+      "get": {
+        "summary": "UnconfirmedTxs",
+        "description": "UnconfirmedTxs returns unconfirmed transactions.",
+        "operationId": "UnconfirmedTxs",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UnconfirmedTxsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "30"
+          }
+        ],
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/update_votes/{target_version}": {
+      "get": {
+        "summary": "UpdateVotes",
+        "operationId": "UpdateVotes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UpdateVotesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "target_version",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Vote"
+        ]
+      }
+    },
+    "/validators": {
+      "get": {
+        "summary": "Validators",
+        "description": "Validators returns list of active validators.",
+        "operationId": "Validators",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ValidatorsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Validator"
+        ]
+      }
+    },
+    "/version_network": {
+      "get": {
+        "summary": "VersionNetwork",
+        "operationId": "VersionNetwork",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/VersionNetworkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blockchain"
+        ]
+      }
+    },
+    "/waitlist/{address}": {
+      "get": {
+        "summary": "WaitList",
+        "description": "WaitList returns the list of address stakes in waitlist.",
+        "operationId": "WaitList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WaitListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "address",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "public_key",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AccountBalance": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "AccountMultisigData": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "weights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "AppStateAccount": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountBalance"
+          }
+        },
+        "nonce": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "multisig_data": {
+          "$ref": "#/definitions/AccountMultisigData"
+        }
+      }
+    },
+    "AppStateCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reward_address": {
+          "type": "string"
+        },
+        "owner_address": {
+          "type": "string"
+        },
+        "control_address": {
+          "type": "string"
+        },
+        "total_bip_stake": {
+          "type": "string"
+        },
+        "public_key": {
+          "type": "string"
+        },
+        "commission": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "stakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidateStake"
+          }
+        },
+        "updates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidateStake"
+          }
+        },
+        "status": {
+          "type": "string",
+          "format": "int64"
+        },
+        "jailed_until": {
+          "type": "string",
+          "format": "int64"
+        },
+        "last_edit_commission_height": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "AppStateCandidateStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateCommission": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "payload_byte": {
+          "type": "string"
+        },
+        "send": {
+          "type": "string"
+        },
+        "buy_bancor": {
+          "type": "string"
+        },
+        "sell_bancor": {
+          "type": "string"
+        },
+        "sell_all_bancor": {
+          "type": "string"
+        },
+        "buy_pool_base": {
+          "type": "string"
+        },
+        "buy_pool_delta": {
+          "type": "string"
+        },
+        "sell_pool_base": {
+          "type": "string"
+        },
+        "sell_pool_delta": {
+          "type": "string"
+        },
+        "sell_all_pool_base": {
+          "type": "string"
+        },
+        "sell_all_pool_delta": {
+          "type": "string"
+        },
+        "create_ticker3": {
+          "type": "string"
+        },
+        "create_ticker4": {
+          "type": "string"
+        },
+        "create_ticker5": {
+          "type": "string"
+        },
+        "create_ticker6": {
+          "type": "string"
+        },
+        "create_ticker7_10": {
+          "type": "string"
+        },
+        "create_coin": {
+          "type": "string"
+        },
+        "create_token": {
+          "type": "string"
+        },
+        "recreate_coin": {
+          "type": "string"
+        },
+        "recreate_token": {
+          "type": "string"
+        },
+        "declare_candidacy": {
+          "type": "string"
+        },
+        "delegate": {
+          "type": "string"
+        },
+        "unbond": {
+          "type": "string"
+        },
+        "redeem_check": {
+          "type": "string"
+        },
+        "set_candidate_on": {
+          "type": "string"
+        },
+        "set_candidate_off": {
+          "type": "string"
+        },
+        "create_multisig": {
+          "type": "string"
+        },
+        "multisend_base": {
+          "type": "string"
+        },
+        "multisend_delta": {
+          "type": "string"
+        },
+        "edit_candidate": {
+          "type": "string"
+        },
+        "set_halt_block": {
+          "type": "string"
+        },
+        "edit_ticker_owner": {
+          "type": "string"
+        },
+        "edit_multisig": {
+          "type": "string"
+        },
+        "edit_candidate_public_key": {
+          "type": "string"
+        },
+        "create_swap_pool": {
+          "type": "string"
+        },
+        "add_liquidity": {
+          "type": "string"
+        },
+        "remove_liquidity": {
+          "type": "string"
+        },
+        "edit_candidate_commission": {
+          "type": "string"
+        },
+        "mint_token": {
+          "type": "string"
+        },
+        "burn_token": {
+          "type": "string"
+        },
+        "vote_commission": {
+          "type": "string"
+        },
+        "vote_update": {
+          "type": "string"
+        },
+        "failed_tx": {
+          "type": "string"
+        },
+        "add_limit_order": {
+          "type": "string"
+        },
+        "remove_limit_order": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateCommissionVote": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commission": {
+          "$ref": "#/definitions/AppStateCommission"
+        }
+      }
+    },
+    "AppStateFrozenFund": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "address": {
+          "type": "string"
+        },
+        "candidate_key": {
+          "type": "string"
+        },
+        "candidate_id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateHaltBlock": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "candidate_key": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStatePool": {
+      "type": "object",
+      "properties": {
+        "coin0": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin1": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reserve0": {
+          "type": "string"
+        },
+        "reserve1": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "AppStateValidators": {
+      "type": "object",
+      "properties": {
+        "total_bip_stake": {
+          "type": "string"
+        },
+        "public_key": {
+          "type": "string"
+        },
+        "accum_reward": {
+          "type": "string"
+        },
+        "absent_times": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateWaitlist": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "CandidatesRequestCandidateStatus": {
+      "type": "string",
+      "enum": [
+        "all",
+        "off",
+        "on",
+        "validator"
+      ],
+      "default": "all"
+    },
+    "ConnectionStatusChannel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "send_queue_capacity": {
+          "type": "string",
+          "format": "int64"
+        },
+        "send_queue_size": {
+          "type": "string",
+          "format": "int64"
+        },
+        "priority": {
+          "type": "string",
+          "format": "int64"
+        },
+        "recently_sent": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "ConnectionStatusMonitor": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "start": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "string",
+          "format": "int64"
+        },
+        "idle": {
+          "type": "string",
+          "format": "int64"
+        },
+        "bytes": {
+          "type": "string",
+          "format": "int64"
+        },
+        "samples": {
+          "type": "string",
+          "format": "int64"
+        },
+        "inst_rate": {
+          "type": "string",
+          "format": "int64"
+        },
+        "cur_rate": {
+          "type": "string",
+          "format": "int64"
+        },
+        "avg_rate": {
+          "type": "string",
+          "format": "int64"
+        },
+        "peak_rate": {
+          "type": "string",
+          "format": "int64"
+        },
+        "bytes_rem": {
+          "type": "string",
+          "format": "int64"
+        },
+        "time_rem": {
+          "type": "string",
+          "format": "int64"
+        },
+        "progress": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "ConsensusParamsBlock": {
+      "type": "object",
+      "properties": {
+        "max_bytes": {
+          "type": "string",
+          "format": "int64"
+        },
+        "max_gas": {
+          "type": "string",
+          "format": "int64"
+        },
+        "time_iota_ms": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "ErrorBodyError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "FrozenResponseFrozen": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "address": {
+          "type": "string"
+        },
+        "candidate_key": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "GenesisResponseAppState": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "validators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateValidators"
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCandidate"
+          }
+        },
+        "coins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GenesisResponseAppStateCoin"
+          }
+        },
+        "frozen_funds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateFrozenFund"
+          }
+        },
+        "block_list_candidates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "waitlist": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateWaitlist"
+          }
+        },
+        "accounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateAccount"
+          }
+        },
+        "halt_blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateHaltBlock"
+          }
+        },
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStatePool"
+          }
+        },
+        "commission": {
+          "$ref": "#/definitions/AppStateCommission"
+        },
+        "commission_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateCommissionVote"
+          }
+        },
+        "used_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "max_gas": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "total_slashed": {
+          "type": "string"
+        }
+      }
+    },
+    "GenesisResponseAppStateCoin": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "string"
+        },
+        "crr": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reserve": {
+          "type": "string"
+        },
+        "max_supply": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner_address": {
+          "type": "string"
+        },
+        "mintable": {
+          "type": "boolean"
+        },
+        "burnable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "GenesisResponseConsensusParams": {
+      "type": "object",
+      "properties": {
+        "block": {
+          "$ref": "#/definitions/ConsensusParamsBlock"
+        },
+        "evidence": {
+          "$ref": "#/definitions/GenesisResponseConsensusParamsEvidence"
+        },
+        "validator": {
+          "$ref": "#/definitions/GenesisResponseConsensusParamsValidator"
+        }
+      }
+    },
+    "GenesisResponseConsensusParamsEvidence": {
+      "type": "object",
+      "properties": {
+        "max_age_num_blocks": {
+          "type": "string",
+          "format": "int64"
+        },
+        "max_age_duration": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "GenesisResponseConsensusParamsValidator": {
+      "type": "object",
+      "properties": {
+        "pub_key_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "NetInfoResponsePeer": {
+      "type": "object",
+      "properties": {
+        "latest_block_height": {
+          "type": "integer",
+          "format": "uint64",
+          "title": "Unknown while client is in fast_syncing mode"
+        },
+        "node_info": {
+          "$ref": "#/definitions/NodeInfo"
+        },
+        "is_outbound": {
+          "type": "boolean"
+        },
+        "connection_status": {
+          "$ref": "#/definitions/PeerConnectionStatus"
+        },
+        "remote_ip": {
+          "type": "string"
+        }
+      }
+    },
+    "NodeInfoOther": {
+      "type": "object",
+      "properties": {
+        "tx_index": {
+          "type": "string"
+        },
+        "rpc_address": {
+          "type": "string"
+        }
+      }
+    },
+    "NodeInfoProtocolVersion": {
+      "type": "object",
+      "properties": {
+        "p2p": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "block": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "app": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "PeerConnectionStatus": {
+      "type": "object",
+      "properties": {
+        "duration": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "SendMonitor": {
+          "$ref": "#/definitions/ConnectionStatusMonitor"
+        },
+        "RecvMonitor": {
+          "$ref": "#/definitions/ConnectionStatusMonitor"
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConnectionStatusChannel"
+          }
+        }
+      }
+    },
+    "SubscribeResponseEvent": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "VersionNetworkResponseVersion": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "WaitListResponseWait": {
+      "type": "object",
+      "properties": {
+        "public_key": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "AddressBalance": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "AddressDelegatedBalance": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        },
+        "delegate_bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "AddressResponse": {
+      "type": "object",
+      "properties": {
+        "balance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressBalance"
+          }
+        },
+        "delegated": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressDelegatedBalance"
+          }
+        },
+        "total": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressBalance"
+          }
+        },
+        "transaction_count": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "bip_value": {
+          "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
+        }
+      }
+    },
+    "AddressesResponse": {
+      "type": "object",
+      "properties": {
+        "addresses": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/AddressesResponseResult"
+          }
+        }
+      }
+    },
+    "AddressesResponseResult": {
+      "type": "object",
+      "properties": {
+        "balance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressBalance"
+          }
+        },
+        "delegated": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressDelegatedBalance"
+          },
+          "title": "Filled in when request delegated"
+        },
+        "total": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressBalance"
+          },
+          "title": "Sum of balance and delegated by coins. Filled in when request delegated"
+        },
+        "transaction_count": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "bip_value": {
+          "type": "string"
+        },
+        "multisig": {
+          "$ref": "#/definitions/Multisig"
+        }
+      }
+    },
+    "BlockField": {
+      "type": "string",
+      "enum": [
+        "transactions",
+        "missed",
+        "block_reward",
+        "size",
+        "proposer",
+        "validators",
+        "evidence"
+      ],
+      "default": "transactions"
+    },
+    "BlockResponse": {
+      "type": "object",
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "time": {
+          "type": "string"
+        },
+        "transaction_count": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "transactions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TransactionResponse"
+          }
+        },
+        "block_reward": {
+          "type": "string"
+        },
+        "size": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "proposer": {
+          "type": "string"
+        },
+        "validators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BlockResponseValidator"
+          }
+        },
+        "evidence": {
+          "$ref": "#/definitions/BlockResponseEvidence"
+        },
+        "missed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "BlockResponseEvidence": {
+      "type": "object",
+      "properties": {
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "BlockResponseValidator": {
+      "type": "object",
+      "properties": {
+        "public_key": {
+          "type": "string"
+        },
+        "signed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "BlocksResponse": {
+      "type": "object",
+      "properties": {
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BlockResponse"
+          }
+        }
+      }
+    },
+    "CandidateResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reward_address": {
+          "type": "string",
+          "description": "Address where validator’s rewards go to."
+        },
+        "owner_address": {
+          "type": "string",
+          "description": "Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate."
+        },
+        "control_address": {
+          "type": "string",
+          "description": "Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction."
+        },
+        "total_stake": {
+          "type": "string",
+          "title": "Total stake of a candidate"
+        },
+        "public_key": {
+          "type": "string",
+          "title": "Public key of a candidate"
+        },
+        "commission": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Commission (from 0 to 100) from rewards which delegators will pay to validator"
+        },
+        "used_slots": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Number of occupied steak slots. Note: filled in when request includes_stakes"
+        },
+        "uniq_users": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Number of unique wallets in steaks. Note: filled in when request includes_stakes"
+        },
+        "min_stake": {
+          "type": "string",
+          "title": "Smallest steak size. Note: filled in when request includes_stakes"
+        },
+        "stakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CandidateResponseStake"
+          },
+          "title": "List of stakes. Note: filled in when request includes_stakes"
+        },
+        "status": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Candidate status. Available values: offline = 1, online = 2"
+        },
+        "validator": {
+          "type": "boolean",
+          "title": "Is a validator at the current height"
+        },
+        "jailed_until": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "CandidateResponseStake": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        },
+        "bip_value": {
+          "type": "string"
+        }
+      }
+    },
+    "CandidatesResponse": {
+      "type": "object",
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CandidateResponse"
+          }
+        }
+      }
+    },
+    "Coin": {
+      "type": "object",
+      "example": {
+        "id": "0",
+        "symbol": "BIP"
+      },
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "symbol": {
+          "type": "string"
+        }
+      }
+    },
+    "CoinInfoResponse": {
+      "type": "object",
+      "example": {
+        "id": "0",
+        "name": "",
+        "symbol": "BIP",
+        "volume": "0",
+        "crr": "0",
+        "reserve_balance": "0",
+        "max_supply": "10000000000000000000000000000",
+        "owner_address": null
+      },
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "string"
+        },
+        "crr": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "reserve_balance": {
+          "type": "string"
+        },
+        "max_supply": {
+          "type": "string"
+        },
+        "owner_address": {
+          "type": "string"
+        },
+        "mintable": {
+          "type": "boolean"
+        },
+        "burnable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CommissionVotesResponse": {
+      "type": "object",
+      "properties": {
+        "votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommissionVotesResponseVote"
+          }
+        }
+      }
+    },
+    "CommissionVotesResponseVote": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "$ref": "#/definitions/PriceCommissionResponse"
+        },
+        "public_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ErrorBody": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/ErrorBodyError"
+        }
+      }
+    },
+    "EstimateCoinBuyResponse": {
+      "type": "object",
+      "properties": {
+        "will_pay": {
+          "type": "string"
+        },
+        "commission": {
+          "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
+        }
+      }
+    },
+    "EstimateCoinSellAllResponse": {
+      "type": "object",
+      "properties": {
+        "will_get": {
+          "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
+        }
+      }
+    },
+    "EstimateCoinSellResponse": {
+      "type": "object",
+      "properties": {
+        "will_get": {
+          "type": "string"
+        },
+        "commission": {
+          "type": "string"
+        },
+        "swap_from": {
+          "$ref": "#/definitions/SwapFrom"
+        }
+      }
+    },
+    "EstimateTxCommissionResponse": {
+      "type": "object",
+      "properties": {
+        "commission": {
+          "type": "string"
+        }
+      }
+    },
+    "EventsResponse": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "FrozenResponse": {
+      "type": "object",
+      "properties": {
+        "frozen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FrozenResponseFrozen"
+          }
+        }
+      }
+    },
+    "GenesisResponse": {
+      "type": "object",
+      "properties": {
+        "genesis_time": {
+          "type": "string"
+        },
+        "chain_id": {
+          "type": "string"
+        },
+        "initial_height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "consensus_params": {
+          "$ref": "#/definitions/GenesisResponseConsensusParams"
+        },
+        "app_hash": {
+          "type": "string"
+        },
+        "app_state": {
+          "$ref": "#/definitions/GenesisResponseAppState"
+        }
+      }
+    },
+    "HaltsResponse": {
+      "type": "object",
+      "properties": {
+        "public_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "LimitOrderResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin_sell": {
+          "$ref": "#/definitions/Coin"
+        },
+        "coin_buy": {
+          "$ref": "#/definitions/Coin"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "LimitOrdersOfPoolResponse": {
+      "type": "object",
+      "properties": {
+        "pool_price": {
+          "type": "string"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
+          }
+        }
+      }
+    },
+    "LimitOrdersResponse": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LimitOrderResponse"
+          }
+        }
+      }
+    },
+    "MaxGasPriceResponse": {
+      "type": "object",
+      "properties": {
+        "max_gas_price": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "MinGasPriceResponse": {
+      "type": "object",
+      "properties": {
+        "min_gas_price": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "MissedBlocksResponse": {
+      "type": "object",
+      "properties": {
+        "missed_blocks": {
+          "type": "string"
+        },
+        "missed_blocks_count": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "Multisig": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "weights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "NetInfoResponse": {
+      "type": "object",
+      "properties": {
+        "listening": {
+          "type": "boolean"
+        },
+        "listeners": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "count_peers": {
+          "type": "string",
+          "format": "int64"
+        },
+        "peers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NetInfoResponsePeer"
+          }
+        }
+      }
+    },
+    "NodeInfo": {
+      "type": "object",
+      "properties": {
+        "protocol_version": {
+          "$ref": "#/definitions/NodeInfoProtocolVersion"
+        },
+        "id": {
+          "type": "string"
+        },
+        "listen_addr": {
+          "type": "string"
+        },
+        "network": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "channels": {
+          "type": "string"
+        },
+        "moniker": {
+          "type": "string"
+        },
+        "other": {
+          "$ref": "#/definitions/NodeInfoOther"
+        }
+      }
+    },
+    "PriceCommissionResponse": {
+      "type": "object",
+      "properties": {
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "payload_byte": {
+          "type": "string"
+        },
+        "send": {
+          "type": "string"
+        },
+        "buy_bancor": {
+          "type": "string"
+        },
+        "sell_bancor": {
+          "type": "string"
+        },
+        "sell_all_bancor": {
+          "type": "string"
+        },
+        "buy_pool_base": {
+          "type": "string"
+        },
+        "buy_pool_delta": {
+          "type": "string"
+        },
+        "sell_pool_base": {
+          "type": "string"
+        },
+        "sell_pool_delta": {
+          "type": "string"
+        },
+        "sell_all_pool_base": {
+          "type": "string"
+        },
+        "sell_all_pool_delta": {
+          "type": "string"
+        },
+        "create_ticker3": {
+          "type": "string"
+        },
+        "create_ticker4": {
+          "type": "string"
+        },
+        "create_ticker5": {
+          "type": "string"
+        },
+        "create_ticker6": {
+          "type": "string"
+        },
+        "create_ticker7_10": {
+          "type": "string"
+        },
+        "create_coin": {
+          "type": "string"
+        },
+        "create_token": {
+          "type": "string"
+        },
+        "recreate_coin": {
+          "type": "string"
+        },
+        "recreate_token": {
+          "type": "string"
+        },
+        "declare_candidacy": {
+          "type": "string"
+        },
+        "delegate": {
+          "type": "string"
+        },
+        "unbond": {
+          "type": "string"
+        },
+        "redeem_check": {
+          "type": "string"
+        },
+        "set_candidate_on": {
+          "type": "string"
+        },
+        "set_candidate_off": {
+          "type": "string"
+        },
+        "create_multisig": {
+          "type": "string"
+        },
+        "multisend_base": {
+          "type": "string"
+        },
+        "multisend_delta": {
+          "type": "string"
+        },
+        "edit_candidate": {
+          "type": "string"
+        },
+        "set_halt_block": {
+          "type": "string"
+        },
+        "edit_ticker_owner": {
+          "type": "string"
+        },
+        "edit_multisig": {
+          "type": "string"
+        },
+        "edit_candidate_public_key": {
+          "type": "string"
+        },
+        "create_swap_pool": {
+          "type": "string"
+        },
+        "add_liquidity": {
+          "type": "string"
+        },
+        "remove_liquidity": {
+          "type": "string"
+        },
+        "edit_candidate_commission": {
+          "type": "string"
+        },
+        "mint_token": {
+          "type": "string"
+        },
+        "burn_token": {
+          "type": "string"
+        },
+        "vote_commission": {
+          "type": "string"
+        },
+        "vote_update": {
+          "type": "string"
+        },
+        "failed_tx": {
+          "type": "string"
+        },
+        "add_limit_order": {
+          "type": "string"
+        },
+        "remove_limit_order": {
+          "type": "string"
+        }
+      }
+    },
+    "SendTransactionRequest": {
+      "type": "object",
+      "properties": {
+        "tx": {
+          "type": "string"
+        }
+      }
+    },
+    "SendTransactionResponse": {
+      "type": "object",
+      "example": {
+        "code": "0",
+        "log": "",
+        "hash": "Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb"
+      },
+      "properties": {
+        "code": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "log": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        }
+      }
+    },
+    "StatusResponse": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "network": {
+          "type": "string"
+        },
+        "initial_height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "latest_block_hash": {
+          "type": "string"
+        },
+        "latest_app_hash": {
+          "type": "string"
+        },
+        "latest_block_height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "latest_block_time": {
+          "type": "string"
+        },
+        "keep_last_states": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "total_slashed": {
+          "type": "string"
+        },
+        "catching_up": {
+          "type": "boolean"
+        },
+        "public_key": {
+          "type": "string"
+        },
+        "node_id": {
+          "type": "string"
+        },
+        "moniker": {
+          "type": "string"
+        }
+      }
+    },
+    "SubscribeResponse": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubscribeResponseEvent"
+          }
+        }
+      }
+    },
+    "SwapFrom": {
+      "type": "string",
+      "enum": [
+        "optimal",
+        "bancor",
+        "pool"
+      ],
+      "default": "optimal"
+    },
+    "SwapPoolResponse": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "type": "string"
+        },
+        "amount0": {
+          "type": "string"
+        },
+        "amount1": {
+          "type": "string"
+        },
+        "liquidity": {
+          "type": "string"
+        }
+      }
+    },
+    "TransactionResponse": {
+      "type": "object",
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "raw_tx": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "index": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "from": {
+          "type": "string"
+        },
+        "nonce": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "gas": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "gas_price": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "gas_coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "type_hex": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "format": "uint64",
+          "title": "string type_name = 18;"
+        },
+        "data": {
+          "$ref": "#/definitions/protobufAny"
+        },
+        "payload": {
+          "type": "string",
+          "format": "byte"
+        },
+        "service_data": {
+          "type": "string",
+          "format": "byte"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "code": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "log": {
+          "type": "string"
+        }
+      }
+    },
+    "TransactionsResponse": {
+      "type": "object",
+      "properties": {
+        "transactions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TransactionResponse"
+          }
+        }
+      }
+    },
+    "UnconfirmedTxsResponse": {
+      "type": "object",
+      "properties": {
+        "transaction_count": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "total_transactions": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "total_bytes": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "transactions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UpdateVotesResponse": {
+      "type": "object",
+      "properties": {
+        "votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UpdateVotesResponseVote"
+          }
+        }
+      }
+    },
+    "UpdateVotesResponseVote": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "public_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ValidatorsResponse": {
+      "type": "object",
+      "properties": {
+        "validators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ValidatorsResponseResult"
+          }
+        }
+      }
+    },
+    "ValidatorsResponseResult": {
+      "type": "object",
+      "properties": {
+        "public_key": {
+          "type": "string"
+        },
+        "voting_power": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "VersionNetworkResponse": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "string"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VersionNetworkResponseVersion"
+          }
+        }
+      }
+    },
+    "WaitListResponse": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListResponseWait"
+          }
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "type_url": {
+          "type": "string",
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+        },
+        "value": {
+          "type": "string",
+          "format": "byte",
+          "description": "Must be a valid serialized protocol buffer of the above specified type."
+        }
+      },
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
+    },
+    "protobufNullValue": {
+      "type": "string",
+      "enum": [
+        "NULL_VALUE"
+      ],
+      "default": "NULL_VALUE",
+      "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
+    }
+  },
+  "externalDocs": {
+    "description": "More about Minter blockchain",
+    "url": "https://www.minter.network/docs"
+  }
+}
