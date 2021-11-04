@@ -26,9 +26,9 @@ rm node-grpc-gateway/swagger.proto
 - fix proto files `node-grpc-gateway/*.proto` (@TODO)
 
 ```shell
-rm -r src/main/java/examples/api_pb2 ; rm -r src/main/kotlin/examples/api_pb2 ;
+rm -r jvm ;
 buf generate node-grpc-gateway
-mkdir -p java/src
-ln -s jvm/src/main/java java/src/main
+#mkdir -p java/src
+#ln -s ./../../jvm/src/main/java java/src/main
 
 ```
