@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: java
+    out: jvm/src/main/java
+#  - name: java
+#    out: java/src/main
+  - name: kotlin
+    out: jvm/src/main/kotlin

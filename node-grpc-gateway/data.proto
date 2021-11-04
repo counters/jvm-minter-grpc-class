@@ -3,7 +3,8 @@ syntax = "proto3";
 package api_pb;
 
 option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
-
+option java_multiple_files = true;
+option java_package = "examples.api_pb2";
 import "resources.proto";
 
 message SendData {
