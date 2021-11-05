@@ -23,12 +23,23 @@ public object SwapPoolRequestKt {
     internal fun _build(): counters.minter.grpc.client.SwapPoolRequest = _builder.build()
 
     /**
-     * <pre>
-     *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     */
+    public var coin0: kotlin.Long
+      @JvmName("getCoin0")
+      get() = _builder.getCoin0()
+      @JvmName("setCoin0")
+      set(value) {
+        _builder.setCoin0(value)
+      }
+    /**
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     */
+    public fun clearCoin0() {
+      _builder.clearCoin0()
+    }
+
+    /**
      * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      */
     public var coin1: kotlin.Long
@@ -39,16 +50,27 @@ public object SwapPoolRequestKt {
         _builder.setCoin1(value)
       }
     /**
-     * <pre>
-     *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      */
     public fun clearCoin1() {
       _builder.clearCoin1()
+    }
+
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
     }
   }
 }

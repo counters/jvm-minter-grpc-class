@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TransactionsRequest() {
+    query_ = "";
   }
 
   @java.lang.Override
@@ -48,6 +49,22 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            query_ = s;
+            break;
+          }
+          case 16: {
+
+            page_ = input.readInt32();
+            break;
+          }
+          case 24: {
+
+            perPage_ = input.readInt32();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -80,6 +97,66 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.TransactionsRequest.class, counters.minter.grpc.client.TransactionsRequest.Builder.class);
   }
 
+  public static final int QUERY_FIELD_NUMBER = 1;
+  private volatile java.lang.Object query_;
+  /**
+   * <code>string query = 1 [json_name = "query"];</code>
+   * @return The query.
+   */
+  @java.lang.Override
+  public java.lang.String getQuery() {
+    java.lang.Object ref = query_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      query_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string query = 1 [json_name = "query"];</code>
+   * @return The bytes for query.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getQueryBytes() {
+    java.lang.Object ref = query_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      query_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PAGE_FIELD_NUMBER = 2;
+  private int page_;
+  /**
+   * <code>int32 page = 2 [json_name = "page"];</code>
+   * @return The page.
+   */
+  @java.lang.Override
+  public int getPage() {
+    return page_;
+  }
+
+  public static final int PER_PAGE_FIELD_NUMBER = 3;
+  private int perPage_;
+  /**
+   * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+   * @return The perPage.
+   */
+  @java.lang.Override
+  public int getPerPage() {
+    return perPage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,6 +171,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, query_);
+    }
+    if (page_ != 0) {
+      output.writeInt32(2, page_);
+    }
+    if (perPage_ != 0) {
+      output.writeInt32(3, perPage_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -103,6 +189,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, query_);
+    }
+    if (page_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, page_);
+    }
+    if (perPage_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, perPage_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -118,6 +215,12 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.TransactionsRequest other = (counters.minter.grpc.client.TransactionsRequest) obj;
 
+    if (!getQuery()
+        .equals(other.getQuery())) return false;
+    if (getPage()
+        != other.getPage()) return false;
+    if (getPerPage()
+        != other.getPerPage()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -129,6 +232,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + QUERY_FIELD_NUMBER;
+    hash = (53 * hash) + getQuery().hashCode();
+    hash = (37 * hash) + PAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getPage();
+    hash = (37 * hash) + PER_PAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getPerPage();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -262,6 +371,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      query_ = "";
+
+      page_ = 0;
+
+      perPage_ = 0;
+
       return this;
     }
 
@@ -288,6 +403,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.TransactionsRequest buildPartial() {
       counters.minter.grpc.client.TransactionsRequest result = new counters.minter.grpc.client.TransactionsRequest(this);
+      result.query_ = query_;
+      result.page_ = page_;
+      result.perPage_ = perPage_;
       onBuilt();
       return result;
     }
@@ -336,6 +454,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.TransactionsRequest other) {
       if (other == counters.minter.grpc.client.TransactionsRequest.getDefaultInstance()) return this;
+      if (!other.getQuery().isEmpty()) {
+        query_ = other.query_;
+        onChanged();
+      }
+      if (other.getPage() != 0) {
+        setPage(other.getPage());
+      }
+      if (other.getPerPage() != 0) {
+        setPerPage(other.getPerPage());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -362,6 +490,144 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+
+    private java.lang.Object query_ = "";
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     * @return The query.
+     */
+    public java.lang.String getQuery() {
+      java.lang.Object ref = query_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        query_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     * @return The bytes for query.
+     */
+    public com.google.protobuf.ByteString
+        getQueryBytes() {
+      java.lang.Object ref = query_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        query_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     * @param value The query to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuery(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      query_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuery() {
+      
+      query_ = getDefaultInstance().getQuery();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     * @param value The bytes for query to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQueryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      query_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int page_ ;
+    /**
+     * <code>int32 page = 2 [json_name = "page"];</code>
+     * @return The page.
+     */
+    @java.lang.Override
+    public int getPage() {
+      return page_;
+    }
+    /**
+     * <code>int32 page = 2 [json_name = "page"];</code>
+     * @param value The page to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPage(int value) {
+      
+      page_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 page = 2 [json_name = "page"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPage() {
+      
+      page_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int perPage_ ;
+    /**
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     * @return The perPage.
+     */
+    @java.lang.Override
+    public int getPerPage() {
+      return perPage_;
+    }
+    /**
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     * @param value The perPage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPerPage(int value) {
+      
+      perPage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPerPage() {
+      
+      perPage_ = 0;
+      onChanged();
       return this;
     }
     @java.lang.Override

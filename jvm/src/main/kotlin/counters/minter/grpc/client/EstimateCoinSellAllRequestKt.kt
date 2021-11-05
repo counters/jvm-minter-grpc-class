@@ -136,16 +136,40 @@ public object EstimateCoinSellAllRequestKt {
     }
 
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+     */
+    public var gasPrice: kotlin.Long
+      @JvmName("getGasPrice")
+      get() = _builder.getGasPrice()
+      @JvmName("setGasPrice")
+      set(value) {
+        _builder.setGasPrice(value)
+      }
+    /**
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+     */
+    public fun clearGasPrice() {
+      _builder.clearGasPrice()
+    }
+
+    /**
+     * <code>uint64 height = 5 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 5 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      */
     public var swapFrom: counters.minter.grpc.client.SwapFrom
@@ -156,16 +180,6 @@ public object EstimateCoinSellAllRequestKt {
         _builder.setSwapFrom(value)
       }
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      */
     public fun clearSwapFrom() {

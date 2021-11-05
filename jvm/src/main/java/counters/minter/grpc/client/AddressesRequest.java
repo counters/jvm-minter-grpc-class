@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AddressesRequest() {
+    addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -38,6 +39,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -48,6 +50,25 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              addresses_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            addresses_.add(s);
+            break;
+          }
+          case 16: {
+
+            height_ = input.readUInt64();
+            break;
+          }
+          case 32: {
+
+            delegated_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -63,6 +84,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        addresses_ = addresses_.getUnmodifiableView();
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -80,6 +104,63 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.AddressesRequest.class, counters.minter.grpc.client.AddressesRequest.Builder.class);
   }
 
+  public static final int ADDRESSES_FIELD_NUMBER = 1;
+  private com.google.protobuf.LazyStringList addresses_;
+  /**
+   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * @return A list containing the addresses.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getAddressesList() {
+    return addresses_;
+  }
+  /**
+   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * @return The count of addresses.
+   */
+  public int getAddressesCount() {
+    return addresses_.size();
+  }
+  /**
+   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * @param index The index of the element to return.
+   * @return The addresses at the given index.
+   */
+  public java.lang.String getAddresses(int index) {
+    return addresses_.get(index);
+  }
+  /**
+   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the addresses at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getAddressesBytes(int index) {
+    return addresses_.getByteString(index);
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 2;
+  private long height_;
+  /**
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int DELEGATED_FIELD_NUMBER = 4;
+  private boolean delegated_;
+  /**
+   * <code>bool delegated = 4 [json_name = "delegated"];</code>
+   * @return The delegated.
+   */
+  @java.lang.Override
+  public boolean getDelegated() {
+    return delegated_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,6 +175,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    for (int i = 0; i < addresses_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addresses_.getRaw(i));
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(2, height_);
+    }
+    if (delegated_ != false) {
+      output.writeBool(4, delegated_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -103,6 +193,22 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    {
+      int dataSize = 0;
+      for (int i = 0; i < addresses_.size(); i++) {
+        dataSize += computeStringSizeNoTag(addresses_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAddressesList().size();
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, height_);
+    }
+    if (delegated_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, delegated_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -118,6 +224,12 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.AddressesRequest other = (counters.minter.grpc.client.AddressesRequest) obj;
 
+    if (!getAddressesList()
+        .equals(other.getAddressesList())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
+    if (getDelegated()
+        != other.getDelegated()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -129,6 +241,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getAddressesCount() > 0) {
+      hash = (37 * hash) + ADDRESSES_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressesList().hashCode();
+    }
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
+    hash = (37 * hash) + DELEGATED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDelegated());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -262,6 +384,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      height_ = 0L;
+
+      delegated_ = false;
+
       return this;
     }
 
@@ -288,6 +416,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.AddressesRequest buildPartial() {
       counters.minter.grpc.client.AddressesRequest result = new counters.minter.grpc.client.AddressesRequest(this);
+      int from_bitField0_ = bitField0_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        addresses_ = addresses_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.addresses_ = addresses_;
+      result.height_ = height_;
+      result.delegated_ = delegated_;
       onBuilt();
       return result;
     }
@@ -336,6 +472,22 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.AddressesRequest other) {
       if (other == counters.minter.grpc.client.AddressesRequest.getDefaultInstance()) return this;
+      if (!other.addresses_.isEmpty()) {
+        if (addresses_.isEmpty()) {
+          addresses_ = other.addresses_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureAddressesIsMutable();
+          addresses_.addAll(other.addresses_);
+        }
+        onChanged();
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
+      if (other.getDelegated() != false) {
+        setDelegated(other.getDelegated());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -362,6 +514,179 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+    private int bitField0_;
+
+    private com.google.protobuf.LazyStringList addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureAddressesIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        addresses_ = new com.google.protobuf.LazyStringArrayList(addresses_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @return A list containing the addresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAddressesList() {
+      return addresses_.getUnmodifiableView();
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @return The count of addresses.
+     */
+    public int getAddressesCount() {
+      return addresses_.size();
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param index The index of the element to return.
+     * @return The addresses at the given index.
+     */
+    public java.lang.String getAddresses(int index) {
+      return addresses_.get(index);
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the addresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAddressesBytes(int index) {
+      return addresses_.getByteString(index);
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param index The index to set the value at.
+     * @param value The addresses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAddresses(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddressesIsMutable();
+      addresses_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param value The addresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAddresses(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddressesIsMutable();
+      addresses_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param values The addresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAddresses(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAddressesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, addresses_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAddresses() {
+      addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * @param value The bytes of the addresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAddressesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureAddressesIsMutable();
+      addresses_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean delegated_ ;
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @return The delegated.
+     */
+    @java.lang.Override
+    public boolean getDelegated() {
+      return delegated_;
+    }
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @param value The delegated to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDelegated(boolean value) {
+      
+      delegated_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDelegated() {
+      
+      delegated_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override

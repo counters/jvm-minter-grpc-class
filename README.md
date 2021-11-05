@@ -28,6 +28,7 @@ rm node-grpc-gateway/swagger.proto
 ```shell
 rm -r jvm ;
 buf generate node-grpc-gateway
+rm -r jvm ; buf generate node-grpc-gateway
 #mkdir -p java/src
 #ln -s ./../../jvm/src/main/java java/src/main
 

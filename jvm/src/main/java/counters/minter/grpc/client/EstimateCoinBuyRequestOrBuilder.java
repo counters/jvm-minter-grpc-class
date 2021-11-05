@@ -8,34 +8,27 @@ public interface EstimateCoinBuyRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * @return Whether the coinIdToBuy field is set.
+   */
+  boolean hasCoinIdToBuy();
+  /**
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * @return The coinIdToBuy.
+   */
+  long getCoinIdToBuy();
+
+  /**
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return Whether the coinToBuy field is set.
    */
   boolean hasCoinToBuy();
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return The coinToBuy.
    */
   java.lang.String getCoinToBuy();
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return The bytes for coinToBuy.
    */
@@ -43,34 +36,27 @@ public interface EstimateCoinBuyRequestOrBuilder extends
       getCoinToBuyBytes();
 
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * @return Whether the coinIdToSell field is set.
+   */
+  boolean hasCoinIdToSell();
+  /**
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * @return The coinIdToSell.
+   */
+  long getCoinIdToSell();
+
+  /**
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return Whether the coinToSell field is set.
    */
   boolean hasCoinToSell();
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The coinToSell.
    */
   java.lang.String getCoinToSell();
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The bytes for coinToSell.
    */
@@ -78,34 +64,45 @@ public interface EstimateCoinBuyRequestOrBuilder extends
       getCoinToSellBytes();
 
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
+   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * @return The valueToBuy.
+   */
+  java.lang.String getValueToBuy();
+  /**
+   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * @return The bytes for valueToBuy.
+   */
+  com.google.protobuf.ByteString
+      getValueToBuyBytes();
+
+  /**
+   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
+   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * @return Whether the coinIdCommission field is set.
+   */
+  boolean hasCoinIdCommission();
+  /**
+   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * @return The coinIdCommission.
+   */
+  long getCoinIdCommission();
+
+  /**
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return Whether the coinCommission field is set.
    */
   boolean hasCoinCommission();
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return The coinCommission.
    */
   java.lang.String getCoinCommission();
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return The bytes for coinCommission.
    */

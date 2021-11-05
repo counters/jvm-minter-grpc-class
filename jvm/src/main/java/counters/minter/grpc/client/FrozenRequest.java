@@ -55,6 +55,24 @@ private static final long serialVersionUID = 0L;
             address_ = s;
             break;
           }
+          case 18: {
+            com.google.protobuf.UInt64Value.Builder subBuilder = null;
+            if (coinId_ != null) {
+              subBuilder = coinId_.toBuilder();
+            }
+            coinId_ = input.readMessage(com.google.protobuf.UInt64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(coinId_);
+              coinId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -90,15 +108,6 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <pre>
-   *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string address = 1 [json_name = "address"];</code>
    * @return The address.
    */
@@ -116,15 +125,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string address = 1 [json_name = "address"];</code>
    * @return The bytes for address.
    */
@@ -141,6 +141,43 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int COIN_ID_FIELD_NUMBER = 2;
+  private com.google.protobuf.UInt64Value coinId_;
+  /**
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+   * @return Whether the coinId field is set.
+   */
+  @java.lang.Override
+  public boolean hasCoinId() {
+    return coinId_ != null;
+  }
+  /**
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+   * @return The coinId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.UInt64Value getCoinId() {
+    return coinId_ == null ? com.google.protobuf.UInt64Value.getDefaultInstance() : coinId_;
+  }
+  /**
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.UInt64ValueOrBuilder getCoinIdOrBuilder() {
+    return getCoinId();
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 3;
+  private long height_;
+  /**
+   * <code>uint64 height = 3 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -160,6 +197,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
     }
+    if (coinId_ != null) {
+      output.writeMessage(2, getCoinId());
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(3, height_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -171,6 +214,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+    }
+    if (coinId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getCoinId());
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(3, height_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -189,6 +240,13 @@ private static final long serialVersionUID = 0L;
 
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (hasCoinId() != other.hasCoinId()) return false;
+    if (hasCoinId()) {
+      if (!getCoinId()
+          .equals(other.getCoinId())) return false;
+    }
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -202,6 +260,13 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    if (hasCoinId()) {
+      hash = (37 * hash) + COIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCoinId().hashCode();
+    }
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -337,6 +402,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       address_ = "";
 
+      if (coinIdBuilder_ == null) {
+        coinId_ = null;
+      } else {
+        coinId_ = null;
+        coinIdBuilder_ = null;
+      }
+      height_ = 0L;
+
       return this;
     }
 
@@ -364,6 +437,12 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.FrozenRequest buildPartial() {
       counters.minter.grpc.client.FrozenRequest result = new counters.minter.grpc.client.FrozenRequest(this);
       result.address_ = address_;
+      if (coinIdBuilder_ == null) {
+        result.coinId_ = coinId_;
+      } else {
+        result.coinId_ = coinIdBuilder_.build();
+      }
+      result.height_ = height_;
       onBuilt();
       return result;
     }
@@ -416,6 +495,12 @@ private static final long serialVersionUID = 0L;
         address_ = other.address_;
         onChanged();
       }
+      if (other.hasCoinId()) {
+        mergeCoinId(other.getCoinId());
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -447,15 +532,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The address.
      */
@@ -472,15 +548,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -498,15 +565,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @param value The address to set.
      * @return This builder for chaining.
@@ -522,15 +580,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return This builder for chaining.
      */
@@ -541,15 +590,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
@@ -562,6 +602,156 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       address_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.UInt64Value coinId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> coinIdBuilder_;
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * @return Whether the coinId field is set.
+     */
+    public boolean hasCoinId() {
+      return coinIdBuilder_ != null || coinId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * @return The coinId.
+     */
+    public com.google.protobuf.UInt64Value getCoinId() {
+      if (coinIdBuilder_ == null) {
+        return coinId_ == null ? com.google.protobuf.UInt64Value.getDefaultInstance() : coinId_;
+      } else {
+        return coinIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public Builder setCoinId(com.google.protobuf.UInt64Value value) {
+      if (coinIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        coinId_ = value;
+        onChanged();
+      } else {
+        coinIdBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public Builder setCoinId(
+        com.google.protobuf.UInt64Value.Builder builderForValue) {
+      if (coinIdBuilder_ == null) {
+        coinId_ = builderForValue.build();
+        onChanged();
+      } else {
+        coinIdBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public Builder mergeCoinId(com.google.protobuf.UInt64Value value) {
+      if (coinIdBuilder_ == null) {
+        if (coinId_ != null) {
+          coinId_ =
+            com.google.protobuf.UInt64Value.newBuilder(coinId_).mergeFrom(value).buildPartial();
+        } else {
+          coinId_ = value;
+        }
+        onChanged();
+      } else {
+        coinIdBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public Builder clearCoinId() {
+      if (coinIdBuilder_ == null) {
+        coinId_ = null;
+        onChanged();
+      } else {
+        coinId_ = null;
+        coinIdBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public com.google.protobuf.UInt64Value.Builder getCoinIdBuilder() {
+      
+      onChanged();
+      return getCoinIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public com.google.protobuf.UInt64ValueOrBuilder getCoinIdOrBuilder() {
+      if (coinIdBuilder_ != null) {
+        return coinIdBuilder_.getMessageOrBuilder();
+      } else {
+        return coinId_ == null ?
+            com.google.protobuf.UInt64Value.getDefaultInstance() : coinId_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> 
+        getCoinIdFieldBuilder() {
+      if (coinIdBuilder_ == null) {
+        coinIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder>(
+                getCoinId(),
+                getParentForChildren(),
+                isClean());
+        coinId_ = null;
+      }
+      return coinIdBuilder_;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
       onChanged();
       return this;
     }

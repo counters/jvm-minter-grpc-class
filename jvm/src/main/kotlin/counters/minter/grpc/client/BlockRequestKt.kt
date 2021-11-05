@@ -23,18 +23,29 @@ public object BlockRequestKt {
     internal fun _build(): counters.minter.grpc.client.BlockRequest = _builder.build()
 
     /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class FieldsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      */
      public val fields: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>
@@ -43,12 +54,6 @@ public object BlockRequestKt {
         _builder.getFieldsList()
       )
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param value The fields to add.
      */
@@ -57,12 +62,6 @@ public object BlockRequestKt {
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.add(value: counters.minter.grpc.client.BlockField) {
       _builder.addFields(value)
     }/**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param value The fields to add.
      */
@@ -72,12 +71,6 @@ public object BlockRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(value: counters.minter.grpc.client.BlockField) {
       add(value)
     }/**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param values The fields to add.
      */
@@ -86,12 +79,6 @@ public object BlockRequestKt {
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       _builder.addAllFields(values)
     }/**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param values The fields to add.
      */
@@ -101,12 +88,6 @@ public object BlockRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       addAll(values)
     }/**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
@@ -116,19 +97,47 @@ public object BlockRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockField) {
       _builder.setFields(index, value)
     }/**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearFields")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.clear() {
       _builder.clearFields()
-    }}
+    }
+    /**
+     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     */
+    public var failedTxs: kotlin.Boolean
+      @JvmName("getFailedTxs")
+      get() = _builder.getFailedTxs()
+      @JvmName("setFailedTxs")
+      set(value) {
+        _builder.setFailedTxs(value)
+      }
+    /**
+     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     */
+    public fun clearFailedTxs() {
+      _builder.clearFailedTxs()
+    }
+
+    /**
+     * <code>bool events = 4 [json_name = "events"];</code>
+     */
+    public var events: kotlin.Boolean
+      @JvmName("getEvents")
+      get() = _builder.getEvents()
+      @JvmName("setEvents")
+      set(value) {
+        _builder.setEvents(value)
+      }
+    /**
+     * <code>bool events = 4 [json_name = "events"];</code>
+     */
+    public fun clearEvents() {
+      _builder.clearEvents()
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.BlockRequest.copy(block: counters.minter.grpc.client.BlockRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockRequest =

@@ -48,9 +48,19 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            coin0_ = input.readUInt64();
+            break;
+          }
           case 16: {
 
             coin1_ = input.readUInt64();
+            break;
+          }
+          case 32: {
+
+            height_ = input.readUInt64();
             break;
           }
           default: {
@@ -85,21 +95,37 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.SwapPoolRequest.class, counters.minter.grpc.client.SwapPoolRequest.Builder.class);
   }
 
+  public static final int COIN0_FIELD_NUMBER = 1;
+  private long coin0_;
+  /**
+   * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+   * @return The coin0.
+   */
+  @java.lang.Override
+  public long getCoin0() {
+    return coin0_;
+  }
+
   public static final int COIN1_FIELD_NUMBER = 2;
   private long coin1_;
   /**
-   * <pre>
-   *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
    * @return The coin1.
    */
   @java.lang.Override
   public long getCoin1() {
     return coin1_;
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 4;
+  private long height_;
+  /**
+   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -116,8 +142,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (coin0_ != 0L) {
+      output.writeUInt64(1, coin0_);
+    }
     if (coin1_ != 0L) {
       output.writeUInt64(2, coin1_);
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(4, height_);
     }
     unknownFields.writeTo(output);
   }
@@ -128,9 +160,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (coin0_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, coin0_);
+    }
     if (coin1_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(2, coin1_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, height_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -147,8 +187,12 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.SwapPoolRequest other = (counters.minter.grpc.client.SwapPoolRequest) obj;
 
+    if (getCoin0()
+        != other.getCoin0()) return false;
     if (getCoin1()
         != other.getCoin1()) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -160,9 +204,15 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + COIN0_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCoin0());
     hash = (37 * hash) + COIN1_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCoin1());
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -296,7 +346,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      coin0_ = 0L;
+
       coin1_ = 0L;
+
+      height_ = 0L;
 
       return this;
     }
@@ -324,7 +378,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolRequest buildPartial() {
       counters.minter.grpc.client.SwapPoolRequest result = new counters.minter.grpc.client.SwapPoolRequest(this);
+      result.coin0_ = coin0_;
       result.coin1_ = coin1_;
+      result.height_ = height_;
       onBuilt();
       return result;
     }
@@ -373,8 +429,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.SwapPoolRequest other) {
       if (other == counters.minter.grpc.client.SwapPoolRequest.getDefaultInstance()) return this;
+      if (other.getCoin0() != 0L) {
+        setCoin0(other.getCoin0());
+      }
       if (other.getCoin1() != 0L) {
         setCoin1(other.getCoin1());
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -405,14 +467,39 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long coin0_ ;
+    /**
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * @return The coin0.
+     */
+    @java.lang.Override
+    public long getCoin0() {
+      return coin0_;
+    }
+    /**
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * @param value The coin0 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCoin0(long value) {
+      
+      coin0_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCoin0() {
+      
+      coin0_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private long coin1_ ;
     /**
-     * <pre>
-     *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @return The coin1.
      */
@@ -421,12 +508,6 @@ private static final long serialVersionUID = 0L;
       return coin1_;
     }
     /**
-     * <pre>
-     *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @param value The coin1 to set.
      * @return This builder for chaining.
@@ -438,18 +519,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin1() {
       
       coin1_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
       onChanged();
       return this;
     }

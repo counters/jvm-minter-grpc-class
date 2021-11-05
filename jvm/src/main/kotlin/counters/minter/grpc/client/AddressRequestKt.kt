@@ -23,15 +23,6 @@ public object AddressRequestKt {
     internal fun _build(): counters.minter.grpc.client.AddressRequest = _builder.build()
 
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      */
     public var address: kotlin.String
@@ -42,19 +33,44 @@ public object AddressRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
+    }
+
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     */
+    public var delegated: kotlin.Boolean
+      @JvmName("getDelegated")
+      get() = _builder.getDelegated()
+      @JvmName("setDelegated")
+      set(value) {
+        _builder.setDelegated(value)
+      }
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     */
+    public fun clearDelegated() {
+      _builder.clearDelegated()
     }
   }
 }

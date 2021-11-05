@@ -46,6 +46,56 @@ public object CandidateRequestKt {
     public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
+
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
+     * <pre>
+     * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     */
+    public var notShowStakes: kotlin.Boolean
+      @JvmName("getNotShowStakes")
+      get() = _builder.getNotShowStakes()
+      @JvmName("setNotShowStakes")
+      set(value) {
+        _builder.setNotShowStakes(value)
+      }
+    /**
+     * <pre>
+     * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     */
+    public fun clearNotShowStakes() {
+      _builder.clearNotShowStakes()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

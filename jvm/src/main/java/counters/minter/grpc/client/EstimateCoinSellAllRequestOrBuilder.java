@@ -76,31 +76,23 @@ public interface EstimateCoinSellAllRequestOrBuilder extends
       getValueToSellBytes();
 
   /**
-   * <pre>
-   *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *        default: '1'
-   *    }];
-   *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
+   * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+   * @return The gasPrice.
+   */
+  long getGasPrice();
+
+  /**
+   * <code>uint64 height = 5 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
    * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   int getSwapFromValue();
   /**
-   * <pre>
-   *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *        default: '1'
-   *    }];
-   *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The swapFrom.
    */

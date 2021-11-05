@@ -8,23 +8,17 @@ public interface CoinInfoRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
    * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The bytes for symbol.
    */

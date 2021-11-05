@@ -27,11 +27,31 @@ public object CoinIdRequestKt {
      *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
      *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
      *    };
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
      * </pre>
      *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <pre>
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     *    };
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
      * <code>uint64 id = 2 [json_name = "id"];</code>
      */
     public var id: kotlin.Long
@@ -42,15 +62,6 @@ public object CoinIdRequestKt {
         _builder.setId(value)
       }
     /**
-     * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 id = 2 [json_name = "id"];</code>
      */
     public fun clearId() {

@@ -21,6 +21,23 @@ public object MaxGasPriceRequestKt {
     @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
     internal fun _build(): counters.minter.grpc.client.MaxGasPriceRequest = _builder.build()
+
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

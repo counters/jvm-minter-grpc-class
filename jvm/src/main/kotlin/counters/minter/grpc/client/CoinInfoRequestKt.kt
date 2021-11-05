@@ -23,12 +23,23 @@ public object CoinInfoRequestKt {
     internal fun _build(): counters.minter.grpc.client.CoinInfoRequest = _builder.build()
 
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
     public var symbol: kotlin.String
@@ -39,12 +50,6 @@ public object CoinInfoRequestKt {
         _builder.setSymbol(value)
       }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
     public fun clearSymbol() {

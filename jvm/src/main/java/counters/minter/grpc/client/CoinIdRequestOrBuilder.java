@@ -12,11 +12,14 @@ public interface CoinIdRequestOrBuilder extends
    *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
    *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
    *    };
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
    * </pre>
    *
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
    * <code>uint64 id = 2 [json_name = "id"];</code>
    * @return The id.
    */

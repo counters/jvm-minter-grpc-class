@@ -49,6 +49,11 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -87,15 +92,20 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.CoinInfoRequest.class, counters.minter.grpc.client.CoinInfoRequest.Builder.class);
   }
 
+  public static final int HEIGHT_FIELD_NUMBER = 1;
+  private long height_;
+  /**
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
   public static final int SYMBOL_FIELD_NUMBER = 2;
   private volatile java.lang.Object symbol_;
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The symbol.
    */
@@ -113,12 +123,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The bytes for symbol.
    */
@@ -151,6 +155,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (height_ != 0L) {
+      output.writeUInt64(1, height_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
     }
@@ -163,6 +170,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, height_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
     }
@@ -181,6 +192,8 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.CoinInfoRequest other = (counters.minter.grpc.client.CoinInfoRequest) obj;
 
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!getSymbol()
         .equals(other.getSymbol())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -194,6 +207,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
     hash = (53 * hash) + getSymbol().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -329,6 +345,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      height_ = 0L;
+
       symbol_ = "";
 
       return this;
@@ -357,6 +375,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.CoinInfoRequest buildPartial() {
       counters.minter.grpc.client.CoinInfoRequest result = new counters.minter.grpc.client.CoinInfoRequest(this);
+      result.height_ = height_;
       result.symbol_ = symbol_;
       onBuilt();
       return result;
@@ -406,6 +425,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.CoinInfoRequest other) {
       if (other == counters.minter.grpc.client.CoinInfoRequest.getDefaultInstance()) return this;
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       if (!other.getSymbol().isEmpty()) {
         symbol_ = other.symbol_;
         onChanged();
@@ -439,14 +461,39 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long height_ ;
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object symbol_ = "";
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      * @return The symbol.
      */
@@ -463,12 +510,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      * @return The bytes for symbol.
      */
@@ -486,12 +527,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
@@ -507,12 +542,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      * @return This builder for chaining.
      */
@@ -523,12 +552,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string symbol = 2 [json_name = "symbol"];</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.

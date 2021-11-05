@@ -26,4 +26,24 @@ public interface CandidateRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPublicKeyBytes();
+
+  /**
+   * <pre>
+   * Blockchain state height for the current request. Optional, the last default state of the node is used
+   * </pre>
+   *
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
+   * <pre>
+   * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+   * </pre>
+   *
+   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * @return The notShowStakes.
+   */
+  boolean getNotShowStakes();
 }

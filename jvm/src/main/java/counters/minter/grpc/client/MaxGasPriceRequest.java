@@ -48,6 +48,11 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -80,6 +85,17 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.MaxGasPriceRequest.class, counters.minter.grpc.client.MaxGasPriceRequest.Builder.class);
   }
 
+  public static final int HEIGHT_FIELD_NUMBER = 1;
+  private long height_;
+  /**
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,6 +110,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (height_ != 0L) {
+      output.writeUInt64(1, height_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -103,6 +122,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, height_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -118,6 +141,8 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.MaxGasPriceRequest other = (counters.minter.grpc.client.MaxGasPriceRequest) obj;
 
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -129,6 +154,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -262,6 +290,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      height_ = 0L;
+
       return this;
     }
 
@@ -288,6 +318,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.MaxGasPriceRequest buildPartial() {
       counters.minter.grpc.client.MaxGasPriceRequest result = new counters.minter.grpc.client.MaxGasPriceRequest(this);
+      result.height_ = height_;
       onBuilt();
       return result;
     }
@@ -336,6 +367,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.MaxGasPriceRequest other) {
       if (other == counters.minter.grpc.client.MaxGasPriceRequest.getDefaultInstance()) return this;
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -362,6 +396,37 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

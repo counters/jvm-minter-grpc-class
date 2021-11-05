@@ -23,15 +23,6 @@ public object FrozenRequestKt {
     internal fun _build(): counters.minter.grpc.client.FrozenRequest = _builder.build()
 
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      */
     public var address: kotlin.String
@@ -42,19 +33,51 @@ public object FrozenRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <pre>
-     *    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
+    }
+
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public var coinId: com.google.protobuf.UInt64Value
+      @JvmName("getCoinId")
+      get() = _builder.getCoinId()
+      @JvmName("setCoinId")
+      set(value) {
+        _builder.setCoinId(value)
+      }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     */
+    public fun clearCoinId() {
+      _builder.clearCoinId()
+    }
+    /**
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * @return Whether the coinId field is set.
+     */
+    public fun hasCoinId(): kotlin.Boolean {
+      return _builder.hasCoinId()
+    }
+
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
     }
   }
 }

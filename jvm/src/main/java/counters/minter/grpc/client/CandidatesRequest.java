@@ -49,10 +49,25 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            height_ = input.readUInt64();
+            break;
+          }
+          case 16: {
+
+            includeStakes_ = input.readBool();
+            break;
+          }
           case 24: {
             int rawValue = input.readEnum();
 
             status_ = rawValue;
+            break;
+          }
+          case 32: {
+
+            notShowStakes_ = input.readBool();
             break;
           }
           default: {
@@ -88,21 +103,6 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
-   * <pre>
-   * Blockchain state height for the current request. Optional, the last default state of the node is used
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * Calculate field values used_slots, uniq_users, min_stake
-   *    bool include_stakes = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        default: 'false'
-   *    }];
-   * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
-   *    bool not_show_stakes = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        default: 'false'
-   *    }];
-   * </pre>
-   *
    * Protobuf enum {@code api_pb.CandidatesRequest.CandidateStatus}
    */
   public enum CandidateStatus
@@ -228,6 +228,51 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:api_pb.CandidatesRequest.CandidateStatus)
   }
 
+  public static final int HEIGHT_FIELD_NUMBER = 1;
+  private long height_;
+  /**
+   * <pre>
+   * Blockchain state height for the current request. Optional, the last default state of the node is used
+   * </pre>
+   *
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int INCLUDE_STAKES_FIELD_NUMBER = 2;
+  private boolean includeStakes_;
+  /**
+   * <pre>
+   * Calculate field values used_slots, uniq_users, min_stake
+   * </pre>
+   *
+   * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+   * @return The includeStakes.
+   */
+  @java.lang.Override
+  public boolean getIncludeStakes() {
+    return includeStakes_;
+  }
+
+  public static final int NOT_SHOW_STAKES_FIELD_NUMBER = 4;
+  private boolean notShowStakes_;
+  /**
+   * <pre>
+   * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+   * </pre>
+   *
+   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * @return The notShowStakes.
+   */
+  @java.lang.Override
+  public boolean getNotShowStakes() {
+    return notShowStakes_;
+  }
+
   public static final int STATUS_FIELD_NUMBER = 3;
   private int status_;
   /**
@@ -261,8 +306,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (height_ != 0L) {
+      output.writeUInt64(1, height_);
+    }
+    if (includeStakes_ != false) {
+      output.writeBool(2, includeStakes_);
+    }
     if (status_ != counters.minter.grpc.client.CandidatesRequest.CandidateStatus.all.getNumber()) {
       output.writeEnum(3, status_);
+    }
+    if (notShowStakes_ != false) {
+      output.writeBool(4, notShowStakes_);
     }
     unknownFields.writeTo(output);
   }
@@ -273,9 +327,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, height_);
+    }
+    if (includeStakes_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, includeStakes_);
+    }
     if (status_ != counters.minter.grpc.client.CandidatesRequest.CandidateStatus.all.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, status_);
+    }
+    if (notShowStakes_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, notShowStakes_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -292,6 +358,12 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.CandidatesRequest other = (counters.minter.grpc.client.CandidatesRequest) obj;
 
+    if (getHeight()
+        != other.getHeight()) return false;
+    if (getIncludeStakes()
+        != other.getIncludeStakes()) return false;
+    if (getNotShowStakes()
+        != other.getNotShowStakes()) return false;
     if (status_ != other.status_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -304,6 +376,15 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
+    hash = (37 * hash) + INCLUDE_STAKES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeStakes());
+    hash = (37 * hash) + NOT_SHOW_STAKES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNotShowStakes());
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
     hash = (29 * hash) + unknownFields.hashCode();
@@ -439,6 +520,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      height_ = 0L;
+
+      includeStakes_ = false;
+
+      notShowStakes_ = false;
+
       status_ = 0;
 
       return this;
@@ -467,6 +554,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.CandidatesRequest buildPartial() {
       counters.minter.grpc.client.CandidatesRequest result = new counters.minter.grpc.client.CandidatesRequest(this);
+      result.height_ = height_;
+      result.includeStakes_ = includeStakes_;
+      result.notShowStakes_ = notShowStakes_;
       result.status_ = status_;
       onBuilt();
       return result;
@@ -516,6 +606,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.CandidatesRequest other) {
       if (other == counters.minter.grpc.client.CandidatesRequest.getDefaultInstance()) return this;
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
+      if (other.getIncludeStakes() != false) {
+        setIncludeStakes(other.getIncludeStakes());
+      }
+      if (other.getNotShowStakes() != false) {
+        setNotShowStakes(other.getNotShowStakes());
+      }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
@@ -545,6 +644,135 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeStakes_ ;
+    /**
+     * <pre>
+     * Calculate field values used_slots, uniq_users, min_stake
+     * </pre>
+     *
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * @return The includeStakes.
+     */
+    @java.lang.Override
+    public boolean getIncludeStakes() {
+      return includeStakes_;
+    }
+    /**
+     * <pre>
+     * Calculate field values used_slots, uniq_users, min_stake
+     * </pre>
+     *
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * @param value The includeStakes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeStakes(boolean value) {
+      
+      includeStakes_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Calculate field values used_slots, uniq_users, min_stake
+     * </pre>
+     *
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeStakes() {
+      
+      includeStakes_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean notShowStakes_ ;
+    /**
+     * <pre>
+     * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @return The notShowStakes.
+     */
+    @java.lang.Override
+    public boolean getNotShowStakes() {
+      return notShowStakes_;
+    }
+    /**
+     * <pre>
+     * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @param value The notShowStakes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotShowStakes(boolean value) {
+      
+      notShowStakes_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNotShowStakes() {
+      
+      notShowStakes_ = false;
+      onChanged();
       return this;
     }
 

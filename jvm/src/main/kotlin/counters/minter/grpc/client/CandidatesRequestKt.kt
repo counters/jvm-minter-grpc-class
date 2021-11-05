@@ -23,6 +23,81 @@ public object CandidatesRequestKt {
     internal fun _build(): counters.minter.grpc.client.CandidatesRequest = _builder.build()
 
     /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
+     * <pre>
+     * Calculate field values used_slots, uniq_users, min_stake
+     * </pre>
+     *
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     */
+    public var includeStakes: kotlin.Boolean
+      @JvmName("getIncludeStakes")
+      get() = _builder.getIncludeStakes()
+      @JvmName("setIncludeStakes")
+      set(value) {
+        _builder.setIncludeStakes(value)
+      }
+    /**
+     * <pre>
+     * Calculate field values used_slots, uniq_users, min_stake
+     * </pre>
+     *
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     */
+    public fun clearIncludeStakes() {
+      _builder.clearIncludeStakes()
+    }
+
+    /**
+     * <pre>
+     * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     */
+    public var notShowStakes: kotlin.Boolean
+      @JvmName("getNotShowStakes")
+      get() = _builder.getNotShowStakes()
+      @JvmName("setNotShowStakes")
+      set(value) {
+        _builder.setNotShowStakes(value)
+      }
+    /**
+     * <pre>
+     * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     */
+    public fun clearNotShowStakes() {
+      _builder.clearNotShowStakes()
+    }
+
+    /**
      * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
      */
     public var status: counters.minter.grpc.client.CandidatesRequest.CandidateStatus

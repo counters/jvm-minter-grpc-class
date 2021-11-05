@@ -55,6 +55,11 @@ private static final long serialVersionUID = 0L;
             tx_ = s;
             break;
           }
+          case 16: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -90,12 +95,6 @@ private static final long serialVersionUID = 0L;
   public static final int TX_FIELD_NUMBER = 1;
   private volatile java.lang.Object tx_;
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The tx.
    */
@@ -113,12 +112,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The bytes for tx.
    */
@@ -135,6 +128,17 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 2;
+  private long height_;
+  /**
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -154,6 +158,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tx_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tx_);
     }
+    if (height_ != 0L) {
+      output.writeUInt64(2, height_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +172,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tx_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tx_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, height_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +194,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getTx()
         .equals(other.getTx())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -196,6 +209,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TX_FIELD_NUMBER;
     hash = (53 * hash) + getTx().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -331,6 +347,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       tx_ = "";
 
+      height_ = 0L;
+
       return this;
     }
 
@@ -358,6 +376,7 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.EstimateTxCommissionRequest buildPartial() {
       counters.minter.grpc.client.EstimateTxCommissionRequest result = new counters.minter.grpc.client.EstimateTxCommissionRequest(this);
       result.tx_ = tx_;
+      result.height_ = height_;
       onBuilt();
       return result;
     }
@@ -410,6 +429,9 @@ private static final long serialVersionUID = 0L;
         tx_ = other.tx_;
         onChanged();
       }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -441,12 +463,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object tx_ = "";
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      * @return The tx.
      */
@@ -463,12 +479,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      * @return The bytes for tx.
      */
@@ -486,12 +496,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      * @param value The tx to set.
      * @return This builder for chaining.
@@ -507,12 +511,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      * @return This builder for chaining.
      */
@@ -523,12 +521,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      * @param value The bytes for tx to set.
      * @return This builder for chaining.
@@ -541,6 +533,37 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       tx_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
       onChanged();
       return this;
     }

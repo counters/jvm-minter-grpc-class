@@ -23,12 +23,30 @@ public object EstimateCoinBuyRequestKt {
     internal fun _build(): counters.minter.grpc.client.EstimateCoinBuyRequest = _builder.build()
 
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     */
+    public var coinIdToBuy: kotlin.Long
+      @JvmName("getCoinIdToBuy")
+      get() = _builder.getCoinIdToBuy()
+      @JvmName("setCoinIdToBuy")
+      set(value) {
+        _builder.setCoinIdToBuy(value)
+      }
+    /**
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     */
+    public fun clearCoinIdToBuy() {
+      _builder.clearCoinIdToBuy()
+    }
+    /**
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * @return Whether the coinIdToBuy field is set.
+     */
+    public fun hasCoinIdToBuy(): kotlin.Boolean {
+      return _builder.hasCoinIdToBuy()
+    }
+
+    /**
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      */
     public var coinToBuy: kotlin.String
@@ -39,24 +57,12 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      */
     public fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @return Whether the coinToBuy field is set.
      */
@@ -65,12 +71,30 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     */
+    public var coinIdToSell: kotlin.Long
+      @JvmName("getCoinIdToSell")
+      get() = _builder.getCoinIdToSell()
+      @JvmName("setCoinIdToSell")
+      set(value) {
+        _builder.setCoinIdToSell(value)
+      }
+    /**
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     */
+    public fun clearCoinIdToSell() {
+      _builder.clearCoinIdToSell()
+    }
+    /**
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * @return Whether the coinIdToSell field is set.
+     */
+    public fun hasCoinIdToSell(): kotlin.Boolean {
+      return _builder.hasCoinIdToSell()
+    }
+
+    /**
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      */
     public var coinToSell: kotlin.String
@@ -81,24 +105,12 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      */
     public fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return Whether the coinToSell field is set.
      */
@@ -107,12 +119,64 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     */
+    public var valueToBuy: kotlin.String
+      @JvmName("getValueToBuy")
+      get() = _builder.getValueToBuy()
+      @JvmName("setValueToBuy")
+      set(value) {
+        _builder.setValueToBuy(value)
+      }
+    /**
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     */
+    public fun clearValueToBuy() {
+      _builder.clearValueToBuy()
+    }
+
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
+    }
+
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     */
+    public var coinIdCommission: kotlin.Long
+      @JvmName("getCoinIdCommission")
+      get() = _builder.getCoinIdCommission()
+      @JvmName("setCoinIdCommission")
+      set(value) {
+        _builder.setCoinIdCommission(value)
+      }
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     */
+    public fun clearCoinIdCommission() {
+      _builder.clearCoinIdCommission()
+    }
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * @return Whether the coinIdCommission field is set.
+     */
+    public fun hasCoinIdCommission(): kotlin.Boolean {
+      return _builder.hasCoinIdCommission()
+    }
+
+    /**
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      */
     public var coinCommission: kotlin.String
@@ -123,24 +187,12 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinCommission(value)
       }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      */
     public fun clearCoinCommission() {
       _builder.clearCoinCommission()
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @return Whether the coinCommission field is set.
      */

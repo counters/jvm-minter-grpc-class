@@ -50,6 +50,11 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           case 16: {
             int rawValue = input.readEnum();
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
@@ -71,6 +76,16 @@ private static final long serialVersionUID = 0L;
               fields_.add(rawValue);
             }
             input.popLimit(oldLimit);
+            break;
+          }
+          case 24: {
+
+            failedTxs_ = input.readBool();
+            break;
+          }
+          case 32: {
+
+            events_ = input.readBool();
             break;
           }
           default: {
@@ -108,6 +123,17 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.BlockRequest.class, counters.minter.grpc.client.BlockRequest.Builder.class);
   }
 
+  public static final int HEIGHT_FIELD_NUMBER = 1;
+  private long height_;
+  /**
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
   public static final int FIELDS_FIELD_NUMBER = 2;
   private java.util.List<java.lang.Integer> fields_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
@@ -121,12 +147,6 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return A list containing the fields.
    */
@@ -136,12 +156,6 @@ private static final long serialVersionUID = 0L;
         java.lang.Integer, counters.minter.grpc.client.BlockField>(fields_, fields_converter_);
   }
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return The count of fields.
    */
@@ -150,12 +164,6 @@ private static final long serialVersionUID = 0L;
     return fields_.size();
   }
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @param index The index of the element to return.
    * @return The fields at the given index.
@@ -165,12 +173,6 @@ private static final long serialVersionUID = 0L;
     return fields_converter_.convert(fields_.get(index));
   }
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return A list containing the enum numeric values on the wire for fields.
    */
@@ -180,12 +182,6 @@ private static final long serialVersionUID = 0L;
     return fields_;
   }
   /**
-   * <pre>
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fields at the given index.
@@ -195,6 +191,28 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
   private int fieldsMemoizedSerializedSize;
+
+  public static final int FAILED_TXS_FIELD_NUMBER = 3;
+  private boolean failedTxs_;
+  /**
+   * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+   * @return The failedTxs.
+   */
+  @java.lang.Override
+  public boolean getFailedTxs() {
+    return failedTxs_;
+  }
+
+  public static final int EVENTS_FIELD_NUMBER = 4;
+  private boolean events_;
+  /**
+   * <code>bool events = 4 [json_name = "events"];</code>
+   * @return The events.
+   */
+  @java.lang.Override
+  public boolean getEvents() {
+    return events_;
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -211,12 +229,21 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
+    if (height_ != 0L) {
+      output.writeUInt64(1, height_);
+    }
     if (getFieldsList().size() > 0) {
       output.writeUInt32NoTag(18);
       output.writeUInt32NoTag(fieldsMemoizedSerializedSize);
     }
     for (int i = 0; i < fields_.size(); i++) {
       output.writeEnumNoTag(fields_.get(i));
+    }
+    if (failedTxs_ != false) {
+      output.writeBool(3, failedTxs_);
+    }
+    if (events_ != false) {
+      output.writeBool(4, events_);
     }
     unknownFields.writeTo(output);
   }
@@ -227,6 +254,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, height_);
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < fields_.size(); i++) {
@@ -238,6 +269,14 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32SizeNoTag(dataSize);
       }fieldsMemoizedSerializedSize = dataSize;
+    }
+    if (failedTxs_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, failedTxs_);
+    }
+    if (events_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, events_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -254,7 +293,13 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.BlockRequest other = (counters.minter.grpc.client.BlockRequest) obj;
 
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!fields_.equals(other.fields_)) return false;
+    if (getFailedTxs()
+        != other.getFailedTxs()) return false;
+    if (getEvents()
+        != other.getEvents()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -266,10 +311,19 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     if (getFieldsCount() > 0) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + fields_.hashCode();
     }
+    hash = (37 * hash) + FAILED_TXS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getFailedTxs());
+    hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEvents());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -403,8 +457,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      height_ = 0L;
+
       fields_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      failedTxs_ = false;
+
+      events_ = false;
+
       return this;
     }
 
@@ -432,11 +492,14 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.BlockRequest buildPartial() {
       counters.minter.grpc.client.BlockRequest result = new counters.minter.grpc.client.BlockRequest(this);
       int from_bitField0_ = bitField0_;
+      result.height_ = height_;
       if (((bitField0_ & 0x00000001) != 0)) {
         fields_ = java.util.Collections.unmodifiableList(fields_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.fields_ = fields_;
+      result.failedTxs_ = failedTxs_;
+      result.events_ = events_;
       onBuilt();
       return result;
     }
@@ -485,6 +548,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.BlockRequest other) {
       if (other == counters.minter.grpc.client.BlockRequest.getDefaultInstance()) return this;
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
@@ -494,6 +560,12 @@ private static final long serialVersionUID = 0L;
           fields_.addAll(other.fields_);
         }
         onChanged();
+      }
+      if (other.getFailedTxs() != false) {
+        setFailedTxs(other.getFailedTxs());
+      }
+      if (other.getEvents() != false) {
+        setEvents(other.getEvents());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -525,6 +597,37 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private long height_ ;
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<java.lang.Integer> fields_ =
       java.util.Collections.emptyList();
     private void ensureFieldsIsMutable() {
@@ -534,12 +637,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @return A list containing the fields.
      */
@@ -548,12 +645,6 @@ private static final long serialVersionUID = 0L;
           java.lang.Integer, counters.minter.grpc.client.BlockField>(fields_, fields_converter_);
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @return The count of fields.
      */
@@ -561,12 +652,6 @@ private static final long serialVersionUID = 0L;
       return fields_.size();
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param index The index of the element to return.
      * @return The fields at the given index.
@@ -575,12 +660,6 @@ private static final long serialVersionUID = 0L;
       return fields_converter_.convert(fields_.get(index));
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
@@ -597,12 +676,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param value The fields to add.
      * @return This builder for chaining.
@@ -617,12 +690,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param values The fields to add.
      * @return This builder for chaining.
@@ -637,12 +704,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @return This builder for chaining.
      */
@@ -653,12 +714,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @return A list containing the enum numeric values on the wire for fields.
      */
@@ -667,12 +722,6 @@ private static final long serialVersionUID = 0L;
       return java.util.Collections.unmodifiableList(fields_);
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of fields at the given index.
@@ -681,12 +730,6 @@ private static final long serialVersionUID = 0L;
       return fields_.get(index);
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of fields at the given index.
@@ -700,12 +743,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param value The enum numeric value on the wire for fields to add.
      * @return This builder for chaining.
@@ -717,12 +754,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
      * @param values The enum numeric values on the wire for fields to add.
      * @return This builder for chaining.
@@ -733,6 +764,68 @@ private static final long serialVersionUID = 0L;
       for (int value : values) {
         fields_.add(value);
       }
+      onChanged();
+      return this;
+    }
+
+    private boolean failedTxs_ ;
+    /**
+     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * @return The failedTxs.
+     */
+    @java.lang.Override
+    public boolean getFailedTxs() {
+      return failedTxs_;
+    }
+    /**
+     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * @param value The failedTxs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailedTxs(boolean value) {
+      
+      failedTxs_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFailedTxs() {
+      
+      failedTxs_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean events_ ;
+    /**
+     * <code>bool events = 4 [json_name = "events"];</code>
+     * @return The events.
+     */
+    @java.lang.Override
+    public boolean getEvents() {
+      return events_;
+    }
+    /**
+     * <code>bool events = 4 [json_name = "events"];</code>
+     * @param value The events to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEvents(boolean value) {
+      
+      events_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool events = 4 [json_name = "events"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEvents() {
+      
+      events_ = false;
       onChanged();
       return this;
     }

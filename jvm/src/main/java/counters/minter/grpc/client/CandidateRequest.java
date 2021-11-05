@@ -55,6 +55,16 @@ private static final long serialVersionUID = 0L;
             publicKey_ = s;
             break;
           }
+          case 16: {
+
+            height_ = input.readUInt64();
+            break;
+          }
+          case 32: {
+
+            notShowStakes_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -133,6 +143,36 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int HEIGHT_FIELD_NUMBER = 2;
+  private long height_;
+  /**
+   * <pre>
+   * Blockchain state height for the current request. Optional, the last default state of the node is used
+   * </pre>
+   *
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int NOT_SHOW_STAKES_FIELD_NUMBER = 4;
+  private boolean notShowStakes_;
+  /**
+   * <pre>
+   * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+   * </pre>
+   *
+   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * @return The notShowStakes.
+   */
+  @java.lang.Override
+  public boolean getNotShowStakes() {
+    return notShowStakes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -150,6 +190,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicKey_);
     }
+    if (height_ != 0L) {
+      output.writeUInt64(2, height_);
+    }
+    if (notShowStakes_ != false) {
+      output.writeBool(4, notShowStakes_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -161,6 +207,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicKey_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, height_);
+    }
+    if (notShowStakes_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, notShowStakes_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -179,6 +233,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getPublicKey()
         .equals(other.getPublicKey())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
+    if (getNotShowStakes()
+        != other.getNotShowStakes()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -192,6 +250,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
     hash = (53 * hash) + getPublicKey().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
+    hash = (37 * hash) + NOT_SHOW_STAKES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNotShowStakes());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -327,6 +391,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       publicKey_ = "";
 
+      height_ = 0L;
+
+      notShowStakes_ = false;
+
       return this;
     }
 
@@ -354,6 +422,8 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.CandidateRequest buildPartial() {
       counters.minter.grpc.client.CandidateRequest result = new counters.minter.grpc.client.CandidateRequest(this);
       result.publicKey_ = publicKey_;
+      result.height_ = height_;
+      result.notShowStakes_ = notShowStakes_;
       onBuilt();
       return result;
     }
@@ -405,6 +475,12 @@ private static final long serialVersionUID = 0L;
       if (!other.getPublicKey().isEmpty()) {
         publicKey_ = other.publicKey_;
         onChanged();
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
+      if (other.getNotShowStakes() != false) {
+        setNotShowStakes(other.getNotShowStakes());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -527,6 +603,92 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       publicKey_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Blockchain state height for the current request. Optional, the last default state of the node is used
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean notShowStakes_ ;
+    /**
+     * <pre>
+     * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @return The notShowStakes.
+     */
+    @java.lang.Override
+    public boolean getNotShowStakes() {
+      return notShowStakes_;
+    }
+    /**
+     * <pre>
+     * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @param value The notShowStakes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotShowStakes(boolean value) {
+      
+      notShowStakes_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
+     * </pre>
+     *
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNotShowStakes() {
+      
+      notShowStakes_ = false;
       onChanged();
       return this;
     }

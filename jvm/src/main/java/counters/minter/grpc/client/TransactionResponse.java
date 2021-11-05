@@ -220,9 +220,9 @@ private static final long serialVersionUID = 0L;
   public enum Type
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>Empty = 0;</code>
+     * <code>_NULL_ = 0;</code>
      */
-    Empty(0),
+    _NULL_(0),
     /**
      * <code>Send = 1;</code>
      */
@@ -371,9 +371,9 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
-     * <code>Empty = 0;</code>
+     * <code>_NULL_ = 0;</code>
      */
-    public static final int Empty_VALUE = 0;
+    public static final int _NULL__VALUE = 0;
     /**
      * <code>Send = 1;</code>
      */
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
      */
     public static Type forNumber(int value) {
       switch (value) {
-        case 0: return Empty;
+        case 0: return _NULL_;
         case 1: return Send;
         case 2: return SellCoin;
         case 3: return SellAllCoin;

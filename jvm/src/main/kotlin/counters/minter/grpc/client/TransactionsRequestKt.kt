@@ -21,6 +21,57 @@ public object TransactionsRequestKt {
     @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
     internal fun _build(): counters.minter.grpc.client.TransactionsRequest = _builder.build()
+
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     */
+    public var query: kotlin.String
+      @JvmName("getQuery")
+      get() = _builder.getQuery()
+      @JvmName("setQuery")
+      set(value) {
+        _builder.setQuery(value)
+      }
+    /**
+     * <code>string query = 1 [json_name = "query"];</code>
+     */
+    public fun clearQuery() {
+      _builder.clearQuery()
+    }
+
+    /**
+     * <code>int32 page = 2 [json_name = "page"];</code>
+     */
+    public var page: kotlin.Int
+      @JvmName("getPage")
+      get() = _builder.getPage()
+      @JvmName("setPage")
+      set(value) {
+        _builder.setPage(value)
+      }
+    /**
+     * <code>int32 page = 2 [json_name = "page"];</code>
+     */
+    public fun clearPage() {
+      _builder.clearPage()
+    }
+
+    /**
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     */
+    public var perPage: kotlin.Int
+      @JvmName("getPerPage")
+      get() = _builder.getPerPage()
+      @JvmName("setPerPage")
+      set(value) {
+        _builder.setPerPage(value)
+      }
+    /**
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     */
+    public fun clearPerPage() {
+      _builder.clearPerPage()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

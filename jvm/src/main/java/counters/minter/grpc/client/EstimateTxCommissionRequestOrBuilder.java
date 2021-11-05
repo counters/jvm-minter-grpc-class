@@ -8,26 +8,20 @@ public interface EstimateTxCommissionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The tx.
    */
   java.lang.String getTx();
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The bytes for tx.
    */
   com.google.protobuf.ByteString
       getTxBytes();
+
+  /**
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
 }

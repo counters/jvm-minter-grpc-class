@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private EstimateCoinBuyRequest() {
+    valueToBuy_ = "";
     swapFrom_ = 0;
     route_ = emptyLongList();
   }
@@ -51,6 +52,27 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+            buy_ = input.readUInt64();
+            buyCase_ = 1;
+            break;
+          }
+          case 16: {
+            sell_ = input.readUInt64();
+            sellCase_ = 2;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            valueToBuy_ = s;
+            break;
+          }
+          case 32: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
             buyCase_ = 5;
@@ -67,6 +89,11 @@ private static final long serialVersionUID = 0L;
             int rawValue = input.readEnum();
 
             swapFrom_ = rawValue;
+            break;
+          }
+          case 72: {
+            commission_ = input.readUInt64();
+            commissionCase_ = 9;
             break;
           }
           case 82: {
@@ -136,6 +163,7 @@ private static final long serialVersionUID = 0L;
   public enum BuyCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    COIN_ID_TO_BUY(1),
     COIN_TO_BUY(5),
     BUY_NOT_SET(0);
     private final int value;
@@ -154,6 +182,7 @@ private static final long serialVersionUID = 0L;
 
     public static BuyCase forNumber(int value) {
       switch (value) {
+        case 1: return COIN_ID_TO_BUY;
         case 5: return COIN_TO_BUY;
         case 0: return BUY_NOT_SET;
         default: return null;
@@ -175,6 +204,7 @@ private static final long serialVersionUID = 0L;
   public enum SellCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    COIN_ID_TO_SELL(2),
     COIN_TO_SELL(6),
     SELL_NOT_SET(0);
     private final int value;
@@ -193,6 +223,7 @@ private static final long serialVersionUID = 0L;
 
     public static SellCase forNumber(int value) {
       switch (value) {
+        case 2: return COIN_ID_TO_SELL;
         case 6: return COIN_TO_SELL;
         case 0: return SELL_NOT_SET;
         default: return null;
@@ -214,6 +245,7 @@ private static final long serialVersionUID = 0L;
   public enum CommissionCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    COIN_ID_COMMISSION(9),
     COIN_COMMISSION(10),
     COMMISSION_NOT_SET(0);
     private final int value;
@@ -232,6 +264,7 @@ private static final long serialVersionUID = 0L;
 
     public static CommissionCase forNumber(int value) {
       switch (value) {
+        case 9: return COIN_ID_COMMISSION;
         case 10: return COIN_COMMISSION;
         case 0: return COMMISSION_NOT_SET;
         default: return null;
@@ -248,14 +281,29 @@ private static final long serialVersionUID = 0L;
         commissionCase_);
   }
 
+  public static final int COIN_ID_TO_BUY_FIELD_NUMBER = 1;
+  /**
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * @return Whether the coinIdToBuy field is set.
+   */
+  @java.lang.Override
+  public boolean hasCoinIdToBuy() {
+    return buyCase_ == 1;
+  }
+  /**
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * @return The coinIdToBuy.
+   */
+  @java.lang.Override
+  public long getCoinIdToBuy() {
+    if (buyCase_ == 1) {
+      return (java.lang.Long) buy_;
+    }
+    return 0L;
+  }
+
   public static final int COIN_TO_BUY_FIELD_NUMBER = 5;
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return Whether the coinToBuy field is set.
    */
@@ -263,12 +311,6 @@ private static final long serialVersionUID = 0L;
     return buyCase_ == 5;
   }
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return The coinToBuy.
    */
@@ -290,12 +332,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
    * @return The bytes for coinToBuy.
    */
@@ -318,14 +354,29 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int COIN_ID_TO_SELL_FIELD_NUMBER = 2;
+  /**
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * @return Whether the coinIdToSell field is set.
+   */
+  @java.lang.Override
+  public boolean hasCoinIdToSell() {
+    return sellCase_ == 2;
+  }
+  /**
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * @return The coinIdToSell.
+   */
+  @java.lang.Override
+  public long getCoinIdToSell() {
+    if (sellCase_ == 2) {
+      return (java.lang.Long) sell_;
+    }
+    return 0L;
+  }
+
   public static final int COIN_TO_SELL_FIELD_NUMBER = 6;
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return Whether the coinToSell field is set.
    */
@@ -333,12 +384,6 @@ private static final long serialVersionUID = 0L;
     return sellCase_ == 6;
   }
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The coinToSell.
    */
@@ -360,12 +405,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The bytes for coinToSell.
    */
@@ -388,14 +427,78 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int VALUE_TO_BUY_FIELD_NUMBER = 3;
+  private volatile java.lang.Object valueToBuy_;
+  /**
+   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * @return The valueToBuy.
+   */
+  @java.lang.Override
+  public java.lang.String getValueToBuy() {
+    java.lang.Object ref = valueToBuy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      valueToBuy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * @return The bytes for valueToBuy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getValueToBuyBytes() {
+    java.lang.Object ref = valueToBuy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      valueToBuy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 4;
+  private long height_;
+  /**
+   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int COIN_ID_COMMISSION_FIELD_NUMBER = 9;
+  /**
+   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * @return Whether the coinIdCommission field is set.
+   */
+  @java.lang.Override
+  public boolean hasCoinIdCommission() {
+    return commissionCase_ == 9;
+  }
+  /**
+   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * @return The coinIdCommission.
+   */
+  @java.lang.Override
+  public long getCoinIdCommission() {
+    if (commissionCase_ == 9) {
+      return (java.lang.Long) commission_;
+    }
+    return 0L;
+  }
+
   public static final int COIN_COMMISSION_FIELD_NUMBER = 10;
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return Whether the coinCommission field is set.
    */
@@ -403,12 +506,6 @@ private static final long serialVersionUID = 0L;
     return commissionCase_ == 10;
   }
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return The coinCommission.
    */
@@ -430,12 +527,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *            type: INTEGER
-   *        }];
-   * </pre>
-   *
    * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
    * @return The bytes for coinCommission.
    */
@@ -520,6 +611,20 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
+    if (buyCase_ == 1) {
+      output.writeUInt64(
+          1, (long)((java.lang.Long) buy_));
+    }
+    if (sellCase_ == 2) {
+      output.writeUInt64(
+          2, (long)((java.lang.Long) sell_));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToBuy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueToBuy_);
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(4, height_);
+    }
     if (buyCase_ == 5) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, buy_);
     }
@@ -528,6 +633,10 @@ private static final long serialVersionUID = 0L;
     }
     if (swapFrom_ != counters.minter.grpc.client.SwapFrom.optimal.getNumber()) {
       output.writeEnum(8, swapFrom_);
+    }
+    if (commissionCase_ == 9) {
+      output.writeUInt64(
+          9, (long)((java.lang.Long) commission_));
     }
     if (commissionCase_ == 10) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, commission_);
@@ -548,6 +657,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (buyCase_ == 1) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(
+            1, (long)((java.lang.Long) buy_));
+    }
+    if (sellCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(
+            2, (long)((java.lang.Long) sell_));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToBuy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueToBuy_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, height_);
+    }
     if (buyCase_ == 5) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, buy_);
     }
@@ -557,6 +683,11 @@ private static final long serialVersionUID = 0L;
     if (swapFrom_ != counters.minter.grpc.client.SwapFrom.optimal.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, swapFrom_);
+    }
+    if (commissionCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(
+            9, (long)((java.lang.Long) commission_));
     }
     if (commissionCase_ == 10) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, commission_);
@@ -590,11 +721,19 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.EstimateCoinBuyRequest other = (counters.minter.grpc.client.EstimateCoinBuyRequest) obj;
 
+    if (!getValueToBuy()
+        .equals(other.getValueToBuy())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
     if (swapFrom_ != other.swapFrom_) return false;
     if (!getRouteList()
         .equals(other.getRouteList())) return false;
     if (!getBuyCase().equals(other.getBuyCase())) return false;
     switch (buyCase_) {
+      case 1:
+        if (getCoinIdToBuy()
+            != other.getCoinIdToBuy()) return false;
+        break;
       case 5:
         if (!getCoinToBuy()
             .equals(other.getCoinToBuy())) return false;
@@ -604,6 +743,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSellCase().equals(other.getSellCase())) return false;
     switch (sellCase_) {
+      case 2:
+        if (getCoinIdToSell()
+            != other.getCoinIdToSell()) return false;
+        break;
       case 6:
         if (!getCoinToSell()
             .equals(other.getCoinToSell())) return false;
@@ -613,6 +756,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCommissionCase().equals(other.getCommissionCase())) return false;
     switch (commissionCase_) {
+      case 9:
+        if (getCoinIdCommission()
+            != other.getCoinIdCommission()) return false;
+        break;
       case 10:
         if (!getCoinCommission()
             .equals(other.getCoinCommission())) return false;
@@ -631,6 +778,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + VALUE_TO_BUY_FIELD_NUMBER;
+    hash = (53 * hash) + getValueToBuy().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (37 * hash) + SWAP_FROM_FIELD_NUMBER;
     hash = (53 * hash) + swapFrom_;
     if (getRouteCount() > 0) {
@@ -638,6 +790,11 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getRouteList().hashCode();
     }
     switch (buyCase_) {
+      case 1:
+        hash = (37 * hash) + COIN_ID_TO_BUY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCoinIdToBuy());
+        break;
       case 5:
         hash = (37 * hash) + COIN_TO_BUY_FIELD_NUMBER;
         hash = (53 * hash) + getCoinToBuy().hashCode();
@@ -646,6 +803,11 @@ private static final long serialVersionUID = 0L;
       default:
     }
     switch (sellCase_) {
+      case 2:
+        hash = (37 * hash) + COIN_ID_TO_SELL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCoinIdToSell());
+        break;
       case 6:
         hash = (37 * hash) + COIN_TO_SELL_FIELD_NUMBER;
         hash = (53 * hash) + getCoinToSell().hashCode();
@@ -654,6 +816,11 @@ private static final long serialVersionUID = 0L;
       default:
     }
     switch (commissionCase_) {
+      case 9:
+        hash = (37 * hash) + COIN_ID_COMMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCoinIdCommission());
+        break;
       case 10:
         hash = (37 * hash) + COIN_COMMISSION_FIELD_NUMBER;
         hash = (53 * hash) + getCoinCommission().hashCode();
@@ -794,6 +961,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      valueToBuy_ = "";
+
+      height_ = 0L;
+
       swapFrom_ = 0;
 
       route_ = emptyLongList();
@@ -831,11 +1002,22 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.EstimateCoinBuyRequest buildPartial() {
       counters.minter.grpc.client.EstimateCoinBuyRequest result = new counters.minter.grpc.client.EstimateCoinBuyRequest(this);
       int from_bitField0_ = bitField0_;
+      if (buyCase_ == 1) {
+        result.buy_ = buy_;
+      }
       if (buyCase_ == 5) {
         result.buy_ = buy_;
       }
+      if (sellCase_ == 2) {
+        result.sell_ = sell_;
+      }
       if (sellCase_ == 6) {
         result.sell_ = sell_;
+      }
+      result.valueToBuy_ = valueToBuy_;
+      result.height_ = height_;
+      if (commissionCase_ == 9) {
+        result.commission_ = commission_;
       }
       if (commissionCase_ == 10) {
         result.commission_ = commission_;
@@ -897,6 +1079,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.EstimateCoinBuyRequest other) {
       if (other == counters.minter.grpc.client.EstimateCoinBuyRequest.getDefaultInstance()) return this;
+      if (!other.getValueToBuy().isEmpty()) {
+        valueToBuy_ = other.valueToBuy_;
+        onChanged();
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       if (other.swapFrom_ != 0) {
         setSwapFromValue(other.getSwapFromValue());
       }
@@ -911,6 +1100,10 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       switch (other.getBuyCase()) {
+        case COIN_ID_TO_BUY: {
+          setCoinIdToBuy(other.getCoinIdToBuy());
+          break;
+        }
         case COIN_TO_BUY: {
           buyCase_ = 5;
           buy_ = other.buy_;
@@ -922,6 +1115,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       switch (other.getSellCase()) {
+        case COIN_ID_TO_SELL: {
+          setCoinIdToSell(other.getCoinIdToSell());
+          break;
+        }
         case COIN_TO_SELL: {
           sellCase_ = 6;
           sell_ = other.sell_;
@@ -933,6 +1130,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       switch (other.getCommissionCase()) {
+        case COIN_ID_COMMISSION: {
+          setCoinIdCommission(other.getCoinIdCommission());
+          break;
+        }
         case COIN_COMMISSION: {
           commissionCase_ = 10;
           commission_ = other.commission_;
@@ -1019,12 +1220,47 @@ private static final long serialVersionUID = 0L;
     private int bitField0_;
 
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * @return Whether the coinIdToBuy field is set.
+     */
+    public boolean hasCoinIdToBuy() {
+      return buyCase_ == 1;
+    }
+    /**
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * @return The coinIdToBuy.
+     */
+    public long getCoinIdToBuy() {
+      if (buyCase_ == 1) {
+        return (java.lang.Long) buy_;
+      }
+      return 0L;
+    }
+    /**
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * @param value The coinIdToBuy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCoinIdToBuy(long value) {
+      buyCase_ = 1;
+      buy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCoinIdToBuy() {
+      if (buyCase_ == 1) {
+        buyCase_ = 0;
+        buy_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @return Whether the coinToBuy field is set.
      */
@@ -1033,12 +1269,6 @@ private static final long serialVersionUID = 0L;
       return buyCase_ == 5;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @return The coinToBuy.
      */
@@ -1061,12 +1291,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @return The bytes for coinToBuy.
      */
@@ -1090,12 +1314,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @param value The coinToBuy to set.
      * @return This builder for chaining.
@@ -1111,12 +1329,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @return This builder for chaining.
      */
@@ -1129,12 +1341,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
      * @param value The bytes for coinToBuy to set.
      * @return This builder for chaining.
@@ -1152,12 +1358,47 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * @return Whether the coinIdToSell field is set.
+     */
+    public boolean hasCoinIdToSell() {
+      return sellCase_ == 2;
+    }
+    /**
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * @return The coinIdToSell.
+     */
+    public long getCoinIdToSell() {
+      if (sellCase_ == 2) {
+        return (java.lang.Long) sell_;
+      }
+      return 0L;
+    }
+    /**
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * @param value The coinIdToSell to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCoinIdToSell(long value) {
+      sellCase_ = 2;
+      sell_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCoinIdToSell() {
+      if (sellCase_ == 2) {
+        sellCase_ = 0;
+        sell_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return Whether the coinToSell field is set.
      */
@@ -1166,12 +1407,6 @@ private static final long serialVersionUID = 0L;
       return sellCase_ == 6;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return The coinToSell.
      */
@@ -1194,12 +1429,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return The bytes for coinToSell.
      */
@@ -1223,12 +1452,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @param value The coinToSell to set.
      * @return This builder for chaining.
@@ -1244,12 +1467,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return This builder for chaining.
      */
@@ -1262,12 +1479,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @param value The bytes for coinToSell to set.
      * @return This builder for chaining.
@@ -1284,13 +1495,155 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object valueToBuy_ = "";
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * @return The valueToBuy.
+     */
+    public java.lang.String getValueToBuy() {
+      java.lang.Object ref = valueToBuy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueToBuy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * @return The bytes for valueToBuy.
+     */
+    public com.google.protobuf.ByteString
+        getValueToBuyBytes() {
+      java.lang.Object ref = valueToBuy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueToBuy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * @param value The valueToBuy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValueToBuy(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      valueToBuy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValueToBuy() {
+      
+      valueToBuy_ = getDefaultInstance().getValueToBuy();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * @param value The bytes for valueToBuy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValueToBuyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      valueToBuy_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * @return Whether the coinIdCommission field is set.
+     */
+    public boolean hasCoinIdCommission() {
+      return commissionCase_ == 9;
+    }
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * @return The coinIdCommission.
+     */
+    public long getCoinIdCommission() {
+      if (commissionCase_ == 9) {
+        return (java.lang.Long) commission_;
+      }
+      return 0L;
+    }
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * @param value The coinIdCommission to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCoinIdCommission(long value) {
+      commissionCase_ = 9;
+      commission_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCoinIdCommission() {
+      if (commissionCase_ == 9) {
+        commissionCase_ = 0;
+        commission_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @return Whether the coinCommission field is set.
      */
@@ -1299,12 +1652,6 @@ private static final long serialVersionUID = 0L;
       return commissionCase_ == 10;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @return The coinCommission.
      */
@@ -1327,12 +1674,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @return The bytes for coinCommission.
      */
@@ -1356,12 +1697,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @param value The coinCommission to set.
      * @return This builder for chaining.
@@ -1377,12 +1712,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @return This builder for chaining.
      */
@@ -1395,12 +1724,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *            type: INTEGER
-     *        }];
-     * </pre>
-     *
      * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
      * @param value The bytes for coinCommission to set.
      * @return This builder for chaining.

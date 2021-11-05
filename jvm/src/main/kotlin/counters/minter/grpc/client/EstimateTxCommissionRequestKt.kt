@@ -23,12 +23,6 @@ public object EstimateTxCommissionRequestKt {
     internal fun _build(): counters.minter.grpc.client.EstimateTxCommissionRequest = _builder.build()
 
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      */
     public var tx: kotlin.String
@@ -39,16 +33,27 @@ public object EstimateTxCommissionRequestKt {
         _builder.setTx(value)
       }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>string tx = 1 [json_name = "tx"];</code>
      */
     public fun clearTx() {
       _builder.clearTx()
+    }
+
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public var height: kotlin.Long
+      @JvmName("getHeight")
+      get() = _builder.getHeight()
+      @JvmName("setHeight")
+      set(value) {
+        _builder.setHeight(value)
+      }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     */
+    public fun clearHeight() {
+      _builder.clearHeight()
     }
   }
 }

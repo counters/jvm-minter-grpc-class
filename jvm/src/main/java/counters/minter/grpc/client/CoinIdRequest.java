@@ -48,6 +48,11 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           case 16: {
 
             id_ = input.readUInt64();
@@ -85,18 +90,26 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.CoinIdRequest.class, counters.minter.grpc.client.CoinIdRequest.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  public static final int HEIGHT_FIELD_NUMBER = 1;
+  private long height_;
   /**
    * <pre>
    *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
    *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
    *    };
-   *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
    * </pre>
    *
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int ID_FIELD_NUMBER = 2;
+  private long id_;
+  /**
    * <code>uint64 id = 2 [json_name = "id"];</code>
    * @return The id.
    */
@@ -119,6 +132,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (height_ != 0L) {
+      output.writeUInt64(1, height_);
+    }
     if (id_ != 0L) {
       output.writeUInt64(2, id_);
     }
@@ -131,6 +147,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(1, height_);
+    }
     if (id_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(2, id_);
@@ -150,6 +170,8 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.CoinIdRequest other = (counters.minter.grpc.client.CoinIdRequest) obj;
 
+    if (getHeight()
+        != other.getHeight()) return false;
     if (getId()
         != other.getId()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -163,6 +185,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getId());
@@ -299,6 +324,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      height_ = 0L;
+
       id_ = 0L;
 
       return this;
@@ -327,6 +354,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.CoinIdRequest buildPartial() {
       counters.minter.grpc.client.CoinIdRequest result = new counters.minter.grpc.client.CoinIdRequest(this);
+      result.height_ = height_;
       result.id_ = id_;
       onBuilt();
       return result;
@@ -376,6 +404,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.CoinIdRequest other) {
       if (other == counters.minter.grpc.client.CoinIdRequest.getDefaultInstance()) return this;
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       if (other.getId() != 0L) {
         setId(other.getId());
       }
@@ -408,17 +439,57 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long id_ ;
+    private long height_ ;
     /**
      * <pre>
      *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
      *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
      *    };
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
      * </pre>
      *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <pre>
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     *    };
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     *    };
+     * </pre>
+     *
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long id_ ;
+    /**
      * <code>uint64 id = 2 [json_name = "id"];</code>
      * @return The id.
      */
@@ -427,15 +498,6 @@ private static final long serialVersionUID = 0L;
       return id_;
     }
     /**
-     * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 id = 2 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -447,15 +509,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
-     *    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>uint64 id = 2 [json_name = "id"];</code>
      * @return This builder for chaining.
      */

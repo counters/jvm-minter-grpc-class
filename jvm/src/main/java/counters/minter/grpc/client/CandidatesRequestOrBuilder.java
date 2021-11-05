@@ -8,6 +8,36 @@ public interface CandidatesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Blockchain state height for the current request. Optional, the last default state of the node is used
+   * </pre>
+   *
+   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * @return The height.
+   */
+  long getHeight();
+
+  /**
+   * <pre>
+   * Calculate field values used_slots, uniq_users, min_stake
+   * </pre>
+   *
+   * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+   * @return The includeStakes.
+   */
+  boolean getIncludeStakes();
+
+  /**
+   * <pre>
+   * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
+   * </pre>
+   *
+   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * @return The notShowStakes.
+   */
+  boolean getNotShowStakes();
+
+  /**
    * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
    * @return The enum numeric value on the wire for status.
    */

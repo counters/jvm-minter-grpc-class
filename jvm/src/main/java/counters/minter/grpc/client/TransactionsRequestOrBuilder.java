@@ -6,4 +6,28 @@ package counters.minter.grpc.client;
 public interface TransactionsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api_pb.TransactionsRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string query = 1 [json_name = "query"];</code>
+   * @return The query.
+   */
+  java.lang.String getQuery();
+  /**
+   * <code>string query = 1 [json_name = "query"];</code>
+   * @return The bytes for query.
+   */
+  com.google.protobuf.ByteString
+      getQueryBytes();
+
+  /**
+   * <code>int32 page = 2 [json_name = "page"];</code>
+   * @return The page.
+   */
+  int getPage();
+
+  /**
+   * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+   * @return The perPage.
+   */
+  int getPerPage();
 }

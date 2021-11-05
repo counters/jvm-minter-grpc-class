@@ -68,6 +68,16 @@ private static final long serialVersionUID = 0L;
             valueToSell_ = s;
             break;
           }
+          case 32: {
+
+            gasPrice_ = input.readUInt64();
+            break;
+          }
+          case 40: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           case 50: {
             java.lang.String s = input.readStringRequireUtf8();
             sellCase_ = 6;
@@ -408,19 +418,31 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int GAS_PRICE_FIELD_NUMBER = 4;
+  private long gasPrice_;
+  /**
+   * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+   * @return The gasPrice.
+   */
+  @java.lang.Override
+  public long getGasPrice() {
+    return gasPrice_;
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 5;
+  private long height_;
+  /**
+   * <code>uint64 height = 5 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
   public static final int SWAP_FROM_FIELD_NUMBER = 8;
   private int swapFrom_;
   /**
-   * <pre>
-   *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *        default: '1'
-   *    }];
-   *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
@@ -428,16 +450,6 @@ private static final long serialVersionUID = 0L;
     return swapFrom_;
   }
   /**
-   * <pre>
-   *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *        default: '1'
-   *    }];
-   *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
    * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The swapFrom.
    */
@@ -501,6 +513,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueToSell_);
     }
+    if (gasPrice_ != 0L) {
+      output.writeUInt64(4, gasPrice_);
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(5, height_);
+    }
     if (sellCase_ == 6) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sell_);
     }
@@ -538,6 +556,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueToSell_);
+    }
+    if (gasPrice_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, gasPrice_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(5, height_);
     }
     if (sellCase_ == 6) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sell_);
@@ -580,6 +606,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getValueToSell()
         .equals(other.getValueToSell())) return false;
+    if (getGasPrice()
+        != other.getGasPrice()) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
     if (swapFrom_ != other.swapFrom_) return false;
     if (!getRouteList()
         .equals(other.getRouteList())) return false;
@@ -622,6 +652,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + VALUE_TO_SELL_FIELD_NUMBER;
     hash = (53 * hash) + getValueToSell().hashCode();
+    hash = (37 * hash) + GAS_PRICE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getGasPrice());
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (37 * hash) + SWAP_FROM_FIELD_NUMBER;
     hash = (53 * hash) + swapFrom_;
     if (getRouteCount() > 0) {
@@ -789,6 +825,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       valueToSell_ = "";
 
+      gasPrice_ = 0L;
+
+      height_ = 0L;
+
       swapFrom_ = 0;
 
       route_ = emptyLongList();
@@ -837,6 +877,8 @@ private static final long serialVersionUID = 0L;
         result.sell_ = sell_;
       }
       result.valueToSell_ = valueToSell_;
+      result.gasPrice_ = gasPrice_;
+      result.height_ = height_;
       result.swapFrom_ = swapFrom_;
       if (((bitField0_ & 0x00000001) != 0)) {
         route_.makeImmutable();
@@ -896,6 +938,12 @@ private static final long serialVersionUID = 0L;
       if (!other.getValueToSell().isEmpty()) {
         valueToSell_ = other.valueToSell_;
         onChanged();
+      }
+      if (other.getGasPrice() != 0L) {
+        setGasPrice(other.getGasPrice());
+      }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
       }
       if (other.swapFrom_ != 0) {
         setSwapFromValue(other.getSwapFromValue());
@@ -1352,18 +1400,70 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long gasPrice_ ;
+    /**
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+     * @return The gasPrice.
+     */
+    @java.lang.Override
+    public long getGasPrice() {
+      return gasPrice_;
+    }
+    /**
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+     * @param value The gasPrice to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGasPrice(long value) {
+      
+      gasPrice_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGasPrice() {
+      
+      gasPrice_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private int swapFrom_ = 0;
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return The enum numeric value on the wire for swapFrom.
      */
@@ -1371,16 +1471,6 @@ private static final long serialVersionUID = 0L;
       return swapFrom_;
     }
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @param value The enum numeric value on the wire for swapFrom to set.
      * @return This builder for chaining.
@@ -1392,16 +1482,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return The swapFrom.
      */
@@ -1412,16 +1492,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.SwapFrom.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @param value The swapFrom to set.
      * @return This builder for chaining.
@@ -1436,16 +1506,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *        default: '1'
-     *    }];
-     *    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
      * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return This builder for chaining.
      */

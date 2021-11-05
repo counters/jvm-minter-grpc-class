@@ -55,6 +55,16 @@ private static final long serialVersionUID = 0L;
             address_ = s;
             break;
           }
+          case 16: {
+
+            height_ = input.readUInt64();
+            break;
+          }
+          case 32: {
+
+            delegated_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -90,15 +100,6 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        default: "false"
-   *    }];
-   * </pre>
-   *
    * <code>string address = 1 [json_name = "address"];</code>
    * @return The address.
    */
@@ -116,15 +117,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        default: "false"
-   *    }];
-   * </pre>
-   *
    * <code>string address = 1 [json_name = "address"];</code>
    * @return The bytes for address.
    */
@@ -141,6 +133,28 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 2;
+  private long height_;
+  /**
+   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
+  }
+
+  public static final int DELEGATED_FIELD_NUMBER = 4;
+  private boolean delegated_;
+  /**
+   * <code>bool delegated = 4 [json_name = "delegated"];</code>
+   * @return The delegated.
+   */
+  @java.lang.Override
+  public boolean getDelegated() {
+    return delegated_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -160,6 +174,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
     }
+    if (height_ != 0L) {
+      output.writeUInt64(2, height_);
+    }
+    if (delegated_ != false) {
+      output.writeBool(4, delegated_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -171,6 +191,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, height_);
+    }
+    if (delegated_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, delegated_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -189,6 +217,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
+    if (getDelegated()
+        != other.getDelegated()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -202,6 +234,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
+    hash = (37 * hash) + DELEGATED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDelegated());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -337,6 +375,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       address_ = "";
 
+      height_ = 0L;
+
+      delegated_ = false;
+
       return this;
     }
 
@@ -364,6 +406,8 @@ private static final long serialVersionUID = 0L;
     public counters.minter.grpc.client.AddressRequest buildPartial() {
       counters.minter.grpc.client.AddressRequest result = new counters.minter.grpc.client.AddressRequest(this);
       result.address_ = address_;
+      result.height_ = height_;
+      result.delegated_ = delegated_;
       onBuilt();
       return result;
     }
@@ -416,6 +460,12 @@ private static final long serialVersionUID = 0L;
         address_ = other.address_;
         onChanged();
       }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
+      if (other.getDelegated() != false) {
+        setDelegated(other.getDelegated());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -447,15 +497,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The address.
      */
@@ -472,15 +513,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -498,15 +530,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @param value The address to set.
      * @return This builder for chaining.
@@ -522,15 +545,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return This builder for chaining.
      */
@@ -541,15 +555,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     *    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        default: "false"
-     *    }];
-     * </pre>
-     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
@@ -562,6 +567,68 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       address_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean delegated_ ;
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @return The delegated.
+     */
+    @java.lang.Override
+    public boolean getDelegated() {
+      return delegated_;
+    }
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @param value The delegated to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDelegated(boolean value) {
+      
+      delegated_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDelegated() {
+      
+      delegated_ = false;
       onChanged();
       return this;
     }
