@@ -193,15 +193,15 @@ message PriceCommissionResponse {
 }
 
 message SwapPoolRequest {
-//    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 coin0 = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     uint64 coin1 = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }]*/;
-//    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
 }
 message SwapPoolResponse {
     string price = 4;
@@ -210,9 +210,9 @@ message SwapPoolResponse {
     string liquidity = 3;
 }
 message SwapPoolProviderRequest {
-//    uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 coin0 = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     uint64 coin1 = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }]*/;
@@ -504,16 +504,16 @@ enum BlockField {
     evidence = 6;
 }
 message BlockRequest {
-//    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     repeated BlockField fields = 2;
-//    bool failed_txs = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: "false"
-//    }];
-//    bool events = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: "false"
-//    }];
+    bool failed_txs = 3 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }]*/;
+    bool events = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }]*/;
 }
 message BlockResponse {
     string hash = 1;
@@ -539,9 +539,9 @@ message BlockResponse {
 }
 
 message MaxGasPriceRequest {
-//    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
 }
 message MaxGasPriceResponse {
     uint64 max_gas_price = 3;
@@ -549,12 +549,12 @@ message MaxGasPriceResponse {
 
 message AddressRequest {
     string address = 1;
-//    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
-//    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: "false"
-//    }];
+    uint64 height = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
+    bool delegated = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }]*/;
 }
 message AddressBalance {
     Coin coin = 1;
@@ -582,15 +582,15 @@ message Multisig {
 }
 
 message AddressesRequest {
-//    repeated string addresses = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        required: 'addresses'
-//    }];
-//    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
-//    bool delegated = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: "false"
-//    }];
+    repeated string addresses = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'addresses'
+    }]*/;
+    uint64 height = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
+    bool delegated = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }]*/;
 }
 message AddressesResponse {
     message Result {
@@ -610,13 +610,13 @@ message CandidateRequest {
     // Public key of a candidate
     string public_key = 1;
     // Blockchain state height for the current request. Optional, the last default state of the node is used
-//    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     // Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
-//    bool not_show_stakes = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: 'false'
-//    }];
+    bool not_show_stakes = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: 'false'
+    }]*/;
 }
 message CandidateResponse {
     uint64 id = 14;
@@ -655,17 +655,17 @@ message CandidateResponse {
 
 message CandidatesRequest {
     // Blockchain state height for the current request. Optional, the last default state of the node is used
-//    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     // Calculate field values used_slots, uniq_users, min_stake
-//    bool include_stakes = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: 'false'
-//    }];
+    bool include_stakes = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: 'false'
+    }]*/;
     // Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
-//    bool not_show_stakes = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: 'false'
-//    }];
+    bool not_show_stakes = 4/* [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: 'false'
+    }]*/;
     enum CandidateStatus {
         all = 0;
         off = 1;
@@ -682,15 +682,15 @@ message CoinIdRequest {
 //    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
 //        example: "{\"id\":\"0\"}"
 //    };
-//    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     uint64 id = 2;
 }
 message CoinInfoRequest {
-//    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     string symbol = 2;
 }
 message CoinInfoResponse {
@@ -733,7 +733,7 @@ message TransactionResponse {
     Coin gas_coin = 9;
     string type_hex = 17;
     enum Type {
-        Empty = 0;
+        _NULL_ = 0;
         Send                         = 1;
         SellCoin                     = 2;
         SellAllCoin                  = 3;
@@ -788,16 +788,16 @@ message TransactionsResponse {
     repeated TransactionResponse transactions = 3;
 }
 message TransactionsRequest {
-//    string query = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        required: 'query'
-//    }];
-//    int32 page = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//        default: '1'
-//    }];
-//    int32 per_page = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        default: '30'
-//    }];
+    string query = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'query'
+    }]*/;
+    int32 page = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+        default: '1'
+    }]*/;
+    int32 per_page = 3 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: '30'
+    }]*/;
 }
 
 
@@ -809,27 +809,27 @@ enum SwapFrom {
 
 message EstimateCoinBuyRequest {
     oneof buy {
-//        uint64 coin_id_to_buy = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//            type: INTEGER
-//        }];
+        uint64 coin_id_to_buy = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }]*/;
         string coin_to_buy = 5;
     }
     oneof sell {
-//        uint64 coin_id_to_sell = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//            type: INTEGER
-//        }];
+        uint64 coin_id_to_sell = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }]*/;
         string coin_to_sell = 6;
     }
-//    string value_to_buy = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        required: 'value_to_buy'
-//    }];
-//    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    string value_to_buy = 3 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        required: 'value_to_buy'
+    }]*/;
+    uint64 height = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     oneof commission {
-//        uint64 coin_id_commission = 9 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//            type: INTEGER
-//        }];
+        uint64 coin_id_commission = 9 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+            type: INTEGER
+        }]*/;
         string coin_commission = 10;
     }
     SwapFrom swap_from = 8;
@@ -891,13 +891,13 @@ message EstimateCoinSellAllRequest {
     string value_to_sell = 3 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'value_to_sell'
     }]*/;
-//    uint64 gas_price = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//        default: '1'
-//    }];
-//    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 gas_price = 4 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+        default: '1'
+    }]*/;
+    uint64 height = 5 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
     SwapFrom swap_from = 8;
     repeated uint64 route = 11;
 }
@@ -910,9 +910,9 @@ message EstimateTxCommissionRequest {
     string tx = 1 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'tx'
     }]*/;
-//    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    uint64 height = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
 }
 message EstimateTxCommissionResponse {
     string commission = 1;
@@ -992,12 +992,12 @@ message HaltsResponse {
 
 message FrozenRequest {
     string address = 1;
-//    google.protobuf.UInt64Value coin_id = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
-//    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//        type: INTEGER
-//    }];
+    google.protobuf.UInt64Value coin_id = 2 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
+    uint64 height = 3 /*[(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }]*/;
 }
 message FrozenResponse {
     message Frozen {
