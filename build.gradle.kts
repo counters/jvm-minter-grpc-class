@@ -6,9 +6,10 @@ plugins {
 }
 
 group = "com.webcounters"
-version = "1.0-SNAPSHOT"
+version = "1.0.1"
 
 repositories {
+//    mavenLocal()
     mavenCentral()
 }
 
@@ -31,6 +32,6 @@ tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-application {
-//    mainClass.set("MainKt")
-}
+/*application {
+    mainClass.set("MainKt")
+}*/
