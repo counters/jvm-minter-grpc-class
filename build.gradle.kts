@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.webcounters"
-version = "1.0.1"
+version = "v1.0.1"
 
 repositories {
 //    mavenLocal()
