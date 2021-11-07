@@ -16,10 +16,10 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
- */
+
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.3.0)",
-    comments = "Source: api.proto")
+    comments = "Source: api.proto") */
 public final class ApiServiceGrpc {
 
   private ApiServiceGrpc() {}
