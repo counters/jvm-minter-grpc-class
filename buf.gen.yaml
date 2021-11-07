@@ -1,6 +1,6 @@
 version: v1
 plugins:
   - name: java
-    out: jvm/src/main/java
+    out: src/main/java
   - name: kotlin
-    out: jvm/src/main/kotlin
+    out: src/main/kotlin
