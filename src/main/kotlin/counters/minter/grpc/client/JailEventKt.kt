@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun jailEvent(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.JailEvent =
+inline fun jailEvent(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> Unit): counters.minter.grpc.client.JailEvent =
   counters.minter.grpc.client.JailEventKt.Dsl._create(counters.minter.grpc.client.JailEvent.newBuilder()).apply { block() }._build()
-public object JailEventKt {
+object JailEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.JailEvent.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.JailEvent.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.JailEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object JailEventKt {
     internal fun _build(): counters.minter.grpc.client.JailEvent = _builder.build()
 
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      */
-    public var validatorPubKey: kotlin.String
+    var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
       get() = _builder.getValidatorPubKey()
       @JvmName("setValidatorPubKey")
@@ -33,16 +33,16 @@ public object JailEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      */
-    public fun clearValidatorPubKey() {
+    fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
     }
 
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      */
-    public var jailedUntil: kotlin.Long
+    var jailedUntil: kotlin.Long
       @JvmName("getJailedUntil")
       get() = _builder.getJailedUntil()
       @JvmName("setJailedUntil")
@@ -50,13 +50,13 @@ public object JailEventKt {
         _builder.setJailedUntil(value)
       }
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      */
-    public fun clearJailedUntil() {
+    fun clearJailedUntil() {
       _builder.clearJailedUntil()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.JailEvent.copy(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.JailEvent =
+inline fun counters.minter.grpc.client.JailEvent.copy(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> Unit): counters.minter.grpc.client.JailEvent =
   counters.minter.grpc.client.JailEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -8,25 +8,25 @@ public interface CommissionVotesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   java.util.List<counters.minter.grpc.client.CommissionVotesResponse.Vote> 
       getVotesList();
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   counters.minter.grpc.client.CommissionVotesResponse.Vote getVotes(int index);
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   int getVotesCount();
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder> 
       getVotesOrBuilderList();
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder getVotesOrBuilder(
       int index);

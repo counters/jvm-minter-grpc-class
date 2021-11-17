@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   public static final int WILL_GET_FIELD_NUMBER = 1;
   private volatile java.lang.Object willGet_;
   /**
-   * <code>string will_get = 1 [json_name = "willGet"];</code>
+   * <code>string will_get = 1;</code>
    * @return The willGet.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string will_get = 1 [json_name = "willGet"];</code>
+   * <code>string will_get = 1;</code>
    * @return The bytes for willGet.
    */
   @java.lang.Override
@@ -135,14 +135,14 @@ private static final long serialVersionUID = 0L;
   public static final int SWAP_FROM_FIELD_NUMBER = 2;
   private int swapFrom_;
   /**
-   * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 2;</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   @java.lang.Override public int getSwapFromValue() {
     return swapFrom_;
   }
   /**
-   * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 2;</code>
    * @return The swapFrom.
    */
   @java.lang.Override public counters.minter.grpc.client.SwapFrom getSwapFrom() {
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(willGet_)) {
+    if (!getWillGetBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, willGet_);
     }
     if (swapFrom_ != counters.minter.grpc.client.SwapFrom.optimal.getNumber()) {
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(willGet_)) {
+    if (!getWillGetBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, willGet_);
     }
     if (swapFrom_ != counters.minter.grpc.client.SwapFrom.optimal.getNumber()) {
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object willGet_ = "";
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return The willGet.
      */
     public java.lang.String getWillGet() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return The bytes for willGet.
      */
     public com.google.protobuf.ByteString
@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @param value The willGet to set.
      * @return This builder for chaining.
      */
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearWillGet() {
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @param value The bytes for willGet to set.
      * @return This builder for chaining.
      */
@@ -547,14 +547,14 @@ private static final long serialVersionUID = 0L;
 
     private int swapFrom_ = 0;
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      * @return The enum numeric value on the wire for swapFrom.
      */
     @java.lang.Override public int getSwapFromValue() {
       return swapFrom_;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      * @param value The enum numeric value on the wire for swapFrom to set.
      * @return This builder for chaining.
      */
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      * @return The swapFrom.
      */
     @java.lang.Override
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.SwapFrom.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      * @param value The swapFrom to set.
      * @return This builder for chaining.
      */
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSwapFrom() {

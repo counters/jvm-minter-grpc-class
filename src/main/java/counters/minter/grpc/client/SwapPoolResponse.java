@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_NUMBER = 4;
   private volatile java.lang.Object price_;
   /**
-   * <code>string price = 4 [json_name = "price"];</code>
+   * <code>string price = 4;</code>
    * @return The price.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string price = 4 [json_name = "price"];</code>
+   * <code>string price = 4;</code>
    * @return The bytes for price.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT0_FIELD_NUMBER = 1;
   private volatile java.lang.Object amount0_;
   /**
-   * <code>string amount0 = 1 [json_name = "amount0"];</code>
+   * <code>string amount0 = 1;</code>
    * @return The amount0.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount0 = 1 [json_name = "amount0"];</code>
+   * <code>string amount0 = 1;</code>
    * @return The bytes for amount0.
    */
   @java.lang.Override
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT1_FIELD_NUMBER = 2;
   private volatile java.lang.Object amount1_;
   /**
-   * <code>string amount1 = 2 [json_name = "amount1"];</code>
+   * <code>string amount1 = 2;</code>
    * @return The amount1.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount1 = 2 [json_name = "amount1"];</code>
+   * <code>string amount1 = 2;</code>
    * @return The bytes for amount1.
    */
   @java.lang.Override
@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
   public static final int LIQUIDITY_FIELD_NUMBER = 3;
   private volatile java.lang.Object liquidity_;
   /**
-   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+   * <code>string liquidity = 3;</code>
    * @return The liquidity.
    */
   @java.lang.Override
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+   * <code>string liquidity = 3;</code>
    * @return The bytes for liquidity.
    */
   @java.lang.Override
@@ -274,16 +274,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount0_)) {
+    if (!getAmount0Bytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount0_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount1_)) {
+    if (!getAmount1Bytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount1_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidity_)) {
+    if (!getLiquidityBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidity_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+    if (!getPriceBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, price_);
     }
     unknownFields.writeTo(output);
@@ -295,16 +295,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount0_)) {
+    if (!getAmount0Bytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount0_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount1_)) {
+    if (!getAmount1Bytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount1_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidity_)) {
+    if (!getLiquidityBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidity_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+    if (!getPriceBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, price_);
     }
     size += unknownFields.getSerializedSize();
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object price_ = "";
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The price.
      */
     public java.lang.String getPrice() {
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The bytes for price.
      */
     public com.google.protobuf.ByteString
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @param value The price to set.
      * @return This builder for chaining.
      */
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @param value The bytes for price to set.
      * @return This builder for chaining.
      */
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount0_ = "";
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The amount0.
      */
     public java.lang.String getAmount0() {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The bytes for amount0.
      */
     public com.google.protobuf.ByteString
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @param value The amount0 to set.
      * @return This builder for chaining.
      */
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount0() {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @param value The bytes for amount0 to set.
      * @return This builder for chaining.
      */
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount1_ = "";
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The amount1.
      */
     public java.lang.String getAmount1() {
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The bytes for amount1.
      */
     public com.google.protobuf.ByteString
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @param value The amount1 to set.
      * @return This builder for chaining.
      */
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount1() {
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @param value The bytes for amount1 to set.
      * @return This builder for chaining.
      */
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object liquidity_ = "";
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The liquidity.
      */
     public java.lang.String getLiquidity() {
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The bytes for liquidity.
      */
     public com.google.protobuf.ByteString
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @param value The liquidity to set.
      * @return This builder for chaining.
      */
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearLiquidity() {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @param value The bytes for liquidity to set.
      * @return This builder for chaining.
      */

@@ -8,25 +8,25 @@ public interface AddressRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>bool delegated = 4 [json_name = "delegated"];</code>
+   * <code>bool delegated = 4;</code>
    * @return The delegated.
    */
   boolean getDelegated();

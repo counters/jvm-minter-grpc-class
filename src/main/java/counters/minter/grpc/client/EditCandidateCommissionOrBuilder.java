@@ -8,19 +8,19 @@ public interface EditCandidateCommissionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The pubKey.
    */
   java.lang.String getPubKey();
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The bytes for pubKey.
    */
   com.google.protobuf.ByteString
       getPubKeyBytes();
 
   /**
-   * <code>uint64 commission = 2 [json_name = "commission"];</code>
+   * <code>uint64 commission = 2;</code>
    * @return The commission.
    */
   long getCommission();

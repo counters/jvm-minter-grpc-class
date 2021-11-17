@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun buyCoinData(block: counters.minter.grpc.client.BuyCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BuyCoinData =
+inline fun buyCoinData(block: counters.minter.grpc.client.BuyCoinDataKt.Dsl.() -> Unit): counters.minter.grpc.client.BuyCoinData =
   counters.minter.grpc.client.BuyCoinDataKt.Dsl._create(counters.minter.grpc.client.BuyCoinData.newBuilder()).apply { block() }._build()
-public object BuyCoinDataKt {
+object BuyCoinDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.BuyCoinData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BuyCoinData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.BuyCoinData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object BuyCoinDataKt {
     internal fun _build(): counters.minter.grpc.client.BuyCoinData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin_to_buy = 1 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 1;</code>
      */
-    public var coinToBuy: counters.minter.grpc.client.Coin
+    var coinToBuy: counters.minter.grpc.client.Coin
       @JvmName("getCoinToBuy")
       get() = _builder.getCoinToBuy()
       @JvmName("setCoinToBuy")
@@ -33,23 +33,23 @@ public object BuyCoinDataKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 1 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 1;</code>
      */
-    public fun clearCoinToBuy() {
+    fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 1 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 1;</code>
      * @return Whether the coinToBuy field is set.
      */
-    public fun hasCoinToBuy(): kotlin.Boolean {
+    fun hasCoinToBuy(): kotlin.Boolean {
       return _builder.hasCoinToBuy()
     }
 
     /**
-     * <code>string value_to_buy = 2 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 2;</code>
      */
-    public var valueToBuy: kotlin.String
+    var valueToBuy: kotlin.String
       @JvmName("getValueToBuy")
       get() = _builder.getValueToBuy()
       @JvmName("setValueToBuy")
@@ -57,16 +57,16 @@ public object BuyCoinDataKt {
         _builder.setValueToBuy(value)
       }
     /**
-     * <code>string value_to_buy = 2 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 2;</code>
      */
-    public fun clearValueToBuy() {
+    fun clearValueToBuy() {
       _builder.clearValueToBuy()
     }
 
     /**
-     * <code>.api_pb.Coin coin_to_sell = 3 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 3;</code>
      */
-    public var coinToSell: counters.minter.grpc.client.Coin
+    var coinToSell: counters.minter.grpc.client.Coin
       @JvmName("getCoinToSell")
       get() = _builder.getCoinToSell()
       @JvmName("setCoinToSell")
@@ -74,23 +74,23 @@ public object BuyCoinDataKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 3 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 3;</code>
      */
-    public fun clearCoinToSell() {
+    fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 3 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 3;</code>
      * @return Whether the coinToSell field is set.
      */
-    public fun hasCoinToSell(): kotlin.Boolean {
+    fun hasCoinToSell(): kotlin.Boolean {
       return _builder.hasCoinToSell()
     }
 
     /**
-     * <code>string maximum_value_to_sell = 4 [json_name = "maximumValueToSell"];</code>
+     * <code>string maximum_value_to_sell = 4;</code>
      */
-    public var maximumValueToSell: kotlin.String
+    var maximumValueToSell: kotlin.String
       @JvmName("getMaximumValueToSell")
       get() = _builder.getMaximumValueToSell()
       @JvmName("setMaximumValueToSell")
@@ -98,13 +98,13 @@ public object BuyCoinDataKt {
         _builder.setMaximumValueToSell(value)
       }
     /**
-     * <code>string maximum_value_to_sell = 4 [json_name = "maximumValueToSell"];</code>
+     * <code>string maximum_value_to_sell = 4;</code>
      */
-    public fun clearMaximumValueToSell() {
+    fun clearMaximumValueToSell() {
       _builder.clearMaximumValueToSell()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.BuyCoinData.copy(block: counters.minter.grpc.client.BuyCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BuyCoinData =
+inline fun counters.minter.grpc.client.BuyCoinData.copy(block: counters.minter.grpc.client.BuyCoinDataKt.Dsl.() -> Unit): counters.minter.grpc.client.BuyCoinData =
   counters.minter.grpc.client.BuyCoinDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

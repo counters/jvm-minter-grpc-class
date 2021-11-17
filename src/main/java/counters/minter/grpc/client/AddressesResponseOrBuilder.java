@@ -8,11 +8,11 @@ public interface AddressesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   int getAddressesCount();
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   boolean containsAddresses(
       java.lang.String key);
@@ -23,19 +23,19 @@ public interface AddressesResponseOrBuilder extends
   java.util.Map<java.lang.String, counters.minter.grpc.client.AddressesResponse.Result>
   getAddresses();
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   java.util.Map<java.lang.String, counters.minter.grpc.client.AddressesResponse.Result>
   getAddressesMap();
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
 
   counters.minter.grpc.client.AddressesResponse.Result getAddressesOrDefault(
       java.lang.String key,
       counters.minter.grpc.client.AddressesResponse.Result defaultValue);
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
 
   counters.minter.grpc.client.AddressesResponse.Result getAddressesOrThrow(

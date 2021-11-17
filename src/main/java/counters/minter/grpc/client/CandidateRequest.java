@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 1 [json_name = "publicKey"];</code>
+   * <code>string public_key = 1;</code>
    * @return The publicKey.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 1 [json_name = "publicKey"];</code>
+   * <code>string public_key = 1;</code>
    * @return The bytes for publicKey.
    */
   @java.lang.Override
@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
    * Blockchain state height for the current request. Optional, the last default state of the node is used
    * </pre>
    *
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
    * </pre>
    *
-   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * <code>bool not_show_stakes = 4;</code>
    * @return The notShowStakes.
    */
   @java.lang.Override
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+    if (!getPublicKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicKey_);
     }
     if (height_ != 0L) {
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+    if (!getPublicKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicKey_);
     }
     if (height_ != 0L) {
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The publicKey.
      */
     public java.lang.String getPublicKey() {
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The bytes for publicKey.
      */
     public com.google.protobuf.ByteString
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @param value The publicKey to set.
      * @return This builder for chaining.
      */
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearPublicKey() {
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @param value The bytes for publicKey to set.
      * @return This builder for chaining.
      */
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @return The notShowStakes.
      */
     @java.lang.Override
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @param value The notShowStakes to set.
      * @return This builder for chaining.
      */
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearNotShowStakes() {

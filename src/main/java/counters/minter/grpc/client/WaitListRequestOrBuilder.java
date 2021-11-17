@@ -8,31 +8,31 @@ public interface WaitListRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string public_key = 1 [json_name = "publicKey"];</code>
+   * <code>string public_key = 1;</code>
    * @return The publicKey.
    */
   java.lang.String getPublicKey();
   /**
-   * <code>string public_key = 1 [json_name = "publicKey"];</code>
+   * <code>string public_key = 1;</code>
    * @return The bytes for publicKey.
    */
   com.google.protobuf.ByteString
       getPublicKeyBytes();
 
   /**
-   * <code>string address = 2 [json_name = "address"];</code>
+   * <code>string address = 2;</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 2 [json_name = "address"];</code>
+   * <code>string address = 2;</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>uint64 height = 3 [json_name = "height"];</code>
+   * <code>uint64 height = 3;</code>
    * @return The height.
    */
   long getHeight();

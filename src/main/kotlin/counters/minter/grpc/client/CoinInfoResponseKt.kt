@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun coinInfoResponse(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoResponse =
+inline fun coinInfoResponse(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinInfoResponse =
   counters.minter.grpc.client.CoinInfoResponseKt.Dsl._create(counters.minter.grpc.client.CoinInfoResponse.newBuilder()).apply { block() }._build()
-public object CoinInfoResponseKt {
+object CoinInfoResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.CoinInfoResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CoinInfoResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CoinInfoResponse.Builder): Dsl = Dsl(builder)
@@ -29,9 +29,9 @@ public object CoinInfoResponseKt {
      *    };
      * </pre>
      *
-     * <code>uint64 id = 6 [json_name = "id"];</code>
+     * <code>uint64 id = 6;</code>
      */
-    public var id: kotlin.Long
+    var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -45,16 +45,16 @@ public object CoinInfoResponseKt {
      *    };
      * </pre>
      *
-     * <code>uint64 id = 6 [json_name = "id"];</code>
+     * <code>uint64 id = 6;</code>
      */
-    public fun clearId() {
+    fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
-    public var name: kotlin.String
+    var name: kotlin.String
       @JvmName("getName")
       get() = _builder.getName()
       @JvmName("setName")
@@ -62,16 +62,16 @@ public object CoinInfoResponseKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
-    public fun clearName() {
+    fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
-    public var symbol: kotlin.String
+    var symbol: kotlin.String
       @JvmName("getSymbol")
       get() = _builder.getSymbol()
       @JvmName("setSymbol")
@@ -79,16 +79,16 @@ public object CoinInfoResponseKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
-    public fun clearSymbol() {
+    fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      */
-    public var volume: kotlin.String
+    var volume: kotlin.String
       @JvmName("getVolume")
       get() = _builder.getVolume()
       @JvmName("setVolume")
@@ -96,16 +96,16 @@ public object CoinInfoResponseKt {
         _builder.setVolume(value)
       }
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      */
-    public fun clearVolume() {
+    fun clearVolume() {
       _builder.clearVolume()
     }
 
     /**
-     * <code>uint64 crr = 4 [json_name = "crr"];</code>
+     * <code>uint64 crr = 4;</code>
      */
-    public var crr: kotlin.Long
+    var crr: kotlin.Long
       @JvmName("getCrr")
       get() = _builder.getCrr()
       @JvmName("setCrr")
@@ -113,16 +113,16 @@ public object CoinInfoResponseKt {
         _builder.setCrr(value)
       }
     /**
-     * <code>uint64 crr = 4 [json_name = "crr"];</code>
+     * <code>uint64 crr = 4;</code>
      */
-    public fun clearCrr() {
+    fun clearCrr() {
       _builder.clearCrr()
     }
 
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      */
-    public var reserveBalance: kotlin.String
+    var reserveBalance: kotlin.String
       @JvmName("getReserveBalance")
       get() = _builder.getReserveBalance()
       @JvmName("setReserveBalance")
@@ -130,16 +130,16 @@ public object CoinInfoResponseKt {
         _builder.setReserveBalance(value)
       }
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      */
-    public fun clearReserveBalance() {
+    fun clearReserveBalance() {
       _builder.clearReserveBalance()
     }
 
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      */
-    public var maxSupply: kotlin.String
+    var maxSupply: kotlin.String
       @JvmName("getMaxSupply")
       get() = _builder.getMaxSupply()
       @JvmName("setMaxSupply")
@@ -147,16 +147,16 @@ public object CoinInfoResponseKt {
         _builder.setMaxSupply(value)
       }
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      */
-    public fun clearMaxSupply() {
+    fun clearMaxSupply() {
       _builder.clearMaxSupply()
     }
 
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
-    public var ownerAddress: com.google.protobuf.StringValue
+    var ownerAddress: com.google.protobuf.StringValue
       @JvmName("getOwnerAddress")
       get() = _builder.getOwnerAddress()
       @JvmName("setOwnerAddress")
@@ -164,23 +164,23 @@ public object CoinInfoResponseKt {
         _builder.setOwnerAddress(value)
       }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
-    public fun clearOwnerAddress() {
+    fun clearOwnerAddress() {
       _builder.clearOwnerAddress()
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      * @return Whether the ownerAddress field is set.
      */
-    public fun hasOwnerAddress(): kotlin.Boolean {
+    fun hasOwnerAddress(): kotlin.Boolean {
       return _builder.hasOwnerAddress()
     }
 
     /**
-     * <code>bool mintable = 9 [json_name = "mintable"];</code>
+     * <code>bool mintable = 9;</code>
      */
-    public var mintable: kotlin.Boolean
+    var mintable: kotlin.Boolean
       @JvmName("getMintable")
       get() = _builder.getMintable()
       @JvmName("setMintable")
@@ -188,16 +188,16 @@ public object CoinInfoResponseKt {
         _builder.setMintable(value)
       }
     /**
-     * <code>bool mintable = 9 [json_name = "mintable"];</code>
+     * <code>bool mintable = 9;</code>
      */
-    public fun clearMintable() {
+    fun clearMintable() {
       _builder.clearMintable()
     }
 
     /**
-     * <code>bool burnable = 10 [json_name = "burnable"];</code>
+     * <code>bool burnable = 10;</code>
      */
-    public var burnable: kotlin.Boolean
+    var burnable: kotlin.Boolean
       @JvmName("getBurnable")
       get() = _builder.getBurnable()
       @JvmName("setBurnable")
@@ -205,13 +205,13 @@ public object CoinInfoResponseKt {
         _builder.setBurnable(value)
       }
     /**
-     * <code>bool burnable = 10 [json_name = "burnable"];</code>
+     * <code>bool burnable = 10;</code>
      */
-    public fun clearBurnable() {
+    fun clearBurnable() {
       _builder.clearBurnable()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.CoinInfoResponse.copy(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoResponse =
+inline fun counters.minter.grpc.client.CoinInfoResponse.copy(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinInfoResponse =
   counters.minter.grpc.client.CoinInfoResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

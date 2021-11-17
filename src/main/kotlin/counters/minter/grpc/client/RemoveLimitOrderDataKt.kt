@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun removeLimitOrderData(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLimitOrderData =
+inline fun removeLimitOrderData(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RemoveLimitOrderData =
   counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl._create(counters.minter.grpc.client.RemoveLimitOrderData.newBuilder()).apply { block() }._build()
-public object RemoveLimitOrderDataKt {
+object RemoveLimitOrderDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.RemoveLimitOrderData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.RemoveLimitOrderData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.RemoveLimitOrderData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object RemoveLimitOrderDataKt {
     internal fun _build(): counters.minter.grpc.client.RemoveLimitOrderData = _builder.build()
 
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
-    public var id: kotlin.Long
+    var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -33,13 +33,13 @@ public object RemoveLimitOrderDataKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
-    public fun clearId() {
+    fun clearId() {
       _builder.clearId()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.RemoveLimitOrderData.copy(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLimitOrderData =
+inline fun counters.minter.grpc.client.RemoveLimitOrderData.copy(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RemoveLimitOrderData =
   counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

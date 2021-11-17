@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 1;
   private long height_;
   /**
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+   * <code>repeated .api_pb.BlockField fields = 2;</code>
    * @return A list containing the fields.
    */
   @java.lang.Override
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Integer, counters.minter.grpc.client.BlockField>(fields_, fields_converter_);
   }
   /**
-   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+   * <code>repeated .api_pb.BlockField fields = 2;</code>
    * @return The count of fields.
    */
   @java.lang.Override
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
     return fields_.size();
   }
   /**
-   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+   * <code>repeated .api_pb.BlockField fields = 2;</code>
    * @param index The index of the element to return.
    * @return The fields at the given index.
    */
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
     return fields_converter_.convert(fields_.get(index));
   }
   /**
-   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+   * <code>repeated .api_pb.BlockField fields = 2;</code>
    * @return A list containing the enum numeric values on the wire for fields.
    */
   @java.lang.Override
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
     return fields_;
   }
   /**
-   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+   * <code>repeated .api_pb.BlockField fields = 2;</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fields at the given index.
    */
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
   public static final int FAILED_TXS_FIELD_NUMBER = 3;
   private boolean failedTxs_;
   /**
-   * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+   * <code>bool failed_txs = 3;</code>
    * @return The failedTxs.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
   public static final int EVENTS_FIELD_NUMBER = 4;
   private boolean events_;
   /**
-   * <code>bool events = 4 [json_name = "events"];</code>
+   * <code>bool events = 4;</code>
    * @return The events.
    */
   @java.lang.Override
@@ -599,7 +599,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @return A list containing the fields.
      */
     public java.util.List<counters.minter.grpc.client.BlockField> getFieldsList() {
@@ -645,14 +645,14 @@ private static final long serialVersionUID = 0L;
           java.lang.Integer, counters.minter.grpc.client.BlockField>(fields_, fields_converter_);
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @return The count of fields.
      */
     public int getFieldsCount() {
       return fields_.size();
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param index The index of the element to return.
      * @return The fields at the given index.
      */
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
       return fields_converter_.convert(fields_.get(index));
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
      * @return This builder for chaining.
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param value The fields to add.
      * @return This builder for chaining.
      */
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param values The fields to add.
      * @return This builder for chaining.
      */
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearFields() {
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @return A list containing the enum numeric values on the wire for fields.
      */
     public java.util.List<java.lang.Integer>
@@ -722,7 +722,7 @@ private static final long serialVersionUID = 0L;
       return java.util.Collections.unmodifiableList(fields_);
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of fields at the given index.
      */
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
       return fields_.get(index);
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of fields at the given index.
      * @return This builder for chaining.
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param value The enum numeric value on the wire for fields to add.
      * @return This builder for chaining.
      */
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param values The enum numeric values on the wire for fields to add.
      * @return This builder for chaining.
      */
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean failedTxs_ ;
     /**
-     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * <code>bool failed_txs = 3;</code>
      * @return The failedTxs.
      */
     @java.lang.Override
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
       return failedTxs_;
     }
     /**
-     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * <code>bool failed_txs = 3;</code>
      * @param value The failedTxs to set.
      * @return This builder for chaining.
      */
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * <code>bool failed_txs = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearFailedTxs() {
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean events_ ;
     /**
-     * <code>bool events = 4 [json_name = "events"];</code>
+     * <code>bool events = 4;</code>
      * @return The events.
      */
     @java.lang.Override
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
       return events_;
     }
     /**
-     * <code>bool events = 4 [json_name = "events"];</code>
+     * <code>bool events = 4;</code>
      * @param value The events to set.
      * @return This builder for chaining.
      */
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool events = 4 [json_name = "events"];</code>
+     * <code>bool events = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearEvents() {

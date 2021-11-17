@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun unconfirmedTxsRequest(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
+inline fun unconfirmedTxsRequest(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
   counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl._create(counters.minter.grpc.client.UnconfirmedTxsRequest.newBuilder()).apply { block() }._build()
-public object UnconfirmedTxsRequestKt {
+object UnconfirmedTxsRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.UnconfirmedTxsRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.UnconfirmedTxsRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.UnconfirmedTxsRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object UnconfirmedTxsRequestKt {
     internal fun _build(): counters.minter.grpc.client.UnconfirmedTxsRequest = _builder.build()
 
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      */
-    public var limit: kotlin.Int
+    var limit: kotlin.Int
       @JvmName("getLimit")
       get() = _builder.getLimit()
       @JvmName("setLimit")
@@ -33,13 +33,13 @@ public object UnconfirmedTxsRequestKt {
         _builder.setLimit(value)
       }
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      */
-    public fun clearLimit() {
+    fun clearLimit() {
       _builder.clearLimit()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.UnconfirmedTxsRequest.copy(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
+inline fun counters.minter.grpc.client.UnconfirmedTxsRequest.copy(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
   counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

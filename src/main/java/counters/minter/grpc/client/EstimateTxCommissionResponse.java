@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int COMMISSION_FIELD_NUMBER = 1;
   private volatile java.lang.Object commission_;
   /**
-   * <code>string commission = 1 [json_name = "commission"];</code>
+   * <code>string commission = 1;</code>
    * @return The commission.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string commission = 1 [json_name = "commission"];</code>
+   * <code>string commission = 1;</code>
    * @return The bytes for commission.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+    if (!getCommissionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, commission_);
     }
     unknownFields.writeTo(output);
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+    if (!getCommissionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, commission_);
     }
     size += unknownFields.getSerializedSize();
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object commission_ = "";
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      * @return The commission.
      */
     public java.lang.String getCommission() {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      * @return The bytes for commission.
      */
     public com.google.protobuf.ByteString
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      * @param value The commission to set.
      * @return This builder for chaining.
      */
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearCommission() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      * @param value The bytes for commission to set.
      * @return This builder for chaining.
      */

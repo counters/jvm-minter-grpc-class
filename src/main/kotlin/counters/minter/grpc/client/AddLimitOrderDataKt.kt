@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun addLimitOrderData(block: counters.minter.grpc.client.AddLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddLimitOrderData =
+inline fun addLimitOrderData(block: counters.minter.grpc.client.AddLimitOrderDataKt.Dsl.() -> Unit): counters.minter.grpc.client.AddLimitOrderData =
   counters.minter.grpc.client.AddLimitOrderDataKt.Dsl._create(counters.minter.grpc.client.AddLimitOrderData.newBuilder()).apply { block() }._build()
-public object AddLimitOrderDataKt {
+object AddLimitOrderDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.AddLimitOrderData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.AddLimitOrderData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.AddLimitOrderData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object AddLimitOrderDataKt {
     internal fun _build(): counters.minter.grpc.client.AddLimitOrderData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      */
-    public var coinToSell: counters.minter.grpc.client.Coin
+    var coinToSell: counters.minter.grpc.client.Coin
       @JvmName("getCoinToSell")
       get() = _builder.getCoinToSell()
       @JvmName("setCoinToSell")
@@ -33,23 +33,23 @@ public object AddLimitOrderDataKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      */
-    public fun clearCoinToSell() {
+    fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      * @return Whether the coinToSell field is set.
      */
-    public fun hasCoinToSell(): kotlin.Boolean {
+    fun hasCoinToSell(): kotlin.Boolean {
       return _builder.hasCoinToSell()
     }
 
     /**
-     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
+     * <code>string value_to_sell = 2;</code>
      */
-    public var valueToSell: kotlin.String
+    var valueToSell: kotlin.String
       @JvmName("getValueToSell")
       get() = _builder.getValueToSell()
       @JvmName("setValueToSell")
@@ -57,16 +57,16 @@ public object AddLimitOrderDataKt {
         _builder.setValueToSell(value)
       }
     /**
-     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
+     * <code>string value_to_sell = 2;</code>
      */
-    public fun clearValueToSell() {
+    fun clearValueToSell() {
       _builder.clearValueToSell()
     }
 
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      */
-    public var coinToBuy: counters.minter.grpc.client.Coin
+    var coinToBuy: counters.minter.grpc.client.Coin
       @JvmName("getCoinToBuy")
       get() = _builder.getCoinToBuy()
       @JvmName("setCoinToBuy")
@@ -74,23 +74,23 @@ public object AddLimitOrderDataKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      */
-    public fun clearCoinToBuy() {
+    fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      * @return Whether the coinToBuy field is set.
      */
-    public fun hasCoinToBuy(): kotlin.Boolean {
+    fun hasCoinToBuy(): kotlin.Boolean {
       return _builder.hasCoinToBuy()
     }
 
     /**
-     * <code>string value_to_buy = 4 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 4;</code>
      */
-    public var valueToBuy: kotlin.String
+    var valueToBuy: kotlin.String
       @JvmName("getValueToBuy")
       get() = _builder.getValueToBuy()
       @JvmName("setValueToBuy")
@@ -98,13 +98,13 @@ public object AddLimitOrderDataKt {
         _builder.setValueToBuy(value)
       }
     /**
-     * <code>string value_to_buy = 4 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 4;</code>
      */
-    public fun clearValueToBuy() {
+    fun clearValueToBuy() {
       _builder.clearValueToBuy()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.AddLimitOrderData.copy(block: counters.minter.grpc.client.AddLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddLimitOrderData =
+inline fun counters.minter.grpc.client.AddLimitOrderData.copy(block: counters.minter.grpc.client.AddLimitOrderDataKt.Dsl.() -> Unit): counters.minter.grpc.client.AddLimitOrderData =
   counters.minter.grpc.client.AddLimitOrderDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

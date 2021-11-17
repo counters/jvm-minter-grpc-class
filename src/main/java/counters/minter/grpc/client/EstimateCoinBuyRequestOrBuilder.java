@@ -8,130 +8,130 @@ public interface EstimateCoinBuyRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * <code>uint64 coin_id_to_buy = 1;</code>
    * @return Whether the coinIdToBuy field is set.
    */
   boolean hasCoinIdToBuy();
   /**
-   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+   * <code>uint64 coin_id_to_buy = 1;</code>
    * @return The coinIdToBuy.
    */
   long getCoinIdToBuy();
 
   /**
-   * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+   * <code>string coin_to_buy = 5;</code>
    * @return Whether the coinToBuy field is set.
    */
   boolean hasCoinToBuy();
   /**
-   * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+   * <code>string coin_to_buy = 5;</code>
    * @return The coinToBuy.
    */
   java.lang.String getCoinToBuy();
   /**
-   * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+   * <code>string coin_to_buy = 5;</code>
    * @return The bytes for coinToBuy.
    */
   com.google.protobuf.ByteString
       getCoinToBuyBytes();
 
   /**
-   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * <code>uint64 coin_id_to_sell = 2;</code>
    * @return Whether the coinIdToSell field is set.
    */
   boolean hasCoinIdToSell();
   /**
-   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+   * <code>uint64 coin_id_to_sell = 2;</code>
    * @return The coinIdToSell.
    */
   long getCoinIdToSell();
 
   /**
-   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+   * <code>string coin_to_sell = 6;</code>
    * @return Whether the coinToSell field is set.
    */
   boolean hasCoinToSell();
   /**
-   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+   * <code>string coin_to_sell = 6;</code>
    * @return The coinToSell.
    */
   java.lang.String getCoinToSell();
   /**
-   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+   * <code>string coin_to_sell = 6;</code>
    * @return The bytes for coinToSell.
    */
   com.google.protobuf.ByteString
       getCoinToSellBytes();
 
   /**
-   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * <code>string value_to_buy = 3;</code>
    * @return The valueToBuy.
    */
   java.lang.String getValueToBuy();
   /**
-   * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+   * <code>string value_to_buy = 3;</code>
    * @return The bytes for valueToBuy.
    */
   com.google.protobuf.ByteString
       getValueToBuyBytes();
 
   /**
-   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * <code>uint64 height = 4;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * <code>uint64 coin_id_commission = 9;</code>
    * @return Whether the coinIdCommission field is set.
    */
   boolean hasCoinIdCommission();
   /**
-   * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+   * <code>uint64 coin_id_commission = 9;</code>
    * @return The coinIdCommission.
    */
   long getCoinIdCommission();
 
   /**
-   * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+   * <code>string coin_commission = 10;</code>
    * @return Whether the coinCommission field is set.
    */
   boolean hasCoinCommission();
   /**
-   * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+   * <code>string coin_commission = 10;</code>
    * @return The coinCommission.
    */
   java.lang.String getCoinCommission();
   /**
-   * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+   * <code>string coin_commission = 10;</code>
    * @return The bytes for coinCommission.
    */
   com.google.protobuf.ByteString
       getCoinCommissionBytes();
 
   /**
-   * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 8;</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   int getSwapFromValue();
   /**
-   * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 8;</code>
    * @return The swapFrom.
    */
   counters.minter.grpc.client.SwapFrom getSwapFrom();
 
   /**
-   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+   * <code>repeated uint64 route = 11;</code>
    * @return A list containing the route.
    */
   java.util.List<java.lang.Long> getRouteList();
   /**
-   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+   * <code>repeated uint64 route = 11;</code>
    * @return The count of route.
    */
   int getRouteCount();
   /**
-   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+   * <code>repeated uint64 route = 11;</code>
    * @param index The index of the element to return.
    * @return The route at the given index.
    */

@@ -14,13 +14,13 @@ public interface CoinIdRequestOrBuilder extends
    *    };
    * </pre>
    *
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>uint64 id = 2 [json_name = "id"];</code>
+   * <code>uint64 id = 2;</code>
    * @return The id.
    */
   long getId();

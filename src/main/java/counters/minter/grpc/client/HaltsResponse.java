@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   public static final int PUBLIC_KEYS_FIELD_NUMBER = 1;
   private com.google.protobuf.LazyStringList publicKeys_;
   /**
-   * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+   * <code>repeated string public_keys = 1;</code>
    * @return A list containing the publicKeys.
    */
   public com.google.protobuf.ProtocolStringList
@@ -105,14 +105,14 @@ private static final long serialVersionUID = 0L;
     return publicKeys_;
   }
   /**
-   * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+   * <code>repeated string public_keys = 1;</code>
    * @return The count of publicKeys.
    */
   public int getPublicKeysCount() {
     return publicKeys_.size();
   }
   /**
-   * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+   * <code>repeated string public_keys = 1;</code>
    * @param index The index of the element to return.
    * @return The publicKeys at the given index.
    */
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
     return publicKeys_.get(index);
   }
   /**
-   * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+   * <code>repeated string public_keys = 1;</code>
    * @param index The index of the value to return.
    * @return The bytes of the publicKeys at the given index.
    */
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     public com.google.protobuf.ProtocolStringList
@@ -466,14 +466,14 @@ private static final long serialVersionUID = 0L;
       return publicKeys_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return The count of publicKeys.
      */
     public int getPublicKeysCount() {
       return publicKeys_.size();
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the element to return.
      * @return The publicKeys at the given index.
      */
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
       return publicKeys_.get(index);
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the publicKeys at the given index.
      */
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
       return publicKeys_.getByteString(index);
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index to set the value at.
      * @param value The publicKeys to set.
      * @return This builder for chaining.
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The publicKeys to add.
      * @return This builder for chaining.
      */
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param values The publicKeys to add.
      * @return This builder for chaining.
      */
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearPublicKeys() {
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The bytes of the publicKeys to add.
      * @return This builder for chaining.
      */

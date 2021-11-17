@@ -8,153 +8,153 @@ public interface BlockResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string hash = 1 [json_name = "hash"];</code>
+   * <code>string hash = 1;</code>
    * @return The hash.
    */
   java.lang.String getHash();
   /**
-   * <code>string hash = 1 [json_name = "hash"];</code>
+   * <code>string hash = 1;</code>
    * @return The bytes for hash.
    */
   com.google.protobuf.ByteString
       getHashBytes();
 
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>string time = 3 [json_name = "time"];</code>
+   * <code>string time = 3;</code>
    * @return The time.
    */
   java.lang.String getTime();
   /**
-   * <code>string time = 3 [json_name = "time"];</code>
+   * <code>string time = 3;</code>
    * @return The bytes for time.
    */
   com.google.protobuf.ByteString
       getTimeBytes();
 
   /**
-   * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
+   * <code>uint64 transaction_count = 4;</code>
    * @return The transactionCount.
    */
   long getTransactionCount();
 
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
    */
   java.util.List<counters.minter.grpc.client.TransactionResponse> 
       getTransactionsList();
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
    */
   counters.minter.grpc.client.TransactionResponse getTransactions(int index);
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
    */
   int getTransactionsCount();
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.TransactionResponseOrBuilder> 
       getTransactionsOrBuilderList();
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
    */
   counters.minter.grpc.client.TransactionResponseOrBuilder getTransactionsOrBuilder(
       int index);
 
   /**
-   * <code>string block_reward = 7 [json_name = "blockReward"];</code>
+   * <code>string block_reward = 7;</code>
    * @return The blockReward.
    */
   java.lang.String getBlockReward();
   /**
-   * <code>string block_reward = 7 [json_name = "blockReward"];</code>
+   * <code>string block_reward = 7;</code>
    * @return The bytes for blockReward.
    */
   com.google.protobuf.ByteString
       getBlockRewardBytes();
 
   /**
-   * <code>uint64 size = 8 [json_name = "size"];</code>
+   * <code>uint64 size = 8;</code>
    * @return The size.
    */
   long getSize();
 
   /**
-   * <code>string proposer = 9 [json_name = "proposer"];</code>
+   * <code>string proposer = 9;</code>
    * @return The proposer.
    */
   java.lang.String getProposer();
   /**
-   * <code>string proposer = 9 [json_name = "proposer"];</code>
+   * <code>string proposer = 9;</code>
    * @return The bytes for proposer.
    */
   com.google.protobuf.ByteString
       getProposerBytes();
 
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
    */
   java.util.List<counters.minter.grpc.client.BlockResponse.Validator> 
       getValidatorsList();
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
    */
   counters.minter.grpc.client.BlockResponse.Validator getValidators(int index);
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
    */
   int getValidatorsCount();
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder> 
       getValidatorsOrBuilderList();
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
    */
   counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder getValidatorsOrBuilder(
       int index);
 
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
    * @return Whether the evidence field is set.
    */
   boolean hasEvidence();
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
    * @return The evidence.
    */
   counters.minter.grpc.client.BlockResponse.Evidence getEvidence();
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
    */
   counters.minter.grpc.client.BlockResponse.EvidenceOrBuilder getEvidenceOrBuilder();
 
   /**
-   * <code>repeated string missed = 12 [json_name = "missed"];</code>
+   * <code>repeated string missed = 12;</code>
    * @return A list containing the missed.
    */
   java.util.List<java.lang.String>
       getMissedList();
   /**
-   * <code>repeated string missed = 12 [json_name = "missed"];</code>
+   * <code>repeated string missed = 12;</code>
    * @return The count of missed.
    */
   int getMissedCount();
   /**
-   * <code>repeated string missed = 12 [json_name = "missed"];</code>
+   * <code>repeated string missed = 12;</code>
    * @param index The index of the element to return.
    * @return The missed at the given index.
    */
   java.lang.String getMissed(int index);
   /**
-   * <code>repeated string missed = 12 [json_name = "missed"];</code>
+   * <code>repeated string missed = 12;</code>
    * @param index The index of the value to return.
    * @return The bytes of the missed at the given index.
    */
@@ -162,25 +162,25 @@ public interface BlockResponseOrBuilder extends
       getMissedBytes(int index);
 
   /**
-   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Any events = 14;</code>
    */
   java.util.List<com.google.protobuf.Any> 
       getEventsList();
   /**
-   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Any events = 14;</code>
    */
   com.google.protobuf.Any getEvents(int index);
   /**
-   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Any events = 14;</code>
    */
   int getEventsCount();
   /**
-   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Any events = 14;</code>
    */
   java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
       getEventsOrBuilderList();
   /**
-   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Any events = 14;</code>
    */
   com.google.protobuf.AnyOrBuilder getEventsOrBuilder(
       int index);

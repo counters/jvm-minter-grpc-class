@@ -8,13 +8,13 @@ public interface UpdateVotesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 target_version = 1 [json_name = "targetVersion"];</code>
+   * <code>uint64 target_version = 1;</code>
    * @return The targetVersion.
    */
   long getTargetVersion();
 
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   long getHeight();

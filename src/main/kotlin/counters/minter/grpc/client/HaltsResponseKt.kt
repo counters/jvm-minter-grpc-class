@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun haltsResponse(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsResponse =
+inline fun haltsResponse(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.HaltsResponse =
   counters.minter.grpc.client.HaltsResponseKt.Dsl._create(counters.minter.grpc.client.HaltsResponse.newBuilder()).apply { block() }._build()
-public object HaltsResponseKt {
+object HaltsResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.HaltsResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.HaltsResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.HaltsResponse.Builder): Dsl = Dsl(builder)
@@ -27,72 +27,70 @@ public object HaltsResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
-    public val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
-      @kotlin.jvm.JvmSynthetic
+    val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getPublicKeysList()
       )
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addPublicKeys")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.add(value: kotlin.String) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.add(value: kotlin.String) {
       _builder.addPublicKeys(value)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignPublicKeys")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(value: kotlin.String) {
-      add(value)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(value: kotlin.String) {
+      _builder.addPublicKeys(value)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param values The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllPublicKeys")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllPublicKeys(values)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param values The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllPublicKeys")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-      addAll(values)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllPublicKeys(values)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index to set the value at.
      * @param value The publicKeys to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setPublicKeys")
-    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setPublicKeys(index, value)
     }/**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearPublicKeys")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.clear() {
       _builder.clearPublicKeys()
     }}
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.HaltsResponse.copy(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsResponse =
+inline fun counters.minter.grpc.client.HaltsResponse.copy(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.HaltsResponse =
   counters.minter.grpc.client.HaltsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

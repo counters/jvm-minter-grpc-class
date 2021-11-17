@@ -8,12 +8,12 @@ public interface SubscribeRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The query.
    */
   java.lang.String getQuery();
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The bytes for query.
    */
   com.google.protobuf.ByteString

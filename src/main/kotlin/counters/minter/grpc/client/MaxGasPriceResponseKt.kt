@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun maxGasPriceResponse(block: counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MaxGasPriceResponse =
+inline fun maxGasPriceResponse(block: counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MaxGasPriceResponse =
   counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl._create(counters.minter.grpc.client.MaxGasPriceResponse.newBuilder()).apply { block() }._build()
-public object MaxGasPriceResponseKt {
+object MaxGasPriceResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.MaxGasPriceResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.MaxGasPriceResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.MaxGasPriceResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object MaxGasPriceResponseKt {
     internal fun _build(): counters.minter.grpc.client.MaxGasPriceResponse = _builder.build()
 
     /**
-     * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+     * <code>uint64 max_gas_price = 3;</code>
      */
-    public var maxGasPrice: kotlin.Long
+    var maxGasPrice: kotlin.Long
       @JvmName("getMaxGasPrice")
       get() = _builder.getMaxGasPrice()
       @JvmName("setMaxGasPrice")
@@ -33,13 +33,13 @@ public object MaxGasPriceResponseKt {
         _builder.setMaxGasPrice(value)
       }
     /**
-     * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+     * <code>uint64 max_gas_price = 3;</code>
      */
-    public fun clearMaxGasPrice() {
+    fun clearMaxGasPrice() {
       _builder.clearMaxGasPrice()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.MaxGasPriceResponse.copy(block: counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MaxGasPriceResponse =
+inline fun counters.minter.grpc.client.MaxGasPriceResponse.copy(block: counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MaxGasPriceResponse =
   counters.minter.grpc.client.MaxGasPriceResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -8,12 +8,12 @@ public interface EstimateTxCommissionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string commission = 1 [json_name = "commission"];</code>
+   * <code>string commission = 1;</code>
    * @return The commission.
    */
   java.lang.String getCommission();
   /**
-   * <code>string commission = 1 [json_name = "commission"];</code>
+   * <code>string commission = 1;</code>
    * @return The bytes for commission.
    */
   com.google.protobuf.ByteString

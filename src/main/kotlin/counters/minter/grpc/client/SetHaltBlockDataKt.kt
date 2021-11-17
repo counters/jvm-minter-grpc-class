@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun setHaltBlockData(block: counters.minter.grpc.client.SetHaltBlockDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SetHaltBlockData =
+inline fun setHaltBlockData(block: counters.minter.grpc.client.SetHaltBlockDataKt.Dsl.() -> Unit): counters.minter.grpc.client.SetHaltBlockData =
   counters.minter.grpc.client.SetHaltBlockDataKt.Dsl._create(counters.minter.grpc.client.SetHaltBlockData.newBuilder()).apply { block() }._build()
-public object SetHaltBlockDataKt {
+object SetHaltBlockDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.SetHaltBlockData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SetHaltBlockData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SetHaltBlockData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object SetHaltBlockDataKt {
     internal fun _build(): counters.minter.grpc.client.SetHaltBlockData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public var pubKey: kotlin.String
+    var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -33,16 +33,16 @@ public object SetHaltBlockDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public fun clearPubKey() {
+    fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,13 +50,13 @@ public object SetHaltBlockDataKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.SetHaltBlockData.copy(block: counters.minter.grpc.client.SetHaltBlockDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SetHaltBlockData =
+inline fun counters.minter.grpc.client.SetHaltBlockData.copy(block: counters.minter.grpc.client.SetHaltBlockDataKt.Dsl.() -> Unit): counters.minter.grpc.client.SetHaltBlockData =
   counters.minter.grpc.client.SetHaltBlockDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int HASH_FIELD_NUMBER = 1;
   private volatile java.lang.Object hash_;
   /**
-   * <code>string hash = 1 [json_name = "hash"];</code>
+   * <code>string hash = 1;</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hash = 1 [json_name = "hash"];</code>
+   * <code>string hash = 1;</code>
    * @return The bytes for hash.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+    if (!getHashBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
     }
     unknownFields.writeTo(output);
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+    if (!getHashBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
     }
     size += unknownFields.getSerializedSize();
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hash_ = "";
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      * @return The hash.
      */
     public java.lang.String getHash() {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */

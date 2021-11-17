@@ -8,52 +8,52 @@ public interface SubscribeResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The query.
    */
   java.lang.String getQuery();
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The bytes for query.
    */
   com.google.protobuf.ByteString
       getQueryBytes();
 
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    * @return Whether the data field is set.
    */
   boolean hasData();
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    * @return The data.
    */
   com.google.protobuf.Struct getData();
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    */
   com.google.protobuf.StructOrBuilder getDataOrBuilder();
 
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   java.util.List<counters.minter.grpc.client.SubscribeResponse.Event> 
       getEventsList();
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   counters.minter.grpc.client.SubscribeResponse.Event getEvents(int index);
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   int getEventsCount();
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.SubscribeResponse.EventOrBuilder> 
       getEventsOrBuilderList();
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   counters.minter.grpc.client.SubscribeResponse.EventOrBuilder getEventsOrBuilder(
       int index);

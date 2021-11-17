@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun versionNetworkRequest(block: counters.minter.grpc.client.VersionNetworkRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkRequest =
+inline fun versionNetworkRequest(block: counters.minter.grpc.client.VersionNetworkRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.VersionNetworkRequest =
   counters.minter.grpc.client.VersionNetworkRequestKt.Dsl._create(counters.minter.grpc.client.VersionNetworkRequest.newBuilder()).apply { block() }._build()
-public object VersionNetworkRequestKt {
+object VersionNetworkRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.VersionNetworkRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.VersionNetworkRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.VersionNetworkRequest.Builder): Dsl = Dsl(builder)
@@ -24,5 +24,5 @@ public object VersionNetworkRequestKt {
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.VersionNetworkRequest.copy(block: counters.minter.grpc.client.VersionNetworkRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkRequest =
+inline fun counters.minter.grpc.client.VersionNetworkRequest.copy(block: counters.minter.grpc.client.VersionNetworkRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.VersionNetworkRequest =
   counters.minter.grpc.client.VersionNetworkRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

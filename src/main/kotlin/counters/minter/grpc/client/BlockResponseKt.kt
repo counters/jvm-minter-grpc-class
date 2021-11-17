@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun blockResponse(block: counters.minter.grpc.client.BlockResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse =
+inline fun blockResponse(block: counters.minter.grpc.client.BlockResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse =
   counters.minter.grpc.client.BlockResponseKt.Dsl._create(counters.minter.grpc.client.BlockResponse.newBuilder()).apply { block() }._build()
-public object BlockResponseKt {
+object BlockResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.BlockResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BlockResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.BlockResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object BlockResponseKt {
     internal fun _build(): counters.minter.grpc.client.BlockResponse = _builder.build()
 
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      */
-    public var hash: kotlin.String
+    var hash: kotlin.String
       @JvmName("getHash")
       get() = _builder.getHash()
       @JvmName("setHash")
@@ -33,16 +33,16 @@ public object BlockResponseKt {
         _builder.setHash(value)
       }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      */
-    public fun clearHash() {
+    fun clearHash() {
       _builder.clearHash()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,16 +50,16 @@ public object BlockResponseKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>string time = 3 [json_name = "time"];</code>
+     * <code>string time = 3;</code>
      */
-    public var time: kotlin.String
+    var time: kotlin.String
       @JvmName("getTime")
       get() = _builder.getTime()
       @JvmName("setTime")
@@ -67,16 +67,16 @@ public object BlockResponseKt {
         _builder.setTime(value)
       }
     /**
-     * <code>string time = 3 [json_name = "time"];</code>
+     * <code>string time = 3;</code>
      */
-    public fun clearTime() {
+    fun clearTime() {
       _builder.clearTime()
     }
 
     /**
-     * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 4;</code>
      */
-    public var transactionCount: kotlin.Long
+    var transactionCount: kotlin.Long
       @JvmName("getTransactionCount")
       get() = _builder.getTransactionCount()
       @JvmName("setTransactionCount")
@@ -84,9 +84,9 @@ public object BlockResponseKt {
         _builder.setTransactionCount(value)
       }
     /**
-     * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 4;</code>
      */
-    public fun clearTransactionCount() {
+    fun clearTransactionCount() {
       _builder.clearTransactionCount()
     }
 
@@ -95,70 +95,68 @@ public object BlockResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class TransactionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class TransactionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      */
-     public val transactions: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>
+     val transactions: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getTransactionsList()
       )
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      * @param value The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addTransactions")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.add(value: counters.minter.grpc.client.TransactionResponse) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.add(value: counters.minter.grpc.client.TransactionResponse) {
       _builder.addTransactions(value)
     }/**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      * @param value The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignTransactions")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.plusAssign(value: counters.minter.grpc.client.TransactionResponse) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.plusAssign(value: counters.minter.grpc.client.TransactionResponse) {
       add(value)
     }/**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      * @param values The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllTransactions")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.TransactionResponse>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.TransactionResponse>) {
       _builder.addAllTransactions(values)
     }/**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      * @param values The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllTransactions")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.TransactionResponse>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.TransactionResponse>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      * @param index The index to set the value at.
      * @param value The transactions to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setTransactions")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.TransactionResponse) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.TransactionResponse) {
       _builder.setTransactions(index, value)
     }/**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearTransactions")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.TransactionResponse, TransactionsProxy>.clear() {
       _builder.clearTransactions()
     }
     /**
-     * <code>string block_reward = 7 [json_name = "blockReward"];</code>
+     * <code>string block_reward = 7;</code>
      */
-    public var blockReward: kotlin.String
+    var blockReward: kotlin.String
       @JvmName("getBlockReward")
       get() = _builder.getBlockReward()
       @JvmName("setBlockReward")
@@ -166,16 +164,16 @@ public object BlockResponseKt {
         _builder.setBlockReward(value)
       }
     /**
-     * <code>string block_reward = 7 [json_name = "blockReward"];</code>
+     * <code>string block_reward = 7;</code>
      */
-    public fun clearBlockReward() {
+    fun clearBlockReward() {
       _builder.clearBlockReward()
     }
 
     /**
-     * <code>uint64 size = 8 [json_name = "size"];</code>
+     * <code>uint64 size = 8;</code>
      */
-    public var size: kotlin.Long
+    var size: kotlin.Long
       @JvmName("getSize")
       get() = _builder.getSize()
       @JvmName("setSize")
@@ -183,16 +181,16 @@ public object BlockResponseKt {
         _builder.setSize(value)
       }
     /**
-     * <code>uint64 size = 8 [json_name = "size"];</code>
+     * <code>uint64 size = 8;</code>
      */
-    public fun clearSize() {
+    fun clearSize() {
       _builder.clearSize()
     }
 
     /**
-     * <code>string proposer = 9 [json_name = "proposer"];</code>
+     * <code>string proposer = 9;</code>
      */
-    public var proposer: kotlin.String
+    var proposer: kotlin.String
       @JvmName("getProposer")
       get() = _builder.getProposer()
       @JvmName("setProposer")
@@ -200,9 +198,9 @@ public object BlockResponseKt {
         _builder.setProposer(value)
       }
     /**
-     * <code>string proposer = 9 [json_name = "proposer"];</code>
+     * <code>string proposer = 9;</code>
      */
-    public fun clearProposer() {
+    fun clearProposer() {
       _builder.clearProposer()
     }
 
@@ -211,70 +209,68 @@ public object BlockResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class ValidatorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class ValidatorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      */
-     public val validators: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>
+     val validators: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getValidatorsList()
       )
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      * @param value The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.add(value: counters.minter.grpc.client.BlockResponse.Validator) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.add(value: counters.minter.grpc.client.BlockResponse.Validator) {
       _builder.addValidators(value)
     }/**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      * @param value The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignValidators")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.plusAssign(value: counters.minter.grpc.client.BlockResponse.Validator) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.plusAssign(value: counters.minter.grpc.client.BlockResponse.Validator) {
       add(value)
     }/**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      * @param values The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse.Validator>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse.Validator>) {
       _builder.addAllValidators(values)
     }/**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      * @param values The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllValidators")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse.Validator>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse.Validator>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      * @param index The index to set the value at.
      * @param value The validators to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setValidators")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockResponse.Validator) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockResponse.Validator) {
       _builder.setValidators(index, value)
     }/**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse.Validator, ValidatorsProxy>.clear() {
       _builder.clearValidators()
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
      */
-    public var evidence: counters.minter.grpc.client.BlockResponse.Evidence
+    var evidence: counters.minter.grpc.client.BlockResponse.Evidence
       @JvmName("getEvidence")
       get() = _builder.getEvidence()
       @JvmName("setEvidence")
@@ -282,16 +278,16 @@ public object BlockResponseKt {
         _builder.setEvidence(value)
       }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
      */
-    public fun clearEvidence() {
+    fun clearEvidence() {
       _builder.clearEvidence()
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
      * @return Whether the evidence field is set.
      */
-    public fun hasEvidence(): kotlin.Boolean {
+    fun hasEvidence(): kotlin.Boolean {
       return _builder.hasEvidence()
     }
 
@@ -300,69 +296,67 @@ public object BlockResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class MissedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class MissedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @return A list containing the missed.
      */
-    public val missed: com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>
-      @kotlin.jvm.JvmSynthetic
+    val missed: com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getMissedList()
       )
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @param value The missed to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addMissed")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.add(value: kotlin.String) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.add(value: kotlin.String) {
       _builder.addMissed(value)
     }
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @param value The missed to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignMissed")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.plusAssign(value: kotlin.String) {
-      add(value)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.plusAssign(value: kotlin.String) {
+      _builder.addMissed(value)
     }
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @param values The missed to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllMissed")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllMissed(values)
     }
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @param values The missed to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllMissed")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-      addAll(values)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllMissed(values)
     }
     /**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      * @param index The index to set the value at.
      * @param value The missed to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setMissed")
-    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.set(index: kotlin.Int, value: kotlin.String) {
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setMissed(index, value)
     }/**
-     * <code>repeated string missed = 12 [json_name = "missed"];</code>
+     * <code>repeated string missed = 12;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearMissed")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, MissedProxy>.clear() {
       _builder.clearMissed()
     }
     /**
@@ -370,76 +364,74 @@ public object BlockResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      */
-     public val events: com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>
+     val events: com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getEventsList()
       )
     /**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addEvents")
-    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.add(value: com.google.protobuf.Any) {
+    fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.add(value: com.google.protobuf.Any) {
       _builder.addEvents(value)
     }/**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignEvents")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.plusAssign(value: com.google.protobuf.Any) {
+    inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.plusAssign(value: com.google.protobuf.Any) {
       add(value)
     }/**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllEvents")
-    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.Any>) {
+    fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.Any>) {
       _builder.addAllEvents(values)
     }/**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllEvents")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.Any>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.Any>) {
       addAll(values)
     }/**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      * @param index The index to set the value at.
      * @param value The events to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setEvents")
-    public operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.set(index: kotlin.Int, value: com.google.protobuf.Any) {
+    operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.set(index: kotlin.Int, value: com.google.protobuf.Any) {
       _builder.setEvents(index, value)
     }/**
-     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Any events = 14;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearEvents")
-    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Any, EventsProxy>.clear() {
       _builder.clearEvents()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun validator(block: counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse.Validator =
+  inline fun validator(block: counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse.Validator =
     counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl._create(counters.minter.grpc.client.BlockResponse.Validator.newBuilder()).apply { block() }._build()
-  public object ValidatorKt {
+  object ValidatorKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.BlockResponse.Validator.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BlockResponse.Validator.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.BlockResponse.Validator.Builder): Dsl = Dsl(builder)
@@ -450,9 +442,9 @@ public object BlockResponseKt {
       internal fun _build(): counters.minter.grpc.client.BlockResponse.Validator = _builder.build()
 
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        */
-      public var publicKey: kotlin.String
+      var publicKey: kotlin.String
         @JvmName("getPublicKey")
         get() = _builder.getPublicKey()
         @JvmName("setPublicKey")
@@ -460,16 +452,16 @@ public object BlockResponseKt {
           _builder.setPublicKey(value)
         }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        */
-      public fun clearPublicKey() {
+      fun clearPublicKey() {
         _builder.clearPublicKey()
       }
 
       /**
-       * <code>bool signed = 2 [json_name = "signed"];</code>
+       * <code>bool signed = 2;</code>
        */
-      public var signed: kotlin.Boolean
+      var signed: kotlin.Boolean
         @JvmName("getSigned")
         get() = _builder.getSigned()
         @JvmName("setSigned")
@@ -477,23 +469,23 @@ public object BlockResponseKt {
           _builder.setSigned(value)
         }
       /**
-       * <code>bool signed = 2 [json_name = "signed"];</code>
+       * <code>bool signed = 2;</code>
        */
-      public fun clearSigned() {
+      fun clearSigned() {
         _builder.clearSigned()
       }
     }
   }
   @kotlin.jvm.JvmSynthetic
-  public inline fun evidence(block: counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse.Evidence =
+  inline fun evidence(block: counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse.Evidence =
     counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl._create(counters.minter.grpc.client.BlockResponse.Evidence.newBuilder()).apply { block() }._build()
-  public object EvidenceKt {
+  object EvidenceKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.BlockResponse.Evidence.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BlockResponse.Evidence.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.BlockResponse.Evidence.Builder): Dsl = Dsl(builder)
@@ -508,74 +500,72 @@ public object BlockResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class EvidenceProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class EvidenceProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        */
-       public val evidence: com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>
+       val evidence: com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>
         @kotlin.jvm.JvmSynthetic
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getEvidenceList()
         )
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        * @param value The evidence to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addEvidence")
-      public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.add(value: com.google.protobuf.Struct) {
+      fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.add(value: com.google.protobuf.Struct) {
         _builder.addEvidence(value)
       }/**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        * @param value The evidence to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignEvidence")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.plusAssign(value: com.google.protobuf.Struct) {
+      inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.plusAssign(value: com.google.protobuf.Struct) {
         add(value)
       }/**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        * @param values The evidence to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllEvidence")
-      public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.Struct>) {
+      fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.Struct>) {
         _builder.addAllEvidence(values)
       }/**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        * @param values The evidence to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllEvidence")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.Struct>) {
+      inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.Struct>) {
         addAll(values)
       }/**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        * @param index The index to set the value at.
        * @param value The evidence to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setEvidence")
-      public operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.set(index: kotlin.Int, value: com.google.protobuf.Struct) {
+      operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.set(index: kotlin.Int, value: com.google.protobuf.Struct) {
         _builder.setEvidence(index, value)
       }/**
-       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearEvidence")
-      public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<com.google.protobuf.Struct, EvidenceProxy>.clear() {
         _builder.clearEvidence()
       }}
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.BlockResponse.copy(block: counters.minter.grpc.client.BlockResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse =
+inline fun counters.minter.grpc.client.BlockResponse.copy(block: counters.minter.grpc.client.BlockResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse =
   counters.minter.grpc.client.BlockResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.BlockResponse.Validator.copy(block: counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse.Validator =
+inline fun counters.minter.grpc.client.BlockResponse.Validator.copy(block: counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse.Validator =
   counters.minter.grpc.client.BlockResponseKt.ValidatorKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.BlockResponse.Evidence.copy(block: counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockResponse.Evidence =
+inline fun counters.minter.grpc.client.BlockResponse.Evidence.copy(block: counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl.() -> Unit): counters.minter.grpc.client.BlockResponse.Evidence =
   counters.minter.grpc.client.BlockResponseKt.EvidenceKt.Dsl._create(this.toBuilder()).apply { block() }._build()

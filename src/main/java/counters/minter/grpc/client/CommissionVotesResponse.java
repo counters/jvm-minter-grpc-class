@@ -99,39 +99,39 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      * @return Whether the price field is set.
      */
     boolean hasPrice();
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      * @return The price.
      */
     counters.minter.grpc.client.PriceCommissionResponse getPrice();
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      */
     counters.minter.grpc.client.PriceCommissionResponseOrBuilder getPriceOrBuilder();
 
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     java.util.List<java.lang.String>
         getPublicKeysList();
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return The count of publicKeys.
      */
     int getPublicKeysCount();
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the element to return.
      * @return The publicKeys at the given index.
      */
     java.lang.String getPublicKeys(int index);
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the publicKeys at the given index.
      */
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
     public static final int PRICE_FIELD_NUMBER = 2;
     private counters.minter.grpc.client.PriceCommissionResponse price_;
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      * @return Whether the price field is set.
      */
     @java.lang.Override
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
       return price_ != null;
     }
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
       return price_ == null ? counters.minter.grpc.client.PriceCommissionResponse.getDefaultInstance() : price_;
     }
     /**
-     * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+     * <code>.api_pb.PriceCommissionResponse price = 2;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.PriceCommissionResponseOrBuilder getPriceOrBuilder() {
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
     public static final int PUBLIC_KEYS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList publicKeys_;
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     public com.google.protobuf.ProtocolStringList
@@ -279,14 +279,14 @@ private static final long serialVersionUID = 0L;
       return publicKeys_;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return The count of publicKeys.
      */
     public int getPublicKeysCount() {
       return publicKeys_.size();
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the element to return.
      * @return The publicKeys at the given index.
      */
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
       return publicKeys_.get(index);
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the publicKeys at the given index.
      */
@@ -658,14 +658,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.PriceCommissionResponse, counters.minter.grpc.client.PriceCommissionResponse.Builder, counters.minter.grpc.client.PriceCommissionResponseOrBuilder> priceBuilder_;
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        * @return Whether the price field is set.
        */
       public boolean hasPrice() {
         return priceBuilder_ != null || price_ != null;
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        * @return The price.
        */
       public counters.minter.grpc.client.PriceCommissionResponse getPrice() {
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public Builder setPrice(counters.minter.grpc.client.PriceCommissionResponse value) {
         if (priceBuilder_ == null) {
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public Builder setPrice(
           counters.minter.grpc.client.PriceCommissionResponse.Builder builderForValue) {
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public Builder mergePrice(counters.minter.grpc.client.PriceCommissionResponse value) {
         if (priceBuilder_ == null) {
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public Builder clearPrice() {
         if (priceBuilder_ == null) {
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public counters.minter.grpc.client.PriceCommissionResponse.Builder getPriceBuilder() {
         
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
         return getPriceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public counters.minter.grpc.client.PriceCommissionResponseOrBuilder getPriceOrBuilder() {
         if (priceBuilder_ != null) {
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.PriceCommissionResponse, counters.minter.grpc.client.PriceCommissionResponse.Builder, counters.minter.grpc.client.PriceCommissionResponseOrBuilder> 
@@ -781,7 +781,7 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return A list containing the publicKeys.
        */
       public com.google.protobuf.ProtocolStringList
@@ -789,14 +789,14 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return The count of publicKeys.
        */
       public int getPublicKeysCount() {
         return publicKeys_.size();
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index of the element to return.
        * @return The publicKeys at the given index.
        */
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.get(index);
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the publicKeys at the given index.
        */
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.getByteString(index);
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index to set the value at.
        * @param value The publicKeys to set.
        * @return This builder for chaining.
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        * @return This builder for chaining.
        */
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        * @return This builder for chaining.
        */
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPublicKeys() {
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The bytes of the publicKeys to add.
        * @return This builder for chaining.
        */
@@ -938,14 +938,14 @@ private static final long serialVersionUID = 0L;
   public static final int VOTES_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.CommissionVotesResponse.Vote> votes_;
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.CommissionVotesResponse.Vote> getVotesList() {
     return votes_;
   }
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder> 
@@ -953,21 +953,21 @@ private static final long serialVersionUID = 0L;
     return votes_;
   }
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public int getVotesCount() {
     return votes_.size();
   }
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CommissionVotesResponse.Vote getVotes(int index) {
     return votes_.get(index);
   }
   /**
-   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder getVotesOrBuilder(
@@ -1330,7 +1330,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.CommissionVotesResponse.Vote, counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder, counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder> votesBuilder_;
 
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.CommissionVotesResponse.Vote> getVotesList() {
       if (votesBuilder_ == null) {
@@ -1340,7 +1340,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public int getVotesCount() {
       if (votesBuilder_ == null) {
@@ -1350,7 +1350,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.CommissionVotesResponse.Vote getVotes(int index) {
       if (votesBuilder_ == null) {
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder setVotes(
         int index, counters.minter.grpc.client.CommissionVotesResponse.Vote value) {
@@ -1377,7 +1377,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder setVotes(
         int index, counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder builderForValue) {
@@ -1391,7 +1391,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(counters.minter.grpc.client.CommissionVotesResponse.Vote value) {
       if (votesBuilder_ == null) {
@@ -1407,7 +1407,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         int index, counters.minter.grpc.client.CommissionVotesResponse.Vote value) {
@@ -1424,7 +1424,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder builderForValue) {
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         int index, counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder builderForValue) {
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder addAllVotes(
         java.lang.Iterable<? extends counters.minter.grpc.client.CommissionVotesResponse.Vote> values) {
@@ -1467,7 +1467,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder clearVotes() {
       if (votesBuilder_ == null) {
@@ -1480,7 +1480,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public Builder removeVotes(int index) {
       if (votesBuilder_ == null) {
@@ -1493,14 +1493,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder getVotesBuilder(
         int index) {
       return getVotesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder getVotesOrBuilder(
         int index) {
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder> 
          getVotesOrBuilderList() {
@@ -1521,14 +1521,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder addVotesBuilder() {
       return getVotesFieldBuilder().addBuilder(
           counters.minter.grpc.client.CommissionVotesResponse.Vote.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder addVotesBuilder(
         int index) {
@@ -1536,7 +1536,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.CommissionVotesResponse.Vote.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder> 
          getVotesBuilderList() {

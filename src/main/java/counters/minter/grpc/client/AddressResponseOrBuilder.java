@@ -8,107 +8,107 @@ public interface AddressResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.AddressBalance balance = 1 [json_name = "balance"];</code>
+   * <code>repeated .api_pb.AddressBalance balance = 1;</code>
    */
   java.util.List<counters.minter.grpc.client.AddressBalance> 
       getBalanceList();
   /**
-   * <code>repeated .api_pb.AddressBalance balance = 1 [json_name = "balance"];</code>
+   * <code>repeated .api_pb.AddressBalance balance = 1;</code>
    */
   counters.minter.grpc.client.AddressBalance getBalance(int index);
   /**
-   * <code>repeated .api_pb.AddressBalance balance = 1 [json_name = "balance"];</code>
+   * <code>repeated .api_pb.AddressBalance balance = 1;</code>
    */
   int getBalanceCount();
   /**
-   * <code>repeated .api_pb.AddressBalance balance = 1 [json_name = "balance"];</code>
+   * <code>repeated .api_pb.AddressBalance balance = 1;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
       getBalanceOrBuilderList();
   /**
-   * <code>repeated .api_pb.AddressBalance balance = 1 [json_name = "balance"];</code>
+   * <code>repeated .api_pb.AddressBalance balance = 1;</code>
    */
   counters.minter.grpc.client.AddressBalanceOrBuilder getBalanceOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3 [json_name = "delegated"];</code>
+   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3;</code>
    */
   java.util.List<counters.minter.grpc.client.AddressDelegatedBalance> 
       getDelegatedList();
   /**
-   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3 [json_name = "delegated"];</code>
+   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3;</code>
    */
   counters.minter.grpc.client.AddressDelegatedBalance getDelegated(int index);
   /**
-   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3 [json_name = "delegated"];</code>
+   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3;</code>
    */
   int getDelegatedCount();
   /**
-   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3 [json_name = "delegated"];</code>
+   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder> 
       getDelegatedOrBuilderList();
   /**
-   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3 [json_name = "delegated"];</code>
+   * <code>repeated .api_pb.AddressDelegatedBalance delegated = 3;</code>
    */
   counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder getDelegatedOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+   * <code>repeated .api_pb.AddressBalance total = 4;</code>
    */
   java.util.List<counters.minter.grpc.client.AddressBalance> 
       getTotalList();
   /**
-   * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+   * <code>repeated .api_pb.AddressBalance total = 4;</code>
    */
   counters.minter.grpc.client.AddressBalance getTotal(int index);
   /**
-   * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+   * <code>repeated .api_pb.AddressBalance total = 4;</code>
    */
   int getTotalCount();
   /**
-   * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+   * <code>repeated .api_pb.AddressBalance total = 4;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
       getTotalOrBuilderList();
   /**
-   * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+   * <code>repeated .api_pb.AddressBalance total = 4;</code>
    */
   counters.minter.grpc.client.AddressBalanceOrBuilder getTotalOrBuilder(
       int index);
 
   /**
-   * <code>uint64 transaction_count = 2 [json_name = "transactionCount"];</code>
+   * <code>uint64 transaction_count = 2;</code>
    * @return The transactionCount.
    */
   long getTransactionCount();
 
   /**
-   * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+   * <code>string bip_value = 5;</code>
    * @return The bipValue.
    */
   java.lang.String getBipValue();
   /**
-   * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+   * <code>string bip_value = 5;</code>
    * @return The bytes for bipValue.
    */
   com.google.protobuf.ByteString
       getBipValueBytes();
 
   /**
-   * <code>.api_pb.Multisig multisig = 6 [json_name = "multisig"];</code>
+   * <code>.api_pb.Multisig multisig = 6;</code>
    * @return Whether the multisig field is set.
    */
   boolean hasMultisig();
   /**
-   * <code>.api_pb.Multisig multisig = 6 [json_name = "multisig"];</code>
+   * <code>.api_pb.Multisig multisig = 6;</code>
    * @return The multisig.
    */
   counters.minter.grpc.client.Multisig getMultisig();
   /**
-   * <code>.api_pb.Multisig multisig = 6 [json_name = "multisig"];</code>
+   * <code>.api_pb.Multisig multisig = 6;</code>
    */
   counters.minter.grpc.client.MultisigOrBuilder getMultisigOrBuilder();
 }

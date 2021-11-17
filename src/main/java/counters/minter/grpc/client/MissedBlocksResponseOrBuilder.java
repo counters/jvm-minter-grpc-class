@@ -8,19 +8,19 @@ public interface MissedBlocksResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+   * <code>string missed_blocks = 1;</code>
    * @return The missedBlocks.
    */
   java.lang.String getMissedBlocks();
   /**
-   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+   * <code>string missed_blocks = 1;</code>
    * @return The bytes for missedBlocks.
    */
   com.google.protobuf.ByteString
       getMissedBlocksBytes();
 
   /**
-   * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+   * <code>int64 missed_blocks_count = 2;</code>
    * @return The missedBlocksCount.
    */
   long getMissedBlocksCount();

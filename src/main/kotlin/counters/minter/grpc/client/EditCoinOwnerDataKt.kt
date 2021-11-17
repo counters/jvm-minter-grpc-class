@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun editCoinOwnerData(block: counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCoinOwnerData =
+inline fun editCoinOwnerData(block: counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCoinOwnerData =
   counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl._create(counters.minter.grpc.client.EditCoinOwnerData.newBuilder()).apply { block() }._build()
-public object EditCoinOwnerDataKt {
+object EditCoinOwnerDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.EditCoinOwnerData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.EditCoinOwnerData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.EditCoinOwnerData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object EditCoinOwnerDataKt {
     internal fun _build(): counters.minter.grpc.client.EditCoinOwnerData = _builder.build()
 
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      */
-    public var symbol: kotlin.String
+    var symbol: kotlin.String
       @JvmName("getSymbol")
       get() = _builder.getSymbol()
       @JvmName("setSymbol")
@@ -33,16 +33,16 @@ public object EditCoinOwnerDataKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      */
-    public fun clearSymbol() {
+    fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      */
-    public var newOwner: kotlin.String
+    var newOwner: kotlin.String
       @JvmName("getNewOwner")
       get() = _builder.getNewOwner()
       @JvmName("setNewOwner")
@@ -50,13 +50,13 @@ public object EditCoinOwnerDataKt {
         _builder.setNewOwner(value)
       }
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      */
-    public fun clearNewOwner() {
+    fun clearNewOwner() {
       _builder.clearNewOwner()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.EditCoinOwnerData.copy(block: counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCoinOwnerData =
+inline fun counters.minter.grpc.client.EditCoinOwnerData.copy(block: counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCoinOwnerData =
   counters.minter.grpc.client.EditCoinOwnerDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

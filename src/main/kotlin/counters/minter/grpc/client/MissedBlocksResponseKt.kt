@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun missedBlocksResponse(block: counters.minter.grpc.client.MissedBlocksResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksResponse =
+inline fun missedBlocksResponse(block: counters.minter.grpc.client.MissedBlocksResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MissedBlocksResponse =
   counters.minter.grpc.client.MissedBlocksResponseKt.Dsl._create(counters.minter.grpc.client.MissedBlocksResponse.newBuilder()).apply { block() }._build()
-public object MissedBlocksResponseKt {
+object MissedBlocksResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.MissedBlocksResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.MissedBlocksResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.MissedBlocksResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object MissedBlocksResponseKt {
     internal fun _build(): counters.minter.grpc.client.MissedBlocksResponse = _builder.build()
 
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      */
-    public var missedBlocks: kotlin.String
+    var missedBlocks: kotlin.String
       @JvmName("getMissedBlocks")
       get() = _builder.getMissedBlocks()
       @JvmName("setMissedBlocks")
@@ -33,16 +33,16 @@ public object MissedBlocksResponseKt {
         _builder.setMissedBlocks(value)
       }
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      */
-    public fun clearMissedBlocks() {
+    fun clearMissedBlocks() {
       _builder.clearMissedBlocks()
     }
 
     /**
-     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+     * <code>int64 missed_blocks_count = 2;</code>
      */
-    public var missedBlocksCount: kotlin.Long
+    var missedBlocksCount: kotlin.Long
       @JvmName("getMissedBlocksCount")
       get() = _builder.getMissedBlocksCount()
       @JvmName("setMissedBlocksCount")
@@ -50,13 +50,13 @@ public object MissedBlocksResponseKt {
         _builder.setMissedBlocksCount(value)
       }
     /**
-     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+     * <code>int64 missed_blocks_count = 2;</code>
      */
-    public fun clearMissedBlocksCount() {
+    fun clearMissedBlocksCount() {
       _builder.clearMissedBlocksCount()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.MissedBlocksResponse.copy(block: counters.minter.grpc.client.MissedBlocksResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksResponse =
+inline fun counters.minter.grpc.client.MissedBlocksResponse.copy(block: counters.minter.grpc.client.MissedBlocksResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MissedBlocksResponse =
   counters.minter.grpc.client.MissedBlocksResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -68,78 +68,55 @@ public final class Events {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014events.proto\022\006api_pb\"Z\n\tJailEvent\022*\n\021v" +
-      "alidator_pub_key\030\001 \001(\tR\017validatorPubKey\022" +
-      "!\n\014jailed_until\030\002 \001(\004R\013jailedUntil\"B\n\024Re" +
-      "moveCandidateEvent\022*\n\021candidate_pub_key\030" +
-      "\001 \001(\tR\017candidatePubKey\"\207\002\n\013RewardEvent\022," +
-      "\n\004role\030\001 \001(\0162\030.api_pb.RewardEvent.RoleR\004" +
-      "role\022\030\n\007address\030\002 \001(\tR\007address\022\026\n\006amount" +
-      "\030\003 \001(\tR\006amount\022\022\n\004coin\030\005 \001(\004R\004coin\022*\n\021va" +
-      "lidator_pub_key\030\004 \001(\tR\017validatorPubKey\022\031" +
-      "\n\010for_coin\030\006 \001(\004R\007forCoin\"=\n\004Role\022\r\n\tVal" +
-      "idator\020\000\022\r\n\tDelegator\020\001\022\007\n\003DAO\020\002\022\016\n\nDeve" +
-      "lopers\020\003\"~\n\nSlashEvent\022\030\n\007address\030\001 \001(\tR" +
-      "\007address\022\026\n\006amount\030\002 \001(\tR\006amount\022\022\n\004coin" +
-      "\030\003 \001(\004R\004coin\022*\n\021validator_pub_key\030\004 \001(\tR" +
-      "\017validatorPubKey\"\177\n\013UnbondEvent\022\030\n\007addre" +
-      "ss\030\001 \001(\tR\007address\022\026\n\006amount\030\002 \001(\tR\006amoun" +
-      "t\022\022\n\004coin\030\003 \001(\004R\004coin\022*\n\021validator_pub_k" +
-      "ey\030\004 \001(\tR\017validatorPubKey\"\202\001\n\016StakeKickE" +
-      "vent\022\030\n\007address\030\001 \001(\tR\007address\022\026\n\006amount" +
-      "\030\002 \001(\tR\006amount\022\022\n\004coin\030\003 \001(\004R\004coin\022*\n\021va" +
-      "lidator_pub_key\030\004 \001(\tR\017validatorPubKey\"." +
-      "\n\022UpdateNetworkEvent\022\030\n\007version\030\001 \001(\tR\007v" +
-      "ersion\"\364\r\n\026UpdateCommissionsEvent\022\022\n\004coi" +
-      "n\030\003 \001(\004R\004coin\022!\n\014payload_byte\030\004 \001(\tR\013pay" +
-      "loadByte\022\022\n\004send\030\005 \001(\tR\004send\022\035\n\nbuy_banc" +
-      "or\030& \001(\tR\tbuyBancor\022\037\n\013sell_bancor\030\' \001(\t" +
-      "R\nsellBancor\022&\n\017sell_all_bancor\030( \001(\tR\rs" +
-      "ellAllBancor\022\"\n\rbuy_pool_base\030) \001(\tR\013buy" +
-      "PoolBase\022$\n\016buy_pool_delta\0305 \001(\tR\014buyPoo" +
-      "lDelta\022$\n\016sell_pool_base\030* \001(\tR\014sellPool" +
-      "Base\022&\n\017sell_pool_delta\0306 \001(\tR\rsellPoolD" +
-      "elta\022+\n\022sell_all_pool_base\030+ \001(\tR\017sellAl" +
-      "lPoolBase\022-\n\023sell_all_pool_delta\0307 \001(\tR\020" +
-      "sellAllPoolDelta\022%\n\016create_ticker3\030\007 \001(\t" +
-      "R\rcreateTicker3\022%\n\016create_ticker4\030\010 \001(\tR" +
-      "\rcreateTicker4\022%\n\016create_ticker5\030\t \001(\tR\r" +
-      "createTicker5\022%\n\016create_ticker6\030\n \001(\tR\rc" +
-      "reateTicker6\022*\n\021create_ticker7_10\030\013 \001(\tR" +
-      "\017createTicker710\022\037\n\013create_coin\030\" \001(\tR\nc" +
-      "reateCoin\022!\n\014create_token\030# \001(\tR\013createT" +
-      "oken\022#\n\rrecreate_coin\030$ \001(\tR\014recreateCoi" +
-      "n\022%\n\016recreate_token\030% \001(\tR\rrecreateToken" +
-      "\022+\n\021declare_candidacy\030\r \001(\tR\020declareCand" +
-      "idacy\022\032\n\010delegate\030\016 \001(\tR\010delegate\022\026\n\006unb" +
-      "ond\030\017 \001(\tR\006unbond\022!\n\014redeem_check\030\020 \001(\tR" +
-      "\013redeemCheck\022(\n\020set_candidate_on\030, \001(\tR\016" +
-      "setCandidateOn\022*\n\021set_candidate_off\030- \001(" +
-      "\tR\017setCandidateOff\022\'\n\017create_multisig\030\022 " +
-      "\001(\tR\016createMultisig\022%\n\016multisend_base\0303 " +
-      "\001(\tR\rmultisendBase\022\'\n\017multisend_delta\0304 " +
-      "\001(\tR\016multisendDelta\022%\n\016edit_candidate\030\024 " +
-      "\001(\tR\reditCandidate\022$\n\016set_halt_block\030\025 \001" +
-      "(\tR\014setHaltBlock\022*\n\021edit_ticker_owner\030\026 " +
-      "\001(\tR\017editTickerOwner\022#\n\redit_multisig\030\027 " +
-      "\001(\tR\014editMultisig\0229\n\031edit_candidate_publ" +
-      "ic_key\030\031 \001(\tR\026editCandidatePublicKey\022(\n\020" +
-      "create_swap_pool\0300 \001(\tR\016createSwapPool\022#" +
-      "\n\radd_liquidity\0301 \001(\tR\014addLiquidity\022)\n\020r" +
-      "emove_liquidity\0302 \001(\tR\017removeLiquidity\022:" +
-      "\n\031edit_candidate_commission\030\034 \001(\tR\027editC" +
-      "andidateCommission\022\035\n\nmint_token\030. \001(\tR\t" +
-      "mintToken\022\035\n\nburn_token\030/ \001(\tR\tburnToken" +
-      "\022\'\n\017vote_commission\030\037 \001(\tR\016voteCommissio" +
-      "n\022\037\n\013vote_update\030  \001(\tR\nvoteUpdate\022\033\n\tfa" +
-      "iled_tx\0308 \001(\tR\010failedTx\022&\n\017add_limit_ord" +
-      "er\0309 \001(\tR\raddLimitOrder\022,\n\022remove_limit_" +
-      "order\030: \001(\tR\020removeLimitOrder\"i\n\021OrderEx" +
-      "piredEvent\022\016\n\002id\030\001 \001(\004R\002id\022\030\n\007address\030\002 " +
-      "\001(\tR\007address\022\022\n\004coin\030\003 \001(\004R\004coin\022\026\n\006amou" +
-      "nt\030\004 \001(\tR\006amountBV\n\033counters.minter.grpc" +
-      ".clientP\001Z5github.com/MinterTeam/node-gr" +
-      "pc-gateway/gen/go;api_pbb\006proto3"
+      "\n\014events.proto\022\006api_pb\"<\n\tJailEvent\022\031\n\021v" +
+      "alidator_pub_key\030\001 \001(\t\022\024\n\014jailed_until\030\002" +
+      " \001(\004\"1\n\024RemoveCandidateEvent\022\031\n\021candidat" +
+      "e_pub_key\030\001 \001(\t\"\320\001\n\013RewardEvent\022&\n\004role\030" +
+      "\001 \001(\0162\030.api_pb.RewardEvent.Role\022\017\n\007addre" +
+      "ss\030\002 \001(\t\022\016\n\006amount\030\003 \001(\t\022\014\n\004coin\030\005 \001(\004\022\031" +
+      "\n\021validator_pub_key\030\004 \001(\t\022\020\n\010for_coin\030\006 " +
+      "\001(\004\"=\n\004Role\022\r\n\tValidator\020\000\022\r\n\tDelegator\020" +
+      "\001\022\007\n\003DAO\020\002\022\016\n\nDevelopers\020\003\"V\n\nSlashEvent" +
+      "\022\017\n\007address\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004coi" +
+      "n\030\003 \001(\004\022\031\n\021validator_pub_key\030\004 \001(\t\"W\n\013Un" +
+      "bondEvent\022\017\n\007address\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
+      "(\t\022\014\n\004coin\030\003 \001(\004\022\031\n\021validator_pub_key\030\004 " +
+      "\001(\t\"Z\n\016StakeKickEvent\022\017\n\007address\030\001 \001(\t\022\016" +
+      "\n\006amount\030\002 \001(\t\022\014\n\004coin\030\003 \001(\004\022\031\n\021validato" +
+      "r_pub_key\030\004 \001(\t\"%\n\022UpdateNetworkEvent\022\017\n" +
+      "\007version\030\001 \001(\t\"\335\010\n\026UpdateCommissionsEven" +
+      "t\022\014\n\004coin\030\003 \001(\004\022\024\n\014payload_byte\030\004 \001(\t\022\014\n" +
+      "\004send\030\005 \001(\t\022\022\n\nbuy_bancor\030& \001(\t\022\023\n\013sell_" +
+      "bancor\030\' \001(\t\022\027\n\017sell_all_bancor\030( \001(\t\022\025\n" +
+      "\rbuy_pool_base\030) \001(\t\022\026\n\016buy_pool_delta\0305" +
+      " \001(\t\022\026\n\016sell_pool_base\030* \001(\t\022\027\n\017sell_poo" +
+      "l_delta\0306 \001(\t\022\032\n\022sell_all_pool_base\030+ \001(" +
+      "\t\022\033\n\023sell_all_pool_delta\0307 \001(\t\022\026\n\016create" +
+      "_ticker3\030\007 \001(\t\022\026\n\016create_ticker4\030\010 \001(\t\022\026" +
+      "\n\016create_ticker5\030\t \001(\t\022\026\n\016create_ticker6" +
+      "\030\n \001(\t\022\031\n\021create_ticker7_10\030\013 \001(\t\022\023\n\013cre" +
+      "ate_coin\030\" \001(\t\022\024\n\014create_token\030# \001(\t\022\025\n\r" +
+      "recreate_coin\030$ \001(\t\022\026\n\016recreate_token\030% " +
+      "\001(\t\022\031\n\021declare_candidacy\030\r \001(\t\022\020\n\010delega" +
+      "te\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t\022\024\n\014redeem_check" +
+      "\030\020 \001(\t\022\030\n\020set_candidate_on\030, \001(\t\022\031\n\021set_" +
+      "candidate_off\030- \001(\t\022\027\n\017create_multisig\030\022" +
+      " \001(\t\022\026\n\016multisend_base\0303 \001(\t\022\027\n\017multisen" +
+      "d_delta\0304 \001(\t\022\026\n\016edit_candidate\030\024 \001(\t\022\026\n" +
+      "\016set_halt_block\030\025 \001(\t\022\031\n\021edit_ticker_own" +
+      "er\030\026 \001(\t\022\025\n\redit_multisig\030\027 \001(\t\022!\n\031edit_" +
+      "candidate_public_key\030\031 \001(\t\022\030\n\020create_swa" +
+      "p_pool\0300 \001(\t\022\025\n\radd_liquidity\0301 \001(\t\022\030\n\020r" +
+      "emove_liquidity\0302 \001(\t\022!\n\031edit_candidate_" +
+      "commission\030\034 \001(\t\022\022\n\nmint_token\030. \001(\t\022\022\n\n" +
+      "burn_token\030/ \001(\t\022\027\n\017vote_commission\030\037 \001(" +
+      "\t\022\023\n\013vote_update\030  \001(\t\022\021\n\tfailed_tx\0308 \001(" +
+      "\t\022\027\n\017add_limit_order\0309 \001(\t\022\032\n\022remove_lim" +
+      "it_order\030: \001(\t\"N\n\021OrderExpiredEvent\022\n\n\002i" +
+      "d\030\001 \001(\004\022\017\n\007address\030\002 \001(\t\022\014\n\004coin\030\003 \001(\004\022\016" +
+      "\n\006amount\030\004 \001(\tBV\n\033counters.minter.grpc.c" +
+      "lientP\001Z5github.com/MinterTeam/node-grpc" +
+      "-gateway/gen/go;api_pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

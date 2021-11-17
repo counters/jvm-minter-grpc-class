@@ -575,527 +575,395 @@ public final class Resources {
     java.lang.String[] descriptorData = {
       "\n\017resources.proto\022\006api_pb\032\034google/protob" +
       "uf/struct.proto\032\031google/protobuf/any.pro" +
-      "to\032\036google/protobuf/wrappers.proto\".\n\004Co" +
-      "in\022\016\n\002id\030\001 \001(\004R\002id\022\026\n\006symbol\030\002 \001(\tR\006symb" +
-      "ol\"\260\001\n\rBlocksRequest\022\037\n\013from_height\030\001 \001(" +
-      "\004R\nfromHeight\022\033\n\tto_height\030\002 \001(\004R\010toHeig" +
-      "ht\022*\n\006fields\030\003 \003(\0162\022.api_pb.BlockFieldR\006" +
-      "fields\022\035\n\nfailed_txs\030\004 \001(\010R\tfailedTxs\022\026\n" +
-      "\006events\030\005 \001(\010R\006events\"?\n\016BlocksResponse\022" +
-      "-\n\006blocks\030\001 \003(\0132\025.api_pb.BlockResponseR\006" +
-      "blocks\"W\n\026CommissionVotesRequest\022%\n\016targ" +
-      "et_version\030\001 \001(\004R\rtargetVersion\022\026\n\006heigh" +
-      "t\030\002 \001(\004R\006height\"\265\001\n\027CommissionVotesRespo" +
-      "nse\022:\n\005votes\030\001 \003(\0132$.api_pb.CommissionVo" +
-      "tesResponse.VoteR\005votes\032^\n\004Vote\0225\n\005price" +
-      "\030\002 \001(\0132\037.api_pb.PriceCommissionResponseR" +
-      "\005price\022\037\n\013public_keys\030\001 \003(\tR\npublicKeys\"" +
-      "F\n\021LimitOrderRequest\022\031\n\010order_id\030\001 \001(\004R\007" +
-      "orderId\022\026\n\006height\030\002 \001(\004R\006height\"\364\001\n\022Limi" +
-      "tOrderResponse\022\016\n\002id\030\007 \001(\004R\002id\022)\n\tcoin_s" +
-      "ell\030\001 \001(\0132\014.api_pb.CoinR\010coinSell\022\'\n\010coi" +
-      "n_buy\030\002 \001(\0132\014.api_pb.CoinR\007coinBuy\022\033\n\twa" +
-      "nt_sell\030\003 \001(\tR\010wantSell\022\031\n\010want_buy\030\004 \001(" +
-      "\tR\007wantBuy\022\024\n\005price\030\010 \001(\tR\005price\022\024\n\005owne" +
-      "r\030\005 \001(\tR\005owner\022\026\n\006height\030\006 \001(\004R\006height\"\200" +
-      "\001\n\030LimitOrdersOfPoolRequest\022\033\n\tsell_coin" +
-      "\030\001 \001(\004R\010sellCoin\022\031\n\010buy_coin\030\002 \001(\004R\007buyC" +
-      "oin\022\024\n\005limit\030\003 \001(\005R\005limit\022\026\n\006height\030\004 \001(" +
-      "\004R\006height\"n\n\031LimitOrdersOfPoolResponse\022\035" +
-      "\n\npool_price\030\002 \001(\tR\tpoolPrice\0222\n\006orders\030" +
-      "\001 \003(\0132\032.api_pb.LimitOrderResponseR\006order" +
-      "s\">\n\022LimitOrdersRequest\022\020\n\003ids\030\001 \003(\004R\003id" +
-      "s\022\026\n\006height\030\002 \001(\004R\006height\"I\n\023LimitOrders" +
-      "Response\0222\n\006orders\030\001 \003(\0132\032.api_pb.LimitO" +
-      "rderResponseR\006orders\"S\n\022UpdateVotesReque" +
-      "st\022%\n\016target_version\030\001 \001(\004R\rtargetVersio" +
-      "n\022\026\n\006height\030\002 \001(\004R\006height\"\220\001\n\023UpdateVote" +
-      "sResponse\0226\n\005votes\030\001 \003(\0132 .api_pb.Update" +
-      "VotesResponse.VoteR\005votes\032A\n\004Vote\022\030\n\007ver" +
-      "sion\030\002 \001(\tR\007version\022\037\n\013public_keys\030\001 \003(\t" +
-      "R\npublicKeys\"\027\n\025VersionNetworkRequest\"\255\001" +
-      "\n\026VersionNetworkResponse\022\030\n\007current\030\001 \001(" +
-      "\tR\007current\022B\n\010versions\030\003 \003(\0132&.api_pb.Ve" +
-      "rsionNetworkResponse.VersionR\010versions\0325" +
-      "\n\007Version\022\022\n\004name\030\001 \001(\tR\004name\022\026\n\006height\030" +
-      "\002 \001(\004R\006height\"0\n\026PriceCommissionRequest\022" +
-      "\026\n\006height\030\001 \001(\004R\006height\"\203\016\n\027PriceCommiss" +
-      "ionResponse\022 \n\004coin\030\003 \001(\0132\014.api_pb.CoinR" +
-      "\004coin\022!\n\014payload_byte\030\004 \001(\tR\013payloadByte" +
-      "\022\022\n\004send\030\005 \001(\tR\004send\022\035\n\nbuy_bancor\030& \001(\t" +
-      "R\tbuyBancor\022\037\n\013sell_bancor\030\' \001(\tR\nsellBa" +
-      "ncor\022&\n\017sell_all_bancor\030( \001(\tR\rsellAllBa" +
-      "ncor\022\"\n\rbuy_pool_base\030) \001(\tR\013buyPoolBase" +
-      "\022$\n\016buy_pool_delta\0305 \001(\tR\014buyPoolDelta\022$" +
-      "\n\016sell_pool_base\030* \001(\tR\014sellPoolBase\022&\n\017" +
-      "sell_pool_delta\0306 \001(\tR\rsellPoolDelta\022+\n\022" +
-      "sell_all_pool_base\030+ \001(\tR\017sellAllPoolBas" +
-      "e\022-\n\023sell_all_pool_delta\0307 \001(\tR\020sellAllP" +
-      "oolDelta\022%\n\016create_ticker3\030\007 \001(\tR\rcreate" +
-      "Ticker3\022%\n\016create_ticker4\030\010 \001(\tR\rcreateT" +
-      "icker4\022%\n\016create_ticker5\030\t \001(\tR\rcreateTi" +
-      "cker5\022%\n\016create_ticker6\030\n \001(\tR\rcreateTic" +
-      "ker6\022*\n\021create_ticker7_10\030\013 \001(\tR\017createT" +
-      "icker710\022\037\n\013create_coin\030\" \001(\tR\ncreateCoi" +
-      "n\022!\n\014create_token\030# \001(\tR\013createToken\022#\n\r" +
-      "recreate_coin\030$ \001(\tR\014recreateCoin\022%\n\016rec" +
-      "reate_token\030% \001(\tR\rrecreateToken\022+\n\021decl" +
-      "are_candidacy\030\r \001(\tR\020declareCandidacy\022\032\n" +
-      "\010delegate\030\016 \001(\tR\010delegate\022\026\n\006unbond\030\017 \001(" +
-      "\tR\006unbond\022!\n\014redeem_check\030\020 \001(\tR\013redeemC" +
-      "heck\022(\n\020set_candidate_on\030, \001(\tR\016setCandi" +
-      "dateOn\022*\n\021set_candidate_off\030- \001(\tR\017setCa" +
-      "ndidateOff\022\'\n\017create_multisig\030\022 \001(\tR\016cre" +
-      "ateMultisig\022%\n\016multisend_base\0303 \001(\tR\rmul" +
-      "tisendBase\022\'\n\017multisend_delta\0304 \001(\tR\016mul" +
-      "tisendDelta\022%\n\016edit_candidate\030\024 \001(\tR\redi" +
-      "tCandidate\022$\n\016set_halt_block\030\025 \001(\tR\014setH" +
-      "altBlock\022*\n\021edit_ticker_owner\030\026 \001(\tR\017edi" +
-      "tTickerOwner\022#\n\redit_multisig\030\027 \001(\tR\014edi" +
-      "tMultisig\0229\n\031edit_candidate_public_key\030\031" +
-      " \001(\tR\026editCandidatePublicKey\022(\n\020create_s" +
-      "wap_pool\0300 \001(\tR\016createSwapPool\022#\n\radd_li" +
-      "quidity\0301 \001(\tR\014addLiquidity\022)\n\020remove_li" +
-      "quidity\0302 \001(\tR\017removeLiquidity\022:\n\031edit_c" +
-      "andidate_commission\030\034 \001(\tR\027editCandidate" +
-      "Commission\022\035\n\nmint_token\030. \001(\tR\tmintToke" +
-      "n\022\035\n\nburn_token\030/ \001(\tR\tburnToken\022\'\n\017vote" +
-      "_commission\030\037 \001(\tR\016voteCommission\022\037\n\013vot" +
-      "e_update\030  \001(\tR\nvoteUpdate\022\033\n\tfailed_tx\030" +
-      "8 \001(\tR\010failedTx\022&\n\017add_limit_order\0309 \001(\t" +
-      "R\raddLimitOrder\022,\n\022remove_limit_order\030: " +
-      "\001(\tR\020removeLimitOrder\"U\n\017SwapPoolRequest" +
-      "\022\024\n\005coin0\030\001 \001(\004R\005coin0\022\024\n\005coin1\030\002 \001(\004R\005c" +
-      "oin1\022\026\n\006height\030\004 \001(\004R\006height\"z\n\020SwapPool" +
-      "Response\022\024\n\005price\030\004 \001(\tR\005price\022\030\n\007amount" +
-      "0\030\001 \001(\tR\007amount0\022\030\n\007amount1\030\002 \001(\tR\007amoun" +
-      "t1\022\034\n\tliquidity\030\003 \001(\tR\tliquidity\"a\n\027Swap" +
-      "PoolProviderRequest\022\024\n\005coin0\030\001 \001(\004R\005coin" +
-      "0\022\024\n\005coin1\030\002 \001(\004R\005coin1\022\032\n\010provider\030\003 \001(" +
-      "\tR\010provider\"\262\003\n\010NodeInfo\022K\n\020protocol_ver" +
-      "sion\030\010 \001(\0132 .api_pb.NodeInfo.ProtocolVer" +
-      "sionR\017protocolVersion\022\016\n\002id\030\001 \001(\tR\002id\022\037\n" +
-      "\013listen_addr\030\002 \001(\tR\nlistenAddr\022\030\n\007networ" +
-      "k\030\003 \001(\tR\007network\022\030\n\007version\030\004 \001(\tR\007versi" +
-      "on\022\032\n\010channels\030\005 \001(\tR\010channels\022\030\n\007monike" +
-      "r\030\006 \001(\tR\007moniker\022,\n\005other\030\007 \001(\0132\026.api_pb" +
-      ".NodeInfo.OtherR\005other\032K\n\017ProtocolVersio" +
-      "n\022\020\n\003p2p\030\003 \001(\004R\003p2p\022\024\n\005block\030\001 \001(\004R\005bloc" +
-      "k\022\020\n\003app\030\002 \001(\004R\003app\032C\n\005Other\022\031\n\010tx_index" +
-      "\030\002 \001(\tR\007txIndex\022\037\n\013rpc_address\030\001 \001(\tR\nrp" +
-      "cAddress\"\213\n\n\017NetInfoResponse\022\034\n\tlistenin" +
-      "g\030\004 \001(\010R\tlistening\022\034\n\tlisteners\030\001 \003(\tR\tl" +
-      "isteners\022\037\n\013count_peers\030\002 \001(\003R\ncountPeer" +
-      "s\0222\n\005peers\030\003 \003(\0132\034.api_pb.NetInfoRespons" +
-      "e.PeerR\005peers\032\346\010\n\004Peer\022L\n\023latest_block_h" +
-      "eight\030\005 \001(\0132\034.google.protobuf.UInt64Valu" +
-      "eR\021latestBlockHeight\022-\n\tnode_info\030\004 \001(\0132" +
-      "\020.api_pb.NodeInfoR\010nodeInfo\022\037\n\013is_outbou" +
-      "nd\030\001 \001(\010R\nisOutbound\022Z\n\021connection_statu" +
-      "s\030\002 \001(\0132-.api_pb.NetInfoResponse.Peer.Co" +
-      "nnectionStatusR\020connectionStatus\022\033\n\tremo" +
-      "te_ip\030\003 \001(\tR\010remoteIp\032\306\006\n\020ConnectionStat" +
-      "us\022\032\n\010duration\030\004 \001(\004R\010duration\022W\n\013SendMo" +
-      "nitor\030\001 \001(\01325.api_pb.NetInfoResponse.Pee" +
-      "r.ConnectionStatus.MonitorR\013SendMonitor\022" +
-      "W\n\013RecvMonitor\030\002 \001(\01325.api_pb.NetInfoRes" +
-      "ponse.Peer.ConnectionStatus.MonitorR\013Rec" +
-      "vMonitor\022Q\n\010channels\030\003 \003(\01325.api_pb.NetI" +
-      "nfoResponse.Peer.ConnectionStatus.Channe" +
-      "lR\010channels\032\333\002\n\007Monitor\022\026\n\006active\030\r \001(\010R" +
-      "\006active\022\024\n\005start\030\001 \001(\tR\005start\022\032\n\010duratio" +
-      "n\030\002 \001(\003R\010duration\022\022\n\004idle\030\003 \001(\003R\004idle\022\024\n" +
-      "\005bytes\030\004 \001(\003R\005bytes\022\030\n\007samples\030\005 \001(\003R\007sa" +
-      "mples\022\033\n\tinst_rate\030\006 \001(\003R\010instRate\022\031\n\010cu" +
-      "r_rate\030\007 \001(\003R\007curRate\022\031\n\010avg_rate\030\010 \001(\003R" +
-      "\007avgRate\022\033\n\tpeak_rate\030\t \001(\003R\010peakRate\022\033\n" +
-      "\tbytes_rem\030\n \001(\003R\010bytesRem\022\031\n\010time_rem\030\013" +
-      " \001(\003R\007timeRem\022\032\n\010progress\030\014 \001(\004R\010progres" +
-      "s\032\262\001\n\007Channel\022\016\n\002id\030\005 \001(\003R\002id\022.\n\023send_qu" +
-      "eue_capacity\030\001 \001(\003R\021sendQueueCapacity\022&\n" +
-      "\017send_queue_size\030\002 \001(\003R\rsendQueueSize\022\032\n" +
-      "\010priority\030\003 \001(\003R\010priority\022#\n\rrecently_se" +
-      "nt\030\004 \001(\003R\014recentlySent\"\335\003\n\016StatusRespons" +
-      "e\022\030\n\007version\030\010 \001(\tR\007version\022\030\n\007network\030\013" +
-      " \001(\tR\007network\022%\n\016initial_height\030\014 \001(\004R\ri" +
-      "nitialHeight\022*\n\021latest_block_hash\030\001 \001(\tR" +
-      "\017latestBlockHash\022&\n\017latest_app_hash\030\002 \001(" +
-      "\tR\rlatestAppHash\022.\n\023latest_block_height\030" +
-      "\003 \001(\004R\021latestBlockHeight\022*\n\021latest_block" +
-      "_time\030\004 \001(\tR\017latestBlockTime\022(\n\020keep_las" +
-      "t_states\030\005 \001(\004R\016keepLastStates\022#\n\rtotal_" +
-      "slashed\030\n \001(\tR\014totalSlashed\022\037\n\013catching_" +
-      "up\030\006 \001(\010R\ncatchingUp\022\035\n\npublic_key\030\007 \001(\t" +
-      "R\tpublicKey\022\027\n\007node_id\030\t \001(\tR\006nodeId\022\030\n\007" +
-      "moniker\030\r \001(\tR\007moniker\"\214,\n\017GenesisRespon" +
-      "se\022!\n\014genesis_time\030\001 \001(\tR\013genesisTime\022\031\n" +
-      "\010chain_id\030\002 \001(\tR\007chainId\022%\n\016initial_heig" +
-      "ht\030\006 \001(\004R\rinitialHeight\022R\n\020consensus_par" +
-      "ams\030\003 \001(\0132\'.api_pb.GenesisResponse.Conse" +
-      "nsusParamsR\017consensusParams\022\031\n\010app_hash\030" +
-      "\004 \001(\tR\007appHash\022=\n\tapp_state\030\005 \001(\0132 .api_" +
-      "pb.GenesisResponse.AppStateR\010appState\032\352\003" +
-      "\n\017ConsensusParams\022C\n\005block\030\001 \001(\0132-.api_p" +
-      "b.GenesisResponse.ConsensusParams.BlockR" +
-      "\005block\022L\n\010evidence\030\002 \001(\01320.api_pb.Genesi" +
-      "sResponse.ConsensusParams.EvidenceR\010evid" +
-      "ence\022O\n\tvalidator\030\003 \001(\01321.api_pb.Genesis" +
-      "Response.ConsensusParams.ValidatorR\tvali" +
-      "dator\032_\n\005Block\022\033\n\tmax_bytes\030\001 \001(\003R\010maxBy" +
-      "tes\022\027\n\007max_gas\030\002 \001(\003R\006maxGas\022 \n\014time_iot" +
-      "a_ms\030\003 \001(\003R\ntimeIotaMs\032a\n\010Evidence\022+\n\022ma" +
-      "x_age_num_blocks\030\001 \001(\003R\017maxAgeNumBlocks\022" +
-      "(\n\020max_age_duration\030\002 \001(\003R\016maxAgeDuratio" +
-      "n\032/\n\tValidator\022\"\n\rpub_key_types\030\001 \003(\tR\013p" +
-      "ubKeyTypes\032\370%\n\010AppState\022\030\n\007version\030\023 \001(\t" +
-      "R\007version\022\022\n\004note\030\n \001(\tR\004note\022K\n\nvalidat" +
-      "ors\030\002 \003(\0132+.api_pb.GenesisResponse.AppSt" +
-      "ate.ValidatorsR\nvalidators\022J\n\ncandidates" +
-      "\030\003 \003(\0132*.api_pb.GenesisResponse.AppState" +
-      ".CandidateR\ncandidates\022;\n\005coins\030\005 \003(\0132%." +
-      "api_pb.GenesisResponse.AppState.CoinR\005co" +
-      "ins\022N\n\014frozen_funds\030\006 \003(\0132+.api_pb.Genes" +
-      "isResponse.AppState.FrozenFundR\013frozenFu" +
-      "nds\0222\n\025block_list_candidates\030\022 \003(\tR\023bloc" +
-      "kListCandidates\022E\n\010waitlist\030\r \003(\0132).api_" +
-      "pb.GenesisResponse.AppState.WaitlistR\010wa" +
-      "itlist\022D\n\010accounts\030\016 \003(\0132(.api_pb.Genesi" +
-      "sResponse.AppState.AccountR\010accounts\022K\n\013" +
-      "halt_blocks\030\014 \003(\0132*.api_pb.GenesisRespon" +
-      "se.AppState.HaltBlockR\nhaltBlocks\022;\n\005poo" +
-      "ls\030\017 \003(\0132%.api_pb.GenesisResponse.AppSta" +
-      "te.PoolR\005pools\022K\n\ncommission\030\020 \001(\0132+.api" +
-      "_pb.GenesisResponse.AppState.CommissionR" +
-      "\ncommission\022Z\n\020commission_votes\030\021 \003(\0132/." +
+      "to\032\036google/protobuf/wrappers.proto\"\"\n\004Co" +
+      "in\022\n\n\002id\030\001 \001(\004\022\016\n\006symbol\030\002 \001(\t\"\177\n\rBlocks" +
+      "Request\022\023\n\013from_height\030\001 \001(\004\022\021\n\tto_heigh" +
+      "t\030\002 \001(\004\022\"\n\006fields\030\003 \003(\0162\022.api_pb.BlockFi" +
+      "eld\022\022\n\nfailed_txs\030\004 \001(\010\022\016\n\006events\030\005 \001(\010\"" +
+      "7\n\016BlocksResponse\022%\n\006blocks\030\001 \003(\0132\025.api_" +
+      "pb.BlockResponse\"@\n\026CommissionVotesReque" +
+      "st\022\026\n\016target_version\030\001 \001(\004\022\016\n\006height\030\002 \001" +
+      "(\004\"\233\001\n\027CommissionVotesResponse\0223\n\005votes\030" +
+      "\001 \003(\0132$.api_pb.CommissionVotesResponse.V" +
+      "ote\032K\n\004Vote\022.\n\005price\030\002 \001(\0132\037.api_pb.Pric" +
+      "eCommissionResponse\022\023\n\013public_keys\030\001 \003(\t" +
+      "\"5\n\021LimitOrderRequest\022\020\n\010order_id\030\001 \001(\004\022" +
+      "\016\n\006height\030\002 \001(\004\"\264\001\n\022LimitOrderResponse\022\n" +
+      "\n\002id\030\007 \001(\004\022\037\n\tcoin_sell\030\001 \001(\0132\014.api_pb.C" +
+      "oin\022\036\n\010coin_buy\030\002 \001(\0132\014.api_pb.Coin\022\021\n\tw" +
+      "ant_sell\030\003 \001(\t\022\020\n\010want_buy\030\004 \001(\t\022\r\n\005pric" +
+      "e\030\010 \001(\t\022\r\n\005owner\030\005 \001(\t\022\016\n\006height\030\006 \001(\004\"^" +
+      "\n\030LimitOrdersOfPoolRequest\022\021\n\tsell_coin\030" +
+      "\001 \001(\004\022\020\n\010buy_coin\030\002 \001(\004\022\r\n\005limit\030\003 \001(\005\022\016" +
+      "\n\006height\030\004 \001(\004\"[\n\031LimitOrdersOfPoolRespo" +
+      "nse\022\022\n\npool_price\030\002 \001(\t\022*\n\006orders\030\001 \003(\0132" +
+      "\032.api_pb.LimitOrderResponse\"1\n\022LimitOrde" +
+      "rsRequest\022\013\n\003ids\030\001 \003(\004\022\016\n\006height\030\002 \001(\004\"A" +
+      "\n\023LimitOrdersResponse\022*\n\006orders\030\001 \003(\0132\032." +
+      "api_pb.LimitOrderResponse\"<\n\022UpdateVotes" +
+      "Request\022\026\n\016target_version\030\001 \001(\004\022\016\n\006heigh" +
+      "t\030\002 \001(\004\"t\n\023UpdateVotesResponse\022/\n\005votes\030" +
+      "\001 \003(\0132 .api_pb.UpdateVotesResponse.Vote\032" +
+      ",\n\004Vote\022\017\n\007version\030\002 \001(\t\022\023\n\013public_keys\030" +
+      "\001 \003(\t\"\027\n\025VersionNetworkRequest\"\214\001\n\026Versi" +
+      "onNetworkResponse\022\017\n\007current\030\001 \001(\t\0228\n\010ve" +
+      "rsions\030\003 \003(\0132&.api_pb.VersionNetworkResp" +
+      "onse.Version\032\'\n\007Version\022\014\n\004name\030\001 \001(\t\022\016\n" +
+      "\006height\030\002 \001(\004\"(\n\026PriceCommissionRequest\022" +
+      "\016\n\006height\030\001 \001(\004\"\354\010\n\027PriceCommissionRespo" +
+      "nse\022\032\n\004coin\030\003 \001(\0132\014.api_pb.Coin\022\024\n\014paylo" +
+      "ad_byte\030\004 \001(\t\022\014\n\004send\030\005 \001(\t\022\022\n\nbuy_banco" +
+      "r\030& \001(\t\022\023\n\013sell_bancor\030\' \001(\t\022\027\n\017sell_all" +
+      "_bancor\030( \001(\t\022\025\n\rbuy_pool_base\030) \001(\t\022\026\n\016" +
+      "buy_pool_delta\0305 \001(\t\022\026\n\016sell_pool_base\030*" +
+      " \001(\t\022\027\n\017sell_pool_delta\0306 \001(\t\022\032\n\022sell_al" +
+      "l_pool_base\030+ \001(\t\022\033\n\023sell_all_pool_delta" +
+      "\0307 \001(\t\022\026\n\016create_ticker3\030\007 \001(\t\022\026\n\016create" +
+      "_ticker4\030\010 \001(\t\022\026\n\016create_ticker5\030\t \001(\t\022\026" +
+      "\n\016create_ticker6\030\n \001(\t\022\031\n\021create_ticker7" +
+      "_10\030\013 \001(\t\022\023\n\013create_coin\030\" \001(\t\022\024\n\014create" +
+      "_token\030# \001(\t\022\025\n\rrecreate_coin\030$ \001(\t\022\026\n\016r" +
+      "ecreate_token\030% \001(\t\022\031\n\021declare_candidacy" +
+      "\030\r \001(\t\022\020\n\010delegate\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t" +
+      "\022\024\n\014redeem_check\030\020 \001(\t\022\030\n\020set_candidate_" +
+      "on\030, \001(\t\022\031\n\021set_candidate_off\030- \001(\t\022\027\n\017c" +
+      "reate_multisig\030\022 \001(\t\022\026\n\016multisend_base\0303" +
+      " \001(\t\022\027\n\017multisend_delta\0304 \001(\t\022\026\n\016edit_ca" +
+      "ndidate\030\024 \001(\t\022\026\n\016set_halt_block\030\025 \001(\t\022\031\n" +
+      "\021edit_ticker_owner\030\026 \001(\t\022\025\n\redit_multisi" +
+      "g\030\027 \001(\t\022!\n\031edit_candidate_public_key\030\031 \001" +
+      "(\t\022\030\n\020create_swap_pool\0300 \001(\t\022\025\n\radd_liqu" +
+      "idity\0301 \001(\t\022\030\n\020remove_liquidity\0302 \001(\t\022!\n" +
+      "\031edit_candidate_commission\030\034 \001(\t\022\022\n\nmint" +
+      "_token\030. \001(\t\022\022\n\nburn_token\030/ \001(\t\022\027\n\017vote" +
+      "_commission\030\037 \001(\t\022\023\n\013vote_update\030  \001(\t\022\021" +
+      "\n\tfailed_tx\0308 \001(\t\022\027\n\017add_limit_order\0309 \001" +
+      "(\t\022\032\n\022remove_limit_order\030: \001(\t\"?\n\017SwapPo" +
+      "olRequest\022\r\n\005coin0\030\001 \001(\004\022\r\n\005coin1\030\002 \001(\004\022" +
+      "\016\n\006height\030\004 \001(\004\"V\n\020SwapPoolResponse\022\r\n\005p" +
+      "rice\030\004 \001(\t\022\017\n\007amount0\030\001 \001(\t\022\017\n\007amount1\030\002" +
+      " \001(\t\022\021\n\tliquidity\030\003 \001(\t\"I\n\027SwapPoolProvi" +
+      "derRequest\022\r\n\005coin0\030\001 \001(\004\022\r\n\005coin1\030\002 \001(\004" +
+      "\022\020\n\010provider\030\003 \001(\t\"\277\002\n\010NodeInfo\022:\n\020proto" +
+      "col_version\030\010 \001(\0132 .api_pb.NodeInfo.Prot" +
+      "ocolVersion\022\n\n\002id\030\001 \001(\t\022\023\n\013listen_addr\030\002" +
+      " \001(\t\022\017\n\007network\030\003 \001(\t\022\017\n\007version\030\004 \001(\t\022\020" +
+      "\n\010channels\030\005 \001(\t\022\017\n\007moniker\030\006 \001(\t\022%\n\005oth" +
+      "er\030\007 \001(\0132\026.api_pb.NodeInfo.Other\032:\n\017Prot" +
+      "ocolVersion\022\013\n\003p2p\030\003 \001(\004\022\r\n\005block\030\001 \001(\004\022" +
+      "\013\n\003app\030\002 \001(\004\032.\n\005Other\022\020\n\010tx_index\030\002 \001(\t\022" +
+      "\023\n\013rpc_address\030\001 \001(\t\"\276\007\n\017NetInfoResponse" +
+      "\022\021\n\tlistening\030\004 \001(\010\022\021\n\tlisteners\030\001 \003(\t\022\023" +
+      "\n\013count_peers\030\002 \001(\003\022+\n\005peers\030\003 \003(\0132\034.api" +
+      "_pb.NetInfoResponse.Peer\032\302\006\n\004Peer\0229\n\023lat" +
+      "est_block_height\030\005 \001(\0132\034.google.protobuf" +
+      ".UInt64Value\022#\n\tnode_info\030\004 \001(\0132\020.api_pb" +
+      ".NodeInfo\022\023\n\013is_outbound\030\001 \001(\010\022H\n\021connec" +
+      "tion_status\030\002 \001(\0132-.api_pb.NetInfoRespon" +
+      "se.Peer.ConnectionStatus\022\021\n\tremote_ip\030\003 " +
+      "\001(\t\032\347\004\n\020ConnectionStatus\022\020\n\010duration\030\004 \001" +
+      "(\004\022J\n\013SendMonitor\030\001 \001(\01325.api_pb.NetInfo" +
+      "Response.Peer.ConnectionStatus.Monitor\022J" +
+      "\n\013RecvMonitor\030\002 \001(\01325.api_pb.NetInfoResp" +
+      "onse.Peer.ConnectionStatus.Monitor\022G\n\010ch" +
+      "annels\030\003 \003(\01325.api_pb.NetInfoResponse.Pe" +
+      "er.ConnectionStatus.Channel\032\351\001\n\007Monitor\022" +
+      "\016\n\006active\030\r \001(\010\022\r\n\005start\030\001 \001(\t\022\020\n\010durati" +
+      "on\030\002 \001(\003\022\014\n\004idle\030\003 \001(\003\022\r\n\005bytes\030\004 \001(\003\022\017\n" +
+      "\007samples\030\005 \001(\003\022\021\n\tinst_rate\030\006 \001(\003\022\020\n\010cur" +
+      "_rate\030\007 \001(\003\022\020\n\010avg_rate\030\010 \001(\003\022\021\n\tpeak_ra" +
+      "te\030\t \001(\003\022\021\n\tbytes_rem\030\n \001(\003\022\020\n\010time_rem\030" +
+      "\013 \001(\003\022\020\n\010progress\030\014 \001(\004\032t\n\007Channel\022\n\n\002id" +
+      "\030\005 \001(\003\022\033\n\023send_queue_capacity\030\001 \001(\003\022\027\n\017s" +
+      "end_queue_size\030\002 \001(\003\022\020\n\010priority\030\003 \001(\003\022\025" +
+      "\n\rrecently_sent\030\004 \001(\003\"\262\002\n\016StatusResponse" +
+      "\022\017\n\007version\030\010 \001(\t\022\017\n\007network\030\013 \001(\t\022\026\n\016in" +
+      "itial_height\030\014 \001(\004\022\031\n\021latest_block_hash\030" +
+      "\001 \001(\t\022\027\n\017latest_app_hash\030\002 \001(\t\022\033\n\023latest" +
+      "_block_height\030\003 \001(\004\022\031\n\021latest_block_time" +
+      "\030\004 \001(\t\022\030\n\020keep_last_states\030\005 \001(\004\022\025\n\rtota" +
+      "l_slashed\030\n \001(\t\022\023\n\013catching_up\030\006 \001(\010\022\022\n\n" +
+      "public_key\030\007 \001(\t\022\017\n\007node_id\030\t \001(\t\022\017\n\007mon" +
+      "iker\030\r \001(\t\"\301\037\n\017GenesisResponse\022\024\n\014genesi" +
+      "s_time\030\001 \001(\t\022\020\n\010chain_id\030\002 \001(\t\022\026\n\016initia" +
+      "l_height\030\006 \001(\004\022A\n\020consensus_params\030\003 \001(\013" +
+      "2\'.api_pb.GenesisResponse.ConsensusParam" +
+      "s\022\020\n\010app_hash\030\004 \001(\t\0223\n\tapp_state\030\005 \001(\0132 " +
+      ".api_pb.GenesisResponse.AppState\032\202\003\n\017Con" +
+      "sensusParams\022<\n\005block\030\001 \001(\0132-.api_pb.Gen" +
+      "esisResponse.ConsensusParams.Block\022B\n\010ev" +
+      "idence\030\002 \001(\01320.api_pb.GenesisResponse.Co" +
+      "nsensusParams.Evidence\022D\n\tvalidator\030\003 \001(" +
+      "\01321.api_pb.GenesisResponse.ConsensusPara" +
+      "ms.Validator\032A\n\005Block\022\021\n\tmax_bytes\030\001 \001(\003" +
+      "\022\017\n\007max_gas\030\002 \001(\003\022\024\n\014time_iota_ms\030\003 \001(\003\032" +
+      "@\n\010Evidence\022\032\n\022max_age_num_blocks\030\001 \001(\003\022" +
+      "\030\n\020max_age_duration\030\002 \001(\003\032\"\n\tValidator\022\025" +
+      "\n\rpub_key_types\030\001 \003(\t\032\336\032\n\010AppState\022\017\n\007ve" +
+      "rsion\030\023 \001(\t\022\014\n\004note\030\n \001(\t\022?\n\nvalidators\030" +
+      "\002 \003(\0132+.api_pb.GenesisResponse.AppState." +
+      "Validators\022>\n\ncandidates\030\003 \003(\0132*.api_pb." +
+      "GenesisResponse.AppState.Candidate\0224\n\005co" +
+      "ins\030\005 \003(\0132%.api_pb.GenesisResponse.AppSt" +
+      "ate.Coin\022A\n\014frozen_funds\030\006 \003(\0132+.api_pb." +
+      "GenesisResponse.AppState.FrozenFund\022\035\n\025b" +
+      "lock_list_candidates\030\022 \003(\t\022;\n\010waitlist\030\r" +
+      " \003(\0132).api_pb.GenesisResponse.AppState.W" +
+      "aitlist\022:\n\010accounts\030\016 \003(\0132(.api_pb.Genes" +
+      "isResponse.AppState.Account\022?\n\013halt_bloc" +
+      "ks\030\014 \003(\0132*.api_pb.GenesisResponse.AppSta" +
+      "te.HaltBlock\0224\n\005pools\030\017 \003(\0132%.api_pb.Gen" +
+      "esisResponse.AppState.Pool\022?\n\ncommission" +
+      "\030\020 \001(\0132+.api_pb.GenesisResponse.AppState" +
+      ".Commission\022I\n\020commission_votes\030\021 \003(\0132/." +
       "api_pb.GenesisResponse.AppState.Commissi" +
-      "onVoteR\017commissionVotes\022\037\n\013used_checks\030\013" +
-      " \003(\tR\nusedChecks\022\027\n\007max_gas\030\007 \001(\004R\006maxGa" +
-      "s\022#\n\rtotal_slashed\030\010 \001(\tR\014totalSlashed\032\231" +
-      "\001\n\nValidators\022&\n\017total_bip_stake\030\004 \001(\tR\r" +
-      "totalBipStake\022\035\n\npublic_key\030\001 \001(\tR\tpubli" +
-      "cKey\022!\n\014accum_reward\030\002 \001(\tR\013accumReward\022" +
-      "!\n\014absent_times\030\003 \001(\tR\013absentTimes\032\355\004\n\tC" +
-      "andidate\022\016\n\002id\030\n \001(\004R\002id\022%\n\016reward_addre" +
-      "ss\030\001 \001(\tR\rrewardAddress\022#\n\rowner_address" +
-      "\030\002 \001(\tR\014ownerAddress\022\'\n\017control_address\030" +
-      "\003 \001(\tR\016controlAddress\022&\n\017total_bip_stake" +
-      "\030\004 \001(\tR\rtotalBipStake\022\035\n\npublic_key\030\005 \001(" +
-      "\tR\tpublicKey\022\036\n\ncommission\030\006 \001(\004R\ncommis" +
-      "sion\022H\n\006stakes\030\007 \003(\01320.api_pb.GenesisRes" +
-      "ponse.AppState.Candidate.StakeR\006stakes\022J" +
-      "\n\007updates\030\010 \003(\01320.api_pb.GenesisResponse" +
-      ".AppState.Candidate.StakeR\007updates\022\026\n\006st" +
-      "atus\030\t \001(\003R\006status\022!\n\014jailed_until\030\013 \001(\003" +
-      "R\013jailedUntil\022=\n\033last_edit_commission_he" +
-      "ight\030\014 \001(\003R\030lastEditCommissionHeight\032d\n\005" +
-      "Stake\022\024\n\005owner\030\004 \001(\tR\005owner\022\022\n\004coin\030\001 \001(" +
-      "\004R\004coin\022\024\n\005value\030\002 \001(\tR\005value\022\033\n\tbip_val" +
-      "ue\030\003 \001(\tR\010bipValue\032\272\002\n\004Coin\022\016\n\002id\030\t \001(\004R" +
-      "\002id\022\022\n\004name\030\001 \001(\tR\004name\022\026\n\006symbol\030\002 \001(\tR" +
-      "\006symbol\022\026\n\006volume\030\003 \001(\tR\006volume\022\020\n\003crr\030\004" +
-      " \001(\004R\003crr\022\030\n\007reserve\030\005 \001(\tR\007reserve\022\035\n\nm" +
-      "ax_supply\030\006 \001(\tR\tmaxSupply\022\030\n\007version\030\007 " +
-      "\001(\004R\007version\022A\n\rowner_address\030\010 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueR\014ownerAddress\022" +
-      "\032\n\010mintable\030\n \001(\010R\010mintable\022\032\n\010burnable\030" +
-      "\013 \001(\010R\010burnable\032\316\001\n\nFrozenFund\022\026\n\006height" +
-      "\030\005 \001(\004R\006height\022\030\n\007address\030\001 \001(\tR\007address" +
-      "\022A\n\rcandidate_key\030\002 \001(\0132\034.google.protobu" +
-      "f.StringValueR\014candidateKey\022!\n\014candidate" +
-      "_id\030\006 \001(\004R\013candidateId\022\022\n\004coin\030\003 \001(\004R\004co" +
-      "in\022\024\n\005value\030\004 \001(\tR\005value\032m\n\010Waitlist\022!\n\014" +
-      "candidate_id\030\001 \001(\004R\013candidateId\022\024\n\005owner" +
-      "\030\002 \001(\tR\005owner\022\022\n\004coin\030\003 \001(\004R\004coin\022\024\n\005val" +
-      "ue\030\004 \001(\tR\005value\032\374\002\n\007Account\022\030\n\007address\030\001" +
-      " \001(\tR\007address\022J\n\007balance\030\002 \003(\01320.api_pb." +
-      "GenesisResponse.AppState.Account.Balance" +
-      "R\007balance\022\024\n\005nonce\030\003 \001(\004R\005nonce\022Z\n\rmulti" +
-      "sig_data\030\004 \001(\01325.api_pb.GenesisResponse." +
-      "AppState.Account.MultisigDataR\014multisigD" +
-      "ata\0323\n\007Balance\022\022\n\004coin\030\001 \001(\004R\004coin\022\024\n\005va" +
-      "lue\030\002 \001(\tR\005value\032d\n\014MultisigData\022\034\n\tthre" +
-      "shold\030\001 \001(\004R\tthreshold\022\030\n\007weights\030\002 \003(\004R" +
-      "\007weights\022\034\n\taddresses\030\003 \003(\tR\taddresses\032H" +
-      "\n\tHaltBlock\022\026\n\006height\030\001 \001(\004R\006height\022#\n\rc" +
-      "andidate_key\030\002 \001(\tR\014candidateKey\032z\n\004Pool" +
-      "\022\024\n\005coin0\030\001 \001(\004R\005coin0\022\024\n\005coin1\030\002 \001(\004R\005c" +
-      "oin1\022\032\n\010reserve0\030\003 \001(\tR\010reserve0\022\032\n\010rese" +
-      "rve1\030\004 \001(\tR\010reserve1\022\016\n\002id\030\005 \001(\004R\002id\032\350\r\n" +
-      "\nCommission\022\022\n\004coin\030\003 \001(\004R\004coin\022!\n\014paylo" +
-      "ad_byte\030\004 \001(\tR\013payloadByte\022\022\n\004send\030\005 \001(\t" +
-      "R\004send\022\035\n\nbuy_bancor\030& \001(\tR\tbuyBancor\022\037\n" +
-      "\013sell_bancor\030\' \001(\tR\nsellBancor\022&\n\017sell_a" +
-      "ll_bancor\030( \001(\tR\rsellAllBancor\022\"\n\rbuy_po" +
-      "ol_base\030) \001(\tR\013buyPoolBase\022$\n\016buy_pool_d" +
-      "elta\0305 \001(\tR\014buyPoolDelta\022$\n\016sell_pool_ba" +
-      "se\030* \001(\tR\014sellPoolBase\022&\n\017sell_pool_delt" +
-      "a\0306 \001(\tR\rsellPoolDelta\022+\n\022sell_all_pool_" +
-      "base\030+ \001(\tR\017sellAllPoolBase\022-\n\023sell_all_" +
-      "pool_delta\0307 \001(\tR\020sellAllPoolDelta\022%\n\016cr" +
-      "eate_ticker3\030\007 \001(\tR\rcreateTicker3\022%\n\016cre" +
-      "ate_ticker4\030\010 \001(\tR\rcreateTicker4\022%\n\016crea" +
-      "te_ticker5\030\t \001(\tR\rcreateTicker5\022%\n\016creat" +
-      "e_ticker6\030\n \001(\tR\rcreateTicker6\022*\n\021create" +
-      "_ticker7_10\030\013 \001(\tR\017createTicker710\022\037\n\013cr" +
-      "eate_coin\030\" \001(\tR\ncreateCoin\022!\n\014create_to" +
-      "ken\030# \001(\tR\013createToken\022#\n\rrecreate_coin\030" +
-      "$ \001(\tR\014recreateCoin\022%\n\016recreate_token\030% " +
-      "\001(\tR\rrecreateToken\022+\n\021declare_candidacy\030" +
-      "\r \001(\tR\020declareCandidacy\022\032\n\010delegate\030\016 \001(" +
-      "\tR\010delegate\022\026\n\006unbond\030\017 \001(\tR\006unbond\022!\n\014r" +
-      "edeem_check\030\020 \001(\tR\013redeemCheck\022(\n\020set_ca" +
-      "ndidate_on\030, \001(\tR\016setCandidateOn\022*\n\021set_" +
-      "candidate_off\030- \001(\tR\017setCandidateOff\022\'\n\017" +
-      "create_multisig\030\022 \001(\tR\016createMultisig\022%\n" +
-      "\016multisend_base\0303 \001(\tR\rmultisendBase\022\'\n\017" +
-      "multisend_delta\0304 \001(\tR\016multisendDelta\022%\n" +
-      "\016edit_candidate\030\024 \001(\tR\reditCandidate\022$\n\016" +
-      "set_halt_block\030\025 \001(\tR\014setHaltBlock\022*\n\021ed" +
-      "it_ticker_owner\030\026 \001(\tR\017editTickerOwner\022#" +
-      "\n\redit_multisig\030\027 \001(\tR\014editMultisig\0229\n\031e" +
-      "dit_candidate_public_key\030\031 \001(\tR\026editCand" +
-      "idatePublicKey\022(\n\020create_swap_pool\0300 \001(\t" +
-      "R\016createSwapPool\022#\n\radd_liquidity\0301 \001(\tR" +
-      "\014addLiquidity\022)\n\020remove_liquidity\0302 \001(\tR" +
-      "\017removeLiquidity\022:\n\031edit_candidate_commi" +
-      "ssion\030\034 \001(\tR\027editCandidateCommission\022\035\n\n" +
-      "mint_token\030. \001(\tR\tmintToken\022\035\n\nburn_toke" +
-      "n\030/ \001(\tR\tburnToken\022\'\n\017vote_commission\030\037 " +
-      "\001(\tR\016voteCommission\022\037\n\013vote_update\030  \001(\t" +
-      "R\nvoteUpdate\022\033\n\tfailed_tx\0308 \001(\tR\010failedT" +
-      "x\022&\n\017add_limit_order\0309 \001(\tR\raddLimitOrde" +
-      "r\022,\n\022remove_limit_order\030: \001(\tR\020removeLim" +
-      "itOrder\032\213\001\n\016CommissionVote\022\026\n\006height\030\001 \001" +
-      "(\004R\006height\022\024\n\005votes\030\002 \003(\tR\005votes\022K\n\ncomm" +
-      "ission\030\003 \001(\0132+.api_pb.GenesisResponse.Ap" +
-      "pState.CommissionR\ncommission\"9\n\023MinGasP" +
-      "riceResponse\022\"\n\rmin_gas_price\030\003 \001(\004R\013min" +
-      "GasPrice\"\211\001\n\014BlockRequest\022\026\n\006height\030\001 \001(" +
-      "\004R\006height\022*\n\006fields\030\002 \003(\0162\022.api_pb.Block" +
-      "FieldR\006fields\022\035\n\nfailed_txs\030\003 \001(\010R\tfaile" +
-      "dTxs\022\026\n\006events\030\004 \001(\010R\006events\"\330\004\n\rBlockRe" +
-      "sponse\022\022\n\004hash\030\001 \001(\tR\004hash\022\026\n\006height\030\002 \001" +
-      "(\004R\006height\022\022\n\004time\030\003 \001(\tR\004time\022+\n\021transa" +
-      "ction_count\030\004 \001(\004R\020transactionCount\022?\n\014t" +
-      "ransactions\030\006 \003(\0132\033.api_pb.TransactionRe" +
-      "sponseR\014transactions\022!\n\014block_reward\030\007 \001" +
-      "(\tR\013blockReward\022\022\n\004size\030\010 \001(\004R\004size\022\032\n\010p" +
-      "roposer\030\t \001(\tR\010proposer\022?\n\nvalidators\030\n " +
-      "\003(\0132\037.api_pb.BlockResponse.ValidatorR\nva" +
-      "lidators\022:\n\010evidence\030\r \001(\0132\036.api_pb.Bloc" +
-      "kResponse.EvidenceR\010evidence\022\026\n\006missed\030\014" +
-      " \003(\tR\006missed\022,\n\006events\030\016 \003(\0132\024.google.pr" +
-      "otobuf.AnyR\006events\032B\n\tValidator\022\035\n\npubli" +
-      "c_key\030\001 \001(\tR\tpublicKey\022\026\n\006signed\030\002 \001(\010R\006" +
-      "signed\032?\n\010Evidence\0223\n\010evidence\030\001 \003(\0132\027.g" +
-      "oogle.protobuf.StructR\010evidence\",\n\022MaxGa" +
-      "sPriceRequest\022\026\n\006height\030\001 \001(\004R\006height\"9\n" +
-      "\023MaxGasPriceResponse\022\"\n\rmax_gas_price\030\003 " +
-      "\001(\004R\013maxGasPrice\"`\n\016AddressRequest\022\030\n\007ad" +
-      "dress\030\001 \001(\tR\007address\022\026\n\006height\030\002 \001(\004R\006he" +
-      "ight\022\034\n\tdelegated\030\004 \001(\010R\tdelegated\"e\n\016Ad" +
-      "dressBalance\022 \n\004coin\030\001 \001(\0132\014.api_pb.Coin" +
-      "R\004coin\022\024\n\005value\030\002 \001(\tR\005value\022\033\n\tbip_valu" +
-      "e\030\003 \001(\tR\010bipValue\"\234\001\n\027AddressDelegatedBa" +
-      "lance\022 \n\004coin\030\001 \001(\0132\014.api_pb.CoinR\004coin\022" +
-      "\024\n\005value\030\002 \001(\tR\005value\022\033\n\tbip_value\030\003 \001(\t" +
-      "R\010bipValue\022,\n\022delegate_bip_value\030\004 \001(\tR\020" +
-      "delegateBipValue\"\250\002\n\017AddressResponse\0220\n\007" +
-      "balance\030\001 \003(\0132\026.api_pb.AddressBalanceR\007b" +
-      "alance\022=\n\tdelegated\030\003 \003(\0132\037.api_pb.Addre" +
-      "ssDelegatedBalanceR\tdelegated\022,\n\005total\030\004" +
-      " \003(\0132\026.api_pb.AddressBalanceR\005total\022+\n\021t" +
-      "ransaction_count\030\002 \001(\004R\020transactionCount" +
-      "\022\033\n\tbip_value\030\005 \001(\tR\010bipValue\022,\n\010multisi" +
-      "g\030\006 \001(\0132\020.api_pb.MultisigR\010multisig\"`\n\010M" +
-      "ultisig\022\034\n\tthreshold\030\001 \001(\004R\tthreshold\022\030\n" +
-      "\007weights\030\002 \003(\004R\007weights\022\034\n\taddresses\030\003 \003" +
-      "(\tR\taddresses\"f\n\020AddressesRequest\022\034\n\tadd" +
-      "resses\030\001 \003(\tR\taddresses\022\026\n\006height\030\002 \001(\004R" +
-      "\006height\022\034\n\tdelegated\030\004 \001(\010R\tdelegated\"\335\003" +
-      "\n\021AddressesResponse\022F\n\taddresses\030\003 \003(\0132(" +
-      ".api_pb.AddressesResponse.AddressesEntry" +
-      "R\taddresses\032\237\002\n\006Result\0220\n\007balance\030\002 \003(\0132" +
-      "\026.api_pb.AddressBalanceR\007balance\022=\n\tdele" +
+      "onVote\022\023\n\013used_checks\030\013 \003(\t\022\017\n\007max_gas\030\007" +
+      " \001(\004\022\025\n\rtotal_slashed\030\010 \001(\t\032e\n\nValidator" +
+      "s\022\027\n\017total_bip_stake\030\004 \001(\t\022\022\n\npublic_key" +
+      "\030\001 \001(\t\022\024\n\014accum_reward\030\002 \001(\t\022\024\n\014absent_t" +
+      "imes\030\003 \001(\t\032\270\003\n\tCandidate\022\n\n\002id\030\n \001(\004\022\026\n\016" +
+      "reward_address\030\001 \001(\t\022\025\n\rowner_address\030\002 " +
+      "\001(\t\022\027\n\017control_address\030\003 \001(\t\022\027\n\017total_bi" +
+      "p_stake\030\004 \001(\t\022\022\n\npublic_key\030\005 \001(\t\022\022\n\ncom" +
+      "mission\030\006 \001(\004\022@\n\006stakes\030\007 \003(\01320.api_pb.G" +
+      "enesisResponse.AppState.Candidate.Stake\022" +
+      "A\n\007updates\030\010 \003(\01320.api_pb.GenesisRespons" +
+      "e.AppState.Candidate.Stake\022\016\n\006status\030\t \001" +
+      "(\003\022\024\n\014jailed_until\030\013 \001(\003\022#\n\033last_edit_co" +
+      "mmission_height\030\014 \001(\003\032F\n\005Stake\022\r\n\005owner\030" +
+      "\004 \001(\t\022\014\n\004coin\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\022\021\n\tbi" +
+      "p_value\030\003 \001(\t\032\334\001\n\004Coin\022\n\n\002id\030\t \001(\004\022\014\n\004na" +
+      "me\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\016\n\006volume\030\003 \001(\t" +
+      "\022\013\n\003crr\030\004 \001(\004\022\017\n\007reserve\030\005 \001(\t\022\022\n\nmax_su" +
+      "pply\030\006 \001(\t\022\017\n\007version\030\007 \001(\004\0223\n\rowner_add" +
+      "ress\030\010 \001(\0132\034.google.protobuf.StringValue" +
+      "\022\020\n\010mintable\030\n \001(\010\022\020\n\010burnable\030\013 \001(\010\032\225\001\n" +
+      "\nFrozenFund\022\016\n\006height\030\005 \001(\004\022\017\n\007address\030\001" +
+      " \001(\t\0223\n\rcandidate_key\030\002 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022\024\n\014candidate_id\030\006 \001(\004\022" +
+      "\014\n\004coin\030\003 \001(\004\022\r\n\005value\030\004 \001(\t\032L\n\010Waitlist" +
+      "\022\024\n\014candidate_id\030\001 \001(\004\022\r\n\005owner\030\002 \001(\t\022\014\n" +
+      "\004coin\030\003 \001(\004\022\r\n\005value\030\004 \001(\t\032\251\002\n\007Account\022\017" +
+      "\n\007address\030\001 \001(\t\022A\n\007balance\030\002 \003(\01320.api_p" +
+      "b.GenesisResponse.AppState.Account.Balan" +
+      "ce\022\r\n\005nonce\030\003 \001(\004\022L\n\rmultisig_data\030\004 \001(\013" +
+      "25.api_pb.GenesisResponse.AppState.Accou" +
+      "nt.MultisigData\032&\n\007Balance\022\014\n\004coin\030\001 \001(\004" +
+      "\022\r\n\005value\030\002 \001(\t\032E\n\014MultisigData\022\021\n\tthres" +
+      "hold\030\001 \001(\004\022\017\n\007weights\030\002 \003(\004\022\021\n\taddresses" +
+      "\030\003 \003(\t\0322\n\tHaltBlock\022\016\n\006height\030\001 \001(\004\022\025\n\rc" +
+      "andidate_key\030\002 \001(\t\032T\n\004Pool\022\r\n\005coin0\030\001 \001(" +
+      "\004\022\r\n\005coin1\030\002 \001(\004\022\020\n\010reserve0\030\003 \001(\t\022\020\n\010re" +
+      "serve1\030\004 \001(\t\022\n\n\002id\030\005 \001(\004\032\321\010\n\nCommission\022" +
+      "\014\n\004coin\030\003 \001(\004\022\024\n\014payload_byte\030\004 \001(\t\022\014\n\004s" +
+      "end\030\005 \001(\t\022\022\n\nbuy_bancor\030& \001(\t\022\023\n\013sell_ba" +
+      "ncor\030\' \001(\t\022\027\n\017sell_all_bancor\030( \001(\t\022\025\n\rb" +
+      "uy_pool_base\030) \001(\t\022\026\n\016buy_pool_delta\0305 \001" +
+      "(\t\022\026\n\016sell_pool_base\030* \001(\t\022\027\n\017sell_pool_" +
+      "delta\0306 \001(\t\022\032\n\022sell_all_pool_base\030+ \001(\t\022" +
+      "\033\n\023sell_all_pool_delta\0307 \001(\t\022\026\n\016create_t" +
+      "icker3\030\007 \001(\t\022\026\n\016create_ticker4\030\010 \001(\t\022\026\n\016" +
+      "create_ticker5\030\t \001(\t\022\026\n\016create_ticker6\030\n" +
+      " \001(\t\022\031\n\021create_ticker7_10\030\013 \001(\t\022\023\n\013creat" +
+      "e_coin\030\" \001(\t\022\024\n\014create_token\030# \001(\t\022\025\n\rre" +
+      "create_coin\030$ \001(\t\022\026\n\016recreate_token\030% \001(" +
+      "\t\022\031\n\021declare_candidacy\030\r \001(\t\022\020\n\010delegate" +
+      "\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t\022\024\n\014redeem_check\030\020" +
+      " \001(\t\022\030\n\020set_candidate_on\030, \001(\t\022\031\n\021set_ca" +
+      "ndidate_off\030- \001(\t\022\027\n\017create_multisig\030\022 \001" +
+      "(\t\022\026\n\016multisend_base\0303 \001(\t\022\027\n\017multisend_" +
+      "delta\0304 \001(\t\022\026\n\016edit_candidate\030\024 \001(\t\022\026\n\016s" +
+      "et_halt_block\030\025 \001(\t\022\031\n\021edit_ticker_owner" +
+      "\030\026 \001(\t\022\025\n\redit_multisig\030\027 \001(\t\022!\n\031edit_ca" +
+      "ndidate_public_key\030\031 \001(\t\022\030\n\020create_swap_" +
+      "pool\0300 \001(\t\022\025\n\radd_liquidity\0301 \001(\t\022\030\n\020rem" +
+      "ove_liquidity\0302 \001(\t\022!\n\031edit_candidate_co" +
+      "mmission\030\034 \001(\t\022\022\n\nmint_token\030. \001(\t\022\022\n\nbu" +
+      "rn_token\030/ \001(\t\022\027\n\017vote_commission\030\037 \001(\t\022" +
+      "\023\n\013vote_update\030  \001(\t\022\021\n\tfailed_tx\0308 \001(\t\022" +
+      "\027\n\017add_limit_order\0309 \001(\t\022\032\n\022remove_limit" +
+      "_order\030: \001(\t\032p\n\016CommissionVote\022\016\n\006height" +
+      "\030\001 \001(\004\022\r\n\005votes\030\002 \003(\t\022?\n\ncommission\030\003 \001(" +
+      "\0132+.api_pb.GenesisResponse.AppState.Comm" +
+      "ission\",\n\023MinGasPriceResponse\022\025\n\rmin_gas" +
+      "_price\030\003 \001(\004\"f\n\014BlockRequest\022\016\n\006height\030\001" +
+      " \001(\004\022\"\n\006fields\030\002 \003(\0162\022.api_pb.BlockField" +
+      "\022\022\n\nfailed_txs\030\003 \001(\010\022\016\n\006events\030\004 \001(\010\"\304\003\n" +
+      "\rBlockResponse\022\014\n\004hash\030\001 \001(\t\022\016\n\006height\030\002" +
+      " \001(\004\022\014\n\004time\030\003 \001(\t\022\031\n\021transaction_count\030" +
+      "\004 \001(\004\0221\n\014transactions\030\006 \003(\0132\033.api_pb.Tra" +
+      "nsactionResponse\022\024\n\014block_reward\030\007 \001(\t\022\014" +
+      "\n\004size\030\010 \001(\004\022\020\n\010proposer\030\t \001(\t\0223\n\nvalida" +
+      "tors\030\n \003(\0132\037.api_pb.BlockResponse.Valida" +
+      "tor\0220\n\010evidence\030\r \001(\0132\036.api_pb.BlockResp" +
+      "onse.Evidence\022\016\n\006missed\030\014 \003(\t\022$\n\006events\030" +
+      "\016 \003(\0132\024.google.protobuf.Any\032/\n\tValidator" +
+      "\022\022\n\npublic_key\030\001 \001(\t\022\016\n\006signed\030\002 \001(\010\0325\n\010" +
+      "Evidence\022)\n\010evidence\030\001 \003(\0132\027.google.prot" +
+      "obuf.Struct\"$\n\022MaxGasPriceRequest\022\016\n\006hei" +
+      "ght\030\001 \001(\004\",\n\023MaxGasPriceResponse\022\025\n\rmax_" +
+      "gas_price\030\003 \001(\004\"D\n\016AddressRequest\022\017\n\007add" +
+      "ress\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\021\n\tdelegated\030" +
+      "\004 \001(\010\"N\n\016AddressBalance\022\032\n\004coin\030\001 \001(\0132\014." +
+      "api_pb.Coin\022\r\n\005value\030\002 \001(\t\022\021\n\tbip_value\030" +
+      "\003 \001(\t\"s\n\027AddressDelegatedBalance\022\032\n\004coin" +
+      "\030\001 \001(\0132\014.api_pb.Coin\022\r\n\005value\030\002 \001(\t\022\021\n\tb" +
+      "ip_value\030\003 \001(\t\022\032\n\022delegate_bip_value\030\004 \001" +
+      "(\t\"\347\001\n\017AddressResponse\022\'\n\007balance\030\001 \003(\0132" +
+      "\026.api_pb.AddressBalance\0222\n\tdelegated\030\003 \003" +
+      "(\0132\037.api_pb.AddressDelegatedBalance\022%\n\005t" +
+      "otal\030\004 \003(\0132\026.api_pb.AddressBalance\022\031\n\021tr" +
+      "ansaction_count\030\002 \001(\004\022\021\n\tbip_value\030\005 \001(\t" +
+      "\022\"\n\010multisig\030\006 \001(\0132\020.api_pb.Multisig\"A\n\010" +
+      "Multisig\022\021\n\tthreshold\030\001 \001(\004\022\017\n\007weights\030\002" +
+      " \003(\004\022\021\n\taddresses\030\003 \003(\t\"H\n\020AddressesRequ" +
+      "est\022\021\n\taddresses\030\001 \003(\t\022\016\n\006height\030\002 \001(\004\022\021" +
+      "\n\tdelegated\030\004 \001(\010\"\205\003\n\021AddressesResponse\022" +
+      ";\n\taddresses\030\003 \003(\0132(.api_pb.AddressesRes" +
+      "ponse.AddressesEntry\032\336\001\n\006Result\022\'\n\007balan" +
+      "ce\030\002 \003(\0132\026.api_pb.AddressBalance\0222\n\tdele" +
       "gated\030\006 \003(\0132\037.api_pb.AddressDelegatedBal" +
-      "anceR\tdelegated\022,\n\005total\030\004 \003(\0132\026.api_pb." +
-      "AddressBalanceR\005total\022+\n\021transaction_cou" +
-      "nt\030\003 \001(\004R\020transactionCount\022\033\n\tbip_value\030" +
-      "\005 \001(\tR\010bipValue\022,\n\010multisig\030\007 \001(\0132\020.api_" +
-      "pb.MultisigR\010multisig\032^\n\016AddressesEntry\022" +
-      "\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api_p" +
-      "b.AddressesResponse.ResultR\005value:\0028\001\"q\n" +
-      "\020CandidateRequest\022\035\n\npublic_key\030\001 \001(\tR\tp" +
-      "ublicKey\022\026\n\006height\030\002 \001(\004R\006height\022&\n\017not_" +
-      "show_stakes\030\004 \001(\010R\rnotShowStakes\"\263\005\n\021Can" +
-      "didateResponse\022\016\n\002id\030\016 \001(\004R\002id\022%\n\016reward" +
-      "_address\030\001 \001(\tR\rrewardAddress\022#\n\rowner_a" +
-      "ddress\030\n \001(\tR\014ownerAddress\022\'\n\017control_ad" +
-      "dress\030\013 \001(\tR\016controlAddress\022\037\n\013total_sta" +
-      "ke\030\002 \001(\tR\ntotalStake\022\035\n\npublic_key\030\003 \001(\t" +
-      "R\tpublicKey\022\036\n\ncommission\030\004 \001(\004R\ncommiss" +
-      "ion\022;\n\nused_slots\030\007 \001(\0132\034.google.protobu" +
-      "f.UInt64ValueR\tusedSlots\022;\n\nuniq_users\030\010" +
-      " \001(\0132\034.google.protobuf.UInt64ValueR\tuniq" +
-      "Users\0229\n\tmin_stake\030\t \001(\0132\034.google.protob" +
-      "uf.StringValueR\010minStake\0227\n\006stakes\030\005 \003(\013" +
-      "2\037.api_pb.CandidateResponse.StakeR\006stake" +
-      "s\022\026\n\006status\030\006 \001(\004R\006status\022\034\n\tvalidator\030\014" +
-      " \001(\010R\tvalidator\022!\n\014jailed_until\030\r \001(\004R\013j" +
-      "ailedUntil\032r\n\005Stake\022\024\n\005owner\030\001 \001(\tR\005owne" +
-      "r\022 \n\004coin\030\002 \001(\0132\014.api_pb.CoinR\004coin\022\024\n\005v" +
-      "alue\030\003 \001(\tR\005value\022\033\n\tbip_value\030\004 \001(\tR\010bi" +
-      "pValue\"\371\001\n\021CandidatesRequest\022\026\n\006height\030\001" +
-      " \001(\004R\006height\022%\n\016include_stakes\030\002 \001(\010R\rin" +
-      "cludeStakes\022&\n\017not_show_stakes\030\004 \001(\010R\rno" +
-      "tShowStakes\022A\n\006status\030\003 \001(\0162).api_pb.Can" +
-      "didatesRequest.CandidateStatusR\006status\":" +
-      "\n\017CandidateStatus\022\007\n\003all\020\000\022\007\n\003off\020\001\022\006\n\002o" +
-      "n\020\002\022\r\n\tvalidator\020\003\"O\n\022CandidatesResponse" +
-      "\0229\n\ncandidates\030\003 \003(\0132\031.api_pb.CandidateR" +
-      "esponseR\ncandidates\"7\n\rCoinIdRequest\022\026\n\006" +
-      "height\030\001 \001(\004R\006height\022\016\n\002id\030\002 \001(\004R\002id\"A\n\017" +
-      "CoinInfoRequest\022\026\n\006height\030\001 \001(\004R\006height\022" +
-      "\026\n\006symbol\030\002 \001(\tR\006symbol\"\273\002\n\020CoinInfoResp" +
-      "onse\022\016\n\002id\030\006 \001(\004R\002id\022\022\n\004name\030\001 \001(\tR\004name" +
-      "\022\026\n\006symbol\030\002 \001(\tR\006symbol\022\026\n\006volume\030\003 \001(\t" +
-      "R\006volume\022\020\n\003crr\030\004 \001(\004R\003crr\022\'\n\017reserve_ba" +
-      "lance\030\005 \001(\tR\016reserveBalance\022\035\n\nmax_suppl" +
-      "y\030\010 \001(\tR\tmaxSupply\022A\n\rowner_address\030\007 \001(" +
-      "\0132\034.google.protobuf.StringValueR\014ownerAd" +
-      "dress\022\032\n\010mintable\030\t \001(\010R\010mintable\022\032\n\010bur" +
-      "nable\030\n \001(\010R\010burnable\"S\n\027SendTransaction" +
-      "Response\022\022\n\004code\030\001 \001(\004R\004code\022\020\n\003log\030\003 \001(" +
-      "\tR\003log\022\022\n\004hash\030\004 \001(\tR\004hash\"(\n\026SendTransa" +
-      "ctionRequest\022\016\n\002tx\030\001 \001(\tR\002tx\"\305\t\n\023Transac" +
-      "tionResponse\022\022\n\004hash\030\001 \001(\tR\004hash\022\025\n\006raw_" +
-      "tx\030\002 \001(\tR\005rawTx\022\026\n\006height\030\003 \001(\004R\006height\022" +
-      "\024\n\005index\030\004 \001(\004R\005index\022\022\n\004from\030\005 \001(\tR\004fro" +
-      "m\022\024\n\005nonce\030\006 \001(\004R\005nonce\022\020\n\003gas\030\007 \001(\004R\003ga" +
-      "s\022\033\n\tgas_price\030\010 \001(\004R\010gasPrice\022\'\n\010gas_co",
-      "in\030\t \001(\0132\014.api_pb.CoinR\007gasCoin\022\031\n\010type_" +
-      "hex\030\021 \001(\tR\007typeHex\022\022\n\004type\030\n \001(\004R\004type\022(" +
-      "\n\004data\030\013 \001(\0132\024.google.protobuf.AnyR\004data" +
-      "\022\030\n\007payload\030\014 \001(\014R\007payload\022!\n\014service_da" +
-      "ta\030\020 \001(\014R\013serviceData\0229\n\004tags\030\r \003(\0132%.ap" +
-      "i_pb.TransactionResponse.TagsEntryR\004tags" +
-      "\022\022\n\004code\030\016 \001(\004R\004code\022\020\n\003log\030\017 \001(\tR\003log\0327" +
-      "\n\tTagsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\tR\005value:\0028\001\"\242\005\n\004Type\022\n\n\006_NULL_\020\000\022\010\n\004" +
-      "Send\020\001\022\014\n\010SellCoin\020\002\022\017\n\013SellAllCoin\020\003\022\013\n" +
-      "\007BuyCoin\020\004\022\016\n\nCreateCoin\020\005\022\024\n\020DeclareCan" +
-      "didacy\020\006\022\014\n\010Delegate\020\007\022\n\n\006Unbond\020\010\022\017\n\013Re" +
-      "deemCheck\020\t\022\026\n\022SetCandidateOnline\020\n\022\027\n\023S" +
-      "etCandidateOffline\020\013\022\022\n\016CreateMultisig\020\014" +
-      "\022\r\n\tMultisend\020\r\022\021\n\rEditCandidate\020\016\022\020\n\014Se" +
-      "tHaltBlock\020\017\022\020\n\014RecreateCoin\020\020\022\021\n\rEditCo" +
-      "inOwner\020\021\022\020\n\014EditMultisig\020\022\022\r\n\tPriceVote" +
-      "\020\023\022\032\n\026EditCandidatePublicKey\020\024\022\020\n\014AddLiq" +
-      "uidity\020\025\022\023\n\017RemoveLiquidity\020\026\022\020\n\014SellSwa" +
-      "pPool\020\027\022\017\n\013BuySwapPool\020\030\022\023\n\017SellAllSwapP" +
-      "ool\020\031\022\033\n\027EditCommissionCandidate\020\032\022\r\n\tMo" +
-      "veStake\020\033\022\r\n\tMintToken\020\034\022\r\n\tBurnToken\020\035\022" +
-      "\017\n\013CreateToken\020\036\022\021\n\rRecreateToken\020\037\022\022\n\016V" +
-      "oteCommission\020 \022\016\n\nVoteUpdate\020!\022\022\n\016Creat" +
-      "eSwapPool\020\"\022\021\n\rAddLimitOrder\020#\022\024\n\020Remove" +
-      "LimitOrder\020$\"(\n\022TransactionRequest\022\022\n\004ha" +
-      "sh\030\001 \001(\tR\004hash\"W\n\024TransactionsResponse\022?" +
-      "\n\014transactions\030\003 \003(\0132\033.api_pb.Transactio" +
-      "nResponseR\014transactions\"Z\n\023TransactionsR" +
-      "equest\022\024\n\005query\030\001 \001(\tR\005query\022\022\n\004page\030\002 \001" +
-      "(\005R\004page\022\031\n\010per_page\030\003 \001(\005R\007perPage\"\245\003\n\026" +
-      "EstimateCoinBuyRequest\022%\n\016coin_id_to_buy" +
-      "\030\001 \001(\004H\000R\013coinIdToBuy\022 \n\013coin_to_buy\030\005 \001" +
-      "(\tH\000R\tcoinToBuy\022\'\n\017coin_id_to_sell\030\002 \001(\004" +
-      "H\001R\014coinIdToSell\022\"\n\014coin_to_sell\030\006 \001(\tH\001" +
-      "R\ncoinToSell\022 \n\014value_to_buy\030\003 \001(\tR\nvalu" +
-      "eToBuy\022\026\n\006height\030\004 \001(\004R\006height\022.\n\022coin_i" +
-      "d_commission\030\t \001(\004H\002R\020coinIdCommission\022)" +
-      "\n\017coin_commission\030\n \001(\tH\002R\016coinCommissio" +
-      "n\022-\n\tswap_from\030\010 \001(\0162\020.api_pb.SwapFromR\010" +
-      "swapFrom\022\024\n\005route\030\013 \003(\004R\005routeB\005\n\003buyB\006\n" +
-      "\004sellB\014\n\ncommission\"\203\001\n\027EstimateCoinBuyR" +
-      "esponse\022\031\n\010will_pay\030\001 \001(\tR\007willPay\022\036\n\nco" +
-      "mmission\030\002 \001(\tR\ncommission\022-\n\tswap_from\030" +
-      "\003 \001(\0162\020.api_pb.SwapFromR\010swapFrom\"\250\003\n\027Es" +
-      "timateCoinSellRequest\022%\n\016coin_id_to_buy\030" +
-      "\001 \001(\004H\000R\013coinIdToBuy\022 \n\013coin_to_buy\030\005 \001(" +
-      "\tH\000R\tcoinToBuy\022\'\n\017coin_id_to_sell\030\002 \001(\004H" +
-      "\001R\014coinIdToSell\022\"\n\014coin_to_sell\030\006 \001(\tH\001R" +
-      "\ncoinToSell\022\"\n\rvalue_to_sell\030\003 \001(\tR\013valu" +
-      "eToSell\022\026\n\006height\030\004 \001(\004R\006height\022.\n\022coin_" +
-      "id_commission\030\t \001(\004H\002R\020coinIdCommission\022" +
-      ")\n\017coin_commission\030\n \001(\tH\002R\016coinCommissi" +
-      "on\022-\n\tswap_from\030\010 \001(\0162\020.api_pb.SwapFromR" +
-      "\010swapFrom\022\024\n\005route\030\013 \003(\004R\005routeB\005\n\003buyB\006" +
-      "\n\004sellB\014\n\ncommission\"\204\001\n\030EstimateCoinSel" +
-      "lResponse\022\031\n\010will_get\030\001 \001(\tR\007willGet\022\036\n\n" +
-      "commission\030\002 \001(\tR\ncommission\022-\n\tswap_fro" +
-      "m\030\003 \001(\0162\020.api_pb.SwapFromR\010swapFrom\"\337\002\n\032" +
-      "EstimateCoinSellAllRequest\022%\n\016coin_id_to" +
-      "_buy\030\001 \001(\004H\000R\013coinIdToBuy\022 \n\013coin_to_buy" +
-      "\030\007 \001(\tH\000R\tcoinToBuy\022\'\n\017coin_id_to_sell\030\002" +
-      " \001(\004H\001R\014coinIdToSell\022\"\n\014coin_to_sell\030\006 \001" +
-      "(\tH\001R\ncoinToSell\022\"\n\rvalue_to_sell\030\003 \001(\tR" +
-      "\013valueToSell\022\033\n\tgas_price\030\004 \001(\004R\010gasPric" +
-      "e\022\026\n\006height\030\005 \001(\004R\006height\022-\n\tswap_from\030\010" +
-      " \001(\0162\020.api_pb.SwapFromR\010swapFrom\022\024\n\005rout" +
-      "e\030\013 \003(\004R\005routeB\005\n\003buyB\006\n\004sell\"g\n\033Estimat" +
-      "eCoinSellAllResponse\022\031\n\010will_get\030\001 \001(\tR\007" +
-      "willGet\022-\n\tswap_from\030\002 \001(\0162\020.api_pb.Swap" +
-      "FromR\010swapFrom\"E\n\033EstimateTxCommissionRe" +
-      "quest\022\016\n\002tx\030\001 \001(\tR\002tx\022\026\n\006height\030\002 \001(\004R\006h" +
-      "eight\">\n\034EstimateTxCommissionResponse\022\036\n" +
-      "\ncommission\030\001 \001(\tR\ncommission\"?\n\rEventsR" +
-      "equest\022\026\n\006height\030\001 \001(\004R\006height\022\026\n\006search" +
-      "\030\002 \003(\tR\006search\"A\n\016EventsResponse\022/\n\006even" +
-      "ts\030\001 \003(\0132\027.google.protobuf.StructR\006event" +
-      "s\"L\n\023MissedBlocksRequest\022\035\n\npublic_key\030\001" +
-      " \001(\tR\tpublicKey\022\026\n\006height\030\002 \001(\004R\006height\"" +
-      "k\n\024MissedBlocksResponse\022#\n\rmissed_blocks" +
-      "\030\001 \001(\tR\014missedBlocks\022.\n\023missed_blocks_co" +
-      "unt\030\002 \001(\003R\021missedBlocksCount\"\271\001\n\026Unconfi" +
-      "rmedTxsResponse\022+\n\021transaction_count\030\001 \001" +
-      "(\004R\020transactionCount\022-\n\022total_transactio" +
-      "ns\030\002 \001(\004R\021totalTransactions\022\037\n\013total_byt" +
-      "es\030\003 \001(\004R\ntotalBytes\022\"\n\014transactions\030\004 \003" +
-      "(\tR\014transactions\"-\n\025UnconfirmedTxsReques" +
-      "t\022\024\n\005limit\030\001 \001(\005R\005limit\"+\n\021ValidatorsReq" +
-      "uest\022\026\n\006height\030\001 \001(\004R\006height\"\243\001\n\022Validat" +
-      "orsResponse\022A\n\nvalidators\030\003 \003(\0132!.api_pb" +
-      ".ValidatorsResponse.ResultR\nvalidators\032J" +
-      "\n\006Result\022\035\n\npublic_key\030\001 \001(\tR\tpublicKey\022" +
-      "!\n\014voting_power\030\002 \001(\004R\013votingPower\"(\n\020Su" +
-      "bscribeRequest\022\024\n\005query\030\001 \001(\tR\005query\"\302\001\n" +
-      "\021SubscribeResponse\022\024\n\005query\030\001 \001(\tR\005query" +
-      "\022+\n\004data\030\002 \001(\0132\027.google.protobuf.StructR" +
-      "\004data\0227\n\006events\030\003 \003(\0132\037.api_pb.Subscribe" +
-      "Response.EventR\006events\0321\n\005Event\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\026\n\006events\030\002 \003(\tR\006events\"&\n\014Hal" +
-      "tsRequest\022\026\n\006height\030\001 \001(\004R\006height\"0\n\rHal" +
-      "tsResponse\022\037\n\013public_keys\030\001 \003(\tR\npublicK" +
-      "eys\"x\n\rFrozenRequest\022\030\n\007address\030\001 \001(\tR\007a" +
-      "ddress\0225\n\007coin_id\030\002 \001(\0132\034.google.protobu" +
-      "f.UInt64ValueR\006coinId\022\026\n\006height\030\003 \001(\004R\006h" +
-      "eight\"\341\001\n\016FrozenResponse\0225\n\006frozen\030\001 \003(\013" +
-      "2\035.api_pb.FrozenResponse.FrozenR\006frozen\032" +
-      "\227\001\n\006Frozen\022\026\n\006height\030\001 \001(\004R\006height\022\030\n\007ad" +
-      "dress\030\002 \001(\tR\007address\022#\n\rcandidate_key\030\003 " +
-      "\001(\tR\014candidateKey\022 \n\004coin\030\004 \001(\0132\014.api_pb" +
-      ".CoinR\004coin\022\024\n\005value\030\005 \001(\tR\005value\"b\n\017Wai" +
-      "tListRequest\022\035\n\npublic_key\030\001 \001(\tR\tpublic" +
-      "Key\022\030\n\007address\030\002 \001(\tR\007address\022\026\n\006height\030" +
-      "\003 \001(\004R\006height\"\244\001\n\020WaitListResponse\0221\n\004li" +
-      "st\030\001 \003(\0132\035.api_pb.WaitListResponse.WaitR" +
-      "\004list\032]\n\004Wait\022\035\n\npublic_key\030\003 \001(\tR\tpubli" +
-      "cKey\022 \n\004coin\030\001 \001(\0132\014.api_pb.CoinR\004coin\022\024" +
-      "\n\005value\030\002 \001(\tR\005value*r\n\nBlockField\022\020\n\014tr" +
-      "ansactions\020\000\022\n\n\006missed\020\001\022\020\n\014block_reward" +
-      "\020\002\022\010\n\004size\020\003\022\014\n\010proposer\020\004\022\016\n\nvalidators" +
-      "\020\005\022\014\n\010evidence\020\006*-\n\010SwapFrom\022\013\n\007optimal\020" +
-      "\000\022\n\n\006bancor\020\001\022\010\n\004pool\020\002BV\n\033counters.mint" +
-      "er.grpc.clientP\001Z5github.com/MinterTeam/" +
-      "node-grpc-gateway/gen/go;api_pbb\006proto3"
+      "ance\022%\n\005total\030\004 \003(\0132\026.api_pb.AddressBala" +
+      "nce\022\031\n\021transaction_count\030\003 \001(\004\022\021\n\tbip_va" +
+      "lue\030\005 \001(\t\022\"\n\010multisig\030\007 \001(\0132\020.api_pb.Mul" +
+      "tisig\032R\n\016AddressesEntry\022\013\n\003key\030\001 \001(\t\022/\n\005" +
+      "value\030\002 \001(\0132 .api_pb.AddressesResponse.R" +
+      "esult:\0028\001\"O\n\020CandidateRequest\022\022\n\npublic_" +
+      "key\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\027\n\017not_show_st" +
+      "akes\030\004 \001(\010\"\371\003\n\021CandidateResponse\022\n\n\002id\030\016" +
+      " \001(\004\022\026\n\016reward_address\030\001 \001(\t\022\025\n\rowner_ad" +
+      "dress\030\n \001(\t\022\027\n\017control_address\030\013 \001(\t\022\023\n\013" +
+      "total_stake\030\002 \001(\t\022\022\n\npublic_key\030\003 \001(\t\022\022\n" +
+      "\ncommission\030\004 \001(\004\0220\n\nused_slots\030\007 \001(\0132\034." +
+      "google.protobuf.UInt64Value\0220\n\nuniq_user" +
+      "s\030\010 \001(\0132\034.google.protobuf.UInt64Value\022/\n" +
+      "\tmin_stake\030\t \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022/\n\006stakes\030\005 \003(\0132\037.api_pb.Candidat" +
+      "eResponse.Stake\022\016\n\006status\030\006 \001(\004\022\021\n\tvalid" +
+      "ator\030\014 \001(\010\022\024\n\014jailed_until\030\r \001(\004\032T\n\005Stak" +
+      "e\022\r\n\005owner\030\001 \001(\t\022\032\n\004coin\030\002 \001(\0132\014.api_pb." +
+      "Coin\022\r\n\005value\030\003 \001(\t\022\021\n\tbip_value\030\004 \001(\t\"\313" +
+      "\001\n\021CandidatesRequest\022\016\n\006height\030\001 \001(\004\022\026\n\016" +
+      "include_stakes\030\002 \001(\010\022\027\n\017not_show_stakes\030" +
+      "\004 \001(\010\0229\n\006status\030\003 \001(\0162).api_pb.Candidate" +
+      "sRequest.CandidateStatus\":\n\017CandidateSta" +
+      "tus\022\007\n\003all\020\000\022\007\n\003off\020\001\022\006\n\002on\020\002\022\r\n\tvalidat" +
+      "or\020\003\"C\n\022CandidatesResponse\022-\n\ncandidates" +
+      "\030\003 \003(\0132\031.api_pb.CandidateResponse\"+\n\rCoi" +
+      "nIdRequest\022\016\n\006height\030\001 \001(\004\022\n\n\002id\030\002 \001(\004\"1" +
+      "\n\017CoinInfoRequest\022\016\n\006height\030\001 \001(\004\022\016\n\006sym" +
+      "bol\030\002 \001(\t\"\337\001\n\020CoinInfoResponse\022\n\n\002id\030\006 \001" +
+      "(\004\022\014\n\004name\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\016\n\006volu" +
+      "me\030\003 \001(\t\022\013\n\003crr\030\004 \001(\004\022\027\n\017reserve_balance" +
+      "\030\005 \001(\t\022\022\n\nmax_supply\030\010 \001(\t\0223\n\rowner_addr" +
+      "ess\030\007 \001(\0132\034.google.protobuf.StringValue\022" +
+      "\020\n\010mintable\030\t \001(\010\022\020\n\010burnable\030\n \001(\010\"B\n\027S" +
+      "endTransactionResponse\022\014\n\004code\030\001 \001(\004\022\013\n\003" +
+      "log\030\003 \001(\t\022\014\n\004hash\030\004 \001(\t\"$\n\026SendTransacti" +
+      "onRequest\022\n\n\002tx\030\001 \001(\t\"\274\010\n\023TransactionRes" +
+      "ponse\022\014\n\004hash\030\001 \001(\t\022\016\n\006raw_tx\030\002 \001(\t\022\016\n\006h" +
+      "eight\030\003 \001(\004\022\r\n\005index\030\004 \001(\004\022\014\n\004from\030\005 \001(\t" +
+      "\022\r\n\005nonce\030\006 \001(\004\022\013\n\003gas\030\007 \001(\004\022\021\n\tgas_pric" +
+      "e\030\010 \001(\004\022\036\n\010gas_coin\030\t \001(\0132\014.api_pb.Coin\022" +
+      "\020\n\010type_hex\030\021 \001(\t\022\014\n\004type\030\n \001(\004\022\"\n\004data\030" +
+      "\013 \001(\0132\024.google.protobuf.Any\022\017\n\007payload\030\014" +
+      " \001(\014\022\024\n\014service_data\030\020 \001(\014\0223\n\004tags\030\r \003(\013" +
+      "2%.api_pb.TransactionResponse.TagsEntry\022" +
+      "\014\n\004code\030\016 \001(\004\022\013\n\003log\030\017 \001(\t\032+\n\tTagsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\242\005\n\004Type" +
+      "\022\n\n\006_NULL_\020\000\022\010\n\004Send\020\001\022\014\n\010SellCoin\020\002\022\017\n\013" +
+      "SellAllCoin\020\003\022\013\n\007BuyCoin\020\004\022\016\n\nCreateCoin" +
+      "\020\005\022\024\n\020DeclareCandidacy\020\006\022\014\n\010Delegate\020\007\022\n" +
+      "\n\006Unbond\020\010\022\017\n\013RedeemCheck\020\t\022\026\n\022SetCandid" +
+      "ateOnline\020\n\022\027\n\023SetCandidateOffline\020\013\022\022\n\016" +
+      "CreateMultisig\020\014\022\r\n\tMultisend\020\r\022\021\n\rEditC" +
+      "andidate\020\016\022\020\n\014SetHaltBlock\020\017\022\020\n\014Recreate" +
+      "Coin\020\020\022\021\n\rEditCoinOwner\020\021\022\020\n\014EditMultisi" +
+      "g\020\022\022\r\n\tPriceVote\020\023\022\032\n\026EditCandidatePubli" +
+      "cKey\020\024\022\020\n\014AddLiquidity\020\025\022\023\n\017RemoveLiquid" +
+      "ity\020\026\022\020\n\014SellSwapPool\020\027\022\017\n\013BuySwapPool\020\030" +
+      "\022\023\n\017SellAllSwapPool\020\031\022\033\n\027EditCommissionC" +
+      "andidate\020\032\022\r\n\tMoveStake\020\033\022\r\n\tMintToken\020\034" +
+      "\022\r\n\tBurnToken\020\035\022\017\n\013CreateToken\020\036\022\021\n\rRecr" +
+      "eateToken\020\037\022\022\n\016VoteCommission\020 \022\016\n\nVoteU" +
+      "pdate\020!\022\022\n\016CreateSwapPool\020\"\022\021\n\rAddLimitO" +
+      "rder\020#\022\024\n\020RemoveLimitOrder\020$\"\"\n\022Transact" +
+      "ionRequest\022\014\n\004hash\030\001 \001(\t\"I\n\024Transactions" +
+      "Response\0221\n\014transactions\030\003 \003(\0132\033.api_pb." +
+      "TransactionResponse\"D\n\023TransactionsReque" +
+      "st\022\r\n\005query\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\020\n\010per_p" +
+      "age\030\003 \001(\005\"\254\002\n\026EstimateCoinBuyRequest\022\030\n\016" +
+      "coin_id_to_buy\030\001 \001(\004H\000\022\025\n\013coin_to_buy\030\005 " +
+      "\001(\tH\000\022\031\n\017coin_id_to_sell\030\002 \001(\004H\001\022\026\n\014coin" +
+      "_to_sell\030\006 \001(\tH\001\022\024\n\014value_to_buy\030\003 \001(\t\022\016" +
+      "\n\006height\030\004 \001(\004\022\034\n\022coin_id_commission\030\t \001" +
+      "(\004H\002\022\031\n\017coin_commission\030\n \001(\tH\002\022#\n\tswap_" +
+      "from\030\010 \001(\0162\020.api_pb.SwapFrom\022\r\n\005route\030\013 " +
+      "\003(\004B\005\n\003buyB\006\n\004sellB\014\n\ncommission\"d\n\027Esti" +
+      "mateCoinBuyResponse\022\020\n\010will_pay\030\001 \001(\t\022\022\n" +
+      "\ncommission\030\002 \001(\t\022#\n\tswap_from\030\003 \001(\0162\020.a" +
+      "pi_pb.SwapFrom\"\256\002\n\027EstimateCoinSellReque" +
+      "st\022\030\n\016coin_id_to_buy\030\001 \001(\004H\000\022\025\n\013coin_to_" +
+      "buy\030\005 \001(\tH\000\022\031\n\017coin_id_to_sell\030\002 \001(\004H\001\022\026" +
+      "\n\014coin_to_sell\030\006 \001(\tH\001\022\025\n\rvalue_to_sell\030" +
+      "\003 \001(\t\022\016\n\006height\030\004 \001(\004\022\034\n\022coin_id_commiss" +
+      "ion\030\t \001(\004H\002\022\031\n\017coin_commission\030\n \001(\tH\002\022#" +
+      "\n\tswap_from\030\010 \001(\0162\020.api_pb.SwapFrom\022\r\n\005r" +
+      "oute\030\013 \003(\004B\005\n\003buyB\006\n\004sellB\014\n\ncommission\"" +
+      "e\n\030EstimateCoinSellResponse\022\020\n\010will_get\030" +
+      "\001 \001(\t\022\022\n\ncommission\030\002 \001(\t\022#\n\tswap_from\030\003" +
+      " \001(\0162\020.api_pb.SwapFrom\"\375\001\n\032EstimateCoinS" +
+      "ellAllRequest\022\030\n\016coin_id_to_buy\030\001 \001(\004H\000\022" +
+      "\025\n\013coin_to_buy\030\007 \001(\tH\000\022\031\n\017coin_id_to_sel" +
+      "l\030\002 \001(\004H\001\022\026\n\014coin_to_sell\030\006 \001(\tH\001\022\025\n\rval" +
+      "ue_to_sell\030\003 \001(\t\022\021\n\tgas_price\030\004 \001(\004\022\016\n\006h" +
+      "eight\030\005 \001(\004\022#\n\tswap_from\030\010 \001(\0162\020.api_pb." +
+      "SwapFrom\022\r\n\005route\030\013 \003(\004B\005\n\003buyB\006\n\004sell\"T" +
+      "\n\033EstimateCoinSellAllResponse\022\020\n\010will_ge" +
+      "t\030\001 \001(\t\022#\n\tswap_from\030\002 \001(\0162\020.api_pb.Swap" +
+      "From\"9\n\033EstimateTxCommissionRequest\022\n\n\002t" +
+      "x\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\"2\n\034EstimateTxCom" +
+      "missionResponse\022\022\n\ncommission\030\001 \001(\t\"/\n\rE" +
+      "ventsRequest\022\016\n\006height\030\001 \001(\004\022\016\n\006search\030\002" +
+      " \003(\t\"9\n\016EventsResponse\022\'\n\006events\030\001 \003(\0132\027" +
+      ".google.protobuf.Struct\"9\n\023MissedBlocksR" +
+      "equest\022\022\n\npublic_key\030\001 \001(\t\022\016\n\006height\030\002 \001" +
+      "(\004\"J\n\024MissedBlocksResponse\022\025\n\rmissed_blo" +
+      "cks\030\001 \001(\t\022\033\n\023missed_blocks_count\030\002 \001(\003\"z" +
+      "\n\026UnconfirmedTxsResponse\022\031\n\021transaction_" +
+      "count\030\001 \001(\004\022\032\n\022total_transactions\030\002 \001(\004\022" +
+      "\023\n\013total_bytes\030\003 \001(\004\022\024\n\014transactions\030\004 \003" +
+      "(\t\"&\n\025UnconfirmedTxsRequest\022\r\n\005limit\030\001 \001" +
+      "(\005\"#\n\021ValidatorsRequest\022\016\n\006height\030\001 \001(\004\"" +
+      "\177\n\022ValidatorsResponse\0225\n\nvalidators\030\003 \003(" +
+      "\0132!.api_pb.ValidatorsResponse.Result\0322\n\006" +
+      "Result\022\022\n\npublic_key\030\001 \001(\t\022\024\n\014voting_pow" +
+      "er\030\002 \001(\004\"!\n\020SubscribeRequest\022\r\n\005query\030\001 " +
+      "\001(\t\"\240\001\n\021SubscribeResponse\022\r\n\005query\030\001 \001(\t" +
+      "\022%\n\004data\030\002 \001(\0132\027.google.protobuf.Struct\022" +
+      "/\n\006events\030\003 \003(\0132\037.api_pb.SubscribeRespon" +
+      "se.Event\032$\n\005Event\022\013\n\003key\030\001 \001(\t\022\016\n\006events" +
+      "\030\002 \003(\t\"\036\n\014HaltsRequest\022\016\n\006height\030\001 \001(\004\"$" +
+      "\n\rHaltsResponse\022\023\n\013public_keys\030\001 \003(\t\"_\n\r" +
+      "FrozenRequest\022\017\n\007address\030\001 \001(\t\022-\n\007coin_i" +
+      "d\030\002 \001(\0132\034.google.protobuf.UInt64Value\022\016\n" +
+      "\006height\030\003 \001(\004\"\254\001\n\016FrozenResponse\022-\n\006froz" +
+      "en\030\001 \003(\0132\035.api_pb.FrozenResponse.Frozen\032" +
+      "k\n\006Frozen\022\016\n\006height\030\001 \001(\004\022\017\n\007address\030\002 \001" +
+      "(\t\022\025\n\rcandidate_key\030\003 \001(\t\022\032\n\004coin\030\004 \001(\0132" +
+      "\014.api_pb.Coin\022\r\n\005value\030\005 \001(\t\"F\n\017WaitList" +
+      "Request\022\022\n\npublic_key\030\001 \001(\t\022\017\n\007address\030\002" +
+      " \001(\t\022\016\n\006height\030\003 \001(\004\"\206\001\n\020WaitListRespons" +
+      "e\022+\n\004list\030\001 \003(\0132\035.api_pb.WaitListRespons" +
+      "e.Wait\032E\n\004Wait\022\022\n\npublic_key\030\003 \001(\t\022\032\n\004co" +
+      "in\030\001 \001(\0132\014.api_pb.Coin\022\r\n\005value\030\002 \001(\t*r\n" +
+      "\nBlockField\022\020\n\014transactions\020\000\022\n\n\006missed\020" +
+      "\001\022\020\n\014block_reward\020\002\022\010\n\004size\020\003\022\014\n\010propose" +
+      "r\020\004\022\016\n\nvalidators\020\005\022\014\n\010evidence\020\006*-\n\010Swa" +
+      "pFrom\022\013\n\007optimal\020\000\022\n\n\006bancor\020\001\022\010\n\004pool\020\002" +
+      "BV\n\033counters.minter.grpc.clientP\001Z5githu" +
+      "b.com/MinterTeam/node-grpc-gateway/gen/g" +
+      "o;api_pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

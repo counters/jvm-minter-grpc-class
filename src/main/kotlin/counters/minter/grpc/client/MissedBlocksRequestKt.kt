@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun missedBlocksRequest(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksRequest =
+inline fun missedBlocksRequest(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.MissedBlocksRequest =
   counters.minter.grpc.client.MissedBlocksRequestKt.Dsl._create(counters.minter.grpc.client.MissedBlocksRequest.newBuilder()).apply { block() }._build()
-public object MissedBlocksRequestKt {
+object MissedBlocksRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.MissedBlocksRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.MissedBlocksRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.MissedBlocksRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object MissedBlocksRequestKt {
     internal fun _build(): counters.minter.grpc.client.MissedBlocksRequest = _builder.build()
 
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
-    public var publicKey: kotlin.String
+    var publicKey: kotlin.String
       @JvmName("getPublicKey")
       get() = _builder.getPublicKey()
       @JvmName("setPublicKey")
@@ -33,16 +33,16 @@ public object MissedBlocksRequestKt {
         _builder.setPublicKey(value)
       }
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
-    public fun clearPublicKey() {
+    fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,13 +50,13 @@ public object MissedBlocksRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.MissedBlocksRequest.copy(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksRequest =
+inline fun counters.minter.grpc.client.MissedBlocksRequest.copy(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.MissedBlocksRequest =
   counters.minter.grpc.client.MissedBlocksRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

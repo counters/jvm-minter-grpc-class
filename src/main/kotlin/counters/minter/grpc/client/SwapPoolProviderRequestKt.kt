@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun swapPoolProviderRequest(block: counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolProviderRequest =
+inline fun swapPoolProviderRequest(block: counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.SwapPoolProviderRequest =
   counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl._create(counters.minter.grpc.client.SwapPoolProviderRequest.newBuilder()).apply { block() }._build()
-public object SwapPoolProviderRequestKt {
+object SwapPoolProviderRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.SwapPoolProviderRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SwapPoolProviderRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SwapPoolProviderRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object SwapPoolProviderRequestKt {
     internal fun _build(): counters.minter.grpc.client.SwapPoolProviderRequest = _builder.build()
 
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      */
-    public var coin0: kotlin.Long
+    var coin0: kotlin.Long
       @JvmName("getCoin0")
       get() = _builder.getCoin0()
       @JvmName("setCoin0")
@@ -33,16 +33,16 @@ public object SwapPoolProviderRequestKt {
         _builder.setCoin0(value)
       }
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      */
-    public fun clearCoin0() {
+    fun clearCoin0() {
       _builder.clearCoin0()
     }
 
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      */
-    public var coin1: kotlin.Long
+    var coin1: kotlin.Long
       @JvmName("getCoin1")
       get() = _builder.getCoin1()
       @JvmName("setCoin1")
@@ -50,9 +50,9 @@ public object SwapPoolProviderRequestKt {
         _builder.setCoin1(value)
       }
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      */
-    public fun clearCoin1() {
+    fun clearCoin1() {
       _builder.clearCoin1()
     }
 
@@ -63,9 +63,9 @@ public object SwapPoolProviderRequestKt {
      *    }];
      * </pre>
      *
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      */
-    public var provider: kotlin.String
+    var provider: kotlin.String
       @JvmName("getProvider")
       get() = _builder.getProvider()
       @JvmName("setProvider")
@@ -79,13 +79,13 @@ public object SwapPoolProviderRequestKt {
      *    }];
      * </pre>
      *
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      */
-    public fun clearProvider() {
+    fun clearProvider() {
       _builder.clearProvider()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.SwapPoolProviderRequest.copy(block: counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolProviderRequest =
+inline fun counters.minter.grpc.client.SwapPoolProviderRequest.copy(block: counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.SwapPoolProviderRequest =
   counters.minter.grpc.client.SwapPoolProviderRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

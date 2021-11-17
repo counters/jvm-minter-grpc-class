@@ -8,12 +8,12 @@ public interface RemoveCandidateEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string candidate_pub_key = 1 [json_name = "candidatePubKey"];</code>
+   * <code>string candidate_pub_key = 1;</code>
    * @return The candidatePubKey.
    */
   java.lang.String getCandidatePubKey();
   /**
-   * <code>string candidate_pub_key = 1 [json_name = "candidatePubKey"];</code>
+   * <code>string candidate_pub_key = 1;</code>
    * @return The bytes for candidatePubKey.
    */
   com.google.protobuf.ByteString

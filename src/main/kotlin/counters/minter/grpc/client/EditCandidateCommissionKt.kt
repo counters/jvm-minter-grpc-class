@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun editCandidateCommission(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateCommission =
+inline fun editCandidateCommission(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCandidateCommission =
   counters.minter.grpc.client.EditCandidateCommissionKt.Dsl._create(counters.minter.grpc.client.EditCandidateCommission.newBuilder()).apply { block() }._build()
-public object EditCandidateCommissionKt {
+object EditCandidateCommissionKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.EditCandidateCommission.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.EditCandidateCommission.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.EditCandidateCommission.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object EditCandidateCommissionKt {
     internal fun _build(): counters.minter.grpc.client.EditCandidateCommission = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public var pubKey: kotlin.String
+    var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -33,16 +33,16 @@ public object EditCandidateCommissionKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public fun clearPubKey() {
+    fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 commission = 2 [json_name = "commission"];</code>
+     * <code>uint64 commission = 2;</code>
      */
-    public var commission: kotlin.Long
+    var commission: kotlin.Long
       @JvmName("getCommission")
       get() = _builder.getCommission()
       @JvmName("setCommission")
@@ -50,13 +50,13 @@ public object EditCandidateCommissionKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>uint64 commission = 2 [json_name = "commission"];</code>
+     * <code>uint64 commission = 2;</code>
      */
-    public fun clearCommission() {
+    fun clearCommission() {
       _builder.clearCommission()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.EditCandidateCommission.copy(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateCommission =
+inline fun counters.minter.grpc.client.EditCandidateCommission.copy(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCandidateCommission =
   counters.minter.grpc.client.EditCandidateCommissionKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
   public static final int IDS_FIELD_NUMBER = 1;
   private com.google.protobuf.Internal.LongList ids_;
   /**
-   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+   * <code>repeated uint64 ids = 1;</code>
    * @return A list containing the ids.
    */
   @java.lang.Override
@@ -123,14 +123,14 @@ private static final long serialVersionUID = 0L;
     return ids_;
   }
   /**
-   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+   * <code>repeated uint64 ids = 1;</code>
    * @return The count of ids.
    */
   public int getIdsCount() {
     return ids_.size();
   }
   /**
-   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+   * <code>repeated uint64 ids = 1;</code>
    * @param index The index of the element to return.
    * @return The ids at the given index.
    */
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -508,7 +508,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @return A list containing the ids.
      */
     public java.util.List<java.lang.Long>
@@ -517,14 +517,14 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(ids_) : ids_;
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @return The count of ids.
      */
     public int getIdsCount() {
       return ids_.size();
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param index The index of the element to return.
      * @return The ids at the given index.
      */
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
       return ids_.getLong(index);
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param index The index to set the value at.
      * @param value The ids to set.
      * @return This builder for chaining.
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param value The ids to add.
      * @return This builder for chaining.
      */
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param values The ids to add.
      * @return This builder for chaining.
      */
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearIds() {
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

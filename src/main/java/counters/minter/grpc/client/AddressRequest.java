@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The address.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The bytes for address.
    */
   @java.lang.Override
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
   public static final int DELEGATED_FIELD_NUMBER = 4;
   private boolean delegated_;
   /**
-   * <code>bool delegated = 4 [json_name = "delegated"];</code>
+   * <code>bool delegated = 4;</code>
    * @return The delegated.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
     }
     if (height_ != 0L) {
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
     }
     if (height_ != 0L) {
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return The address.
      */
     public java.lang.String getAddress() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @param value The address to set.
      * @return This builder for chaining.
      */
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
      */
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean delegated_ ;
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @return The delegated.
      */
     @java.lang.Override
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
       return delegated_;
     }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @param value The delegated to set.
      * @return This builder for chaining.
      */
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDelegated() {

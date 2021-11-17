@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun subscribeResponse(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse =
+inline fun subscribeResponse(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.SubscribeResponse =
   counters.minter.grpc.client.SubscribeResponseKt.Dsl._create(counters.minter.grpc.client.SubscribeResponse.newBuilder()).apply { block() }._build()
-public object SubscribeResponseKt {
+object SubscribeResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.SubscribeResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SubscribeResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SubscribeResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object SubscribeResponseKt {
     internal fun _build(): counters.minter.grpc.client.SubscribeResponse = _builder.build()
 
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
-    public var query: kotlin.String
+    var query: kotlin.String
       @JvmName("getQuery")
       get() = _builder.getQuery()
       @JvmName("setQuery")
@@ -33,16 +33,16 @@ public object SubscribeResponseKt {
         _builder.setQuery(value)
       }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
-    public fun clearQuery() {
+    fun clearQuery() {
       _builder.clearQuery()
     }
 
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
-    public var data: com.google.protobuf.Struct
+    var data: com.google.protobuf.Struct
       @JvmName("getData")
       get() = _builder.getData()
       @JvmName("setData")
@@ -50,16 +50,16 @@ public object SubscribeResponseKt {
         _builder.setData(value)
       }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
-    public fun clearData() {
+    fun clearData() {
       _builder.clearData()
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      * @return Whether the data field is set.
      */
-    public fun hasData(): kotlin.Boolean {
+    fun hasData(): kotlin.Boolean {
       return _builder.hasData()
     }
 
@@ -68,76 +68,74 @@ public object SubscribeResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
-     public val events: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>
+     val events: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getEventsList()
       )
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addEvents")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.add(value: counters.minter.grpc.client.SubscribeResponse.Event) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.add(value: counters.minter.grpc.client.SubscribeResponse.Event) {
       _builder.addEvents(value)
     }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignEvents")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(value: counters.minter.grpc.client.SubscribeResponse.Event) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(value: counters.minter.grpc.client.SubscribeResponse.Event) {
       add(value)
     }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllEvents")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
       _builder.addAllEvents(values)
     }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllEvents")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param index The index to set the value at.
      * @param value The events to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setEvents")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SubscribeResponse.Event) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SubscribeResponse.Event) {
       _builder.setEvents(index, value)
     }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearEvents")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.clear() {
       _builder.clearEvents()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun event(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse.Event =
+  inline fun event(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> Unit): counters.minter.grpc.client.SubscribeResponse.Event =
     counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl._create(counters.minter.grpc.client.SubscribeResponse.Event.newBuilder()).apply { block() }._build()
-  public object EventKt {
+  object EventKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.SubscribeResponse.Event.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SubscribeResponse.Event.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.SubscribeResponse.Event.Builder): Dsl = Dsl(builder)
@@ -148,9 +146,9 @@ public object SubscribeResponseKt {
       internal fun _build(): counters.minter.grpc.client.SubscribeResponse.Event = _builder.build()
 
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        */
-      public var key: kotlin.String
+      var key: kotlin.String
         @JvmName("getKey")
         get() = _builder.getKey()
         @JvmName("setKey")
@@ -158,9 +156,9 @@ public object SubscribeResponseKt {
           _builder.setKey(value)
         }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        */
-      public fun clearKey() {
+      fun clearKey() {
         _builder.clearKey()
       }
 
@@ -169,76 +167,74 @@ public object SubscribeResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @return A list containing the events.
        */
-      public val events: com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>
-        @kotlin.jvm.JvmSynthetic
+      val events: com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>
+        @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getEventsList()
         )
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The events to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addEvents")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.add(value: kotlin.String) {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.add(value: kotlin.String) {
         _builder.addEvents(value)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The events to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignEvents")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.plusAssign(value: kotlin.String) {
-        add(value)
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.plusAssign(value: kotlin.String) {
+        _builder.addEvents(value)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param values The events to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllEvents")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
         _builder.addAllEvents(values)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param values The events to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllEvents")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-        addAll(values)
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+        _builder.addAllEvents(values)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param index The index to set the value at.
        * @param value The events to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setEvents")
-      public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setEvents(index, value)
       }/**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearEvents")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.clear() {
         _builder.clearEvents()
       }}
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.SubscribeResponse.copy(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse =
+inline fun counters.minter.grpc.client.SubscribeResponse.copy(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.SubscribeResponse =
   counters.minter.grpc.client.SubscribeResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.SubscribeResponse.Event.copy(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse.Event =
+inline fun counters.minter.grpc.client.SubscribeResponse.Event.copy(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> Unit): counters.minter.grpc.client.SubscribeResponse.Event =
   counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

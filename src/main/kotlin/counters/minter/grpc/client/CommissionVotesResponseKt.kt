@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun commissionVotesResponse(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse =
+inline fun commissionVotesResponse(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CommissionVotesResponse =
   counters.minter.grpc.client.CommissionVotesResponseKt.Dsl._create(counters.minter.grpc.client.CommissionVotesResponse.newBuilder()).apply { block() }._build()
-public object CommissionVotesResponseKt {
+object CommissionVotesResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.CommissionVotesResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CommissionVotesResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CommissionVotesResponse.Builder): Dsl = Dsl(builder)
@@ -27,76 +27,74 @@ public object CommissionVotesResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class VotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class VotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
-     public val votes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>
+     val votes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getVotesList()
       )
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param value The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addVotes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.add(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.add(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       _builder.addVotes(value)
     }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param value The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignVotes")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       add(value)
     }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param values The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllVotes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
       _builder.addAllVotes(values)
     }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param values The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllVotes")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param index The index to set the value at.
      * @param value The votes to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setVotes")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       _builder.setVotes(index, value)
     }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearVotes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.clear() {
       _builder.clearVotes()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun vote(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
+  inline fun vote(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
     counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl._create(counters.minter.grpc.client.CommissionVotesResponse.Vote.newBuilder()).apply { block() }._build()
-  public object VoteKt {
+  object VoteKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.CommissionVotesResponse.Vote.Builder): Dsl = Dsl(builder)
@@ -107,9 +105,9 @@ public object CommissionVotesResponseKt {
       internal fun _build(): counters.minter.grpc.client.CommissionVotesResponse.Vote = _builder.build()
 
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
-      public var price: counters.minter.grpc.client.PriceCommissionResponse
+      var price: counters.minter.grpc.client.PriceCommissionResponse
         @JvmName("getPrice")
         get() = _builder.getPrice()
         @JvmName("setPrice")
@@ -117,16 +115,16 @@ public object CommissionVotesResponseKt {
           _builder.setPrice(value)
         }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
-      public fun clearPrice() {
+      fun clearPrice() {
         _builder.clearPrice()
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        * @return Whether the price field is set.
        */
-      public fun hasPrice(): kotlin.Boolean {
+      fun hasPrice(): kotlin.Boolean {
         return _builder.hasPrice()
       }
 
@@ -135,76 +133,74 @@ public object CommissionVotesResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return A list containing the publicKeys.
        */
-      public val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
-        @kotlin.jvm.JvmSynthetic
+      val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
+        @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getPublicKeysList()
         )
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addPublicKeys")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.add(value: kotlin.String) {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.add(value: kotlin.String) {
         _builder.addPublicKeys(value)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignPublicKeys")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(value: kotlin.String) {
-        add(value)
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(value: kotlin.String) {
+        _builder.addPublicKeys(value)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllPublicKeys")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
         _builder.addAllPublicKeys(values)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllPublicKeys")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-        addAll(values)
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+        _builder.addAllPublicKeys(values)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index to set the value at.
        * @param value The publicKeys to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setPublicKeys")
-      public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setPublicKeys(index, value)
       }/**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearPublicKeys")
-      public fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.clear() {
         _builder.clearPublicKeys()
       }}
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.CommissionVotesResponse.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse =
+inline fun counters.minter.grpc.client.CommissionVotesResponse.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CommissionVotesResponse =
   counters.minter.grpc.client.CommissionVotesResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.CommissionVotesResponse.Vote.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
+inline fun counters.minter.grpc.client.CommissionVotesResponse.Vote.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
   counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl._create(this.toBuilder()).apply { block() }._build()

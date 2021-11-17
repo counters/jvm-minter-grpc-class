@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   public static final int MIN_GAS_PRICE_FIELD_NUMBER = 3;
   private long minGasPrice_;
   /**
-   * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
+   * <code>uint64 min_gas_price = 3;</code>
    * @return The minGasPrice.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
 
     private long minGasPrice_ ;
     /**
-     * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
+     * <code>uint64 min_gas_price = 3;</code>
      * @return The minGasPrice.
      */
     @java.lang.Override
@@ -409,7 +409,7 @@ private static final long serialVersionUID = 0L;
       return minGasPrice_;
     }
     /**
-     * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
+     * <code>uint64 min_gas_price = 3;</code>
      * @param value The minGasPrice to set.
      * @return This builder for chaining.
      */
@@ -420,7 +420,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
+     * <code>uint64 min_gas_price = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearMinGasPrice() {

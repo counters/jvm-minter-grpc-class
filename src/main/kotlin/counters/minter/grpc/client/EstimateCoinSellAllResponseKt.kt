@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun estimateCoinSellAllResponse(block: counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinSellAllResponse =
+inline fun estimateCoinSellAllResponse(block: counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.EstimateCoinSellAllResponse =
   counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl._create(counters.minter.grpc.client.EstimateCoinSellAllResponse.newBuilder()).apply { block() }._build()
-public object EstimateCoinSellAllResponseKt {
+object EstimateCoinSellAllResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.EstimateCoinSellAllResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.EstimateCoinSellAllResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.EstimateCoinSellAllResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object EstimateCoinSellAllResponseKt {
     internal fun _build(): counters.minter.grpc.client.EstimateCoinSellAllResponse = _builder.build()
 
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      */
-    public var willGet: kotlin.String
+    var willGet: kotlin.String
       @JvmName("getWillGet")
       get() = _builder.getWillGet()
       @JvmName("setWillGet")
@@ -33,16 +33,16 @@ public object EstimateCoinSellAllResponseKt {
         _builder.setWillGet(value)
       }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      */
-    public fun clearWillGet() {
+    fun clearWillGet() {
       _builder.clearWillGet()
     }
 
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      */
-    public var swapFrom: counters.minter.grpc.client.SwapFrom
+    var swapFrom: counters.minter.grpc.client.SwapFrom
       @JvmName("getSwapFrom")
       get() = _builder.getSwapFrom()
       @JvmName("setSwapFrom")
@@ -50,13 +50,13 @@ public object EstimateCoinSellAllResponseKt {
         _builder.setSwapFrom(value)
       }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 2;</code>
      */
-    public fun clearSwapFrom() {
+    fun clearSwapFrom() {
       _builder.clearSwapFrom()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.EstimateCoinSellAllResponse.copy(block: counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinSellAllResponse =
+inline fun counters.minter.grpc.client.EstimateCoinSellAllResponse.copy(block: counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.EstimateCoinSellAllResponse =
   counters.minter.grpc.client.EstimateCoinSellAllResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -103,12 +103,12 @@ private static final long serialVersionUID = 0L;
   private long code_;
   /**
    * <pre>
-   * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   * example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
-   * };
+   *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+   *example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
+   *};
    * </pre>
    *
-   * <code>uint64 code = 1 [json_name = "code"];</code>
+   * <code>uint64 code = 1;</code>
    * @return The code.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
   public static final int LOG_FIELD_NUMBER = 3;
   private volatile java.lang.Object log_;
   /**
-   * <code>string log = 3 [json_name = "log"];</code>
+   * <code>string log = 3;</code>
    * @return The log.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string log = 3 [json_name = "log"];</code>
+   * <code>string log = 3;</code>
    * @return The bytes for log.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
   public static final int HASH_FIELD_NUMBER = 4;
   private volatile java.lang.Object hash_;
   /**
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 4;</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 4;</code>
    * @return The bytes for hash.
    */
   @java.lang.Override
@@ -209,10 +209,10 @@ private static final long serialVersionUID = 0L;
     if (code_ != 0L) {
       output.writeUInt64(1, code_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
+    if (!getLogBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, log_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+    if (!getHashBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, hash_);
     }
     unknownFields.writeTo(output);
@@ -228,10 +228,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(1, code_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
+    if (!getLogBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, log_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+    if (!getHashBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, hash_);
     }
     size += unknownFields.getSerializedSize();
@@ -532,12 +532,12 @@ private static final long serialVersionUID = 0L;
     private long code_ ;
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
-     * };
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 code = 1 [json_name = "code"];</code>
+     * <code>uint64 code = 1;</code>
      * @return The code.
      */
     @java.lang.Override
@@ -546,12 +546,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
-     * };
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 code = 1 [json_name = "code"];</code>
+     * <code>uint64 code = 1;</code>
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -563,12 +563,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
-     * };
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *example: "{&#92;"code&#92;":&#92;"0&#92;",&#92;"log&#92;":&#92;"&#92;", &#92;"hash&#92;":&#92;"Mt6019f740983dc43b53ea9c37891af0c9ce7251399ebaafc4ea56d68d665adfcb&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 code = 1 [json_name = "code"];</code>
+     * <code>uint64 code = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearCode() {
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object log_ = "";
     /**
-     * <code>string log = 3 [json_name = "log"];</code>
+     * <code>string log = 3;</code>
      * @return The log.
      */
     public java.lang.String getLog() {
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string log = 3 [json_name = "log"];</code>
+     * <code>string log = 3;</code>
      * @return The bytes for log.
      */
     public com.google.protobuf.ByteString
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string log = 3 [json_name = "log"];</code>
+     * <code>string log = 3;</code>
      * @param value The log to set.
      * @return This builder for chaining.
      */
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string log = 3 [json_name = "log"];</code>
+     * <code>string log = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearLog() {
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string log = 3 [json_name = "log"];</code>
+     * <code>string log = 3;</code>
      * @param value The bytes for log to set.
      * @return This builder for chaining.
      */
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hash_ = "";
     /**
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 4;</code>
      * @return The hash.
      */
     public java.lang.String getHash() {
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 4;</code>
      * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 4;</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 4;</code>
      * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */

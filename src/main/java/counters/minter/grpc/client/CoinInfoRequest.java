@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 1;
   private long height_;
   /**
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
   public static final int SYMBOL_FIELD_NUMBER = 2;
   private volatile java.lang.Object symbol_;
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
     if (height_ != 0L) {
       output.writeUInt64(1, height_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+    if (!getSymbolBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
     }
     unknownFields.writeTo(output);
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(1, height_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+    if (!getSymbolBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
     }
     size += unknownFields.getSerializedSize();
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object symbol_ = "";
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */

@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun candidateResponse(block: counters.minter.grpc.client.CandidateResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateResponse =
+inline fun candidateResponse(block: counters.minter.grpc.client.CandidateResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateResponse =
   counters.minter.grpc.client.CandidateResponseKt.Dsl._create(counters.minter.grpc.client.CandidateResponse.newBuilder()).apply { block() }._build()
-public object CandidateResponseKt {
+object CandidateResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.CandidateResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CandidateResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CandidateResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object CandidateResponseKt {
     internal fun _build(): counters.minter.grpc.client.CandidateResponse = _builder.build()
 
     /**
-     * <code>uint64 id = 14 [json_name = "id"];</code>
+     * <code>uint64 id = 14;</code>
      */
-    public var id: kotlin.Long
+    var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -33,9 +33,9 @@ public object CandidateResponseKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 14 [json_name = "id"];</code>
+     * <code>uint64 id = 14;</code>
      */
-    public fun clearId() {
+    fun clearId() {
       _builder.clearId()
     }
 
@@ -44,9 +44,9 @@ public object CandidateResponseKt {
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      */
-    public var rewardAddress: kotlin.String
+    var rewardAddress: kotlin.String
       @JvmName("getRewardAddress")
       get() = _builder.getRewardAddress()
       @JvmName("setRewardAddress")
@@ -58,9 +58,9 @@ public object CandidateResponseKt {
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      */
-    public fun clearRewardAddress() {
+    fun clearRewardAddress() {
       _builder.clearRewardAddress()
     }
 
@@ -69,9 +69,9 @@ public object CandidateResponseKt {
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      */
-    public var ownerAddress: kotlin.String
+    var ownerAddress: kotlin.String
       @JvmName("getOwnerAddress")
       get() = _builder.getOwnerAddress()
       @JvmName("setOwnerAddress")
@@ -83,9 +83,9 @@ public object CandidateResponseKt {
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      */
-    public fun clearOwnerAddress() {
+    fun clearOwnerAddress() {
       _builder.clearOwnerAddress()
     }
 
@@ -94,9 +94,9 @@ public object CandidateResponseKt {
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      */
-    public var controlAddress: kotlin.String
+    var controlAddress: kotlin.String
       @JvmName("getControlAddress")
       get() = _builder.getControlAddress()
       @JvmName("setControlAddress")
@@ -108,9 +108,9 @@ public object CandidateResponseKt {
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      */
-    public fun clearControlAddress() {
+    fun clearControlAddress() {
       _builder.clearControlAddress()
     }
 
@@ -119,9 +119,9 @@ public object CandidateResponseKt {
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      */
-    public var totalStake: kotlin.String
+    var totalStake: kotlin.String
       @JvmName("getTotalStake")
       get() = _builder.getTotalStake()
       @JvmName("setTotalStake")
@@ -133,9 +133,9 @@ public object CandidateResponseKt {
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      */
-    public fun clearTotalStake() {
+    fun clearTotalStake() {
       _builder.clearTotalStake()
     }
 
@@ -144,9 +144,9 @@ public object CandidateResponseKt {
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      */
-    public var publicKey: kotlin.String
+    var publicKey: kotlin.String
       @JvmName("getPublicKey")
       get() = _builder.getPublicKey()
       @JvmName("setPublicKey")
@@ -158,9 +158,9 @@ public object CandidateResponseKt {
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      */
-    public fun clearPublicKey() {
+    fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
@@ -169,9 +169,9 @@ public object CandidateResponseKt {
      * Commission (from 0 to 100) from rewards which delegators will pay to validator
      * </pre>
      *
-     * <code>uint64 commission = 4 [json_name = "commission"];</code>
+     * <code>uint64 commission = 4;</code>
      */
-    public var commission: kotlin.Long
+    var commission: kotlin.Long
       @JvmName("getCommission")
       get() = _builder.getCommission()
       @JvmName("setCommission")
@@ -183,9 +183,9 @@ public object CandidateResponseKt {
      * Commission (from 0 to 100) from rewards which delegators will pay to validator
      * </pre>
      *
-     * <code>uint64 commission = 4 [json_name = "commission"];</code>
+     * <code>uint64 commission = 4;</code>
      */
-    public fun clearCommission() {
+    fun clearCommission() {
       _builder.clearCommission()
     }
 
@@ -194,9 +194,9 @@ public object CandidateResponseKt {
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
-    public var usedSlots: com.google.protobuf.UInt64Value
+    var usedSlots: com.google.protobuf.UInt64Value
       @JvmName("getUsedSlots")
       get() = _builder.getUsedSlots()
       @JvmName("setUsedSlots")
@@ -208,9 +208,9 @@ public object CandidateResponseKt {
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
-    public fun clearUsedSlots() {
+    fun clearUsedSlots() {
       _builder.clearUsedSlots()
     }
     /**
@@ -218,10 +218,10 @@ public object CandidateResponseKt {
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      * @return Whether the usedSlots field is set.
      */
-    public fun hasUsedSlots(): kotlin.Boolean {
+    fun hasUsedSlots(): kotlin.Boolean {
       return _builder.hasUsedSlots()
     }
 
@@ -230,9 +230,9 @@ public object CandidateResponseKt {
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
-    public var uniqUsers: com.google.protobuf.UInt64Value
+    var uniqUsers: com.google.protobuf.UInt64Value
       @JvmName("getUniqUsers")
       get() = _builder.getUniqUsers()
       @JvmName("setUniqUsers")
@@ -244,9 +244,9 @@ public object CandidateResponseKt {
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
-    public fun clearUniqUsers() {
+    fun clearUniqUsers() {
       _builder.clearUniqUsers()
     }
     /**
@@ -254,10 +254,10 @@ public object CandidateResponseKt {
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      * @return Whether the uniqUsers field is set.
      */
-    public fun hasUniqUsers(): kotlin.Boolean {
+    fun hasUniqUsers(): kotlin.Boolean {
       return _builder.hasUniqUsers()
     }
 
@@ -266,9 +266,9 @@ public object CandidateResponseKt {
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
-    public var minStake: com.google.protobuf.StringValue
+    var minStake: com.google.protobuf.StringValue
       @JvmName("getMinStake")
       get() = _builder.getMinStake()
       @JvmName("setMinStake")
@@ -280,9 +280,9 @@ public object CandidateResponseKt {
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
-    public fun clearMinStake() {
+    fun clearMinStake() {
       _builder.clearMinStake()
     }
     /**
@@ -290,10 +290,10 @@ public object CandidateResponseKt {
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      * @return Whether the minStake field is set.
      */
-    public fun hasMinStake(): kotlin.Boolean {
+    fun hasMinStake(): kotlin.Boolean {
       return _builder.hasMinStake()
     }
 
@@ -302,15 +302,15 @@ public object CandidateResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class StakesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class StakesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
-     public val stakes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>
+     val stakes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getStakesList()
@@ -320,74 +320,72 @@ public object CandidateResponseKt {
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      * @param value The stakes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addStakes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.add(value: counters.minter.grpc.client.CandidateResponse.Stake) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.add(value: counters.minter.grpc.client.CandidateResponse.Stake) {
       _builder.addStakes(value)
     }/**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      * @param value The stakes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignStakes")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.plusAssign(value: counters.minter.grpc.client.CandidateResponse.Stake) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.plusAssign(value: counters.minter.grpc.client.CandidateResponse.Stake) {
       add(value)
     }/**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      * @param values The stakes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllStakes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse.Stake>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse.Stake>) {
       _builder.addAllStakes(values)
     }/**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      * @param values The stakes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllStakes")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse.Stake>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse.Stake>) {
       addAll(values)
     }/**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      * @param index The index to set the value at.
      * @param value The stakes to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setStakes")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CandidateResponse.Stake) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CandidateResponse.Stake) {
       _builder.setStakes(index, value)
     }/**
      * <pre>
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearStakes")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse.Stake, StakesProxy>.clear() {
       _builder.clearStakes()
     }
     /**
@@ -395,9 +393,9 @@ public object CandidateResponseKt {
      * Candidate status. Available values: offline = 1, online = 2
      * </pre>
      *
-     * <code>uint64 status = 6 [json_name = "status"];</code>
+     * <code>uint64 status = 6;</code>
      */
-    public var status: kotlin.Long
+    var status: kotlin.Long
       @JvmName("getStatus")
       get() = _builder.getStatus()
       @JvmName("setStatus")
@@ -409,9 +407,9 @@ public object CandidateResponseKt {
      * Candidate status. Available values: offline = 1, online = 2
      * </pre>
      *
-     * <code>uint64 status = 6 [json_name = "status"];</code>
+     * <code>uint64 status = 6;</code>
      */
-    public fun clearStatus() {
+    fun clearStatus() {
       _builder.clearStatus()
     }
 
@@ -420,9 +418,9 @@ public object CandidateResponseKt {
      * Is a validator at the current height
      * </pre>
      *
-     * <code>bool validator = 12 [json_name = "validator"];</code>
+     * <code>bool validator = 12;</code>
      */
-    public var validator: kotlin.Boolean
+    var validator: kotlin.Boolean
       @JvmName("getValidator")
       get() = _builder.getValidator()
       @JvmName("setValidator")
@@ -434,16 +432,16 @@ public object CandidateResponseKt {
      * Is a validator at the current height
      * </pre>
      *
-     * <code>bool validator = 12 [json_name = "validator"];</code>
+     * <code>bool validator = 12;</code>
      */
-    public fun clearValidator() {
+    fun clearValidator() {
       _builder.clearValidator()
     }
 
     /**
-     * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 13;</code>
      */
-    public var jailedUntil: kotlin.Long
+    var jailedUntil: kotlin.Long
       @JvmName("getJailedUntil")
       get() = _builder.getJailedUntil()
       @JvmName("setJailedUntil")
@@ -451,22 +449,22 @@ public object CandidateResponseKt {
         _builder.setJailedUntil(value)
       }
     /**
-     * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 13;</code>
      */
-    public fun clearJailedUntil() {
+    fun clearJailedUntil() {
       _builder.clearJailedUntil()
     }
   }
   @kotlin.jvm.JvmSynthetic
-  public inline fun stake(block: counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateResponse.Stake =
+  inline fun stake(block: counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateResponse.Stake =
     counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl._create(counters.minter.grpc.client.CandidateResponse.Stake.newBuilder()).apply { block() }._build()
-  public object StakeKt {
+  object StakeKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.CandidateResponse.Stake.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CandidateResponse.Stake.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.CandidateResponse.Stake.Builder): Dsl = Dsl(builder)
@@ -477,9 +475,9 @@ public object CandidateResponseKt {
       internal fun _build(): counters.minter.grpc.client.CandidateResponse.Stake = _builder.build()
 
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        */
-      public var owner: kotlin.String
+      var owner: kotlin.String
         @JvmName("getOwner")
         get() = _builder.getOwner()
         @JvmName("setOwner")
@@ -487,16 +485,16 @@ public object CandidateResponseKt {
           _builder.setOwner(value)
         }
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        */
-      public fun clearOwner() {
+      fun clearOwner() {
         _builder.clearOwner()
       }
 
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
-      public var coin: counters.minter.grpc.client.Coin
+      var coin: counters.minter.grpc.client.Coin
         @JvmName("getCoin")
         get() = _builder.getCoin()
         @JvmName("setCoin")
@@ -504,23 +502,23 @@ public object CandidateResponseKt {
           _builder.setCoin(value)
         }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
-      public fun clearCoin() {
+      fun clearCoin() {
         _builder.clearCoin()
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        * @return Whether the coin field is set.
        */
-      public fun hasCoin(): kotlin.Boolean {
+      fun hasCoin(): kotlin.Boolean {
         return _builder.hasCoin()
       }
 
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        */
-      public var value: kotlin.String
+      var value: kotlin.String
         @JvmName("getValue")
         get() = _builder.getValue()
         @JvmName("setValue")
@@ -528,16 +526,16 @@ public object CandidateResponseKt {
           _builder.setValue(value)
         }
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        */
-      public fun clearValue() {
+      fun clearValue() {
         _builder.clearValue()
       }
 
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        */
-      public var bipValue: kotlin.String
+      var bipValue: kotlin.String
         @JvmName("getBipValue")
         get() = _builder.getBipValue()
         @JvmName("setBipValue")
@@ -545,17 +543,17 @@ public object CandidateResponseKt {
           _builder.setBipValue(value)
         }
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        */
-      public fun clearBipValue() {
+      fun clearBipValue() {
         _builder.clearBipValue()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.CandidateResponse.copy(block: counters.minter.grpc.client.CandidateResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateResponse =
+inline fun counters.minter.grpc.client.CandidateResponse.copy(block: counters.minter.grpc.client.CandidateResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateResponse =
   counters.minter.grpc.client.CandidateResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.CandidateResponse.Stake.copy(block: counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateResponse.Stake =
+inline fun counters.minter.grpc.client.CandidateResponse.Stake.copy(block: counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateResponse.Stake =
   counters.minter.grpc.client.CandidateResponseKt.StakeKt.Dsl._create(this.toBuilder()).apply { block() }._build()

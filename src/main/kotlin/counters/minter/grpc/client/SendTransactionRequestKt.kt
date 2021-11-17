@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun sendTransactionRequest(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendTransactionRequest =
+inline fun sendTransactionRequest(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.SendTransactionRequest =
   counters.minter.grpc.client.SendTransactionRequestKt.Dsl._create(counters.minter.grpc.client.SendTransactionRequest.newBuilder()).apply { block() }._build()
-public object SendTransactionRequestKt {
+object SendTransactionRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.SendTransactionRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SendTransactionRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SendTransactionRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object SendTransactionRequestKt {
     internal fun _build(): counters.minter.grpc.client.SendTransactionRequest = _builder.build()
 
     /**
-     * <code>string tx = 1 [json_name = "tx"];</code>
+     * <code>string tx = 1;</code>
      */
-    public var tx: kotlin.String
+    var tx: kotlin.String
       @JvmName("getTx")
       get() = _builder.getTx()
       @JvmName("setTx")
@@ -33,13 +33,13 @@ public object SendTransactionRequestKt {
         _builder.setTx(value)
       }
     /**
-     * <code>string tx = 1 [json_name = "tx"];</code>
+     * <code>string tx = 1;</code>
      */
-    public fun clearTx() {
+    fun clearTx() {
       _builder.clearTx()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.SendTransactionRequest.copy(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendTransactionRequest =
+inline fun counters.minter.grpc.client.SendTransactionRequest.copy(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.SendTransactionRequest =
   counters.minter.grpc.client.SendTransactionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

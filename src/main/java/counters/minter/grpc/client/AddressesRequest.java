@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESSES_FIELD_NUMBER = 1;
   private com.google.protobuf.LazyStringList addresses_;
   /**
-   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 1;</code>
    * @return A list containing the addresses.
    */
   public com.google.protobuf.ProtocolStringList
@@ -115,14 +115,14 @@ private static final long serialVersionUID = 0L;
     return addresses_;
   }
   /**
-   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 1;</code>
    * @return The count of addresses.
    */
   public int getAddressesCount() {
     return addresses_.size();
   }
   /**
-   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 1;</code>
    * @param index The index of the element to return.
    * @return The addresses at the given index.
    */
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
     return addresses_.get(index);
   }
   /**
-   * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 1;</code>
    * @param index The index of the value to return.
    * @return The bytes of the addresses at the given index.
    */
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
   public static final int DELEGATED_FIELD_NUMBER = 4;
   private boolean delegated_;
   /**
-   * <code>bool delegated = 4 [json_name = "delegated"];</code>
+   * <code>bool delegated = 4;</code>
    * @return The delegated.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @return A list containing the addresses.
      */
     public com.google.protobuf.ProtocolStringList
@@ -534,14 +534,14 @@ private static final long serialVersionUID = 0L;
       return addresses_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @return The count of addresses.
      */
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param index The index of the element to return.
      * @return The addresses at the given index.
      */
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.get(index);
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the addresses at the given index.
      */
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.getByteString(index);
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      * @return This builder for chaining.
@@ -574,7 +574,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param value The addresses to add.
      * @return This builder for chaining.
      */
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param values The addresses to add.
      * @return This builder for chaining.
      */
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddresses() {
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param value The bytes of the addresses to add.
      * @return This builder for chaining.
      */
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean delegated_ ;
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @return The delegated.
      */
     @java.lang.Override
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
       return delegated_;
     }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @param value The delegated to set.
      * @return This builder for chaining.
      */
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDelegated() {

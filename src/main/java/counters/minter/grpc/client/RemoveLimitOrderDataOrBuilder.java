@@ -8,7 +8,7 @@ public interface RemoveLimitOrderDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 id = 1 [json_name = "id"];</code>
+   * <code>uint64 id = 1;</code>
    * @return The id.
    */
   long getId();

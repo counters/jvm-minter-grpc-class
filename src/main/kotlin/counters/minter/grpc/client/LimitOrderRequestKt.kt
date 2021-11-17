@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun limitOrderRequest(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrderRequest =
+inline fun limitOrderRequest(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrderRequest =
   counters.minter.grpc.client.LimitOrderRequestKt.Dsl._create(counters.minter.grpc.client.LimitOrderRequest.newBuilder()).apply { block() }._build()
-public object LimitOrderRequestKt {
+object LimitOrderRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.LimitOrderRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.LimitOrderRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.LimitOrderRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object LimitOrderRequestKt {
     internal fun _build(): counters.minter.grpc.client.LimitOrderRequest = _builder.build()
 
     /**
-     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * <code>uint64 order_id = 1;</code>
      */
-    public var orderId: kotlin.Long
+    var orderId: kotlin.Long
       @JvmName("getOrderId")
       get() = _builder.getOrderId()
       @JvmName("setOrderId")
@@ -33,16 +33,16 @@ public object LimitOrderRequestKt {
         _builder.setOrderId(value)
       }
     /**
-     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * <code>uint64 order_id = 1;</code>
      */
-    public fun clearOrderId() {
+    fun clearOrderId() {
       _builder.clearOrderId()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,13 +50,13 @@ public object LimitOrderRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.LimitOrderRequest.copy(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrderRequest =
+inline fun counters.minter.grpc.client.LimitOrderRequest.copy(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrderRequest =
   counters.minter.grpc.client.LimitOrderRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

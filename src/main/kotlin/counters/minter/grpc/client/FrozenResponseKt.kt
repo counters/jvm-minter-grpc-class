@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun frozenResponse(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse =
+inline fun frozenResponse(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.FrozenResponse =
   counters.minter.grpc.client.FrozenResponseKt.Dsl._create(counters.minter.grpc.client.FrozenResponse.newBuilder()).apply { block() }._build()
-public object FrozenResponseKt {
+object FrozenResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.FrozenResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.FrozenResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.FrozenResponse.Builder): Dsl = Dsl(builder)
@@ -27,76 +27,74 @@ public object FrozenResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class FrozenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class FrozenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
-     public val frozen: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>
+     val frozen: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getFrozenList()
       )
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param value The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addFrozen")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.add(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.add(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       _builder.addFrozen(value)
     }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param value The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignFrozen")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       add(value)
     }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param values The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllFrozen")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
       _builder.addAllFrozen(values)
     }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param values The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllFrozen")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param index The index to set the value at.
      * @param value The frozen to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setFrozen")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.FrozenResponse.Frozen) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       _builder.setFrozen(index, value)
     }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearFrozen")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.clear() {
       _builder.clearFrozen()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun frozen(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
+  inline fun frozen(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
     counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl._create(counters.minter.grpc.client.FrozenResponse.Frozen.newBuilder()).apply { block() }._build()
-  public object FrozenKt {
+  object FrozenKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.FrozenResponse.Frozen.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.FrozenResponse.Frozen.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.FrozenResponse.Frozen.Builder): Dsl = Dsl(builder)
@@ -107,9 +105,9 @@ public object FrozenResponseKt {
       internal fun _build(): counters.minter.grpc.client.FrozenResponse.Frozen = _builder.build()
 
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        */
-      public var height: kotlin.Long
+      var height: kotlin.Long
         @JvmName("getHeight")
         get() = _builder.getHeight()
         @JvmName("setHeight")
@@ -117,16 +115,16 @@ public object FrozenResponseKt {
           _builder.setHeight(value)
         }
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        */
-      public fun clearHeight() {
+      fun clearHeight() {
         _builder.clearHeight()
       }
 
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        */
-      public var address: kotlin.String
+      var address: kotlin.String
         @JvmName("getAddress")
         get() = _builder.getAddress()
         @JvmName("setAddress")
@@ -134,16 +132,16 @@ public object FrozenResponseKt {
           _builder.setAddress(value)
         }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        */
-      public fun clearAddress() {
+      fun clearAddress() {
         _builder.clearAddress()
       }
 
       /**
-       * <code>string candidate_key = 3 [json_name = "candidateKey"];</code>
+       * <code>string candidate_key = 3;</code>
        */
-      public var candidateKey: kotlin.String
+      var candidateKey: kotlin.String
         @JvmName("getCandidateKey")
         get() = _builder.getCandidateKey()
         @JvmName("setCandidateKey")
@@ -151,16 +149,16 @@ public object FrozenResponseKt {
           _builder.setCandidateKey(value)
         }
       /**
-       * <code>string candidate_key = 3 [json_name = "candidateKey"];</code>
+       * <code>string candidate_key = 3;</code>
        */
-      public fun clearCandidateKey() {
+      fun clearCandidateKey() {
         _builder.clearCandidateKey()
       }
 
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
-      public var coin: counters.minter.grpc.client.Coin
+      var coin: counters.minter.grpc.client.Coin
         @JvmName("getCoin")
         get() = _builder.getCoin()
         @JvmName("setCoin")
@@ -168,23 +166,23 @@ public object FrozenResponseKt {
           _builder.setCoin(value)
         }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
-      public fun clearCoin() {
+      fun clearCoin() {
         _builder.clearCoin()
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        * @return Whether the coin field is set.
        */
-      public fun hasCoin(): kotlin.Boolean {
+      fun hasCoin(): kotlin.Boolean {
         return _builder.hasCoin()
       }
 
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        */
-      public var value: kotlin.String
+      var value: kotlin.String
         @JvmName("getValue")
         get() = _builder.getValue()
         @JvmName("setValue")
@@ -192,17 +190,17 @@ public object FrozenResponseKt {
           _builder.setValue(value)
         }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        */
-      public fun clearValue() {
+      fun clearValue() {
         _builder.clearValue()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.FrozenResponse.copy(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse =
+inline fun counters.minter.grpc.client.FrozenResponse.copy(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.FrozenResponse =
   counters.minter.grpc.client.FrozenResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.FrozenResponse.Frozen.copy(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
+inline fun counters.minter.grpc.client.FrozenResponse.Frozen.copy(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
   counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl._create(this.toBuilder()).apply { block() }._build()

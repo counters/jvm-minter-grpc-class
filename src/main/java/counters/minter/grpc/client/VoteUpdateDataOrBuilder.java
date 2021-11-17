@@ -8,30 +8,30 @@ public interface VoteUpdateDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The pubKey.
    */
   java.lang.String getPubKey();
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The bytes for pubKey.
    */
   com.google.protobuf.ByteString
       getPubKeyBytes();
 
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 3;</code>
    * @return The version.
    */
   java.lang.String getVersion();
   /**
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 3;</code>
    * @return The bytes for version.
    */
   com.google.protobuf.ByteString

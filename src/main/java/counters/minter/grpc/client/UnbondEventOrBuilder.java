@@ -8,42 +8,42 @@ public interface UnbondEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>string amount = 2 [json_name = "amount"];</code>
+   * <code>string amount = 2;</code>
    * @return The amount.
    */
   java.lang.String getAmount();
   /**
-   * <code>string amount = 2 [json_name = "amount"];</code>
+   * <code>string amount = 2;</code>
    * @return The bytes for amount.
    */
   com.google.protobuf.ByteString
       getAmountBytes();
 
   /**
-   * <code>uint64 coin = 3 [json_name = "coin"];</code>
+   * <code>uint64 coin = 3;</code>
    * @return The coin.
    */
   long getCoin();
 
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The validatorPubKey.
    */
   java.lang.String getValidatorPubKey();
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The bytes for validatorPubKey.
    */
   com.google.protobuf.ByteString

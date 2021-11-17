@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun updateVotesRequest(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateVotesRequest =
+inline fun updateVotesRequest(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.UpdateVotesRequest =
   counters.minter.grpc.client.UpdateVotesRequestKt.Dsl._create(counters.minter.grpc.client.UpdateVotesRequest.newBuilder()).apply { block() }._build()
-public object UpdateVotesRequestKt {
+object UpdateVotesRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.UpdateVotesRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.UpdateVotesRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.UpdateVotesRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object UpdateVotesRequestKt {
     internal fun _build(): counters.minter.grpc.client.UpdateVotesRequest = _builder.build()
 
     /**
-     * <code>uint64 target_version = 1 [json_name = "targetVersion"];</code>
+     * <code>uint64 target_version = 1;</code>
      */
-    public var targetVersion: kotlin.Long
+    var targetVersion: kotlin.Long
       @JvmName("getTargetVersion")
       get() = _builder.getTargetVersion()
       @JvmName("setTargetVersion")
@@ -33,16 +33,16 @@ public object UpdateVotesRequestKt {
         _builder.setTargetVersion(value)
       }
     /**
-     * <code>uint64 target_version = 1 [json_name = "targetVersion"];</code>
+     * <code>uint64 target_version = 1;</code>
      */
-    public fun clearTargetVersion() {
+    fun clearTargetVersion() {
       _builder.clearTargetVersion()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,13 +50,13 @@ public object UpdateVotesRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.UpdateVotesRequest.copy(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateVotesRequest =
+inline fun counters.minter.grpc.client.UpdateVotesRequest.copy(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.UpdateVotesRequest =
   counters.minter.grpc.client.UpdateVotesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

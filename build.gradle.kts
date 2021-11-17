@@ -4,9 +4,12 @@ plugins {
     kotlin("jvm") version "1.5.31"
 //    application
 }
+val grpcKotlinVersion = "1.2.0"
+val coroutinesVersion = "1.5.2"
+
 
 group = "com.webcounters"
-version = "v1.0.1"
+version = "v1.0.2"
 
 repositories {
 //    mavenLocal()
@@ -18,10 +21,12 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java:3.19.1")
     implementation("com.google.protobuf:protobuf-kotlin:3.19.1")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    implementation("io.grpc:grpc-kotlin-stub:$grpcKotlinVersion")
 
-    implementation ("io.grpc:grpc-netty-shaded:1.41.0")
-    implementation ("io.grpc:grpc-protobuf:1.41.0")
-    implementation ("io.grpc:grpc-stub:1.41.0")
+    implementation ("io.grpc:grpc-netty-shaded:1.42.0")
+    implementation ("io.grpc:grpc-protobuf:1.42.0")
+    implementation ("io.grpc:grpc-stub:1.42.0")
 }
 
 tasks.test {

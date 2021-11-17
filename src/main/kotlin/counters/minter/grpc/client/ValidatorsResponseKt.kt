@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun validatorsResponse(block: counters.minter.grpc.client.ValidatorsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.ValidatorsResponse =
+inline fun validatorsResponse(block: counters.minter.grpc.client.ValidatorsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.ValidatorsResponse =
   counters.minter.grpc.client.ValidatorsResponseKt.Dsl._create(counters.minter.grpc.client.ValidatorsResponse.newBuilder()).apply { block() }._build()
-public object ValidatorsResponseKt {
+object ValidatorsResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.ValidatorsResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.ValidatorsResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.ValidatorsResponse.Builder): Dsl = Dsl(builder)
@@ -27,76 +27,74 @@ public object ValidatorsResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class ValidatorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class ValidatorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
-     public val validators: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>
+     val validators: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getValidatorsList()
       )
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      * @param value The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.add(value: counters.minter.grpc.client.ValidatorsResponse.Result) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.add(value: counters.minter.grpc.client.ValidatorsResponse.Result) {
       _builder.addValidators(value)
     }/**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      * @param value The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignValidators")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.plusAssign(value: counters.minter.grpc.client.ValidatorsResponse.Result) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.plusAssign(value: counters.minter.grpc.client.ValidatorsResponse.Result) {
       add(value)
     }/**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      * @param values The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.ValidatorsResponse.Result>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.ValidatorsResponse.Result>) {
       _builder.addAllValidators(values)
     }/**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      * @param values The validators to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllValidators")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.ValidatorsResponse.Result>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.ValidatorsResponse.Result>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      * @param index The index to set the value at.
      * @param value The validators to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setValidators")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.ValidatorsResponse.Result) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.ValidatorsResponse.Result) {
       _builder.setValidators(index, value)
     }/**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearValidators")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.ValidatorsResponse.Result, ValidatorsProxy>.clear() {
       _builder.clearValidators()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun result(block: counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.ValidatorsResponse.Result =
+  inline fun result(block: counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl.() -> Unit): counters.minter.grpc.client.ValidatorsResponse.Result =
     counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl._create(counters.minter.grpc.client.ValidatorsResponse.Result.newBuilder()).apply { block() }._build()
-  public object ResultKt {
+  object ResultKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.ValidatorsResponse.Result.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.ValidatorsResponse.Result.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.ValidatorsResponse.Result.Builder): Dsl = Dsl(builder)
@@ -107,9 +105,9 @@ public object ValidatorsResponseKt {
       internal fun _build(): counters.minter.grpc.client.ValidatorsResponse.Result = _builder.build()
 
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        */
-      public var publicKey: kotlin.String
+      var publicKey: kotlin.String
         @JvmName("getPublicKey")
         get() = _builder.getPublicKey()
         @JvmName("setPublicKey")
@@ -117,16 +115,16 @@ public object ValidatorsResponseKt {
           _builder.setPublicKey(value)
         }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        */
-      public fun clearPublicKey() {
+      fun clearPublicKey() {
         _builder.clearPublicKey()
       }
 
       /**
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+       * <code>uint64 voting_power = 2;</code>
        */
-      public var votingPower: kotlin.Long
+      var votingPower: kotlin.Long
         @JvmName("getVotingPower")
         get() = _builder.getVotingPower()
         @JvmName("setVotingPower")
@@ -134,17 +132,17 @@ public object ValidatorsResponseKt {
           _builder.setVotingPower(value)
         }
       /**
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+       * <code>uint64 voting_power = 2;</code>
        */
-      public fun clearVotingPower() {
+      fun clearVotingPower() {
         _builder.clearVotingPower()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.ValidatorsResponse.copy(block: counters.minter.grpc.client.ValidatorsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.ValidatorsResponse =
+inline fun counters.minter.grpc.client.ValidatorsResponse.copy(block: counters.minter.grpc.client.ValidatorsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.ValidatorsResponse =
   counters.minter.grpc.client.ValidatorsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.ValidatorsResponse.Result.copy(block: counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.ValidatorsResponse.Result =
+inline fun counters.minter.grpc.client.ValidatorsResponse.Result.copy(block: counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl.() -> Unit): counters.minter.grpc.client.ValidatorsResponse.Result =
   counters.minter.grpc.client.ValidatorsResponseKt.ResultKt.Dsl._create(this.toBuilder()).apply { block() }._build()

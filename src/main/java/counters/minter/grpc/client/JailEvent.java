@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATOR_PUB_KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object validatorPubKey_;
   /**
-   * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 1;</code>
    * @return The validatorPubKey.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 1;</code>
    * @return The bytes for validatorPubKey.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   public static final int JAILED_UNTIL_FIELD_NUMBER = 2;
   private long jailedUntil_;
   /**
-   * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+   * <code>uint64 jailed_until = 2;</code>
    * @return The jailedUntil.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorPubKey_)) {
+    if (!getValidatorPubKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorPubKey_);
     }
     if (jailedUntil_ != 0L) {
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorPubKey_)) {
+    if (!getValidatorPubKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorPubKey_);
     }
     if (jailedUntil_ != 0L) {
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object validatorPubKey_ = "";
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      * @return The validatorPubKey.
      */
     public java.lang.String getValidatorPubKey() {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      * @return The bytes for validatorPubKey.
      */
     public com.google.protobuf.ByteString
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      * @param value The validatorPubKey to set.
      * @return This builder for chaining.
      */
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidatorPubKey() {
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      * @param value The bytes for validatorPubKey to set.
      * @return This builder for chaining.
      */
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
 
     private long jailedUntil_ ;
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      * @return The jailedUntil.
      */
     @java.lang.Override
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
       return jailedUntil_;
     }
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      * @param value The jailedUntil to set.
      * @return This builder for chaining.
      */
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearJailedUntil() {

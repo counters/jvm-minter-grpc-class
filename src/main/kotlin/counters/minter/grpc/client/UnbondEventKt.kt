@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun unbondEvent(block: counters.minter.grpc.client.UnbondEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnbondEvent =
+inline fun unbondEvent(block: counters.minter.grpc.client.UnbondEventKt.Dsl.() -> Unit): counters.minter.grpc.client.UnbondEvent =
   counters.minter.grpc.client.UnbondEventKt.Dsl._create(counters.minter.grpc.client.UnbondEvent.newBuilder()).apply { block() }._build()
-public object UnbondEventKt {
+object UnbondEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.UnbondEvent.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.UnbondEvent.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.UnbondEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object UnbondEventKt {
     internal fun _build(): counters.minter.grpc.client.UnbondEvent = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
-    public var address: kotlin.String
+    var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -33,16 +33,16 @@ public object UnbondEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
-    public fun clearAddress() {
+    fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
-    public var amount: kotlin.String
+    var amount: kotlin.String
       @JvmName("getAmount")
       get() = _builder.getAmount()
       @JvmName("setAmount")
@@ -50,16 +50,16 @@ public object UnbondEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
-    public fun clearAmount() {
+    fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
-    public var coin: kotlin.Long
+    var coin: kotlin.Long
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -67,16 +67,16 @@ public object UnbondEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
-    public fun clearCoin() {
+    fun clearCoin() {
       _builder.clearCoin()
     }
 
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      */
-    public var validatorPubKey: kotlin.String
+    var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
       get() = _builder.getValidatorPubKey()
       @JvmName("setValidatorPubKey")
@@ -84,13 +84,13 @@ public object UnbondEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      */
-    public fun clearValidatorPubKey() {
+    fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.UnbondEvent.copy(block: counters.minter.grpc.client.UnbondEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnbondEvent =
+inline fun counters.minter.grpc.client.UnbondEvent.copy(block: counters.minter.grpc.client.UnbondEventKt.Dsl.() -> Unit): counters.minter.grpc.client.UnbondEvent =
   counters.minter.grpc.client.UnbondEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

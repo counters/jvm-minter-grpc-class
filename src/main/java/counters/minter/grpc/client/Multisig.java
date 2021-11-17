@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
   public static final int THRESHOLD_FIELD_NUMBER = 1;
   private long threshold_;
   /**
-   * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+   * <code>uint64 threshold = 1;</code>
    * @return The threshold.
    */
   @java.lang.Override
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   public static final int WEIGHTS_FIELD_NUMBER = 2;
   private com.google.protobuf.Internal.LongList weights_;
   /**
-   * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+   * <code>repeated uint64 weights = 2;</code>
    * @return A list containing the weights.
    */
   @java.lang.Override
@@ -147,14 +147,14 @@ private static final long serialVersionUID = 0L;
     return weights_;
   }
   /**
-   * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+   * <code>repeated uint64 weights = 2;</code>
    * @return The count of weights.
    */
   public int getWeightsCount() {
     return weights_.size();
   }
   /**
-   * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+   * <code>repeated uint64 weights = 2;</code>
    * @param index The index of the element to return.
    * @return The weights at the given index.
    */
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESSES_FIELD_NUMBER = 3;
   private com.google.protobuf.LazyStringList addresses_;
   /**
-   * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 3;</code>
    * @return A list containing the addresses.
    */
   public com.google.protobuf.ProtocolStringList
@@ -174,14 +174,14 @@ private static final long serialVersionUID = 0L;
     return addresses_;
   }
   /**
-   * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 3;</code>
    * @return The count of addresses.
    */
   public int getAddressesCount() {
     return addresses_.size();
   }
   /**
-   * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 3;</code>
    * @param index The index of the element to return.
    * @return The addresses at the given index.
    */
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
     return addresses_.get(index);
   }
   /**
-   * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 3;</code>
    * @param index The index of the value to return.
    * @return The bytes of the addresses at the given index.
    */
@@ -584,7 +584,7 @@ private static final long serialVersionUID = 0L;
 
     private long threshold_ ;
     /**
-     * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+     * <code>uint64 threshold = 1;</code>
      * @return The threshold.
      */
     @java.lang.Override
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
       return threshold_;
     }
     /**
-     * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+     * <code>uint64 threshold = 1;</code>
      * @param value The threshold to set.
      * @return This builder for chaining.
      */
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+     * <code>uint64 threshold = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearThreshold() {
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @return A list containing the weights.
      */
     public java.util.List<java.lang.Long>
@@ -630,14 +630,14 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(weights_) : weights_;
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @return The count of weights.
      */
     public int getWeightsCount() {
       return weights_.size();
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param index The index of the element to return.
      * @return The weights at the given index.
      */
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
       return weights_.getLong(index);
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param index The index to set the value at.
      * @param value The weights to set.
      * @return This builder for chaining.
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param value The weights to add.
      * @return This builder for chaining.
      */
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param values The weights to add.
      * @return This builder for chaining.
      */
@@ -682,7 +682,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearWeights() {
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @return A list containing the addresses.
      */
     public com.google.protobuf.ProtocolStringList
@@ -708,14 +708,14 @@ private static final long serialVersionUID = 0L;
       return addresses_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @return The count of addresses.
      */
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param index The index of the element to return.
      * @return The addresses at the given index.
      */
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.get(index);
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the addresses at the given index.
      */
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.getByteString(index);
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      * @return This builder for chaining.
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param value The addresses to add.
      * @return This builder for chaining.
      */
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param values The addresses to add.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddresses() {
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param value The bytes of the addresses to add.
      * @return This builder for chaining.
      */

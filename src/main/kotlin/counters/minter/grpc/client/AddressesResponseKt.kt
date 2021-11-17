@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun addressesResponse(block: counters.minter.grpc.client.AddressesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesResponse =
+inline fun addressesResponse(block: counters.minter.grpc.client.AddressesResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesResponse =
   counters.minter.grpc.client.AddressesResponseKt.Dsl._create(counters.minter.grpc.client.AddressesResponse.newBuilder()).apply { block() }._build()
-public object AddressesResponseKt {
+object AddressesResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.AddressesResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.AddressesResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.AddressesResponse.Builder): Dsl = Dsl(builder)
@@ -27,72 +27,71 @@ public object AddressesResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
-     public val addresses: com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+     val addresses: com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       @kotlin.jvm.JvmSynthetic
       @JvmName("getAddressesMap")
       get() = com.google.protobuf.kotlin.DslMap(
         _builder.getAddressesMap()
       )
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @JvmName("putAddresses")
-    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+    fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       .put(key: kotlin.String, value: counters.minter.grpc.client.AddressesResponse.Result) {
          _builder.putAddresses(key, value)
        }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("setAddresses")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+    inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       .set(key: kotlin.String, value: counters.minter.grpc.client.AddressesResponse.Result) {
          put(key, value)
        }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("removeAddresses")
-    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+    fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       .remove(key: kotlin.String) {
          _builder.removeAddresses(key)
        }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("putAllAddresses")
-    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+    fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       .putAll(map: kotlin.collections.Map<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result>) {
          _builder.putAllAddresses(map)
        }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("clearAddresses")
-    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
+    fun com.google.protobuf.kotlin.DslMap<kotlin.String, counters.minter.grpc.client.AddressesResponse.Result, AddressesProxy>
       .clear() {
          _builder.clearAddresses()
        }
   }
   @kotlin.jvm.JvmSynthetic
-  public inline fun result(block: counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesResponse.Result =
+  inline fun result(block: counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesResponse.Result =
     counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl._create(counters.minter.grpc.client.AddressesResponse.Result.newBuilder()).apply { block() }._build()
-  public object ResultKt {
+  object ResultKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.AddressesResponse.Result.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.AddressesResponse.Result.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.AddressesResponse.Result.Builder): Dsl = Dsl(builder)
@@ -107,64 +106,62 @@ public object AddressesResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class BalanceProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class BalanceProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
-       public val balance: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>
+       val balance: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>
         @kotlin.jvm.JvmSynthetic
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getBalanceList()
         )
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        * @param value The balance to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addBalance")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.add(value: counters.minter.grpc.client.AddressBalance) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.add(value: counters.minter.grpc.client.AddressBalance) {
         _builder.addBalance(value)
       }/**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        * @param value The balance to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignBalance")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.plusAssign(value: counters.minter.grpc.client.AddressBalance) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.plusAssign(value: counters.minter.grpc.client.AddressBalance) {
         add(value)
       }/**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        * @param values The balance to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllBalance")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
         _builder.addAllBalance(values)
       }/**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        * @param values The balance to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllBalance")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
         addAll(values)
       }/**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        * @param index The index to set the value at.
        * @param value The balance to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setBalance")
-      public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressBalance) {
+      operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressBalance) {
         _builder.setBalance(index, value)
       }/**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearBalance")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, BalanceProxy>.clear() {
         _builder.clearBalance()
       }
       /**
@@ -172,15 +169,15 @@ public object AddressesResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class DelegatedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class DelegatedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
-       public val delegated: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>
+       val delegated: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>
         @kotlin.jvm.JvmSynthetic
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getDelegatedList()
@@ -190,74 +187,72 @@ public object AddressesResponseKt {
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        * @param value The delegated to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addDelegated")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.add(value: counters.minter.grpc.client.AddressDelegatedBalance) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.add(value: counters.minter.grpc.client.AddressDelegatedBalance) {
         _builder.addDelegated(value)
       }/**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        * @param value The delegated to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignDelegated")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.plusAssign(value: counters.minter.grpc.client.AddressDelegatedBalance) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.plusAssign(value: counters.minter.grpc.client.AddressDelegatedBalance) {
         add(value)
       }/**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        * @param values The delegated to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllDelegated")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressDelegatedBalance>) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressDelegatedBalance>) {
         _builder.addAllDelegated(values)
       }/**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        * @param values The delegated to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllDelegated")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressDelegatedBalance>) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressDelegatedBalance>) {
         addAll(values)
       }/**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        * @param index The index to set the value at.
        * @param value The delegated to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setDelegated")
-      public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressDelegatedBalance) {
+      operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressDelegatedBalance) {
         _builder.setDelegated(index, value)
       }/**
        * <pre>
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearDelegated")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressDelegatedBalance, DelegatedProxy>.clear() {
         _builder.clearDelegated()
       }
       /**
@@ -265,15 +260,15 @@ public object AddressesResponseKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-      public class TotalProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      class TotalProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
-       public val total: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>
+       val total: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>
         @kotlin.jvm.JvmSynthetic
         get() = com.google.protobuf.kotlin.DslList(
           _builder.getTotalList()
@@ -283,80 +278,78 @@ public object AddressesResponseKt {
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        * @param value The total to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addTotal")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.add(value: counters.minter.grpc.client.AddressBalance) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.add(value: counters.minter.grpc.client.AddressBalance) {
         _builder.addTotal(value)
       }/**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        * @param value The total to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignTotal")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.plusAssign(value: counters.minter.grpc.client.AddressBalance) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.plusAssign(value: counters.minter.grpc.client.AddressBalance) {
         add(value)
       }/**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        * @param values The total to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllTotal")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
         _builder.addAllTotal(values)
       }/**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        * @param values The total to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("plusAssignAllTotal")
-      @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
+      inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.AddressBalance>) {
         addAll(values)
       }/**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        * @param index The index to set the value at.
        * @param value The total to set.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("setTotal")
-      public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressBalance) {
+      operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.AddressBalance) {
         _builder.setTotal(index, value)
       }/**
        * <pre>
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearTotal")
-      public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.clear() {
+      fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.AddressBalance, TotalProxy>.clear() {
         _builder.clearTotal()
       }
       /**
-       * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+       * <code>uint64 transaction_count = 3;</code>
        */
-      public var transactionCount: kotlin.Long
+      var transactionCount: kotlin.Long
         @JvmName("getTransactionCount")
         get() = _builder.getTransactionCount()
         @JvmName("setTransactionCount")
@@ -364,16 +357,16 @@ public object AddressesResponseKt {
           _builder.setTransactionCount(value)
         }
       /**
-       * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+       * <code>uint64 transaction_count = 3;</code>
        */
-      public fun clearTransactionCount() {
+      fun clearTransactionCount() {
         _builder.clearTransactionCount()
       }
 
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        */
-      public var bipValue: kotlin.String
+      var bipValue: kotlin.String
         @JvmName("getBipValue")
         get() = _builder.getBipValue()
         @JvmName("setBipValue")
@@ -381,16 +374,16 @@ public object AddressesResponseKt {
           _builder.setBipValue(value)
         }
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        */
-      public fun clearBipValue() {
+      fun clearBipValue() {
         _builder.clearBipValue()
       }
 
       /**
-       * <code>.api_pb.Multisig multisig = 7 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 7;</code>
        */
-      public var multisig: counters.minter.grpc.client.Multisig
+      var multisig: counters.minter.grpc.client.Multisig
         @JvmName("getMultisig")
         get() = _builder.getMultisig()
         @JvmName("setMultisig")
@@ -398,24 +391,24 @@ public object AddressesResponseKt {
           _builder.setMultisig(value)
         }
       /**
-       * <code>.api_pb.Multisig multisig = 7 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 7;</code>
        */
-      public fun clearMultisig() {
+      fun clearMultisig() {
         _builder.clearMultisig()
       }
       /**
-       * <code>.api_pb.Multisig multisig = 7 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 7;</code>
        * @return Whether the multisig field is set.
        */
-      public fun hasMultisig(): kotlin.Boolean {
+      fun hasMultisig(): kotlin.Boolean {
         return _builder.hasMultisig()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.AddressesResponse.copy(block: counters.minter.grpc.client.AddressesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesResponse =
+inline fun counters.minter.grpc.client.AddressesResponse.copy(block: counters.minter.grpc.client.AddressesResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesResponse =
   counters.minter.grpc.client.AddressesResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.AddressesResponse.Result.copy(block: counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesResponse.Result =
+inline fun counters.minter.grpc.client.AddressesResponse.Result.copy(block: counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesResponse.Result =
   counters.minter.grpc.client.AddressesResponseKt.ResultKt.Dsl._create(this.toBuilder()).apply { block() }._build()

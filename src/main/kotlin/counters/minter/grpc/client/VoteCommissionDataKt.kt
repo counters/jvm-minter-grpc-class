@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun voteCommissionData(block: counters.minter.grpc.client.VoteCommissionDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VoteCommissionData =
+inline fun voteCommissionData(block: counters.minter.grpc.client.VoteCommissionDataKt.Dsl.() -> Unit): counters.minter.grpc.client.VoteCommissionData =
   counters.minter.grpc.client.VoteCommissionDataKt.Dsl._create(counters.minter.grpc.client.VoteCommissionData.newBuilder()).apply { block() }._build()
-public object VoteCommissionDataKt {
+object VoteCommissionDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.VoteCommissionData.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.VoteCommissionData.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.VoteCommissionData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object VoteCommissionDataKt {
     internal fun _build(): counters.minter.grpc.client.VoteCommissionData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public var pubKey: kotlin.String
+    var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -33,16 +33,16 @@ public object VoteCommissionDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
-    public fun clearPubKey() {
+    fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,16 +50,16 @@ public object VoteCommissionDataKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 3 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 3;</code>
      */
-    public var coin: counters.minter.grpc.client.Coin
+    var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -67,23 +67,23 @@ public object VoteCommissionDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 3 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 3;</code>
      */
-    public fun clearCoin() {
+    fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 3 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 3;</code>
      * @return Whether the coin field is set.
      */
-    public fun hasCoin(): kotlin.Boolean {
+    fun hasCoin(): kotlin.Boolean {
       return _builder.hasCoin()
     }
 
     /**
-     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
+     * <code>string payload_byte = 4;</code>
      */
-    public var payloadByte: kotlin.String
+    var payloadByte: kotlin.String
       @JvmName("getPayloadByte")
       get() = _builder.getPayloadByte()
       @JvmName("setPayloadByte")
@@ -91,16 +91,16 @@ public object VoteCommissionDataKt {
         _builder.setPayloadByte(value)
       }
     /**
-     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
+     * <code>string payload_byte = 4;</code>
      */
-    public fun clearPayloadByte() {
+    fun clearPayloadByte() {
       _builder.clearPayloadByte()
     }
 
     /**
-     * <code>string send = 5 [json_name = "send"];</code>
+     * <code>string send = 5;</code>
      */
-    public var send: kotlin.String
+    var send: kotlin.String
       @JvmName("getSend")
       get() = _builder.getSend()
       @JvmName("setSend")
@@ -108,16 +108,16 @@ public object VoteCommissionDataKt {
         _builder.setSend(value)
       }
     /**
-     * <code>string send = 5 [json_name = "send"];</code>
+     * <code>string send = 5;</code>
      */
-    public fun clearSend() {
+    fun clearSend() {
       _builder.clearSend()
     }
 
     /**
-     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
+     * <code>string buy_bancor = 38;</code>
      */
-    public var buyBancor: kotlin.String
+    var buyBancor: kotlin.String
       @JvmName("getBuyBancor")
       get() = _builder.getBuyBancor()
       @JvmName("setBuyBancor")
@@ -125,16 +125,16 @@ public object VoteCommissionDataKt {
         _builder.setBuyBancor(value)
       }
     /**
-     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
+     * <code>string buy_bancor = 38;</code>
      */
-    public fun clearBuyBancor() {
+    fun clearBuyBancor() {
       _builder.clearBuyBancor()
     }
 
     /**
-     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
+     * <code>string sell_bancor = 39;</code>
      */
-    public var sellBancor: kotlin.String
+    var sellBancor: kotlin.String
       @JvmName("getSellBancor")
       get() = _builder.getSellBancor()
       @JvmName("setSellBancor")
@@ -142,16 +142,16 @@ public object VoteCommissionDataKt {
         _builder.setSellBancor(value)
       }
     /**
-     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
+     * <code>string sell_bancor = 39;</code>
      */
-    public fun clearSellBancor() {
+    fun clearSellBancor() {
       _builder.clearSellBancor()
     }
 
     /**
-     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
+     * <code>string sell_all_bancor = 40;</code>
      */
-    public var sellAllBancor: kotlin.String
+    var sellAllBancor: kotlin.String
       @JvmName("getSellAllBancor")
       get() = _builder.getSellAllBancor()
       @JvmName("setSellAllBancor")
@@ -159,16 +159,16 @@ public object VoteCommissionDataKt {
         _builder.setSellAllBancor(value)
       }
     /**
-     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
+     * <code>string sell_all_bancor = 40;</code>
      */
-    public fun clearSellAllBancor() {
+    fun clearSellAllBancor() {
       _builder.clearSellAllBancor()
     }
 
     /**
-     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
+     * <code>string buy_pool_base = 41;</code>
      */
-    public var buyPoolBase: kotlin.String
+    var buyPoolBase: kotlin.String
       @JvmName("getBuyPoolBase")
       get() = _builder.getBuyPoolBase()
       @JvmName("setBuyPoolBase")
@@ -176,16 +176,16 @@ public object VoteCommissionDataKt {
         _builder.setBuyPoolBase(value)
       }
     /**
-     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
+     * <code>string buy_pool_base = 41;</code>
      */
-    public fun clearBuyPoolBase() {
+    fun clearBuyPoolBase() {
       _builder.clearBuyPoolBase()
     }
 
     /**
-     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
+     * <code>string buy_pool_delta = 53;</code>
      */
-    public var buyPoolDelta: kotlin.String
+    var buyPoolDelta: kotlin.String
       @JvmName("getBuyPoolDelta")
       get() = _builder.getBuyPoolDelta()
       @JvmName("setBuyPoolDelta")
@@ -193,16 +193,16 @@ public object VoteCommissionDataKt {
         _builder.setBuyPoolDelta(value)
       }
     /**
-     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
+     * <code>string buy_pool_delta = 53;</code>
      */
-    public fun clearBuyPoolDelta() {
+    fun clearBuyPoolDelta() {
       _builder.clearBuyPoolDelta()
     }
 
     /**
-     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
+     * <code>string sell_pool_base = 42;</code>
      */
-    public var sellPoolBase: kotlin.String
+    var sellPoolBase: kotlin.String
       @JvmName("getSellPoolBase")
       get() = _builder.getSellPoolBase()
       @JvmName("setSellPoolBase")
@@ -210,16 +210,16 @@ public object VoteCommissionDataKt {
         _builder.setSellPoolBase(value)
       }
     /**
-     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
+     * <code>string sell_pool_base = 42;</code>
      */
-    public fun clearSellPoolBase() {
+    fun clearSellPoolBase() {
       _builder.clearSellPoolBase()
     }
 
     /**
-     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
+     * <code>string sell_pool_delta = 54;</code>
      */
-    public var sellPoolDelta: kotlin.String
+    var sellPoolDelta: kotlin.String
       @JvmName("getSellPoolDelta")
       get() = _builder.getSellPoolDelta()
       @JvmName("setSellPoolDelta")
@@ -227,16 +227,16 @@ public object VoteCommissionDataKt {
         _builder.setSellPoolDelta(value)
       }
     /**
-     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
+     * <code>string sell_pool_delta = 54;</code>
      */
-    public fun clearSellPoolDelta() {
+    fun clearSellPoolDelta() {
       _builder.clearSellPoolDelta()
     }
 
     /**
-     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
+     * <code>string sell_all_pool_base = 43;</code>
      */
-    public var sellAllPoolBase: kotlin.String
+    var sellAllPoolBase: kotlin.String
       @JvmName("getSellAllPoolBase")
       get() = _builder.getSellAllPoolBase()
       @JvmName("setSellAllPoolBase")
@@ -244,16 +244,16 @@ public object VoteCommissionDataKt {
         _builder.setSellAllPoolBase(value)
       }
     /**
-     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
+     * <code>string sell_all_pool_base = 43;</code>
      */
-    public fun clearSellAllPoolBase() {
+    fun clearSellAllPoolBase() {
       _builder.clearSellAllPoolBase()
     }
 
     /**
-     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
+     * <code>string sell_all_pool_delta = 55;</code>
      */
-    public var sellAllPoolDelta: kotlin.String
+    var sellAllPoolDelta: kotlin.String
       @JvmName("getSellAllPoolDelta")
       get() = _builder.getSellAllPoolDelta()
       @JvmName("setSellAllPoolDelta")
@@ -261,16 +261,16 @@ public object VoteCommissionDataKt {
         _builder.setSellAllPoolDelta(value)
       }
     /**
-     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
+     * <code>string sell_all_pool_delta = 55;</code>
      */
-    public fun clearSellAllPoolDelta() {
+    fun clearSellAllPoolDelta() {
       _builder.clearSellAllPoolDelta()
     }
 
     /**
-     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
+     * <code>string create_ticker3 = 7;</code>
      */
-    public var createTicker3: kotlin.String
+    var createTicker3: kotlin.String
       @JvmName("getCreateTicker3")
       get() = _builder.getCreateTicker3()
       @JvmName("setCreateTicker3")
@@ -278,16 +278,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateTicker3(value)
       }
     /**
-     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
+     * <code>string create_ticker3 = 7;</code>
      */
-    public fun clearCreateTicker3() {
+    fun clearCreateTicker3() {
       _builder.clearCreateTicker3()
     }
 
     /**
-     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
+     * <code>string create_ticker4 = 8;</code>
      */
-    public var createTicker4: kotlin.String
+    var createTicker4: kotlin.String
       @JvmName("getCreateTicker4")
       get() = _builder.getCreateTicker4()
       @JvmName("setCreateTicker4")
@@ -295,16 +295,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateTicker4(value)
       }
     /**
-     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
+     * <code>string create_ticker4 = 8;</code>
      */
-    public fun clearCreateTicker4() {
+    fun clearCreateTicker4() {
       _builder.clearCreateTicker4()
     }
 
     /**
-     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
+     * <code>string create_ticker5 = 9;</code>
      */
-    public var createTicker5: kotlin.String
+    var createTicker5: kotlin.String
       @JvmName("getCreateTicker5")
       get() = _builder.getCreateTicker5()
       @JvmName("setCreateTicker5")
@@ -312,16 +312,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateTicker5(value)
       }
     /**
-     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
+     * <code>string create_ticker5 = 9;</code>
      */
-    public fun clearCreateTicker5() {
+    fun clearCreateTicker5() {
       _builder.clearCreateTicker5()
     }
 
     /**
-     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
+     * <code>string create_ticker6 = 10;</code>
      */
-    public var createTicker6: kotlin.String
+    var createTicker6: kotlin.String
       @JvmName("getCreateTicker6")
       get() = _builder.getCreateTicker6()
       @JvmName("setCreateTicker6")
@@ -329,16 +329,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateTicker6(value)
       }
     /**
-     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
+     * <code>string create_ticker6 = 10;</code>
      */
-    public fun clearCreateTicker6() {
+    fun clearCreateTicker6() {
       _builder.clearCreateTicker6()
     }
 
     /**
-     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
+     * <code>string create_ticker7_10 = 11;</code>
      */
-    public var createTicker710: kotlin.String
+    var createTicker710: kotlin.String
       @JvmName("getCreateTicker710")
       get() = _builder.getCreateTicker710()
       @JvmName("setCreateTicker710")
@@ -346,16 +346,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateTicker710(value)
       }
     /**
-     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
+     * <code>string create_ticker7_10 = 11;</code>
      */
-    public fun clearCreateTicker710() {
+    fun clearCreateTicker710() {
       _builder.clearCreateTicker710()
     }
 
     /**
-     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
+     * <code>string create_coin = 34;</code>
      */
-    public var createCoin: kotlin.String
+    var createCoin: kotlin.String
       @JvmName("getCreateCoin")
       get() = _builder.getCreateCoin()
       @JvmName("setCreateCoin")
@@ -363,16 +363,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateCoin(value)
       }
     /**
-     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
+     * <code>string create_coin = 34;</code>
      */
-    public fun clearCreateCoin() {
+    fun clearCreateCoin() {
       _builder.clearCreateCoin()
     }
 
     /**
-     * <code>string create_token = 35 [json_name = "createToken"];</code>
+     * <code>string create_token = 35;</code>
      */
-    public var createToken: kotlin.String
+    var createToken: kotlin.String
       @JvmName("getCreateToken")
       get() = _builder.getCreateToken()
       @JvmName("setCreateToken")
@@ -380,16 +380,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateToken(value)
       }
     /**
-     * <code>string create_token = 35 [json_name = "createToken"];</code>
+     * <code>string create_token = 35;</code>
      */
-    public fun clearCreateToken() {
+    fun clearCreateToken() {
       _builder.clearCreateToken()
     }
 
     /**
-     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
+     * <code>string recreate_coin = 36;</code>
      */
-    public var recreateCoin: kotlin.String
+    var recreateCoin: kotlin.String
       @JvmName("getRecreateCoin")
       get() = _builder.getRecreateCoin()
       @JvmName("setRecreateCoin")
@@ -397,16 +397,16 @@ public object VoteCommissionDataKt {
         _builder.setRecreateCoin(value)
       }
     /**
-     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
+     * <code>string recreate_coin = 36;</code>
      */
-    public fun clearRecreateCoin() {
+    fun clearRecreateCoin() {
       _builder.clearRecreateCoin()
     }
 
     /**
-     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
+     * <code>string recreate_token = 37;</code>
      */
-    public var recreateToken: kotlin.String
+    var recreateToken: kotlin.String
       @JvmName("getRecreateToken")
       get() = _builder.getRecreateToken()
       @JvmName("setRecreateToken")
@@ -414,16 +414,16 @@ public object VoteCommissionDataKt {
         _builder.setRecreateToken(value)
       }
     /**
-     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
+     * <code>string recreate_token = 37;</code>
      */
-    public fun clearRecreateToken() {
+    fun clearRecreateToken() {
       _builder.clearRecreateToken()
     }
 
     /**
-     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
+     * <code>string declare_candidacy = 13;</code>
      */
-    public var declareCandidacy: kotlin.String
+    var declareCandidacy: kotlin.String
       @JvmName("getDeclareCandidacy")
       get() = _builder.getDeclareCandidacy()
       @JvmName("setDeclareCandidacy")
@@ -431,16 +431,16 @@ public object VoteCommissionDataKt {
         _builder.setDeclareCandidacy(value)
       }
     /**
-     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
+     * <code>string declare_candidacy = 13;</code>
      */
-    public fun clearDeclareCandidacy() {
+    fun clearDeclareCandidacy() {
       _builder.clearDeclareCandidacy()
     }
 
     /**
-     * <code>string delegate = 14 [json_name = "delegate"];</code>
+     * <code>string delegate = 14;</code>
      */
-    public var delegate: kotlin.String
+    var delegate: kotlin.String
       @JvmName("getDelegate")
       get() = _builder.getDelegate()
       @JvmName("setDelegate")
@@ -448,16 +448,16 @@ public object VoteCommissionDataKt {
         _builder.setDelegate(value)
       }
     /**
-     * <code>string delegate = 14 [json_name = "delegate"];</code>
+     * <code>string delegate = 14;</code>
      */
-    public fun clearDelegate() {
+    fun clearDelegate() {
       _builder.clearDelegate()
     }
 
     /**
-     * <code>string unbond = 15 [json_name = "unbond"];</code>
+     * <code>string unbond = 15;</code>
      */
-    public var unbond: kotlin.String
+    var unbond: kotlin.String
       @JvmName("getUnbond")
       get() = _builder.getUnbond()
       @JvmName("setUnbond")
@@ -465,16 +465,16 @@ public object VoteCommissionDataKt {
         _builder.setUnbond(value)
       }
     /**
-     * <code>string unbond = 15 [json_name = "unbond"];</code>
+     * <code>string unbond = 15;</code>
      */
-    public fun clearUnbond() {
+    fun clearUnbond() {
       _builder.clearUnbond()
     }
 
     /**
-     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
+     * <code>string redeem_check = 16;</code>
      */
-    public var redeemCheck: kotlin.String
+    var redeemCheck: kotlin.String
       @JvmName("getRedeemCheck")
       get() = _builder.getRedeemCheck()
       @JvmName("setRedeemCheck")
@@ -482,16 +482,16 @@ public object VoteCommissionDataKt {
         _builder.setRedeemCheck(value)
       }
     /**
-     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
+     * <code>string redeem_check = 16;</code>
      */
-    public fun clearRedeemCheck() {
+    fun clearRedeemCheck() {
       _builder.clearRedeemCheck()
     }
 
     /**
-     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
+     * <code>string set_candidate_on = 44;</code>
      */
-    public var setCandidateOn: kotlin.String
+    var setCandidateOn: kotlin.String
       @JvmName("getSetCandidateOn")
       get() = _builder.getSetCandidateOn()
       @JvmName("setSetCandidateOn")
@@ -499,16 +499,16 @@ public object VoteCommissionDataKt {
         _builder.setSetCandidateOn(value)
       }
     /**
-     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
+     * <code>string set_candidate_on = 44;</code>
      */
-    public fun clearSetCandidateOn() {
+    fun clearSetCandidateOn() {
       _builder.clearSetCandidateOn()
     }
 
     /**
-     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
+     * <code>string set_candidate_off = 45;</code>
      */
-    public var setCandidateOff: kotlin.String
+    var setCandidateOff: kotlin.String
       @JvmName("getSetCandidateOff")
       get() = _builder.getSetCandidateOff()
       @JvmName("setSetCandidateOff")
@@ -516,16 +516,16 @@ public object VoteCommissionDataKt {
         _builder.setSetCandidateOff(value)
       }
     /**
-     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
+     * <code>string set_candidate_off = 45;</code>
      */
-    public fun clearSetCandidateOff() {
+    fun clearSetCandidateOff() {
       _builder.clearSetCandidateOff()
     }
 
     /**
-     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
+     * <code>string create_multisig = 18;</code>
      */
-    public var createMultisig: kotlin.String
+    var createMultisig: kotlin.String
       @JvmName("getCreateMultisig")
       get() = _builder.getCreateMultisig()
       @JvmName("setCreateMultisig")
@@ -533,16 +533,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateMultisig(value)
       }
     /**
-     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
+     * <code>string create_multisig = 18;</code>
      */
-    public fun clearCreateMultisig() {
+    fun clearCreateMultisig() {
       _builder.clearCreateMultisig()
     }
 
     /**
-     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
+     * <code>string multisend_base = 51;</code>
      */
-    public var multisendBase: kotlin.String
+    var multisendBase: kotlin.String
       @JvmName("getMultisendBase")
       get() = _builder.getMultisendBase()
       @JvmName("setMultisendBase")
@@ -550,16 +550,16 @@ public object VoteCommissionDataKt {
         _builder.setMultisendBase(value)
       }
     /**
-     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
+     * <code>string multisend_base = 51;</code>
      */
-    public fun clearMultisendBase() {
+    fun clearMultisendBase() {
       _builder.clearMultisendBase()
     }
 
     /**
-     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
+     * <code>string multisend_delta = 52;</code>
      */
-    public var multisendDelta: kotlin.String
+    var multisendDelta: kotlin.String
       @JvmName("getMultisendDelta")
       get() = _builder.getMultisendDelta()
       @JvmName("setMultisendDelta")
@@ -567,16 +567,16 @@ public object VoteCommissionDataKt {
         _builder.setMultisendDelta(value)
       }
     /**
-     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
+     * <code>string multisend_delta = 52;</code>
      */
-    public fun clearMultisendDelta() {
+    fun clearMultisendDelta() {
       _builder.clearMultisendDelta()
     }
 
     /**
-     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
+     * <code>string edit_candidate = 20;</code>
      */
-    public var editCandidate: kotlin.String
+    var editCandidate: kotlin.String
       @JvmName("getEditCandidate")
       get() = _builder.getEditCandidate()
       @JvmName("setEditCandidate")
@@ -584,16 +584,16 @@ public object VoteCommissionDataKt {
         _builder.setEditCandidate(value)
       }
     /**
-     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
+     * <code>string edit_candidate = 20;</code>
      */
-    public fun clearEditCandidate() {
+    fun clearEditCandidate() {
       _builder.clearEditCandidate()
     }
 
     /**
-     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
+     * <code>string set_halt_block = 21;</code>
      */
-    public var setHaltBlock: kotlin.String
+    var setHaltBlock: kotlin.String
       @JvmName("getSetHaltBlock")
       get() = _builder.getSetHaltBlock()
       @JvmName("setSetHaltBlock")
@@ -601,16 +601,16 @@ public object VoteCommissionDataKt {
         _builder.setSetHaltBlock(value)
       }
     /**
-     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
+     * <code>string set_halt_block = 21;</code>
      */
-    public fun clearSetHaltBlock() {
+    fun clearSetHaltBlock() {
       _builder.clearSetHaltBlock()
     }
 
     /**
-     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
+     * <code>string edit_ticker_owner = 22;</code>
      */
-    public var editTickerOwner: kotlin.String
+    var editTickerOwner: kotlin.String
       @JvmName("getEditTickerOwner")
       get() = _builder.getEditTickerOwner()
       @JvmName("setEditTickerOwner")
@@ -618,16 +618,16 @@ public object VoteCommissionDataKt {
         _builder.setEditTickerOwner(value)
       }
     /**
-     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
+     * <code>string edit_ticker_owner = 22;</code>
      */
-    public fun clearEditTickerOwner() {
+    fun clearEditTickerOwner() {
       _builder.clearEditTickerOwner()
     }
 
     /**
-     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
+     * <code>string edit_multisig = 23;</code>
      */
-    public var editMultisig: kotlin.String
+    var editMultisig: kotlin.String
       @JvmName("getEditMultisig")
       get() = _builder.getEditMultisig()
       @JvmName("setEditMultisig")
@@ -635,16 +635,16 @@ public object VoteCommissionDataKt {
         _builder.setEditMultisig(value)
       }
     /**
-     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
+     * <code>string edit_multisig = 23;</code>
      */
-    public fun clearEditMultisig() {
+    fun clearEditMultisig() {
       _builder.clearEditMultisig()
     }
 
     /**
-     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
+     * <code>string edit_candidate_public_key = 25;</code>
      */
-    public var editCandidatePublicKey: kotlin.String
+    var editCandidatePublicKey: kotlin.String
       @JvmName("getEditCandidatePublicKey")
       get() = _builder.getEditCandidatePublicKey()
       @JvmName("setEditCandidatePublicKey")
@@ -652,16 +652,16 @@ public object VoteCommissionDataKt {
         _builder.setEditCandidatePublicKey(value)
       }
     /**
-     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
+     * <code>string edit_candidate_public_key = 25;</code>
      */
-    public fun clearEditCandidatePublicKey() {
+    fun clearEditCandidatePublicKey() {
       _builder.clearEditCandidatePublicKey()
     }
 
     /**
-     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
+     * <code>string create_swap_pool = 48;</code>
      */
-    public var createSwapPool: kotlin.String
+    var createSwapPool: kotlin.String
       @JvmName("getCreateSwapPool")
       get() = _builder.getCreateSwapPool()
       @JvmName("setCreateSwapPool")
@@ -669,16 +669,16 @@ public object VoteCommissionDataKt {
         _builder.setCreateSwapPool(value)
       }
     /**
-     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
+     * <code>string create_swap_pool = 48;</code>
      */
-    public fun clearCreateSwapPool() {
+    fun clearCreateSwapPool() {
       _builder.clearCreateSwapPool()
     }
 
     /**
-     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
+     * <code>string add_liquidity = 49;</code>
      */
-    public var addLiquidity: kotlin.String
+    var addLiquidity: kotlin.String
       @JvmName("getAddLiquidity")
       get() = _builder.getAddLiquidity()
       @JvmName("setAddLiquidity")
@@ -686,16 +686,16 @@ public object VoteCommissionDataKt {
         _builder.setAddLiquidity(value)
       }
     /**
-     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
+     * <code>string add_liquidity = 49;</code>
      */
-    public fun clearAddLiquidity() {
+    fun clearAddLiquidity() {
       _builder.clearAddLiquidity()
     }
 
     /**
-     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
+     * <code>string remove_liquidity = 50;</code>
      */
-    public var removeLiquidity: kotlin.String
+    var removeLiquidity: kotlin.String
       @JvmName("getRemoveLiquidity")
       get() = _builder.getRemoveLiquidity()
       @JvmName("setRemoveLiquidity")
@@ -703,16 +703,16 @@ public object VoteCommissionDataKt {
         _builder.setRemoveLiquidity(value)
       }
     /**
-     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
+     * <code>string remove_liquidity = 50;</code>
      */
-    public fun clearRemoveLiquidity() {
+    fun clearRemoveLiquidity() {
       _builder.clearRemoveLiquidity()
     }
 
     /**
-     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
+     * <code>string edit_candidate_commission = 28;</code>
      */
-    public var editCandidateCommission: kotlin.String
+    var editCandidateCommission: kotlin.String
       @JvmName("getEditCandidateCommission")
       get() = _builder.getEditCandidateCommission()
       @JvmName("setEditCandidateCommission")
@@ -720,16 +720,16 @@ public object VoteCommissionDataKt {
         _builder.setEditCandidateCommission(value)
       }
     /**
-     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
+     * <code>string edit_candidate_commission = 28;</code>
      */
-    public fun clearEditCandidateCommission() {
+    fun clearEditCandidateCommission() {
       _builder.clearEditCandidateCommission()
     }
 
     /**
-     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
+     * <code>string mint_token = 46;</code>
      */
-    public var mintToken: kotlin.String
+    var mintToken: kotlin.String
       @JvmName("getMintToken")
       get() = _builder.getMintToken()
       @JvmName("setMintToken")
@@ -737,16 +737,16 @@ public object VoteCommissionDataKt {
         _builder.setMintToken(value)
       }
     /**
-     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
+     * <code>string mint_token = 46;</code>
      */
-    public fun clearMintToken() {
+    fun clearMintToken() {
       _builder.clearMintToken()
     }
 
     /**
-     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
+     * <code>string burn_token = 47;</code>
      */
-    public var burnToken: kotlin.String
+    var burnToken: kotlin.String
       @JvmName("getBurnToken")
       get() = _builder.getBurnToken()
       @JvmName("setBurnToken")
@@ -754,16 +754,16 @@ public object VoteCommissionDataKt {
         _builder.setBurnToken(value)
       }
     /**
-     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
+     * <code>string burn_token = 47;</code>
      */
-    public fun clearBurnToken() {
+    fun clearBurnToken() {
       _builder.clearBurnToken()
     }
 
     /**
-     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
+     * <code>string vote_commission = 31;</code>
      */
-    public var voteCommission: kotlin.String
+    var voteCommission: kotlin.String
       @JvmName("getVoteCommission")
       get() = _builder.getVoteCommission()
       @JvmName("setVoteCommission")
@@ -771,16 +771,16 @@ public object VoteCommissionDataKt {
         _builder.setVoteCommission(value)
       }
     /**
-     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
+     * <code>string vote_commission = 31;</code>
      */
-    public fun clearVoteCommission() {
+    fun clearVoteCommission() {
       _builder.clearVoteCommission()
     }
 
     /**
-     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
+     * <code>string vote_update = 32;</code>
      */
-    public var voteUpdate: kotlin.String
+    var voteUpdate: kotlin.String
       @JvmName("getVoteUpdate")
       get() = _builder.getVoteUpdate()
       @JvmName("setVoteUpdate")
@@ -788,16 +788,16 @@ public object VoteCommissionDataKt {
         _builder.setVoteUpdate(value)
       }
     /**
-     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
+     * <code>string vote_update = 32;</code>
      */
-    public fun clearVoteUpdate() {
+    fun clearVoteUpdate() {
       _builder.clearVoteUpdate()
     }
 
     /**
-     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
+     * <code>string failed_tx = 56;</code>
      */
-    public var failedTx: kotlin.String
+    var failedTx: kotlin.String
       @JvmName("getFailedTx")
       get() = _builder.getFailedTx()
       @JvmName("setFailedTx")
@@ -805,16 +805,16 @@ public object VoteCommissionDataKt {
         _builder.setFailedTx(value)
       }
     /**
-     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
+     * <code>string failed_tx = 56;</code>
      */
-    public fun clearFailedTx() {
+    fun clearFailedTx() {
       _builder.clearFailedTx()
     }
 
     /**
-     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
+     * <code>string add_limit_order = 57;</code>
      */
-    public var addLimitOrder: kotlin.String
+    var addLimitOrder: kotlin.String
       @JvmName("getAddLimitOrder")
       get() = _builder.getAddLimitOrder()
       @JvmName("setAddLimitOrder")
@@ -822,16 +822,16 @@ public object VoteCommissionDataKt {
         _builder.setAddLimitOrder(value)
       }
     /**
-     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
+     * <code>string add_limit_order = 57;</code>
      */
-    public fun clearAddLimitOrder() {
+    fun clearAddLimitOrder() {
       _builder.clearAddLimitOrder()
     }
 
     /**
-     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
+     * <code>string remove_limit_order = 58;</code>
      */
-    public var removeLimitOrder: kotlin.String
+    var removeLimitOrder: kotlin.String
       @JvmName("getRemoveLimitOrder")
       get() = _builder.getRemoveLimitOrder()
       @JvmName("setRemoveLimitOrder")
@@ -839,13 +839,13 @@ public object VoteCommissionDataKt {
         _builder.setRemoveLimitOrder(value)
       }
     /**
-     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
+     * <code>string remove_limit_order = 58;</code>
      */
-    public fun clearRemoveLimitOrder() {
+    fun clearRemoveLimitOrder() {
       _builder.clearRemoveLimitOrder()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.VoteCommissionData.copy(block: counters.minter.grpc.client.VoteCommissionDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VoteCommissionData =
+inline fun counters.minter.grpc.client.VoteCommissionData.copy(block: counters.minter.grpc.client.VoteCommissionDataKt.Dsl.() -> Unit): counters.minter.grpc.client.VoteCommissionData =
   counters.minter.grpc.client.VoteCommissionDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

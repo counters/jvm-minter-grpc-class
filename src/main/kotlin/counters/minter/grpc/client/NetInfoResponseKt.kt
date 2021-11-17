@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun netInfoResponse(block: counters.minter.grpc.client.NetInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse =
+inline fun netInfoResponse(block: counters.minter.grpc.client.NetInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse =
   counters.minter.grpc.client.NetInfoResponseKt.Dsl._create(counters.minter.grpc.client.NetInfoResponse.newBuilder()).apply { block() }._build()
-public object NetInfoResponseKt {
+object NetInfoResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.NetInfoResponse.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NetInfoResponse.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.NetInfoResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object NetInfoResponseKt {
     internal fun _build(): counters.minter.grpc.client.NetInfoResponse = _builder.build()
 
     /**
-     * <code>bool listening = 4 [json_name = "listening"];</code>
+     * <code>bool listening = 4;</code>
      */
-    public var listening: kotlin.Boolean
+    var listening: kotlin.Boolean
       @JvmName("getListening")
       get() = _builder.getListening()
       @JvmName("setListening")
@@ -33,9 +33,9 @@ public object NetInfoResponseKt {
         _builder.setListening(value)
       }
     /**
-     * <code>bool listening = 4 [json_name = "listening"];</code>
+     * <code>bool listening = 4;</code>
      */
-    public fun clearListening() {
+    fun clearListening() {
       _builder.clearListening()
     }
 
@@ -44,75 +44,73 @@ public object NetInfoResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class ListenersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class ListenersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @return A list containing the listeners.
      */
-    public val listeners: com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>
-      @kotlin.jvm.JvmSynthetic
+    val listeners: com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getListenersList()
       )
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param value The listeners to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addListeners")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.add(value: kotlin.String) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.add(value: kotlin.String) {
       _builder.addListeners(value)
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param value The listeners to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignListeners")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.plusAssign(value: kotlin.String) {
-      add(value)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.plusAssign(value: kotlin.String) {
+      _builder.addListeners(value)
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param values The listeners to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllListeners")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllListeners(values)
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param values The listeners to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllListeners")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-      addAll(values)
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllListeners(values)
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param index The index to set the value at.
      * @param value The listeners to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setListeners")
-    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.set(index: kotlin.Int, value: kotlin.String) {
+    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setListeners(index, value)
     }/**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearListeners")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<kotlin.String, ListenersProxy>.clear() {
       _builder.clearListeners()
     }
     /**
-     * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+     * <code>int64 count_peers = 2;</code>
      */
-    public var countPeers: kotlin.Long
+    var countPeers: kotlin.Long
       @JvmName("getCountPeers")
       get() = _builder.getCountPeers()
       @JvmName("setCountPeers")
@@ -120,9 +118,9 @@ public object NetInfoResponseKt {
         _builder.setCountPeers(value)
       }
     /**
-     * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+     * <code>int64 count_peers = 2;</code>
      */
-    public fun clearCountPeers() {
+    fun clearCountPeers() {
       _builder.clearCountPeers()
     }
 
@@ -131,76 +129,74 @@ public object NetInfoResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class PeersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    class PeersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
-     public val peers: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>
+     val peers: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getPeersList()
       )
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      * @param value The peers to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addPeers")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.add(value: counters.minter.grpc.client.NetInfoResponse.Peer) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.add(value: counters.minter.grpc.client.NetInfoResponse.Peer) {
       _builder.addPeers(value)
     }/**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      * @param value The peers to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignPeers")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.plusAssign(value: counters.minter.grpc.client.NetInfoResponse.Peer) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.plusAssign(value: counters.minter.grpc.client.NetInfoResponse.Peer) {
       add(value)
     }/**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      * @param values The peers to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllPeers")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer>) {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer>) {
       _builder.addAllPeers(values)
     }/**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      * @param values The peers to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllPeers")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer>) {
+    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      * @param index The index to set the value at.
      * @param value The peers to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setPeers")
-    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.NetInfoResponse.Peer) {
+    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.NetInfoResponse.Peer) {
       _builder.setPeers(index, value)
     }/**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearPeers")
-    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.clear() {
+    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer, PeersProxy>.clear() {
       _builder.clearPeers()
     }}
   @kotlin.jvm.JvmSynthetic
-  public inline fun peer(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer =
+  inline fun peer(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer =
     counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl._create(counters.minter.grpc.client.NetInfoResponse.Peer.newBuilder()).apply { block() }._build()
-  public object PeerKt {
+  object PeerKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.Builder
+    class Dsl private constructor(
+      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.Builder
     ) {
-      public companion object {
+      companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.NetInfoResponse.Peer.Builder): Dsl = Dsl(builder)
@@ -215,9 +211,9 @@ public object NetInfoResponseKt {
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
-      public var latestBlockHeight: com.google.protobuf.UInt64Value
+      var latestBlockHeight: com.google.protobuf.UInt64Value
         @JvmName("getLatestBlockHeight")
         get() = _builder.getLatestBlockHeight()
         @JvmName("setLatestBlockHeight")
@@ -229,9 +225,9 @@ public object NetInfoResponseKt {
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
-      public fun clearLatestBlockHeight() {
+      fun clearLatestBlockHeight() {
         _builder.clearLatestBlockHeight()
       }
       /**
@@ -239,17 +235,17 @@ public object NetInfoResponseKt {
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        * @return Whether the latestBlockHeight field is set.
        */
-      public fun hasLatestBlockHeight(): kotlin.Boolean {
+      fun hasLatestBlockHeight(): kotlin.Boolean {
         return _builder.hasLatestBlockHeight()
       }
 
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
-      public var nodeInfo: counters.minter.grpc.client.NodeInfo
+      var nodeInfo: counters.minter.grpc.client.NodeInfo
         @JvmName("getNodeInfo")
         get() = _builder.getNodeInfo()
         @JvmName("setNodeInfo")
@@ -257,23 +253,23 @@ public object NetInfoResponseKt {
           _builder.setNodeInfo(value)
         }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
-      public fun clearNodeInfo() {
+      fun clearNodeInfo() {
         _builder.clearNodeInfo()
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        * @return Whether the nodeInfo field is set.
        */
-      public fun hasNodeInfo(): kotlin.Boolean {
+      fun hasNodeInfo(): kotlin.Boolean {
         return _builder.hasNodeInfo()
       }
 
       /**
-       * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+       * <code>bool is_outbound = 1;</code>
        */
-      public var isOutbound: kotlin.Boolean
+      var isOutbound: kotlin.Boolean
         @JvmName("getIsOutbound")
         get() = _builder.getIsOutbound()
         @JvmName("setIsOutbound")
@@ -281,16 +277,16 @@ public object NetInfoResponseKt {
           _builder.setIsOutbound(value)
         }
       /**
-       * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+       * <code>bool is_outbound = 1;</code>
        */
-      public fun clearIsOutbound() {
+      fun clearIsOutbound() {
         _builder.clearIsOutbound()
       }
 
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
-      public var connectionStatus: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus
+      var connectionStatus: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus
         @JvmName("getConnectionStatus")
         get() = _builder.getConnectionStatus()
         @JvmName("setConnectionStatus")
@@ -298,23 +294,23 @@ public object NetInfoResponseKt {
           _builder.setConnectionStatus(value)
         }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
-      public fun clearConnectionStatus() {
+      fun clearConnectionStatus() {
         _builder.clearConnectionStatus()
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        * @return Whether the connectionStatus field is set.
        */
-      public fun hasConnectionStatus(): kotlin.Boolean {
+      fun hasConnectionStatus(): kotlin.Boolean {
         return _builder.hasConnectionStatus()
       }
 
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        */
-      public var remoteIp: kotlin.String
+      var remoteIp: kotlin.String
         @JvmName("getRemoteIp")
         get() = _builder.getRemoteIp()
         @JvmName("setRemoteIp")
@@ -322,22 +318,22 @@ public object NetInfoResponseKt {
           _builder.setRemoteIp(value)
         }
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        */
-      public fun clearRemoteIp() {
+      fun clearRemoteIp() {
         _builder.clearRemoteIp()
       }
     }
     @kotlin.jvm.JvmSynthetic
-    public inline fun connectionStatus(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus =
+    inline fun connectionStatus(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus =
       counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl._create(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.newBuilder()).apply { block() }._build()
-    public object ConnectionStatusKt {
+    object ConnectionStatusKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       @com.google.protobuf.kotlin.ProtoDslMarker
-      public class Dsl private constructor(
-        private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder
+      class Dsl private constructor(
+        @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder
       ) {
-        public companion object {
+        companion object {
           @kotlin.jvm.JvmSynthetic
           @kotlin.PublishedApi
           internal fun _create(builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder): Dsl = Dsl(builder)
@@ -348,9 +344,9 @@ public object NetInfoResponseKt {
         internal fun _build(): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus = _builder.build()
 
         /**
-         * <code>uint64 duration = 4 [json_name = "duration"];</code>
+         * <code>uint64 duration = 4;</code>
          */
-        public var duration: kotlin.Long
+        var duration: kotlin.Long
           @JvmName("getDuration")
           get() = _builder.getDuration()
           @JvmName("setDuration")
@@ -358,16 +354,16 @@ public object NetInfoResponseKt {
             _builder.setDuration(value)
           }
         /**
-         * <code>uint64 duration = 4 [json_name = "duration"];</code>
+         * <code>uint64 duration = 4;</code>
          */
-        public fun clearDuration() {
+        fun clearDuration() {
           _builder.clearDuration()
         }
 
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
-        public var sendMonitor: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor
+        var sendMonitor: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor
           @JvmName("getSendMonitor")
           get() = _builder.getSendMonitor()
           @JvmName("setSendMonitor")
@@ -375,23 +371,23 @@ public object NetInfoResponseKt {
             _builder.setSendMonitor(value)
           }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
-        public fun clearSendMonitor() {
+        fun clearSendMonitor() {
           _builder.clearSendMonitor()
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          * @return Whether the sendMonitor field is set.
          */
-        public fun hasSendMonitor(): kotlin.Boolean {
+        fun hasSendMonitor(): kotlin.Boolean {
           return _builder.hasSendMonitor()
         }
 
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
-        public var recvMonitor: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor
+        var recvMonitor: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor
           @JvmName("getRecvMonitor")
           get() = _builder.getRecvMonitor()
           @JvmName("setRecvMonitor")
@@ -399,16 +395,16 @@ public object NetInfoResponseKt {
             _builder.setRecvMonitor(value)
           }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
-        public fun clearRecvMonitor() {
+        fun clearRecvMonitor() {
           _builder.clearRecvMonitor()
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          * @return Whether the recvMonitor field is set.
          */
-        public fun hasRecvMonitor(): kotlin.Boolean {
+        fun hasRecvMonitor(): kotlin.Boolean {
           return _builder.hasRecvMonitor()
         }
 
@@ -417,76 +413,74 @@ public object NetInfoResponseKt {
          * generics.
          */
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-        public class ChannelsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+        class ChannelsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
-         public val channels: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>
+         val channels: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>
           @kotlin.jvm.JvmSynthetic
           get() = com.google.protobuf.kotlin.DslList(
             _builder.getChannelsList()
           )
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          * @param value The channels to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addChannels")
-        public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.add(value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
+        fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.add(value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
           _builder.addChannels(value)
         }/**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          * @param value The channels to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("plusAssignChannels")
-        @Suppress("NOTHING_TO_INLINE")
-        public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.plusAssign(value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
+        inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.plusAssign(value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
           add(value)
         }/**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          * @param values The channels to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addAllChannels")
-        public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel>) {
+        fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel>) {
           _builder.addAllChannels(values)
         }/**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          * @param values The channels to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("plusAssignAllChannels")
-        @Suppress("NOTHING_TO_INLINE")
-        public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel>) {
+        inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel>) {
           addAll(values)
         }/**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          * @param index The index to set the value at.
          * @param value The channels to set.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("setChannels")
-        public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
+        operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel) {
           _builder.setChannels(index, value)
         }/**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearChannels")
-        public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.clear() {
+        fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, ChannelsProxy>.clear() {
           _builder.clearChannels()
         }}
       @kotlin.jvm.JvmSynthetic
-      public inline fun monitor(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor =
+      inline fun monitor(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor =
         counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl._create(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.newBuilder()).apply { block() }._build()
-      public object MonitorKt {
+      object MonitorKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         @com.google.protobuf.kotlin.ProtoDslMarker
-        public class Dsl private constructor(
-          private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder
+        class Dsl private constructor(
+          @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder
         ) {
-          public companion object {
+          companion object {
             @kotlin.jvm.JvmSynthetic
             @kotlin.PublishedApi
             internal fun _create(builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder): Dsl = Dsl(builder)
@@ -497,9 +491,9 @@ public object NetInfoResponseKt {
           internal fun _build(): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor = _builder.build()
 
           /**
-           * <code>bool active = 13 [json_name = "active"];</code>
+           * <code>bool active = 13;</code>
            */
-          public var active: kotlin.Boolean
+          var active: kotlin.Boolean
             @JvmName("getActive")
             get() = _builder.getActive()
             @JvmName("setActive")
@@ -507,16 +501,16 @@ public object NetInfoResponseKt {
               _builder.setActive(value)
             }
           /**
-           * <code>bool active = 13 [json_name = "active"];</code>
+           * <code>bool active = 13;</code>
            */
-          public fun clearActive() {
+          fun clearActive() {
             _builder.clearActive()
           }
 
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            */
-          public var start: kotlin.String
+          var start: kotlin.String
             @JvmName("getStart")
             get() = _builder.getStart()
             @JvmName("setStart")
@@ -524,16 +518,16 @@ public object NetInfoResponseKt {
               _builder.setStart(value)
             }
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            */
-          public fun clearStart() {
+          fun clearStart() {
             _builder.clearStart()
           }
 
           /**
-           * <code>int64 duration = 2 [json_name = "duration"];</code>
+           * <code>int64 duration = 2;</code>
            */
-          public var duration: kotlin.Long
+          var duration: kotlin.Long
             @JvmName("getDuration")
             get() = _builder.getDuration()
             @JvmName("setDuration")
@@ -541,16 +535,16 @@ public object NetInfoResponseKt {
               _builder.setDuration(value)
             }
           /**
-           * <code>int64 duration = 2 [json_name = "duration"];</code>
+           * <code>int64 duration = 2;</code>
            */
-          public fun clearDuration() {
+          fun clearDuration() {
             _builder.clearDuration()
           }
 
           /**
-           * <code>int64 idle = 3 [json_name = "idle"];</code>
+           * <code>int64 idle = 3;</code>
            */
-          public var idle: kotlin.Long
+          var idle: kotlin.Long
             @JvmName("getIdle")
             get() = _builder.getIdle()
             @JvmName("setIdle")
@@ -558,16 +552,16 @@ public object NetInfoResponseKt {
               _builder.setIdle(value)
             }
           /**
-           * <code>int64 idle = 3 [json_name = "idle"];</code>
+           * <code>int64 idle = 3;</code>
            */
-          public fun clearIdle() {
+          fun clearIdle() {
             _builder.clearIdle()
           }
 
           /**
-           * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+           * <code>int64 bytes = 4;</code>
            */
-          public var bytes: kotlin.Long
+          var bytes: kotlin.Long
             @JvmName("getBytes")
             get() = _builder.getBytes()
             @JvmName("setBytes")
@@ -575,16 +569,16 @@ public object NetInfoResponseKt {
               _builder.setBytes(value)
             }
           /**
-           * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+           * <code>int64 bytes = 4;</code>
            */
-          public fun clearBytes() {
+          fun clearBytes() {
             _builder.clearBytes()
           }
 
           /**
-           * <code>int64 samples = 5 [json_name = "samples"];</code>
+           * <code>int64 samples = 5;</code>
            */
-          public var samples: kotlin.Long
+          var samples: kotlin.Long
             @JvmName("getSamples")
             get() = _builder.getSamples()
             @JvmName("setSamples")
@@ -592,16 +586,16 @@ public object NetInfoResponseKt {
               _builder.setSamples(value)
             }
           /**
-           * <code>int64 samples = 5 [json_name = "samples"];</code>
+           * <code>int64 samples = 5;</code>
            */
-          public fun clearSamples() {
+          fun clearSamples() {
             _builder.clearSamples()
           }
 
           /**
-           * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+           * <code>int64 inst_rate = 6;</code>
            */
-          public var instRate: kotlin.Long
+          var instRate: kotlin.Long
             @JvmName("getInstRate")
             get() = _builder.getInstRate()
             @JvmName("setInstRate")
@@ -609,16 +603,16 @@ public object NetInfoResponseKt {
               _builder.setInstRate(value)
             }
           /**
-           * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+           * <code>int64 inst_rate = 6;</code>
            */
-          public fun clearInstRate() {
+          fun clearInstRate() {
             _builder.clearInstRate()
           }
 
           /**
-           * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+           * <code>int64 cur_rate = 7;</code>
            */
-          public var curRate: kotlin.Long
+          var curRate: kotlin.Long
             @JvmName("getCurRate")
             get() = _builder.getCurRate()
             @JvmName("setCurRate")
@@ -626,16 +620,16 @@ public object NetInfoResponseKt {
               _builder.setCurRate(value)
             }
           /**
-           * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+           * <code>int64 cur_rate = 7;</code>
            */
-          public fun clearCurRate() {
+          fun clearCurRate() {
             _builder.clearCurRate()
           }
 
           /**
-           * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+           * <code>int64 avg_rate = 8;</code>
            */
-          public var avgRate: kotlin.Long
+          var avgRate: kotlin.Long
             @JvmName("getAvgRate")
             get() = _builder.getAvgRate()
             @JvmName("setAvgRate")
@@ -643,16 +637,16 @@ public object NetInfoResponseKt {
               _builder.setAvgRate(value)
             }
           /**
-           * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+           * <code>int64 avg_rate = 8;</code>
            */
-          public fun clearAvgRate() {
+          fun clearAvgRate() {
             _builder.clearAvgRate()
           }
 
           /**
-           * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+           * <code>int64 peak_rate = 9;</code>
            */
-          public var peakRate: kotlin.Long
+          var peakRate: kotlin.Long
             @JvmName("getPeakRate")
             get() = _builder.getPeakRate()
             @JvmName("setPeakRate")
@@ -660,16 +654,16 @@ public object NetInfoResponseKt {
               _builder.setPeakRate(value)
             }
           /**
-           * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+           * <code>int64 peak_rate = 9;</code>
            */
-          public fun clearPeakRate() {
+          fun clearPeakRate() {
             _builder.clearPeakRate()
           }
 
           /**
-           * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+           * <code>int64 bytes_rem = 10;</code>
            */
-          public var bytesRem: kotlin.Long
+          var bytesRem: kotlin.Long
             @JvmName("getBytesRem")
             get() = _builder.getBytesRem()
             @JvmName("setBytesRem")
@@ -677,16 +671,16 @@ public object NetInfoResponseKt {
               _builder.setBytesRem(value)
             }
           /**
-           * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+           * <code>int64 bytes_rem = 10;</code>
            */
-          public fun clearBytesRem() {
+          fun clearBytesRem() {
             _builder.clearBytesRem()
           }
 
           /**
-           * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+           * <code>int64 time_rem = 11;</code>
            */
-          public var timeRem: kotlin.Long
+          var timeRem: kotlin.Long
             @JvmName("getTimeRem")
             get() = _builder.getTimeRem()
             @JvmName("setTimeRem")
@@ -694,16 +688,16 @@ public object NetInfoResponseKt {
               _builder.setTimeRem(value)
             }
           /**
-           * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+           * <code>int64 time_rem = 11;</code>
            */
-          public fun clearTimeRem() {
+          fun clearTimeRem() {
             _builder.clearTimeRem()
           }
 
           /**
-           * <code>uint64 progress = 12 [json_name = "progress"];</code>
+           * <code>uint64 progress = 12;</code>
            */
-          public var progress: kotlin.Long
+          var progress: kotlin.Long
             @JvmName("getProgress")
             get() = _builder.getProgress()
             @JvmName("setProgress")
@@ -711,23 +705,23 @@ public object NetInfoResponseKt {
               _builder.setProgress(value)
             }
           /**
-           * <code>uint64 progress = 12 [json_name = "progress"];</code>
+           * <code>uint64 progress = 12;</code>
            */
-          public fun clearProgress() {
+          fun clearProgress() {
             _builder.clearProgress()
           }
         }
       }
       @kotlin.jvm.JvmSynthetic
-      public inline fun channel(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel =
+      inline fun channel(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel =
         counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl._create(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.newBuilder()).apply { block() }._build()
-      public object ChannelKt {
+      object ChannelKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         @com.google.protobuf.kotlin.ProtoDslMarker
-        public class Dsl private constructor(
-          private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder
+        class Dsl private constructor(
+          @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder
         ) {
-          public companion object {
+          companion object {
             @kotlin.jvm.JvmSynthetic
             @kotlin.PublishedApi
             internal fun _create(builder: counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder): Dsl = Dsl(builder)
@@ -738,9 +732,9 @@ public object NetInfoResponseKt {
           internal fun _build(): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel = _builder.build()
 
           /**
-           * <code>int64 id = 5 [json_name = "id"];</code>
+           * <code>int64 id = 5;</code>
            */
-          public var id: kotlin.Long
+          var id: kotlin.Long
             @JvmName("getId")
             get() = _builder.getId()
             @JvmName("setId")
@@ -748,16 +742,16 @@ public object NetInfoResponseKt {
               _builder.setId(value)
             }
           /**
-           * <code>int64 id = 5 [json_name = "id"];</code>
+           * <code>int64 id = 5;</code>
            */
-          public fun clearId() {
+          fun clearId() {
             _builder.clearId()
           }
 
           /**
-           * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+           * <code>int64 send_queue_capacity = 1;</code>
            */
-          public var sendQueueCapacity: kotlin.Long
+          var sendQueueCapacity: kotlin.Long
             @JvmName("getSendQueueCapacity")
             get() = _builder.getSendQueueCapacity()
             @JvmName("setSendQueueCapacity")
@@ -765,16 +759,16 @@ public object NetInfoResponseKt {
               _builder.setSendQueueCapacity(value)
             }
           /**
-           * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+           * <code>int64 send_queue_capacity = 1;</code>
            */
-          public fun clearSendQueueCapacity() {
+          fun clearSendQueueCapacity() {
             _builder.clearSendQueueCapacity()
           }
 
           /**
-           * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+           * <code>int64 send_queue_size = 2;</code>
            */
-          public var sendQueueSize: kotlin.Long
+          var sendQueueSize: kotlin.Long
             @JvmName("getSendQueueSize")
             get() = _builder.getSendQueueSize()
             @JvmName("setSendQueueSize")
@@ -782,16 +776,16 @@ public object NetInfoResponseKt {
               _builder.setSendQueueSize(value)
             }
           /**
-           * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+           * <code>int64 send_queue_size = 2;</code>
            */
-          public fun clearSendQueueSize() {
+          fun clearSendQueueSize() {
             _builder.clearSendQueueSize()
           }
 
           /**
-           * <code>int64 priority = 3 [json_name = "priority"];</code>
+           * <code>int64 priority = 3;</code>
            */
-          public var priority: kotlin.Long
+          var priority: kotlin.Long
             @JvmName("getPriority")
             get() = _builder.getPriority()
             @JvmName("setPriority")
@@ -799,16 +793,16 @@ public object NetInfoResponseKt {
               _builder.setPriority(value)
             }
           /**
-           * <code>int64 priority = 3 [json_name = "priority"];</code>
+           * <code>int64 priority = 3;</code>
            */
-          public fun clearPriority() {
+          fun clearPriority() {
             _builder.clearPriority()
           }
 
           /**
-           * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+           * <code>int64 recently_sent = 4;</code>
            */
-          public var recentlySent: kotlin.Long
+          var recentlySent: kotlin.Long
             @JvmName("getRecentlySent")
             get() = _builder.getRecentlySent()
             @JvmName("setRecentlySent")
@@ -816,9 +810,9 @@ public object NetInfoResponseKt {
               _builder.setRecentlySent(value)
             }
           /**
-           * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+           * <code>int64 recently_sent = 4;</code>
            */
-          public fun clearRecentlySent() {
+          fun clearRecentlySent() {
             _builder.clearRecentlySent()
           }
         }
@@ -827,17 +821,17 @@ public object NetInfoResponseKt {
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.NetInfoResponse.copy(block: counters.minter.grpc.client.NetInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse =
+inline fun counters.minter.grpc.client.NetInfoResponse.copy(block: counters.minter.grpc.client.NetInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse =
   counters.minter.grpc.client.NetInfoResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.NetInfoResponse.Peer.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer =
+inline fun counters.minter.grpc.client.NetInfoResponse.Peer.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer =
   counters.minter.grpc.client.NetInfoResponseKt.PeerKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus =
+inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus =
   counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor =
+inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor =
   counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.MonitorKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel =
+inline fun counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.copy(block: counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl.() -> Unit): counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel =
   counters.minter.grpc.client.NetInfoResponseKt.PeerKt.ConnectionStatusKt.ChannelKt.Dsl._create(this.toBuilder()).apply { block() }._build()

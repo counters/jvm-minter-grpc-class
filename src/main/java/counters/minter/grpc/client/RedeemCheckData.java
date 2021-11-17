@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   public static final int RAW_CHECK_FIELD_NUMBER = 1;
   private volatile java.lang.Object rawCheck_;
   /**
-   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+   * <code>string raw_check = 1;</code>
    * @return The rawCheck.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+   * <code>string raw_check = 1;</code>
    * @return The bytes for rawCheck.
    */
   @java.lang.Override
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROOF_FIELD_NUMBER = 2;
   private volatile java.lang.Object proof_;
   /**
-   * <code>string proof = 2 [json_name = "proof"];</code>
+   * <code>string proof = 2;</code>
    * @return The proof.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string proof = 2 [json_name = "proof"];</code>
+   * <code>string proof = 2;</code>
    * @return The bytes for proof.
    */
   @java.lang.Override
@@ -184,10 +184,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawCheck_)) {
+    if (!getRawCheckBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rawCheck_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+    if (!getProofBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, proof_);
     }
     unknownFields.writeTo(output);
@@ -199,10 +199,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawCheck_)) {
+    if (!getRawCheckBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rawCheck_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+    if (!getProofBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, proof_);
     }
     size += unknownFields.getSerializedSize();
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object rawCheck_ = "";
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return The rawCheck.
      */
     public java.lang.String getRawCheck() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return The bytes for rawCheck.
      */
     public com.google.protobuf.ByteString
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @param value The rawCheck to set.
      * @return This builder for chaining.
      */
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearRawCheck() {
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @param value The bytes for rawCheck to set.
      * @return This builder for chaining.
      */
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object proof_ = "";
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return The proof.
      */
     public java.lang.String getProof() {
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return The bytes for proof.
      */
     public com.google.protobuf.ByteString
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @param value The proof to set.
      * @return This builder for chaining.
      */
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearProof() {
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @param value The bytes for proof to set.
      * @return This builder for chaining.
      */

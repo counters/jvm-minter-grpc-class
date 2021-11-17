@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun addressRequest(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressRequest =
+inline fun addressRequest(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressRequest =
   counters.minter.grpc.client.AddressRequestKt.Dsl._create(counters.minter.grpc.client.AddressRequest.newBuilder()).apply { block() }._build()
-public object AddressRequestKt {
+object AddressRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.AddressRequest.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.AddressRequest.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.AddressRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ public object AddressRequestKt {
     internal fun _build(): counters.minter.grpc.client.AddressRequest = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
-    public var address: kotlin.String
+    var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -33,16 +33,16 @@ public object AddressRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
-    public fun clearAddress() {
+    fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public var height: kotlin.Long
+    var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,16 +50,16 @@ public object AddressRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
-    public fun clearHeight() {
+    fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
-    public var delegated: kotlin.Boolean
+    var delegated: kotlin.Boolean
       @JvmName("getDelegated")
       get() = _builder.getDelegated()
       @JvmName("setDelegated")
@@ -67,13 +67,13 @@ public object AddressRequestKt {
         _builder.setDelegated(value)
       }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
-    public fun clearDelegated() {
+    fun clearDelegated() {
       _builder.clearDelegated()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.AddressRequest.copy(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressRequest =
+inline fun counters.minter.grpc.client.AddressRequest.copy(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressRequest =
   counters.minter.grpc.client.AddressRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

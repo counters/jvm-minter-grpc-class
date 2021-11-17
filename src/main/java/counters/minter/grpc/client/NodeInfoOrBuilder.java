@@ -8,104 +8,104 @@ public interface NodeInfoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
    * @return Whether the protocolVersion field is set.
    */
   boolean hasProtocolVersion();
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
    * @return The protocolVersion.
    */
   counters.minter.grpc.client.NodeInfo.ProtocolVersion getProtocolVersion();
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
    */
   counters.minter.grpc.client.NodeInfo.ProtocolVersionOrBuilder getProtocolVersionOrBuilder();
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1;</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1;</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
+   * <code>string listen_addr = 2;</code>
    * @return The listenAddr.
    */
   java.lang.String getListenAddr();
   /**
-   * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
+   * <code>string listen_addr = 2;</code>
    * @return The bytes for listenAddr.
    */
   com.google.protobuf.ByteString
       getListenAddrBytes();
 
   /**
-   * <code>string network = 3 [json_name = "network"];</code>
+   * <code>string network = 3;</code>
    * @return The network.
    */
   java.lang.String getNetwork();
   /**
-   * <code>string network = 3 [json_name = "network"];</code>
+   * <code>string network = 3;</code>
    * @return The bytes for network.
    */
   com.google.protobuf.ByteString
       getNetworkBytes();
 
   /**
-   * <code>string version = 4 [json_name = "version"];</code>
+   * <code>string version = 4;</code>
    * @return The version.
    */
   java.lang.String getVersion();
   /**
-   * <code>string version = 4 [json_name = "version"];</code>
+   * <code>string version = 4;</code>
    * @return The bytes for version.
    */
   com.google.protobuf.ByteString
       getVersionBytes();
 
   /**
-   * <code>string channels = 5 [json_name = "channels"];</code>
+   * <code>string channels = 5;</code>
    * @return The channels.
    */
   java.lang.String getChannels();
   /**
-   * <code>string channels = 5 [json_name = "channels"];</code>
+   * <code>string channels = 5;</code>
    * @return The bytes for channels.
    */
   com.google.protobuf.ByteString
       getChannelsBytes();
 
   /**
-   * <code>string moniker = 6 [json_name = "moniker"];</code>
+   * <code>string moniker = 6;</code>
    * @return The moniker.
    */
   java.lang.String getMoniker();
   /**
-   * <code>string moniker = 6 [json_name = "moniker"];</code>
+   * <code>string moniker = 6;</code>
    * @return The bytes for moniker.
    */
   com.google.protobuf.ByteString
       getMonikerBytes();
 
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
+   * <code>.api_pb.NodeInfo.Other other = 7;</code>
    * @return Whether the other field is set.
    */
   boolean hasOther();
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
+   * <code>.api_pb.NodeInfo.Other other = 7;</code>
    * @return The other.
    */
   counters.minter.grpc.client.NodeInfo.Other getOther();
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
+   * <code>.api_pb.NodeInfo.Other other = 7;</code>
    */
   counters.minter.grpc.client.NodeInfo.OtherOrBuilder getOtherOrBuilder();
 }

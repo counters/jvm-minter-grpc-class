@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-public inline fun coin(block: counters.minter.grpc.client.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.Coin =
+inline fun coin(block: counters.minter.grpc.client.CoinKt.Dsl.() -> Unit): counters.minter.grpc.client.Coin =
   counters.minter.grpc.client.CoinKt.Dsl._create(counters.minter.grpc.client.Coin.newBuilder()).apply { block() }._build()
-public object CoinKt {
+object CoinKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: counters.minter.grpc.client.Coin.Builder
+  class Dsl private constructor(
+    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.Coin.Builder
   ) {
-    public companion object {
+    companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.Coin.Builder): Dsl = Dsl(builder)
@@ -24,14 +24,14 @@ public object CoinKt {
 
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
-    public var id: kotlin.Long
+    var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -40,21 +40,21 @@ public object CoinKt {
       }
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
-    public fun clearId() {
+    fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
-    public var symbol: kotlin.String
+    var symbol: kotlin.String
       @JvmName("getSymbol")
       get() = _builder.getSymbol()
       @JvmName("setSymbol")
@@ -62,13 +62,13 @@ public object CoinKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
-    public fun clearSymbol() {
+    fun clearSymbol() {
       _builder.clearSymbol()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun counters.minter.grpc.client.Coin.copy(block: counters.minter.grpc.client.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.Coin =
+inline fun counters.minter.grpc.client.Coin.copy(block: counters.minter.grpc.client.CoinKt.Dsl.() -> Unit): counters.minter.grpc.client.Coin =
   counters.minter.grpc.client.CoinKt.Dsl._create(this.toBuilder()).apply { block() }._build()

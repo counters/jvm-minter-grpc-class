@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   public static final int PUB_KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object pubKey_;
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The pubKey.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+   * <code>string pub_key = 1;</code>
    * @return The bytes for pubKey.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2 [json_name = "height"];</code>
+   * <code>uint64 height = 2;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
   public static final int VERSION_FIELD_NUMBER = 3;
   private volatile java.lang.Object version_;
   /**
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 3;</code>
    * @return The version.
    */
   @java.lang.Override
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 3;</code>
    * @return The bytes for version.
    */
   @java.lang.Override
@@ -200,13 +200,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
+    if (!getPubKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pubKey_);
     }
     if (height_ != 0L) {
       output.writeUInt64(2, height_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+    if (!getVersionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
     }
     unknownFields.writeTo(output);
@@ -218,14 +218,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
+    if (!getPubKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pubKey_);
     }
     if (height_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(2, height_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+    if (!getVersionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
     }
     size += unknownFields.getSerializedSize();
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object pubKey_ = "";
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      * @return The pubKey.
      */
     public java.lang.String getPubKey() {
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      * @return The bytes for pubKey.
      */
     public com.google.protobuf.ByteString
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      * @param value The pubKey to set.
      * @return This builder for chaining.
      */
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearPubKey() {
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      * @param value The bytes for pubKey to set.
      * @return This builder for chaining.
      */
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -632,7 +632,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object version_ = "";
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      * @return The version.
      */
     public java.lang.String getVersion() {
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
      */
