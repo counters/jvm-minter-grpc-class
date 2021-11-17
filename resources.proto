@@ -419,6 +419,15 @@ message GenesisResponse {
             string reserve0 = 3;
             string reserve1 = 4;
             uint64 id = 5;
+            message Order {
+                bool is_sale = 1;
+                string volume0 = 2; // buy
+                string volume1 = 3; // sell
+                uint64 id = 4;
+                string owner = 5;
+                uint64 height = 6;
+            }
+            repeated Order orders = 6;
         }
         repeated Pool pools = 15;
 
