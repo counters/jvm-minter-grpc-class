@@ -2476,6 +2476,12 @@
         "id": {
           "type": "string",
           "format": "uint64"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PoolOrder"
+          }
         }
       }
     },
@@ -2894,6 +2900,31 @@
           "items": {
             "$ref": "#/definitions/ConnectionStatusChannel"
           }
+        }
+      }
+    },
+    "PoolOrder": {
+      "type": "object",
+      "properties": {
+        "is_sale": {
+          "type": "boolean"
+        },
+        "volume0": {
+          "type": "string"
+        },
+        "volume1": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
