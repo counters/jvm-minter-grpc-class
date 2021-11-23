@@ -2418,6 +2418,18 @@
         }
       }
     },
+    "AppStateDeletedCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "public_key": {
+          "type": "string"
+        }
+      }
+    },
     "AppStateFrozenFund": {
       "type": "object",
       "properties": {
@@ -2685,6 +2697,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateCandidate"
+          }
+        },
+        "deleted_candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateDeletedCandidate"
           }
         },
         "coins": {
