@@ -436,7 +436,7 @@ message GenesisResponse {
             repeated Order orders = 6;
         }
         repeated Pool pools = 15;
-
+        uint64 next_order_id = 21;
         message Commission {
             uint64 coin = 3;
             string payload_byte = 4;
