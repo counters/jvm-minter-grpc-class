@@ -2747,6 +2747,10 @@
             "$ref": "#/definitions/AppStatePool"
           }
         },
+        "next_order_id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "commission": {
           "$ref": "#/definitions/AppStateCommission"
         },
