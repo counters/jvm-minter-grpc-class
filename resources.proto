@@ -355,6 +355,12 @@ message GenesisResponse {
 
         repeated Candidate candidates = 3;
 
+        message DeletedCandidate {
+            uint64 id = 1;
+            string public_key = 2;
+        }
+        repeated DeletedCandidate deleted_candidates = 11;
+
         message Coin {
             uint64 id = 9;
             string name = 1;
