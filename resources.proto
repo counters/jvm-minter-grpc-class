@@ -359,7 +359,7 @@ message GenesisResponse {
             uint64 id = 1;
             string public_key = 2;
         }
-        repeated DeletedCandidate deleted_candidates = 11;
+        repeated DeletedCandidate deleted_candidates = 20;
 
         message Coin {
             uint64 id = 9;
