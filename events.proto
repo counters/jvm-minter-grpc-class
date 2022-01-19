@@ -23,7 +23,6 @@ message RewardEvent {
     Role role = 1;
     string address = 2;
     string amount = 3;
-    uint64 coin = 5;
     string validator_pub_key = 4;
     // coin for which the delegator received the reward
     uint64 for_coin = 6;
