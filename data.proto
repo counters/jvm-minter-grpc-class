@@ -261,3 +261,7 @@ message RemoveLimitOrderData {
     uint64 id = 1;
 }
 
+message UpdatedBlockRewardPriceEvent {
+    uint64 value = 1;
+}
+
