@@ -992,6 +992,53 @@ func (x *OrderExpiredEvent) GetAmount() string {
 	return ""
 }
 
+type UpdatedBlockRewardPriceEvent struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Value string `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *UpdatedBlockRewardPriceEvent) Reset() {
+	*x = UpdatedBlockRewardPriceEvent{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_events_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UpdatedBlockRewardPriceEvent) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdatedBlockRewardPriceEvent) ProtoMessage() {}
+
+func (x *UpdatedBlockRewardPriceEvent) ProtoReflect() protoreflect.Message {
+	mi := &file_events_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdatedBlockRewardPriceEvent.ProtoReflect.Descriptor instead.
+func (*UpdatedBlockRewardPriceEvent) Descriptor() ([]byte, []int) {
+	return file_events_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *UpdatedBlockRewardPriceEvent) GetValue() string {
+	if x != nil {
+		return x.Value
+	}
+	return ""
+}
+
 var File_events_proto protoreflect.FileDescriptor
 
 var file_events_proto_rawDesc = []byte{
@@ -1167,11 +1214,14 @@ var file_events_proto_rawDesc = []byte{
 	0x07, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x69, 0x6e,
 	0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x52, 0x04, 0x63, 0x6f, 0x69, 0x6e, 0x12, 0x16, 0x0a, 0x06,
 	0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x61, 0x6d,
-	0x6f, 0x75, 0x6e, 0x74, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
-	0x6f, 0x6d, 0x2f, 0x4d, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x54, 0x65, 0x61, 0x6d, 0x2f, 0x6e, 0x6f,
-	0x64, 0x65, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2d, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x2f,
-	0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x62, 0x06, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x75, 0x6e, 0x74, 0x22, 0x34, 0x0a, 0x1c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x64, 0x42,
+	0x6c, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x50, 0x72, 0x69, 0x63, 0x65, 0x45,
+	0x76, 0x65, 0x6e, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x4d, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x54,
+	0x65, 0x61, 0x6d, 0x2f, 0x6e, 0x6f, 0x64, 0x65, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2d, 0x67, 0x61,
+	0x74, 0x65, 0x77, 0x61, 0x79, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x61, 0x70, 0x69,
+	0x5f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1187,18 +1237,19 @@ func file_events_proto_rawDescGZIP() []byte {
 }
 
 var file_events_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_events_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
+var file_events_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_events_proto_goTypes = []interface{}{
-	(RewardEvent_Role)(0),          // 0: api_pb.RewardEvent.Role
-	(*JailEvent)(nil),              // 1: api_pb.JailEvent
-	(*RemoveCandidateEvent)(nil),   // 2: api_pb.RemoveCandidateEvent
-	(*RewardEvent)(nil),            // 3: api_pb.RewardEvent
-	(*SlashEvent)(nil),             // 4: api_pb.SlashEvent
-	(*UnbondEvent)(nil),            // 5: api_pb.UnbondEvent
-	(*StakeKickEvent)(nil),         // 6: api_pb.StakeKickEvent
-	(*UpdateNetworkEvent)(nil),     // 7: api_pb.UpdateNetworkEvent
-	(*UpdateCommissionsEvent)(nil), // 8: api_pb.UpdateCommissionsEvent
-	(*OrderExpiredEvent)(nil),      // 9: api_pb.OrderExpiredEvent
+	(RewardEvent_Role)(0),                // 0: api_pb.RewardEvent.Role
+	(*JailEvent)(nil),                    // 1: api_pb.JailEvent
+	(*RemoveCandidateEvent)(nil),         // 2: api_pb.RemoveCandidateEvent
+	(*RewardEvent)(nil),                  // 3: api_pb.RewardEvent
+	(*SlashEvent)(nil),                   // 4: api_pb.SlashEvent
+	(*UnbondEvent)(nil),                  // 5: api_pb.UnbondEvent
+	(*StakeKickEvent)(nil),               // 6: api_pb.StakeKickEvent
+	(*UpdateNetworkEvent)(nil),           // 7: api_pb.UpdateNetworkEvent
+	(*UpdateCommissionsEvent)(nil),       // 8: api_pb.UpdateCommissionsEvent
+	(*OrderExpiredEvent)(nil),            // 9: api_pb.OrderExpiredEvent
+	(*UpdatedBlockRewardPriceEvent)(nil), // 10: api_pb.UpdatedBlockRewardPriceEvent
 }
 var file_events_proto_depIdxs = []int32{
 	0, // 0: api_pb.RewardEvent.role:type_name -> api_pb.RewardEvent.Role
@@ -1323,6 +1374,18 @@ func file_events_proto_init() {
 				return nil
 			}
 		}
+		file_events_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UpdatedBlockRewardPriceEvent); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -1330,7 +1393,7 @@ func file_events_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_events_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   9,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
