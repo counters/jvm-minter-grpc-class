@@ -109,3 +109,6 @@ message OrderExpiredEvent {
     string amount = 4;
 }
 
+message UpdatedBlockRewardPriceEvent {
+    string value = 1;
+}
