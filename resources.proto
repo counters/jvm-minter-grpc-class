@@ -294,6 +294,7 @@ message StatusResponse {
     string latest_block_time = 4;
     uint64 keep_last_states = 5;
     string total_slashed = 10;
+    string current_emission = 14;
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
