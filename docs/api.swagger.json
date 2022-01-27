@@ -2397,6 +2397,12 @@
         },
         "remove_limit_order": {
           "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "activate_increased_rewards": {
+          "type": "string"
         }
       }
     },
@@ -3801,6 +3807,12 @@
           "type": "string"
         },
         "remove_limit_order": {
+          "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "activate_increased_rewards": {
           "type": "string"
         }
       }
