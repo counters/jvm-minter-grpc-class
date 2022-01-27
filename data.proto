@@ -263,3 +263,12 @@ message RemoveLimitOrderData {
     uint64 id = 1;
 }
 
+message MoveStakeData {
+    string from_pub_key = 1;
+    string to_pub_key = 4;
+    Coin coin = 2;
+    string value = 3;
+}
+
+message ActivateIncreasedRewardsData {
+}
