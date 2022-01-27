@@ -3882,6 +3882,9 @@
         "total_slashed": {
           "type": "string"
         },
+        "current_emission": {
+          "type": "string"
+        },
         "catching_up": {
           "type": "boolean"
         },
