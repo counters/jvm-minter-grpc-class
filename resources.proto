@@ -514,10 +514,7 @@ message MinGasPriceResponse {
 enum BlockField {
     transactions = 0;
     missed = 1;
-
-    // Deprecated
     block_reward = 2;
-
     size = 3;
     proposer = 4;
     validators = 5;
@@ -543,9 +540,7 @@ message BlockResponse {
 
     repeated TransactionResponse transactions = 6;
 
-    // Deprecated
     string block_reward = 7;
-
     uint64 size = 8;
     string proposer = 9;
     message Validator {
