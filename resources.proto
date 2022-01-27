@@ -383,6 +383,7 @@ message GenesisResponse {
             uint64 candidate_id = 6;
             uint64 coin = 3;
             string value = 4;
+            string to_candidate_key = 7;
         }
         repeated FrozenFund frozen_funds = 6;
 
