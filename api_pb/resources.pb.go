@@ -29,6 +29,7 @@ type BlockField int32
 const (
 	BlockField_transactions BlockField = 0
 	BlockField_missed       BlockField = 1
+	// Deprecated
 	BlockField_block_reward BlockField = 2
 	BlockField_size         BlockField = 3
 	BlockField_proposer     BlockField = 4
@@ -2403,18 +2404,19 @@ type BlockResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Hash             string                     `protobuf:"bytes,1,opt,name=hash,proto3" json:"hash,omitempty"`
-	Height           uint64                     `protobuf:"varint,2,opt,name=height,proto3" json:"height,omitempty"`
-	Time             string                     `protobuf:"bytes,3,opt,name=time,proto3" json:"time,omitempty"`
-	TransactionCount uint64                     `protobuf:"varint,4,opt,name=transaction_count,json=transactionCount,proto3" json:"transaction_count,omitempty"`
-	Transactions     []*TransactionResponse     `protobuf:"bytes,6,rep,name=transactions,proto3" json:"transactions,omitempty"`
-	BlockReward      string                     `protobuf:"bytes,7,opt,name=block_reward,json=blockReward,proto3" json:"block_reward,omitempty"`
-	Size             uint64                     `protobuf:"varint,8,opt,name=size,proto3" json:"size,omitempty"`
-	Proposer         string                     `protobuf:"bytes,9,opt,name=proposer,proto3" json:"proposer,omitempty"`
-	Validators       []*BlockResponse_Validator `protobuf:"bytes,10,rep,name=validators,proto3" json:"validators,omitempty"`
-	Evidence         *BlockResponse_Evidence    `protobuf:"bytes,13,opt,name=evidence,proto3" json:"evidence,omitempty"`
-	Missed           []string                   `protobuf:"bytes,12,rep,name=missed,proto3" json:"missed,omitempty"`
-	Events           []*anypb.Any               `protobuf:"bytes,14,rep,name=events,proto3" json:"events,omitempty"`
+	Hash             string                 `protobuf:"bytes,1,opt,name=hash,proto3" json:"hash,omitempty"`
+	Height           uint64                 `protobuf:"varint,2,opt,name=height,proto3" json:"height,omitempty"`
+	Time             string                 `protobuf:"bytes,3,opt,name=time,proto3" json:"time,omitempty"`
+	TransactionCount uint64                 `protobuf:"varint,4,opt,name=transaction_count,json=transactionCount,proto3" json:"transaction_count,omitempty"`
+	Transactions     []*TransactionResponse `protobuf:"bytes,6,rep,name=transactions,proto3" json:"transactions,omitempty"`
+	// Deprecated
+	BlockReward string                     `protobuf:"bytes,7,opt,name=block_reward,json=blockReward,proto3" json:"block_reward,omitempty"`
+	Size        uint64                     `protobuf:"varint,8,opt,name=size,proto3" json:"size,omitempty"`
+	Proposer    string                     `protobuf:"bytes,9,opt,name=proposer,proto3" json:"proposer,omitempty"`
+	Validators  []*BlockResponse_Validator `protobuf:"bytes,10,rep,name=validators,proto3" json:"validators,omitempty"`
+	Evidence    *BlockResponse_Evidence    `protobuf:"bytes,13,opt,name=evidence,proto3" json:"evidence,omitempty"`
+	Missed      []string                   `protobuf:"bytes,12,rep,name=missed,proto3" json:"missed,omitempty"`
+	Events      []*anypb.Any               `protobuf:"bytes,14,rep,name=events,proto3" json:"events,omitempty"`
 }
 
 func (x *BlockResponse) Reset() {

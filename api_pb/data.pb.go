@@ -2586,6 +2586,115 @@ func (x *RemoveLimitOrderData) GetId() uint64 {
 	return 0
 }
 
+type MoveStakeData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	FromPubKey string `protobuf:"bytes,1,opt,name=from_pub_key,json=fromPubKey,proto3" json:"from_pub_key,omitempty"`
+	ToPubKey   string `protobuf:"bytes,4,opt,name=to_pub_key,json=toPubKey,proto3" json:"to_pub_key,omitempty"`
+	Coin       *Coin  `protobuf:"bytes,2,opt,name=coin,proto3" json:"coin,omitempty"`
+	Value      string `protobuf:"bytes,3,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *MoveStakeData) Reset() {
+	*x = MoveStakeData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_data_proto_msgTypes[34]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MoveStakeData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MoveStakeData) ProtoMessage() {}
+
+func (x *MoveStakeData) ProtoReflect() protoreflect.Message {
+	mi := &file_data_proto_msgTypes[34]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MoveStakeData.ProtoReflect.Descriptor instead.
+func (*MoveStakeData) Descriptor() ([]byte, []int) {
+	return file_data_proto_rawDescGZIP(), []int{34}
+}
+
+func (x *MoveStakeData) GetFromPubKey() string {
+	if x != nil {
+		return x.FromPubKey
+	}
+	return ""
+}
+
+func (x *MoveStakeData) GetToPubKey() string {
+	if x != nil {
+		return x.ToPubKey
+	}
+	return ""
+}
+
+func (x *MoveStakeData) GetCoin() *Coin {
+	if x != nil {
+		return x.Coin
+	}
+	return nil
+}
+
+func (x *MoveStakeData) GetValue() string {
+	if x != nil {
+		return x.Value
+	}
+	return ""
+}
+
+type ActivateIncreasedRewardsData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ActivateIncreasedRewardsData) Reset() {
+	*x = ActivateIncreasedRewardsData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_data_proto_msgTypes[35]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ActivateIncreasedRewardsData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ActivateIncreasedRewardsData) ProtoMessage() {}
+
+func (x *ActivateIncreasedRewardsData) ProtoReflect() protoreflect.Message {
+	mi := &file_data_proto_msgTypes[35]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ActivateIncreasedRewardsData.ProtoReflect.Descriptor instead.
+func (*ActivateIncreasedRewardsData) Descriptor() ([]byte, []int) {
+	return file_data_proto_rawDescGZIP(), []int{35}
+}
+
 var File_data_proto protoreflect.FileDescriptor
 
 var file_data_proto_rawDesc = []byte{
@@ -2969,11 +3078,22 @@ var file_data_proto_rawDesc = []byte{
 	0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x54, 0x6f, 0x42, 0x75,
 	0x79, 0x22, 0x26, 0x0a, 0x14, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x4c, 0x69, 0x6d, 0x69, 0x74,
 	0x4f, 0x72, 0x64, 0x65, 0x72, 0x44, 0x61, 0x74, 0x61, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x02, 0x69, 0x64, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74,
-	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x4d, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x54, 0x65,
-	0x61, 0x6d, 0x2f, 0x6e, 0x6f, 0x64, 0x65, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2d, 0x67, 0x61, 0x74,
-	0x65, 0x77, 0x61, 0x79, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x61, 0x70, 0x69, 0x5f,
-	0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x02, 0x69, 0x64, 0x22, 0x87, 0x01, 0x0a, 0x0d, 0x4d, 0x6f,
+	0x76, 0x65, 0x53, 0x74, 0x61, 0x6b, 0x65, 0x44, 0x61, 0x74, 0x61, 0x12, 0x20, 0x0a, 0x0c, 0x66,
+	0x72, 0x6f, 0x6d, 0x5f, 0x70, 0x75, 0x62, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x0a, 0x66, 0x72, 0x6f, 0x6d, 0x50, 0x75, 0x62, 0x4b, 0x65, 0x79, 0x12, 0x1c, 0x0a,
+	0x0a, 0x74, 0x6f, 0x5f, 0x70, 0x75, 0x62, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x74, 0x6f, 0x50, 0x75, 0x62, 0x4b, 0x65, 0x79, 0x12, 0x20, 0x0a, 0x04, 0x63,
+	0x6f, 0x69, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x61, 0x70, 0x69, 0x5f,
+	0x70, 0x62, 0x2e, 0x43, 0x6f, 0x69, 0x6e, 0x52, 0x04, 0x63, 0x6f, 0x69, 0x6e, 0x12, 0x14, 0x0a,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61,
+	0x6c, 0x75, 0x65, 0x22, 0x1e, 0x0a, 0x1c, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x49,
+	0x6e, 0x63, 0x72, 0x65, 0x61, 0x73, 0x65, 0x64, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x44,
+	0x61, 0x74, 0x61, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x4d, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x54, 0x65, 0x61, 0x6d, 0x2f, 0x6e, 0x6f, 0x64,
+	0x65, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2d, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x2f, 0x67,
+	0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2988,75 +3108,78 @@ func file_data_proto_rawDescGZIP() []byte {
 	return file_data_proto_rawDescData
 }
 
-var file_data_proto_msgTypes = make([]protoimpl.MessageInfo, 34)
+var file_data_proto_msgTypes = make([]protoimpl.MessageInfo, 36)
 var file_data_proto_goTypes = []interface{}{
-	(*SendData)(nil),                   // 0: api_pb.SendData
-	(*SellCoinData)(nil),               // 1: api_pb.SellCoinData
-	(*SellAllCoinData)(nil),            // 2: api_pb.SellAllCoinData
-	(*BuyCoinData)(nil),                // 3: api_pb.BuyCoinData
-	(*CreateCoinData)(nil),             // 4: api_pb.CreateCoinData
-	(*DeclareCandidacyData)(nil),       // 5: api_pb.DeclareCandidacyData
-	(*DelegateData)(nil),               // 6: api_pb.DelegateData
-	(*UnbondData)(nil),                 // 7: api_pb.UnbondData
-	(*RedeemCheckData)(nil),            // 8: api_pb.RedeemCheckData
-	(*SetCandidateOnData)(nil),         // 9: api_pb.SetCandidateOnData
-	(*SetCandidateOffData)(nil),        // 10: api_pb.SetCandidateOffData
-	(*CreateMultisigData)(nil),         // 11: api_pb.CreateMultisigData
-	(*MultiSendData)(nil),              // 12: api_pb.MultiSendData
-	(*EditCandidateData)(nil),          // 13: api_pb.EditCandidateData
-	(*SetHaltBlockData)(nil),           // 14: api_pb.SetHaltBlockData
-	(*RecreateCoinData)(nil),           // 15: api_pb.RecreateCoinData
-	(*EditCoinOwnerData)(nil),          // 16: api_pb.EditCoinOwnerData
-	(*EditMultisigData)(nil),           // 17: api_pb.EditMultisigData
-	(*EditCandidatePublicKeyData)(nil), // 18: api_pb.EditCandidatePublicKeyData
-	(*CreateSwapPoolData)(nil),         // 19: api_pb.CreateSwapPoolData
-	(*AddLiquidityData)(nil),           // 20: api_pb.AddLiquidityData
-	(*RemoveLiquidityData)(nil),        // 21: api_pb.RemoveLiquidityData
-	(*SellSwapPoolData)(nil),           // 22: api_pb.SellSwapPoolData
-	(*SellAllSwapPoolData)(nil),        // 23: api_pb.SellAllSwapPoolData
-	(*BuySwapPoolData)(nil),            // 24: api_pb.BuySwapPoolData
-	(*EditCandidateCommission)(nil),    // 25: api_pb.EditCandidateCommission
-	(*MintTokenData)(nil),              // 26: api_pb.MintTokenData
-	(*BurnTokenData)(nil),              // 27: api_pb.BurnTokenData
-	(*CreateTokenData)(nil),            // 28: api_pb.CreateTokenData
-	(*RecreateTokenData)(nil),          // 29: api_pb.RecreateTokenData
-	(*VoteCommissionData)(nil),         // 30: api_pb.VoteCommissionData
-	(*VoteUpdateData)(nil),             // 31: api_pb.VoteUpdateData
-	(*AddLimitOrderData)(nil),          // 32: api_pb.AddLimitOrderData
-	(*RemoveLimitOrderData)(nil),       // 33: api_pb.RemoveLimitOrderData
-	(*Coin)(nil),                       // 34: api_pb.Coin
+	(*SendData)(nil),                     // 0: api_pb.SendData
+	(*SellCoinData)(nil),                 // 1: api_pb.SellCoinData
+	(*SellAllCoinData)(nil),              // 2: api_pb.SellAllCoinData
+	(*BuyCoinData)(nil),                  // 3: api_pb.BuyCoinData
+	(*CreateCoinData)(nil),               // 4: api_pb.CreateCoinData
+	(*DeclareCandidacyData)(nil),         // 5: api_pb.DeclareCandidacyData
+	(*DelegateData)(nil),                 // 6: api_pb.DelegateData
+	(*UnbondData)(nil),                   // 7: api_pb.UnbondData
+	(*RedeemCheckData)(nil),              // 8: api_pb.RedeemCheckData
+	(*SetCandidateOnData)(nil),           // 9: api_pb.SetCandidateOnData
+	(*SetCandidateOffData)(nil),          // 10: api_pb.SetCandidateOffData
+	(*CreateMultisigData)(nil),           // 11: api_pb.CreateMultisigData
+	(*MultiSendData)(nil),                // 12: api_pb.MultiSendData
+	(*EditCandidateData)(nil),            // 13: api_pb.EditCandidateData
+	(*SetHaltBlockData)(nil),             // 14: api_pb.SetHaltBlockData
+	(*RecreateCoinData)(nil),             // 15: api_pb.RecreateCoinData
+	(*EditCoinOwnerData)(nil),            // 16: api_pb.EditCoinOwnerData
+	(*EditMultisigData)(nil),             // 17: api_pb.EditMultisigData
+	(*EditCandidatePublicKeyData)(nil),   // 18: api_pb.EditCandidatePublicKeyData
+	(*CreateSwapPoolData)(nil),           // 19: api_pb.CreateSwapPoolData
+	(*AddLiquidityData)(nil),             // 20: api_pb.AddLiquidityData
+	(*RemoveLiquidityData)(nil),          // 21: api_pb.RemoveLiquidityData
+	(*SellSwapPoolData)(nil),             // 22: api_pb.SellSwapPoolData
+	(*SellAllSwapPoolData)(nil),          // 23: api_pb.SellAllSwapPoolData
+	(*BuySwapPoolData)(nil),              // 24: api_pb.BuySwapPoolData
+	(*EditCandidateCommission)(nil),      // 25: api_pb.EditCandidateCommission
+	(*MintTokenData)(nil),                // 26: api_pb.MintTokenData
+	(*BurnTokenData)(nil),                // 27: api_pb.BurnTokenData
+	(*CreateTokenData)(nil),              // 28: api_pb.CreateTokenData
+	(*RecreateTokenData)(nil),            // 29: api_pb.RecreateTokenData
+	(*VoteCommissionData)(nil),           // 30: api_pb.VoteCommissionData
+	(*VoteUpdateData)(nil),               // 31: api_pb.VoteUpdateData
+	(*AddLimitOrderData)(nil),            // 32: api_pb.AddLimitOrderData
+	(*RemoveLimitOrderData)(nil),         // 33: api_pb.RemoveLimitOrderData
+	(*MoveStakeData)(nil),                // 34: api_pb.MoveStakeData
+	(*ActivateIncreasedRewardsData)(nil), // 35: api_pb.ActivateIncreasedRewardsData
+	(*Coin)(nil),                         // 36: api_pb.Coin
 }
 var file_data_proto_depIdxs = []int32{
-	34, // 0: api_pb.SendData.coin:type_name -> api_pb.Coin
-	34, // 1: api_pb.SellCoinData.coin_to_sell:type_name -> api_pb.Coin
-	34, // 2: api_pb.SellCoinData.coin_to_buy:type_name -> api_pb.Coin
-	34, // 3: api_pb.SellAllCoinData.coin_to_sell:type_name -> api_pb.Coin
-	34, // 4: api_pb.SellAllCoinData.coin_to_buy:type_name -> api_pb.Coin
-	34, // 5: api_pb.BuyCoinData.coin_to_buy:type_name -> api_pb.Coin
-	34, // 6: api_pb.BuyCoinData.coin_to_sell:type_name -> api_pb.Coin
-	34, // 7: api_pb.DeclareCandidacyData.coin:type_name -> api_pb.Coin
-	34, // 8: api_pb.DelegateData.coin:type_name -> api_pb.Coin
-	34, // 9: api_pb.UnbondData.coin:type_name -> api_pb.Coin
+	36, // 0: api_pb.SendData.coin:type_name -> api_pb.Coin
+	36, // 1: api_pb.SellCoinData.coin_to_sell:type_name -> api_pb.Coin
+	36, // 2: api_pb.SellCoinData.coin_to_buy:type_name -> api_pb.Coin
+	36, // 3: api_pb.SellAllCoinData.coin_to_sell:type_name -> api_pb.Coin
+	36, // 4: api_pb.SellAllCoinData.coin_to_buy:type_name -> api_pb.Coin
+	36, // 5: api_pb.BuyCoinData.coin_to_buy:type_name -> api_pb.Coin
+	36, // 6: api_pb.BuyCoinData.coin_to_sell:type_name -> api_pb.Coin
+	36, // 7: api_pb.DeclareCandidacyData.coin:type_name -> api_pb.Coin
+	36, // 8: api_pb.DelegateData.coin:type_name -> api_pb.Coin
+	36, // 9: api_pb.UnbondData.coin:type_name -> api_pb.Coin
 	0,  // 10: api_pb.MultiSendData.list:type_name -> api_pb.SendData
-	34, // 11: api_pb.CreateSwapPoolData.coin0:type_name -> api_pb.Coin
-	34, // 12: api_pb.CreateSwapPoolData.coin1:type_name -> api_pb.Coin
-	34, // 13: api_pb.AddLiquidityData.coin0:type_name -> api_pb.Coin
-	34, // 14: api_pb.AddLiquidityData.coin1:type_name -> api_pb.Coin
-	34, // 15: api_pb.RemoveLiquidityData.coin0:type_name -> api_pb.Coin
-	34, // 16: api_pb.RemoveLiquidityData.coin1:type_name -> api_pb.Coin
-	34, // 17: api_pb.SellSwapPoolData.coins:type_name -> api_pb.Coin
-	34, // 18: api_pb.SellAllSwapPoolData.coins:type_name -> api_pb.Coin
-	34, // 19: api_pb.BuySwapPoolData.coins:type_name -> api_pb.Coin
-	34, // 20: api_pb.MintTokenData.coin:type_name -> api_pb.Coin
-	34, // 21: api_pb.BurnTokenData.coin:type_name -> api_pb.Coin
-	34, // 22: api_pb.VoteCommissionData.coin:type_name -> api_pb.Coin
-	34, // 23: api_pb.AddLimitOrderData.coin_to_sell:type_name -> api_pb.Coin
-	34, // 24: api_pb.AddLimitOrderData.coin_to_buy:type_name -> api_pb.Coin
-	25, // [25:25] is the sub-list for method output_type
-	25, // [25:25] is the sub-list for method input_type
-	25, // [25:25] is the sub-list for extension type_name
-	25, // [25:25] is the sub-list for extension extendee
-	0,  // [0:25] is the sub-list for field type_name
+	36, // 11: api_pb.CreateSwapPoolData.coin0:type_name -> api_pb.Coin
+	36, // 12: api_pb.CreateSwapPoolData.coin1:type_name -> api_pb.Coin
+	36, // 13: api_pb.AddLiquidityData.coin0:type_name -> api_pb.Coin
+	36, // 14: api_pb.AddLiquidityData.coin1:type_name -> api_pb.Coin
+	36, // 15: api_pb.RemoveLiquidityData.coin0:type_name -> api_pb.Coin
+	36, // 16: api_pb.RemoveLiquidityData.coin1:type_name -> api_pb.Coin
+	36, // 17: api_pb.SellSwapPoolData.coins:type_name -> api_pb.Coin
+	36, // 18: api_pb.SellAllSwapPoolData.coins:type_name -> api_pb.Coin
+	36, // 19: api_pb.BuySwapPoolData.coins:type_name -> api_pb.Coin
+	36, // 20: api_pb.MintTokenData.coin:type_name -> api_pb.Coin
+	36, // 21: api_pb.BurnTokenData.coin:type_name -> api_pb.Coin
+	36, // 22: api_pb.VoteCommissionData.coin:type_name -> api_pb.Coin
+	36, // 23: api_pb.AddLimitOrderData.coin_to_sell:type_name -> api_pb.Coin
+	36, // 24: api_pb.AddLimitOrderData.coin_to_buy:type_name -> api_pb.Coin
+	36, // 25: api_pb.MoveStakeData.coin:type_name -> api_pb.Coin
+	26, // [26:26] is the sub-list for method output_type
+	26, // [26:26] is the sub-list for method input_type
+	26, // [26:26] is the sub-list for extension type_name
+	26, // [26:26] is the sub-list for extension extendee
+	0,  // [0:26] is the sub-list for field type_name
 }
 
 func init() { file_data_proto_init() }
@@ -3474,6 +3597,30 @@ func file_data_proto_init() {
 				return nil
 			}
 		}
+		file_data_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*MoveStakeData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_data_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ActivateIncreasedRewardsData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -3481,7 +3628,7 @@ func file_data_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_data_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   34,
+			NumMessages:   36,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
