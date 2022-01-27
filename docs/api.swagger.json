@@ -178,7 +178,6 @@
           },
           {
             "name": "fields",
-            "description": " - block_reward: Deprecated",
             "in": "query",
             "required": false,
             "type": "array",
@@ -260,7 +259,6 @@
           },
           {
             "name": "fields",
-            "description": " - block_reward: Deprecated",
             "in": "query",
             "required": false,
             "type": "array",
@@ -3122,8 +3120,7 @@
         "validators",
         "evidence"
       ],
-      "default": "transactions",
-      "title": "- block_reward: Deprecated"
+      "default": "transactions"
     },
     "BlockResponse": {
       "type": "object",
@@ -3149,8 +3146,7 @@
           }
         },
         "block_reward": {
-          "type": "string",
-          "title": "Deprecated"
+          "type": "string"
         },
         "size": {
           "type": "string",
