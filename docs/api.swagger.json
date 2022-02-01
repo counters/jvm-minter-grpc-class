@@ -2401,7 +2401,7 @@
         "move_stake": {
           "type": "string"
         },
-        "activate_increased_rewards": {
+        "lock_stake": {
           "type": "string"
         }
       }
@@ -3812,7 +3812,7 @@
         "move_stake": {
           "type": "string"
         },
-        "activate_increased_rewards": {
+        "lock_stake": {
           "type": "string"
         }
       }
