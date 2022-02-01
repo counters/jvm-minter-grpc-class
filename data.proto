@@ -243,7 +243,7 @@ message VoteCommissionData {
     string add_limit_order = 57;
     string remove_limit_order = 58;
     string move_stake = 59;
-    string activate_increased_rewards = 60;
+    string lock_stake = 60;
 }
 
 message VoteUpdateData {
@@ -270,5 +270,5 @@ message MoveStakeData {
     string value = 3;
 }
 
-message ActivateIncreasedRewardsData {
+message LockStakeData {
 }
