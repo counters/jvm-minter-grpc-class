@@ -3881,6 +3881,9 @@
         "current_emission": {
           "type": "string"
         },
+        "block_reward": {
+          "type": "string"
+        },
         "catching_up": {
           "type": "boolean"
         },
