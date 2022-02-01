@@ -111,7 +111,7 @@ message OrderExpiredEvent {
     string amount = 4;
 }
 
-message UpdatedBlockRewardPriceEvent {
+message UpdatedBlockRewardEvent {
     string value = 1;
 }
 
