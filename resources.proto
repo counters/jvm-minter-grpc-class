@@ -295,6 +295,7 @@ message StatusResponse {
     uint64 keep_last_states = 5;
     string total_slashed = 10;
     string current_emission = 14;
+    string block_reward = 15;
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
