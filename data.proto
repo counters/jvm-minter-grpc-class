@@ -244,6 +244,7 @@ message VoteCommissionData {
     string remove_limit_order = 58;
     string move_stake = 59;
     string lock_stake = 60;
+    string lock = 61;
 }
 
 message VoteUpdateData {
@@ -271,4 +272,10 @@ message MoveStakeData {
 }
 
 message LockStakeData {
+}
+
+message LockData {
+    uint64 due_block = 1;
+    Coin coin = 2;
+    string value = 3;
 }

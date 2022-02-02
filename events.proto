@@ -102,6 +102,7 @@ message UpdateCommissionsEvent {
     string remove_limit_order = 58;
     string move_stake = 59;
     string lock_stake = 60;
+    string lock = 61;
 }
 
 message OrderExpiredEvent {
