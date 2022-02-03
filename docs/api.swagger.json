@@ -2688,7 +2688,7 @@
         "value": {
           "type": "string"
         },
-        "to_candidate_key": {
+        "move_to_candidate_key": {
           "type": "string"
         }
       }
