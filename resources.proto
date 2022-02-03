@@ -1027,7 +1027,7 @@ message FrozenResponse {
         string candidate_key = 3;
         Coin coin = 4;
         string value = 5;
-        google.protobuf.StringValue to_candidate_key = 7;
+        google.protobuf.StringValue move_to_candidate_key = 7;
     }
     repeated Frozen frozen = 1;
 }
