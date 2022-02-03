@@ -2687,6 +2687,9 @@
         },
         "value": {
           "type": "string"
+        },
+        "to_candidate_key": {
+          "type": "string"
         }
       }
     },
