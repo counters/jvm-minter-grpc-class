@@ -388,7 +388,7 @@ message GenesisResponse {
             uint64 candidate_id = 6;
             uint64 coin = 3;
             string value = 4;
-            string to_candidate_key = 7;
+            google.protobuf.StringValue to_candidate_key = 7;
         }
         repeated FrozenFund frozen_funds = 6;
 
@@ -1027,6 +1027,7 @@ message FrozenResponse {
         string candidate_key = 3;
         Coin coin = 4;
         string value = 5;
+        google.protobuf.StringValue to_candidate_key = 7;
     }
     repeated Frozen frozen = 1;
 }
