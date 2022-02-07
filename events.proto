@@ -123,3 +123,9 @@ message StakeMoveEvent {
     string candidate_pub_key = 4;
     string to_candidate_pub_key = 5;
 }
+
+message UnlockEvent {
+    string address = 1;
+    string amount = 2;
+    uint64 coin = 3;
+}
