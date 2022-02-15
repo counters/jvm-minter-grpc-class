@@ -503,6 +503,14 @@ message GenesisResponse {
         }
         repeated CommissionVote commission_votes = 17;
 
+
+        message UpdateVote {
+            uint64 height = 1;
+            repeated string votes = 2;
+            string version = 3;
+        }
+        repeated UpdateVote update_votes = 22;
+
         repeated string used_checks = 11;
         uint64 max_gas = 7;
         string total_slashed = 8;
