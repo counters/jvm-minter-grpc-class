@@ -2509,6 +2509,24 @@
         }
       }
     },
+    "AppStateUpdateVote": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
     "AppStateValidators": {
       "type": "object",
       "properties": {
@@ -2773,6 +2791,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateCommissionVote"
+          }
+        },
+        "update_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateUpdateVote"
           }
         },
         "used_checks": {
