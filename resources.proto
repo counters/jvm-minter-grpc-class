@@ -551,7 +551,7 @@ message BlockResponse {
 
     repeated TransactionResponse transactions = 6;
 
-    google.protobuf.StringValue block_reward = 7;
+    google.protobuf.StringValue block_reward = 15;
     uint64 size = 8;
     string proposer = 9;
     message Validator {
@@ -1032,7 +1032,7 @@ message FrozenResponse {
     message Frozen {
         uint64 height = 1;
         string address = 2;
-        google.protobuf.StringValue candidate_key = 3;
+        google.protobuf.StringValue candidate_key = 8;
         Coin coin = 4;
         string value = 5;
         google.protobuf.StringValue move_to_candidate_key = 7;
