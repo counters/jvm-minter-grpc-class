@@ -114,6 +114,7 @@ message OrderExpiredEvent {
 
 message UpdatedBlockRewardEvent {
     string value = 1;
+    string value_for_locked_stake = 2;
 }
 
 message StakeMoveEvent {
