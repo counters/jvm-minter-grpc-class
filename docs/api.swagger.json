@@ -3178,6 +3178,9 @@
         "block_reward": {
           "type": "string"
         },
+        "block_reward_with_lock": {
+          "type": "string"
+        },
         "size": {
           "type": "string",
           "format": "uint64"
