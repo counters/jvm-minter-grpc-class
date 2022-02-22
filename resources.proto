@@ -551,7 +551,7 @@ message BlockResponse {
     repeated TransactionResponse transactions = 6;
 
     google.protobuf.StringValue block_reward = 15;
-    google.protobuf.StringValue block_reward_with_lock = 16;
+    google.protobuf.StringValue locked_stake_rewards = 16;
     uint64 size = 8;
     string proposer = 9;
     message Validator {
