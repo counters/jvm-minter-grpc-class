@@ -3178,7 +3178,7 @@
         "block_reward": {
           "type": "string"
         },
-        "block_reward_with_lock": {
+        "locked_stake_rewards": {
           "type": "string"
         },
         "size": {
