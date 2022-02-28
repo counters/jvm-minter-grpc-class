@@ -3,9 +3,9 @@ module github.com/MinterTeam/node-grpc-gateway
 go 1.17
 
 require (
-	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.1
-	google.golang.org/genproto v0.0.0-20211207154714-918901c715cf
-	google.golang.org/grpc v1.42.0
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.3
+	google.golang.org/genproto v0.0.0-20220118154757-00ab72f36ad5
+	google.golang.org/grpc v1.43.0
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.1.0
 	google.golang.org/protobuf v1.27.1
 )
