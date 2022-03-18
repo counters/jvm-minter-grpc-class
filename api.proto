@@ -273,7 +273,7 @@ service ApiService {
     // Frozen
     //
     // Frozen returns frozen balance.
-    // Deprecated: Use FrozenAll
+    // Deprecated: Use FrozenAll instead.
     rpc Frozen (FrozenRequest) returns (FrozenResponse) {
         option (google.api.http) = {
             get: "/frozen/{address}"
