@@ -1028,6 +1028,22 @@ message FrozenRequest {
         type: INTEGER
     }];
 }
+message FrozenAllRequest {
+    uint64 start_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 end_height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+
+    string address = 4;
+    google.protobuf.UInt64Value coin_id = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
 message FrozenResponse {
     message Frozen {
         uint64 height = 1;
