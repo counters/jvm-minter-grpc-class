@@ -1103,17 +1103,25 @@
             "format": "uint64"
           },
           {
-            "name": "address",
+            "name": "addresses",
             "in": "query",
             "required": false,
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           },
           {
-            "name": "coin_id",
+            "name": "coin_ids",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "format": "uint64"
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
