@@ -1000,7 +1000,7 @@
     "/frozen/{address}": {
       "get": {
         "summary": "Frozen",
-        "description": "Frozen returns frozen balance.",
+        "description": "Frozen returns frozen balance.\nDeprecated: Use FrozenAll instead.",
         "operationId": "Frozen",
         "responses": {
           "200": {

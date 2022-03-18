@@ -125,6 +125,7 @@ type ApiServiceClient interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(ctx context.Context, in *FrozenRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
 	// FrozenAll
 	//
@@ -672,6 +673,7 @@ type ApiServiceServer interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error)
 	// FrozenAll
 	//
