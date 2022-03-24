@@ -22,7 +22,7 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
             name: "MIT"
             url: 'https://github.com/MinterTeam/minter-go-node/blob/master/LICENSE'
         };
-        version: "1.5.0"
+        version: "1.6.0"
         contact: {
             name: "Minter gRPC-Gateway"
             url: "https://github.com/MinterTeam/node-grpc-gateway"
