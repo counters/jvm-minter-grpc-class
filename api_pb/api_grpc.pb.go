@@ -125,7 +125,12 @@ type ApiServiceClient interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(ctx context.Context, in *FrozenRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
+	// FrozenAll
+	//
+	// FrozenAll returns frozen balance.
+	FrozenAll(ctx context.Context, in *FrozenAllRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
 	// WaitList
 	//
 	// WaitList returns the list of address stakes in waitlist.
@@ -441,6 +446,15 @@ func (c *apiServiceClient) Frozen(ctx context.Context, in *FrozenRequest, opts .
 	return out, nil
 }
 
+func (c *apiServiceClient) FrozenAll(ctx context.Context, in *FrozenAllRequest, opts ...grpc.CallOption) (*FrozenResponse, error) {
+	out := new(FrozenResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/FrozenAll", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *apiServiceClient) WaitList(ctx context.Context, in *WaitListRequest, opts ...grpc.CallOption) (*WaitListResponse, error) {
 	out := new(WaitListResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/WaitList", in, out, opts...)
@@ -659,7 +673,12 @@ type ApiServiceServer interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error)
+	// FrozenAll
+	//
+	// FrozenAll returns frozen balance.
+	FrozenAll(context.Context, *FrozenAllRequest) (*FrozenResponse, error)
 	// WaitList
 	//
 	// WaitList returns the list of address stakes in waitlist.
@@ -792,6 +811,9 @@ func (UnimplementedApiServiceServer) Validators(context.Context, *ValidatorsRequ
 }
 func (UnimplementedApiServiceServer) Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Frozen not implemented")
+}
+func (UnimplementedApiServiceServer) FrozenAll(context.Context, *FrozenAllRequest) (*FrozenResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FrozenAll not implemented")
 }
 func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WaitList not implemented")
@@ -1313,6 +1335,24 @@ func _ApiService_Frozen_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_FrozenAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FrozenAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).FrozenAll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/FrozenAll",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).FrozenAll(ctx, req.(*FrozenAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _ApiService_WaitList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(WaitListRequest)
 	if err := dec(in); err != nil {
@@ -1635,6 +1675,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Frozen",
 			Handler:    _ApiService_Frozen_Handler,
+		},
+		{
+			MethodName: "FrozenAll",
+			Handler:    _ApiService_FrozenAll_Handler,
 		},
 		{
 			MethodName: "WaitList",

@@ -186,6 +186,9 @@ message PriceCommissionResponse {
     string failed_tx = 56;
     string add_limit_order = 57;
     string remove_limit_order = 58;
+    string move_stake = 59;
+    string lock_stake = 60;
+    string lock = 61;
 }
 
 message SwapPoolRequest {
@@ -292,6 +295,7 @@ message StatusResponse {
     string latest_block_time = 4;
     uint64 keep_last_states = 5;
     string total_slashed = 10;
+    string current_emission = 14;
     bool catching_up = 6;
     string public_key = 7;
     string node_id = 9;
@@ -383,6 +387,7 @@ message GenesisResponse {
             uint64 candidate_id = 6;
             uint64 coin = 3;
             string value = 4;
+            google.protobuf.StringValue to_candidate_key = 7;
         }
         repeated FrozenFund frozen_funds = 6;
 
@@ -484,6 +489,9 @@ message GenesisResponse {
             string failed_tx = 56;
             string add_limit_order = 57;
             string remove_limit_order = 58;
+            string move_stake = 59;
+            string lock_stake = 60;
+            string lock = 61;
         }
         Commission commission = 16;
 
@@ -493,6 +501,14 @@ message GenesisResponse {
             Commission commission = 3;
         }
         repeated CommissionVote commission_votes = 17;
+
+
+        message UpdateVote {
+            uint64 height = 1;
+            repeated string votes = 2;
+            string version = 3;
+        }
+        repeated UpdateVote update_votes = 22;
 
         repeated string used_checks = 11;
         uint64 max_gas = 7;
@@ -533,7 +549,9 @@ message BlockResponse {
     uint64 transaction_count = 4;
 
     repeated TransactionResponse transactions = 6;
-    string block_reward = 7;
+
+    google.protobuf.StringValue block_reward = 15;
+    google.protobuf.StringValue locked_stake_rewards = 16;
     uint64 size = 8;
     string proposer = 9;
     message Validator {
@@ -1010,13 +1028,29 @@ message FrozenRequest {
         type: INTEGER
     }];
 }
+message FrozenAllRequest {
+    uint64 start_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 end_height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+
+    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+
+    repeated string addresses = 4;
+    repeated uint64 coin_ids = 5;
+}
 message FrozenResponse {
     message Frozen {
         uint64 height = 1;
         string address = 2;
-        string candidate_key = 3;
+        google.protobuf.StringValue candidate_key = 8;
         Coin coin = 4;
         string value = 5;
+        google.protobuf.StringValue move_to_candidate_key = 7;
     }
     repeated Frozen frozen = 1;
 }

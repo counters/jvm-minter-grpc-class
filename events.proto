@@ -100,6 +100,9 @@ message UpdateCommissionsEvent {
     string failed_tx = 56;
     string add_limit_order = 57;
     string remove_limit_order = 58;
+    string move_stake = 59;
+    string lock_stake = 60;
+    string lock = 61;
 }
 
 message OrderExpiredEvent {
@@ -109,3 +112,21 @@ message OrderExpiredEvent {
     string amount = 4;
 }
 
+message UpdatedBlockRewardEvent {
+    string value = 1;
+    string value_locked_stake_rewards = 2;
+}
+
+message StakeMoveEvent {
+    string address = 1;
+    string amount = 2;
+    uint64 coin = 3;
+    string candidate_pub_key = 4;
+    string to_candidate_pub_key = 5;
+}
+
+message UnlockEvent {
+    string address = 1;
+    string amount = 2;
+    uint64 coin = 3;
+}

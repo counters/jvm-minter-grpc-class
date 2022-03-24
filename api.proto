@@ -273,9 +273,20 @@ service ApiService {
     // Frozen
     //
     // Frozen returns frozen balance.
+    // Deprecated: Use FrozenAll instead.
     rpc Frozen (FrozenRequest) returns (FrozenResponse) {
         option (google.api.http) = {
             get: "/frozen/{address}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
+    }
+
+    // FrozenAll
+    //
+    // FrozenAll returns frozen balance.
+    rpc FrozenAll (FrozenAllRequest) returns (FrozenResponse) {
+        option (google.api.http) = {
+            get: "/frozen_all"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }

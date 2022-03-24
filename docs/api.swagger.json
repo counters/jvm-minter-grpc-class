@@ -334,7 +334,7 @@
           },
           {
             "name": "height",
-            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -342,7 +342,7 @@
           },
           {
             "name": "not_show_stakes",
-            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled.",
+            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -385,7 +385,7 @@
         "parameters": [
           {
             "name": "height",
-            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -393,7 +393,7 @@
           },
           {
             "name": "include_stakes",
-            "description": "Calculate field values used_slots, uniq_users, min_stake.",
+            "description": "Calculate field values used_slots, uniq_users, min_stake",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -401,7 +401,7 @@
           },
           {
             "name": "not_show_stakes",
-            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used.",
+            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -982,7 +982,7 @@
           },
           {
             "name": "search",
-            "description": "Array of public keys of validators and wallet addresses of delegators for filtering.",
+            "description": "Array of public keys of validators and wallet addresses of delegators for filtering",
             "in": "query",
             "required": false,
             "type": "array",
@@ -1000,7 +1000,7 @@
     "/frozen/{address}": {
       "get": {
         "summary": "Frozen",
-        "description": "Frozen returns frozen balance.",
+        "description": "Frozen returns frozen balance.\nDeprecated: Use FrozenAll instead.",
         "operationId": "Frozen",
         "responses": {
           "200": {
@@ -1045,6 +1045,83 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    },
+    "/frozen_all": {
+      "get": {
+        "summary": "FrozenAll",
+        "description": "FrozenAll returns frozen balance.",
+        "operationId": "FrozenAll",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/FrozenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "start_height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "end_height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "addresses",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "coin_ids",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -2397,6 +2474,15 @@
         },
         "remove_limit_order": {
           "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "lock_stake": {
+          "type": "string"
+        },
+        "lock": {
+          "type": "string"
         }
       }
     },
@@ -2453,6 +2539,9 @@
         },
         "value": {
           "type": "string"
+        },
+        "to_candidate_key": {
+          "type": "string"
         }
       }
     },
@@ -2494,6 +2583,24 @@
           "items": {
             "$ref": "#/definitions/PoolOrder"
           }
+        }
+      }
+    },
+    "AppStateUpdateVote": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string"
         }
       }
     },
@@ -2675,6 +2782,9 @@
         },
         "value": {
           "type": "string"
+        },
+        "move_to_candidate_key": {
+          "type": "string"
         }
       }
     },
@@ -2758,6 +2868,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateCommissionVote"
+          }
+        },
+        "update_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateUpdateVote"
           }
         },
         "used_checks": {
@@ -3137,6 +3253,9 @@
           }
         },
         "block_reward": {
+          "type": "string"
+        },
+        "locked_stake_rewards": {
           "type": "string"
         },
         "size": {
@@ -3799,6 +3918,15 @@
         },
         "remove_limit_order": {
           "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "lock_stake": {
+          "type": "string"
+        },
+        "lock": {
+          "type": "string"
         }
       }
     },
@@ -3861,6 +3989,9 @@
           "format": "uint64"
         },
         "total_slashed": {
+          "type": "string"
+        },
+        "current_emission": {
           "type": "string"
         },
         "catching_up": {
