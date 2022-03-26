@@ -2586,6 +2586,27 @@
         }
       }
     },
+    "AppStateRewardPrice": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "amount_bip": {
+          "type": "string"
+        },
+        "amount_usdt": {
+          "type": "string"
+        },
+        "off": {
+          "type": "boolean"
+        },
+        "reward": {
+          "type": "string"
+        }
+      }
+    },
     "AppStateUpdateVote": {
       "type": "object",
       "properties": {
@@ -2888,6 +2909,18 @@
         },
         "total_slashed": {
           "type": "string"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GenesisResponseAppStateVersion"
+          }
+        },
+        "emission": {
+          "type": "string"
+        },
+        "prev_reward": {
+          "$ref": "#/definitions/AppStateRewardPrice"
         }
       }
     },
@@ -2929,6 +2962,18 @@
         },
         "burnable": {
           "type": "boolean"
+        }
+      }
+    },
+    "GenesisResponseAppStateVersion": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "name": {
+          "type": "string"
         }
       }
     },
@@ -3077,18 +3122,6 @@
           "items": {
             "type": "string"
           }
-        }
-      }
-    },
-    "VersionNetworkResponseVersion": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "height": {
-          "type": "string",
-          "format": "uint64"
         }
       }
     },
@@ -4213,6 +4246,18 @@
           "items": {
             "$ref": "#/definitions/VersionNetworkResponseVersion"
           }
+        }
+      }
+    },
+    "VersionNetworkResponseVersion": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
