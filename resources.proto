@@ -502,7 +502,6 @@ message GenesisResponse {
         }
         repeated CommissionVote commission_votes = 17;
 
-
         message UpdateVote {
             uint64 height = 1;
             repeated string votes = 2;
@@ -513,6 +512,23 @@ message GenesisResponse {
         repeated string used_checks = 11;
         uint64 max_gas = 7;
         string total_slashed = 8;
+
+        message Version {
+            uint64 height = 1;
+            string name = 2;
+        }
+        repeated Version versions = 23;
+
+        string emission = 24;
+
+        message RewardPrice  {
+            uint64 time = 1;
+            string amount_bip = 2;
+            string amount_usdt = 3;
+            bool   off = 4;
+            string reward = 5;
+        }
+        RewardPrice prev_reward = 25;
     }
     AppState app_state = 5;
 }
