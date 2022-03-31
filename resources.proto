@@ -18,6 +18,26 @@ message Coin {
 }
 
 
+message BestTradeRequest {
+    uint64 sell_coin = 1;
+    uint64 buy_coin = 2;
+    string amount = 3;
+    enum Type {
+        input = 0;
+        output = 1;
+    }
+    Type type = 4;
+    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+
+message BestTradeResponse {
+    repeated uint64 path = 1;
+    string result = 2;
+    string price = 3;
+}
+
 message BlocksRequest {
     uint64 from_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'from_height'
@@ -35,6 +55,7 @@ message BlocksRequest {
         default: "false"
     }];
 }
+
 message BlocksResponse {
     repeated BlockResponse blocks = 1;
 }
@@ -189,6 +210,16 @@ message PriceCommissionResponse {
     string move_stake = 59;
     string lock_stake = 60;
     string lock = 61;
+}
+
+
+message SwapPoolsRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
+message SwapPoolsResponse {
+    repeated SwapPoolResponse pools = 1;
 }
 
 message SwapPoolRequest {
