@@ -1969,6 +1969,12 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "lp_supply",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
           }
         ],
         "tags": [
