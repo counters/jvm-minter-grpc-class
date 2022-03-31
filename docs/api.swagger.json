@@ -204,6 +204,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "max_depth",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
           }
         ],
         "tags": [
