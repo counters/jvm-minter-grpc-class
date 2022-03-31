@@ -237,6 +237,7 @@ message SwapPoolRequest {
     }];
 }
 message SwapPoolResponse {
+    uint64 id = 5;
     string price = 4;
     string amount0 = 1;
     string amount1 = 2;
