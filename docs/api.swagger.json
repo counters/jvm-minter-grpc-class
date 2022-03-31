@@ -210,7 +210,8 @@
             "in": "query",
             "required": false,
             "type": "integer",
-            "format": "uint64"
+            "format": "uint64",
+            "default": "4"
           }
         ],
         "tags": [
