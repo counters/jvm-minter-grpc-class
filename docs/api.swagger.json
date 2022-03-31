@@ -3381,9 +3381,6 @@
         },
         "result": {
           "type": "string"
-        },
-        "price": {
-          "type": "string"
         }
       }
     },
