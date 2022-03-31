@@ -30,6 +30,9 @@ message BestTradeRequest {
     uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    uint64 max_depth = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
 }
 
 message BestTradeResponse {
