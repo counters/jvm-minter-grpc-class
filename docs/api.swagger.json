@@ -4213,6 +4213,10 @@
     "SwapPoolResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "price": {
           "type": "string"
         },
