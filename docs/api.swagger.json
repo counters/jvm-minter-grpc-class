@@ -140,6 +140,77 @@
         ]
       }
     },
+    "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}": {
+      "get": {
+        "summary": "BestTrade",
+        "operationId": "BestTrade",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BestTradeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "name": "amount",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/block/{height}": {
       "get": {
         "summary": "Block",
@@ -1856,6 +1927,47 @@
         ]
       }
     },
+    "/swap_pools": {
+      "get": {
+        "summary": "SwapPools",
+        "operationId": "SwapPools",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/test/block": {
       "get": {
         "summary": "TestBlock",
@@ -3249,6 +3361,32 @@
         }
       }
     },
+    "BestTradeRequestType": {
+      "type": "string",
+      "enum": [
+        "input",
+        "output"
+      ],
+      "default": "input"
+    },
+    "BestTradeResponse": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "result": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        }
+      }
+    },
     "BlockField": {
       "type": "string",
       "enum": [
@@ -4081,6 +4219,17 @@
         },
         "liquidity": {
           "type": "string"
+        }
+      }
+    },
+    "SwapPoolsResponse": {
+      "type": "object",
+      "properties": {
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolResponse"
+          }
         }
       }
     },
