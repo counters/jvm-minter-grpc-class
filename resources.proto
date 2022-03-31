@@ -220,6 +220,7 @@ message SwapPoolsRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    bool lp_supply = 2;
 }
 message SwapPoolsResponse {
     repeated SwapPoolResponse pools = 1;
