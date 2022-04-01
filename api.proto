@@ -429,6 +429,6 @@ service ApiService {
         option (google.api.http) = {
             get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
         };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 }
