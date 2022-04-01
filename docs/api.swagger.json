@@ -3443,6 +3443,10 @@
         "bip_value": {
           "type": "string"
         },
+        "locked_stake_until_block": {
+          "type": "string",
+          "format": "uint64"
+        },
         "multisig": {
           "$ref": "#/definitions/Multisig"
         }
