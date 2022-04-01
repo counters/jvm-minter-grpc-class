@@ -210,7 +210,7 @@
             "in": "query",
             "required": false,
             "type": "integer",
-            "format": "uint64",
+            "format": "int32",
             "default": "4"
           }
         ],
