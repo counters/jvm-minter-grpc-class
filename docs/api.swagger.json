@@ -1969,6 +1969,13 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          },
+          {
+            "name": "orders",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -3245,6 +3252,31 @@
         }
       }
     },
+    "SwapPoolLimitOrder": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
     "SwapPoolsResponseSwapPool": {
       "type": "object",
       "properties": {
@@ -3271,6 +3303,18 @@
         },
         "liquidity": {
           "type": "string"
+        },
+        "orders_sell": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
+        },
+        "orders_buy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
         }
       }
     },
