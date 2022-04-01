@@ -148,7 +148,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_buy"
         };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // EstimateCoinSell
@@ -158,7 +158,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_sell"
         };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // EstimateCoinSellAll
@@ -168,7 +168,7 @@ service ApiService {
         option (google.api.http) = {
             get: "/estimate_coin_sell_all"
         };
-        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
 
     // EstimateTxCommission
