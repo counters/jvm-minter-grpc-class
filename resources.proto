@@ -707,7 +707,7 @@ message AddressesResponse {
         uint64 transaction_count = 3;
         string bip_value = 5;
         uint64 locked_stake_until_block = 7;
-        Multisig multisig = 7;
+        Multisig multisig = 8;
     }
     map<string, Result> addresses = 3;
 }
