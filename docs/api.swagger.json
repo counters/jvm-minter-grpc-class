@@ -143,6 +143,7 @@
     "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}": {
       "get": {
         "summary": "BestTrade",
+        "description": "BestTrade returns optimal exchange route.",
         "operationId": "BestTrade",
         "responses": {
           "200": {
@@ -1938,6 +1939,7 @@
     "/swap_pools": {
       "get": {
         "summary": "SwapPools",
+        "description": "SwapPools returns list of all pools.",
         "operationId": "SwapPools",
         "responses": {
           "200": {

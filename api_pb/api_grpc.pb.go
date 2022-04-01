@@ -145,7 +145,7 @@ type ApiServiceClient interface {
 	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
 	// SwapPools
 	//
-	//
+	// SwapPools returns list of all pools.
 	SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
@@ -185,7 +185,7 @@ type ApiServiceClient interface {
 	LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error)
 	// BestTrade
 	//
-	//
+	// BestTrade returns optimal exchange route.
 	BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
 }
 
@@ -719,7 +719,7 @@ type ApiServiceServer interface {
 	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
 	// SwapPools
 	//
-	//
+	// SwapPools returns list of all pools.
 	SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
@@ -759,7 +759,7 @@ type ApiServiceServer interface {
 	LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error)
 	// BestTrade
 	//
-	//
+	// BestTrade returns optimal exchange route.
 	BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
