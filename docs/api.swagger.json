@@ -3394,7 +3394,8 @@
           "type": "string"
         },
         "locked_stake_until_block": {
-          "type": "string"
+          "type": "string",
+          "format": "uint64"
         },
         "multisig": {
           "$ref": "#/definitions/Multisig"
