@@ -220,6 +220,9 @@ message SwapPoolsRequest {
     uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
+    bool orders = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
 }
 message SwapPoolsResponse {
     message SwapPool {
@@ -230,6 +233,16 @@ message SwapPoolsResponse {
         string amount0 = 1;
         string amount1 = 2;
         string liquidity = 3;
+        message LimitOrder {
+            uint64 id = 7;
+            string want_sell = 3;
+            string want_buy = 4;
+            string price = 8;
+            string owner = 5;
+            uint64 height = 6;
+        }
+        repeated LimitOrder orders_sell = 8;
+        repeated LimitOrder orders_buy = 9;
     }
     repeated SwapPool pools = 1;
 }
