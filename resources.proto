@@ -17,10 +17,13 @@ message Coin {
     string symbol = 2;
 }
 
-
 message BestTradeRequest {
-    uint64 sell_coin = 1;
-    uint64 buy_coin = 2;
+    uint64 sell_coin = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 buy_coin = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
     string amount = 3;
     enum Type {
         input = 0;

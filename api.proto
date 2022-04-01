@@ -323,7 +323,7 @@ service ApiService {
 
     // SwapPools
     //
-    //
+    // SwapPools returns list of all pools.
     rpc SwapPools (SwapPoolsRequest) returns (SwapPoolsResponse) {
         option (google.api.http) = {
             get: "/swap_pools"
@@ -422,10 +422,9 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
-
     // BestTrade
     //
-    //
+    // BestTrade returns optimal exchange route.
     rpc BestTrade (BestTradeRequest) returns (BestTradeResponse) {
         option (google.api.http) = {
             get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
