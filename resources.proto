@@ -30,8 +30,7 @@ message BestTradeRequest {
     uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
     }];
-    uint64 max_depth = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
+    int32 max_depth = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         default: '4'
     }];
 }
@@ -894,7 +893,6 @@ message TransactionsRequest {
         required: 'query'
     }];
     int32 page = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-        type: INTEGER
         default: '1'
     }];
     int32 per_page = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
