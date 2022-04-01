@@ -18,6 +18,29 @@ message Coin {
 }
 
 
+message BestTradeRequest {
+    uint64 sell_coin = 1;
+    uint64 buy_coin = 2;
+    string amount = 3;
+    enum Type {
+        input = 0;
+        output = 1;
+    }
+    Type type = 4;
+    uint64 height = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    uint64 max_depth = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+        default: '4'
+    }];
+}
+
+message BestTradeResponse {
+    repeated uint64 path = 1;
+    string result = 2;
+}
+
 message BlocksRequest {
     uint64 from_height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         required: 'from_height'
@@ -35,6 +58,7 @@ message BlocksRequest {
         default: "false"
     }];
 }
+
 message BlocksResponse {
     repeated BlockResponse blocks = 1;
 }
@@ -191,6 +215,38 @@ message PriceCommissionResponse {
     string lock = 61;
 }
 
+
+message SwapPoolsRequest {
+    uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+    bool orders = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        default: "false"
+    }];
+}
+message SwapPoolsResponse {
+    message SwapPool {
+        uint64 id = 5;
+        string price = 4;
+        uint64 coin0 = 6;
+        uint64 coin1 = 7;
+        string amount0 = 1;
+        string amount1 = 2;
+        string liquidity = 3;
+        message LimitOrder {
+            uint64 id = 7;
+            string want_sell = 3;
+            string want_buy = 4;
+            string price = 8;
+            string owner = 5;
+            uint64 height = 6;
+        }
+        repeated LimitOrder orders_sell = 8;
+        repeated LimitOrder orders_buy = 9;
+    }
+    repeated SwapPool pools = 1;
+}
+
 message SwapPoolRequest {
     uint64 coin0 = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
         type: INTEGER
@@ -203,6 +259,7 @@ message SwapPoolRequest {
     }];
 }
 message SwapPoolResponse {
+    uint64 id = 5;
     string price = 4;
     string amount0 = 1;
     string amount1 = 2;

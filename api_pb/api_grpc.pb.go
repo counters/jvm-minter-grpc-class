@@ -143,6 +143,10 @@ type ApiServiceClient interface {
 	//
 	//
 	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// SwapPools
+	//
+	//
+	SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
 	//
@@ -179,6 +183,10 @@ type ApiServiceClient interface {
 	//
 	//
 	LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error)
+	// BestTrade
+	//
+	//
+	BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
 }
 
 type apiServiceClient struct {
@@ -482,6 +490,15 @@ func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, op
 	return out, nil
 }
 
+func (c *apiServiceClient) SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error) {
+	out := new(SwapPoolsResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPools", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *apiServiceClient) SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
 	out := new(SwapPoolResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPoolProvider", in, out, opts...)
@@ -557,6 +574,15 @@ func (c *apiServiceClient) LimitOrdersOfPool(ctx context.Context, in *LimitOrder
 func (c *apiServiceClient) LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error) {
 	out := new(LimitOrdersResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/LimitOrders", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error) {
+	out := new(BestTradeResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTrade", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -691,6 +717,10 @@ type ApiServiceServer interface {
 	//
 	//
 	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
+	// SwapPools
+	//
+	//
+	SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
 	//
@@ -727,6 +757,10 @@ type ApiServiceServer interface {
 	//
 	//
 	LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error)
+	// BestTrade
+	//
+	//
+	BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -824,6 +858,9 @@ func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) 
 func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
 }
+func (UnimplementedApiServiceServer) SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPools not implemented")
+}
 func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
 }
@@ -850,6 +887,9 @@ func (UnimplementedApiServiceServer) LimitOrdersOfPool(context.Context, *LimitOr
 }
 func (UnimplementedApiServiceServer) LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LimitOrders not implemented")
+}
+func (UnimplementedApiServiceServer) BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BestTrade not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1407,6 +1447,24 @@ func _ApiService_SwapPool_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_SwapPools_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).SwapPools(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/SwapPools",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).SwapPools(ctx, req.(*SwapPoolsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _ApiService_SwapPoolProvider_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SwapPoolProviderRequest)
 	if err := dec(in); err != nil {
@@ -1569,6 +1627,24 @@ func _ApiService_LimitOrders_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_BestTrade_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BestTradeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).BestTrade(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/BestTrade",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).BestTrade(ctx, req.(*BestTradeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ApiService_ServiceDesc is the grpc.ServiceDesc for ApiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1693,6 +1769,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_SwapPool_Handler,
 		},
 		{
+			MethodName: "SwapPools",
+			Handler:    _ApiService_SwapPools_Handler,
+		},
+		{
 			MethodName: "SwapPoolProvider",
 			Handler:    _ApiService_SwapPoolProvider_Handler,
 		},
@@ -1727,6 +1807,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "LimitOrders",
 			Handler:    _ApiService_LimitOrders_Handler,
+		},
+		{
+			MethodName: "BestTrade",
+			Handler:    _ApiService_BestTrade_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

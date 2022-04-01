@@ -321,6 +321,16 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
+    // SwapPools
+    //
+    //
+    rpc SwapPools (SwapPoolsRequest) returns (SwapPoolsResponse) {
+        option (google.api.http) = {
+            get: "/swap_pools"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
     // SwapPoolProvider
     //
     //
@@ -381,6 +391,7 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
     }
 
+
     // LimitOrder
     //
     //
@@ -407,6 +418,17 @@ service ApiService {
     rpc LimitOrders (LimitOrdersRequest) returns (LimitOrdersResponse) {
         option (google.api.http) = {
             get: "/limit_orders"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
+
+    // BestTrade
+    //
+    //
+    rpc BestTrade (BestTradeRequest) returns (BestTradeResponse) {
+        option (google.api.http) = {
+            get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }

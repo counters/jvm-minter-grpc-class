@@ -140,6 +140,85 @@
         ]
       }
     },
+    "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}": {
+      "get": {
+        "summary": "BestTrade",
+        "operationId": "BestTrade",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BestTradeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "name": "amount",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "max_depth",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64",
+            "default": "4"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/block/{height}": {
       "get": {
         "summary": "Block",
@@ -1856,6 +1935,54 @@
         ]
       }
     },
+    "/swap_pools": {
+      "get": {
+        "summary": "SwapPools",
+        "operationId": "SwapPools",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "orders",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
     "/test/block": {
       "get": {
         "summary": "TestBlock",
@@ -3125,6 +3252,72 @@
         }
       }
     },
+    "SwapPoolLimitOrder": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "SwapPoolsResponseSwapPool": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "price": {
+          "type": "string"
+        },
+        "coin0": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin1": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "amount0": {
+          "type": "string"
+        },
+        "amount1": {
+          "type": "string"
+        },
+        "liquidity": {
+          "type": "string"
+        },
+        "orders_sell": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
+        },
+        "orders_buy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
+        }
+      }
+    },
     "WaitListResponseWait": {
       "type": "object",
       "properties": {
@@ -3246,6 +3439,29 @@
         },
         "multisig": {
           "$ref": "#/definitions/Multisig"
+        }
+      }
+    },
+    "BestTradeRequestType": {
+      "type": "string",
+      "enum": [
+        "input",
+        "output"
+      ],
+      "default": "input"
+    },
+    "BestTradeResponse": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "result": {
+          "type": "string"
         }
       }
     },
@@ -4070,6 +4286,10 @@
     "SwapPoolResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "price": {
           "type": "string"
         },
@@ -4081,6 +4301,17 @@
         },
         "liquidity": {
           "type": "string"
+        }
+      }
+    },
+    "SwapPoolsResponse": {
+      "type": "object",
+      "properties": {
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolsResponseSwapPool"
+          }
         }
       }
     },
