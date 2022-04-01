@@ -677,7 +677,7 @@ message AddressResponse {
     repeated AddressBalance total = 4;
     uint64 transaction_count = 2;
     string bip_value = 5;
-    string locked_stake_until_block = 7;
+    uint64 locked_stake_until_block = 7;
     Multisig multisig = 6;
 }
 message Multisig {
