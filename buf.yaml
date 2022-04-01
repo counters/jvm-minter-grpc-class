@@ -8,7 +8,7 @@
 version: v1beta1
 name: buf.build/minterteam/node-grpc-gateway
 deps:
-  - buf.build/beta/googleapis
+  - buf.build/googleapis/googleapis
   - buf.build/grpc-ecosystem/grpc-gateway
 #lint:
 #  use:

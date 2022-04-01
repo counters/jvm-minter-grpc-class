@@ -325,6 +325,7 @@ service ApiService {
     //
     // SwapPools returns list of all pools.
     rpc SwapPools (SwapPoolsRequest) returns (SwapPoolsResponse) {
+        // option (google.api.method_visibility).restriction = "INTERNAL";
         option (google.api.http) = {
             get: "/swap_pools"
         };
@@ -426,6 +427,7 @@ service ApiService {
     //
     // BestTrade returns optimal exchange route.
     rpc BestTrade (BestTradeRequest) returns (BestTradeResponse) {
+        // option (google.api.method_visibility).restriction = "INTERNAL";
         option (google.api.http) = {
             get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
         };

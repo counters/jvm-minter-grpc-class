@@ -23,3 +23,4 @@ plugins:
       - simple_operation_ids=true
       - allow_merge=true
       - merge_file_name=api
+#      - visibility_restriction_selectors=INTERNAL
