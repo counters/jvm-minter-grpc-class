@@ -313,7 +313,7 @@ service ApiService {
 
     // SwapPool
     //
-    //
+    // SwapPool returns total supply and reserves.
     rpc SwapPool (SwapPoolRequest) returns (SwapPoolResponse) {
         option (google.api.http) = {
             get: "/swap_pool/{coin0}/{coin1}"
@@ -334,7 +334,7 @@ service ApiService {
 
     // SwapPoolProvider
     //
-    //
+    // SwapPoolProvider returns reserves and liquidity balance of provider.
     rpc SwapPoolProvider (SwapPoolProviderRequest) returns (SwapPoolResponse) {
         option (google.api.http) = {
             get: "/swap_pool/{coin0}/{coin1}/{provider}"
@@ -344,7 +344,7 @@ service ApiService {
 
     // PriceCommission
     //
-    //
+    // PriceCommission returns commissions.
     rpc PriceCommission (PriceCommissionRequest) returns (PriceCommissionResponse) {
         option (google.api.http) = {
             get: "/price_commissions"
@@ -354,7 +354,7 @@ service ApiService {
 
     // VersionNetwork
     //
-    //
+    // VersionNetwork returns versions network.
     rpc VersionNetwork (VersionNetworkRequest) returns (VersionNetworkResponse) {
         option (google.api.http) = {
             get: "/version_network"
@@ -364,7 +364,7 @@ service ApiService {
 
     // CommissionVotes
     //
-    //
+    // CommissionVotes returns votes for update commissions.
     rpc CommissionVotes (CommissionVotesRequest) returns (CommissionVotesResponse) {
         option (google.api.http) = {
             get: "/commission_votes/{target_version}"
@@ -374,7 +374,7 @@ service ApiService {
 
     // UpdateVotes
     //
-    //
+    // UpdateVotes returns votes for update network.
     rpc UpdateVotes (UpdateVotesRequest) returns (UpdateVotesResponse) {
         option (google.api.http) = {
             get: "/update_votes/{target_version}"
@@ -384,7 +384,7 @@ service ApiService {
 
     // Blocks
     //
-    //
+    // Blocks returns blocks at given interval.
     rpc Blocks (BlocksRequest) returns (BlocksResponse) {
         option (google.api.http) = {
             get: "/blocks"
@@ -395,7 +395,7 @@ service ApiService {
 
     // LimitOrder
     //
-    //
+    // LimitOrder returns order by ID.
     rpc LimitOrder (LimitOrderRequest) returns (LimitOrderResponse) {
         option (google.api.http) = {
             get: "/limit_order/{order_id}"
@@ -405,7 +405,7 @@ service ApiService {
 
     // LimitOrdersOfPool
     //
-    //
+    // LimitOrdersOfPool returns sell orders for a pair of coins.
     rpc LimitOrdersOfPool (LimitOrdersOfPoolRequest) returns (LimitOrdersOfPoolResponse) {
         option (google.api.http) = {
             get: "/limit_orders/{sell_coin}/{buy_coin}"
@@ -415,7 +415,7 @@ service ApiService {
 
     // LimitOrders
     //
-    //
+    // LimitOrders returns orders by IDs.
     rpc LimitOrders (LimitOrdersRequest) returns (LimitOrdersResponse) {
         option (google.api.http) = {
             get: "/limit_orders"
