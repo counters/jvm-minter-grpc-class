@@ -141,7 +141,7 @@ type ApiServiceClient interface {
 	TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
 	// SwapPool
 	//
-	//
+	// SwapPool returns total supply and reserves.
 	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
 	// SwapPools
 	//
@@ -149,39 +149,39 @@ type ApiServiceClient interface {
 	SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
-	//
+	// SwapPoolProvider returns reserves and liquidity balance of provider.
 	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
 	// PriceCommission
 	//
-	//
+	// PriceCommission returns commissions.
 	PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error)
 	// VersionNetwork
 	//
-	//
+	// VersionNetwork returns versions network.
 	VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error)
 	// CommissionVotes
 	//
-	//
+	// CommissionVotes returns votes for update commissions.
 	CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
 	// UpdateVotes
 	//
-	//
+	// UpdateVotes returns votes for update network.
 	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error)
 	// Blocks
 	//
-	//
+	// Blocks returns blocks at given interval.
 	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error)
 	// LimitOrder
 	//
-	//
+	// LimitOrder returns order by ID.
 	LimitOrder(ctx context.Context, in *LimitOrderRequest, opts ...grpc.CallOption) (*LimitOrderResponse, error)
 	// LimitOrdersOfPool
 	//
-	//
+	// LimitOrdersOfPool returns sell orders for a pair of coins.
 	LimitOrdersOfPool(ctx context.Context, in *LimitOrdersOfPoolRequest, opts ...grpc.CallOption) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
-	//
+	// LimitOrders returns orders by IDs.
 	LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error)
 	// BestTrade
 	//
@@ -715,7 +715,7 @@ type ApiServiceServer interface {
 	TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error)
 	// SwapPool
 	//
-	//
+	// SwapPool returns total supply and reserves.
 	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
 	// SwapPools
 	//
@@ -723,39 +723,39 @@ type ApiServiceServer interface {
 	SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
-	//
+	// SwapPoolProvider returns reserves and liquidity balance of provider.
 	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error)
 	// PriceCommission
 	//
-	//
+	// PriceCommission returns commissions.
 	PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error)
 	// VersionNetwork
 	//
-	//
+	// VersionNetwork returns versions network.
 	VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error)
 	// CommissionVotes
 	//
-	//
+	// CommissionVotes returns votes for update commissions.
 	CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error)
 	// UpdateVotes
 	//
-	//
+	// UpdateVotes returns votes for update network.
 	UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error)
 	// Blocks
 	//
-	//
+	// Blocks returns blocks at given interval.
 	Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error)
 	// LimitOrder
 	//
-	//
+	// LimitOrder returns order by ID.
 	LimitOrder(context.Context, *LimitOrderRequest) (*LimitOrderResponse, error)
 	// LimitOrdersOfPool
 	//
-	//
+	// LimitOrdersOfPool returns sell orders for a pair of coins.
 	LimitOrdersOfPool(context.Context, *LimitOrdersOfPoolRequest) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
-	//
+	// LimitOrders returns orders by IDs.
 	LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error)
 	// BestTrade
 	//

@@ -298,6 +298,7 @@
     "/blocks": {
       "get": {
         "summary": "Blocks",
+        "description": "Blocks returns blocks at given interval.",
         "operationId": "Blocks",
         "responses": {
           "200": {
@@ -606,6 +607,7 @@
     "/commission_votes/{target_version}": {
       "get": {
         "summary": "CommissionVotes",
+        "description": "CommissionVotes returns votes for update commissions.",
         "operationId": "CommissionVotes",
         "responses": {
           "200": {
@@ -1287,6 +1289,7 @@
     "/limit_order/{order_id}": {
       "get": {
         "summary": "LimitOrder",
+        "description": "LimitOrder returns order by ID.",
         "operationId": "LimitOrder",
         "responses": {
           "200": {
@@ -1335,6 +1338,7 @@
     "/limit_orders": {
       "get": {
         "summary": "LimitOrders",
+        "description": "LimitOrders returns orders by IDs.",
         "operationId": "LimitOrders",
         "responses": {
           "200": {
@@ -1387,6 +1391,7 @@
     "/limit_orders/{sell_coin}/{buy_coin}": {
       "get": {
         "summary": "LimitOrdersOfPool",
+        "description": "LimitOrdersOfPool returns sell orders for a pair of coins.",
         "operationId": "LimitOrdersOfPool",
         "responses": {
           "200": {
@@ -1606,6 +1611,7 @@
     "/price_commissions": {
       "get": {
         "summary": "PriceCommission",
+        "description": "PriceCommission returns commissions.",
         "operationId": "PriceCommission",
         "responses": {
           "200": {
@@ -1823,6 +1829,7 @@
     "/swap_pool/{coin0}/{coin1}": {
       "get": {
         "summary": "SwapPool",
+        "description": "SwapPool returns total supply and reserves.",
         "operationId": "SwapPool",
         "responses": {
           "200": {
@@ -1878,6 +1885,7 @@
     "/swap_pool/{coin0}/{coin1}/{provider}": {
       "get": {
         "summary": "SwapPoolProvider",
+        "description": "SwapPoolProvider returns reserves and liquidity balance of provider.",
         "operationId": "SwapPoolProvider",
         "responses": {
           "200": {
@@ -2162,6 +2170,7 @@
     "/update_votes/{target_version}": {
       "get": {
         "summary": "UpdateVotes",
+        "description": "UpdateVotes returns votes for update network.",
         "operationId": "UpdateVotes",
         "responses": {
           "200": {
@@ -2252,6 +2261,7 @@
     "/version_network": {
       "get": {
         "summary": "VersionNetwork",
+        "description": "VersionNetwork returns versions network.",
         "operationId": "VersionNetwork",
         "responses": {
           "200": {
