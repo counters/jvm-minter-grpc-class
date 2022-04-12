@@ -2399,6 +2399,10 @@
         },
         "multisig_data": {
           "$ref": "#/definitions/AccountMultisigData"
+        },
+        "lock_stake_until_block": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
