@@ -380,6 +380,11 @@ message GenesisResponse {
             repeated string pub_key_types = 1;
         }
         Validator validator = 3;
+
+        message Version {
+            int64 app_version = 1;
+        }
+        Version version = 4;
     }
     ConsensusParams consensus_params = 3;
     string app_hash = 4;
