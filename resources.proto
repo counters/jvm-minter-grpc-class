@@ -474,6 +474,7 @@ message GenesisResponse {
                 repeated string addresses = 3;
             }
             MultisigData multisig_data = 4;
+            uint64 lock_stake_until_block = 5;
         }
         repeated Account accounts = 14;
 
