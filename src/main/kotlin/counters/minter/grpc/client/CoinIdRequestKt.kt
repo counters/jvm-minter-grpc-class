@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun coinIdRequest(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinIdRequest =
+public inline fun coinIdRequest(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinIdRequest =
   counters.minter.grpc.client.CoinIdRequestKt.Dsl._create(counters.minter.grpc.client.CoinIdRequest.newBuilder()).apply { block() }._build()
-object CoinIdRequestKt {
+public object CoinIdRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CoinIdRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.CoinIdRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CoinIdRequest.Builder): Dsl = Dsl(builder)
@@ -24,14 +24,14 @@ object CoinIdRequestKt {
 
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     * };
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -40,21 +40,21 @@ object CoinIdRequestKt {
       }
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     * };
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>uint64 id = 2;</code>
+     * <code>uint64 id = 2 [json_name = "id"];</code>
      */
-    var id: kotlin.Long
+    public var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -62,13 +62,13 @@ object CoinIdRequestKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 2;</code>
+     * <code>uint64 id = 2 [json_name = "id"];</code>
      */
-    fun clearId() {
+    public fun clearId() {
       _builder.clearId()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.CoinIdRequest.copy(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinIdRequest =
+public inline fun counters.minter.grpc.client.CoinIdRequest.copy(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinIdRequest =
   counters.minter.grpc.client.CoinIdRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

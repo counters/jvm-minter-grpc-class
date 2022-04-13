@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun transactionResponse(block: counters.minter.grpc.client.TransactionResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.TransactionResponse =
+public inline fun transactionResponse(block: counters.minter.grpc.client.TransactionResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionResponse =
   counters.minter.grpc.client.TransactionResponseKt.Dsl._create(counters.minter.grpc.client.TransactionResponse.newBuilder()).apply { block() }._build()
-object TransactionResponseKt {
+public object TransactionResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.TransactionResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.TransactionResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.TransactionResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object TransactionResponseKt {
     internal fun _build(): counters.minter.grpc.client.TransactionResponse = _builder.build()
 
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      */
-    var hash: kotlin.String
+    public var hash: kotlin.String
       @JvmName("getHash")
       get() = _builder.getHash()
       @JvmName("setHash")
@@ -33,16 +33,16 @@ object TransactionResponseKt {
         _builder.setHash(value)
       }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      */
-    fun clearHash() {
+    public fun clearHash() {
       _builder.clearHash()
     }
 
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      */
-    var rawTx: kotlin.String
+    public var rawTx: kotlin.String
       @JvmName("getRawTx")
       get() = _builder.getRawTx()
       @JvmName("setRawTx")
@@ -50,16 +50,16 @@ object TransactionResponseKt {
         _builder.setRawTx(value)
       }
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      */
-    fun clearRawTx() {
+    public fun clearRawTx() {
       _builder.clearRawTx()
     }
 
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -67,16 +67,16 @@ object TransactionResponseKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>uint64 index = 4;</code>
+     * <code>uint64 index = 4 [json_name = "index"];</code>
      */
-    var index: kotlin.Long
+    public var index: kotlin.Long
       @JvmName("getIndex")
       get() = _builder.getIndex()
       @JvmName("setIndex")
@@ -84,16 +84,16 @@ object TransactionResponseKt {
         _builder.setIndex(value)
       }
     /**
-     * <code>uint64 index = 4;</code>
+     * <code>uint64 index = 4 [json_name = "index"];</code>
      */
-    fun clearIndex() {
+    public fun clearIndex() {
       _builder.clearIndex()
     }
 
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      */
-    var from: kotlin.String
+    public var from: kotlin.String
       @JvmName("getFrom")
       get() = _builder.getFrom()
       @JvmName("setFrom")
@@ -101,16 +101,16 @@ object TransactionResponseKt {
         _builder.setFrom(value)
       }
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      */
-    fun clearFrom() {
+    public fun clearFrom() {
       _builder.clearFrom()
     }
 
     /**
-     * <code>uint64 nonce = 6;</code>
+     * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
      */
-    var nonce: kotlin.Long
+    public var nonce: kotlin.Long
       @JvmName("getNonce")
       get() = _builder.getNonce()
       @JvmName("setNonce")
@@ -118,16 +118,16 @@ object TransactionResponseKt {
         _builder.setNonce(value)
       }
     /**
-     * <code>uint64 nonce = 6;</code>
+     * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
      */
-    fun clearNonce() {
+    public fun clearNonce() {
       _builder.clearNonce()
     }
 
     /**
-     * <code>uint64 gas = 7;</code>
+     * <code>uint64 gas = 7 [json_name = "gas"];</code>
      */
-    var gas: kotlin.Long
+    public var gas: kotlin.Long
       @JvmName("getGas")
       get() = _builder.getGas()
       @JvmName("setGas")
@@ -135,16 +135,16 @@ object TransactionResponseKt {
         _builder.setGas(value)
       }
     /**
-     * <code>uint64 gas = 7;</code>
+     * <code>uint64 gas = 7 [json_name = "gas"];</code>
      */
-    fun clearGas() {
+    public fun clearGas() {
       _builder.clearGas()
     }
 
     /**
-     * <code>uint64 gas_price = 8;</code>
+     * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
      */
-    var gasPrice: kotlin.Long
+    public var gasPrice: kotlin.Long
       @JvmName("getGasPrice")
       get() = _builder.getGasPrice()
       @JvmName("setGasPrice")
@@ -152,16 +152,16 @@ object TransactionResponseKt {
         _builder.setGasPrice(value)
       }
     /**
-     * <code>uint64 gas_price = 8;</code>
+     * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
      */
-    fun clearGasPrice() {
+    public fun clearGasPrice() {
       _builder.clearGasPrice()
     }
 
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
-    var gasCoin: counters.minter.grpc.client.Coin
+    public var gasCoin: counters.minter.grpc.client.Coin
       @JvmName("getGasCoin")
       get() = _builder.getGasCoin()
       @JvmName("setGasCoin")
@@ -169,23 +169,23 @@ object TransactionResponseKt {
         _builder.setGasCoin(value)
       }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
-    fun clearGasCoin() {
+    public fun clearGasCoin() {
       _builder.clearGasCoin()
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      * @return Whether the gasCoin field is set.
      */
-    fun hasGasCoin(): kotlin.Boolean {
+    public fun hasGasCoin(): kotlin.Boolean {
       return _builder.hasGasCoin()
     }
 
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      */
-    var typeHex: kotlin.String
+    public var typeHex: kotlin.String
       @JvmName("getTypeHex")
       get() = _builder.getTypeHex()
       @JvmName("setTypeHex")
@@ -193,9 +193,9 @@ object TransactionResponseKt {
         _builder.setTypeHex(value)
       }
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      */
-    fun clearTypeHex() {
+    public fun clearTypeHex() {
       _builder.clearTypeHex()
     }
 
@@ -204,9 +204,9 @@ object TransactionResponseKt {
      *    string type_name = 18;
      * </pre>
      *
-     * <code>uint64 type = 10;</code>
+     * <code>uint64 type = 10 [json_name = "type"];</code>
      */
-    var type: kotlin.Long
+    public var type: kotlin.Long
       @JvmName("getType")
       get() = _builder.getType()
       @JvmName("setType")
@@ -218,16 +218,16 @@ object TransactionResponseKt {
      *    string type_name = 18;
      * </pre>
      *
-     * <code>uint64 type = 10;</code>
+     * <code>uint64 type = 10 [json_name = "type"];</code>
      */
-    fun clearType() {
+    public fun clearType() {
       _builder.clearType()
     }
 
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
-    var data: com.google.protobuf.Any
+    public var data: com.google.protobuf.Any
       @JvmName("getData")
       get() = _builder.getData()
       @JvmName("setData")
@@ -235,23 +235,23 @@ object TransactionResponseKt {
         _builder.setData(value)
       }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
-    fun clearData() {
+    public fun clearData() {
       _builder.clearData()
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
-    fun hasData(): kotlin.Boolean {
+    public fun hasData(): kotlin.Boolean {
       return _builder.hasData()
     }
 
     /**
-     * <code>bytes payload = 12;</code>
+     * <code>bytes payload = 12 [json_name = "payload"];</code>
      */
-    var payload: com.google.protobuf.ByteString
+    public var payload: com.google.protobuf.ByteString
       @JvmName("getPayload")
       get() = _builder.getPayload()
       @JvmName("setPayload")
@@ -259,16 +259,16 @@ object TransactionResponseKt {
         _builder.setPayload(value)
       }
     /**
-     * <code>bytes payload = 12;</code>
+     * <code>bytes payload = 12 [json_name = "payload"];</code>
      */
-    fun clearPayload() {
+    public fun clearPayload() {
       _builder.clearPayload()
     }
 
     /**
-     * <code>bytes service_data = 16;</code>
+     * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
      */
-    var serviceData: com.google.protobuf.ByteString
+    public var serviceData: com.google.protobuf.ByteString
       @JvmName("getServiceData")
       get() = _builder.getServiceData()
       @JvmName("setServiceData")
@@ -276,9 +276,9 @@ object TransactionResponseKt {
         _builder.setServiceData(value)
       }
     /**
-     * <code>bytes service_data = 16;</code>
+     * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
      */
-    fun clearServiceData() {
+    public fun clearServiceData() {
       _builder.clearServiceData()
     }
 
@@ -287,65 +287,66 @@ object TransactionResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class TagsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class TagsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
-     val tags: com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+     public val tags: com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       @kotlin.jvm.JvmSynthetic
       @JvmName("getTagsMap")
       get() = com.google.protobuf.kotlin.DslMap(
         _builder.getTagsMap()
       )
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @JvmName("putTags")
-    fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       .put(key: kotlin.String, value: kotlin.String) {
          _builder.putTags(key, value)
        }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("setTags")
-    inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       .set(key: kotlin.String, value: kotlin.String) {
          put(key, value)
        }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("removeTags")
-    fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       .remove(key: kotlin.String) {
          _builder.removeTags(key)
        }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("putAllTags")
-    fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       .putAll(map: kotlin.collections.Map<kotlin.String, kotlin.String>) {
          _builder.putAllTags(map)
        }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @JvmName("clearTags")
-    fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, TagsProxy>
       .clear() {
          _builder.clearTags()
        }
 
     /**
-     * <code>uint64 code = 14;</code>
+     * <code>uint64 code = 14 [json_name = "code"];</code>
      */
-    var code: kotlin.Long
+    public var code: kotlin.Long
       @JvmName("getCode")
       get() = _builder.getCode()
       @JvmName("setCode")
@@ -353,16 +354,16 @@ object TransactionResponseKt {
         _builder.setCode(value)
       }
     /**
-     * <code>uint64 code = 14;</code>
+     * <code>uint64 code = 14 [json_name = "code"];</code>
      */
-    fun clearCode() {
+    public fun clearCode() {
       _builder.clearCode()
     }
 
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      */
-    var log: kotlin.String
+    public var log: kotlin.String
       @JvmName("getLog")
       get() = _builder.getLog()
       @JvmName("setLog")
@@ -370,13 +371,13 @@ object TransactionResponseKt {
         _builder.setLog(value)
       }
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      */
-    fun clearLog() {
+    public fun clearLog() {
       _builder.clearLog()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.TransactionResponse.copy(block: counters.minter.grpc.client.TransactionResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.TransactionResponse =
+public inline fun counters.minter.grpc.client.TransactionResponse.copy(block: counters.minter.grpc.client.TransactionResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionResponse =
   counters.minter.grpc.client.TransactionResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

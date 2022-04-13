@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun slashEvent(block: counters.minter.grpc.client.SlashEventKt.Dsl.() -> Unit): counters.minter.grpc.client.SlashEvent =
+public inline fun slashEvent(block: counters.minter.grpc.client.SlashEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SlashEvent =
   counters.minter.grpc.client.SlashEventKt.Dsl._create(counters.minter.grpc.client.SlashEvent.newBuilder()).apply { block() }._build()
-object SlashEventKt {
+public object SlashEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SlashEvent.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.SlashEvent.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SlashEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object SlashEventKt {
     internal fun _build(): counters.minter.grpc.client.SlashEvent = _builder.build()
 
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      */
-    var address: kotlin.String
+    public var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -33,16 +33,16 @@ object SlashEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      */
-    fun clearAddress() {
+    public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [json_name = "amount"];</code>
      */
-    var amount: kotlin.String
+    public var amount: kotlin.String
       @JvmName("getAmount")
       get() = _builder.getAmount()
       @JvmName("setAmount")
@@ -50,16 +50,16 @@ object SlashEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [json_name = "amount"];</code>
      */
-    fun clearAmount() {
+    public fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      */
-    var coin: kotlin.Long
+    public var coin: kotlin.Long
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -67,16 +67,16 @@ object SlashEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      */
-    fun clearCoin() {
+    public fun clearCoin() {
       _builder.clearCoin()
     }
 
     /**
-     * <code>string validator_pub_key = 4;</code>
+     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
      */
-    var validatorPubKey: kotlin.String
+    public var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
       get() = _builder.getValidatorPubKey()
       @JvmName("setValidatorPubKey")
@@ -84,13 +84,13 @@ object SlashEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 4;</code>
+     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
      */
-    fun clearValidatorPubKey() {
+    public fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.SlashEvent.copy(block: counters.minter.grpc.client.SlashEventKt.Dsl.() -> Unit): counters.minter.grpc.client.SlashEvent =
+public inline fun counters.minter.grpc.client.SlashEvent.copy(block: counters.minter.grpc.client.SlashEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SlashEvent =
   counters.minter.grpc.client.SlashEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

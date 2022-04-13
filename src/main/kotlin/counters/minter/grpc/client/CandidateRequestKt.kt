@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun candidateRequest(block: counters.minter.grpc.client.CandidateRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateRequest =
+public inline fun candidateRequest(block: counters.minter.grpc.client.CandidateRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateRequest =
   counters.minter.grpc.client.CandidateRequestKt.Dsl._create(counters.minter.grpc.client.CandidateRequest.newBuilder()).apply { block() }._build()
-object CandidateRequestKt {
+public object CandidateRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CandidateRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.CandidateRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CandidateRequest.Builder): Dsl = Dsl(builder)
@@ -27,9 +27,9 @@ object CandidateRequestKt {
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      */
-    var publicKey: kotlin.String
+    public var publicKey: kotlin.String
       @JvmName("getPublicKey")
       get() = _builder.getPublicKey()
       @JvmName("setPublicKey")
@@ -41,9 +41,9 @@ object CandidateRequestKt {
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      */
-    fun clearPublicKey() {
+    public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
@@ -52,9 +52,9 @@ object CandidateRequestKt {
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -66,9 +66,9 @@ object CandidateRequestKt {
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
 
@@ -77,9 +77,9 @@ object CandidateRequestKt {
      * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
      * </pre>
      *
-     * <code>bool not_show_stakes = 4;</code>
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
      */
-    var notShowStakes: kotlin.Boolean
+    public var notShowStakes: kotlin.Boolean
       @JvmName("getNotShowStakes")
       get() = _builder.getNotShowStakes()
       @JvmName("setNotShowStakes")
@@ -91,13 +91,13 @@ object CandidateRequestKt {
      * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
      * </pre>
      *
-     * <code>bool not_show_stakes = 4;</code>
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
      */
-    fun clearNotShowStakes() {
+    public fun clearNotShowStakes() {
       _builder.clearNotShowStakes()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.CandidateRequest.copy(block: counters.minter.grpc.client.CandidateRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidateRequest =
+public inline fun counters.minter.grpc.client.CandidateRequest.copy(block: counters.minter.grpc.client.CandidateRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidateRequest =
   counters.minter.grpc.client.CandidateRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

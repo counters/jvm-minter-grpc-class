@@ -19,7 +19,6 @@ private static final long serialVersionUID = 0L;
     hash_ = "";
     time_ = "";
     transactions_ = java.util.Collections.emptyList();
-    blockReward_ = "";
     proposer_ = "";
     validators_ = java.util.Collections.emptyList();
     missed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -88,12 +87,6 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(counters.minter.grpc.client.TransactionResponse.parser(), extensionRegistry));
             break;
           }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            blockReward_ = s;
-            break;
-          }
           case 64: {
 
             size_ = input.readUInt64();
@@ -145,6 +138,32 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
             break;
           }
+          case 122: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (blockReward_ != null) {
+              subBuilder = blockReward_.toBuilder();
+            }
+            blockReward_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(blockReward_);
+              blockReward_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 130: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (lockedStakeRewards_ != null) {
+              subBuilder = lockedStakeRewards_.toBuilder();
+            }
+            lockedStakeRewards_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lockedStakeRewards_);
+              lockedStakeRewards_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -194,19 +213,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      * @return The publicKey.
      */
     java.lang.String getPublicKey();
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      * @return The bytes for publicKey.
      */
     com.google.protobuf.ByteString
         getPublicKeyBytes();
 
     /**
-     * <code>bool signed = 2;</code>
+     * <code>bool signed = 2 [json_name = "signed"];</code>
      * @return The signed.
      */
     boolean getSigned();
@@ -303,7 +322,7 @@ private static final long serialVersionUID = 0L;
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object publicKey_;
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      * @return The publicKey.
      */
     @java.lang.Override
@@ -320,7 +339,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      * @return The bytes for publicKey.
      */
     @java.lang.Override
@@ -341,7 +360,7 @@ private static final long serialVersionUID = 0L;
     public static final int SIGNED_FIELD_NUMBER = 2;
     private boolean signed_;
     /**
-     * <code>bool signed = 2;</code>
+     * <code>bool signed = 2 [json_name = "signed"];</code>
      * @return The signed.
      */
     @java.lang.Override
@@ -363,7 +382,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicKey_);
       }
       if (signed_ != false) {
@@ -378,7 +397,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicKey_);
       }
       if (signed_ != false) {
@@ -671,7 +690,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object publicKey_ = "";
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The publicKey.
        */
       public java.lang.String getPublicKey() {
@@ -687,7 +706,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The bytes for publicKey.
        */
       public com.google.protobuf.ByteString
@@ -704,7 +723,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @param value The publicKey to set.
        * @return This builder for chaining.
        */
@@ -719,7 +738,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPublicKey() {
@@ -729,7 +748,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @param value The bytes for publicKey to set.
        * @return This builder for chaining.
        */
@@ -747,7 +766,7 @@ private static final long serialVersionUID = 0L;
 
       private boolean signed_ ;
       /**
-       * <code>bool signed = 2;</code>
+       * <code>bool signed = 2 [json_name = "signed"];</code>
        * @return The signed.
        */
       @java.lang.Override
@@ -755,7 +774,7 @@ private static final long serialVersionUID = 0L;
         return signed_;
       }
       /**
-       * <code>bool signed = 2;</code>
+       * <code>bool signed = 2 [json_name = "signed"];</code>
        * @param value The signed to set.
        * @return This builder for chaining.
        */
@@ -766,7 +785,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>bool signed = 2;</code>
+       * <code>bool signed = 2 [json_name = "signed"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSigned() {
@@ -833,25 +852,25 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     java.util.List<com.google.protobuf.Struct> 
         getEvidenceList();
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     com.google.protobuf.Struct getEvidence(int index);
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     int getEvidenceCount();
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     java.util.List<? extends com.google.protobuf.StructOrBuilder> 
         getEvidenceOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     com.google.protobuf.StructOrBuilder getEvidenceOrBuilder(
         int index);
@@ -950,14 +969,14 @@ private static final long serialVersionUID = 0L;
     public static final int EVIDENCE_FIELD_NUMBER = 1;
     private java.util.List<com.google.protobuf.Struct> evidence_;
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public java.util.List<com.google.protobuf.Struct> getEvidenceList() {
       return evidence_;
     }
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
@@ -965,21 +984,21 @@ private static final long serialVersionUID = 0L;
       return evidence_;
     }
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public int getEvidenceCount() {
       return evidence_.size();
     }
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Struct getEvidence(int index) {
       return evidence_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+     * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.StructOrBuilder getEvidenceOrBuilder(
@@ -1342,7 +1361,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> evidenceBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public java.util.List<com.google.protobuf.Struct> getEvidenceList() {
         if (evidenceBuilder_ == null) {
@@ -1352,7 +1371,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public int getEvidenceCount() {
         if (evidenceBuilder_ == null) {
@@ -1362,7 +1381,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public com.google.protobuf.Struct getEvidence(int index) {
         if (evidenceBuilder_ == null) {
@@ -1372,7 +1391,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder setEvidence(
           int index, com.google.protobuf.Struct value) {
@@ -1389,7 +1408,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder setEvidence(
           int index, com.google.protobuf.Struct.Builder builderForValue) {
@@ -1403,7 +1422,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder addEvidence(com.google.protobuf.Struct value) {
         if (evidenceBuilder_ == null) {
@@ -1419,7 +1438,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder addEvidence(
           int index, com.google.protobuf.Struct value) {
@@ -1436,7 +1455,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder addEvidence(
           com.google.protobuf.Struct.Builder builderForValue) {
@@ -1450,7 +1469,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder addEvidence(
           int index, com.google.protobuf.Struct.Builder builderForValue) {
@@ -1464,7 +1483,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder addAllEvidence(
           java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
@@ -1479,7 +1498,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder clearEvidence() {
         if (evidenceBuilder_ == null) {
@@ -1492,7 +1511,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public Builder removeEvidence(int index) {
         if (evidenceBuilder_ == null) {
@@ -1505,14 +1524,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public com.google.protobuf.Struct.Builder getEvidenceBuilder(
           int index) {
         return getEvidenceFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public com.google.protobuf.StructOrBuilder getEvidenceOrBuilder(
           int index) {
@@ -1522,7 +1541,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
            getEvidenceOrBuilderList() {
@@ -1533,14 +1552,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public com.google.protobuf.Struct.Builder addEvidenceBuilder() {
         return getEvidenceFieldBuilder().addBuilder(
             com.google.protobuf.Struct.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public com.google.protobuf.Struct.Builder addEvidenceBuilder(
           int index) {
@@ -1548,7 +1567,7 @@ private static final long serialVersionUID = 0L;
             index, com.google.protobuf.Struct.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.Struct evidence = 1;</code>
+       * <code>repeated .google.protobuf.Struct evidence = 1 [json_name = "evidence"];</code>
        */
       public java.util.List<com.google.protobuf.Struct.Builder> 
            getEvidenceBuilderList() {
@@ -1624,7 +1643,7 @@ private static final long serialVersionUID = 0L;
   public static final int HASH_FIELD_NUMBER = 1;
   private volatile java.lang.Object hash_;
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -1641,7 +1660,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The bytes for hash.
    */
   @java.lang.Override
@@ -1662,7 +1681,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -1673,7 +1692,7 @@ private static final long serialVersionUID = 0L;
   public static final int TIME_FIELD_NUMBER = 3;
   private volatile java.lang.Object time_;
   /**
-   * <code>string time = 3;</code>
+   * <code>string time = 3 [json_name = "time"];</code>
    * @return The time.
    */
   @java.lang.Override
@@ -1690,7 +1709,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string time = 3;</code>
+   * <code>string time = 3 [json_name = "time"];</code>
    * @return The bytes for time.
    */
   @java.lang.Override
@@ -1711,7 +1730,7 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTION_COUNT_FIELD_NUMBER = 4;
   private long transactionCount_;
   /**
-   * <code>uint64 transaction_count = 4;</code>
+   * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
    * @return The transactionCount.
    */
   @java.lang.Override
@@ -1722,14 +1741,14 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTIONS_FIELD_NUMBER = 6;
   private java.util.List<counters.minter.grpc.client.TransactionResponse> transactions_;
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.TransactionResponse> getTransactionsList() {
     return transactions_;
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.TransactionResponseOrBuilder> 
@@ -1737,21 +1756,21 @@ private static final long serialVersionUID = 0L;
     return transactions_;
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
    */
   @java.lang.Override
   public int getTransactionsCount() {
     return transactions_.size();
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.TransactionResponse getTransactions(int index) {
     return transactions_.get(index);
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.TransactionResponseOrBuilder getTransactionsOrBuilder(
@@ -1759,48 +1778,62 @@ private static final long serialVersionUID = 0L;
     return transactions_.get(index);
   }
 
-  public static final int BLOCK_REWARD_FIELD_NUMBER = 7;
-  private volatile java.lang.Object blockReward_;
+  public static final int BLOCK_REWARD_FIELD_NUMBER = 15;
+  private com.google.protobuf.StringValue blockReward_;
   /**
-   * <code>string block_reward = 7;</code>
+   * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
+   * @return Whether the blockReward field is set.
+   */
+  @java.lang.Override
+  public boolean hasBlockReward() {
+    return blockReward_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
    * @return The blockReward.
    */
   @java.lang.Override
-  public java.lang.String getBlockReward() {
-    java.lang.Object ref = blockReward_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      blockReward_ = s;
-      return s;
-    }
+  public com.google.protobuf.StringValue getBlockReward() {
+    return blockReward_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : blockReward_;
   }
   /**
-   * <code>string block_reward = 7;</code>
-   * @return The bytes for blockReward.
+   * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBlockRewardBytes() {
-    java.lang.Object ref = blockReward_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      blockReward_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.google.protobuf.StringValueOrBuilder getBlockRewardOrBuilder() {
+    return getBlockReward();
+  }
+
+  public static final int LOCKED_STAKE_REWARDS_FIELD_NUMBER = 16;
+  private com.google.protobuf.StringValue lockedStakeRewards_;
+  /**
+   * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+   * @return Whether the lockedStakeRewards field is set.
+   */
+  @java.lang.Override
+  public boolean hasLockedStakeRewards() {
+    return lockedStakeRewards_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+   * @return The lockedStakeRewards.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getLockedStakeRewards() {
+    return lockedStakeRewards_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lockedStakeRewards_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getLockedStakeRewardsOrBuilder() {
+    return getLockedStakeRewards();
   }
 
   public static final int SIZE_FIELD_NUMBER = 8;
   private long size_;
   /**
-   * <code>uint64 size = 8;</code>
+   * <code>uint64 size = 8 [json_name = "size"];</code>
    * @return The size.
    */
   @java.lang.Override
@@ -1811,7 +1844,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSER_FIELD_NUMBER = 9;
   private volatile java.lang.Object proposer_;
   /**
-   * <code>string proposer = 9;</code>
+   * <code>string proposer = 9 [json_name = "proposer"];</code>
    * @return The proposer.
    */
   @java.lang.Override
@@ -1828,7 +1861,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string proposer = 9;</code>
+   * <code>string proposer = 9 [json_name = "proposer"];</code>
    * @return The bytes for proposer.
    */
   @java.lang.Override
@@ -1849,14 +1882,14 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATORS_FIELD_NUMBER = 10;
   private java.util.List<counters.minter.grpc.client.BlockResponse.Validator> validators_;
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.BlockResponse.Validator> getValidatorsList() {
     return validators_;
   }
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder> 
@@ -1864,21 +1897,21 @@ private static final long serialVersionUID = 0L;
     return validators_;
   }
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
    */
   @java.lang.Override
   public int getValidatorsCount() {
     return validators_.size();
   }
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.BlockResponse.Validator getValidators(int index) {
     return validators_.get(index);
   }
   /**
-   * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+   * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder getValidatorsOrBuilder(
@@ -1889,7 +1922,7 @@ private static final long serialVersionUID = 0L;
   public static final int EVIDENCE_FIELD_NUMBER = 13;
   private counters.minter.grpc.client.BlockResponse.Evidence evidence_;
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
    * @return Whether the evidence field is set.
    */
   @java.lang.Override
@@ -1897,7 +1930,7 @@ private static final long serialVersionUID = 0L;
     return evidence_ != null;
   }
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
    * @return The evidence.
    */
   @java.lang.Override
@@ -1905,7 +1938,7 @@ private static final long serialVersionUID = 0L;
     return evidence_ == null ? counters.minter.grpc.client.BlockResponse.Evidence.getDefaultInstance() : evidence_;
   }
   /**
-   * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+   * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.BlockResponse.EvidenceOrBuilder getEvidenceOrBuilder() {
@@ -1915,7 +1948,7 @@ private static final long serialVersionUID = 0L;
   public static final int MISSED_FIELD_NUMBER = 12;
   private com.google.protobuf.LazyStringList missed_;
   /**
-   * <code>repeated string missed = 12;</code>
+   * <code>repeated string missed = 12 [json_name = "missed"];</code>
    * @return A list containing the missed.
    */
   public com.google.protobuf.ProtocolStringList
@@ -1923,14 +1956,14 @@ private static final long serialVersionUID = 0L;
     return missed_;
   }
   /**
-   * <code>repeated string missed = 12;</code>
+   * <code>repeated string missed = 12 [json_name = "missed"];</code>
    * @return The count of missed.
    */
   public int getMissedCount() {
     return missed_.size();
   }
   /**
-   * <code>repeated string missed = 12;</code>
+   * <code>repeated string missed = 12 [json_name = "missed"];</code>
    * @param index The index of the element to return.
    * @return The missed at the given index.
    */
@@ -1938,7 +1971,7 @@ private static final long serialVersionUID = 0L;
     return missed_.get(index);
   }
   /**
-   * <code>repeated string missed = 12;</code>
+   * <code>repeated string missed = 12 [json_name = "missed"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the missed at the given index.
    */
@@ -1950,14 +1983,14 @@ private static final long serialVersionUID = 0L;
   public static final int EVENTS_FIELD_NUMBER = 14;
   private java.util.List<com.google.protobuf.Any> events_;
   /**
-   * <code>repeated .google.protobuf.Any events = 14;</code>
+   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
    */
   @java.lang.Override
   public java.util.List<com.google.protobuf.Any> getEventsList() {
     return events_;
   }
   /**
-   * <code>repeated .google.protobuf.Any events = 14;</code>
+   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
@@ -1965,21 +1998,21 @@ private static final long serialVersionUID = 0L;
     return events_;
   }
   /**
-   * <code>repeated .google.protobuf.Any events = 14;</code>
+   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
    */
   @java.lang.Override
   public int getEventsCount() {
     return events_.size();
   }
   /**
-   * <code>repeated .google.protobuf.Any events = 14;</code>
+   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.Any getEvents(int index) {
     return events_.get(index);
   }
   /**
-   * <code>repeated .google.protobuf.Any events = 14;</code>
+   * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.AnyOrBuilder getEventsOrBuilder(
@@ -2001,13 +2034,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
     }
     if (height_ != 0L) {
       output.writeUInt64(2, height_);
     }
-    if (!getTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(time_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, time_);
     }
     if (transactionCount_ != 0L) {
@@ -2016,13 +2049,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < transactions_.size(); i++) {
       output.writeMessage(6, transactions_.get(i));
     }
-    if (!getBlockRewardBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, blockReward_);
-    }
     if (size_ != 0L) {
       output.writeUInt64(8, size_);
     }
-    if (!getProposerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, proposer_);
     }
     for (int i = 0; i < validators_.size(); i++) {
@@ -2037,6 +2067,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < events_.size(); i++) {
       output.writeMessage(14, events_.get(i));
     }
+    if (blockReward_ != null) {
+      output.writeMessage(15, getBlockReward());
+    }
+    if (lockedStakeRewards_ != null) {
+      output.writeMessage(16, getLockedStakeRewards());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2046,14 +2082,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
     }
     if (height_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(2, height_);
     }
-    if (!getTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(time_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, time_);
     }
     if (transactionCount_ != 0L) {
@@ -2064,14 +2100,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, transactions_.get(i));
     }
-    if (!getBlockRewardBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, blockReward_);
-    }
     if (size_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(8, size_);
     }
-    if (!getProposerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, proposer_);
     }
     for (int i = 0; i < validators_.size(); i++) {
@@ -2093,6 +2126,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < events_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, events_.get(i));
+    }
+    if (blockReward_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getBlockReward());
+    }
+    if (lockedStakeRewards_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, getLockedStakeRewards());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2119,8 +2160,16 @@ private static final long serialVersionUID = 0L;
         != other.getTransactionCount()) return false;
     if (!getTransactionsList()
         .equals(other.getTransactionsList())) return false;
-    if (!getBlockReward()
-        .equals(other.getBlockReward())) return false;
+    if (hasBlockReward() != other.hasBlockReward()) return false;
+    if (hasBlockReward()) {
+      if (!getBlockReward()
+          .equals(other.getBlockReward())) return false;
+    }
+    if (hasLockedStakeRewards() != other.hasLockedStakeRewards()) return false;
+    if (hasLockedStakeRewards()) {
+      if (!getLockedStakeRewards()
+          .equals(other.getLockedStakeRewards())) return false;
+    }
     if (getSize()
         != other.getSize()) return false;
     if (!getProposer()
@@ -2161,8 +2210,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSACTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getTransactionsList().hashCode();
     }
-    hash = (37 * hash) + BLOCK_REWARD_FIELD_NUMBER;
-    hash = (53 * hash) + getBlockReward().hashCode();
+    if (hasBlockReward()) {
+      hash = (37 * hash) + BLOCK_REWARD_FIELD_NUMBER;
+      hash = (53 * hash) + getBlockReward().hashCode();
+    }
+    if (hasLockedStakeRewards()) {
+      hash = (37 * hash) + LOCKED_STAKE_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getLockedStakeRewards().hashCode();
+    }
     hash = (37 * hash) + SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSize());
@@ -2334,8 +2389,18 @@ private static final long serialVersionUID = 0L;
       } else {
         transactionsBuilder_.clear();
       }
-      blockReward_ = "";
-
+      if (blockRewardBuilder_ == null) {
+        blockReward_ = null;
+      } else {
+        blockReward_ = null;
+        blockRewardBuilder_ = null;
+      }
+      if (lockedStakeRewardsBuilder_ == null) {
+        lockedStakeRewards_ = null;
+      } else {
+        lockedStakeRewards_ = null;
+        lockedStakeRewardsBuilder_ = null;
+      }
       size_ = 0L;
 
       proposer_ = "";
@@ -2400,7 +2465,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.transactions_ = transactionsBuilder_.build();
       }
-      result.blockReward_ = blockReward_;
+      if (blockRewardBuilder_ == null) {
+        result.blockReward_ = blockReward_;
+      } else {
+        result.blockReward_ = blockRewardBuilder_.build();
+      }
+      if (lockedStakeRewardsBuilder_ == null) {
+        result.lockedStakeRewards_ = lockedStakeRewards_;
+      } else {
+        result.lockedStakeRewards_ = lockedStakeRewardsBuilder_.build();
+      }
       result.size_ = size_;
       result.proposer_ = proposer_;
       if (validatorsBuilder_ == null) {
@@ -2519,9 +2593,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getBlockReward().isEmpty()) {
-        blockReward_ = other.blockReward_;
-        onChanged();
+      if (other.hasBlockReward()) {
+        mergeBlockReward(other.getBlockReward());
+      }
+      if (other.hasLockedStakeRewards()) {
+        mergeLockedStakeRewards(other.getLockedStakeRewards());
       }
       if (other.getSize() != 0L) {
         setSize(other.getSize());
@@ -2627,7 +2703,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hash_ = "";
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return The hash.
      */
     public java.lang.String getHash() {
@@ -2643,7 +2719,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
@@ -2660,7 +2736,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -2675,7 +2751,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {
@@ -2685,7 +2761,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */
@@ -2703,7 +2779,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -2711,7 +2787,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -2722,7 +2798,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -2734,7 +2810,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object time_ = "";
     /**
-     * <code>string time = 3;</code>
+     * <code>string time = 3 [json_name = "time"];</code>
      * @return The time.
      */
     public java.lang.String getTime() {
@@ -2750,7 +2826,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string time = 3;</code>
+     * <code>string time = 3 [json_name = "time"];</code>
      * @return The bytes for time.
      */
     public com.google.protobuf.ByteString
@@ -2767,7 +2843,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string time = 3;</code>
+     * <code>string time = 3 [json_name = "time"];</code>
      * @param value The time to set.
      * @return This builder for chaining.
      */
@@ -2782,7 +2858,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string time = 3;</code>
+     * <code>string time = 3 [json_name = "time"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTime() {
@@ -2792,7 +2868,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string time = 3;</code>
+     * <code>string time = 3 [json_name = "time"];</code>
      * @param value The bytes for time to set.
      * @return This builder for chaining.
      */
@@ -2810,7 +2886,7 @@ private static final long serialVersionUID = 0L;
 
     private long transactionCount_ ;
     /**
-     * <code>uint64 transaction_count = 4;</code>
+     * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
      * @return The transactionCount.
      */
     @java.lang.Override
@@ -2818,7 +2894,7 @@ private static final long serialVersionUID = 0L;
       return transactionCount_;
     }
     /**
-     * <code>uint64 transaction_count = 4;</code>
+     * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
      * @param value The transactionCount to set.
      * @return This builder for chaining.
      */
@@ -2829,7 +2905,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 transaction_count = 4;</code>
+     * <code>uint64 transaction_count = 4 [json_name = "transactionCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionCount() {
@@ -2852,7 +2928,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.TransactionResponse, counters.minter.grpc.client.TransactionResponse.Builder, counters.minter.grpc.client.TransactionResponseOrBuilder> transactionsBuilder_;
 
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public java.util.List<counters.minter.grpc.client.TransactionResponse> getTransactionsList() {
       if (transactionsBuilder_ == null) {
@@ -2862,7 +2938,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public int getTransactionsCount() {
       if (transactionsBuilder_ == null) {
@@ -2872,7 +2948,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public counters.minter.grpc.client.TransactionResponse getTransactions(int index) {
       if (transactionsBuilder_ == null) {
@@ -2882,7 +2958,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder setTransactions(
         int index, counters.minter.grpc.client.TransactionResponse value) {
@@ -2899,7 +2975,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder setTransactions(
         int index, counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -2913,7 +2989,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder addTransactions(counters.minter.grpc.client.TransactionResponse value) {
       if (transactionsBuilder_ == null) {
@@ -2929,7 +3005,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder addTransactions(
         int index, counters.minter.grpc.client.TransactionResponse value) {
@@ -2946,7 +3022,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder addTransactions(
         counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -2960,7 +3036,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder addTransactions(
         int index, counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -2974,7 +3050,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder addAllTransactions(
         java.lang.Iterable<? extends counters.minter.grpc.client.TransactionResponse> values) {
@@ -2989,7 +3065,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder clearTransactions() {
       if (transactionsBuilder_ == null) {
@@ -3002,7 +3078,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public Builder removeTransactions(int index) {
       if (transactionsBuilder_ == null) {
@@ -3015,14 +3091,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder getTransactionsBuilder(
         int index) {
       return getTransactionsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public counters.minter.grpc.client.TransactionResponseOrBuilder getTransactionsOrBuilder(
         int index) {
@@ -3032,7 +3108,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.TransactionResponseOrBuilder> 
          getTransactionsOrBuilderList() {
@@ -3043,14 +3119,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder addTransactionsBuilder() {
       return getTransactionsFieldBuilder().addBuilder(
           counters.minter.grpc.client.TransactionResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder addTransactionsBuilder(
         int index) {
@@ -3058,7 +3134,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.TransactionResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 6;</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 6 [json_name = "transactions"];</code>
      */
     public java.util.List<counters.minter.grpc.client.TransactionResponse.Builder> 
          getTransactionsBuilderList() {
@@ -3079,85 +3155,247 @@ private static final long serialVersionUID = 0L;
       return transactionsBuilder_;
     }
 
-    private java.lang.Object blockReward_ = "";
+    private com.google.protobuf.StringValue blockReward_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> blockRewardBuilder_;
     /**
-     * <code>string block_reward = 7;</code>
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
+     * @return Whether the blockReward field is set.
+     */
+    public boolean hasBlockReward() {
+      return blockRewardBuilder_ != null || blockReward_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
      * @return The blockReward.
      */
-    public java.lang.String getBlockReward() {
-      java.lang.Object ref = blockReward_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        blockReward_ = s;
-        return s;
+    public com.google.protobuf.StringValue getBlockReward() {
+      if (blockRewardBuilder_ == null) {
+        return blockReward_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : blockReward_;
       } else {
-        return (java.lang.String) ref;
+        return blockRewardBuilder_.getMessage();
       }
     }
     /**
-     * <code>string block_reward = 7;</code>
-     * @return The bytes for blockReward.
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
      */
-    public com.google.protobuf.ByteString
-        getBlockRewardBytes() {
-      java.lang.Object ref = blockReward_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        blockReward_ = b;
-        return b;
+    public Builder setBlockReward(com.google.protobuf.StringValue value) {
+      if (blockRewardBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        blockReward_ = value;
+        onChanged();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        blockRewardBuilder_.setMessage(value);
       }
+
+      return this;
     }
     /**
-     * <code>string block_reward = 7;</code>
-     * @param value The blockReward to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
      */
     public Builder setBlockReward(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      blockReward_ = value;
-      onChanged();
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (blockRewardBuilder_ == null) {
+        blockReward_ = builderForValue.build();
+        onChanged();
+      } else {
+        blockRewardBuilder_.setMessage(builderForValue.build());
+      }
+
       return this;
     }
     /**
-     * <code>string block_reward = 7;</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
+     */
+    public Builder mergeBlockReward(com.google.protobuf.StringValue value) {
+      if (blockRewardBuilder_ == null) {
+        if (blockReward_ != null) {
+          blockReward_ =
+            com.google.protobuf.StringValue.newBuilder(blockReward_).mergeFrom(value).buildPartial();
+        } else {
+          blockReward_ = value;
+        }
+        onChanged();
+      } else {
+        blockRewardBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
      */
     public Builder clearBlockReward() {
-      
-      blockReward_ = getDefaultInstance().getBlockReward();
-      onChanged();
+      if (blockRewardBuilder_ == null) {
+        blockReward_ = null;
+        onChanged();
+      } else {
+        blockReward_ = null;
+        blockRewardBuilder_ = null;
+      }
+
       return this;
     }
     /**
-     * <code>string block_reward = 7;</code>
-     * @param value The bytes for blockReward to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
      */
-    public Builder setBlockRewardBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+    public com.google.protobuf.StringValue.Builder getBlockRewardBuilder() {
       
-      blockReward_ = value;
       onChanged();
+      return getBlockRewardFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getBlockRewardOrBuilder() {
+      if (blockRewardBuilder_ != null) {
+        return blockRewardBuilder_.getMessageOrBuilder();
+      } else {
+        return blockReward_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : blockReward_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue block_reward = 15 [json_name = "blockReward"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getBlockRewardFieldBuilder() {
+      if (blockRewardBuilder_ == null) {
+        blockRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getBlockReward(),
+                getParentForChildren(),
+                isClean());
+        blockReward_ = null;
+      }
+      return blockRewardBuilder_;
+    }
+
+    private com.google.protobuf.StringValue lockedStakeRewards_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lockedStakeRewardsBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     * @return Whether the lockedStakeRewards field is set.
+     */
+    public boolean hasLockedStakeRewards() {
+      return lockedStakeRewardsBuilder_ != null || lockedStakeRewards_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     * @return The lockedStakeRewards.
+     */
+    public com.google.protobuf.StringValue getLockedStakeRewards() {
+      if (lockedStakeRewardsBuilder_ == null) {
+        return lockedStakeRewards_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lockedStakeRewards_;
+      } else {
+        return lockedStakeRewardsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public Builder setLockedStakeRewards(com.google.protobuf.StringValue value) {
+      if (lockedStakeRewardsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lockedStakeRewards_ = value;
+        onChanged();
+      } else {
+        lockedStakeRewardsBuilder_.setMessage(value);
+      }
+
       return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public Builder setLockedStakeRewards(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (lockedStakeRewardsBuilder_ == null) {
+        lockedStakeRewards_ = builderForValue.build();
+        onChanged();
+      } else {
+        lockedStakeRewardsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public Builder mergeLockedStakeRewards(com.google.protobuf.StringValue value) {
+      if (lockedStakeRewardsBuilder_ == null) {
+        if (lockedStakeRewards_ != null) {
+          lockedStakeRewards_ =
+            com.google.protobuf.StringValue.newBuilder(lockedStakeRewards_).mergeFrom(value).buildPartial();
+        } else {
+          lockedStakeRewards_ = value;
+        }
+        onChanged();
+      } else {
+        lockedStakeRewardsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public Builder clearLockedStakeRewards() {
+      if (lockedStakeRewardsBuilder_ == null) {
+        lockedStakeRewards_ = null;
+        onChanged();
+      } else {
+        lockedStakeRewards_ = null;
+        lockedStakeRewardsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getLockedStakeRewardsBuilder() {
+      
+      onChanged();
+      return getLockedStakeRewardsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLockedStakeRewardsOrBuilder() {
+      if (lockedStakeRewardsBuilder_ != null) {
+        return lockedStakeRewardsBuilder_.getMessageOrBuilder();
+      } else {
+        return lockedStakeRewards_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : lockedStakeRewards_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue locked_stake_rewards = 16 [json_name = "lockedStakeRewards"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getLockedStakeRewardsFieldBuilder() {
+      if (lockedStakeRewardsBuilder_ == null) {
+        lockedStakeRewardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getLockedStakeRewards(),
+                getParentForChildren(),
+                isClean());
+        lockedStakeRewards_ = null;
+      }
+      return lockedStakeRewardsBuilder_;
     }
 
     private long size_ ;
     /**
-     * <code>uint64 size = 8;</code>
+     * <code>uint64 size = 8 [json_name = "size"];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -3165,7 +3403,7 @@ private static final long serialVersionUID = 0L;
       return size_;
     }
     /**
-     * <code>uint64 size = 8;</code>
+     * <code>uint64 size = 8 [json_name = "size"];</code>
      * @param value The size to set.
      * @return This builder for chaining.
      */
@@ -3176,7 +3414,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 size = 8;</code>
+     * <code>uint64 size = 8 [json_name = "size"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSize() {
@@ -3188,7 +3426,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object proposer_ = "";
     /**
-     * <code>string proposer = 9;</code>
+     * <code>string proposer = 9 [json_name = "proposer"];</code>
      * @return The proposer.
      */
     public java.lang.String getProposer() {
@@ -3204,7 +3442,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proposer = 9;</code>
+     * <code>string proposer = 9 [json_name = "proposer"];</code>
      * @return The bytes for proposer.
      */
     public com.google.protobuf.ByteString
@@ -3221,7 +3459,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proposer = 9;</code>
+     * <code>string proposer = 9 [json_name = "proposer"];</code>
      * @param value The proposer to set.
      * @return This builder for chaining.
      */
@@ -3236,7 +3474,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proposer = 9;</code>
+     * <code>string proposer = 9 [json_name = "proposer"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProposer() {
@@ -3246,7 +3484,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proposer = 9;</code>
+     * <code>string proposer = 9 [json_name = "proposer"];</code>
      * @param value The bytes for proposer to set.
      * @return This builder for chaining.
      */
@@ -3275,7 +3513,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.BlockResponse.Validator, counters.minter.grpc.client.BlockResponse.Validator.Builder, counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder> validatorsBuilder_;
 
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public java.util.List<counters.minter.grpc.client.BlockResponse.Validator> getValidatorsList() {
       if (validatorsBuilder_ == null) {
@@ -3285,7 +3523,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public int getValidatorsCount() {
       if (validatorsBuilder_ == null) {
@@ -3295,7 +3533,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.Validator getValidators(int index) {
       if (validatorsBuilder_ == null) {
@@ -3305,7 +3543,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder setValidators(
         int index, counters.minter.grpc.client.BlockResponse.Validator value) {
@@ -3322,7 +3560,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder setValidators(
         int index, counters.minter.grpc.client.BlockResponse.Validator.Builder builderForValue) {
@@ -3336,7 +3574,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder addValidators(counters.minter.grpc.client.BlockResponse.Validator value) {
       if (validatorsBuilder_ == null) {
@@ -3352,7 +3590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder addValidators(
         int index, counters.minter.grpc.client.BlockResponse.Validator value) {
@@ -3369,7 +3607,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder addValidators(
         counters.minter.grpc.client.BlockResponse.Validator.Builder builderForValue) {
@@ -3383,7 +3621,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder addValidators(
         int index, counters.minter.grpc.client.BlockResponse.Validator.Builder builderForValue) {
@@ -3397,7 +3635,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder addAllValidators(
         java.lang.Iterable<? extends counters.minter.grpc.client.BlockResponse.Validator> values) {
@@ -3412,7 +3650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder clearValidators() {
       if (validatorsBuilder_ == null) {
@@ -3425,7 +3663,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public Builder removeValidators(int index) {
       if (validatorsBuilder_ == null) {
@@ -3438,14 +3676,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.Validator.Builder getValidatorsBuilder(
         int index) {
       return getValidatorsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder getValidatorsOrBuilder(
         int index) {
@@ -3455,7 +3693,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.BlockResponse.ValidatorOrBuilder> 
          getValidatorsOrBuilderList() {
@@ -3466,14 +3704,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.Validator.Builder addValidatorsBuilder() {
       return getValidatorsFieldBuilder().addBuilder(
           counters.minter.grpc.client.BlockResponse.Validator.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.Validator.Builder addValidatorsBuilder(
         int index) {
@@ -3481,7 +3719,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.BlockResponse.Validator.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.BlockResponse.Validator validators = 10;</code>
+     * <code>repeated .api_pb.BlockResponse.Validator validators = 10 [json_name = "validators"];</code>
      */
     public java.util.List<counters.minter.grpc.client.BlockResponse.Validator.Builder> 
          getValidatorsBuilderList() {
@@ -3506,14 +3744,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.BlockResponse.Evidence, counters.minter.grpc.client.BlockResponse.Evidence.Builder, counters.minter.grpc.client.BlockResponse.EvidenceOrBuilder> evidenceBuilder_;
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      * @return Whether the evidence field is set.
      */
     public boolean hasEvidence() {
       return evidenceBuilder_ != null || evidence_ != null;
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      * @return The evidence.
      */
     public counters.minter.grpc.client.BlockResponse.Evidence getEvidence() {
@@ -3524,7 +3762,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public Builder setEvidence(counters.minter.grpc.client.BlockResponse.Evidence value) {
       if (evidenceBuilder_ == null) {
@@ -3540,7 +3778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public Builder setEvidence(
         counters.minter.grpc.client.BlockResponse.Evidence.Builder builderForValue) {
@@ -3554,7 +3792,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public Builder mergeEvidence(counters.minter.grpc.client.BlockResponse.Evidence value) {
       if (evidenceBuilder_ == null) {
@@ -3572,7 +3810,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public Builder clearEvidence() {
       if (evidenceBuilder_ == null) {
@@ -3586,7 +3824,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.Evidence.Builder getEvidenceBuilder() {
       
@@ -3594,7 +3832,7 @@ private static final long serialVersionUID = 0L;
       return getEvidenceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     public counters.minter.grpc.client.BlockResponse.EvidenceOrBuilder getEvidenceOrBuilder() {
       if (evidenceBuilder_ != null) {
@@ -3605,7 +3843,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.BlockResponse.Evidence evidence = 13;</code>
+     * <code>.api_pb.BlockResponse.Evidence evidence = 13 [json_name = "evidence"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.BlockResponse.Evidence, counters.minter.grpc.client.BlockResponse.Evidence.Builder, counters.minter.grpc.client.BlockResponse.EvidenceOrBuilder> 
@@ -3629,7 +3867,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @return A list containing the missed.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3637,14 +3875,14 @@ private static final long serialVersionUID = 0L;
       return missed_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @return The count of missed.
      */
     public int getMissedCount() {
       return missed_.size();
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param index The index of the element to return.
      * @return The missed at the given index.
      */
@@ -3652,7 +3890,7 @@ private static final long serialVersionUID = 0L;
       return missed_.get(index);
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the missed at the given index.
      */
@@ -3661,7 +3899,7 @@ private static final long serialVersionUID = 0L;
       return missed_.getByteString(index);
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param index The index to set the value at.
      * @param value The missed to set.
      * @return This builder for chaining.
@@ -3677,7 +3915,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param value The missed to add.
      * @return This builder for chaining.
      */
@@ -3692,7 +3930,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param values The missed to add.
      * @return This builder for chaining.
      */
@@ -3705,7 +3943,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMissed() {
@@ -3715,7 +3953,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string missed = 12;</code>
+     * <code>repeated string missed = 12 [json_name = "missed"];</code>
      * @param value The bytes of the missed to add.
      * @return This builder for chaining.
      */
@@ -3744,7 +3982,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> eventsBuilder_;
 
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public java.util.List<com.google.protobuf.Any> getEventsList() {
       if (eventsBuilder_ == null) {
@@ -3754,7 +3992,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public int getEventsCount() {
       if (eventsBuilder_ == null) {
@@ -3764,7 +4002,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public com.google.protobuf.Any getEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -3774,7 +4012,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder setEvents(
         int index, com.google.protobuf.Any value) {
@@ -3791,7 +4029,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder setEvents(
         int index, com.google.protobuf.Any.Builder builderForValue) {
@@ -3805,7 +4043,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder addEvents(com.google.protobuf.Any value) {
       if (eventsBuilder_ == null) {
@@ -3821,7 +4059,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder addEvents(
         int index, com.google.protobuf.Any value) {
@@ -3838,7 +4076,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder addEvents(
         com.google.protobuf.Any.Builder builderForValue) {
@@ -3852,7 +4090,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder addEvents(
         int index, com.google.protobuf.Any.Builder builderForValue) {
@@ -3866,7 +4104,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder addAllEvents(
         java.lang.Iterable<? extends com.google.protobuf.Any> values) {
@@ -3881,7 +4119,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder clearEvents() {
       if (eventsBuilder_ == null) {
@@ -3894,7 +4132,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public Builder removeEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -3907,14 +4145,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public com.google.protobuf.Any.Builder getEventsBuilder(
         int index) {
       return getEventsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public com.google.protobuf.AnyOrBuilder getEventsOrBuilder(
         int index) {
@@ -3924,7 +4162,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
          getEventsOrBuilderList() {
@@ -3935,14 +4173,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public com.google.protobuf.Any.Builder addEventsBuilder() {
       return getEventsFieldBuilder().addBuilder(
           com.google.protobuf.Any.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public com.google.protobuf.Any.Builder addEventsBuilder(
         int index) {
@@ -3950,7 +4188,7 @@ private static final long serialVersionUID = 0L;
           index, com.google.protobuf.Any.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.Any events = 14;</code>
+     * <code>repeated .google.protobuf.Any events = 14 [json_name = "events"];</code>
      */
     public java.util.List<com.google.protobuf.Any.Builder> 
          getEventsBuilderList() {

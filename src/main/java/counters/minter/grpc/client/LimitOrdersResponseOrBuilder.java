@@ -8,25 +8,25 @@ public interface LimitOrdersResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
    */
   java.util.List<counters.minter.grpc.client.LimitOrderResponse> 
       getOrdersList();
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
    */
   counters.minter.grpc.client.LimitOrderResponse getOrders(int index);
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
    */
   int getOrdersCount();
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.LimitOrderResponseOrBuilder> 
       getOrdersOrBuilderList();
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
    */
   counters.minter.grpc.client.LimitOrderResponseOrBuilder getOrdersOrBuilder(
       int index);

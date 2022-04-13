@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun createSwapPoolData(block: counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl.() -> Unit): counters.minter.grpc.client.CreateSwapPoolData =
+public inline fun createSwapPoolData(block: counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CreateSwapPoolData =
   counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl._create(counters.minter.grpc.client.CreateSwapPoolData.newBuilder()).apply { block() }._build()
-object CreateSwapPoolDataKt {
+public object CreateSwapPoolDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CreateSwapPoolData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.CreateSwapPoolData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CreateSwapPoolData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object CreateSwapPoolDataKt {
     internal fun _build(): counters.minter.grpc.client.CreateSwapPoolData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      */
-    var coin0: counters.minter.grpc.client.Coin
+    public var coin0: counters.minter.grpc.client.Coin
       @JvmName("getCoin0")
       get() = _builder.getCoin0()
       @JvmName("setCoin0")
@@ -33,23 +33,23 @@ object CreateSwapPoolDataKt {
         _builder.setCoin0(value)
       }
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      */
-    fun clearCoin0() {
+    public fun clearCoin0() {
       _builder.clearCoin0()
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      * @return Whether the coin0 field is set.
      */
-    fun hasCoin0(): kotlin.Boolean {
+    public fun hasCoin0(): kotlin.Boolean {
       return _builder.hasCoin0()
     }
 
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      */
-    var coin1: counters.minter.grpc.client.Coin
+    public var coin1: counters.minter.grpc.client.Coin
       @JvmName("getCoin1")
       get() = _builder.getCoin1()
       @JvmName("setCoin1")
@@ -57,23 +57,23 @@ object CreateSwapPoolDataKt {
         _builder.setCoin1(value)
       }
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      */
-    fun clearCoin1() {
+    public fun clearCoin1() {
       _builder.clearCoin1()
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      * @return Whether the coin1 field is set.
      */
-    fun hasCoin1(): kotlin.Boolean {
+    public fun hasCoin1(): kotlin.Boolean {
       return _builder.hasCoin1()
     }
 
     /**
-     * <code>string volume0 = 3;</code>
+     * <code>string volume0 = 3 [json_name = "volume0"];</code>
      */
-    var volume0: kotlin.String
+    public var volume0: kotlin.String
       @JvmName("getVolume0")
       get() = _builder.getVolume0()
       @JvmName("setVolume0")
@@ -81,16 +81,16 @@ object CreateSwapPoolDataKt {
         _builder.setVolume0(value)
       }
     /**
-     * <code>string volume0 = 3;</code>
+     * <code>string volume0 = 3 [json_name = "volume0"];</code>
      */
-    fun clearVolume0() {
+    public fun clearVolume0() {
       _builder.clearVolume0()
     }
 
     /**
-     * <code>string volume1 = 4;</code>
+     * <code>string volume1 = 4 [json_name = "volume1"];</code>
      */
-    var volume1: kotlin.String
+    public var volume1: kotlin.String
       @JvmName("getVolume1")
       get() = _builder.getVolume1()
       @JvmName("setVolume1")
@@ -98,13 +98,13 @@ object CreateSwapPoolDataKt {
         _builder.setVolume1(value)
       }
     /**
-     * <code>string volume1 = 4;</code>
+     * <code>string volume1 = 4 [json_name = "volume1"];</code>
      */
-    fun clearVolume1() {
+    public fun clearVolume1() {
       _builder.clearVolume1()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.CreateSwapPoolData.copy(block: counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl.() -> Unit): counters.minter.grpc.client.CreateSwapPoolData =
+public inline fun counters.minter.grpc.client.CreateSwapPoolData.copy(block: counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CreateSwapPoolData =
   counters.minter.grpc.client.CreateSwapPoolDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

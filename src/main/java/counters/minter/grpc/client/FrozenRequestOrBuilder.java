@@ -8,34 +8,34 @@ public interface FrozenRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    * @return Whether the coinId field is set.
    */
   boolean hasCoinId();
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    * @return The coinId.
    */
   com.google.protobuf.UInt64Value getCoinId();
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    */
   com.google.protobuf.UInt64ValueOrBuilder getCoinIdOrBuilder();
 
   /**
-   * <code>uint64 height = 3;</code>
+   * <code>uint64 height = 3 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

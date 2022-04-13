@@ -76,6 +76,11 @@ private static final long serialVersionUID = 0L;
             price_ = s;
             break;
           }
+          case 40: {
+
+            id_ = input.readUInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -108,10 +113,21 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.SwapPoolResponse.class, counters.minter.grpc.client.SwapPoolResponse.Builder.class);
   }
 
+  public static final int ID_FIELD_NUMBER = 5;
+  private long id_;
+  /**
+   * <code>uint64 id = 5 [json_name = "id"];</code>
+   * @return The id.
+   */
+  @java.lang.Override
+  public long getId() {
+    return id_;
+  }
+
   public static final int PRICE_FIELD_NUMBER = 4;
   private volatile java.lang.Object price_;
   /**
-   * <code>string price = 4;</code>
+   * <code>string price = 4 [json_name = "price"];</code>
    * @return The price.
    */
   @java.lang.Override
@@ -128,7 +144,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string price = 4;</code>
+   * <code>string price = 4 [json_name = "price"];</code>
    * @return The bytes for price.
    */
   @java.lang.Override
@@ -149,7 +165,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT0_FIELD_NUMBER = 1;
   private volatile java.lang.Object amount0_;
   /**
-   * <code>string amount0 = 1;</code>
+   * <code>string amount0 = 1 [json_name = "amount0"];</code>
    * @return The amount0.
    */
   @java.lang.Override
@@ -166,7 +182,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount0 = 1;</code>
+   * <code>string amount0 = 1 [json_name = "amount0"];</code>
    * @return The bytes for amount0.
    */
   @java.lang.Override
@@ -187,7 +203,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT1_FIELD_NUMBER = 2;
   private volatile java.lang.Object amount1_;
   /**
-   * <code>string amount1 = 2;</code>
+   * <code>string amount1 = 2 [json_name = "amount1"];</code>
    * @return The amount1.
    */
   @java.lang.Override
@@ -204,7 +220,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount1 = 2;</code>
+   * <code>string amount1 = 2 [json_name = "amount1"];</code>
    * @return The bytes for amount1.
    */
   @java.lang.Override
@@ -225,7 +241,7 @@ private static final long serialVersionUID = 0L;
   public static final int LIQUIDITY_FIELD_NUMBER = 3;
   private volatile java.lang.Object liquidity_;
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The liquidity.
    */
   @java.lang.Override
@@ -242,7 +258,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The bytes for liquidity.
    */
   @java.lang.Override
@@ -274,17 +290,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getAmount0Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount0_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount0_);
     }
-    if (!getAmount1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount1_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount1_);
     }
-    if (!getLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidity_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidity_);
     }
-    if (!getPriceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, price_);
+    }
+    if (id_ != 0L) {
+      output.writeUInt64(5, id_);
     }
     unknownFields.writeTo(output);
   }
@@ -295,17 +314,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getAmount0Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount0_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount0_);
     }
-    if (!getAmount1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount1_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount1_);
     }
-    if (!getLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidity_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidity_);
     }
-    if (!getPriceBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, price_);
+    }
+    if (id_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(5, id_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -322,6 +345,8 @@ private static final long serialVersionUID = 0L;
     }
     counters.minter.grpc.client.SwapPoolResponse other = (counters.minter.grpc.client.SwapPoolResponse) obj;
 
+    if (getId()
+        != other.getId()) return false;
     if (!getPrice()
         .equals(other.getPrice())) return false;
     if (!getAmount0()
@@ -341,6 +366,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getId());
     hash = (37 * hash) + PRICE_FIELD_NUMBER;
     hash = (53 * hash) + getPrice().hashCode();
     hash = (37 * hash) + AMOUNT0_FIELD_NUMBER;
@@ -482,6 +510,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      id_ = 0L;
+
       price_ = "";
 
       amount0_ = "";
@@ -516,6 +546,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolResponse buildPartial() {
       counters.minter.grpc.client.SwapPoolResponse result = new counters.minter.grpc.client.SwapPoolResponse(this);
+      result.id_ = id_;
       result.price_ = price_;
       result.amount0_ = amount0_;
       result.amount1_ = amount1_;
@@ -568,6 +599,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(counters.minter.grpc.client.SwapPoolResponse other) {
       if (other == counters.minter.grpc.client.SwapPoolResponse.getDefaultInstance()) return this;
+      if (other.getId() != 0L) {
+        setId(other.getId());
+      }
       if (!other.getPrice().isEmpty()) {
         price_ = other.price_;
         onChanged();
@@ -613,9 +647,40 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long id_ ;
+    /**
+     * <code>uint64 id = 5 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+    /**
+     * <code>uint64 id = 5 [json_name = "id"];</code>
+     * @param value The id to set.
+     * @return This builder for chaining.
+     */
+    public Builder setId(long value) {
+      
+      id_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 id = 5 [json_name = "id"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearId() {
+      
+      id_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object price_ = "";
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      * @return The price.
      */
     public java.lang.String getPrice() {
@@ -631,7 +696,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      * @return The bytes for price.
      */
     public com.google.protobuf.ByteString
@@ -648,7 +713,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      * @param value The price to set.
      * @return This builder for chaining.
      */
@@ -663,7 +728,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
@@ -673,7 +738,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      * @param value The bytes for price to set.
      * @return This builder for chaining.
      */
@@ -691,7 +756,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount0_ = "";
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      * @return The amount0.
      */
     public java.lang.String getAmount0() {
@@ -707,7 +772,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      * @return The bytes for amount0.
      */
     public com.google.protobuf.ByteString
@@ -724,7 +789,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      * @param value The amount0 to set.
      * @return This builder for chaining.
      */
@@ -739,7 +804,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount0() {
@@ -749,7 +814,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      * @param value The bytes for amount0 to set.
      * @return This builder for chaining.
      */
@@ -767,7 +832,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount1_ = "";
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      * @return The amount1.
      */
     public java.lang.String getAmount1() {
@@ -783,7 +848,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      * @return The bytes for amount1.
      */
     public com.google.protobuf.ByteString
@@ -800,7 +865,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      * @param value The amount1 to set.
      * @return This builder for chaining.
      */
@@ -815,7 +880,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount1() {
@@ -825,7 +890,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      * @param value The bytes for amount1 to set.
      * @return This builder for chaining.
      */
@@ -843,7 +908,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object liquidity_ = "";
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      * @return The liquidity.
      */
     public java.lang.String getLiquidity() {
@@ -859,7 +924,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      * @return The bytes for liquidity.
      */
     public com.google.protobuf.ByteString
@@ -876,7 +941,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      * @param value The liquidity to set.
      * @return This builder for chaining.
      */
@@ -891,7 +956,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLiquidity() {
@@ -901,7 +966,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      * @param value The bytes for liquidity to set.
      * @return This builder for chaining.
      */

@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun waitListResponse(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListResponse =
+public inline fun waitListResponse(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse =
   counters.minter.grpc.client.WaitListResponseKt.Dsl._create(counters.minter.grpc.client.WaitListResponse.newBuilder()).apply { block() }._build()
-object WaitListResponseKt {
+public object WaitListResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.WaitListResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.WaitListResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.WaitListResponse.Builder): Dsl = Dsl(builder)
@@ -27,74 +27,76 @@ object WaitListResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class ListProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class ListProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      */
-     val list: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>
+     public val list: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getListList()
       )
     /**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.add(value: counters.minter.grpc.client.WaitListResponse.Wait) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.add(value: counters.minter.grpc.client.WaitListResponse.Wait) {
       _builder.addList(value)
     }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignList")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(value: counters.minter.grpc.client.WaitListResponse.Wait) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(value: counters.minter.grpc.client.WaitListResponse.Wait) {
       add(value)
     }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
       _builder.addAllList(values)
     }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllList")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      * @param index The index to set the value at.
      * @param value The list to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setList")
-    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.WaitListResponse.Wait) {
+    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.WaitListResponse.Wait) {
       _builder.setList(index, value)
     }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.clear() {
       _builder.clearList()
     }}
   @kotlin.jvm.JvmSynthetic
-  inline fun wait(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListResponse.Wait =
+  public inline fun wait(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse.Wait =
     counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl._create(counters.minter.grpc.client.WaitListResponse.Wait.newBuilder()).apply { block() }._build()
-  object WaitKt {
+  public object WaitKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    class Dsl private constructor(
-      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.WaitListResponse.Wait.Builder
+    public class Dsl private constructor(
+      private val _builder: counters.minter.grpc.client.WaitListResponse.Wait.Builder
     ) {
-      companion object {
+      public companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.WaitListResponse.Wait.Builder): Dsl = Dsl(builder)
@@ -105,9 +107,9 @@ object WaitListResponseKt {
       internal fun _build(): counters.minter.grpc.client.WaitListResponse.Wait = _builder.build()
 
       /**
-       * <code>string public_key = 3;</code>
+       * <code>string public_key = 3 [json_name = "publicKey"];</code>
        */
-      var publicKey: kotlin.String
+      public var publicKey: kotlin.String
         @JvmName("getPublicKey")
         get() = _builder.getPublicKey()
         @JvmName("setPublicKey")
@@ -115,16 +117,16 @@ object WaitListResponseKt {
           _builder.setPublicKey(value)
         }
       /**
-       * <code>string public_key = 3;</code>
+       * <code>string public_key = 3 [json_name = "publicKey"];</code>
        */
-      fun clearPublicKey() {
+      public fun clearPublicKey() {
         _builder.clearPublicKey()
       }
 
       /**
-       * <code>.api_pb.Coin coin = 1;</code>
+       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
        */
-      var coin: counters.minter.grpc.client.Coin
+      public var coin: counters.minter.grpc.client.Coin
         @JvmName("getCoin")
         get() = _builder.getCoin()
         @JvmName("setCoin")
@@ -132,23 +134,23 @@ object WaitListResponseKt {
           _builder.setCoin(value)
         }
       /**
-       * <code>.api_pb.Coin coin = 1;</code>
+       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
        */
-      fun clearCoin() {
+      public fun clearCoin() {
         _builder.clearCoin()
       }
       /**
-       * <code>.api_pb.Coin coin = 1;</code>
+       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
        * @return Whether the coin field is set.
        */
-      fun hasCoin(): kotlin.Boolean {
+      public fun hasCoin(): kotlin.Boolean {
         return _builder.hasCoin()
       }
 
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        */
-      var value: kotlin.String
+      public var value: kotlin.String
         @JvmName("getValue")
         get() = _builder.getValue()
         @JvmName("setValue")
@@ -156,17 +158,17 @@ object WaitListResponseKt {
           _builder.setValue(value)
         }
       /**
-       * <code>string value = 2;</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        */
-      fun clearValue() {
+      public fun clearValue() {
         _builder.clearValue()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.WaitListResponse.copy(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListResponse =
+public inline fun counters.minter.grpc.client.WaitListResponse.copy(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse =
   counters.minter.grpc.client.WaitListResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.WaitListResponse.Wait.copy(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListResponse.Wait =
+public inline fun counters.minter.grpc.client.WaitListResponse.Wait.copy(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse.Wait =
   counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl._create(this.toBuilder()).apply { block() }._build()

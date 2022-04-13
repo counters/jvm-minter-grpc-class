@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun transactionRequest(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.TransactionRequest =
+public inline fun transactionRequest(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionRequest =
   counters.minter.grpc.client.TransactionRequestKt.Dsl._create(counters.minter.grpc.client.TransactionRequest.newBuilder()).apply { block() }._build()
-object TransactionRequestKt {
+public object TransactionRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.TransactionRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.TransactionRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.TransactionRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object TransactionRequestKt {
     internal fun _build(): counters.minter.grpc.client.TransactionRequest = _builder.build()
 
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      */
-    var hash: kotlin.String
+    public var hash: kotlin.String
       @JvmName("getHash")
       get() = _builder.getHash()
       @JvmName("setHash")
@@ -33,13 +33,13 @@ object TransactionRequestKt {
         _builder.setHash(value)
       }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      */
-    fun clearHash() {
+    public fun clearHash() {
       _builder.clearHash()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.TransactionRequest.copy(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.TransactionRequest =
+public inline fun counters.minter.grpc.client.TransactionRequest.copy(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionRequest =
   counters.minter.grpc.client.TransactionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun addressesRequest(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesRequest =
+public inline fun addressesRequest(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesRequest =
   counters.minter.grpc.client.AddressesRequestKt.Dsl._create(counters.minter.grpc.client.AddressesRequest.newBuilder()).apply { block() }._build()
-object AddressesRequestKt {
+public object AddressesRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.AddressesRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.AddressesRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.AddressesRequest.Builder): Dsl = Dsl(builder)
@@ -27,73 +27,75 @@ object AddressesRequestKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @return A list containing the addresses.
      */
-    val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
-      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
+      @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getAddressesList()
       )
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAddresses")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.add(value: kotlin.String) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.add(value: kotlin.String) {
       _builder.addAddresses(value)
     }
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAddresses")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.plusAssign(value: kotlin.String) {
-      _builder.addAddresses(value)
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.plusAssign(value: kotlin.String) {
+      add(value)
     }
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllAddresses")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllAddresses(values)
     }
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllAddresses")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-      _builder.addAllAddresses(values)
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
     }
     /**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setAddresses")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setAddresses(index, value)
     }/**
-     * <code>repeated string addresses = 1;</code>
+     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearAddresses")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.clear() {
       _builder.clearAddresses()
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -101,16 +103,16 @@ object AddressesRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>bool delegated = 4;</code>
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
      */
-    var delegated: kotlin.Boolean
+    public var delegated: kotlin.Boolean
       @JvmName("getDelegated")
       get() = _builder.getDelegated()
       @JvmName("setDelegated")
@@ -118,13 +120,13 @@ object AddressesRequestKt {
         _builder.setDelegated(value)
       }
     /**
-     * <code>bool delegated = 4;</code>
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
      */
-    fun clearDelegated() {
+    public fun clearDelegated() {
       _builder.clearDelegated()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.AddressesRequest.copy(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.AddressesRequest =
+public inline fun counters.minter.grpc.client.AddressesRequest.copy(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesRequest =
   counters.minter.grpc.client.AddressesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

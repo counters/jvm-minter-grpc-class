@@ -8,7 +8,7 @@ public interface ValidatorsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

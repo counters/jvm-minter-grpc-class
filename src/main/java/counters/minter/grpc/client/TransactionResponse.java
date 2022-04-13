@@ -220,9 +220,9 @@ private static final long serialVersionUID = 0L;
   public enum Type
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>_NULL_ = 0;</code>
+     * <code>_ = 0;</code>
      */
-    _NULL_(0),
+    _(0),
     /**
      * <code>Send = 1;</code>
      */
@@ -371,9 +371,9 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
-     * <code>_NULL_ = 0;</code>
+     * <code>_ = 0;</code>
      */
-    public static final int _NULL__VALUE = 0;
+    public static final int __VALUE = 0;
     /**
      * <code>Send = 1;</code>
      */
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
      */
     public static Type forNumber(int value) {
       switch (value) {
-        case 0: return _NULL_;
+        case 0: return _;
         case 1: return Send;
         case 2: return SellCoin;
         case 3: return SellAllCoin;
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
   public static final int HASH_FIELD_NUMBER = 1;
   private volatile java.lang.Object hash_;
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The bytes for hash.
    */
   @java.lang.Override
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
   public static final int RAW_TX_FIELD_NUMBER = 2;
   private volatile java.lang.Object rawTx_;
   /**
-   * <code>string raw_tx = 2;</code>
+   * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
    * @return The rawTx.
    */
   @java.lang.Override
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string raw_tx = 2;</code>
+   * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
    * @return The bytes for rawTx.
    */
   @java.lang.Override
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 3;
   private long height_;
   /**
-   * <code>uint64 height = 3;</code>
+   * <code>uint64 height = 3 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
   public static final int INDEX_FIELD_NUMBER = 4;
   private long index_;
   /**
-   * <code>uint64 index = 4;</code>
+   * <code>uint64 index = 4 [json_name = "index"];</code>
    * @return The index.
    */
   @java.lang.Override
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
   public static final int FROM_FIELD_NUMBER = 5;
   private volatile java.lang.Object from_;
   /**
-   * <code>string from = 5;</code>
+   * <code>string from = 5 [json_name = "from"];</code>
    * @return The from.
    */
   @java.lang.Override
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string from = 5;</code>
+   * <code>string from = 5 [json_name = "from"];</code>
    * @return The bytes for from.
    */
   @java.lang.Override
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
   public static final int NONCE_FIELD_NUMBER = 6;
   private long nonce_;
   /**
-   * <code>uint64 nonce = 6;</code>
+   * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
    * @return The nonce.
    */
   @java.lang.Override
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
   public static final int GAS_FIELD_NUMBER = 7;
   private long gas_;
   /**
-   * <code>uint64 gas = 7;</code>
+   * <code>uint64 gas = 7 [json_name = "gas"];</code>
    * @return The gas.
    */
   @java.lang.Override
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
   public static final int GAS_PRICE_FIELD_NUMBER = 8;
   private long gasPrice_;
   /**
-   * <code>uint64 gas_price = 8;</code>
+   * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
    * @return The gasPrice.
    */
   @java.lang.Override
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
   public static final int GAS_COIN_FIELD_NUMBER = 9;
   private counters.minter.grpc.client.Coin gasCoin_;
   /**
-   * <code>.api_pb.Coin gas_coin = 9;</code>
+   * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
    * @return Whether the gasCoin field is set.
    */
   @java.lang.Override
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
     return gasCoin_ != null;
   }
   /**
-   * <code>.api_pb.Coin gas_coin = 9;</code>
+   * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
    * @return The gasCoin.
    */
   @java.lang.Override
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
     return gasCoin_ == null ? counters.minter.grpc.client.Coin.getDefaultInstance() : gasCoin_;
   }
   /**
-   * <code>.api_pb.Coin gas_coin = 9;</code>
+   * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CoinOrBuilder getGasCoinOrBuilder() {
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_HEX_FIELD_NUMBER = 17;
   private volatile java.lang.Object typeHex_;
   /**
-   * <code>string type_hex = 17;</code>
+   * <code>string type_hex = 17 [json_name = "typeHex"];</code>
    * @return The typeHex.
    */
   @java.lang.Override
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string type_hex = 17;</code>
+   * <code>string type_hex = 17 [json_name = "typeHex"];</code>
    * @return The bytes for typeHex.
    */
   @java.lang.Override
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
    *    string type_name = 18;
    * </pre>
    *
-   * <code>uint64 type = 10;</code>
+   * <code>uint64 type = 10 [json_name = "type"];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
   public static final int DATA_FIELD_NUMBER = 11;
   private com.google.protobuf.Any data_;
   /**
-   * <code>.google.protobuf.Any data = 11;</code>
+   * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -896,7 +896,7 @@ private static final long serialVersionUID = 0L;
     return data_ != null;
   }
   /**
-   * <code>.google.protobuf.Any data = 11;</code>
+   * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
    * @return The data.
    */
   @java.lang.Override
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
     return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
   }
   /**
-   * <code>.google.protobuf.Any data = 11;</code>
+   * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
   public static final int PAYLOAD_FIELD_NUMBER = 12;
   private com.google.protobuf.ByteString payload_;
   /**
-   * <code>bytes payload = 12;</code>
+   * <code>bytes payload = 12 [json_name = "payload"];</code>
    * @return The payload.
    */
   @java.lang.Override
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
   public static final int SERVICE_DATA_FIELD_NUMBER = 16;
   private com.google.protobuf.ByteString serviceData_;
   /**
-   * <code>bytes service_data = 16;</code>
+   * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
    * @return The serviceData.
    */
   @java.lang.Override
@@ -960,13 +960,13 @@ private static final long serialVersionUID = 0L;
     return internalGetTags().getMap().size();
   }
   /**
-   * <code>map&lt;string, string&gt; tags = 13;</code>
+   * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
    */
 
   @java.lang.Override
   public boolean containsTags(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetTags().getMap().containsKey(key);
   }
   /**
@@ -978,7 +978,7 @@ private static final long serialVersionUID = 0L;
     return getTagsMap();
   }
   /**
-   * <code>map&lt;string, string&gt; tags = 13;</code>
+   * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
    */
   @java.lang.Override
 
@@ -986,26 +986,26 @@ private static final long serialVersionUID = 0L;
     return internalGetTags().getMap();
   }
   /**
-   * <code>map&lt;string, string&gt; tags = 13;</code>
+   * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
    */
   @java.lang.Override
 
   public java.lang.String getTagsOrDefault(
       java.lang.String key,
       java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetTags().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <code>map&lt;string, string&gt; tags = 13;</code>
+   * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
    */
   @java.lang.Override
 
   public java.lang.String getTagsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetTags().getMap();
     if (!map.containsKey(key)) {
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
   public static final int CODE_FIELD_NUMBER = 14;
   private long code_;
   /**
-   * <code>uint64 code = 14;</code>
+   * <code>uint64 code = 14 [json_name = "code"];</code>
    * @return The code.
    */
   @java.lang.Override
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
   public static final int LOG_FIELD_NUMBER = 15;
   private volatile java.lang.Object log_;
   /**
-   * <code>string log = 15;</code>
+   * <code>string log = 15 [json_name = "log"];</code>
    * @return The log.
    */
   @java.lang.Override
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string log = 15;</code>
+   * <code>string log = 15 [json_name = "log"];</code>
    * @return The bytes for log.
    */
   @java.lang.Override
@@ -1077,10 +1077,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
     }
-    if (!getRawTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawTx_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rawTx_);
     }
     if (height_ != 0L) {
@@ -1089,7 +1089,7 @@ private static final long serialVersionUID = 0L;
     if (index_ != 0L) {
       output.writeUInt64(4, index_);
     }
-    if (!getFromBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, from_);
     }
     if (nonce_ != 0L) {
@@ -1122,13 +1122,13 @@ private static final long serialVersionUID = 0L;
     if (code_ != 0L) {
       output.writeUInt64(14, code_);
     }
-    if (!getLogBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, log_);
     }
     if (!serviceData_.isEmpty()) {
       output.writeBytes(16, serviceData_);
     }
-    if (!getTypeHexBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeHex_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, typeHex_);
     }
     unknownFields.writeTo(output);
@@ -1140,10 +1140,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
     }
-    if (!getRawTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rawTx_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rawTx_);
     }
     if (height_ != 0L) {
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(4, index_);
     }
-    if (!getFromBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, from_);
     }
     if (nonce_ != 0L) {
@@ -1199,14 +1199,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(14, code_);
     }
-    if (!getLogBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, log_);
     }
     if (!serviceData_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(16, serviceData_);
     }
-    if (!getTypeHexBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeHex_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, typeHex_);
     }
     size += unknownFields.getSerializedSize();
@@ -1706,7 +1706,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hash_ = "";
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return The hash.
      */
     public java.lang.String getHash() {
@@ -1722,7 +1722,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
@@ -1739,7 +1739,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -1754,7 +1754,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string hash = 1;</code>
+     * <code>string hash = 1 [json_name = "hash"];</code>
      * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */
@@ -1782,7 +1782,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object rawTx_ = "";
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      * @return The rawTx.
      */
     public java.lang.String getRawTx() {
@@ -1798,7 +1798,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      * @return The bytes for rawTx.
      */
     public com.google.protobuf.ByteString
@@ -1815,7 +1815,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      * @param value The rawTx to set.
      * @return This builder for chaining.
      */
@@ -1830,7 +1830,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRawTx() {
@@ -1840,7 +1840,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_tx = 2;</code>
+     * <code>string raw_tx = 2 [json_name = "rawTx"];</code>
      * @param value The bytes for rawTx to set.
      * @return This builder for chaining.
      */
@@ -1858,7 +1858,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -1866,7 +1866,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -1877,7 +1877,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -1889,7 +1889,7 @@ private static final long serialVersionUID = 0L;
 
     private long index_ ;
     /**
-     * <code>uint64 index = 4;</code>
+     * <code>uint64 index = 4 [json_name = "index"];</code>
      * @return The index.
      */
     @java.lang.Override
@@ -1897,7 +1897,7 @@ private static final long serialVersionUID = 0L;
       return index_;
     }
     /**
-     * <code>uint64 index = 4;</code>
+     * <code>uint64 index = 4 [json_name = "index"];</code>
      * @param value The index to set.
      * @return This builder for chaining.
      */
@@ -1908,7 +1908,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 index = 4;</code>
+     * <code>uint64 index = 4 [json_name = "index"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIndex() {
@@ -1920,7 +1920,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object from_ = "";
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      * @return The from.
      */
     public java.lang.String getFrom() {
@@ -1936,7 +1936,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      * @return The bytes for from.
      */
     public com.google.protobuf.ByteString
@@ -1953,7 +1953,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      * @param value The from to set.
      * @return This builder for chaining.
      */
@@ -1968,7 +1968,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFrom() {
@@ -1978,7 +1978,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string from = 5;</code>
+     * <code>string from = 5 [json_name = "from"];</code>
      * @param value The bytes for from to set.
      * @return This builder for chaining.
      */
@@ -1996,7 +1996,7 @@ private static final long serialVersionUID = 0L;
 
     private long nonce_ ;
     /**
-     * <code>uint64 nonce = 6;</code>
+     * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
      * @return The nonce.
      */
     @java.lang.Override
@@ -2004,7 +2004,7 @@ private static final long serialVersionUID = 0L;
       return nonce_;
     }
     /**
-     * <code>uint64 nonce = 6;</code>
+     * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
      * @param value The nonce to set.
      * @return This builder for chaining.
      */
@@ -2015,7 +2015,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 nonce = 6;</code>
+     * <code>uint64 nonce = 6 [json_name = "nonce"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNonce() {
@@ -2027,7 +2027,7 @@ private static final long serialVersionUID = 0L;
 
     private long gas_ ;
     /**
-     * <code>uint64 gas = 7;</code>
+     * <code>uint64 gas = 7 [json_name = "gas"];</code>
      * @return The gas.
      */
     @java.lang.Override
@@ -2035,7 +2035,7 @@ private static final long serialVersionUID = 0L;
       return gas_;
     }
     /**
-     * <code>uint64 gas = 7;</code>
+     * <code>uint64 gas = 7 [json_name = "gas"];</code>
      * @param value The gas to set.
      * @return This builder for chaining.
      */
@@ -2046,7 +2046,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 gas = 7;</code>
+     * <code>uint64 gas = 7 [json_name = "gas"];</code>
      * @return This builder for chaining.
      */
     public Builder clearGas() {
@@ -2058,7 +2058,7 @@ private static final long serialVersionUID = 0L;
 
     private long gasPrice_ ;
     /**
-     * <code>uint64 gas_price = 8;</code>
+     * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
      * @return The gasPrice.
      */
     @java.lang.Override
@@ -2066,7 +2066,7 @@ private static final long serialVersionUID = 0L;
       return gasPrice_;
     }
     /**
-     * <code>uint64 gas_price = 8;</code>
+     * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
      * @param value The gasPrice to set.
      * @return This builder for chaining.
      */
@@ -2077,7 +2077,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 gas_price = 8;</code>
+     * <code>uint64 gas_price = 8 [json_name = "gasPrice"];</code>
      * @return This builder for chaining.
      */
     public Builder clearGasPrice() {
@@ -2091,14 +2091,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> gasCoinBuilder_;
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      * @return Whether the gasCoin field is set.
      */
     public boolean hasGasCoin() {
       return gasCoinBuilder_ != null || gasCoin_ != null;
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      * @return The gasCoin.
      */
     public counters.minter.grpc.client.Coin getGasCoin() {
@@ -2109,7 +2109,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public Builder setGasCoin(counters.minter.grpc.client.Coin value) {
       if (gasCoinBuilder_ == null) {
@@ -2125,7 +2125,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public Builder setGasCoin(
         counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -2139,7 +2139,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public Builder mergeGasCoin(counters.minter.grpc.client.Coin value) {
       if (gasCoinBuilder_ == null) {
@@ -2157,7 +2157,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public Builder clearGasCoin() {
       if (gasCoinBuilder_ == null) {
@@ -2171,7 +2171,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public counters.minter.grpc.client.Coin.Builder getGasCoinBuilder() {
       
@@ -2179,7 +2179,7 @@ private static final long serialVersionUID = 0L;
       return getGasCoinFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     public counters.minter.grpc.client.CoinOrBuilder getGasCoinOrBuilder() {
       if (gasCoinBuilder_ != null) {
@@ -2190,7 +2190,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin gas_coin = 9;</code>
+     * <code>.api_pb.Coin gas_coin = 9 [json_name = "gasCoin"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> 
@@ -2208,7 +2208,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object typeHex_ = "";
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      * @return The typeHex.
      */
     public java.lang.String getTypeHex() {
@@ -2224,7 +2224,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      * @return The bytes for typeHex.
      */
     public com.google.protobuf.ByteString
@@ -2241,7 +2241,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      * @param value The typeHex to set.
      * @return This builder for chaining.
      */
@@ -2256,7 +2256,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTypeHex() {
@@ -2266,7 +2266,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type_hex = 17;</code>
+     * <code>string type_hex = 17 [json_name = "typeHex"];</code>
      * @param value The bytes for typeHex to set.
      * @return This builder for chaining.
      */
@@ -2288,7 +2288,7 @@ private static final long serialVersionUID = 0L;
      *    string type_name = 18;
      * </pre>
      *
-     * <code>uint64 type = 10;</code>
+     * <code>uint64 type = 10 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
@@ -2300,7 +2300,7 @@ private static final long serialVersionUID = 0L;
      *    string type_name = 18;
      * </pre>
      *
-     * <code>uint64 type = 10;</code>
+     * <code>uint64 type = 10 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -2315,7 +2315,7 @@ private static final long serialVersionUID = 0L;
      *    string type_name = 18;
      * </pre>
      *
-     * <code>uint64 type = 10;</code>
+     * <code>uint64 type = 10 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -2329,14 +2329,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      * @return The data.
      */
     public com.google.protobuf.Any getData() {
@@ -2347,7 +2347,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public Builder setData(com.google.protobuf.Any value) {
       if (dataBuilder_ == null) {
@@ -2363,7 +2363,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public Builder setData(
         com.google.protobuf.Any.Builder builderForValue) {
@@ -2377,7 +2377,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public Builder mergeData(com.google.protobuf.Any value) {
       if (dataBuilder_ == null) {
@@ -2395,7 +2395,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public Builder clearData() {
       if (dataBuilder_ == null) {
@@ -2409,7 +2409,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public com.google.protobuf.Any.Builder getDataBuilder() {
       
@@ -2417,7 +2417,7 @@ private static final long serialVersionUID = 0L;
       return getDataFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
       if (dataBuilder_ != null) {
@@ -2428,7 +2428,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Any data = 11;</code>
+     * <code>.google.protobuf.Any data = 11 [json_name = "data"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
@@ -2446,7 +2446,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes payload = 12;</code>
+     * <code>bytes payload = 12 [json_name = "payload"];</code>
      * @return The payload.
      */
     @java.lang.Override
@@ -2454,7 +2454,7 @@ private static final long serialVersionUID = 0L;
       return payload_;
     }
     /**
-     * <code>bytes payload = 12;</code>
+     * <code>bytes payload = 12 [json_name = "payload"];</code>
      * @param value The payload to set.
      * @return This builder for chaining.
      */
@@ -2468,7 +2468,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes payload = 12;</code>
+     * <code>bytes payload = 12 [json_name = "payload"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPayload() {
@@ -2480,7 +2480,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString serviceData_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes service_data = 16;</code>
+     * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
      * @return The serviceData.
      */
     @java.lang.Override
@@ -2488,7 +2488,7 @@ private static final long serialVersionUID = 0L;
       return serviceData_;
     }
     /**
-     * <code>bytes service_data = 16;</code>
+     * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
      * @param value The serviceData to set.
      * @return This builder for chaining.
      */
@@ -2502,7 +2502,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes service_data = 16;</code>
+     * <code>bytes service_data = 16 [json_name = "serviceData"];</code>
      * @return This builder for chaining.
      */
     public Builder clearServiceData() {
@@ -2539,13 +2539,13 @@ private static final long serialVersionUID = 0L;
       return internalGetTags().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
 
     @java.lang.Override
     public boolean containsTags(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTags().getMap().containsKey(key);
     }
     /**
@@ -2557,7 +2557,7 @@ private static final long serialVersionUID = 0L;
       return getTagsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @java.lang.Override
 
@@ -2565,26 +2565,26 @@ private static final long serialVersionUID = 0L;
       return internalGetTags().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @java.lang.Override
 
     public java.lang.String getTagsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTags().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     @java.lang.Override
 
     public java.lang.String getTagsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTags().getMap();
       if (!map.containsKey(key)) {
@@ -2599,12 +2599,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
 
     public Builder removeTags(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableTags().getMutableMap()
           .remove(key);
       return this;
@@ -2618,19 +2618,22 @@ private static final long serialVersionUID = 0L;
       return internalGetMutableTags().getMutableMap();
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
     public Builder putTags(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) {
+  throw new NullPointerException("map value");
+}
+
       internalGetMutableTags().getMutableMap()
           .put(key, value);
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; tags = 13;</code>
+     * <code>map&lt;string, string&gt; tags = 13 [json_name = "tags"];</code>
      */
 
     public Builder putAllTags(
@@ -2642,7 +2645,7 @@ private static final long serialVersionUID = 0L;
 
     private long code_ ;
     /**
-     * <code>uint64 code = 14;</code>
+     * <code>uint64 code = 14 [json_name = "code"];</code>
      * @return The code.
      */
     @java.lang.Override
@@ -2650,7 +2653,7 @@ private static final long serialVersionUID = 0L;
       return code_;
     }
     /**
-     * <code>uint64 code = 14;</code>
+     * <code>uint64 code = 14 [json_name = "code"];</code>
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -2661,7 +2664,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 code = 14;</code>
+     * <code>uint64 code = 14 [json_name = "code"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCode() {
@@ -2673,7 +2676,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object log_ = "";
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      * @return The log.
      */
     public java.lang.String getLog() {
@@ -2689,7 +2692,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      * @return The bytes for log.
      */
     public com.google.protobuf.ByteString
@@ -2706,7 +2709,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      * @param value The log to set.
      * @return This builder for chaining.
      */
@@ -2721,7 +2724,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLog() {
@@ -2731,7 +2734,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string log = 15;</code>
+     * <code>string log = 15 [json_name = "log"];</code>
      * @param value The bytes for log to set.
      * @return This builder for chaining.
      */

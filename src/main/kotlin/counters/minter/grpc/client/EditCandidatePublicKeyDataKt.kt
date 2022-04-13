@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun editCandidatePublicKeyData(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
+public inline fun editCandidatePublicKeyData(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
   counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl._create(counters.minter.grpc.client.EditCandidatePublicKeyData.newBuilder()).apply { block() }._build()
-object EditCandidatePublicKeyDataKt {
+public object EditCandidatePublicKeyDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.EditCandidatePublicKeyData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.EditCandidatePublicKeyData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.EditCandidatePublicKeyData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object EditCandidatePublicKeyDataKt {
     internal fun _build(): counters.minter.grpc.client.EditCandidatePublicKeyData = _builder.build()
 
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      */
-    var pubKey: kotlin.String
+    public var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -33,16 +33,16 @@ object EditCandidatePublicKeyDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      */
-    fun clearPubKey() {
+    public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>string new_pub_key = 2;</code>
+     * <code>string new_pub_key = 2 [json_name = "newPubKey"];</code>
      */
-    var newPubKey: kotlin.String
+    public var newPubKey: kotlin.String
       @JvmName("getNewPubKey")
       get() = _builder.getNewPubKey()
       @JvmName("setNewPubKey")
@@ -50,13 +50,13 @@ object EditCandidatePublicKeyDataKt {
         _builder.setNewPubKey(value)
       }
     /**
-     * <code>string new_pub_key = 2;</code>
+     * <code>string new_pub_key = 2 [json_name = "newPubKey"];</code>
      */
-    fun clearNewPubKey() {
+    public fun clearNewPubKey() {
       _builder.clearNewPubKey()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.EditCandidatePublicKeyData.copy(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
+public inline fun counters.minter.grpc.client.EditCandidatePublicKeyData.copy(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
   counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

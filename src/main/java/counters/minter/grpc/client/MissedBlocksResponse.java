@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public static final int MISSED_BLOCKS_FIELD_NUMBER = 1;
   private volatile java.lang.Object missedBlocks_;
   /**
-   * <code>string missed_blocks = 1;</code>
+   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
    * @return The missedBlocks.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string missed_blocks = 1;</code>
+   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
    * @return The bytes for missedBlocks.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   public static final int MISSED_BLOCKS_COUNT_FIELD_NUMBER = 2;
   private long missedBlocksCount_;
   /**
-   * <code>int64 missed_blocks_count = 2;</code>
+   * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
    * @return The missedBlocksCount.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getMissedBlocksBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(missedBlocks_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, missedBlocks_);
     }
     if (missedBlocksCount_ != 0L) {
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getMissedBlocksBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(missedBlocks_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, missedBlocks_);
     }
     if (missedBlocksCount_ != 0L) {
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object missedBlocks_ = "";
     /**
-     * <code>string missed_blocks = 1;</code>
+     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
      * @return The missedBlocks.
      */
     public java.lang.String getMissedBlocks() {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string missed_blocks = 1;</code>
+     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
      * @return The bytes for missedBlocks.
      */
     public com.google.protobuf.ByteString
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string missed_blocks = 1;</code>
+     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
      * @param value The missedBlocks to set.
      * @return This builder for chaining.
      */
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string missed_blocks = 1;</code>
+     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMissedBlocks() {
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string missed_blocks = 1;</code>
+     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
      * @param value The bytes for missedBlocks to set.
      * @return This builder for chaining.
      */
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
 
     private long missedBlocksCount_ ;
     /**
-     * <code>int64 missed_blocks_count = 2;</code>
+     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
      * @return The missedBlocksCount.
      */
     @java.lang.Override
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
       return missedBlocksCount_;
     }
     /**
-     * <code>int64 missed_blocks_count = 2;</code>
+     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
      * @param value The missedBlocksCount to set.
      * @return This builder for chaining.
      */
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 missed_blocks_count = 2;</code>
+     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMissedBlocksCount() {

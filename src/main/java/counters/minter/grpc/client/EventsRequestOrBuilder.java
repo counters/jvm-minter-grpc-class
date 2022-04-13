@@ -8,7 +8,7 @@ public interface EventsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();
@@ -18,7 +18,7 @@ public interface EventsRequestOrBuilder extends
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @return A list containing the search.
    */
   java.util.List<java.lang.String>
@@ -28,7 +28,7 @@ public interface EventsRequestOrBuilder extends
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @return The count of search.
    */
   int getSearchCount();
@@ -37,7 +37,7 @@ public interface EventsRequestOrBuilder extends
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @param index The index of the element to return.
    * @return The search at the given index.
    */
@@ -47,7 +47,7 @@ public interface EventsRequestOrBuilder extends
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the search at the given index.
    */

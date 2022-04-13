@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun waitListRequest(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListRequest =
+public inline fun waitListRequest(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListRequest =
   counters.minter.grpc.client.WaitListRequestKt.Dsl._create(counters.minter.grpc.client.WaitListRequest.newBuilder()).apply { block() }._build()
-object WaitListRequestKt {
+public object WaitListRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.WaitListRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.WaitListRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.WaitListRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object WaitListRequestKt {
     internal fun _build(): counters.minter.grpc.client.WaitListRequest = _builder.build()
 
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      */
-    var publicKey: kotlin.String
+    public var publicKey: kotlin.String
       @JvmName("getPublicKey")
       get() = _builder.getPublicKey()
       @JvmName("setPublicKey")
@@ -33,16 +33,16 @@ object WaitListRequestKt {
         _builder.setPublicKey(value)
       }
     /**
-     * <code>string public_key = 1;</code>
+     * <code>string public_key = 1 [json_name = "publicKey"];</code>
      */
-    fun clearPublicKey() {
+    public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    var address: kotlin.String
+    public var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -50,16 +50,16 @@ object WaitListRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    fun clearAddress() {
+    public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -67,13 +67,13 @@ object WaitListRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.WaitListRequest.copy(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.WaitListRequest =
+public inline fun counters.minter.grpc.client.WaitListRequest.copy(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListRequest =
   counters.minter.grpc.client.WaitListRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

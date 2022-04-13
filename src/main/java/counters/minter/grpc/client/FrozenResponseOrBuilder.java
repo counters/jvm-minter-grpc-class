@@ -8,25 +8,25 @@ public interface FrozenResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
    */
   java.util.List<counters.minter.grpc.client.FrozenResponse.Frozen> 
       getFrozenList();
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
    */
   counters.minter.grpc.client.FrozenResponse.Frozen getFrozen(int index);
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
    */
   int getFrozenCount();
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder> 
       getFrozenOrBuilderList();
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
    */
   counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder getFrozenOrBuilder(
       int index);

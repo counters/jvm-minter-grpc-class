@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun updateNetworkEvent(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> Unit): counters.minter.grpc.client.UpdateNetworkEvent =
+public inline fun updateNetworkEvent(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateNetworkEvent =
   counters.minter.grpc.client.UpdateNetworkEventKt.Dsl._create(counters.minter.grpc.client.UpdateNetworkEvent.newBuilder()).apply { block() }._build()
-object UpdateNetworkEventKt {
+public object UpdateNetworkEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.UpdateNetworkEvent.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.UpdateNetworkEvent.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.UpdateNetworkEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object UpdateNetworkEventKt {
     internal fun _build(): counters.minter.grpc.client.UpdateNetworkEvent = _builder.build()
 
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      */
-    var version: kotlin.String
+    public var version: kotlin.String
       @JvmName("getVersion")
       get() = _builder.getVersion()
       @JvmName("setVersion")
@@ -33,13 +33,13 @@ object UpdateNetworkEventKt {
         _builder.setVersion(value)
       }
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      */
-    fun clearVersion() {
+    public fun clearVersion() {
       _builder.clearVersion()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.UpdateNetworkEvent.copy(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> Unit): counters.minter.grpc.client.UpdateNetworkEvent =
+public inline fun counters.minter.grpc.client.UpdateNetworkEvent.copy(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateNetworkEvent =
   counters.minter.grpc.client.UpdateNetworkEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

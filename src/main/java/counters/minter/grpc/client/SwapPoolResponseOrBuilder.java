@@ -8,48 +8,54 @@ public interface SwapPoolResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string price = 4;</code>
+   * <code>uint64 id = 5 [json_name = "id"];</code>
+   * @return The id.
+   */
+  long getId();
+
+  /**
+   * <code>string price = 4 [json_name = "price"];</code>
    * @return The price.
    */
   java.lang.String getPrice();
   /**
-   * <code>string price = 4;</code>
+   * <code>string price = 4 [json_name = "price"];</code>
    * @return The bytes for price.
    */
   com.google.protobuf.ByteString
       getPriceBytes();
 
   /**
-   * <code>string amount0 = 1;</code>
+   * <code>string amount0 = 1 [json_name = "amount0"];</code>
    * @return The amount0.
    */
   java.lang.String getAmount0();
   /**
-   * <code>string amount0 = 1;</code>
+   * <code>string amount0 = 1 [json_name = "amount0"];</code>
    * @return The bytes for amount0.
    */
   com.google.protobuf.ByteString
       getAmount0Bytes();
 
   /**
-   * <code>string amount1 = 2;</code>
+   * <code>string amount1 = 2 [json_name = "amount1"];</code>
    * @return The amount1.
    */
   java.lang.String getAmount1();
   /**
-   * <code>string amount1 = 2;</code>
+   * <code>string amount1 = 2 [json_name = "amount1"];</code>
    * @return The bytes for amount1.
    */
   com.google.protobuf.ByteString
       getAmount1Bytes();
 
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The liquidity.
    */
   java.lang.String getLiquidity();
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The bytes for liquidity.
    */
   com.google.protobuf.ByteString

@@ -8,12 +8,12 @@ public interface TransactionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The hash.
    */
   java.lang.String getHash();
   /**
-   * <code>string hash = 1;</code>
+   * <code>string hash = 1 [json_name = "hash"];</code>
    * @return The bytes for hash.
    */
   com.google.protobuf.ByteString

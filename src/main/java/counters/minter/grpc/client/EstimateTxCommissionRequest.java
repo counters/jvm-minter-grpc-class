@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public static final int TX_FIELD_NUMBER = 1;
   private volatile java.lang.Object tx_;
   /**
-   * <code>string tx = 1;</code>
+   * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The tx.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string tx = 1;</code>
+   * <code>string tx = 1 [json_name = "tx"];</code>
    * @return The bytes for tx.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tx_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tx_);
     }
     if (height_ != 0L) {
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tx_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tx_);
     }
     if (height_ != 0L) {
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object tx_ = "";
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      * @return The tx.
      */
     public java.lang.String getTx() {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      * @return The bytes for tx.
      */
     public com.google.protobuf.ByteString
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      * @param value The tx to set.
      * @return This builder for chaining.
      */
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTx() {
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      * @param value The bytes for tx to set.
      * @return This builder for chaining.
      */
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

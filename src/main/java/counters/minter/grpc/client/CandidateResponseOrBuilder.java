@@ -8,7 +8,7 @@ public interface CandidateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 id = 14;</code>
+   * <code>uint64 id = 14 [json_name = "id"];</code>
    * @return The id.
    */
   long getId();
@@ -18,7 +18,7 @@ public interface CandidateResponseOrBuilder extends
    * Address where validator’s rewards go to.
    * </pre>
    *
-   * <code>string reward_address = 1;</code>
+   * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
    * @return The rewardAddress.
    */
   java.lang.String getRewardAddress();
@@ -27,7 +27,7 @@ public interface CandidateResponseOrBuilder extends
    * Address where validator’s rewards go to.
    * </pre>
    *
-   * <code>string reward_address = 1;</code>
+   * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
    * @return The bytes for rewardAddress.
    */
   com.google.protobuf.ByteString
@@ -38,7 +38,7 @@ public interface CandidateResponseOrBuilder extends
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
    * </pre>
    *
-   * <code>string owner_address = 10;</code>
+   * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
    * @return The ownerAddress.
    */
   java.lang.String getOwnerAddress();
@@ -47,7 +47,7 @@ public interface CandidateResponseOrBuilder extends
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
    * </pre>
    *
-   * <code>string owner_address = 10;</code>
+   * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
    * @return The bytes for ownerAddress.
    */
   com.google.protobuf.ByteString
@@ -58,7 +58,7 @@ public interface CandidateResponseOrBuilder extends
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
    * </pre>
    *
-   * <code>string control_address = 11;</code>
+   * <code>string control_address = 11 [json_name = "controlAddress"];</code>
    * @return The controlAddress.
    */
   java.lang.String getControlAddress();
@@ -67,7 +67,7 @@ public interface CandidateResponseOrBuilder extends
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
    * </pre>
    *
-   * <code>string control_address = 11;</code>
+   * <code>string control_address = 11 [json_name = "controlAddress"];</code>
    * @return The bytes for controlAddress.
    */
   com.google.protobuf.ByteString
@@ -78,7 +78,7 @@ public interface CandidateResponseOrBuilder extends
    * Total stake of a candidate
    * </pre>
    *
-   * <code>string total_stake = 2;</code>
+   * <code>string total_stake = 2 [json_name = "totalStake"];</code>
    * @return The totalStake.
    */
   java.lang.String getTotalStake();
@@ -87,7 +87,7 @@ public interface CandidateResponseOrBuilder extends
    * Total stake of a candidate
    * </pre>
    *
-   * <code>string total_stake = 2;</code>
+   * <code>string total_stake = 2 [json_name = "totalStake"];</code>
    * @return The bytes for totalStake.
    */
   com.google.protobuf.ByteString
@@ -98,7 +98,7 @@ public interface CandidateResponseOrBuilder extends
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 3;</code>
+   * <code>string public_key = 3 [json_name = "publicKey"];</code>
    * @return The publicKey.
    */
   java.lang.String getPublicKey();
@@ -107,7 +107,7 @@ public interface CandidateResponseOrBuilder extends
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 3;</code>
+   * <code>string public_key = 3 [json_name = "publicKey"];</code>
    * @return The bytes for publicKey.
    */
   com.google.protobuf.ByteString
@@ -118,7 +118,7 @@ public interface CandidateResponseOrBuilder extends
    * Commission (from 0 to 100) from rewards which delegators will pay to validator
    * </pre>
    *
-   * <code>uint64 commission = 4;</code>
+   * <code>uint64 commission = 4 [json_name = "commission"];</code>
    * @return The commission.
    */
   long getCommission();
@@ -128,7 +128,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
    * @return Whether the usedSlots field is set.
    */
   boolean hasUsedSlots();
@@ -137,7 +137,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
    * @return The usedSlots.
    */
   com.google.protobuf.UInt64Value getUsedSlots();
@@ -146,7 +146,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
    */
   com.google.protobuf.UInt64ValueOrBuilder getUsedSlotsOrBuilder();
 
@@ -155,7 +155,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
    * @return Whether the uniqUsers field is set.
    */
   boolean hasUniqUsers();
@@ -164,7 +164,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
    * @return The uniqUsers.
    */
   com.google.protobuf.UInt64Value getUniqUsers();
@@ -173,7 +173,7 @@ public interface CandidateResponseOrBuilder extends
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
    */
   com.google.protobuf.UInt64ValueOrBuilder getUniqUsersOrBuilder();
 
@@ -182,7 +182,7 @@ public interface CandidateResponseOrBuilder extends
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9;</code>
+   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
    * @return Whether the minStake field is set.
    */
   boolean hasMinStake();
@@ -191,7 +191,7 @@ public interface CandidateResponseOrBuilder extends
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9;</code>
+   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
    * @return The minStake.
    */
   com.google.protobuf.StringValue getMinStake();
@@ -200,7 +200,7 @@ public interface CandidateResponseOrBuilder extends
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9;</code>
+   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getMinStakeOrBuilder();
 
@@ -209,7 +209,7 @@ public interface CandidateResponseOrBuilder extends
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
    */
   java.util.List<counters.minter.grpc.client.CandidateResponse.Stake> 
       getStakesList();
@@ -218,7 +218,7 @@ public interface CandidateResponseOrBuilder extends
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
    */
   counters.minter.grpc.client.CandidateResponse.Stake getStakes(int index);
   /**
@@ -226,7 +226,7 @@ public interface CandidateResponseOrBuilder extends
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
    */
   int getStakesCount();
   /**
@@ -234,7 +234,7 @@ public interface CandidateResponseOrBuilder extends
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.CandidateResponse.StakeOrBuilder> 
       getStakesOrBuilderList();
@@ -243,7 +243,7 @@ public interface CandidateResponseOrBuilder extends
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
    */
   counters.minter.grpc.client.CandidateResponse.StakeOrBuilder getStakesOrBuilder(
       int index);
@@ -253,7 +253,7 @@ public interface CandidateResponseOrBuilder extends
    * Candidate status. Available values: offline = 1, online = 2
    * </pre>
    *
-   * <code>uint64 status = 6;</code>
+   * <code>uint64 status = 6 [json_name = "status"];</code>
    * @return The status.
    */
   long getStatus();
@@ -263,13 +263,13 @@ public interface CandidateResponseOrBuilder extends
    * Is a validator at the current height
    * </pre>
    *
-   * <code>bool validator = 12;</code>
+   * <code>bool validator = 12 [json_name = "validator"];</code>
    * @return The validator.
    */
   boolean getValidator();
 
   /**
-   * <code>uint64 jailed_until = 13;</code>
+   * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
    * @return The jailedUntil.
    */
   long getJailedUntil();

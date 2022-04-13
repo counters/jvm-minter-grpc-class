@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     latestAppHash_ = "";
     latestBlockTime_ = "";
     totalSlashed_ = "";
+    currentEmission_ = "";
     publicKey_ = "";
     nodeId_ = "";
     moniker_ = "";
@@ -131,6 +132,12 @@ private static final long serialVersionUID = 0L;
             moniker_ = s;
             break;
           }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            currentEmission_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -166,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static final int VERSION_FIELD_NUMBER = 8;
   private volatile java.lang.Object version_;
   /**
-   * <code>string version = 8;</code>
+   * <code>string version = 8 [json_name = "version"];</code>
    * @return The version.
    */
   @java.lang.Override
@@ -183,7 +190,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string version = 8;</code>
+   * <code>string version = 8 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   @java.lang.Override
@@ -204,7 +211,7 @@ private static final long serialVersionUID = 0L;
   public static final int NETWORK_FIELD_NUMBER = 11;
   private volatile java.lang.Object network_;
   /**
-   * <code>string network = 11;</code>
+   * <code>string network = 11 [json_name = "network"];</code>
    * @return The network.
    */
   @java.lang.Override
@@ -221,7 +228,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string network = 11;</code>
+   * <code>string network = 11 [json_name = "network"];</code>
    * @return The bytes for network.
    */
   @java.lang.Override
@@ -242,7 +249,7 @@ private static final long serialVersionUID = 0L;
   public static final int INITIAL_HEIGHT_FIELD_NUMBER = 12;
   private long initialHeight_;
   /**
-   * <code>uint64 initial_height = 12;</code>
+   * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
    * @return The initialHeight.
    */
   @java.lang.Override
@@ -253,7 +260,7 @@ private static final long serialVersionUID = 0L;
   public static final int LATEST_BLOCK_HASH_FIELD_NUMBER = 1;
   private volatile java.lang.Object latestBlockHash_;
   /**
-   * <code>string latest_block_hash = 1;</code>
+   * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
    * @return The latestBlockHash.
    */
   @java.lang.Override
@@ -270,7 +277,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string latest_block_hash = 1;</code>
+   * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
    * @return The bytes for latestBlockHash.
    */
   @java.lang.Override
@@ -291,7 +298,7 @@ private static final long serialVersionUID = 0L;
   public static final int LATEST_APP_HASH_FIELD_NUMBER = 2;
   private volatile java.lang.Object latestAppHash_;
   /**
-   * <code>string latest_app_hash = 2;</code>
+   * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
    * @return The latestAppHash.
    */
   @java.lang.Override
@@ -308,7 +315,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string latest_app_hash = 2;</code>
+   * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
    * @return The bytes for latestAppHash.
    */
   @java.lang.Override
@@ -329,7 +336,7 @@ private static final long serialVersionUID = 0L;
   public static final int LATEST_BLOCK_HEIGHT_FIELD_NUMBER = 3;
   private long latestBlockHeight_;
   /**
-   * <code>uint64 latest_block_height = 3;</code>
+   * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
    * @return The latestBlockHeight.
    */
   @java.lang.Override
@@ -340,7 +347,7 @@ private static final long serialVersionUID = 0L;
   public static final int LATEST_BLOCK_TIME_FIELD_NUMBER = 4;
   private volatile java.lang.Object latestBlockTime_;
   /**
-   * <code>string latest_block_time = 4;</code>
+   * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
    * @return The latestBlockTime.
    */
   @java.lang.Override
@@ -357,7 +364,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string latest_block_time = 4;</code>
+   * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
    * @return The bytes for latestBlockTime.
    */
   @java.lang.Override
@@ -378,7 +385,7 @@ private static final long serialVersionUID = 0L;
   public static final int KEEP_LAST_STATES_FIELD_NUMBER = 5;
   private long keepLastStates_;
   /**
-   * <code>uint64 keep_last_states = 5;</code>
+   * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
    * @return The keepLastStates.
    */
   @java.lang.Override
@@ -389,7 +396,7 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_SLASHED_FIELD_NUMBER = 10;
   private volatile java.lang.Object totalSlashed_;
   /**
-   * <code>string total_slashed = 10;</code>
+   * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
    * @return The totalSlashed.
    */
   @java.lang.Override
@@ -406,7 +413,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string total_slashed = 10;</code>
+   * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
    * @return The bytes for totalSlashed.
    */
   @java.lang.Override
@@ -424,10 +431,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CURRENT_EMISSION_FIELD_NUMBER = 14;
+  private volatile java.lang.Object currentEmission_;
+  /**
+   * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+   * @return The currentEmission.
+   */
+  @java.lang.Override
+  public java.lang.String getCurrentEmission() {
+    java.lang.Object ref = currentEmission_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      currentEmission_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+   * @return The bytes for currentEmission.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCurrentEmissionBytes() {
+    java.lang.Object ref = currentEmission_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      currentEmission_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int CATCHING_UP_FIELD_NUMBER = 6;
   private boolean catchingUp_;
   /**
-   * <code>bool catching_up = 6;</code>
+   * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
    * @return The catchingUp.
    */
   @java.lang.Override
@@ -438,7 +483,7 @@ private static final long serialVersionUID = 0L;
   public static final int PUBLIC_KEY_FIELD_NUMBER = 7;
   private volatile java.lang.Object publicKey_;
   /**
-   * <code>string public_key = 7;</code>
+   * <code>string public_key = 7 [json_name = "publicKey"];</code>
    * @return The publicKey.
    */
   @java.lang.Override
@@ -455,7 +500,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string public_key = 7;</code>
+   * <code>string public_key = 7 [json_name = "publicKey"];</code>
    * @return The bytes for publicKey.
    */
   @java.lang.Override
@@ -476,7 +521,7 @@ private static final long serialVersionUID = 0L;
   public static final int NODE_ID_FIELD_NUMBER = 9;
   private volatile java.lang.Object nodeId_;
   /**
-   * <code>string node_id = 9;</code>
+   * <code>string node_id = 9 [json_name = "nodeId"];</code>
    * @return The nodeId.
    */
   @java.lang.Override
@@ -493,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string node_id = 9;</code>
+   * <code>string node_id = 9 [json_name = "nodeId"];</code>
    * @return The bytes for nodeId.
    */
   @java.lang.Override
@@ -514,7 +559,7 @@ private static final long serialVersionUID = 0L;
   public static final int MONIKER_FIELD_NUMBER = 13;
   private volatile java.lang.Object moniker_;
   /**
-   * <code>string moniker = 13;</code>
+   * <code>string moniker = 13 [json_name = "moniker"];</code>
    * @return The moniker.
    */
   @java.lang.Override
@@ -531,7 +576,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string moniker = 13;</code>
+   * <code>string moniker = 13 [json_name = "moniker"];</code>
    * @return The bytes for moniker.
    */
   @java.lang.Override
@@ -563,16 +608,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getLatestBlockHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestBlockHash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, latestBlockHash_);
     }
-    if (!getLatestAppHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestAppHash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, latestAppHash_);
     }
     if (latestBlockHeight_ != 0L) {
       output.writeUInt64(3, latestBlockHeight_);
     }
-    if (!getLatestBlockTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestBlockTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, latestBlockTime_);
     }
     if (keepLastStates_ != 0L) {
@@ -581,26 +626,29 @@ private static final long serialVersionUID = 0L;
     if (catchingUp_ != false) {
       output.writeBool(6, catchingUp_);
     }
-    if (!getPublicKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, publicKey_);
     }
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, version_);
     }
-    if (!getNodeIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, nodeId_);
     }
-    if (!getTotalSlashedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalSlashed_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, totalSlashed_);
     }
-    if (!getNetworkBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, network_);
     }
     if (initialHeight_ != 0L) {
       output.writeUInt64(12, initialHeight_);
     }
-    if (!getMonikerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, moniker_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentEmission_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, currentEmission_);
     }
     unknownFields.writeTo(output);
   }
@@ -611,17 +659,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getLatestBlockHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestBlockHash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, latestBlockHash_);
     }
-    if (!getLatestAppHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestAppHash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, latestAppHash_);
     }
     if (latestBlockHeight_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(3, latestBlockHeight_);
     }
-    if (!getLatestBlockTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestBlockTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, latestBlockTime_);
     }
     if (keepLastStates_ != 0L) {
@@ -632,27 +680,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, catchingUp_);
     }
-    if (!getPublicKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, publicKey_);
     }
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, version_);
     }
-    if (!getNodeIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, nodeId_);
     }
-    if (!getTotalSlashedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalSlashed_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, totalSlashed_);
     }
-    if (!getNetworkBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, network_);
     }
     if (initialHeight_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(12, initialHeight_);
     }
-    if (!getMonikerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, moniker_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentEmission_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, currentEmission_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -687,6 +738,8 @@ private static final long serialVersionUID = 0L;
         != other.getKeepLastStates()) return false;
     if (!getTotalSlashed()
         .equals(other.getTotalSlashed())) return false;
+    if (!getCurrentEmission()
+        .equals(other.getCurrentEmission())) return false;
     if (getCatchingUp()
         != other.getCatchingUp()) return false;
     if (!getPublicKey()
@@ -727,6 +780,8 @@ private static final long serialVersionUID = 0L;
         getKeepLastStates());
     hash = (37 * hash) + TOTAL_SLASHED_FIELD_NUMBER;
     hash = (53 * hash) + getTotalSlashed().hashCode();
+    hash = (37 * hash) + CURRENT_EMISSION_FIELD_NUMBER;
+    hash = (53 * hash) + getCurrentEmission().hashCode();
     hash = (37 * hash) + CATCHING_UP_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getCatchingUp());
@@ -887,6 +942,8 @@ private static final long serialVersionUID = 0L;
 
       totalSlashed_ = "";
 
+      currentEmission_ = "";
+
       catchingUp_ = false;
 
       publicKey_ = "";
@@ -930,6 +987,7 @@ private static final long serialVersionUID = 0L;
       result.latestBlockTime_ = latestBlockTime_;
       result.keepLastStates_ = keepLastStates_;
       result.totalSlashed_ = totalSlashed_;
+      result.currentEmission_ = currentEmission_;
       result.catchingUp_ = catchingUp_;
       result.publicKey_ = publicKey_;
       result.nodeId_ = nodeId_;
@@ -1015,6 +1073,10 @@ private static final long serialVersionUID = 0L;
         totalSlashed_ = other.totalSlashed_;
         onChanged();
       }
+      if (!other.getCurrentEmission().isEmpty()) {
+        currentEmission_ = other.currentEmission_;
+        onChanged();
+      }
       if (other.getCatchingUp() != false) {
         setCatchingUp(other.getCatchingUp());
       }
@@ -1061,7 +1123,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object version_ = "";
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      * @return The version.
      */
     public java.lang.String getVersion() {
@@ -1077,7 +1139,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
@@ -1094,7 +1156,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -1109,7 +1171,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
@@ -1119,7 +1181,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
      */
@@ -1137,7 +1199,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object network_ = "";
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      * @return The network.
      */
     public java.lang.String getNetwork() {
@@ -1153,7 +1215,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      * @return The bytes for network.
      */
     public com.google.protobuf.ByteString
@@ -1170,7 +1232,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      * @param value The network to set.
      * @return This builder for chaining.
      */
@@ -1185,7 +1247,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNetwork() {
@@ -1195,7 +1257,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      * @param value The bytes for network to set.
      * @return This builder for chaining.
      */
@@ -1213,7 +1275,7 @@ private static final long serialVersionUID = 0L;
 
     private long initialHeight_ ;
     /**
-     * <code>uint64 initial_height = 12;</code>
+     * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
      * @return The initialHeight.
      */
     @java.lang.Override
@@ -1221,7 +1283,7 @@ private static final long serialVersionUID = 0L;
       return initialHeight_;
     }
     /**
-     * <code>uint64 initial_height = 12;</code>
+     * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
      * @param value The initialHeight to set.
      * @return This builder for chaining.
      */
@@ -1232,7 +1294,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 initial_height = 12;</code>
+     * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInitialHeight() {
@@ -1244,7 +1306,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object latestBlockHash_ = "";
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      * @return The latestBlockHash.
      */
     public java.lang.String getLatestBlockHash() {
@@ -1260,7 +1322,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      * @return The bytes for latestBlockHash.
      */
     public com.google.protobuf.ByteString
@@ -1277,7 +1339,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      * @param value The latestBlockHash to set.
      * @return This builder for chaining.
      */
@@ -1292,7 +1354,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLatestBlockHash() {
@@ -1302,7 +1364,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      * @param value The bytes for latestBlockHash to set.
      * @return This builder for chaining.
      */
@@ -1320,7 +1382,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object latestAppHash_ = "";
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      * @return The latestAppHash.
      */
     public java.lang.String getLatestAppHash() {
@@ -1336,7 +1398,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      * @return The bytes for latestAppHash.
      */
     public com.google.protobuf.ByteString
@@ -1353,7 +1415,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      * @param value The latestAppHash to set.
      * @return This builder for chaining.
      */
@@ -1368,7 +1430,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLatestAppHash() {
@@ -1378,7 +1440,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      * @param value The bytes for latestAppHash to set.
      * @return This builder for chaining.
      */
@@ -1396,7 +1458,7 @@ private static final long serialVersionUID = 0L;
 
     private long latestBlockHeight_ ;
     /**
-     * <code>uint64 latest_block_height = 3;</code>
+     * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
      * @return The latestBlockHeight.
      */
     @java.lang.Override
@@ -1404,7 +1466,7 @@ private static final long serialVersionUID = 0L;
       return latestBlockHeight_;
     }
     /**
-     * <code>uint64 latest_block_height = 3;</code>
+     * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
      * @param value The latestBlockHeight to set.
      * @return This builder for chaining.
      */
@@ -1415,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 latest_block_height = 3;</code>
+     * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLatestBlockHeight() {
@@ -1427,7 +1489,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object latestBlockTime_ = "";
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      * @return The latestBlockTime.
      */
     public java.lang.String getLatestBlockTime() {
@@ -1443,7 +1505,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      * @return The bytes for latestBlockTime.
      */
     public com.google.protobuf.ByteString
@@ -1460,7 +1522,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      * @param value The latestBlockTime to set.
      * @return This builder for chaining.
      */
@@ -1475,7 +1537,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLatestBlockTime() {
@@ -1485,7 +1547,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      * @param value The bytes for latestBlockTime to set.
      * @return This builder for chaining.
      */
@@ -1503,7 +1565,7 @@ private static final long serialVersionUID = 0L;
 
     private long keepLastStates_ ;
     /**
-     * <code>uint64 keep_last_states = 5;</code>
+     * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
      * @return The keepLastStates.
      */
     @java.lang.Override
@@ -1511,7 +1573,7 @@ private static final long serialVersionUID = 0L;
       return keepLastStates_;
     }
     /**
-     * <code>uint64 keep_last_states = 5;</code>
+     * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
      * @param value The keepLastStates to set.
      * @return This builder for chaining.
      */
@@ -1522,7 +1584,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 keep_last_states = 5;</code>
+     * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
      * @return This builder for chaining.
      */
     public Builder clearKeepLastStates() {
@@ -1534,7 +1596,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object totalSlashed_ = "";
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      * @return The totalSlashed.
      */
     public java.lang.String getTotalSlashed() {
@@ -1550,7 +1612,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      * @return The bytes for totalSlashed.
      */
     public com.google.protobuf.ByteString
@@ -1567,7 +1629,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      * @param value The totalSlashed to set.
      * @return This builder for chaining.
      */
@@ -1582,7 +1644,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalSlashed() {
@@ -1592,7 +1654,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      * @param value The bytes for totalSlashed to set.
      * @return This builder for chaining.
      */
@@ -1608,9 +1670,85 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object currentEmission_ = "";
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     * @return The currentEmission.
+     */
+    public java.lang.String getCurrentEmission() {
+      java.lang.Object ref = currentEmission_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currentEmission_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     * @return The bytes for currentEmission.
+     */
+    public com.google.protobuf.ByteString
+        getCurrentEmissionBytes() {
+      java.lang.Object ref = currentEmission_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currentEmission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     * @param value The currentEmission to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCurrentEmission(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      currentEmission_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCurrentEmission() {
+      
+      currentEmission_ = getDefaultInstance().getCurrentEmission();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     * @param value The bytes for currentEmission to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCurrentEmissionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      currentEmission_ = value;
+      onChanged();
+      return this;
+    }
+
     private boolean catchingUp_ ;
     /**
-     * <code>bool catching_up = 6;</code>
+     * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
      * @return The catchingUp.
      */
     @java.lang.Override
@@ -1618,7 +1756,7 @@ private static final long serialVersionUID = 0L;
       return catchingUp_;
     }
     /**
-     * <code>bool catching_up = 6;</code>
+     * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
      * @param value The catchingUp to set.
      * @return This builder for chaining.
      */
@@ -1629,7 +1767,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool catching_up = 6;</code>
+     * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCatchingUp() {
@@ -1641,7 +1779,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object publicKey_ = "";
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      * @return The publicKey.
      */
     public java.lang.String getPublicKey() {
@@ -1657,7 +1795,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      * @return The bytes for publicKey.
      */
     public com.google.protobuf.ByteString
@@ -1674,7 +1812,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      * @param value The publicKey to set.
      * @return This builder for chaining.
      */
@@ -1689,7 +1827,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPublicKey() {
@@ -1699,7 +1837,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      * @param value The bytes for publicKey to set.
      * @return This builder for chaining.
      */
@@ -1717,7 +1855,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nodeId_ = "";
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      * @return The nodeId.
      */
     public java.lang.String getNodeId() {
@@ -1733,7 +1871,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      * @return The bytes for nodeId.
      */
     public com.google.protobuf.ByteString
@@ -1750,7 +1888,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      * @param value The nodeId to set.
      * @return This builder for chaining.
      */
@@ -1765,7 +1903,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNodeId() {
@@ -1775,7 +1913,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      * @param value The bytes for nodeId to set.
      * @return This builder for chaining.
      */
@@ -1793,7 +1931,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object moniker_ = "";
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      * @return The moniker.
      */
     public java.lang.String getMoniker() {
@@ -1809,7 +1947,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
     public com.google.protobuf.ByteString
@@ -1826,7 +1964,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      * @param value The moniker to set.
      * @return This builder for chaining.
      */
@@ -1841,7 +1979,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMoniker() {
@@ -1851,7 +1989,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      * @param value The bytes for moniker to set.
      * @return This builder for chaining.
      */

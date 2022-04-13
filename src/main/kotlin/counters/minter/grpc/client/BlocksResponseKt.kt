@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun blocksResponse(block: counters.minter.grpc.client.BlocksResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.BlocksResponse =
+public inline fun blocksResponse(block: counters.minter.grpc.client.BlocksResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlocksResponse =
   counters.minter.grpc.client.BlocksResponseKt.Dsl._create(counters.minter.grpc.client.BlocksResponse.newBuilder()).apply { block() }._build()
-object BlocksResponseKt {
+public object BlocksResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BlocksResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.BlocksResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.BlocksResponse.Builder): Dsl = Dsl(builder)
@@ -27,65 +27,67 @@ object BlocksResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class BlocksProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class BlocksProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      */
-     val blocks: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>
+     public val blocks: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getBlocksList()
       )
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      * @param value The blocks to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addBlocks")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.add(value: counters.minter.grpc.client.BlockResponse) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.add(value: counters.minter.grpc.client.BlockResponse) {
       _builder.addBlocks(value)
     }/**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      * @param value The blocks to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignBlocks")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.plusAssign(value: counters.minter.grpc.client.BlockResponse) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.plusAssign(value: counters.minter.grpc.client.BlockResponse) {
       add(value)
     }/**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      * @param values The blocks to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllBlocks")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse>) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse>) {
       _builder.addAllBlocks(values)
     }/**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      * @param values The blocks to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllBlocks")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockResponse>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      * @param index The index to set the value at.
      * @param value The blocks to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setBlocks")
-    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockResponse) {
+    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockResponse) {
       _builder.setBlocks(index, value)
     }/**
-     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearBlocks")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockResponse, BlocksProxy>.clear() {
       _builder.clearBlocks()
     }}
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.BlocksResponse.copy(block: counters.minter.grpc.client.BlocksResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.BlocksResponse =
+public inline fun counters.minter.grpc.client.BlocksResponse.copy(block: counters.minter.grpc.client.BlocksResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlocksResponse =
   counters.minter.grpc.client.BlocksResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

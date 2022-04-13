@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun limitOrdersResponse(block: counters.minter.grpc.client.LimitOrdersResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrdersResponse =
+public inline fun limitOrdersResponse(block: counters.minter.grpc.client.LimitOrdersResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersResponse =
   counters.minter.grpc.client.LimitOrdersResponseKt.Dsl._create(counters.minter.grpc.client.LimitOrdersResponse.newBuilder()).apply { block() }._build()
-object LimitOrdersResponseKt {
+public object LimitOrdersResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.LimitOrdersResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.LimitOrdersResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.LimitOrdersResponse.Builder): Dsl = Dsl(builder)
@@ -27,65 +27,67 @@ object LimitOrdersResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class OrdersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class OrdersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      */
-     val orders: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>
+     public val orders: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getOrdersList()
       )
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      * @param value The orders to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addOrders")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.add(value: counters.minter.grpc.client.LimitOrderResponse) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.add(value: counters.minter.grpc.client.LimitOrderResponse) {
       _builder.addOrders(value)
     }/**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      * @param value The orders to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignOrders")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.plusAssign(value: counters.minter.grpc.client.LimitOrderResponse) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.plusAssign(value: counters.minter.grpc.client.LimitOrderResponse) {
       add(value)
     }/**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      * @param values The orders to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllOrders")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.LimitOrderResponse>) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.LimitOrderResponse>) {
       _builder.addAllOrders(values)
     }/**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      * @param values The orders to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllOrders")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.LimitOrderResponse>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.LimitOrderResponse>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      * @param index The index to set the value at.
      * @param value The orders to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setOrders")
-    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.LimitOrderResponse) {
+    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.LimitOrderResponse) {
       _builder.setOrders(index, value)
     }/**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearOrders")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.LimitOrderResponse, OrdersProxy>.clear() {
       _builder.clearOrders()
     }}
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.LimitOrdersResponse.copy(block: counters.minter.grpc.client.LimitOrdersResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrdersResponse =
+public inline fun counters.minter.grpc.client.LimitOrdersResponse.copy(block: counters.minter.grpc.client.LimitOrdersResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersResponse =
   counters.minter.grpc.client.LimitOrdersResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

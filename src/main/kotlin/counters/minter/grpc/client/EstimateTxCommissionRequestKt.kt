@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun estimateTxCommissionRequest(block: counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.EstimateTxCommissionRequest =
+public inline fun estimateTxCommissionRequest(block: counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateTxCommissionRequest =
   counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl._create(counters.minter.grpc.client.EstimateTxCommissionRequest.newBuilder()).apply { block() }._build()
-object EstimateTxCommissionRequestKt {
+public object EstimateTxCommissionRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.EstimateTxCommissionRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.EstimateTxCommissionRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.EstimateTxCommissionRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object EstimateTxCommissionRequestKt {
     internal fun _build(): counters.minter.grpc.client.EstimateTxCommissionRequest = _builder.build()
 
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      */
-    var tx: kotlin.String
+    public var tx: kotlin.String
       @JvmName("getTx")
       get() = _builder.getTx()
       @JvmName("setTx")
@@ -33,16 +33,16 @@ object EstimateTxCommissionRequestKt {
         _builder.setTx(value)
       }
     /**
-     * <code>string tx = 1;</code>
+     * <code>string tx = 1 [json_name = "tx"];</code>
      */
-    fun clearTx() {
+    public fun clearTx() {
       _builder.clearTx()
     }
 
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -50,13 +50,13 @@ object EstimateTxCommissionRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.EstimateTxCommissionRequest.copy(block: counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.EstimateTxCommissionRequest =
+public inline fun counters.minter.grpc.client.EstimateTxCommissionRequest.copy(block: counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateTxCommissionRequest =
   counters.minter.grpc.client.EstimateTxCommissionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

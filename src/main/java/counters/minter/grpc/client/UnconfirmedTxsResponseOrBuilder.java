@@ -8,42 +8,42 @@ public interface UnconfirmedTxsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 transaction_count = 1;</code>
+   * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
    * @return The transactionCount.
    */
   long getTransactionCount();
 
   /**
-   * <code>uint64 total_transactions = 2;</code>
+   * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
    * @return The totalTransactions.
    */
   long getTotalTransactions();
 
   /**
-   * <code>uint64 total_bytes = 3;</code>
+   * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
    * @return The totalBytes.
    */
   long getTotalBytes();
 
   /**
-   * <code>repeated string transactions = 4;</code>
+   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
    * @return A list containing the transactions.
    */
   java.util.List<java.lang.String>
       getTransactionsList();
   /**
-   * <code>repeated string transactions = 4;</code>
+   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
    * @return The count of transactions.
    */
   int getTransactionsCount();
   /**
-   * <code>repeated string transactions = 4;</code>
+   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
    * @param index The index of the element to return.
    * @return The transactions at the given index.
    */
   java.lang.String getTransactions(int index);
   /**
-   * <code>repeated string transactions = 4;</code>
+   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the transactions at the given index.
    */

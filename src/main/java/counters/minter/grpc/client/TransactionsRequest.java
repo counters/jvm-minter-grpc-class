@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
   public static final int QUERY_FIELD_NUMBER = 1;
   private volatile java.lang.Object query_;
   /**
-   * <code>string query = 1;</code>
+   * <code>string query = 1 [json_name = "query"];</code>
    * @return The query.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string query = 1;</code>
+   * <code>string query = 1 [json_name = "query"];</code>
    * @return The bytes for query.
    */
   @java.lang.Override
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   public static final int PAGE_FIELD_NUMBER = 2;
   private int page_;
   /**
-   * <code>int32 page = 2;</code>
+   * <code>int32 page = 2 [json_name = "page"];</code>
    * @return The page.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
   public static final int PER_PAGE_FIELD_NUMBER = 3;
   private int perPage_;
   /**
-   * <code>int32 per_page = 3;</code>
+   * <code>int32 per_page = 3 [json_name = "perPage"];</code>
    * @return The perPage.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getQueryBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, query_);
     }
     if (page_ != 0) {
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getQueryBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, query_);
     }
     if (page_ != 0) {
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object query_ = "";
     /**
-     * <code>string query = 1;</code>
+     * <code>string query = 1 [json_name = "query"];</code>
      * @return The query.
      */
     public java.lang.String getQuery() {
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1;</code>
+     * <code>string query = 1 [json_name = "query"];</code>
      * @return The bytes for query.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1;</code>
+     * <code>string query = 1 [json_name = "query"];</code>
      * @param value The query to set.
      * @return This builder for chaining.
      */
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1;</code>
+     * <code>string query = 1 [json_name = "query"];</code>
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1;</code>
+     * <code>string query = 1 [json_name = "query"];</code>
      * @param value The bytes for query to set.
      * @return This builder for chaining.
      */
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
 
     private int page_ ;
     /**
-     * <code>int32 page = 2;</code>
+     * <code>int32 page = 2 [json_name = "page"];</code>
      * @return The page.
      */
     @java.lang.Override
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
       return page_;
     }
     /**
-     * <code>int32 page = 2;</code>
+     * <code>int32 page = 2 [json_name = "page"];</code>
      * @param value The page to set.
      * @return This builder for chaining.
      */
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 page = 2;</code>
+     * <code>int32 page = 2 [json_name = "page"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPage() {
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
 
     private int perPage_ ;
     /**
-     * <code>int32 per_page = 3;</code>
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
      * @return The perPage.
      */
     @java.lang.Override
@@ -610,7 +610,7 @@ private static final long serialVersionUID = 0L;
       return perPage_;
     }
     /**
-     * <code>int32 per_page = 3;</code>
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
      * @param value The perPage to set.
      * @return This builder for chaining.
      */
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 per_page = 3;</code>
+     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPerPage() {

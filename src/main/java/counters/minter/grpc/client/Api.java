@@ -24,121 +24,93 @@ public final class Api {
   static {
     java.lang.String[] descriptorData = {
       "\n\tapi.proto\022\006api_pb\032\033google/protobuf/emp" +
-      "ty.proto\032\017resources.proto\032\034google/api/an" +
-      "notations.proto2\335\035\n\nApiService\022V\n\tSubscr" +
-      "ibe\022\030.api_pb.SubscribeRequest\032\031.api_pb.S" +
-      "ubscribeResponse\"\022\202\323\344\223\002\014\022\n/subscribe0\001\022M" +
-      "\n\005Halts\022\024.api_pb.HaltsRequest\032\025.api_pb.H" +
-      "altsResponse\"\027\202\323\344\223\002\021\022\017/halts/{height}\022L\n" +
-      "\007Genesis\022\026.google.protobuf.Empty\032\027.api_p" +
-      "b.GenesisResponse\"\020\202\323\344\223\002\n\022\010/genesis\022Z\n\013M" +
-      "inGasPrice\022\026.google.protobuf.Empty\032\033.api" +
-      "_pb.MinGasPriceResponse\"\026\202\323\344\223\002\020\022\016/min_ga" +
-      "s_price\022M\n\007NetInfo\022\026.google.protobuf.Emp" +
-      "ty\032\027.api_pb.NetInfoResponse\"\021\202\323\344\223\002\013\022\t/ne" +
-      "t_info\022I\n\006Status\022\026.google.protobuf.Empty" +
-      "\032\026.api_pb.StatusResponse\"\017\202\323\344\223\002\t\022\007/statu" +
-      "s\022V\n\007Address\022\026.api_pb.AddressRequest\032\027.a" +
-      "pi_pb.AddressResponse\"\032\202\323\344\223\002\024\022\022/address/" +
-      "{address}\022T\n\tAddresses\022\030.api_pb.Addresse" +
-      "sRequest\032\031.api_pb.AddressesResponse\"\022\202\323\344" +
-      "\223\002\014\022\n/addresses\022M\n\005Block\022\024.api_pb.BlockR" +
-      "equest\032\025.api_pb.BlockResponse\"\027\202\323\344\223\002\021\022\017/" +
-      "block/{height}\022a\n\tCandidate\022\030.api_pb.Can" +
-      "didateRequest\032\031.api_pb.CandidateResponse" +
-      "\"\037\202\323\344\223\002\031\022\027/candidate/{public_key}\022X\n\nCan" +
-      "didates\022\031.api_pb.CandidatesRequest\032\032.api" +
-      "_pb.CandidatesResponse\"\023\202\323\344\223\002\r\022\013/candida" +
-      "tes\022^\n\014CoinInfoById\022\025.api_pb.CoinIdReque" +
-      "st\032\030.api_pb.CoinInfoResponse\"\035\202\323\344\223\002\027\022\025/c" +
-      "oin_info_by_id/{id}\022Z\n\010CoinInfo\022\027.api_pb" +
-      ".CoinInfoRequest\032\030.api_pb.CoinInfoRespon" +
-      "se\"\033\202\323\344\223\002\025\022\023/coin_info/{symbol}\022n\n\017Estim" +
-      "ateCoinBuy\022\036.api_pb.EstimateCoinBuyReque" +
-      "st\032\037.api_pb.EstimateCoinBuyResponse\"\032\202\323\344" +
-      "\223\002\024\022\022/estimate_coin_buy\022r\n\020EstimateCoinS" +
-      "ell\022\037.api_pb.EstimateCoinSellRequest\032 .a" +
-      "pi_pb.EstimateCoinSellResponse\"\033\202\323\344\223\002\025\022\023" +
-      "/estimate_coin_sell\022\177\n\023EstimateCoinSellA" +
-      "ll\022\".api_pb.EstimateCoinSellAllRequest\032#" +
-      ".api_pb.EstimateCoinSellAllResponse\"\037\202\323\344" +
-      "\223\002\031\022\027/estimate_coin_sell_all\022\207\001\n\024Estimat" +
-      "eTxCommission\022#.api_pb.EstimateTxCommiss" +
-      "ionRequest\032$.api_pb.EstimateTxCommission" +
-      "Response\"$\202\323\344\223\002\036\022\034/estimate_tx_commissio" +
-      "n/{tx}\022Q\n\006Events\022\025.api_pb.EventsRequest\032" +
-      "\026.api_pb.EventsResponse\"\030\202\323\344\223\002\022\022\020/events" +
-      "/{height}\022^\n\013MaxGasPrice\022\032.api_pb.MaxGas" +
-      "PriceRequest\032\033.api_pb.MaxGasPriceRespons" +
-      "e\"\026\202\323\344\223\002\020\022\016/max_gas_price\022n\n\014MissedBlock" +
-      "s\022\033.api_pb.MissedBlocksRequest\032\034.api_pb." +
-      "MissedBlocksResponse\"#\202\323\344\223\002\035\022\033/missed_bl" +
-      "ocks/{public_key}\022\212\001\n\017SendTransaction\022\036." +
-      "api_pb.SendTransactionRequest\032\037.api_pb.S" +
-      "endTransactionResponse\"6\202\323\344\223\0020\022\026/send_tr" +
-      "ansaction/{tx}Z\026\"\021/send_transaction:\001*\022c" +
-      "\n\013Transaction\022\032.api_pb.TransactionReques" +
-      "t\032\033.api_pb.TransactionResponse\"\033\202\323\344\223\002\025\022\023" +
-      "/transaction/{hash}\022`\n\014Transactions\022\033.ap" +
-      "i_pb.TransactionsRequest\032\034.api_pb.Transa" +
-      "ctionsResponse\"\025\202\323\344\223\002\017\022\r/transactions\022i\n" +
-      "\016UnconfirmedTxs\022\035.api_pb.UnconfirmedTxsR" +
-      "equest\032\036.api_pb.UnconfirmedTxsResponse\"\030" +
-      "\202\323\344\223\002\022\022\020/unconfirmed_txs\022X\n\nValidators\022\031" +
-      ".api_pb.ValidatorsRequest\032\032.api_pb.Valid" +
-      "atorsResponse\"\023\202\323\344\223\002\r\022\013/validators\022R\n\006Fr" +
-      "ozen\022\025.api_pb.FrozenRequest\032\026.api_pb.Fro" +
-      "zenResponse\"\031\202\323\344\223\002\023\022\021/frozen/{address}\022Z" +
-      "\n\010WaitList\022\027.api_pb.WaitListRequest\032\030.ap" +
-      "i_pb.WaitListResponse\"\033\202\323\344\223\002\025\022\023/waitlist" +
-      "/{address}\022O\n\tTestBlock\022\026.google.protobu" +
-      "f.Empty\032\025.api_pb.BlockResponse\"\023\202\323\344\223\002\r\022\013" +
-      "/test/block\022a\n\010SwapPool\022\027.api_pb.SwapPoo" +
-      "lRequest\032\030.api_pb.SwapPoolResponse\"\"\202\323\344\223" +
-      "\002\034\022\032/swap_pool/{coin0}/{coin1}\022|\n\020SwapPo" +
-      "olProvider\022\037.api_pb.SwapPoolProviderRequ" +
-      "est\032\030.api_pb.SwapPoolResponse\"-\202\323\344\223\002\'\022%/" +
-      "swap_pool/{coin0}/{coin1}/{provider}\022n\n\017" +
-      "PriceCommission\022\036.api_pb.PriceCommission" +
-      "Request\032\037.api_pb.PriceCommissionResponse" +
-      "\"\032\202\323\344\223\002\024\022\022/price_commissions\022i\n\016VersionN" +
-      "etwork\022\035.api_pb.VersionNetworkRequest\032\036." +
-      "api_pb.VersionNetworkResponse\"\030\202\323\344\223\002\022\022\020/" +
-      "version_network\022~\n\017CommissionVotes\022\036.api" +
-      "_pb.CommissionVotesRequest\032\037.api_pb.Comm" +
-      "issionVotesResponse\"*\202\323\344\223\002$\022\"/commission" +
-      "_votes/{target_version}\022n\n\013UpdateVotes\022\032" +
-      ".api_pb.UpdateVotesRequest\032\033.api_pb.Upda" +
-      "teVotesResponse\"&\202\323\344\223\002 \022\036/update_votes/{" +
-      "target_version}\022H\n\006Blocks\022\025.api_pb.Block" +
-      "sRequest\032\026.api_pb.BlocksResponse\"\017\202\323\344\223\002\t" +
-      "\022\007/blocks\022d\n\nLimitOrder\022\031.api_pb.LimitOr" +
-      "derRequest\032\032.api_pb.LimitOrderResponse\"\037" +
-      "\202\323\344\223\002\031\022\027/limit_order/{order_id}\022\206\001\n\021Limi" +
-      "tOrdersOfPool\022 .api_pb.LimitOrdersOfPool" +
-      "Request\032!.api_pb.LimitOrdersOfPoolRespon" +
-      "se\",\202\323\344\223\002&\022$/limit_orders/{sell_coin}/{b" +
-      "uy_coin}\022]\n\013LimitOrders\022\032.api_pb.LimitOr" +
-      "dersRequest\032\033.api_pb.LimitOrdersResponse" +
-      "\"\025\202\323\344\223\002\017\022\r/limit_ordersBV\n\033counters.mint" +
-      "er.grpc.clientP\001Z5github.com/MinterTeam/" +
-      "node-grpc-gateway/gen/go;api_pbb\006proto3"
+      "ty.proto\032\017resources.proto2\246\027\n\nApiService" +
+      "\022D\n\tSubscribe\022\030.api_pb.SubscribeRequest\032" +
+      "\031.api_pb.SubscribeResponse\"\0000\001\0226\n\005Halts\022" +
+      "\024.api_pb.HaltsRequest\032\025.api_pb.HaltsResp" +
+      "onse\"\000\022<\n\007Genesis\022\026.google.protobuf.Empt" +
+      "y\032\027.api_pb.GenesisResponse\"\000\022D\n\013MinGasPr" +
+      "ice\022\026.google.protobuf.Empty\032\033.api_pb.Min" +
+      "GasPriceResponse\"\000\022<\n\007NetInfo\022\026.google.p" +
+      "rotobuf.Empty\032\027.api_pb.NetInfoResponse\"\000" +
+      "\022:\n\006Status\022\026.google.protobuf.Empty\032\026.api" +
+      "_pb.StatusResponse\"\000\022<\n\007Address\022\026.api_pb" +
+      ".AddressRequest\032\027.api_pb.AddressResponse" +
+      "\"\000\022B\n\tAddresses\022\030.api_pb.AddressesReques" +
+      "t\032\031.api_pb.AddressesResponse\"\000\0226\n\005Block\022" +
+      "\024.api_pb.BlockRequest\032\025.api_pb.BlockResp" +
+      "onse\"\000\022B\n\tCandidate\022\030.api_pb.CandidateRe" +
+      "quest\032\031.api_pb.CandidateResponse\"\000\022E\n\nCa" +
+      "ndidates\022\031.api_pb.CandidatesRequest\032\032.ap" +
+      "i_pb.CandidatesResponse\"\000\022A\n\014CoinInfoByI" +
+      "d\022\025.api_pb.CoinIdRequest\032\030.api_pb.CoinIn" +
+      "foResponse\"\000\022?\n\010CoinInfo\022\027.api_pb.CoinIn" +
+      "foRequest\032\030.api_pb.CoinInfoResponse\"\000\022T\n" +
+      "\017EstimateCoinBuy\022\036.api_pb.EstimateCoinBu" +
+      "yRequest\032\037.api_pb.EstimateCoinBuyRespons" +
+      "e\"\000\022W\n\020EstimateCoinSell\022\037.api_pb.Estimat" +
+      "eCoinSellRequest\032 .api_pb.EstimateCoinSe" +
+      "llResponse\"\000\022`\n\023EstimateCoinSellAll\022\".ap" +
+      "i_pb.EstimateCoinSellAllRequest\032#.api_pb" +
+      ".EstimateCoinSellAllResponse\"\000\022c\n\024Estima" +
+      "teTxCommission\022#.api_pb.EstimateTxCommis" +
+      "sionRequest\032$.api_pb.EstimateTxCommissio" +
+      "nResponse\"\000\0229\n\006Events\022\025.api_pb.EventsReq" +
+      "uest\032\026.api_pb.EventsResponse\"\000\022H\n\013MaxGas" +
+      "Price\022\032.api_pb.MaxGasPriceRequest\032\033.api_" +
+      "pb.MaxGasPriceResponse\"\000\022K\n\014MissedBlocks" +
+      "\022\033.api_pb.MissedBlocksRequest\032\034.api_pb.M" +
+      "issedBlocksResponse\"\000\022T\n\017SendTransaction" +
+      "\022\036.api_pb.SendTransactionRequest\032\037.api_p" +
+      "b.SendTransactionResponse\"\000\022H\n\013Transacti" +
+      "on\022\032.api_pb.TransactionRequest\032\033.api_pb." +
+      "TransactionResponse\"\000\022K\n\014Transactions\022\033." +
+      "api_pb.TransactionsRequest\032\034.api_pb.Tran" +
+      "sactionsResponse\"\000\022Q\n\016UnconfirmedTxs\022\035.a" +
+      "pi_pb.UnconfirmedTxsRequest\032\036.api_pb.Unc" +
+      "onfirmedTxsResponse\"\000\022E\n\nValidators\022\031.ap" +
+      "i_pb.ValidatorsRequest\032\032.api_pb.Validato" +
+      "rsResponse\"\000\0229\n\006Frozen\022\025.api_pb.FrozenRe" +
+      "quest\032\026.api_pb.FrozenResponse\"\000\022?\n\tFroze" +
+      "nAll\022\030.api_pb.FrozenAllRequest\032\026.api_pb." +
+      "FrozenResponse\"\000\022?\n\010WaitList\022\027.api_pb.Wa" +
+      "itListRequest\032\030.api_pb.WaitListResponse\"" +
+      "\000\022<\n\tTestBlock\022\026.google.protobuf.Empty\032\025" +
+      ".api_pb.BlockResponse\"\000\022?\n\010SwapPool\022\027.ap" +
+      "i_pb.SwapPoolRequest\032\030.api_pb.SwapPoolRe" +
+      "sponse\"\000\022B\n\tSwapPools\022\030.api_pb.SwapPools" +
+      "Request\032\031.api_pb.SwapPoolsResponse\"\000\022O\n\020" +
+      "SwapPoolProvider\022\037.api_pb.SwapPoolProvid" +
+      "erRequest\032\030.api_pb.SwapPoolResponse\"\000\022T\n" +
+      "\017PriceCommission\022\036.api_pb.PriceCommissio" +
+      "nRequest\032\037.api_pb.PriceCommissionRespons" +
+      "e\"\000\022Q\n\016VersionNetwork\022\035.api_pb.VersionNe" +
+      "tworkRequest\032\036.api_pb.VersionNetworkResp" +
+      "onse\"\000\022T\n\017CommissionVotes\022\036.api_pb.Commi" +
+      "ssionVotesRequest\032\037.api_pb.CommissionVot" +
+      "esResponse\"\000\022H\n\013UpdateVotes\022\032.api_pb.Upd" +
+      "ateVotesRequest\032\033.api_pb.UpdateVotesResp" +
+      "onse\"\000\0229\n\006Blocks\022\025.api_pb.BlocksRequest\032" +
+      "\026.api_pb.BlocksResponse\"\000\022E\n\nLimitOrder\022" +
+      "\031.api_pb.LimitOrderRequest\032\032.api_pb.Limi" +
+      "tOrderResponse\"\000\022Z\n\021LimitOrdersOfPool\022 ." +
+      "api_pb.LimitOrdersOfPoolRequest\032!.api_pb" +
+      ".LimitOrdersOfPoolResponse\"\000\022H\n\013LimitOrd" +
+      "ers\022\032.api_pb.LimitOrdersRequest\032\033.api_pb" +
+      ".LimitOrdersResponse\"\000\022B\n\tBestTrade\022\030.ap" +
+      "i_pb.BestTradeRequest\032\031.api_pb.BestTrade" +
+      "Response\"\000BV\n\033counters.minter.grpc.clien" +
+      "tP\001Z5github.com/MinterTeam/node-grpc-gat" +
+      "eway/gen/go;api_pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.EmptyProto.getDescriptor(),
           counters.minter.grpc.client.Resources.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.EmptyProto.getDescriptor();
     counters.minter.grpc.client.Resources.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

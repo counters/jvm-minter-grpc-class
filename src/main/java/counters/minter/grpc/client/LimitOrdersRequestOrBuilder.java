@@ -8,24 +8,24 @@ public interface LimitOrdersRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated uint64 ids = 1;</code>
+   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
    * @return A list containing the ids.
    */
   java.util.List<java.lang.Long> getIdsList();
   /**
-   * <code>repeated uint64 ids = 1;</code>
+   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
    * @return The count of ids.
    */
   int getIdsCount();
   /**
-   * <code>repeated uint64 ids = 1;</code>
+   * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
    * @param index The index of the element to return.
    * @return The ids at the given index.
    */
   long getIds(int index);
 
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

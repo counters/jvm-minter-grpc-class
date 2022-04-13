@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun unconfirmedTxsResponse(block: counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.UnconfirmedTxsResponse =
+public inline fun unconfirmedTxsResponse(block: counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsResponse =
   counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl._create(counters.minter.grpc.client.UnconfirmedTxsResponse.newBuilder()).apply { block() }._build()
-object UnconfirmedTxsResponseKt {
+public object UnconfirmedTxsResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.UnconfirmedTxsResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.UnconfirmedTxsResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.UnconfirmedTxsResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object UnconfirmedTxsResponseKt {
     internal fun _build(): counters.minter.grpc.client.UnconfirmedTxsResponse = _builder.build()
 
     /**
-     * <code>uint64 transaction_count = 1;</code>
+     * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
      */
-    var transactionCount: kotlin.Long
+    public var transactionCount: kotlin.Long
       @JvmName("getTransactionCount")
       get() = _builder.getTransactionCount()
       @JvmName("setTransactionCount")
@@ -33,16 +33,16 @@ object UnconfirmedTxsResponseKt {
         _builder.setTransactionCount(value)
       }
     /**
-     * <code>uint64 transaction_count = 1;</code>
+     * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
      */
-    fun clearTransactionCount() {
+    public fun clearTransactionCount() {
       _builder.clearTransactionCount()
     }
 
     /**
-     * <code>uint64 total_transactions = 2;</code>
+     * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
      */
-    var totalTransactions: kotlin.Long
+    public var totalTransactions: kotlin.Long
       @JvmName("getTotalTransactions")
       get() = _builder.getTotalTransactions()
       @JvmName("setTotalTransactions")
@@ -50,16 +50,16 @@ object UnconfirmedTxsResponseKt {
         _builder.setTotalTransactions(value)
       }
     /**
-     * <code>uint64 total_transactions = 2;</code>
+     * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
      */
-    fun clearTotalTransactions() {
+    public fun clearTotalTransactions() {
       _builder.clearTotalTransactions()
     }
 
     /**
-     * <code>uint64 total_bytes = 3;</code>
+     * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
      */
-    var totalBytes: kotlin.Long
+    public var totalBytes: kotlin.Long
       @JvmName("getTotalBytes")
       get() = _builder.getTotalBytes()
       @JvmName("setTotalBytes")
@@ -67,9 +67,9 @@ object UnconfirmedTxsResponseKt {
         _builder.setTotalBytes(value)
       }
     /**
-     * <code>uint64 total_bytes = 3;</code>
+     * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
      */
-    fun clearTotalBytes() {
+    public fun clearTotalBytes() {
       _builder.clearTotalBytes()
     }
 
@@ -78,70 +78,72 @@ object UnconfirmedTxsResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class TransactionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class TransactionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @return A list containing the transactions.
      */
-    val transactions: com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>
-      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public val transactions: com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>
+      @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getTransactionsList()
       )
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @param value The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addTransactions")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.add(value: kotlin.String) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.add(value: kotlin.String) {
       _builder.addTransactions(value)
     }
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @param value The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignTransactions")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.plusAssign(value: kotlin.String) {
-      _builder.addTransactions(value)
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.plusAssign(value: kotlin.String) {
+      add(value)
     }
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @param values The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllTransactions")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllTransactions(values)
     }
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @param values The transactions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllTransactions")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
-      _builder.addAllTransactions(values)
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
     }
     /**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      * @param index The index to set the value at.
      * @param value The transactions to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setTransactions")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setTransactions(index, value)
     }/**
-     * <code>repeated string transactions = 4;</code>
+     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearTransactions")
-    fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, TransactionsProxy>.clear() {
       _builder.clearTransactions()
     }}
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.UnconfirmedTxsResponse.copy(block: counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.UnconfirmedTxsResponse =
+public inline fun counters.minter.grpc.client.UnconfirmedTxsResponse.copy(block: counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsResponse =
   counters.minter.grpc.client.UnconfirmedTxsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

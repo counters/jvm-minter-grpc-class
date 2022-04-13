@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun delegateData(block: counters.minter.grpc.client.DelegateDataKt.Dsl.() -> Unit): counters.minter.grpc.client.DelegateData =
+public inline fun delegateData(block: counters.minter.grpc.client.DelegateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DelegateData =
   counters.minter.grpc.client.DelegateDataKt.Dsl._create(counters.minter.grpc.client.DelegateData.newBuilder()).apply { block() }._build()
-object DelegateDataKt {
+public object DelegateDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.DelegateData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.DelegateData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.DelegateData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object DelegateDataKt {
     internal fun _build(): counters.minter.grpc.client.DelegateData = _builder.build()
 
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      */
-    var pubKey: kotlin.String
+    public var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -33,16 +33,16 @@ object DelegateDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      */
-    fun clearPubKey() {
+    public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 2;</code>
+     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
      */
-    var coin: counters.minter.grpc.client.Coin
+    public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -50,23 +50,23 @@ object DelegateDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 2;</code>
+     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
      */
-    fun clearCoin() {
+    public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 2;</code>
+     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
      * @return Whether the coin field is set.
      */
-    fun hasCoin(): kotlin.Boolean {
+    public fun hasCoin(): kotlin.Boolean {
       return _builder.hasCoin()
     }
 
     /**
-     * <code>string value = 3;</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      */
-    var value: kotlin.String
+    public var value: kotlin.String
       @JvmName("getValue")
       get() = _builder.getValue()
       @JvmName("setValue")
@@ -74,13 +74,13 @@ object DelegateDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 3;</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      */
-    fun clearValue() {
+    public fun clearValue() {
       _builder.clearValue()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.DelegateData.copy(block: counters.minter.grpc.client.DelegateDataKt.Dsl.() -> Unit): counters.minter.grpc.client.DelegateData =
+public inline fun counters.minter.grpc.client.DelegateData.copy(block: counters.minter.grpc.client.DelegateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DelegateData =
   counters.minter.grpc.client.DelegateDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

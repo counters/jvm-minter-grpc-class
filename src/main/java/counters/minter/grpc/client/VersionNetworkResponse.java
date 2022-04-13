@@ -106,19 +106,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return The height.
      */
     long getHeight();
@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
     public static final int HEIGHT_FIELD_NUMBER = 2;
     private long height_;
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (height_ != 0L) {
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (height_ != 0L) {
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -599,7 +599,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
 
       private long height_ ;
       /**
-       * <code>uint64 height = 2;</code>
+       * <code>uint64 height = 2 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
         return height_;
       }
       /**
-       * <code>uint64 height = 2;</code>
+       * <code>uint64 height = 2 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 height = 2;</code>
+       * <code>uint64 height = 2 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
   public static final int CURRENT_FIELD_NUMBER = 1;
   private volatile java.lang.Object current_;
   /**
-   * <code>string current = 1;</code>
+   * <code>string current = 1 [json_name = "current"];</code>
    * @return The current.
    */
   @java.lang.Override
@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string current = 1;</code>
+   * <code>string current = 1 [json_name = "current"];</code>
    * @return The bytes for current.
    */
   @java.lang.Override
@@ -781,14 +781,14 @@ private static final long serialVersionUID = 0L;
   public static final int VERSIONS_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.VersionNetworkResponse.Version> versions_;
   /**
-   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.VersionNetworkResponse.Version> getVersionsList() {
     return versions_;
   }
   /**
-   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.VersionNetworkResponse.VersionOrBuilder> 
@@ -796,21 +796,21 @@ private static final long serialVersionUID = 0L;
     return versions_;
   }
   /**
-   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
    */
   @java.lang.Override
   public int getVersionsCount() {
     return versions_.size();
   }
   /**
-   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.VersionNetworkResponse.Version getVersions(int index) {
     return versions_.get(index);
   }
   /**
-   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+   * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.VersionNetworkResponse.VersionOrBuilder getVersionsOrBuilder(
@@ -832,7 +832,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCurrentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(current_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, current_);
     }
     for (int i = 0; i < versions_.size(); i++) {
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCurrentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(current_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, current_);
     }
     for (int i = 0; i < versions_.size(); i++) {
@@ -1179,7 +1179,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object current_ = "";
     /**
-     * <code>string current = 1;</code>
+     * <code>string current = 1 [json_name = "current"];</code>
      * @return The current.
      */
     public java.lang.String getCurrent() {
@@ -1195,7 +1195,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string current = 1;</code>
+     * <code>string current = 1 [json_name = "current"];</code>
      * @return The bytes for current.
      */
     public com.google.protobuf.ByteString
@@ -1212,7 +1212,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string current = 1;</code>
+     * <code>string current = 1 [json_name = "current"];</code>
      * @param value The current to set.
      * @return This builder for chaining.
      */
@@ -1227,7 +1227,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string current = 1;</code>
+     * <code>string current = 1 [json_name = "current"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrent() {
@@ -1237,7 +1237,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string current = 1;</code>
+     * <code>string current = 1 [json_name = "current"];</code>
      * @param value The bytes for current to set.
      * @return This builder for chaining.
      */
@@ -1266,7 +1266,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.VersionNetworkResponse.Version, counters.minter.grpc.client.VersionNetworkResponse.Version.Builder, counters.minter.grpc.client.VersionNetworkResponse.VersionOrBuilder> versionsBuilder_;
 
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public java.util.List<counters.minter.grpc.client.VersionNetworkResponse.Version> getVersionsList() {
       if (versionsBuilder_ == null) {
@@ -1276,7 +1276,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public int getVersionsCount() {
       if (versionsBuilder_ == null) {
@@ -1286,7 +1286,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public counters.minter.grpc.client.VersionNetworkResponse.Version getVersions(int index) {
       if (versionsBuilder_ == null) {
@@ -1296,7 +1296,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder setVersions(
         int index, counters.minter.grpc.client.VersionNetworkResponse.Version value) {
@@ -1313,7 +1313,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder setVersions(
         int index, counters.minter.grpc.client.VersionNetworkResponse.Version.Builder builderForValue) {
@@ -1327,7 +1327,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder addVersions(counters.minter.grpc.client.VersionNetworkResponse.Version value) {
       if (versionsBuilder_ == null) {
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder addVersions(
         int index, counters.minter.grpc.client.VersionNetworkResponse.Version value) {
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder addVersions(
         counters.minter.grpc.client.VersionNetworkResponse.Version.Builder builderForValue) {
@@ -1374,7 +1374,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder addVersions(
         int index, counters.minter.grpc.client.VersionNetworkResponse.Version.Builder builderForValue) {
@@ -1388,7 +1388,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder addAllVersions(
         java.lang.Iterable<? extends counters.minter.grpc.client.VersionNetworkResponse.Version> values) {
@@ -1403,7 +1403,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder clearVersions() {
       if (versionsBuilder_ == null) {
@@ -1416,7 +1416,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public Builder removeVersions(int index) {
       if (versionsBuilder_ == null) {
@@ -1429,14 +1429,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public counters.minter.grpc.client.VersionNetworkResponse.Version.Builder getVersionsBuilder(
         int index) {
       return getVersionsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public counters.minter.grpc.client.VersionNetworkResponse.VersionOrBuilder getVersionsOrBuilder(
         int index) {
@@ -1446,7 +1446,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.VersionNetworkResponse.VersionOrBuilder> 
          getVersionsOrBuilderList() {
@@ -1457,14 +1457,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public counters.minter.grpc.client.VersionNetworkResponse.Version.Builder addVersionsBuilder() {
       return getVersionsFieldBuilder().addBuilder(
           counters.minter.grpc.client.VersionNetworkResponse.Version.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public counters.minter.grpc.client.VersionNetworkResponse.Version.Builder addVersionsBuilder(
         int index) {
@@ -1472,7 +1472,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.VersionNetworkResponse.Version.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
      */
     public java.util.List<counters.minter.grpc.client.VersionNetworkResponse.Version.Builder> 
          getVersionsBuilderList() {

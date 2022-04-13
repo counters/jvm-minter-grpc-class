@@ -20,6 +20,16 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_Coin_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_BestTradeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_BestTradeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_BestTradeResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_BestTradeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_BlocksRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -115,6 +125,26 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_PriceCommissionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_SwapPoolsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_SwapPoolsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_SwapPoolsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_SwapPoolsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_SwapPoolsResponse_SwapPool_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_LimitOrder_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_SwapPoolsResponse_SwapPool_LimitOrder_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_SwapPoolRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -200,6 +230,11 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_GenesisResponse_ConsensusParams_Validator_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_ConsensusParams_Version_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_GenesisResponse_AppState_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -219,6 +254,11 @@ public final class Resources {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_GenesisResponse_AppState_Candidate_Stake_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_GenesisResponse_AppState_Coin_descriptor;
   static final 
@@ -260,6 +300,11 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_GenesisResponse_AppState_Pool_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_AppState_Pool_Order_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_GenesisResponse_AppState_Commission_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -269,6 +314,21 @@ public final class Resources {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_GenesisResponse_AppState_CommissionVote_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_AppState_UpdateVote_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_AppState_Version_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_AppState_Version_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_GenesisResponse_AppState_RewardPrice_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_MinGasPriceResponse_descriptor;
   static final 
@@ -540,6 +600,11 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_FrozenRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_FrozenAllRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_FrozenAllRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_pb_FrozenResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -575,395 +640,600 @@ public final class Resources {
     java.lang.String[] descriptorData = {
       "\n\017resources.proto\022\006api_pb\032\034google/protob" +
       "uf/struct.proto\032\031google/protobuf/any.pro" +
-      "to\032\036google/protobuf/wrappers.proto\"\"\n\004Co" +
-      "in\022\n\n\002id\030\001 \001(\004\022\016\n\006symbol\030\002 \001(\t\"\177\n\rBlocks" +
-      "Request\022\023\n\013from_height\030\001 \001(\004\022\021\n\tto_heigh" +
-      "t\030\002 \001(\004\022\"\n\006fields\030\003 \003(\0162\022.api_pb.BlockFi" +
-      "eld\022\022\n\nfailed_txs\030\004 \001(\010\022\016\n\006events\030\005 \001(\010\"" +
-      "7\n\016BlocksResponse\022%\n\006blocks\030\001 \003(\0132\025.api_" +
-      "pb.BlockResponse\"@\n\026CommissionVotesReque" +
-      "st\022\026\n\016target_version\030\001 \001(\004\022\016\n\006height\030\002 \001" +
-      "(\004\"\233\001\n\027CommissionVotesResponse\0223\n\005votes\030" +
-      "\001 \003(\0132$.api_pb.CommissionVotesResponse.V" +
-      "ote\032K\n\004Vote\022.\n\005price\030\002 \001(\0132\037.api_pb.Pric" +
-      "eCommissionResponse\022\023\n\013public_keys\030\001 \003(\t" +
-      "\"5\n\021LimitOrderRequest\022\020\n\010order_id\030\001 \001(\004\022" +
-      "\016\n\006height\030\002 \001(\004\"\264\001\n\022LimitOrderResponse\022\n" +
-      "\n\002id\030\007 \001(\004\022\037\n\tcoin_sell\030\001 \001(\0132\014.api_pb.C" +
-      "oin\022\036\n\010coin_buy\030\002 \001(\0132\014.api_pb.Coin\022\021\n\tw" +
-      "ant_sell\030\003 \001(\t\022\020\n\010want_buy\030\004 \001(\t\022\r\n\005pric" +
-      "e\030\010 \001(\t\022\r\n\005owner\030\005 \001(\t\022\016\n\006height\030\006 \001(\004\"^" +
-      "\n\030LimitOrdersOfPoolRequest\022\021\n\tsell_coin\030" +
-      "\001 \001(\004\022\020\n\010buy_coin\030\002 \001(\004\022\r\n\005limit\030\003 \001(\005\022\016" +
-      "\n\006height\030\004 \001(\004\"[\n\031LimitOrdersOfPoolRespo" +
-      "nse\022\022\n\npool_price\030\002 \001(\t\022*\n\006orders\030\001 \003(\0132" +
-      "\032.api_pb.LimitOrderResponse\"1\n\022LimitOrde" +
-      "rsRequest\022\013\n\003ids\030\001 \003(\004\022\016\n\006height\030\002 \001(\004\"A" +
-      "\n\023LimitOrdersResponse\022*\n\006orders\030\001 \003(\0132\032." +
-      "api_pb.LimitOrderResponse\"<\n\022UpdateVotes" +
-      "Request\022\026\n\016target_version\030\001 \001(\004\022\016\n\006heigh" +
-      "t\030\002 \001(\004\"t\n\023UpdateVotesResponse\022/\n\005votes\030" +
-      "\001 \003(\0132 .api_pb.UpdateVotesResponse.Vote\032" +
-      ",\n\004Vote\022\017\n\007version\030\002 \001(\t\022\023\n\013public_keys\030" +
-      "\001 \003(\t\"\027\n\025VersionNetworkRequest\"\214\001\n\026Versi" +
-      "onNetworkResponse\022\017\n\007current\030\001 \001(\t\0228\n\010ve" +
-      "rsions\030\003 \003(\0132&.api_pb.VersionNetworkResp" +
-      "onse.Version\032\'\n\007Version\022\014\n\004name\030\001 \001(\t\022\016\n" +
-      "\006height\030\002 \001(\004\"(\n\026PriceCommissionRequest\022" +
-      "\016\n\006height\030\001 \001(\004\"\354\010\n\027PriceCommissionRespo" +
-      "nse\022\032\n\004coin\030\003 \001(\0132\014.api_pb.Coin\022\024\n\014paylo" +
-      "ad_byte\030\004 \001(\t\022\014\n\004send\030\005 \001(\t\022\022\n\nbuy_banco" +
-      "r\030& \001(\t\022\023\n\013sell_bancor\030\' \001(\t\022\027\n\017sell_all" +
-      "_bancor\030( \001(\t\022\025\n\rbuy_pool_base\030) \001(\t\022\026\n\016" +
-      "buy_pool_delta\0305 \001(\t\022\026\n\016sell_pool_base\030*" +
-      " \001(\t\022\027\n\017sell_pool_delta\0306 \001(\t\022\032\n\022sell_al" +
-      "l_pool_base\030+ \001(\t\022\033\n\023sell_all_pool_delta" +
-      "\0307 \001(\t\022\026\n\016create_ticker3\030\007 \001(\t\022\026\n\016create" +
-      "_ticker4\030\010 \001(\t\022\026\n\016create_ticker5\030\t \001(\t\022\026" +
-      "\n\016create_ticker6\030\n \001(\t\022\031\n\021create_ticker7" +
-      "_10\030\013 \001(\t\022\023\n\013create_coin\030\" \001(\t\022\024\n\014create" +
-      "_token\030# \001(\t\022\025\n\rrecreate_coin\030$ \001(\t\022\026\n\016r" +
-      "ecreate_token\030% \001(\t\022\031\n\021declare_candidacy" +
-      "\030\r \001(\t\022\020\n\010delegate\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t" +
-      "\022\024\n\014redeem_check\030\020 \001(\t\022\030\n\020set_candidate_" +
-      "on\030, \001(\t\022\031\n\021set_candidate_off\030- \001(\t\022\027\n\017c" +
-      "reate_multisig\030\022 \001(\t\022\026\n\016multisend_base\0303" +
-      " \001(\t\022\027\n\017multisend_delta\0304 \001(\t\022\026\n\016edit_ca" +
-      "ndidate\030\024 \001(\t\022\026\n\016set_halt_block\030\025 \001(\t\022\031\n" +
-      "\021edit_ticker_owner\030\026 \001(\t\022\025\n\redit_multisi" +
-      "g\030\027 \001(\t\022!\n\031edit_candidate_public_key\030\031 \001" +
-      "(\t\022\030\n\020create_swap_pool\0300 \001(\t\022\025\n\radd_liqu" +
-      "idity\0301 \001(\t\022\030\n\020remove_liquidity\0302 \001(\t\022!\n" +
-      "\031edit_candidate_commission\030\034 \001(\t\022\022\n\nmint" +
-      "_token\030. \001(\t\022\022\n\nburn_token\030/ \001(\t\022\027\n\017vote" +
-      "_commission\030\037 \001(\t\022\023\n\013vote_update\030  \001(\t\022\021" +
-      "\n\tfailed_tx\0308 \001(\t\022\027\n\017add_limit_order\0309 \001" +
-      "(\t\022\032\n\022remove_limit_order\030: \001(\t\"?\n\017SwapPo" +
-      "olRequest\022\r\n\005coin0\030\001 \001(\004\022\r\n\005coin1\030\002 \001(\004\022" +
-      "\016\n\006height\030\004 \001(\004\"V\n\020SwapPoolResponse\022\r\n\005p" +
-      "rice\030\004 \001(\t\022\017\n\007amount0\030\001 \001(\t\022\017\n\007amount1\030\002" +
-      " \001(\t\022\021\n\tliquidity\030\003 \001(\t\"I\n\027SwapPoolProvi" +
-      "derRequest\022\r\n\005coin0\030\001 \001(\004\022\r\n\005coin1\030\002 \001(\004" +
-      "\022\020\n\010provider\030\003 \001(\t\"\277\002\n\010NodeInfo\022:\n\020proto" +
-      "col_version\030\010 \001(\0132 .api_pb.NodeInfo.Prot" +
-      "ocolVersion\022\n\n\002id\030\001 \001(\t\022\023\n\013listen_addr\030\002" +
-      " \001(\t\022\017\n\007network\030\003 \001(\t\022\017\n\007version\030\004 \001(\t\022\020" +
-      "\n\010channels\030\005 \001(\t\022\017\n\007moniker\030\006 \001(\t\022%\n\005oth" +
-      "er\030\007 \001(\0132\026.api_pb.NodeInfo.Other\032:\n\017Prot" +
-      "ocolVersion\022\013\n\003p2p\030\003 \001(\004\022\r\n\005block\030\001 \001(\004\022" +
-      "\013\n\003app\030\002 \001(\004\032.\n\005Other\022\020\n\010tx_index\030\002 \001(\t\022" +
-      "\023\n\013rpc_address\030\001 \001(\t\"\276\007\n\017NetInfoResponse" +
-      "\022\021\n\tlistening\030\004 \001(\010\022\021\n\tlisteners\030\001 \003(\t\022\023" +
-      "\n\013count_peers\030\002 \001(\003\022+\n\005peers\030\003 \003(\0132\034.api" +
-      "_pb.NetInfoResponse.Peer\032\302\006\n\004Peer\0229\n\023lat" +
-      "est_block_height\030\005 \001(\0132\034.google.protobuf" +
-      ".UInt64Value\022#\n\tnode_info\030\004 \001(\0132\020.api_pb" +
-      ".NodeInfo\022\023\n\013is_outbound\030\001 \001(\010\022H\n\021connec" +
-      "tion_status\030\002 \001(\0132-.api_pb.NetInfoRespon" +
-      "se.Peer.ConnectionStatus\022\021\n\tremote_ip\030\003 " +
-      "\001(\t\032\347\004\n\020ConnectionStatus\022\020\n\010duration\030\004 \001" +
-      "(\004\022J\n\013SendMonitor\030\001 \001(\01325.api_pb.NetInfo" +
-      "Response.Peer.ConnectionStatus.Monitor\022J" +
-      "\n\013RecvMonitor\030\002 \001(\01325.api_pb.NetInfoResp" +
-      "onse.Peer.ConnectionStatus.Monitor\022G\n\010ch" +
-      "annels\030\003 \003(\01325.api_pb.NetInfoResponse.Pe" +
-      "er.ConnectionStatus.Channel\032\351\001\n\007Monitor\022" +
-      "\016\n\006active\030\r \001(\010\022\r\n\005start\030\001 \001(\t\022\020\n\010durati" +
-      "on\030\002 \001(\003\022\014\n\004idle\030\003 \001(\003\022\r\n\005bytes\030\004 \001(\003\022\017\n" +
-      "\007samples\030\005 \001(\003\022\021\n\tinst_rate\030\006 \001(\003\022\020\n\010cur" +
-      "_rate\030\007 \001(\003\022\020\n\010avg_rate\030\010 \001(\003\022\021\n\tpeak_ra" +
-      "te\030\t \001(\003\022\021\n\tbytes_rem\030\n \001(\003\022\020\n\010time_rem\030" +
-      "\013 \001(\003\022\020\n\010progress\030\014 \001(\004\032t\n\007Channel\022\n\n\002id" +
-      "\030\005 \001(\003\022\033\n\023send_queue_capacity\030\001 \001(\003\022\027\n\017s" +
-      "end_queue_size\030\002 \001(\003\022\020\n\010priority\030\003 \001(\003\022\025" +
-      "\n\rrecently_sent\030\004 \001(\003\"\262\002\n\016StatusResponse" +
-      "\022\017\n\007version\030\010 \001(\t\022\017\n\007network\030\013 \001(\t\022\026\n\016in" +
-      "itial_height\030\014 \001(\004\022\031\n\021latest_block_hash\030" +
-      "\001 \001(\t\022\027\n\017latest_app_hash\030\002 \001(\t\022\033\n\023latest" +
-      "_block_height\030\003 \001(\004\022\031\n\021latest_block_time" +
-      "\030\004 \001(\t\022\030\n\020keep_last_states\030\005 \001(\004\022\025\n\rtota" +
-      "l_slashed\030\n \001(\t\022\023\n\013catching_up\030\006 \001(\010\022\022\n\n" +
-      "public_key\030\007 \001(\t\022\017\n\007node_id\030\t \001(\t\022\017\n\007mon" +
-      "iker\030\r \001(\t\"\301\037\n\017GenesisResponse\022\024\n\014genesi" +
-      "s_time\030\001 \001(\t\022\020\n\010chain_id\030\002 \001(\t\022\026\n\016initia" +
-      "l_height\030\006 \001(\004\022A\n\020consensus_params\030\003 \001(\013" +
-      "2\'.api_pb.GenesisResponse.ConsensusParam" +
-      "s\022\020\n\010app_hash\030\004 \001(\t\0223\n\tapp_state\030\005 \001(\0132 " +
-      ".api_pb.GenesisResponse.AppState\032\202\003\n\017Con" +
-      "sensusParams\022<\n\005block\030\001 \001(\0132-.api_pb.Gen" +
-      "esisResponse.ConsensusParams.Block\022B\n\010ev" +
-      "idence\030\002 \001(\01320.api_pb.GenesisResponse.Co" +
-      "nsensusParams.Evidence\022D\n\tvalidator\030\003 \001(" +
-      "\01321.api_pb.GenesisResponse.ConsensusPara" +
-      "ms.Validator\032A\n\005Block\022\021\n\tmax_bytes\030\001 \001(\003" +
-      "\022\017\n\007max_gas\030\002 \001(\003\022\024\n\014time_iota_ms\030\003 \001(\003\032" +
-      "@\n\010Evidence\022\032\n\022max_age_num_blocks\030\001 \001(\003\022" +
-      "\030\n\020max_age_duration\030\002 \001(\003\032\"\n\tValidator\022\025" +
-      "\n\rpub_key_types\030\001 \003(\t\032\336\032\n\010AppState\022\017\n\007ve" +
-      "rsion\030\023 \001(\t\022\014\n\004note\030\n \001(\t\022?\n\nvalidators\030" +
-      "\002 \003(\0132+.api_pb.GenesisResponse.AppState." +
-      "Validators\022>\n\ncandidates\030\003 \003(\0132*.api_pb." +
-      "GenesisResponse.AppState.Candidate\0224\n\005co" +
-      "ins\030\005 \003(\0132%.api_pb.GenesisResponse.AppSt" +
-      "ate.Coin\022A\n\014frozen_funds\030\006 \003(\0132+.api_pb." +
-      "GenesisResponse.AppState.FrozenFund\022\035\n\025b" +
-      "lock_list_candidates\030\022 \003(\t\022;\n\010waitlist\030\r" +
-      " \003(\0132).api_pb.GenesisResponse.AppState.W" +
-      "aitlist\022:\n\010accounts\030\016 \003(\0132(.api_pb.Genes" +
-      "isResponse.AppState.Account\022?\n\013halt_bloc" +
-      "ks\030\014 \003(\0132*.api_pb.GenesisResponse.AppSta" +
-      "te.HaltBlock\0224\n\005pools\030\017 \003(\0132%.api_pb.Gen" +
-      "esisResponse.AppState.Pool\022?\n\ncommission" +
-      "\030\020 \001(\0132+.api_pb.GenesisResponse.AppState" +
-      ".Commission\022I\n\020commission_votes\030\021 \003(\0132/." +
-      "api_pb.GenesisResponse.AppState.Commissi" +
-      "onVote\022\023\n\013used_checks\030\013 \003(\t\022\017\n\007max_gas\030\007" +
-      " \001(\004\022\025\n\rtotal_slashed\030\010 \001(\t\032e\n\nValidator" +
-      "s\022\027\n\017total_bip_stake\030\004 \001(\t\022\022\n\npublic_key" +
-      "\030\001 \001(\t\022\024\n\014accum_reward\030\002 \001(\t\022\024\n\014absent_t" +
-      "imes\030\003 \001(\t\032\270\003\n\tCandidate\022\n\n\002id\030\n \001(\004\022\026\n\016" +
-      "reward_address\030\001 \001(\t\022\025\n\rowner_address\030\002 " +
-      "\001(\t\022\027\n\017control_address\030\003 \001(\t\022\027\n\017total_bi" +
-      "p_stake\030\004 \001(\t\022\022\n\npublic_key\030\005 \001(\t\022\022\n\ncom" +
-      "mission\030\006 \001(\004\022@\n\006stakes\030\007 \003(\01320.api_pb.G" +
-      "enesisResponse.AppState.Candidate.Stake\022" +
-      "A\n\007updates\030\010 \003(\01320.api_pb.GenesisRespons" +
-      "e.AppState.Candidate.Stake\022\016\n\006status\030\t \001" +
-      "(\003\022\024\n\014jailed_until\030\013 \001(\003\022#\n\033last_edit_co" +
-      "mmission_height\030\014 \001(\003\032F\n\005Stake\022\r\n\005owner\030" +
-      "\004 \001(\t\022\014\n\004coin\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\022\021\n\tbi" +
-      "p_value\030\003 \001(\t\032\334\001\n\004Coin\022\n\n\002id\030\t \001(\004\022\014\n\004na" +
-      "me\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\016\n\006volume\030\003 \001(\t" +
-      "\022\013\n\003crr\030\004 \001(\004\022\017\n\007reserve\030\005 \001(\t\022\022\n\nmax_su" +
-      "pply\030\006 \001(\t\022\017\n\007version\030\007 \001(\004\0223\n\rowner_add" +
-      "ress\030\010 \001(\0132\034.google.protobuf.StringValue" +
-      "\022\020\n\010mintable\030\n \001(\010\022\020\n\010burnable\030\013 \001(\010\032\225\001\n" +
-      "\nFrozenFund\022\016\n\006height\030\005 \001(\004\022\017\n\007address\030\001" +
-      " \001(\t\0223\n\rcandidate_key\030\002 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022\024\n\014candidate_id\030\006 \001(\004\022" +
-      "\014\n\004coin\030\003 \001(\004\022\r\n\005value\030\004 \001(\t\032L\n\010Waitlist" +
-      "\022\024\n\014candidate_id\030\001 \001(\004\022\r\n\005owner\030\002 \001(\t\022\014\n" +
-      "\004coin\030\003 \001(\004\022\r\n\005value\030\004 \001(\t\032\251\002\n\007Account\022\017" +
-      "\n\007address\030\001 \001(\t\022A\n\007balance\030\002 \003(\01320.api_p" +
-      "b.GenesisResponse.AppState.Account.Balan" +
-      "ce\022\r\n\005nonce\030\003 \001(\004\022L\n\rmultisig_data\030\004 \001(\013" +
-      "25.api_pb.GenesisResponse.AppState.Accou" +
-      "nt.MultisigData\032&\n\007Balance\022\014\n\004coin\030\001 \001(\004" +
-      "\022\r\n\005value\030\002 \001(\t\032E\n\014MultisigData\022\021\n\tthres" +
-      "hold\030\001 \001(\004\022\017\n\007weights\030\002 \003(\004\022\021\n\taddresses" +
-      "\030\003 \003(\t\0322\n\tHaltBlock\022\016\n\006height\030\001 \001(\004\022\025\n\rc" +
-      "andidate_key\030\002 \001(\t\032T\n\004Pool\022\r\n\005coin0\030\001 \001(" +
-      "\004\022\r\n\005coin1\030\002 \001(\004\022\020\n\010reserve0\030\003 \001(\t\022\020\n\010re" +
-      "serve1\030\004 \001(\t\022\n\n\002id\030\005 \001(\004\032\321\010\n\nCommission\022" +
-      "\014\n\004coin\030\003 \001(\004\022\024\n\014payload_byte\030\004 \001(\t\022\014\n\004s" +
-      "end\030\005 \001(\t\022\022\n\nbuy_bancor\030& \001(\t\022\023\n\013sell_ba" +
-      "ncor\030\' \001(\t\022\027\n\017sell_all_bancor\030( \001(\t\022\025\n\rb" +
-      "uy_pool_base\030) \001(\t\022\026\n\016buy_pool_delta\0305 \001" +
-      "(\t\022\026\n\016sell_pool_base\030* \001(\t\022\027\n\017sell_pool_" +
-      "delta\0306 \001(\t\022\032\n\022sell_all_pool_base\030+ \001(\t\022" +
-      "\033\n\023sell_all_pool_delta\0307 \001(\t\022\026\n\016create_t" +
-      "icker3\030\007 \001(\t\022\026\n\016create_ticker4\030\010 \001(\t\022\026\n\016" +
-      "create_ticker5\030\t \001(\t\022\026\n\016create_ticker6\030\n" +
-      " \001(\t\022\031\n\021create_ticker7_10\030\013 \001(\t\022\023\n\013creat" +
-      "e_coin\030\" \001(\t\022\024\n\014create_token\030# \001(\t\022\025\n\rre" +
-      "create_coin\030$ \001(\t\022\026\n\016recreate_token\030% \001(" +
-      "\t\022\031\n\021declare_candidacy\030\r \001(\t\022\020\n\010delegate" +
-      "\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t\022\024\n\014redeem_check\030\020" +
-      " \001(\t\022\030\n\020set_candidate_on\030, \001(\t\022\031\n\021set_ca" +
-      "ndidate_off\030- \001(\t\022\027\n\017create_multisig\030\022 \001" +
-      "(\t\022\026\n\016multisend_base\0303 \001(\t\022\027\n\017multisend_" +
-      "delta\0304 \001(\t\022\026\n\016edit_candidate\030\024 \001(\t\022\026\n\016s" +
-      "et_halt_block\030\025 \001(\t\022\031\n\021edit_ticker_owner" +
-      "\030\026 \001(\t\022\025\n\redit_multisig\030\027 \001(\t\022!\n\031edit_ca" +
-      "ndidate_public_key\030\031 \001(\t\022\030\n\020create_swap_" +
-      "pool\0300 \001(\t\022\025\n\radd_liquidity\0301 \001(\t\022\030\n\020rem" +
-      "ove_liquidity\0302 \001(\t\022!\n\031edit_candidate_co" +
-      "mmission\030\034 \001(\t\022\022\n\nmint_token\030. \001(\t\022\022\n\nbu" +
-      "rn_token\030/ \001(\t\022\027\n\017vote_commission\030\037 \001(\t\022" +
-      "\023\n\013vote_update\030  \001(\t\022\021\n\tfailed_tx\0308 \001(\t\022" +
-      "\027\n\017add_limit_order\0309 \001(\t\022\032\n\022remove_limit" +
-      "_order\030: \001(\t\032p\n\016CommissionVote\022\016\n\006height" +
-      "\030\001 \001(\004\022\r\n\005votes\030\002 \003(\t\022?\n\ncommission\030\003 \001(" +
-      "\0132+.api_pb.GenesisResponse.AppState.Comm" +
-      "ission\",\n\023MinGasPriceResponse\022\025\n\rmin_gas" +
-      "_price\030\003 \001(\004\"f\n\014BlockRequest\022\016\n\006height\030\001" +
-      " \001(\004\022\"\n\006fields\030\002 \003(\0162\022.api_pb.BlockField" +
-      "\022\022\n\nfailed_txs\030\003 \001(\010\022\016\n\006events\030\004 \001(\010\"\304\003\n" +
-      "\rBlockResponse\022\014\n\004hash\030\001 \001(\t\022\016\n\006height\030\002" +
-      " \001(\004\022\014\n\004time\030\003 \001(\t\022\031\n\021transaction_count\030" +
-      "\004 \001(\004\0221\n\014transactions\030\006 \003(\0132\033.api_pb.Tra" +
-      "nsactionResponse\022\024\n\014block_reward\030\007 \001(\t\022\014" +
-      "\n\004size\030\010 \001(\004\022\020\n\010proposer\030\t \001(\t\0223\n\nvalida" +
-      "tors\030\n \003(\0132\037.api_pb.BlockResponse.Valida" +
-      "tor\0220\n\010evidence\030\r \001(\0132\036.api_pb.BlockResp" +
-      "onse.Evidence\022\016\n\006missed\030\014 \003(\t\022$\n\006events\030" +
-      "\016 \003(\0132\024.google.protobuf.Any\032/\n\tValidator" +
-      "\022\022\n\npublic_key\030\001 \001(\t\022\016\n\006signed\030\002 \001(\010\0325\n\010" +
-      "Evidence\022)\n\010evidence\030\001 \003(\0132\027.google.prot" +
-      "obuf.Struct\"$\n\022MaxGasPriceRequest\022\016\n\006hei" +
-      "ght\030\001 \001(\004\",\n\023MaxGasPriceResponse\022\025\n\rmax_" +
-      "gas_price\030\003 \001(\004\"D\n\016AddressRequest\022\017\n\007add" +
-      "ress\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\021\n\tdelegated\030" +
-      "\004 \001(\010\"N\n\016AddressBalance\022\032\n\004coin\030\001 \001(\0132\014." +
-      "api_pb.Coin\022\r\n\005value\030\002 \001(\t\022\021\n\tbip_value\030" +
-      "\003 \001(\t\"s\n\027AddressDelegatedBalance\022\032\n\004coin" +
-      "\030\001 \001(\0132\014.api_pb.Coin\022\r\n\005value\030\002 \001(\t\022\021\n\tb" +
-      "ip_value\030\003 \001(\t\022\032\n\022delegate_bip_value\030\004 \001" +
-      "(\t\"\347\001\n\017AddressResponse\022\'\n\007balance\030\001 \003(\0132" +
-      "\026.api_pb.AddressBalance\0222\n\tdelegated\030\003 \003" +
-      "(\0132\037.api_pb.AddressDelegatedBalance\022%\n\005t" +
-      "otal\030\004 \003(\0132\026.api_pb.AddressBalance\022\031\n\021tr" +
-      "ansaction_count\030\002 \001(\004\022\021\n\tbip_value\030\005 \001(\t" +
-      "\022\"\n\010multisig\030\006 \001(\0132\020.api_pb.Multisig\"A\n\010" +
-      "Multisig\022\021\n\tthreshold\030\001 \001(\004\022\017\n\007weights\030\002" +
-      " \003(\004\022\021\n\taddresses\030\003 \003(\t\"H\n\020AddressesRequ" +
-      "est\022\021\n\taddresses\030\001 \003(\t\022\016\n\006height\030\002 \001(\004\022\021" +
-      "\n\tdelegated\030\004 \001(\010\"\205\003\n\021AddressesResponse\022" +
-      ";\n\taddresses\030\003 \003(\0132(.api_pb.AddressesRes" +
-      "ponse.AddressesEntry\032\336\001\n\006Result\022\'\n\007balan" +
-      "ce\030\002 \003(\0132\026.api_pb.AddressBalance\0222\n\tdele" +
-      "gated\030\006 \003(\0132\037.api_pb.AddressDelegatedBal" +
-      "ance\022%\n\005total\030\004 \003(\0132\026.api_pb.AddressBala" +
-      "nce\022\031\n\021transaction_count\030\003 \001(\004\022\021\n\tbip_va" +
-      "lue\030\005 \001(\t\022\"\n\010multisig\030\007 \001(\0132\020.api_pb.Mul" +
-      "tisig\032R\n\016AddressesEntry\022\013\n\003key\030\001 \001(\t\022/\n\005" +
-      "value\030\002 \001(\0132 .api_pb.AddressesResponse.R" +
-      "esult:\0028\001\"O\n\020CandidateRequest\022\022\n\npublic_" +
-      "key\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\027\n\017not_show_st" +
-      "akes\030\004 \001(\010\"\371\003\n\021CandidateResponse\022\n\n\002id\030\016" +
-      " \001(\004\022\026\n\016reward_address\030\001 \001(\t\022\025\n\rowner_ad" +
-      "dress\030\n \001(\t\022\027\n\017control_address\030\013 \001(\t\022\023\n\013" +
-      "total_stake\030\002 \001(\t\022\022\n\npublic_key\030\003 \001(\t\022\022\n" +
-      "\ncommission\030\004 \001(\004\0220\n\nused_slots\030\007 \001(\0132\034." +
-      "google.protobuf.UInt64Value\0220\n\nuniq_user" +
-      "s\030\010 \001(\0132\034.google.protobuf.UInt64Value\022/\n" +
-      "\tmin_stake\030\t \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022/\n\006stakes\030\005 \003(\0132\037.api_pb.Candidat" +
-      "eResponse.Stake\022\016\n\006status\030\006 \001(\004\022\021\n\tvalid" +
-      "ator\030\014 \001(\010\022\024\n\014jailed_until\030\r \001(\004\032T\n\005Stak" +
-      "e\022\r\n\005owner\030\001 \001(\t\022\032\n\004coin\030\002 \001(\0132\014.api_pb." +
-      "Coin\022\r\n\005value\030\003 \001(\t\022\021\n\tbip_value\030\004 \001(\t\"\313" +
-      "\001\n\021CandidatesRequest\022\016\n\006height\030\001 \001(\004\022\026\n\016" +
-      "include_stakes\030\002 \001(\010\022\027\n\017not_show_stakes\030" +
-      "\004 \001(\010\0229\n\006status\030\003 \001(\0162).api_pb.Candidate" +
-      "sRequest.CandidateStatus\":\n\017CandidateSta" +
-      "tus\022\007\n\003all\020\000\022\007\n\003off\020\001\022\006\n\002on\020\002\022\r\n\tvalidat" +
-      "or\020\003\"C\n\022CandidatesResponse\022-\n\ncandidates" +
-      "\030\003 \003(\0132\031.api_pb.CandidateResponse\"+\n\rCoi" +
-      "nIdRequest\022\016\n\006height\030\001 \001(\004\022\n\n\002id\030\002 \001(\004\"1" +
-      "\n\017CoinInfoRequest\022\016\n\006height\030\001 \001(\004\022\016\n\006sym" +
-      "bol\030\002 \001(\t\"\337\001\n\020CoinInfoResponse\022\n\n\002id\030\006 \001" +
-      "(\004\022\014\n\004name\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\016\n\006volu" +
-      "me\030\003 \001(\t\022\013\n\003crr\030\004 \001(\004\022\027\n\017reserve_balance" +
-      "\030\005 \001(\t\022\022\n\nmax_supply\030\010 \001(\t\0223\n\rowner_addr" +
-      "ess\030\007 \001(\0132\034.google.protobuf.StringValue\022" +
-      "\020\n\010mintable\030\t \001(\010\022\020\n\010burnable\030\n \001(\010\"B\n\027S" +
-      "endTransactionResponse\022\014\n\004code\030\001 \001(\004\022\013\n\003" +
-      "log\030\003 \001(\t\022\014\n\004hash\030\004 \001(\t\"$\n\026SendTransacti" +
-      "onRequest\022\n\n\002tx\030\001 \001(\t\"\274\010\n\023TransactionRes" +
-      "ponse\022\014\n\004hash\030\001 \001(\t\022\016\n\006raw_tx\030\002 \001(\t\022\016\n\006h" +
-      "eight\030\003 \001(\004\022\r\n\005index\030\004 \001(\004\022\014\n\004from\030\005 \001(\t" +
-      "\022\r\n\005nonce\030\006 \001(\004\022\013\n\003gas\030\007 \001(\004\022\021\n\tgas_pric" +
-      "e\030\010 \001(\004\022\036\n\010gas_coin\030\t \001(\0132\014.api_pb.Coin\022" +
-      "\020\n\010type_hex\030\021 \001(\t\022\014\n\004type\030\n \001(\004\022\"\n\004data\030" +
-      "\013 \001(\0132\024.google.protobuf.Any\022\017\n\007payload\030\014" +
-      " \001(\014\022\024\n\014service_data\030\020 \001(\014\0223\n\004tags\030\r \003(\013" +
-      "2%.api_pb.TransactionResponse.TagsEntry\022" +
-      "\014\n\004code\030\016 \001(\004\022\013\n\003log\030\017 \001(\t\032+\n\tTagsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\242\005\n\004Type" +
-      "\022\n\n\006_NULL_\020\000\022\010\n\004Send\020\001\022\014\n\010SellCoin\020\002\022\017\n\013" +
-      "SellAllCoin\020\003\022\013\n\007BuyCoin\020\004\022\016\n\nCreateCoin" +
-      "\020\005\022\024\n\020DeclareCandidacy\020\006\022\014\n\010Delegate\020\007\022\n" +
-      "\n\006Unbond\020\010\022\017\n\013RedeemCheck\020\t\022\026\n\022SetCandid" +
-      "ateOnline\020\n\022\027\n\023SetCandidateOffline\020\013\022\022\n\016" +
-      "CreateMultisig\020\014\022\r\n\tMultisend\020\r\022\021\n\rEditC" +
-      "andidate\020\016\022\020\n\014SetHaltBlock\020\017\022\020\n\014Recreate" +
-      "Coin\020\020\022\021\n\rEditCoinOwner\020\021\022\020\n\014EditMultisi" +
-      "g\020\022\022\r\n\tPriceVote\020\023\022\032\n\026EditCandidatePubli" +
-      "cKey\020\024\022\020\n\014AddLiquidity\020\025\022\023\n\017RemoveLiquid" +
-      "ity\020\026\022\020\n\014SellSwapPool\020\027\022\017\n\013BuySwapPool\020\030" +
-      "\022\023\n\017SellAllSwapPool\020\031\022\033\n\027EditCommissionC" +
-      "andidate\020\032\022\r\n\tMoveStake\020\033\022\r\n\tMintToken\020\034" +
-      "\022\r\n\tBurnToken\020\035\022\017\n\013CreateToken\020\036\022\021\n\rRecr" +
-      "eateToken\020\037\022\022\n\016VoteCommission\020 \022\016\n\nVoteU" +
-      "pdate\020!\022\022\n\016CreateSwapPool\020\"\022\021\n\rAddLimitO" +
-      "rder\020#\022\024\n\020RemoveLimitOrder\020$\"\"\n\022Transact" +
-      "ionRequest\022\014\n\004hash\030\001 \001(\t\"I\n\024Transactions" +
-      "Response\0221\n\014transactions\030\003 \003(\0132\033.api_pb." +
-      "TransactionResponse\"D\n\023TransactionsReque" +
-      "st\022\r\n\005query\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\020\n\010per_p" +
-      "age\030\003 \001(\005\"\254\002\n\026EstimateCoinBuyRequest\022\030\n\016" +
-      "coin_id_to_buy\030\001 \001(\004H\000\022\025\n\013coin_to_buy\030\005 " +
-      "\001(\tH\000\022\031\n\017coin_id_to_sell\030\002 \001(\004H\001\022\026\n\014coin" +
-      "_to_sell\030\006 \001(\tH\001\022\024\n\014value_to_buy\030\003 \001(\t\022\016" +
-      "\n\006height\030\004 \001(\004\022\034\n\022coin_id_commission\030\t \001" +
-      "(\004H\002\022\031\n\017coin_commission\030\n \001(\tH\002\022#\n\tswap_" +
-      "from\030\010 \001(\0162\020.api_pb.SwapFrom\022\r\n\005route\030\013 " +
-      "\003(\004B\005\n\003buyB\006\n\004sellB\014\n\ncommission\"d\n\027Esti" +
-      "mateCoinBuyResponse\022\020\n\010will_pay\030\001 \001(\t\022\022\n" +
-      "\ncommission\030\002 \001(\t\022#\n\tswap_from\030\003 \001(\0162\020.a" +
-      "pi_pb.SwapFrom\"\256\002\n\027EstimateCoinSellReque" +
-      "st\022\030\n\016coin_id_to_buy\030\001 \001(\004H\000\022\025\n\013coin_to_" +
-      "buy\030\005 \001(\tH\000\022\031\n\017coin_id_to_sell\030\002 \001(\004H\001\022\026" +
-      "\n\014coin_to_sell\030\006 \001(\tH\001\022\025\n\rvalue_to_sell\030" +
-      "\003 \001(\t\022\016\n\006height\030\004 \001(\004\022\034\n\022coin_id_commiss" +
-      "ion\030\t \001(\004H\002\022\031\n\017coin_commission\030\n \001(\tH\002\022#" +
-      "\n\tswap_from\030\010 \001(\0162\020.api_pb.SwapFrom\022\r\n\005r" +
-      "oute\030\013 \003(\004B\005\n\003buyB\006\n\004sellB\014\n\ncommission\"" +
-      "e\n\030EstimateCoinSellResponse\022\020\n\010will_get\030" +
-      "\001 \001(\t\022\022\n\ncommission\030\002 \001(\t\022#\n\tswap_from\030\003" +
-      " \001(\0162\020.api_pb.SwapFrom\"\375\001\n\032EstimateCoinS" +
-      "ellAllRequest\022\030\n\016coin_id_to_buy\030\001 \001(\004H\000\022" +
-      "\025\n\013coin_to_buy\030\007 \001(\tH\000\022\031\n\017coin_id_to_sel" +
-      "l\030\002 \001(\004H\001\022\026\n\014coin_to_sell\030\006 \001(\tH\001\022\025\n\rval" +
-      "ue_to_sell\030\003 \001(\t\022\021\n\tgas_price\030\004 \001(\004\022\016\n\006h" +
-      "eight\030\005 \001(\004\022#\n\tswap_from\030\010 \001(\0162\020.api_pb." +
-      "SwapFrom\022\r\n\005route\030\013 \003(\004B\005\n\003buyB\006\n\004sell\"T" +
-      "\n\033EstimateCoinSellAllResponse\022\020\n\010will_ge" +
-      "t\030\001 \001(\t\022#\n\tswap_from\030\002 \001(\0162\020.api_pb.Swap" +
-      "From\"9\n\033EstimateTxCommissionRequest\022\n\n\002t" +
-      "x\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\"2\n\034EstimateTxCom" +
-      "missionResponse\022\022\n\ncommission\030\001 \001(\t\"/\n\rE" +
-      "ventsRequest\022\016\n\006height\030\001 \001(\004\022\016\n\006search\030\002" +
-      " \003(\t\"9\n\016EventsResponse\022\'\n\006events\030\001 \003(\0132\027" +
-      ".google.protobuf.Struct\"9\n\023MissedBlocksR" +
-      "equest\022\022\n\npublic_key\030\001 \001(\t\022\016\n\006height\030\002 \001" +
-      "(\004\"J\n\024MissedBlocksResponse\022\025\n\rmissed_blo" +
-      "cks\030\001 \001(\t\022\033\n\023missed_blocks_count\030\002 \001(\003\"z" +
-      "\n\026UnconfirmedTxsResponse\022\031\n\021transaction_" +
-      "count\030\001 \001(\004\022\032\n\022total_transactions\030\002 \001(\004\022" +
-      "\023\n\013total_bytes\030\003 \001(\004\022\024\n\014transactions\030\004 \003" +
-      "(\t\"&\n\025UnconfirmedTxsRequest\022\r\n\005limit\030\001 \001" +
-      "(\005\"#\n\021ValidatorsRequest\022\016\n\006height\030\001 \001(\004\"" +
-      "\177\n\022ValidatorsResponse\0225\n\nvalidators\030\003 \003(" +
-      "\0132!.api_pb.ValidatorsResponse.Result\0322\n\006" +
-      "Result\022\022\n\npublic_key\030\001 \001(\t\022\024\n\014voting_pow" +
-      "er\030\002 \001(\004\"!\n\020SubscribeRequest\022\r\n\005query\030\001 " +
-      "\001(\t\"\240\001\n\021SubscribeResponse\022\r\n\005query\030\001 \001(\t" +
-      "\022%\n\004data\030\002 \001(\0132\027.google.protobuf.Struct\022" +
-      "/\n\006events\030\003 \003(\0132\037.api_pb.SubscribeRespon" +
-      "se.Event\032$\n\005Event\022\013\n\003key\030\001 \001(\t\022\016\n\006events" +
-      "\030\002 \003(\t\"\036\n\014HaltsRequest\022\016\n\006height\030\001 \001(\004\"$" +
-      "\n\rHaltsResponse\022\023\n\013public_keys\030\001 \003(\t\"_\n\r" +
-      "FrozenRequest\022\017\n\007address\030\001 \001(\t\022-\n\007coin_i" +
-      "d\030\002 \001(\0132\034.google.protobuf.UInt64Value\022\016\n" +
-      "\006height\030\003 \001(\004\"\254\001\n\016FrozenResponse\022-\n\006froz" +
-      "en\030\001 \003(\0132\035.api_pb.FrozenResponse.Frozen\032" +
-      "k\n\006Frozen\022\016\n\006height\030\001 \001(\004\022\017\n\007address\030\002 \001" +
-      "(\t\022\025\n\rcandidate_key\030\003 \001(\t\022\032\n\004coin\030\004 \001(\0132" +
-      "\014.api_pb.Coin\022\r\n\005value\030\005 \001(\t\"F\n\017WaitList" +
-      "Request\022\022\n\npublic_key\030\001 \001(\t\022\017\n\007address\030\002" +
-      " \001(\t\022\016\n\006height\030\003 \001(\004\"\206\001\n\020WaitListRespons" +
-      "e\022+\n\004list\030\001 \003(\0132\035.api_pb.WaitListRespons" +
-      "e.Wait\032E\n\004Wait\022\022\n\npublic_key\030\003 \001(\t\022\032\n\004co" +
-      "in\030\001 \001(\0132\014.api_pb.Coin\022\r\n\005value\030\002 \001(\t*r\n" +
-      "\nBlockField\022\020\n\014transactions\020\000\022\n\n\006missed\020" +
-      "\001\022\020\n\014block_reward\020\002\022\010\n\004size\020\003\022\014\n\010propose" +
-      "r\020\004\022\016\n\nvalidators\020\005\022\014\n\010evidence\020\006*-\n\010Swa" +
-      "pFrom\022\013\n\007optimal\020\000\022\n\n\006bancor\020\001\022\010\n\004pool\020\002" +
-      "BV\n\033counters.minter.grpc.clientP\001Z5githu" +
-      "b.com/MinterTeam/node-grpc-gateway/gen/g" +
-      "o;api_pbb\006proto3"
+      "to\032\036google/protobuf/wrappers.proto\".\n\004Co" +
+      "in\022\016\n\002id\030\001 \001(\004R\002id\022\026\n\006symbol\030\002 \001(\tR\006symb" +
+      "ol\"\351\001\n\020BestTradeRequest\022\033\n\tsell_coin\030\001 \001" +
+      "(\004R\010sellCoin\022\031\n\010buy_coin\030\002 \001(\004R\007buyCoin\022" +
+      "\026\n\006amount\030\003 \001(\tR\006amount\0221\n\004type\030\004 \001(\0162\035." +
+      "api_pb.BestTradeRequest.TypeR\004type\022\026\n\006he" +
+      "ight\030\005 \001(\004R\006height\022\033\n\tmax_depth\030\006 \001(\005R\010m" +
+      "axDepth\"\035\n\004Type\022\t\n\005input\020\000\022\n\n\006output\020\001\"?" +
+      "\n\021BestTradeResponse\022\022\n\004path\030\001 \003(\004R\004path\022" +
+      "\026\n\006result\030\002 \001(\tR\006result\"\260\001\n\rBlocksReques" +
+      "t\022\037\n\013from_height\030\001 \001(\004R\nfromHeight\022\033\n\tto" +
+      "_height\030\002 \001(\004R\010toHeight\022*\n\006fields\030\003 \003(\0162" +
+      "\022.api_pb.BlockFieldR\006fields\022\035\n\nfailed_tx" +
+      "s\030\004 \001(\010R\tfailedTxs\022\026\n\006events\030\005 \001(\010R\006even" +
+      "ts\"?\n\016BlocksResponse\022-\n\006blocks\030\001 \003(\0132\025.a" +
+      "pi_pb.BlockResponseR\006blocks\"W\n\026Commissio" +
+      "nVotesRequest\022%\n\016target_version\030\001 \001(\004R\rt" +
+      "argetVersion\022\026\n\006height\030\002 \001(\004R\006height\"\265\001\n" +
+      "\027CommissionVotesResponse\022:\n\005votes\030\001 \003(\0132" +
+      "$.api_pb.CommissionVotesResponse.VoteR\005v" +
+      "otes\032^\n\004Vote\0225\n\005price\030\002 \001(\0132\037.api_pb.Pri" +
+      "ceCommissionResponseR\005price\022\037\n\013public_ke" +
+      "ys\030\001 \003(\tR\npublicKeys\"F\n\021LimitOrderReques" +
+      "t\022\031\n\010order_id\030\001 \001(\004R\007orderId\022\026\n\006height\030\002" +
+      " \001(\004R\006height\"\364\001\n\022LimitOrderResponse\022\016\n\002i" +
+      "d\030\007 \001(\004R\002id\022)\n\tcoin_sell\030\001 \001(\0132\014.api_pb." +
+      "CoinR\010coinSell\022\'\n\010coin_buy\030\002 \001(\0132\014.api_p" +
+      "b.CoinR\007coinBuy\022\033\n\twant_sell\030\003 \001(\tR\010want" +
+      "Sell\022\031\n\010want_buy\030\004 \001(\tR\007wantBuy\022\024\n\005price" +
+      "\030\010 \001(\tR\005price\022\024\n\005owner\030\005 \001(\tR\005owner\022\026\n\006h" +
+      "eight\030\006 \001(\004R\006height\"\200\001\n\030LimitOrdersOfPoo" +
+      "lRequest\022\033\n\tsell_coin\030\001 \001(\004R\010sellCoin\022\031\n" +
+      "\010buy_coin\030\002 \001(\004R\007buyCoin\022\024\n\005limit\030\003 \001(\005R" +
+      "\005limit\022\026\n\006height\030\004 \001(\004R\006height\"n\n\031LimitO" +
+      "rdersOfPoolResponse\022\035\n\npool_price\030\002 \001(\tR" +
+      "\tpoolPrice\0222\n\006orders\030\001 \003(\0132\032.api_pb.Limi" +
+      "tOrderResponseR\006orders\">\n\022LimitOrdersReq" +
+      "uest\022\020\n\003ids\030\001 \003(\004R\003ids\022\026\n\006height\030\002 \001(\004R\006" +
+      "height\"I\n\023LimitOrdersResponse\0222\n\006orders\030" +
+      "\001 \003(\0132\032.api_pb.LimitOrderResponseR\006order" +
+      "s\"S\n\022UpdateVotesRequest\022%\n\016target_versio" +
+      "n\030\001 \001(\004R\rtargetVersion\022\026\n\006height\030\002 \001(\004R\006" +
+      "height\"\220\001\n\023UpdateVotesResponse\0226\n\005votes\030" +
+      "\001 \003(\0132 .api_pb.UpdateVotesResponse.VoteR" +
+      "\005votes\032A\n\004Vote\022\030\n\007version\030\002 \001(\tR\007version" +
+      "\022\037\n\013public_keys\030\001 \003(\tR\npublicKeys\"\027\n\025Ver" +
+      "sionNetworkRequest\"\255\001\n\026VersionNetworkRes" +
+      "ponse\022\030\n\007current\030\001 \001(\tR\007current\022B\n\010versi" +
+      "ons\030\003 \003(\0132&.api_pb.VersionNetworkRespons" +
+      "e.VersionR\010versions\0325\n\007Version\022\022\n\004name\030\001" +
+      " \001(\tR\004name\022\026\n\006height\030\002 \001(\004R\006height\"0\n\026Pr" +
+      "iceCommissionRequest\022\026\n\006height\030\001 \001(\004R\006he" +
+      "ight\"\325\016\n\027PriceCommissionResponse\022 \n\004coin" +
+      "\030\003 \001(\0132\014.api_pb.CoinR\004coin\022!\n\014payload_by" +
+      "te\030\004 \001(\tR\013payloadByte\022\022\n\004send\030\005 \001(\tR\004sen" +
+      "d\022\035\n\nbuy_bancor\030& \001(\tR\tbuyBancor\022\037\n\013sell" +
+      "_bancor\030\' \001(\tR\nsellBancor\022&\n\017sell_all_ba" +
+      "ncor\030( \001(\tR\rsellAllBancor\022\"\n\rbuy_pool_ba" +
+      "se\030) \001(\tR\013buyPoolBase\022$\n\016buy_pool_delta\030" +
+      "5 \001(\tR\014buyPoolDelta\022$\n\016sell_pool_base\030* " +
+      "\001(\tR\014sellPoolBase\022&\n\017sell_pool_delta\0306 \001" +
+      "(\tR\rsellPoolDelta\022+\n\022sell_all_pool_base\030" +
+      "+ \001(\tR\017sellAllPoolBase\022-\n\023sell_all_pool_" +
+      "delta\0307 \001(\tR\020sellAllPoolDelta\022%\n\016create_" +
+      "ticker3\030\007 \001(\tR\rcreateTicker3\022%\n\016create_t" +
+      "icker4\030\010 \001(\tR\rcreateTicker4\022%\n\016create_ti" +
+      "cker5\030\t \001(\tR\rcreateTicker5\022%\n\016create_tic" +
+      "ker6\030\n \001(\tR\rcreateTicker6\022*\n\021create_tick" +
+      "er7_10\030\013 \001(\tR\017createTicker710\022\037\n\013create_" +
+      "coin\030\" \001(\tR\ncreateCoin\022!\n\014create_token\030#" +
+      " \001(\tR\013createToken\022#\n\rrecreate_coin\030$ \001(\t" +
+      "R\014recreateCoin\022%\n\016recreate_token\030% \001(\tR\r" +
+      "recreateToken\022+\n\021declare_candidacy\030\r \001(\t" +
+      "R\020declareCandidacy\022\032\n\010delegate\030\016 \001(\tR\010de" +
+      "legate\022\026\n\006unbond\030\017 \001(\tR\006unbond\022!\n\014redeem" +
+      "_check\030\020 \001(\tR\013redeemCheck\022(\n\020set_candida" +
+      "te_on\030, \001(\tR\016setCandidateOn\022*\n\021set_candi" +
+      "date_off\030- \001(\tR\017setCandidateOff\022\'\n\017creat" +
+      "e_multisig\030\022 \001(\tR\016createMultisig\022%\n\016mult" +
+      "isend_base\0303 \001(\tR\rmultisendBase\022\'\n\017multi" +
+      "send_delta\0304 \001(\tR\016multisendDelta\022%\n\016edit" +
+      "_candidate\030\024 \001(\tR\reditCandidate\022$\n\016set_h" +
+      "alt_block\030\025 \001(\tR\014setHaltBlock\022*\n\021edit_ti" +
+      "cker_owner\030\026 \001(\tR\017editTickerOwner\022#\n\redi" +
+      "t_multisig\030\027 \001(\tR\014editMultisig\0229\n\031edit_c" +
+      "andidate_public_key\030\031 \001(\tR\026editCandidate" +
+      "PublicKey\022(\n\020create_swap_pool\0300 \001(\tR\016cre" +
+      "ateSwapPool\022#\n\radd_liquidity\0301 \001(\tR\014addL" +
+      "iquidity\022)\n\020remove_liquidity\0302 \001(\tR\017remo" +
+      "veLiquidity\022:\n\031edit_candidate_commission" +
+      "\030\034 \001(\tR\027editCandidateCommission\022\035\n\nmint_" +
+      "token\030. \001(\tR\tmintToken\022\035\n\nburn_token\030/ \001" +
+      "(\tR\tburnToken\022\'\n\017vote_commission\030\037 \001(\tR\016" +
+      "voteCommission\022\037\n\013vote_update\030  \001(\tR\nvot" +
+      "eUpdate\022\033\n\tfailed_tx\0308 \001(\tR\010failedTx\022&\n\017" +
+      "add_limit_order\0309 \001(\tR\raddLimitOrder\022,\n\022" +
+      "remove_limit_order\030: \001(\tR\020removeLimitOrd" +
+      "er\022\035\n\nmove_stake\030; \001(\tR\tmoveStake\022\035\n\nloc" +
+      "k_stake\030< \001(\tR\tlockStake\022\022\n\004lock\030= \001(\tR\004" +
+      "lock\"B\n\020SwapPoolsRequest\022\026\n\006height\030\001 \001(\004" +
+      "R\006height\022\026\n\006orders\030\002 \001(\010R\006orders\"\267\004\n\021Swa" +
+      "pPoolsResponse\0228\n\005pools\030\001 \003(\0132\".api_pb.S" +
+      "wapPoolsResponse.SwapPoolR\005pools\032\347\003\n\010Swa" +
+      "pPool\022\016\n\002id\030\005 \001(\004R\002id\022\024\n\005price\030\004 \001(\tR\005pr" +
+      "ice\022\024\n\005coin0\030\006 \001(\004R\005coin0\022\024\n\005coin1\030\007 \001(\004" +
+      "R\005coin1\022\030\n\007amount0\030\001 \001(\tR\007amount0\022\030\n\007amo" +
+      "unt1\030\002 \001(\tR\007amount1\022\034\n\tliquidity\030\003 \001(\tR\t" +
+      "liquidity\022N\n\013orders_sell\030\010 \003(\0132-.api_pb." +
+      "SwapPoolsResponse.SwapPool.LimitOrderR\no" +
+      "rdersSell\022L\n\norders_buy\030\t \003(\0132-.api_pb.S" +
+      "wapPoolsResponse.SwapPool.LimitOrderR\tor" +
+      "dersBuy\032\230\001\n\nLimitOrder\022\016\n\002id\030\007 \001(\004R\002id\022\033" +
+      "\n\twant_sell\030\003 \001(\tR\010wantSell\022\031\n\010want_buy\030" +
+      "\004 \001(\tR\007wantBuy\022\024\n\005price\030\010 \001(\tR\005price\022\024\n\005" +
+      "owner\030\005 \001(\tR\005owner\022\026\n\006height\030\006 \001(\004R\006heig" +
+      "ht\"U\n\017SwapPoolRequest\022\024\n\005coin0\030\001 \001(\004R\005co" +
+      "in0\022\024\n\005coin1\030\002 \001(\004R\005coin1\022\026\n\006height\030\004 \001(" +
+      "\004R\006height\"\212\001\n\020SwapPoolResponse\022\016\n\002id\030\005 \001" +
+      "(\004R\002id\022\024\n\005price\030\004 \001(\tR\005price\022\030\n\007amount0\030" +
+      "\001 \001(\tR\007amount0\022\030\n\007amount1\030\002 \001(\tR\007amount1" +
+      "\022\034\n\tliquidity\030\003 \001(\tR\tliquidity\"y\n\027SwapPo" +
+      "olProviderRequest\022\024\n\005coin0\030\001 \001(\004R\005coin0\022" +
+      "\024\n\005coin1\030\002 \001(\004R\005coin1\022\032\n\010provider\030\003 \001(\tR" +
+      "\010provider\022\026\n\006height\030\004 \001(\004R\006height\"\262\003\n\010No" +
+      "deInfo\022K\n\020protocol_version\030\010 \001(\0132 .api_p" +
+      "b.NodeInfo.ProtocolVersionR\017protocolVers" +
+      "ion\022\016\n\002id\030\001 \001(\tR\002id\022\037\n\013listen_addr\030\002 \001(\t" +
+      "R\nlistenAddr\022\030\n\007network\030\003 \001(\tR\007network\022\030" +
+      "\n\007version\030\004 \001(\tR\007version\022\032\n\010channels\030\005 \001" +
+      "(\tR\010channels\022\030\n\007moniker\030\006 \001(\tR\007moniker\022," +
+      "\n\005other\030\007 \001(\0132\026.api_pb.NodeInfo.OtherR\005o" +
+      "ther\032K\n\017ProtocolVersion\022\020\n\003p2p\030\003 \001(\004R\003p2" +
+      "p\022\024\n\005block\030\001 \001(\004R\005block\022\020\n\003app\030\002 \001(\004R\003ap" +
+      "p\032C\n\005Other\022\031\n\010tx_index\030\002 \001(\tR\007txIndex\022\037\n" +
+      "\013rpc_address\030\001 \001(\tR\nrpcAddress\"\213\n\n\017NetIn" +
+      "foResponse\022\034\n\tlistening\030\004 \001(\010R\tlistening" +
+      "\022\034\n\tlisteners\030\001 \003(\tR\tlisteners\022\037\n\013count_" +
+      "peers\030\002 \001(\003R\ncountPeers\0222\n\005peers\030\003 \003(\0132\034" +
+      ".api_pb.NetInfoResponse.PeerR\005peers\032\346\010\n\004" +
+      "Peer\022L\n\023latest_block_height\030\005 \001(\0132\034.goog" +
+      "le.protobuf.UInt64ValueR\021latestBlockHeig" +
+      "ht\022-\n\tnode_info\030\004 \001(\0132\020.api_pb.NodeInfoR" +
+      "\010nodeInfo\022\037\n\013is_outbound\030\001 \001(\010R\nisOutbou" +
+      "nd\022Z\n\021connection_status\030\002 \001(\0132-.api_pb.N" +
+      "etInfoResponse.Peer.ConnectionStatusR\020co" +
+      "nnectionStatus\022\033\n\tremote_ip\030\003 \001(\tR\010remot" +
+      "eIp\032\306\006\n\020ConnectionStatus\022\032\n\010duration\030\004 \001" +
+      "(\004R\010duration\022W\n\013SendMonitor\030\001 \001(\01325.api_" +
+      "pb.NetInfoResponse.Peer.ConnectionStatus" +
+      ".MonitorR\013SendMonitor\022W\n\013RecvMonitor\030\002 \001" +
+      "(\01325.api_pb.NetInfoResponse.Peer.Connect" +
+      "ionStatus.MonitorR\013RecvMonitor\022Q\n\010channe" +
+      "ls\030\003 \003(\01325.api_pb.NetInfoResponse.Peer.C" +
+      "onnectionStatus.ChannelR\010channels\032\333\002\n\007Mo" +
+      "nitor\022\026\n\006active\030\r \001(\010R\006active\022\024\n\005start\030\001" +
+      " \001(\tR\005start\022\032\n\010duration\030\002 \001(\003R\010duration\022" +
+      "\022\n\004idle\030\003 \001(\003R\004idle\022\024\n\005bytes\030\004 \001(\003R\005byte" +
+      "s\022\030\n\007samples\030\005 \001(\003R\007samples\022\033\n\tinst_rate" +
+      "\030\006 \001(\003R\010instRate\022\031\n\010cur_rate\030\007 \001(\003R\007curR" +
+      "ate\022\031\n\010avg_rate\030\010 \001(\003R\007avgRate\022\033\n\tpeak_r" +
+      "ate\030\t \001(\003R\010peakRate\022\033\n\tbytes_rem\030\n \001(\003R\010" +
+      "bytesRem\022\031\n\010time_rem\030\013 \001(\003R\007timeRem\022\032\n\010p" +
+      "rogress\030\014 \001(\004R\010progress\032\262\001\n\007Channel\022\016\n\002i" +
+      "d\030\005 \001(\003R\002id\022.\n\023send_queue_capacity\030\001 \001(\003" +
+      "R\021sendQueueCapacity\022&\n\017send_queue_size\030\002" +
+      " \001(\003R\rsendQueueSize\022\032\n\010priority\030\003 \001(\003R\010p" +
+      "riority\022#\n\rrecently_sent\030\004 \001(\003R\014recently" +
+      "Sent\"\210\004\n\016StatusResponse\022\030\n\007version\030\010 \001(\t" +
+      "R\007version\022\030\n\007network\030\013 \001(\tR\007network\022%\n\016i" +
+      "nitial_height\030\014 \001(\004R\rinitialHeight\022*\n\021la" +
+      "test_block_hash\030\001 \001(\tR\017latestBlockHash\022&" +
+      "\n\017latest_app_hash\030\002 \001(\tR\rlatestAppHash\022." +
+      "\n\023latest_block_height\030\003 \001(\004R\021latestBlock" +
+      "Height\022*\n\021latest_block_time\030\004 \001(\tR\017lates" +
+      "tBlockTime\022(\n\020keep_last_states\030\005 \001(\004R\016ke" +
+      "epLastStates\022#\n\rtotal_slashed\030\n \001(\tR\014tot" +
+      "alSlashed\022)\n\020current_emission\030\016 \001(\tR\017cur" +
+      "rentEmission\022\037\n\013catching_up\030\006 \001(\010R\ncatch" +
+      "ingUp\022\035\n\npublic_key\030\007 \001(\tR\tpublicKey\022\027\n\007" +
+      "node_id\030\t \001(\tR\006nodeId\022\030\n\007moniker\030\r \001(\tR\007" +
+      "moniker\"\2226\n\017GenesisResponse\022!\n\014genesis_t" +
+      "ime\030\001 \001(\tR\013genesisTime\022\031\n\010chain_id\030\002 \001(\t" +
+      "R\007chainId\022%\n\016initial_height\030\006 \001(\004R\riniti" +
+      "alHeight\022R\n\020consensus_params\030\003 \001(\0132\'.api" +
+      "_pb.GenesisResponse.ConsensusParamsR\017con" +
+      "sensusParams\022\031\n\010app_hash\030\004 \001(\tR\007appHash\022" +
+      "=\n\tapp_state\030\005 \001(\0132 .api_pb.GenesisRespo" +
+      "nse.AppStateR\010appState\032\341\004\n\017ConsensusPara" +
+      "ms\022C\n\005block\030\001 \001(\0132-.api_pb.GenesisRespon" +
+      "se.ConsensusParams.BlockR\005block\022L\n\010evide" +
+      "nce\030\002 \001(\01320.api_pb.GenesisResponse.Conse" +
+      "nsusParams.EvidenceR\010evidence\022O\n\tvalidat" +
+      "or\030\003 \001(\01321.api_pb.GenesisResponse.Consen" +
+      "susParams.ValidatorR\tvalidator\022I\n\007versio" +
+      "n\030\004 \001(\0132/.api_pb.GenesisResponse.Consens" +
+      "usParams.VersionR\007version\032_\n\005Block\022\033\n\tma" +
+      "x_bytes\030\001 \001(\003R\010maxBytes\022\027\n\007max_gas\030\002 \001(\003" +
+      "R\006maxGas\022 \n\014time_iota_ms\030\003 \001(\003R\ntimeIota" +
+      "Ms\032a\n\010Evidence\022+\n\022max_age_num_blocks\030\001 \001" +
+      "(\003R\017maxAgeNumBlocks\022(\n\020max_age_duration\030" +
+      "\002 \001(\003R\016maxAgeDuration\032/\n\tValidator\022\"\n\rpu" +
+      "b_key_types\030\001 \003(\tR\013pubKeyTypes\032*\n\007Versio" +
+      "n\022\037\n\013app_version\030\001 \001(\004R\nappVersion\032\207/\n\010A" +
+      "ppState\022\030\n\007version\030\023 \001(\tR\007version\022\022\n\004not" +
+      "e\030\n \001(\tR\004note\022K\n\nvalidators\030\002 \003(\0132+.api_" +
+      "pb.GenesisResponse.AppState.ValidatorsR\n" +
+      "validators\022J\n\ncandidates\030\003 \003(\0132*.api_pb." +
+      "GenesisResponse.AppState.CandidateR\ncand" +
+      "idates\022`\n\022deleted_candidates\030\024 \003(\01321.api" +
+      "_pb.GenesisResponse.AppState.DeletedCand" +
+      "idateR\021deletedCandidates\022;\n\005coins\030\005 \003(\0132" +
+      "%.api_pb.GenesisResponse.AppState.CoinR\005" +
+      "coins\022N\n\014frozen_funds\030\006 \003(\0132+.api_pb.Gen" +
+      "esisResponse.AppState.FrozenFundR\013frozen" +
+      "Funds\0222\n\025block_list_candidates\030\022 \003(\tR\023bl" +
+      "ockListCandidates\022E\n\010waitlist\030\r \003(\0132).ap" +
+      "i_pb.GenesisResponse.AppState.WaitlistR\010" +
+      "waitlist\022D\n\010accounts\030\016 \003(\0132(.api_pb.Gene" +
+      "sisResponse.AppState.AccountR\010accounts\022K" +
+      "\n\013halt_blocks\030\014 \003(\0132*.api_pb.GenesisResp" +
+      "onse.AppState.HaltBlockR\nhaltBlocks\022;\n\005p" +
+      "ools\030\017 \003(\0132%.api_pb.GenesisResponse.AppS" +
+      "tate.PoolR\005pools\022\"\n\rnext_order_id\030\025 \001(\004R" +
+      "\013nextOrderId\022K\n\ncommission\030\020 \001(\0132+.api_p" +
+      "b.GenesisResponse.AppState.CommissionR\nc" +
+      "ommission\022Z\n\020commission_votes\030\021 \003(\0132/.ap" +
+      "i_pb.GenesisResponse.AppState.Commission" +
+      "VoteR\017commissionVotes\022N\n\014update_votes\030\026 " +
+      "\003(\0132+.api_pb.GenesisResponse.AppState.Up" +
+      "dateVoteR\013updateVotes\022\037\n\013used_checks\030\013 \003" +
+      "(\tR\nusedChecks\022\027\n\007max_gas\030\007 \001(\004R\006maxGas\022" +
+      "#\n\rtotal_slashed\030\010 \001(\tR\014totalSlashed\022D\n\010" +
+      "versions\030\027 \003(\0132(.api_pb.GenesisResponse." +
+      "AppState.VersionR\010versions\022\032\n\010emission\030\030" +
+      " \001(\tR\010emission\022M\n\013prev_reward\030\031 \001(\0132,.ap" +
+      "i_pb.GenesisResponse.AppState.RewardPric" +
+      "eR\nprevReward\032\231\001\n\nValidators\022&\n\017total_bi" +
+      "p_stake\030\004 \001(\tR\rtotalBipStake\022\035\n\npublic_k" +
+      "ey\030\001 \001(\tR\tpublicKey\022!\n\014accum_reward\030\002 \001(" +
+      "\tR\013accumReward\022!\n\014absent_times\030\003 \001(\tR\013ab" +
+      "sentTimes\032\355\004\n\tCandidate\022\016\n\002id\030\n \001(\004R\002id\022" +
+      "%\n\016reward_address\030\001 \001(\tR\rrewardAddress\022#" +
+      "\n\rowner_address\030\002 \001(\tR\014ownerAddress\022\'\n\017c" +
+      "ontrol_address\030\003 \001(\tR\016controlAddress\022&\n\017" +
+      "total_bip_stake\030\004 \001(\tR\rtotalBipStake\022\035\n\n" +
+      "public_key\030\005 \001(\tR\tpublicKey\022\036\n\ncommissio" +
+      "n\030\006 \001(\004R\ncommission\022H\n\006stakes\030\007 \003(\01320.ap" +
+      "i_pb.GenesisResponse.AppState.Candidate." +
+      "StakeR\006stakes\022J\n\007updates\030\010 \003(\01320.api_pb." +
+      "GenesisResponse.AppState.Candidate.Stake" +
+      "R\007updates\022\026\n\006status\030\t \001(\003R\006status\022!\n\014jai" +
+      "led_until\030\013 \001(\003R\013jailedUntil\022=\n\033last_edi" +
+      "t_commission_height\030\014 \001(\003R\030lastEditCommi" +
+      "ssionHeight\032d\n\005Stake\022\024\n\005owner\030\004 \001(\tR\005own" +
+      "er\022\022\n\004coin\030\001 \001(\004R\004coin\022\024\n\005value\030\002 \001(\tR\005v" +
+      "alue\022\033\n\tbip_value\030\003 \001(\tR\010bipValue\032A\n\020Del" +
+      "etedCandidate\022\016\n\002id\030\001 \001(\004R\002id\022\035\n\npublic_" +
+      "key\030\002 \001(\tR\tpublicKey\032\272\002\n\004Coin\022\016\n\002id\030\t \001(" +
+      "\004R\002id\022\022\n\004name\030\001 \001(\tR\004name\022\026\n\006symbol\030\002 \001(" +
+      "\tR\006symbol\022\026\n\006volume\030\003 \001(\tR\006volume\022\020\n\003crr" +
+      "\030\004 \001(\004R\003crr\022\030\n\007reserve\030\005 \001(\tR\007reserve\022\035\n" +
+      "\nmax_supply\030\006 \001(\tR\tmaxSupply\022\030\n\007version\030" +
+      "\007 \001(\004R\007version\022A\n\rowner_address\030\010 \001(\0132\034." +
+      "google.protobuf.StringValueR\014ownerAddres" +
+      "s\022\032\n\010mintable\030\n \001(\010R\010mintable\022\032\n\010burnabl" +
+      "e\030\013 \001(\010R\010burnable\032\226\002\n\nFrozenFund\022\026\n\006heig" +
+      "ht\030\005 \001(\004R\006height\022\030\n\007address\030\001 \001(\tR\007addre" +
+      "ss\022A\n\rcandidate_key\030\002 \001(\0132\034.google.proto" +
+      "buf.StringValueR\014candidateKey\022!\n\014candida" +
+      "te_id\030\006 \001(\004R\013candidateId\022\022\n\004coin\030\003 \001(\004R\004" +
+      "coin\022\024\n\005value\030\004 \001(\tR\005value\022F\n\020to_candida" +
+      "te_key\030\007 \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\016toCandidateKey\032m\n\010Waitlist\022!\n\014candid" +
+      "ate_id\030\001 \001(\004R\013candidateId\022\024\n\005owner\030\002 \001(\t" +
+      "R\005owner\022\022\n\004coin\030\003 \001(\004R\004coin\022\024\n\005value\030\004 \001" +
+      "(\tR\005value\032\261\003\n\007Account\022\030\n\007address\030\001 \001(\tR\007" +
+      "address\022J\n\007balance\030\002 \003(\01320.api_pb.Genesi" +
+      "sResponse.AppState.Account.BalanceR\007bala" +
+      "nce\022\024\n\005nonce\030\003 \001(\004R\005nonce\022Z\n\rmultisig_da" +
+      "ta\030\004 \001(\01325.api_pb.GenesisResponse.AppSta" +
+      "te.Account.MultisigDataR\014multisigData\0223\n" +
+      "\026lock_stake_until_block\030\005 \001(\004R\023lockStake" +
+      "UntilBlock\0323\n\007Balance\022\022\n\004coin\030\001 \001(\004R\004coi" +
+      "n\022\024\n\005value\030\002 \001(\tR\005value\032d\n\014MultisigData\022" +
+      "\034\n\tthreshold\030\001 \001(\004R\tthreshold\022\030\n\007weights" +
+      "\030\002 \003(\004R\007weights\022\034\n\taddresses\030\003 \003(\tR\taddr" +
+      "esses\032H\n\tHaltBlock\022\026\n\006height\030\001 \001(\004R\006heig" +
+      "ht\022#\n\rcandidate_key\030\002 \001(\tR\014candidateKey\032" +
+      "\324\002\n\004Pool\022\024\n\005coin0\030\001 \001(\004R\005coin0\022\024\n\005coin1\030" +
+      "\002 \001(\004R\005coin1\022\032\n\010reserve0\030\003 \001(\tR\010reserve0" +
+      "\022\032\n\010reserve1\030\004 \001(\tR\010reserve1\022\016\n\002id\030\005 \001(\004" +
+      "R\002id\022C\n\006orders\030\006 \003(\0132+.api_pb.GenesisRes" +
+      "ponse.AppState.Pool.OrderR\006orders\032\222\001\n\005Or" +
+      "der\022\027\n\007is_sale\030\001 \001(\010R\006isSale\022\030\n\007volume0\030" +
+      "\002 \001(\tR\007volume0\022\030\n\007volume1\030\003 \001(\tR\007volume1" +
+      "\022\016\n\002id\030\004 \001(\004R\002id\022\024\n\005owner\030\005 \001(\tR\005owner\022\026" +
+      "\n\006height\030\006 \001(\004R\006height\032\272\016\n\nCommission\022\022\n" +
+      "\004coin\030\003 \001(\004R\004coin\022!\n\014payload_byte\030\004 \001(\tR" +
+      "\013payloadByte\022\022\n\004send\030\005 \001(\tR\004send\022\035\n\nbuy_" +
+      "bancor\030& \001(\tR\tbuyBancor\022\037\n\013sell_bancor\030\'" +
+      " \001(\tR\nsellBancor\022&\n\017sell_all_bancor\030( \001(" +
+      "\tR\rsellAllBancor\022\"\n\rbuy_pool_base\030) \001(\tR" +
+      "\013buyPoolBase\022$\n\016buy_pool_delta\0305 \001(\tR\014bu" +
+      "yPoolDelta\022$\n\016sell_pool_base\030* \001(\tR\014sell" +
+      "PoolBase\022&\n\017sell_pool_delta\0306 \001(\tR\rsellP" +
+      "oolDelta\022+\n\022sell_all_pool_base\030+ \001(\tR\017se" +
+      "llAllPoolBase\022-\n\023sell_all_pool_delta\0307 \001" +
+      "(\tR\020sellAllPoolDelta\022%\n\016create_ticker3\030\007" +
+      " \001(\tR\rcreateTicker3\022%\n\016create_ticker4\030\010 " +
+      "\001(\tR\rcreateTicker4\022%\n\016create_ticker5\030\t \001" +
+      "(\tR\rcreateTicker5\022%\n\016create_ticker6\030\n \001(" +
+      "\tR\rcreateTicker6\022*\n\021create_ticker7_10\030\013 " +
+      "\001(\tR\017createTicker710\022\037\n\013create_coin\030\" \001(" +
+      "\tR\ncreateCoin\022!\n\014create_token\030# \001(\tR\013cre" +
+      "ateToken\022#\n\rrecreate_coin\030$ \001(\tR\014recreat" +
+      "eCoin\022%\n\016recreate_token\030% \001(\tR\rrecreateT" +
+      "oken\022+\n\021declare_candidacy\030\r \001(\tR\020declare" +
+      "Candidacy\022\032\n\010delegate\030\016 \001(\tR\010delegate\022\026\n" +
+      "\006unbond\030\017 \001(\tR\006unbond\022!\n\014redeem_check\030\020 " +
+      "\001(\tR\013redeemCheck\022(\n\020set_candidate_on\030, \001" +
+      "(\tR\016setCandidateOn\022*\n\021set_candidate_off\030" +
+      "- \001(\tR\017setCandidateOff\022\'\n\017create_multisi" +
+      "g\030\022 \001(\tR\016createMultisig\022%\n\016multisend_bas" +
+      "e\0303 \001(\tR\rmultisendBase\022\'\n\017multisend_delt" +
+      "a\0304 \001(\tR\016multisendDelta\022%\n\016edit_candidat" +
+      "e\030\024 \001(\tR\reditCandidate\022$\n\016set_halt_block" +
+      "\030\025 \001(\tR\014setHaltBlock\022*\n\021edit_ticker_owne" +
+      "r\030\026 \001(\tR\017editTickerOwner\022#\n\redit_multisi" +
+      "g\030\027 \001(\tR\014editMultisig\0229\n\031edit_candidate_" +
+      "public_key\030\031 \001(\tR\026editCandidatePublicKey" +
+      "\022(\n\020create_swap_pool\0300 \001(\tR\016createSwapPo" +
+      "ol\022#\n\radd_liquidity\0301 \001(\tR\014addLiquidity\022" +
+      ")\n\020remove_liquidity\0302 \001(\tR\017removeLiquidi" +
+      "ty\022:\n\031edit_candidate_commission\030\034 \001(\tR\027e" +
+      "ditCandidateCommission\022\035\n\nmint_token\030. \001" +
+      "(\tR\tmintToken\022\035\n\nburn_token\030/ \001(\tR\tburnT" +
+      "oken\022\'\n\017vote_commission\030\037 \001(\tR\016voteCommi" +
+      "ssion\022\037\n\013vote_update\030  \001(\tR\nvoteUpdate\022\033" +
+      "\n\tfailed_tx\0308 \001(\tR\010failedTx\022&\n\017add_limit" +
+      "_order\0309 \001(\tR\raddLimitOrder\022,\n\022remove_li" +
+      "mit_order\030: \001(\tR\020removeLimitOrder\022\035\n\nmov" +
+      "e_stake\030; \001(\tR\tmoveStake\022\035\n\nlock_stake\030<" +
+      " \001(\tR\tlockStake\022\022\n\004lock\030= \001(\tR\004lock\032\213\001\n\016" +
+      "CommissionVote\022\026\n\006height\030\001 \001(\004R\006height\022\024" +
+      "\n\005votes\030\002 \003(\tR\005votes\022K\n\ncommission\030\003 \001(\013" +
+      "2+.api_pb.GenesisResponse.AppState.Commi" +
+      "ssionR\ncommission\032T\n\nUpdateVote\022\026\n\006heigh" +
+      "t\030\001 \001(\004R\006height\022\024\n\005votes\030\002 \003(\tR\005votes\022\030\n" +
+      "\007version\030\003 \001(\tR\007version\0325\n\007Version\022\026\n\006he" +
+      "ight\030\001 \001(\004R\006height\022\022\n\004name\030\002 \001(\tR\004name\032\213" +
+      "\001\n\013RewardPrice\022\022\n\004time\030\001 \001(\004R\004time\022\035\n\nam" +
+      "ount_bip\030\002 \001(\tR\tamountBip\022\037\n\013amount_usdt" +
+      "\030\003 \001(\tR\namountUsdt\022\020\n\003off\030\004 \001(\010R\003off\022\026\n\006" +
+      "reward\030\005 \001(\tR\006reward\"9\n\023MinGasPriceRespo" +
+      "nse\022\"\n\rmin_gas_price\030\003 \001(\004R\013minGasPrice\"" +
+      "\211\001\n\014BlockRequest\022\026\n\006height\030\001 \001(\004R\006height" +
+      "\022*\n\006fields\030\002 \003(\0162\022.api_pb.BlockFieldR\006fi" +
+      "elds\022\035\n\nfailed_txs\030\003 \001(\010R\tfailedTxs\022\026\n\006e" +
+      "vents\030\004 \001(\010R\006events\"\306\005\n\rBlockResponse\022\022\n" +
+      "\004hash\030\001 \001(\tR\004hash\022\026\n\006height\030\002 \001(\004R\006heigh" +
+      "t\022\022\n\004time\030\003 \001(\tR\004time\022+\n\021transaction_cou" +
+      "nt\030\004 \001(\004R\020transactionCount\022?\n\014transactio" +
+      "ns\030\006 \003(\0132\033.api_pb.TransactionResponseR\014t" +
+      "ransactions\022?\n\014block_reward\030\017 \001(\0132\034.goog" +
+      "le.protobuf.StringValueR\013blockReward\022N\n\024" +
+      "locked_stake_rewards\030\020 \001(\0132\034.google.prot" +
+      "obuf.StringValueR\022lockedStakeRewards\022\022\n\004" +
+      "size\030\010 \001(\004R\004size\022\032\n\010proposer\030\t \001(\tR\010prop" +
+      "oser\022?\n\nvalidators\030\n \003(\0132\037.api_pb.BlockR" +
+      "esponse.ValidatorR\nvalidators\022:\n\010evidenc" +
+      "e\030\r \001(\0132\036.api_pb.BlockResponse.EvidenceR" +
+      "\010evidence\022\026\n\006missed\030\014 \003(\tR\006missed\022,\n\006eve" +
+      "nts\030\016 \003(\0132\024.google.protobuf.AnyR\006events\032" +
+      "B\n\tValidator\022\035\n\npublic_key\030\001 \001(\tR\tpublic" +
+      "Key\022\026\n\006signed\030\002 \001(\010R\006signed\032?\n\010Evidence\022" +
+      "3\n\010evidence\030\001 \003(\0132\027.google.protobuf.Stru" +
+      "ctR\010evidence\",\n\022MaxGasPriceRequest\022\026\n\006he" +
+      "ight\030\001 \001(\004R\006height\"9\n\023MaxGasPriceRespons" +
+      "e\022\"\n\rmax_gas_price\030\003 \001(\004R\013maxGasPrice\"`\n" +
+      "\016AddressRequest\022\030\n\007address\030\001 \001(\tR\007addres" +
+      "s\022\026\n\006height\030\002 \001(\004R\006height\022\034\n\tdelegated\030\004" +
+      " \001(\010R\tdelegated\"e\n\016AddressBalance\022 \n\004coi" +
+      "n\030\001 \001(\0132\014.api_pb.CoinR\004coin\022\024\n\005value\030\002 \001" +
+      "(\tR\005value\022\033\n\tbip_value\030\003 \001(\tR\010bipValue\"\234" +
+      "\001\n\027AddressDelegatedBalance\022 \n\004coin\030\001 \001(\013" +
+      "2\014.api_pb.CoinR\004coin\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\022\033\n\tbip_value\030\003 \001(\tR\010bipValue\022,\n\022deleg" +
+      "ate_bip_value\030\004 \001(\tR\020delegateBipValue\"\341\002" +
+      "\n\017AddressResponse\0220\n\007balance\030\001 \003(\0132\026.api" +
+      "_pb.AddressBalanceR\007balance\022=\n\tdelegated" +
+      "\030\003 \003(\0132\037.api_pb.AddressDelegatedBalanceR" +
+      "\tdelegated\022,\n\005total\030\004 \003(\0132\026.api_pb.Addre" +
+      "ssBalanceR\005total\022+\n\021transaction_count\030\002 " +
+      "\001(\004R\020transactionCount\022\033\n\tbip_value\030\005 \001(\t" +
+      "R\010bipValue\0227\n\030locked_stake_until_block\030\007" +
+      " \001(\004R\025lockedStakeUntilBlock\022,\n\010multisig\030" +
+      "\006 \001(\0132\020.api_pb.MultisigR\010multisig\"`\n\010Mul" +
+      "tisig\022\034\n\tthreshold\030\001 \001(\004R\tthreshold\022\030\n\007w",
+      "eights\030\002 \003(\004R\007weights\022\034\n\taddresses\030\003 \003(\t" +
+      "R\taddresses\"f\n\020AddressesRequest\022\034\n\taddre" +
+      "sses\030\001 \003(\tR\taddresses\022\026\n\006height\030\002 \001(\004R\006h" +
+      "eight\022\034\n\tdelegated\030\004 \001(\010R\tdelegated\"\226\004\n\021" +
+      "AddressesResponse\022F\n\taddresses\030\003 \003(\0132(.a" +
+      "pi_pb.AddressesResponse.AddressesEntryR\t" +
+      "addresses\032\330\002\n\006Result\0220\n\007balance\030\002 \003(\0132\026." +
+      "api_pb.AddressBalanceR\007balance\022=\n\tdelega" +
+      "ted\030\006 \003(\0132\037.api_pb.AddressDelegatedBalan" +
+      "ceR\tdelegated\022,\n\005total\030\004 \003(\0132\026.api_pb.Ad" +
+      "dressBalanceR\005total\022+\n\021transaction_count" +
+      "\030\003 \001(\004R\020transactionCount\022\033\n\tbip_value\030\005 " +
+      "\001(\tR\010bipValue\0227\n\030locked_stake_until_bloc" +
+      "k\030\007 \001(\004R\025lockedStakeUntilBlock\022,\n\010multis" +
+      "ig\030\010 \001(\0132\020.api_pb.MultisigR\010multisig\032^\n\016" +
+      "AddressesEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005valu" +
+      "e\030\002 \001(\0132 .api_pb.AddressesResponse.Resul" +
+      "tR\005value:\0028\001\"q\n\020CandidateRequest\022\035\n\npubl" +
+      "ic_key\030\001 \001(\tR\tpublicKey\022\026\n\006height\030\002 \001(\004R" +
+      "\006height\022&\n\017not_show_stakes\030\004 \001(\010R\rnotSho" +
+      "wStakes\"\263\005\n\021CandidateResponse\022\016\n\002id\030\016 \001(" +
+      "\004R\002id\022%\n\016reward_address\030\001 \001(\tR\rrewardAdd" +
+      "ress\022#\n\rowner_address\030\n \001(\tR\014ownerAddres" +
+      "s\022\'\n\017control_address\030\013 \001(\tR\016controlAddre" +
+      "ss\022\037\n\013total_stake\030\002 \001(\tR\ntotalStake\022\035\n\np" +
+      "ublic_key\030\003 \001(\tR\tpublicKey\022\036\n\ncommission" +
+      "\030\004 \001(\004R\ncommission\022;\n\nused_slots\030\007 \001(\0132\034" +
+      ".google.protobuf.UInt64ValueR\tusedSlots\022" +
+      ";\n\nuniq_users\030\010 \001(\0132\034.google.protobuf.UI" +
+      "nt64ValueR\tuniqUsers\0229\n\tmin_stake\030\t \001(\0132" +
+      "\034.google.protobuf.StringValueR\010minStake\022" +
+      "7\n\006stakes\030\005 \003(\0132\037.api_pb.CandidateRespon" +
+      "se.StakeR\006stakes\022\026\n\006status\030\006 \001(\004R\006status" +
+      "\022\034\n\tvalidator\030\014 \001(\010R\tvalidator\022!\n\014jailed" +
+      "_until\030\r \001(\004R\013jailedUntil\032r\n\005Stake\022\024\n\005ow" +
+      "ner\030\001 \001(\tR\005owner\022 \n\004coin\030\002 \001(\0132\014.api_pb." +
+      "CoinR\004coin\022\024\n\005value\030\003 \001(\tR\005value\022\033\n\tbip_" +
+      "value\030\004 \001(\tR\010bipValue\"\371\001\n\021CandidatesRequ" +
+      "est\022\026\n\006height\030\001 \001(\004R\006height\022%\n\016include_s" +
+      "takes\030\002 \001(\010R\rincludeStakes\022&\n\017not_show_s" +
+      "takes\030\004 \001(\010R\rnotShowStakes\022A\n\006status\030\003 \001" +
+      "(\0162).api_pb.CandidatesRequest.CandidateS" +
+      "tatusR\006status\":\n\017CandidateStatus\022\007\n\003all\020" +
+      "\000\022\007\n\003off\020\001\022\006\n\002on\020\002\022\r\n\tvalidator\020\003\"O\n\022Can" +
+      "didatesResponse\0229\n\ncandidates\030\003 \003(\0132\031.ap" +
+      "i_pb.CandidateResponseR\ncandidates\"7\n\rCo" +
+      "inIdRequest\022\026\n\006height\030\001 \001(\004R\006height\022\016\n\002i" +
+      "d\030\002 \001(\004R\002id\"A\n\017CoinInfoRequest\022\026\n\006height" +
+      "\030\001 \001(\004R\006height\022\026\n\006symbol\030\002 \001(\tR\006symbol\"\273" +
+      "\002\n\020CoinInfoResponse\022\016\n\002id\030\006 \001(\004R\002id\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022\026\n\006symbol\030\002 \001(\tR\006symbol\022" +
+      "\026\n\006volume\030\003 \001(\tR\006volume\022\020\n\003crr\030\004 \001(\004R\003cr" +
+      "r\022\'\n\017reserve_balance\030\005 \001(\tR\016reserveBalan" +
+      "ce\022\035\n\nmax_supply\030\010 \001(\tR\tmaxSupply\022A\n\rown" +
+      "er_address\030\007 \001(\0132\034.google.protobuf.Strin" +
+      "gValueR\014ownerAddress\022\032\n\010mintable\030\t \001(\010R\010" +
+      "mintable\022\032\n\010burnable\030\n \001(\010R\010burnable\"S\n\027" +
+      "SendTransactionResponse\022\022\n\004code\030\001 \001(\004R\004c" +
+      "ode\022\020\n\003log\030\003 \001(\tR\003log\022\022\n\004hash\030\004 \001(\tR\004has" +
+      "h\"(\n\026SendTransactionRequest\022\016\n\002tx\030\001 \001(\tR" +
+      "\002tx\"\300\t\n\023TransactionResponse\022\022\n\004hash\030\001 \001(" +
+      "\tR\004hash\022\025\n\006raw_tx\030\002 \001(\tR\005rawTx\022\026\n\006height" +
+      "\030\003 \001(\004R\006height\022\024\n\005index\030\004 \001(\004R\005index\022\022\n\004" +
+      "from\030\005 \001(\tR\004from\022\024\n\005nonce\030\006 \001(\004R\005nonce\022\020" +
+      "\n\003gas\030\007 \001(\004R\003gas\022\033\n\tgas_price\030\010 \001(\004R\010gas" +
+      "Price\022\'\n\010gas_coin\030\t \001(\0132\014.api_pb.CoinR\007g" +
+      "asCoin\022\031\n\010type_hex\030\021 \001(\tR\007typeHex\022\022\n\004typ" +
+      "e\030\n \001(\004R\004type\022(\n\004data\030\013 \001(\0132\024.google.pro" +
+      "tobuf.AnyR\004data\022\030\n\007payload\030\014 \001(\014R\007payloa" +
+      "d\022!\n\014service_data\030\020 \001(\014R\013serviceData\0229\n\004" +
+      "tags\030\r \003(\0132%.api_pb.TransactionResponse." +
+      "TagsEntryR\004tags\022\022\n\004code\030\016 \001(\004R\004code\022\020\n\003l" +
+      "og\030\017 \001(\tR\003log\0327\n\tTagsEntry\022\020\n\003key\030\001 \001(\tR" +
+      "\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\235\005\n\004Type\022" +
+      "\005\n\001_\020\000\022\010\n\004Send\020\001\022\014\n\010SellCoin\020\002\022\017\n\013SellAl" +
+      "lCoin\020\003\022\013\n\007BuyCoin\020\004\022\016\n\nCreateCoin\020\005\022\024\n\020" +
+      "DeclareCandidacy\020\006\022\014\n\010Delegate\020\007\022\n\n\006Unbo" +
+      "nd\020\010\022\017\n\013RedeemCheck\020\t\022\026\n\022SetCandidateOnl" +
+      "ine\020\n\022\027\n\023SetCandidateOffline\020\013\022\022\n\016Create" +
+      "Multisig\020\014\022\r\n\tMultisend\020\r\022\021\n\rEditCandida" +
+      "te\020\016\022\020\n\014SetHaltBlock\020\017\022\020\n\014RecreateCoin\020\020" +
+      "\022\021\n\rEditCoinOwner\020\021\022\020\n\014EditMultisig\020\022\022\r\n" +
+      "\tPriceVote\020\023\022\032\n\026EditCandidatePublicKey\020\024" +
+      "\022\020\n\014AddLiquidity\020\025\022\023\n\017RemoveLiquidity\020\026\022" +
+      "\020\n\014SellSwapPool\020\027\022\017\n\013BuySwapPool\020\030\022\023\n\017Se" +
+      "llAllSwapPool\020\031\022\033\n\027EditCommissionCandida" +
+      "te\020\032\022\r\n\tMoveStake\020\033\022\r\n\tMintToken\020\034\022\r\n\tBu" +
+      "rnToken\020\035\022\017\n\013CreateToken\020\036\022\021\n\rRecreateTo" +
+      "ken\020\037\022\022\n\016VoteCommission\020 \022\016\n\nVoteUpdate\020" +
+      "!\022\022\n\016CreateSwapPool\020\"\022\021\n\rAddLimitOrder\020#" +
+      "\022\024\n\020RemoveLimitOrder\020$\"(\n\022TransactionReq" +
+      "uest\022\022\n\004hash\030\001 \001(\tR\004hash\"W\n\024Transactions" +
+      "Response\022?\n\014transactions\030\003 \003(\0132\033.api_pb." +
+      "TransactionResponseR\014transactions\"Z\n\023Tra" +
+      "nsactionsRequest\022\024\n\005query\030\001 \001(\tR\005query\022\022" +
+      "\n\004page\030\002 \001(\005R\004page\022\031\n\010per_page\030\003 \001(\005R\007pe" +
+      "rPage\"\245\003\n\026EstimateCoinBuyRequest\022%\n\016coin" +
+      "_id_to_buy\030\001 \001(\004H\000R\013coinIdToBuy\022 \n\013coin_" +
+      "to_buy\030\005 \001(\tH\000R\tcoinToBuy\022\'\n\017coin_id_to_" +
+      "sell\030\002 \001(\004H\001R\014coinIdToSell\022\"\n\014coin_to_se" +
+      "ll\030\006 \001(\tH\001R\ncoinToSell\022 \n\014value_to_buy\030\003" +
+      " \001(\tR\nvalueToBuy\022\026\n\006height\030\004 \001(\004R\006height" +
+      "\022.\n\022coin_id_commission\030\t \001(\004H\002R\020coinIdCo" +
+      "mmission\022)\n\017coin_commission\030\n \001(\tH\002R\016coi" +
+      "nCommission\022-\n\tswap_from\030\010 \001(\0162\020.api_pb." +
+      "SwapFromR\010swapFrom\022\024\n\005route\030\013 \003(\004R\005route" +
+      "B\005\n\003buyB\006\n\004sellB\014\n\ncommission\"\203\001\n\027Estima" +
+      "teCoinBuyResponse\022\031\n\010will_pay\030\001 \001(\tR\007wil" +
+      "lPay\022\036\n\ncommission\030\002 \001(\tR\ncommission\022-\n\t" +
+      "swap_from\030\003 \001(\0162\020.api_pb.SwapFromR\010swapF" +
+      "rom\"\250\003\n\027EstimateCoinSellRequest\022%\n\016coin_" +
+      "id_to_buy\030\001 \001(\004H\000R\013coinIdToBuy\022 \n\013coin_t" +
+      "o_buy\030\005 \001(\tH\000R\tcoinToBuy\022\'\n\017coin_id_to_s" +
+      "ell\030\002 \001(\004H\001R\014coinIdToSell\022\"\n\014coin_to_sel" +
+      "l\030\006 \001(\tH\001R\ncoinToSell\022\"\n\rvalue_to_sell\030\003" +
+      " \001(\tR\013valueToSell\022\026\n\006height\030\004 \001(\004R\006heigh" +
+      "t\022.\n\022coin_id_commission\030\t \001(\004H\002R\020coinIdC" +
+      "ommission\022)\n\017coin_commission\030\n \001(\tH\002R\016co" +
+      "inCommission\022-\n\tswap_from\030\010 \001(\0162\020.api_pb" +
+      ".SwapFromR\010swapFrom\022\024\n\005route\030\013 \003(\004R\005rout" +
+      "eB\005\n\003buyB\006\n\004sellB\014\n\ncommission\"\204\001\n\030Estim" +
+      "ateCoinSellResponse\022\031\n\010will_get\030\001 \001(\tR\007w" +
+      "illGet\022\036\n\ncommission\030\002 \001(\tR\ncommission\022-" +
+      "\n\tswap_from\030\003 \001(\0162\020.api_pb.SwapFromR\010swa" +
+      "pFrom\"\337\002\n\032EstimateCoinSellAllRequest\022%\n\016" +
+      "coin_id_to_buy\030\001 \001(\004H\000R\013coinIdToBuy\022 \n\013c" +
+      "oin_to_buy\030\007 \001(\tH\000R\tcoinToBuy\022\'\n\017coin_id" +
+      "_to_sell\030\002 \001(\004H\001R\014coinIdToSell\022\"\n\014coin_t" +
+      "o_sell\030\006 \001(\tH\001R\ncoinToSell\022\"\n\rvalue_to_s" +
+      "ell\030\003 \001(\tR\013valueToSell\022\033\n\tgas_price\030\004 \001(" +
+      "\004R\010gasPrice\022\026\n\006height\030\005 \001(\004R\006height\022-\n\ts" +
+      "wap_from\030\010 \001(\0162\020.api_pb.SwapFromR\010swapFr" +
+      "om\022\024\n\005route\030\013 \003(\004R\005routeB\005\n\003buyB\006\n\004sell\"" +
+      "g\n\033EstimateCoinSellAllResponse\022\031\n\010will_g" +
+      "et\030\001 \001(\tR\007willGet\022-\n\tswap_from\030\002 \001(\0162\020.a" +
+      "pi_pb.SwapFromR\010swapFrom\"E\n\033EstimateTxCo" +
+      "mmissionRequest\022\016\n\002tx\030\001 \001(\tR\002tx\022\026\n\006heigh" +
+      "t\030\002 \001(\004R\006height\">\n\034EstimateTxCommissionR" +
+      "esponse\022\036\n\ncommission\030\001 \001(\tR\ncommission\"" +
+      "?\n\rEventsRequest\022\026\n\006height\030\001 \001(\004R\006height" +
+      "\022\026\n\006search\030\002 \003(\tR\006search\"A\n\016EventsRespon" +
+      "se\022/\n\006events\030\001 \003(\0132\027.google.protobuf.Str" +
+      "uctR\006events\"L\n\023MissedBlocksRequest\022\035\n\npu" +
+      "blic_key\030\001 \001(\tR\tpublicKey\022\026\n\006height\030\002 \001(" +
+      "\004R\006height\"k\n\024MissedBlocksResponse\022#\n\rmis" +
+      "sed_blocks\030\001 \001(\tR\014missedBlocks\022.\n\023missed" +
+      "_blocks_count\030\002 \001(\003R\021missedBlocksCount\"\271" +
+      "\001\n\026UnconfirmedTxsResponse\022+\n\021transaction" +
+      "_count\030\001 \001(\004R\020transactionCount\022-\n\022total_" +
+      "transactions\030\002 \001(\004R\021totalTransactions\022\037\n" +
+      "\013total_bytes\030\003 \001(\004R\ntotalBytes\022\"\n\014transa" +
+      "ctions\030\004 \003(\tR\014transactions\"-\n\025Unconfirme" +
+      "dTxsRequest\022\024\n\005limit\030\001 \001(\005R\005limit\"+\n\021Val" +
+      "idatorsRequest\022\026\n\006height\030\001 \001(\004R\006height\"\243" +
+      "\001\n\022ValidatorsResponse\022A\n\nvalidators\030\003 \003(" +
+      "\0132!.api_pb.ValidatorsResponse.ResultR\nva" +
+      "lidators\032J\n\006Result\022\035\n\npublic_key\030\001 \001(\tR\t" +
+      "publicKey\022!\n\014voting_power\030\002 \001(\004R\013votingP" +
+      "ower\"(\n\020SubscribeRequest\022\024\n\005query\030\001 \001(\tR" +
+      "\005query\"\302\001\n\021SubscribeResponse\022\024\n\005query\030\001 " +
+      "\001(\tR\005query\022+\n\004data\030\002 \001(\0132\027.google.protob" +
+      "uf.StructR\004data\0227\n\006events\030\003 \003(\0132\037.api_pb" +
+      ".SubscribeResponse.EventR\006events\0321\n\005Even" +
+      "t\022\020\n\003key\030\001 \001(\tR\003key\022\026\n\006events\030\002 \003(\tR\006eve" +
+      "nts\"&\n\014HaltsRequest\022\026\n\006height\030\001 \001(\004R\006hei" +
+      "ght\"0\n\rHaltsResponse\022\037\n\013public_keys\030\001 \003(" +
+      "\tR\npublicKeys\"x\n\rFrozenRequest\022\030\n\007addres" +
+      "s\030\001 \001(\tR\007address\0225\n\007coin_id\030\002 \001(\0132\034.goog" +
+      "le.protobuf.UInt64ValueR\006coinId\022\026\n\006heigh" +
+      "t\030\003 \001(\004R\006height\"\245\001\n\020FrozenAllRequest\022!\n\014" +
+      "start_height\030\001 \001(\004R\013startHeight\022\035\n\nend_h" +
+      "eight\030\002 \001(\004R\tendHeight\022\026\n\006height\030\003 \001(\004R\006" +
+      "height\022\034\n\taddresses\030\004 \003(\tR\taddresses\022\031\n\010" +
+      "coin_ids\030\005 \003(\004R\007coinIds\"\320\002\n\016FrozenRespon" +
+      "se\0225\n\006frozen\030\001 \003(\0132\035.api_pb.FrozenRespon" +
+      "se.FrozenR\006frozen\032\206\002\n\006Frozen\022\026\n\006height\030\001" +
+      " \001(\004R\006height\022\030\n\007address\030\002 \001(\tR\007address\022A" +
+      "\n\rcandidate_key\030\010 \001(\0132\034.google.protobuf." +
+      "StringValueR\014candidateKey\022 \n\004coin\030\004 \001(\0132" +
+      "\014.api_pb.CoinR\004coin\022\024\n\005value\030\005 \001(\tR\005valu" +
+      "e\022O\n\025move_to_candidate_key\030\007 \001(\0132\034.googl" +
+      "e.protobuf.StringValueR\022moveToCandidateK" +
+      "ey\"b\n\017WaitListRequest\022\035\n\npublic_key\030\001 \001(" +
+      "\tR\tpublicKey\022\030\n\007address\030\002 \001(\tR\007address\022\026" +
+      "\n\006height\030\003 \001(\004R\006height\"\244\001\n\020WaitListRespo" +
+      "nse\0221\n\004list\030\001 \003(\0132\035.api_pb.WaitListRespo" +
+      "nse.WaitR\004list\032]\n\004Wait\022\035\n\npublic_key\030\003 \001" +
+      "(\tR\tpublicKey\022 \n\004coin\030\001 \001(\0132\014.api_pb.Coi" +
+      "nR\004coin\022\024\n\005value\030\002 \001(\tR\005value*r\n\nBlockFi" +
+      "eld\022\020\n\014transactions\020\000\022\n\n\006missed\020\001\022\020\n\014blo" +
+      "ck_reward\020\002\022\010\n\004size\020\003\022\014\n\010proposer\020\004\022\016\n\nv" +
+      "alidators\020\005\022\014\n\010evidence\020\006*-\n\010SwapFrom\022\013\n" +
+      "\007optimal\020\000\022\n\n\006bancor\020\001\022\010\n\004pool\020\002BV\n\033coun" +
+      "ters.minter.grpc.clientP\001Z5github.com/Mi" +
+      "nterTeam/node-grpc-gateway/gen/go;api_pb" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -978,26 +1248,38 @@ public final class Resources {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_Coin_descriptor,
         new java.lang.String[] { "Id", "Symbol", });
-    internal_static_api_pb_BlocksRequest_descriptor =
+    internal_static_api_pb_BestTradeRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_api_pb_BestTradeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_BestTradeRequest_descriptor,
+        new java.lang.String[] { "SellCoin", "BuyCoin", "Amount", "Type", "Height", "MaxDepth", });
+    internal_static_api_pb_BestTradeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_pb_BestTradeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_BestTradeResponse_descriptor,
+        new java.lang.String[] { "Path", "Result", });
+    internal_static_api_pb_BlocksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_pb_BlocksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_BlocksRequest_descriptor,
         new java.lang.String[] { "FromHeight", "ToHeight", "Fields", "FailedTxs", "Events", });
     internal_static_api_pb_BlocksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_pb_BlocksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_BlocksResponse_descriptor,
         new java.lang.String[] { "Blocks", });
     internal_static_api_pb_CommissionVotesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_pb_CommissionVotesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CommissionVotesRequest_descriptor,
         new java.lang.String[] { "TargetVersion", "Height", });
     internal_static_api_pb_CommissionVotesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_pb_CommissionVotesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CommissionVotesResponse_descriptor,
@@ -1009,49 +1291,49 @@ public final class Resources {
         internal_static_api_pb_CommissionVotesResponse_Vote_descriptor,
         new java.lang.String[] { "Price", "PublicKeys", });
     internal_static_api_pb_LimitOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_pb_LimitOrderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrderRequest_descriptor,
         new java.lang.String[] { "OrderId", "Height", });
     internal_static_api_pb_LimitOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_pb_LimitOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrderResponse_descriptor,
         new java.lang.String[] { "Id", "CoinSell", "CoinBuy", "WantSell", "WantBuy", "Price", "Owner", "Height", });
     internal_static_api_pb_LimitOrdersOfPoolRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_pb_LimitOrdersOfPoolRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrdersOfPoolRequest_descriptor,
         new java.lang.String[] { "SellCoin", "BuyCoin", "Limit", "Height", });
     internal_static_api_pb_LimitOrdersOfPoolResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_pb_LimitOrdersOfPoolResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrdersOfPoolResponse_descriptor,
         new java.lang.String[] { "PoolPrice", "Orders", });
     internal_static_api_pb_LimitOrdersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_pb_LimitOrdersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrdersRequest_descriptor,
         new java.lang.String[] { "Ids", "Height", });
     internal_static_api_pb_LimitOrdersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_pb_LimitOrdersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_LimitOrdersResponse_descriptor,
         new java.lang.String[] { "Orders", });
     internal_static_api_pb_UpdateVotesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_pb_UpdateVotesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_UpdateVotesRequest_descriptor,
         new java.lang.String[] { "TargetVersion", "Height", });
     internal_static_api_pb_UpdateVotesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_pb_UpdateVotesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_UpdateVotesResponse_descriptor,
@@ -1063,13 +1345,13 @@ public final class Resources {
         internal_static_api_pb_UpdateVotesResponse_Vote_descriptor,
         new java.lang.String[] { "Version", "PublicKeys", });
     internal_static_api_pb_VersionNetworkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_pb_VersionNetworkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_VersionNetworkRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_pb_VersionNetworkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_pb_VersionNetworkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_VersionNetworkResponse_descriptor,
@@ -1081,37 +1363,61 @@ public final class Resources {
         internal_static_api_pb_VersionNetworkResponse_Version_descriptor,
         new java.lang.String[] { "Name", "Height", });
     internal_static_api_pb_PriceCommissionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_pb_PriceCommissionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_PriceCommissionRequest_descriptor,
         new java.lang.String[] { "Height", });
     internal_static_api_pb_PriceCommissionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_pb_PriceCommissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_PriceCommissionResponse_descriptor,
-        new java.lang.String[] { "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", });
+        new java.lang.String[] { "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", "MoveStake", "LockStake", "Lock", });
+    internal_static_api_pb_SwapPoolsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_api_pb_SwapPoolsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_SwapPoolsRequest_descriptor,
+        new java.lang.String[] { "Height", "Orders", });
+    internal_static_api_pb_SwapPoolsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_pb_SwapPoolsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_SwapPoolsResponse_descriptor,
+        new java.lang.String[] { "Pools", });
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_descriptor =
+      internal_static_api_pb_SwapPoolsResponse_descriptor.getNestedTypes().get(0);
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_SwapPoolsResponse_SwapPool_descriptor,
+        new java.lang.String[] { "Id", "Price", "Coin0", "Coin1", "Amount0", "Amount1", "Liquidity", "OrdersSell", "OrdersBuy", });
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_LimitOrder_descriptor =
+      internal_static_api_pb_SwapPoolsResponse_SwapPool_descriptor.getNestedTypes().get(0);
+    internal_static_api_pb_SwapPoolsResponse_SwapPool_LimitOrder_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_SwapPoolsResponse_SwapPool_LimitOrder_descriptor,
+        new java.lang.String[] { "Id", "WantSell", "WantBuy", "Price", "Owner", "Height", });
     internal_static_api_pb_SwapPoolRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_pb_SwapPoolRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SwapPoolRequest_descriptor,
         new java.lang.String[] { "Coin0", "Coin1", "Height", });
     internal_static_api_pb_SwapPoolResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_pb_SwapPoolResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SwapPoolResponse_descriptor,
-        new java.lang.String[] { "Price", "Amount0", "Amount1", "Liquidity", });
+        new java.lang.String[] { "Id", "Price", "Amount0", "Amount1", "Liquidity", });
     internal_static_api_pb_SwapPoolProviderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_pb_SwapPoolProviderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SwapPoolProviderRequest_descriptor,
-        new java.lang.String[] { "Coin0", "Coin1", "Provider", });
+        new java.lang.String[] { "Coin0", "Coin1", "Provider", "Height", });
     internal_static_api_pb_NodeInfo_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_pb_NodeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_NodeInfo_descriptor,
@@ -1129,7 +1435,7 @@ public final class Resources {
         internal_static_api_pb_NodeInfo_Other_descriptor,
         new java.lang.String[] { "TxIndex", "RpcAddress", });
     internal_static_api_pb_NetInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_pb_NetInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_NetInfoResponse_descriptor,
@@ -1159,13 +1465,13 @@ public final class Resources {
         internal_static_api_pb_NetInfoResponse_Peer_ConnectionStatus_Channel_descriptor,
         new java.lang.String[] { "Id", "SendQueueCapacity", "SendQueueSize", "Priority", "RecentlySent", });
     internal_static_api_pb_StatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_pb_StatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_StatusResponse_descriptor,
-        new java.lang.String[] { "Version", "Network", "InitialHeight", "LatestBlockHash", "LatestAppHash", "LatestBlockHeight", "LatestBlockTime", "KeepLastStates", "TotalSlashed", "CatchingUp", "PublicKey", "NodeId", "Moniker", });
+        new java.lang.String[] { "Version", "Network", "InitialHeight", "LatestBlockHash", "LatestAppHash", "LatestBlockHeight", "LatestBlockTime", "KeepLastStates", "TotalSlashed", "CurrentEmission", "CatchingUp", "PublicKey", "NodeId", "Moniker", });
     internal_static_api_pb_GenesisResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_pb_GenesisResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_descriptor,
@@ -1175,7 +1481,7 @@ public final class Resources {
     internal_static_api_pb_GenesisResponse_ConsensusParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_ConsensusParams_descriptor,
-        new java.lang.String[] { "Block", "Evidence", "Validator", });
+        new java.lang.String[] { "Block", "Evidence", "Validator", "Version", });
     internal_static_api_pb_GenesisResponse_ConsensusParams_Block_descriptor =
       internal_static_api_pb_GenesisResponse_ConsensusParams_descriptor.getNestedTypes().get(0);
     internal_static_api_pb_GenesisResponse_ConsensusParams_Block_fieldAccessorTable = new
@@ -1194,12 +1500,18 @@ public final class Resources {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_ConsensusParams_Validator_descriptor,
         new java.lang.String[] { "PubKeyTypes", });
+    internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor =
+      internal_static_api_pb_GenesisResponse_ConsensusParams_descriptor.getNestedTypes().get(3);
+    internal_static_api_pb_GenesisResponse_ConsensusParams_Version_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor,
+        new java.lang.String[] { "AppVersion", });
     internal_static_api_pb_GenesisResponse_AppState_descriptor =
       internal_static_api_pb_GenesisResponse_descriptor.getNestedTypes().get(1);
     internal_static_api_pb_GenesisResponse_AppState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_descriptor,
-        new java.lang.String[] { "Version", "Note", "Validators", "Candidates", "Coins", "FrozenFunds", "BlockListCandidates", "Waitlist", "Accounts", "HaltBlocks", "Pools", "Commission", "CommissionVotes", "UsedChecks", "MaxGas", "TotalSlashed", });
+        new java.lang.String[] { "Version", "Note", "Validators", "Candidates", "DeletedCandidates", "Coins", "FrozenFunds", "BlockListCandidates", "Waitlist", "Accounts", "HaltBlocks", "Pools", "NextOrderId", "Commission", "CommissionVotes", "UpdateVotes", "UsedChecks", "MaxGas", "TotalSlashed", "Versions", "Emission", "PrevReward", });
     internal_static_api_pb_GenesisResponse_AppState_Validators_descriptor =
       internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(0);
     internal_static_api_pb_GenesisResponse_AppState_Validators_fieldAccessorTable = new
@@ -1218,30 +1530,36 @@ public final class Resources {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Candidate_Stake_descriptor,
         new java.lang.String[] { "Owner", "Coin", "Value", "BipValue", });
-    internal_static_api_pb_GenesisResponse_AppState_Coin_descriptor =
+    internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor =
       internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(2);
+    internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor,
+        new java.lang.String[] { "Id", "PublicKey", });
+    internal_static_api_pb_GenesisResponse_AppState_Coin_descriptor =
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(3);
     internal_static_api_pb_GenesisResponse_AppState_Coin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Coin_descriptor,
         new java.lang.String[] { "Id", "Name", "Symbol", "Volume", "Crr", "Reserve", "MaxSupply", "Version", "OwnerAddress", "Mintable", "Burnable", });
     internal_static_api_pb_GenesisResponse_AppState_FrozenFund_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(3);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(4);
     internal_static_api_pb_GenesisResponse_AppState_FrozenFund_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_FrozenFund_descriptor,
-        new java.lang.String[] { "Height", "Address", "CandidateKey", "CandidateId", "Coin", "Value", });
+        new java.lang.String[] { "Height", "Address", "CandidateKey", "CandidateId", "Coin", "Value", "ToCandidateKey", });
     internal_static_api_pb_GenesisResponse_AppState_Waitlist_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(4);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(5);
     internal_static_api_pb_GenesisResponse_AppState_Waitlist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Waitlist_descriptor,
         new java.lang.String[] { "CandidateId", "Owner", "Coin", "Value", });
     internal_static_api_pb_GenesisResponse_AppState_Account_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(5);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(6);
     internal_static_api_pb_GenesisResponse_AppState_Account_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Account_descriptor,
-        new java.lang.String[] { "Address", "Balance", "Nonce", "MultisigData", });
+        new java.lang.String[] { "Address", "Balance", "Nonce", "MultisigData", "LockStakeUntilBlock", });
     internal_static_api_pb_GenesisResponse_AppState_Account_Balance_descriptor =
       internal_static_api_pb_GenesisResponse_AppState_Account_descriptor.getNestedTypes().get(0);
     internal_static_api_pb_GenesisResponse_AppState_Account_Balance_fieldAccessorTable = new
@@ -1255,47 +1573,71 @@ public final class Resources {
         internal_static_api_pb_GenesisResponse_AppState_Account_MultisigData_descriptor,
         new java.lang.String[] { "Threshold", "Weights", "Addresses", });
     internal_static_api_pb_GenesisResponse_AppState_HaltBlock_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(6);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(7);
     internal_static_api_pb_GenesisResponse_AppState_HaltBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_HaltBlock_descriptor,
         new java.lang.String[] { "Height", "CandidateKey", });
     internal_static_api_pb_GenesisResponse_AppState_Pool_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(7);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(8);
     internal_static_api_pb_GenesisResponse_AppState_Pool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Pool_descriptor,
-        new java.lang.String[] { "Coin0", "Coin1", "Reserve0", "Reserve1", "Id", });
+        new java.lang.String[] { "Coin0", "Coin1", "Reserve0", "Reserve1", "Id", "Orders", });
+    internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor =
+      internal_static_api_pb_GenesisResponse_AppState_Pool_descriptor.getNestedTypes().get(0);
+    internal_static_api_pb_GenesisResponse_AppState_Pool_Order_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor,
+        new java.lang.String[] { "IsSale", "Volume0", "Volume1", "Id", "Owner", "Height", });
     internal_static_api_pb_GenesisResponse_AppState_Commission_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(8);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(9);
     internal_static_api_pb_GenesisResponse_AppState_Commission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_Commission_descriptor,
-        new java.lang.String[] { "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", });
+        new java.lang.String[] { "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", "MoveStake", "LockStake", "Lock", });
     internal_static_api_pb_GenesisResponse_AppState_CommissionVote_descriptor =
-      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(9);
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(10);
     internal_static_api_pb_GenesisResponse_AppState_CommissionVote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_GenesisResponse_AppState_CommissionVote_descriptor,
         new java.lang.String[] { "Height", "Votes", "Commission", });
+    internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor =
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(11);
+    internal_static_api_pb_GenesisResponse_AppState_UpdateVote_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor,
+        new java.lang.String[] { "Height", "Votes", "Version", });
+    internal_static_api_pb_GenesisResponse_AppState_Version_descriptor =
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(12);
+    internal_static_api_pb_GenesisResponse_AppState_Version_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_AppState_Version_descriptor,
+        new java.lang.String[] { "Height", "Name", });
+    internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor =
+      internal_static_api_pb_GenesisResponse_AppState_descriptor.getNestedTypes().get(13);
+    internal_static_api_pb_GenesisResponse_AppState_RewardPrice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor,
+        new java.lang.String[] { "Time", "AmountBip", "AmountUsdt", "Off", "Reward", });
     internal_static_api_pb_MinGasPriceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_pb_MinGasPriceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_MinGasPriceResponse_descriptor,
         new java.lang.String[] { "MinGasPrice", });
     internal_static_api_pb_BlockRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_pb_BlockRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_BlockRequest_descriptor,
         new java.lang.String[] { "Height", "Fields", "FailedTxs", "Events", });
     internal_static_api_pb_BlockResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_pb_BlockResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_BlockResponse_descriptor,
-        new java.lang.String[] { "Hash", "Height", "Time", "TransactionCount", "Transactions", "BlockReward", "Size", "Proposer", "Validators", "Evidence", "Missed", "Events", });
+        new java.lang.String[] { "Hash", "Height", "Time", "TransactionCount", "Transactions", "BlockReward", "LockedStakeRewards", "Size", "Proposer", "Validators", "Evidence", "Missed", "Events", });
     internal_static_api_pb_BlockResponse_Validator_descriptor =
       internal_static_api_pb_BlockResponse_descriptor.getNestedTypes().get(0);
     internal_static_api_pb_BlockResponse_Validator_fieldAccessorTable = new
@@ -1309,55 +1651,55 @@ public final class Resources {
         internal_static_api_pb_BlockResponse_Evidence_descriptor,
         new java.lang.String[] { "Evidence", });
     internal_static_api_pb_MaxGasPriceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_pb_MaxGasPriceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_MaxGasPriceRequest_descriptor,
         new java.lang.String[] { "Height", });
     internal_static_api_pb_MaxGasPriceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_api_pb_MaxGasPriceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_MaxGasPriceResponse_descriptor,
         new java.lang.String[] { "MaxGasPrice", });
     internal_static_api_pb_AddressRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_api_pb_AddressRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressRequest_descriptor,
         new java.lang.String[] { "Address", "Height", "Delegated", });
     internal_static_api_pb_AddressBalance_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_api_pb_AddressBalance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressBalance_descriptor,
         new java.lang.String[] { "Coin", "Value", "BipValue", });
     internal_static_api_pb_AddressDelegatedBalance_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_api_pb_AddressDelegatedBalance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressDelegatedBalance_descriptor,
         new java.lang.String[] { "Coin", "Value", "BipValue", "DelegateBipValue", });
     internal_static_api_pb_AddressResponse_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_api_pb_AddressResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressResponse_descriptor,
-        new java.lang.String[] { "Balance", "Delegated", "Total", "TransactionCount", "BipValue", "Multisig", });
+        new java.lang.String[] { "Balance", "Delegated", "Total", "TransactionCount", "BipValue", "LockedStakeUntilBlock", "Multisig", });
     internal_static_api_pb_Multisig_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_api_pb_Multisig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_Multisig_descriptor,
         new java.lang.String[] { "Threshold", "Weights", "Addresses", });
     internal_static_api_pb_AddressesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_api_pb_AddressesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressesRequest_descriptor,
         new java.lang.String[] { "Addresses", "Height", "Delegated", });
     internal_static_api_pb_AddressesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_api_pb_AddressesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressesResponse_descriptor,
@@ -1367,7 +1709,7 @@ public final class Resources {
     internal_static_api_pb_AddressesResponse_Result_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_AddressesResponse_Result_descriptor,
-        new java.lang.String[] { "Balance", "Delegated", "Total", "TransactionCount", "BipValue", "Multisig", });
+        new java.lang.String[] { "Balance", "Delegated", "Total", "TransactionCount", "BipValue", "LockedStakeUntilBlock", "Multisig", });
     internal_static_api_pb_AddressesResponse_AddressesEntry_descriptor =
       internal_static_api_pb_AddressesResponse_descriptor.getNestedTypes().get(1);
     internal_static_api_pb_AddressesResponse_AddressesEntry_fieldAccessorTable = new
@@ -1375,13 +1717,13 @@ public final class Resources {
         internal_static_api_pb_AddressesResponse_AddressesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_pb_CandidateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_pb_CandidateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CandidateRequest_descriptor,
         new java.lang.String[] { "PublicKey", "Height", "NotShowStakes", });
     internal_static_api_pb_CandidateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_pb_CandidateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CandidateResponse_descriptor,
@@ -1393,49 +1735,49 @@ public final class Resources {
         internal_static_api_pb_CandidateResponse_Stake_descriptor,
         new java.lang.String[] { "Owner", "Coin", "Value", "BipValue", });
     internal_static_api_pb_CandidatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_pb_CandidatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CandidatesRequest_descriptor,
         new java.lang.String[] { "Height", "IncludeStakes", "NotShowStakes", "Status", });
     internal_static_api_pb_CandidatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_pb_CandidatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CandidatesResponse_descriptor,
         new java.lang.String[] { "Candidates", });
     internal_static_api_pb_CoinIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_pb_CoinIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CoinIdRequest_descriptor,
         new java.lang.String[] { "Height", "Id", });
     internal_static_api_pb_CoinInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_pb_CoinInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CoinInfoRequest_descriptor,
         new java.lang.String[] { "Height", "Symbol", });
     internal_static_api_pb_CoinInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_pb_CoinInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_CoinInfoResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "Symbol", "Volume", "Crr", "ReserveBalance", "MaxSupply", "OwnerAddress", "Mintable", "Burnable", });
     internal_static_api_pb_SendTransactionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_pb_SendTransactionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SendTransactionResponse_descriptor,
         new java.lang.String[] { "Code", "Log", "Hash", });
     internal_static_api_pb_SendTransactionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_pb_SendTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SendTransactionRequest_descriptor,
         new java.lang.String[] { "Tx", });
     internal_static_api_pb_TransactionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_pb_TransactionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_TransactionResponse_descriptor,
@@ -1447,115 +1789,115 @@ public final class Resources {
         internal_static_api_pb_TransactionResponse_TagsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_pb_TransactionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_pb_TransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_TransactionRequest_descriptor,
         new java.lang.String[] { "Hash", });
     internal_static_api_pb_TransactionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_pb_TransactionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_TransactionsResponse_descriptor,
         new java.lang.String[] { "Transactions", });
     internal_static_api_pb_TransactionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_pb_TransactionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_TransactionsRequest_descriptor,
         new java.lang.String[] { "Query", "Page", "PerPage", });
     internal_static_api_pb_EstimateCoinBuyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_pb_EstimateCoinBuyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinBuyRequest_descriptor,
         new java.lang.String[] { "CoinIdToBuy", "CoinToBuy", "CoinIdToSell", "CoinToSell", "ValueToBuy", "Height", "CoinIdCommission", "CoinCommission", "SwapFrom", "Route", "Buy", "Sell", "Commission", });
     internal_static_api_pb_EstimateCoinBuyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_pb_EstimateCoinBuyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinBuyResponse_descriptor,
         new java.lang.String[] { "WillPay", "Commission", "SwapFrom", });
     internal_static_api_pb_EstimateCoinSellRequest_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_pb_EstimateCoinSellRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinSellRequest_descriptor,
         new java.lang.String[] { "CoinIdToBuy", "CoinToBuy", "CoinIdToSell", "CoinToSell", "ValueToSell", "Height", "CoinIdCommission", "CoinCommission", "SwapFrom", "Route", "Buy", "Sell", "Commission", });
     internal_static_api_pb_EstimateCoinSellResponse_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_pb_EstimateCoinSellResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinSellResponse_descriptor,
         new java.lang.String[] { "WillGet", "Commission", "SwapFrom", });
     internal_static_api_pb_EstimateCoinSellAllRequest_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_pb_EstimateCoinSellAllRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinSellAllRequest_descriptor,
         new java.lang.String[] { "CoinIdToBuy", "CoinToBuy", "CoinIdToSell", "CoinToSell", "ValueToSell", "GasPrice", "Height", "SwapFrom", "Route", "Buy", "Sell", });
     internal_static_api_pb_EstimateCoinSellAllResponse_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_api_pb_EstimateCoinSellAllResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateCoinSellAllResponse_descriptor,
         new java.lang.String[] { "WillGet", "SwapFrom", });
     internal_static_api_pb_EstimateTxCommissionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_api_pb_EstimateTxCommissionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateTxCommissionRequest_descriptor,
         new java.lang.String[] { "Tx", "Height", });
     internal_static_api_pb_EstimateTxCommissionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_api_pb_EstimateTxCommissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EstimateTxCommissionResponse_descriptor,
         new java.lang.String[] { "Commission", });
     internal_static_api_pb_EventsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_api_pb_EventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EventsRequest_descriptor,
         new java.lang.String[] { "Height", "Search", });
     internal_static_api_pb_EventsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_api_pb_EventsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_EventsResponse_descriptor,
         new java.lang.String[] { "Events", });
     internal_static_api_pb_MissedBlocksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_api_pb_MissedBlocksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_MissedBlocksRequest_descriptor,
         new java.lang.String[] { "PublicKey", "Height", });
     internal_static_api_pb_MissedBlocksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_api_pb_MissedBlocksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_MissedBlocksResponse_descriptor,
         new java.lang.String[] { "MissedBlocks", "MissedBlocksCount", });
     internal_static_api_pb_UnconfirmedTxsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_api_pb_UnconfirmedTxsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_UnconfirmedTxsResponse_descriptor,
         new java.lang.String[] { "TransactionCount", "TotalTransactions", "TotalBytes", "Transactions", });
     internal_static_api_pb_UnconfirmedTxsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_api_pb_UnconfirmedTxsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_UnconfirmedTxsRequest_descriptor,
         new java.lang.String[] { "Limit", });
     internal_static_api_pb_ValidatorsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_api_pb_ValidatorsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_ValidatorsRequest_descriptor,
         new java.lang.String[] { "Height", });
     internal_static_api_pb_ValidatorsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_api_pb_ValidatorsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_ValidatorsResponse_descriptor,
@@ -1567,13 +1909,13 @@ public final class Resources {
         internal_static_api_pb_ValidatorsResponse_Result_descriptor,
         new java.lang.String[] { "PublicKey", "VotingPower", });
     internal_static_api_pb_SubscribeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_api_pb_SubscribeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SubscribeRequest_descriptor,
         new java.lang.String[] { "Query", });
     internal_static_api_pb_SubscribeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_api_pb_SubscribeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_SubscribeResponse_descriptor,
@@ -1585,25 +1927,31 @@ public final class Resources {
         internal_static_api_pb_SubscribeResponse_Event_descriptor,
         new java.lang.String[] { "Key", "Events", });
     internal_static_api_pb_HaltsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_api_pb_HaltsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_HaltsRequest_descriptor,
         new java.lang.String[] { "Height", });
     internal_static_api_pb_HaltsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_api_pb_HaltsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_HaltsResponse_descriptor,
         new java.lang.String[] { "PublicKeys", });
     internal_static_api_pb_FrozenRequest_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_api_pb_FrozenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_FrozenRequest_descriptor,
         new java.lang.String[] { "Address", "CoinId", "Height", });
+    internal_static_api_pb_FrozenAllRequest_descriptor =
+      getDescriptor().getMessageTypes().get(74);
+    internal_static_api_pb_FrozenAllRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_FrozenAllRequest_descriptor,
+        new java.lang.String[] { "StartHeight", "EndHeight", "Height", "Addresses", "CoinIds", });
     internal_static_api_pb_FrozenResponse_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_pb_FrozenResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_FrozenResponse_descriptor,
@@ -1613,15 +1961,15 @@ public final class Resources {
     internal_static_api_pb_FrozenResponse_Frozen_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_FrozenResponse_Frozen_descriptor,
-        new java.lang.String[] { "Height", "Address", "CandidateKey", "Coin", "Value", });
+        new java.lang.String[] { "Height", "Address", "CandidateKey", "Coin", "Value", "MoveToCandidateKey", });
     internal_static_api_pb_WaitListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_api_pb_WaitListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_WaitListRequest_descriptor,
         new java.lang.String[] { "PublicKey", "Address", "Height", });
     internal_static_api_pb_WaitListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_api_pb_WaitListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_WaitListResponse_descriptor,

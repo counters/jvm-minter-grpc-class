@@ -8,36 +8,36 @@ public interface OrderExpiredEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 id = 1;</code>
+   * <code>uint64 id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   long getId();
 
   /**
-   * <code>string address = 2;</code>
+   * <code>string address = 2 [json_name = "address"];</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 2;</code>
+   * <code>string address = 2 [json_name = "address"];</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>uint64 coin = 3;</code>
+   * <code>uint64 coin = 3 [json_name = "coin"];</code>
    * @return The coin.
    */
   long getCoin();
 
   /**
-   * <code>string amount = 4;</code>
+   * <code>string amount = 4 [json_name = "amount"];</code>
    * @return The amount.
    */
   java.lang.String getAmount();
   /**
-   * <code>string amount = 4;</code>
+   * <code>string amount = 4 [json_name = "amount"];</code>
    * @return The bytes for amount.
    */
   com.google.protobuf.ByteString

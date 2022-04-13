@@ -8,66 +8,66 @@ public interface RemoveLiquidityDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api_pb.Coin coin0 = 1;</code>
+   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
    * @return Whether the coin0 field is set.
    */
   boolean hasCoin0();
   /**
-   * <code>.api_pb.Coin coin0 = 1;</code>
+   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
    * @return The coin0.
    */
   counters.minter.grpc.client.Coin getCoin0();
   /**
-   * <code>.api_pb.Coin coin0 = 1;</code>
+   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoin0OrBuilder();
 
   /**
-   * <code>.api_pb.Coin coin1 = 2;</code>
+   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
    * @return Whether the coin1 field is set.
    */
   boolean hasCoin1();
   /**
-   * <code>.api_pb.Coin coin1 = 2;</code>
+   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
    * @return The coin1.
    */
   counters.minter.grpc.client.Coin getCoin1();
   /**
-   * <code>.api_pb.Coin coin1 = 2;</code>
+   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoin1OrBuilder();
 
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The liquidity.
    */
   java.lang.String getLiquidity();
   /**
-   * <code>string liquidity = 3;</code>
+   * <code>string liquidity = 3 [json_name = "liquidity"];</code>
    * @return The bytes for liquidity.
    */
   com.google.protobuf.ByteString
       getLiquidityBytes();
 
   /**
-   * <code>string minimum_volume0 = 4;</code>
+   * <code>string minimum_volume0 = 4 [json_name = "minimumVolume0"];</code>
    * @return The minimumVolume0.
    */
   java.lang.String getMinimumVolume0();
   /**
-   * <code>string minimum_volume0 = 4;</code>
+   * <code>string minimum_volume0 = 4 [json_name = "minimumVolume0"];</code>
    * @return The bytes for minimumVolume0.
    */
   com.google.protobuf.ByteString
       getMinimumVolume0Bytes();
 
   /**
-   * <code>string minimum_volume1 = 5;</code>
+   * <code>string minimum_volume1 = 5 [json_name = "minimumVolume1"];</code>
    * @return The minimumVolume1.
    */
   java.lang.String getMinimumVolume1();
   /**
-   * <code>string minimum_volume1 = 5;</code>
+   * <code>string minimum_volume1 = 5 [json_name = "minimumVolume1"];</code>
    * @return The bytes for minimumVolume1.
    */
   com.google.protobuf.ByteString

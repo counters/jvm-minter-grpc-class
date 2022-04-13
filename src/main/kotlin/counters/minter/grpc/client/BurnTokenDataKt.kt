@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun burnTokenData(block: counters.minter.grpc.client.BurnTokenDataKt.Dsl.() -> Unit): counters.minter.grpc.client.BurnTokenData =
+public inline fun burnTokenData(block: counters.minter.grpc.client.BurnTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BurnTokenData =
   counters.minter.grpc.client.BurnTokenDataKt.Dsl._create(counters.minter.grpc.client.BurnTokenData.newBuilder()).apply { block() }._build()
-object BurnTokenDataKt {
+public object BurnTokenDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BurnTokenData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.BurnTokenData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.BurnTokenData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object BurnTokenDataKt {
     internal fun _build(): counters.minter.grpc.client.BurnTokenData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin = 1;</code>
+     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
      */
-    var coin: counters.minter.grpc.client.Coin
+    public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -33,23 +33,23 @@ object BurnTokenDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 1;</code>
+     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
      */
-    fun clearCoin() {
+    public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 1;</code>
+     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
      * @return Whether the coin field is set.
      */
-    fun hasCoin(): kotlin.Boolean {
+    public fun hasCoin(): kotlin.Boolean {
       return _builder.hasCoin()
     }
 
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      */
-    var value: kotlin.String
+    public var value: kotlin.String
       @JvmName("getValue")
       get() = _builder.getValue()
       @JvmName("setValue")
@@ -57,13 +57,13 @@ object BurnTokenDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 2;</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      */
-    fun clearValue() {
+    public fun clearValue() {
       _builder.clearValue()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.BurnTokenData.copy(block: counters.minter.grpc.client.BurnTokenDataKt.Dsl.() -> Unit): counters.minter.grpc.client.BurnTokenData =
+public inline fun counters.minter.grpc.client.BurnTokenData.copy(block: counters.minter.grpc.client.BurnTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BurnTokenData =
   counters.minter.grpc.client.BurnTokenDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

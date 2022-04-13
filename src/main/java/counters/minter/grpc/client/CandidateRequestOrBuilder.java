@@ -12,7 +12,7 @@ public interface CandidateRequestOrBuilder extends
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 1;</code>
+   * <code>string public_key = 1 [json_name = "publicKey"];</code>
    * @return The publicKey.
    */
   java.lang.String getPublicKey();
@@ -21,7 +21,7 @@ public interface CandidateRequestOrBuilder extends
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 1;</code>
+   * <code>string public_key = 1 [json_name = "publicKey"];</code>
    * @return The bytes for publicKey.
    */
   com.google.protobuf.ByteString
@@ -32,7 +32,7 @@ public interface CandidateRequestOrBuilder extends
    * Blockchain state height for the current request. Optional, the last default state of the node is used
    * </pre>
    *
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();
@@ -42,7 +42,7 @@ public interface CandidateRequestOrBuilder extends
    * Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled
    * </pre>
    *
-   * <code>bool not_show_stakes = 4;</code>
+   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
    * @return The notShowStakes.
    */
   boolean getNotShowStakes();

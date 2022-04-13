@@ -8,19 +8,19 @@ public interface MissedBlocksRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string public_key = 1;</code>
+   * <code>string public_key = 1 [json_name = "publicKey"];</code>
    * @return The publicKey.
    */
   java.lang.String getPublicKey();
   /**
-   * <code>string public_key = 1;</code>
+   * <code>string public_key = 1 [json_name = "publicKey"];</code>
    * @return The bytes for publicKey.
    */
   com.google.protobuf.ByteString
       getPublicKeyBytes();
 
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

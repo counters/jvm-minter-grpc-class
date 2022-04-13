@@ -8,7 +8,7 @@ public interface UnconfirmedTxsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 limit = 1;</code>
+   * <code>int32 limit = 1 [json_name = "limit"];</code>
    * @return The limit.
    */
   int getLimit();

@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 1;
   private long height_;
   /**
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -409,7 +409,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -420,7 +420,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

@@ -65,6 +65,11 @@ private static final long serialVersionUID = 0L;
             provider_ = s;
             break;
           }
+          case 32: {
+
+            height_ = input.readUInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -100,7 +105,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN0_FIELD_NUMBER = 1;
   private long coin0_;
   /**
-   * <code>uint64 coin0 = 1;</code>
+   * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
    * @return The coin0.
    */
   @java.lang.Override
@@ -111,7 +116,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN1_FIELD_NUMBER = 2;
   private long coin1_;
   /**
-   * <code>uint64 coin1 = 2;</code>
+   * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
    * @return The coin1.
    */
   @java.lang.Override
@@ -122,13 +127,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROVIDER_FIELD_NUMBER = 3;
   private volatile java.lang.Object provider_;
   /**
-   * <pre>
-   *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
-   * <code>string provider = 3;</code>
+   * <code>string provider = 3 [json_name = "provider"];</code>
    * @return The provider.
    */
   @java.lang.Override
@@ -145,13 +144,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *        type: INTEGER
-   *    }];
-   * </pre>
-   *
-   * <code>string provider = 3;</code>
+   * <code>string provider = 3 [json_name = "provider"];</code>
    * @return The bytes for provider.
    */
   @java.lang.Override
@@ -167,6 +160,17 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int HEIGHT_FIELD_NUMBER = 4;
+  private long height_;
+  /**
+   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * @return The height.
+   */
+  @java.lang.Override
+  public long getHeight() {
+    return height_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -189,8 +193,11 @@ private static final long serialVersionUID = 0L;
     if (coin1_ != 0L) {
       output.writeUInt64(2, coin1_);
     }
-    if (!getProviderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, provider_);
+    }
+    if (height_ != 0L) {
+      output.writeUInt64(4, height_);
     }
     unknownFields.writeTo(output);
   }
@@ -209,8 +216,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(2, coin1_);
     }
-    if (!getProviderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, provider_);
+    }
+    if (height_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(4, height_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -233,6 +244,8 @@ private static final long serialVersionUID = 0L;
         != other.getCoin1()) return false;
     if (!getProvider()
         .equals(other.getProvider())) return false;
+    if (getHeight()
+        != other.getHeight()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -252,6 +265,9 @@ private static final long serialVersionUID = 0L;
         getCoin1());
     hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
     hash = (53 * hash) + getProvider().hashCode();
+    hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHeight());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -391,6 +407,8 @@ private static final long serialVersionUID = 0L;
 
       provider_ = "";
 
+      height_ = 0L;
+
       return this;
     }
 
@@ -420,6 +438,7 @@ private static final long serialVersionUID = 0L;
       result.coin0_ = coin0_;
       result.coin1_ = coin1_;
       result.provider_ = provider_;
+      result.height_ = height_;
       onBuilt();
       return result;
     }
@@ -478,6 +497,9 @@ private static final long serialVersionUID = 0L;
         provider_ = other.provider_;
         onChanged();
       }
+      if (other.getHeight() != 0L) {
+        setHeight(other.getHeight());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -509,7 +531,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin0_ ;
     /**
-     * <code>uint64 coin0 = 1;</code>
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
      * @return The coin0.
      */
     @java.lang.Override
@@ -517,7 +539,7 @@ private static final long serialVersionUID = 0L;
       return coin0_;
     }
     /**
-     * <code>uint64 coin0 = 1;</code>
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
      * @param value The coin0 to set.
      * @return This builder for chaining.
      */
@@ -528,7 +550,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin0 = 1;</code>
+     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin0() {
@@ -540,7 +562,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin1_ ;
     /**
-     * <code>uint64 coin1 = 2;</code>
+     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @return The coin1.
      */
     @java.lang.Override
@@ -548,7 +570,7 @@ private static final long serialVersionUID = 0L;
       return coin1_;
     }
     /**
-     * <code>uint64 coin1 = 2;</code>
+     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @param value The coin1 to set.
      * @return This builder for chaining.
      */
@@ -559,7 +581,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin1 = 2;</code>
+     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin1() {
@@ -571,13 +593,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object provider_ = "";
     /**
-     * <pre>
-     *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
-     * <code>string provider = 3;</code>
+     * <code>string provider = 3 [json_name = "provider"];</code>
      * @return The provider.
      */
     public java.lang.String getProvider() {
@@ -593,13 +609,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
-     * <code>string provider = 3;</code>
+     * <code>string provider = 3 [json_name = "provider"];</code>
      * @return The bytes for provider.
      */
     public com.google.protobuf.ByteString
@@ -616,13 +626,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
-     * <code>string provider = 3;</code>
+     * <code>string provider = 3 [json_name = "provider"];</code>
      * @param value The provider to set.
      * @return This builder for chaining.
      */
@@ -637,13 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
-     * <code>string provider = 3;</code>
+     * <code>string provider = 3 [json_name = "provider"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProvider() {
@@ -653,13 +651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *    uint64 height = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *        type: INTEGER
-     *    }];
-     * </pre>
-     *
-     * <code>string provider = 3;</code>
+     * <code>string provider = 3 [json_name = "provider"];</code>
      * @param value The bytes for provider to set.
      * @return This builder for chaining.
      */
@@ -671,6 +663,37 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       provider_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long height_ ;
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @param value The height to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeight(long value) {
+      
+      height_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeight() {
+      
+      height_ = 0L;
       onChanged();
       return this;
     }

@@ -8,48 +8,48 @@ public interface BuySwapPoolDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   java.util.List<counters.minter.grpc.client.Coin> 
       getCoinsList();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   counters.minter.grpc.client.Coin getCoins(int index);
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   int getCoinsCount();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.CoinOrBuilder> 
       getCoinsOrBuilderList();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinsOrBuilder(
       int index);
 
   /**
-   * <code>string value_to_buy = 2;</code>
+   * <code>string value_to_buy = 2 [json_name = "valueToBuy"];</code>
    * @return The valueToBuy.
    */
   java.lang.String getValueToBuy();
   /**
-   * <code>string value_to_buy = 2;</code>
+   * <code>string value_to_buy = 2 [json_name = "valueToBuy"];</code>
    * @return The bytes for valueToBuy.
    */
   com.google.protobuf.ByteString
       getValueToBuyBytes();
 
   /**
-   * <code>string maximum_value_to_sell = 4;</code>
+   * <code>string maximum_value_to_sell = 4 [json_name = "maximumValueToSell"];</code>
    * @return The maximumValueToSell.
    */
   java.lang.String getMaximumValueToSell();
   /**
-   * <code>string maximum_value_to_sell = 4;</code>
+   * <code>string maximum_value_to_sell = 4 [json_name = "maximumValueToSell"];</code>
    * @return The bytes for maximumValueToSell.
    */
   com.google.protobuf.ByteString

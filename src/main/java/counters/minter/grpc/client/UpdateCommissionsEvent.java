@@ -61,6 +61,9 @@ private static final long serialVersionUID = 0L;
     failedTx_ = "";
     addLimitOrder_ = "";
     removeLimitOrder_ = "";
+    moveStake_ = "";
+    lockStake_ = "";
+    lock_ = "";
   }
 
   @java.lang.Override
@@ -368,6 +371,24 @@ private static final long serialVersionUID = 0L;
             removeLimitOrder_ = s;
             break;
           }
+          case 474: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            moveStake_ = s;
+            break;
+          }
+          case 482: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            lockStake_ = s;
+            break;
+          }
+          case 490: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            lock_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -403,7 +424,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN_FIELD_NUMBER = 3;
   private long coin_;
   /**
-   * <code>uint64 coin = 3;</code>
+   * <code>uint64 coin = 3 [json_name = "coin"];</code>
    * @return The coin.
    */
   @java.lang.Override
@@ -414,7 +435,7 @@ private static final long serialVersionUID = 0L;
   public static final int PAYLOAD_BYTE_FIELD_NUMBER = 4;
   private volatile java.lang.Object payloadByte_;
   /**
-   * <code>string payload_byte = 4;</code>
+   * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
    * @return The payloadByte.
    */
   @java.lang.Override
@@ -431,7 +452,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string payload_byte = 4;</code>
+   * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
    * @return The bytes for payloadByte.
    */
   @java.lang.Override
@@ -452,7 +473,7 @@ private static final long serialVersionUID = 0L;
   public static final int SEND_FIELD_NUMBER = 5;
   private volatile java.lang.Object send_;
   /**
-   * <code>string send = 5;</code>
+   * <code>string send = 5 [json_name = "send"];</code>
    * @return The send.
    */
   @java.lang.Override
@@ -469,7 +490,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string send = 5;</code>
+   * <code>string send = 5 [json_name = "send"];</code>
    * @return The bytes for send.
    */
   @java.lang.Override
@@ -490,7 +511,7 @@ private static final long serialVersionUID = 0L;
   public static final int BUY_BANCOR_FIELD_NUMBER = 38;
   private volatile java.lang.Object buyBancor_;
   /**
-   * <code>string buy_bancor = 38;</code>
+   * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
    * @return The buyBancor.
    */
   @java.lang.Override
@@ -507,7 +528,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string buy_bancor = 38;</code>
+   * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
    * @return The bytes for buyBancor.
    */
   @java.lang.Override
@@ -528,7 +549,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_BANCOR_FIELD_NUMBER = 39;
   private volatile java.lang.Object sellBancor_;
   /**
-   * <code>string sell_bancor = 39;</code>
+   * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
    * @return The sellBancor.
    */
   @java.lang.Override
@@ -545,7 +566,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_bancor = 39;</code>
+   * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
    * @return The bytes for sellBancor.
    */
   @java.lang.Override
@@ -566,7 +587,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_ALL_BANCOR_FIELD_NUMBER = 40;
   private volatile java.lang.Object sellAllBancor_;
   /**
-   * <code>string sell_all_bancor = 40;</code>
+   * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
    * @return The sellAllBancor.
    */
   @java.lang.Override
@@ -583,7 +604,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_all_bancor = 40;</code>
+   * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
    * @return The bytes for sellAllBancor.
    */
   @java.lang.Override
@@ -604,7 +625,7 @@ private static final long serialVersionUID = 0L;
   public static final int BUY_POOL_BASE_FIELD_NUMBER = 41;
   private volatile java.lang.Object buyPoolBase_;
   /**
-   * <code>string buy_pool_base = 41;</code>
+   * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
    * @return The buyPoolBase.
    */
   @java.lang.Override
@@ -621,7 +642,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string buy_pool_base = 41;</code>
+   * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
    * @return The bytes for buyPoolBase.
    */
   @java.lang.Override
@@ -642,7 +663,7 @@ private static final long serialVersionUID = 0L;
   public static final int BUY_POOL_DELTA_FIELD_NUMBER = 53;
   private volatile java.lang.Object buyPoolDelta_;
   /**
-   * <code>string buy_pool_delta = 53;</code>
+   * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
    * @return The buyPoolDelta.
    */
   @java.lang.Override
@@ -659,7 +680,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string buy_pool_delta = 53;</code>
+   * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
    * @return The bytes for buyPoolDelta.
    */
   @java.lang.Override
@@ -680,7 +701,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_POOL_BASE_FIELD_NUMBER = 42;
   private volatile java.lang.Object sellPoolBase_;
   /**
-   * <code>string sell_pool_base = 42;</code>
+   * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
    * @return The sellPoolBase.
    */
   @java.lang.Override
@@ -697,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_pool_base = 42;</code>
+   * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
    * @return The bytes for sellPoolBase.
    */
   @java.lang.Override
@@ -718,7 +739,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_POOL_DELTA_FIELD_NUMBER = 54;
   private volatile java.lang.Object sellPoolDelta_;
   /**
-   * <code>string sell_pool_delta = 54;</code>
+   * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
    * @return The sellPoolDelta.
    */
   @java.lang.Override
@@ -735,7 +756,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_pool_delta = 54;</code>
+   * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
    * @return The bytes for sellPoolDelta.
    */
   @java.lang.Override
@@ -756,7 +777,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_ALL_POOL_BASE_FIELD_NUMBER = 43;
   private volatile java.lang.Object sellAllPoolBase_;
   /**
-   * <code>string sell_all_pool_base = 43;</code>
+   * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
    * @return The sellAllPoolBase.
    */
   @java.lang.Override
@@ -773,7 +794,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_all_pool_base = 43;</code>
+   * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
    * @return The bytes for sellAllPoolBase.
    */
   @java.lang.Override
@@ -794,7 +815,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_ALL_POOL_DELTA_FIELD_NUMBER = 55;
   private volatile java.lang.Object sellAllPoolDelta_;
   /**
-   * <code>string sell_all_pool_delta = 55;</code>
+   * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
    * @return The sellAllPoolDelta.
    */
   @java.lang.Override
@@ -811,7 +832,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sell_all_pool_delta = 55;</code>
+   * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
    * @return The bytes for sellAllPoolDelta.
    */
   @java.lang.Override
@@ -832,7 +853,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TICKER3_FIELD_NUMBER = 7;
   private volatile java.lang.Object createTicker3_;
   /**
-   * <code>string create_ticker3 = 7;</code>
+   * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
    * @return The createTicker3.
    */
   @java.lang.Override
@@ -849,7 +870,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_ticker3 = 7;</code>
+   * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
    * @return The bytes for createTicker3.
    */
   @java.lang.Override
@@ -870,7 +891,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TICKER4_FIELD_NUMBER = 8;
   private volatile java.lang.Object createTicker4_;
   /**
-   * <code>string create_ticker4 = 8;</code>
+   * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
    * @return The createTicker4.
    */
   @java.lang.Override
@@ -887,7 +908,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_ticker4 = 8;</code>
+   * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
    * @return The bytes for createTicker4.
    */
   @java.lang.Override
@@ -908,7 +929,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TICKER5_FIELD_NUMBER = 9;
   private volatile java.lang.Object createTicker5_;
   /**
-   * <code>string create_ticker5 = 9;</code>
+   * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
    * @return The createTicker5.
    */
   @java.lang.Override
@@ -925,7 +946,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_ticker5 = 9;</code>
+   * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
    * @return The bytes for createTicker5.
    */
   @java.lang.Override
@@ -946,7 +967,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TICKER6_FIELD_NUMBER = 10;
   private volatile java.lang.Object createTicker6_;
   /**
-   * <code>string create_ticker6 = 10;</code>
+   * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
    * @return The createTicker6.
    */
   @java.lang.Override
@@ -963,7 +984,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_ticker6 = 10;</code>
+   * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
    * @return The bytes for createTicker6.
    */
   @java.lang.Override
@@ -984,7 +1005,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TICKER7_10_FIELD_NUMBER = 11;
   private volatile java.lang.Object createTicker710_;
   /**
-   * <code>string create_ticker7_10 = 11;</code>
+   * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
    * @return The createTicker710.
    */
   @java.lang.Override
@@ -1001,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_ticker7_10 = 11;</code>
+   * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
    * @return The bytes for createTicker710.
    */
   @java.lang.Override
@@ -1022,7 +1043,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_COIN_FIELD_NUMBER = 34;
   private volatile java.lang.Object createCoin_;
   /**
-   * <code>string create_coin = 34;</code>
+   * <code>string create_coin = 34 [json_name = "createCoin"];</code>
    * @return The createCoin.
    */
   @java.lang.Override
@@ -1039,7 +1060,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_coin = 34;</code>
+   * <code>string create_coin = 34 [json_name = "createCoin"];</code>
    * @return The bytes for createCoin.
    */
   @java.lang.Override
@@ -1060,7 +1081,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_TOKEN_FIELD_NUMBER = 35;
   private volatile java.lang.Object createToken_;
   /**
-   * <code>string create_token = 35;</code>
+   * <code>string create_token = 35 [json_name = "createToken"];</code>
    * @return The createToken.
    */
   @java.lang.Override
@@ -1077,7 +1098,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_token = 35;</code>
+   * <code>string create_token = 35 [json_name = "createToken"];</code>
    * @return The bytes for createToken.
    */
   @java.lang.Override
@@ -1098,7 +1119,7 @@ private static final long serialVersionUID = 0L;
   public static final int RECREATE_COIN_FIELD_NUMBER = 36;
   private volatile java.lang.Object recreateCoin_;
   /**
-   * <code>string recreate_coin = 36;</code>
+   * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
    * @return The recreateCoin.
    */
   @java.lang.Override
@@ -1115,7 +1136,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string recreate_coin = 36;</code>
+   * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
    * @return The bytes for recreateCoin.
    */
   @java.lang.Override
@@ -1136,7 +1157,7 @@ private static final long serialVersionUID = 0L;
   public static final int RECREATE_TOKEN_FIELD_NUMBER = 37;
   private volatile java.lang.Object recreateToken_;
   /**
-   * <code>string recreate_token = 37;</code>
+   * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
    * @return The recreateToken.
    */
   @java.lang.Override
@@ -1153,7 +1174,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string recreate_token = 37;</code>
+   * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
    * @return The bytes for recreateToken.
    */
   @java.lang.Override
@@ -1174,7 +1195,7 @@ private static final long serialVersionUID = 0L;
   public static final int DECLARE_CANDIDACY_FIELD_NUMBER = 13;
   private volatile java.lang.Object declareCandidacy_;
   /**
-   * <code>string declare_candidacy = 13;</code>
+   * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
    * @return The declareCandidacy.
    */
   @java.lang.Override
@@ -1191,7 +1212,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string declare_candidacy = 13;</code>
+   * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
    * @return The bytes for declareCandidacy.
    */
   @java.lang.Override
@@ -1212,7 +1233,7 @@ private static final long serialVersionUID = 0L;
   public static final int DELEGATE_FIELD_NUMBER = 14;
   private volatile java.lang.Object delegate_;
   /**
-   * <code>string delegate = 14;</code>
+   * <code>string delegate = 14 [json_name = "delegate"];</code>
    * @return The delegate.
    */
   @java.lang.Override
@@ -1229,7 +1250,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string delegate = 14;</code>
+   * <code>string delegate = 14 [json_name = "delegate"];</code>
    * @return The bytes for delegate.
    */
   @java.lang.Override
@@ -1250,7 +1271,7 @@ private static final long serialVersionUID = 0L;
   public static final int UNBOND_FIELD_NUMBER = 15;
   private volatile java.lang.Object unbond_;
   /**
-   * <code>string unbond = 15;</code>
+   * <code>string unbond = 15 [json_name = "unbond"];</code>
    * @return The unbond.
    */
   @java.lang.Override
@@ -1267,7 +1288,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string unbond = 15;</code>
+   * <code>string unbond = 15 [json_name = "unbond"];</code>
    * @return The bytes for unbond.
    */
   @java.lang.Override
@@ -1288,7 +1309,7 @@ private static final long serialVersionUID = 0L;
   public static final int REDEEM_CHECK_FIELD_NUMBER = 16;
   private volatile java.lang.Object redeemCheck_;
   /**
-   * <code>string redeem_check = 16;</code>
+   * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
    * @return The redeemCheck.
    */
   @java.lang.Override
@@ -1305,7 +1326,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string redeem_check = 16;</code>
+   * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
    * @return The bytes for redeemCheck.
    */
   @java.lang.Override
@@ -1326,7 +1347,7 @@ private static final long serialVersionUID = 0L;
   public static final int SET_CANDIDATE_ON_FIELD_NUMBER = 44;
   private volatile java.lang.Object setCandidateOn_;
   /**
-   * <code>string set_candidate_on = 44;</code>
+   * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
    * @return The setCandidateOn.
    */
   @java.lang.Override
@@ -1343,7 +1364,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string set_candidate_on = 44;</code>
+   * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
    * @return The bytes for setCandidateOn.
    */
   @java.lang.Override
@@ -1364,7 +1385,7 @@ private static final long serialVersionUID = 0L;
   public static final int SET_CANDIDATE_OFF_FIELD_NUMBER = 45;
   private volatile java.lang.Object setCandidateOff_;
   /**
-   * <code>string set_candidate_off = 45;</code>
+   * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
    * @return The setCandidateOff.
    */
   @java.lang.Override
@@ -1381,7 +1402,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string set_candidate_off = 45;</code>
+   * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
    * @return The bytes for setCandidateOff.
    */
   @java.lang.Override
@@ -1402,7 +1423,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_MULTISIG_FIELD_NUMBER = 18;
   private volatile java.lang.Object createMultisig_;
   /**
-   * <code>string create_multisig = 18;</code>
+   * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
    * @return The createMultisig.
    */
   @java.lang.Override
@@ -1419,7 +1440,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_multisig = 18;</code>
+   * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
    * @return The bytes for createMultisig.
    */
   @java.lang.Override
@@ -1440,7 +1461,7 @@ private static final long serialVersionUID = 0L;
   public static final int MULTISEND_BASE_FIELD_NUMBER = 51;
   private volatile java.lang.Object multisendBase_;
   /**
-   * <code>string multisend_base = 51;</code>
+   * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
    * @return The multisendBase.
    */
   @java.lang.Override
@@ -1457,7 +1478,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string multisend_base = 51;</code>
+   * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
    * @return The bytes for multisendBase.
    */
   @java.lang.Override
@@ -1478,7 +1499,7 @@ private static final long serialVersionUID = 0L;
   public static final int MULTISEND_DELTA_FIELD_NUMBER = 52;
   private volatile java.lang.Object multisendDelta_;
   /**
-   * <code>string multisend_delta = 52;</code>
+   * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
    * @return The multisendDelta.
    */
   @java.lang.Override
@@ -1495,7 +1516,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string multisend_delta = 52;</code>
+   * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
    * @return The bytes for multisendDelta.
    */
   @java.lang.Override
@@ -1516,7 +1537,7 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_CANDIDATE_FIELD_NUMBER = 20;
   private volatile java.lang.Object editCandidate_;
   /**
-   * <code>string edit_candidate = 20;</code>
+   * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
    * @return The editCandidate.
    */
   @java.lang.Override
@@ -1533,7 +1554,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string edit_candidate = 20;</code>
+   * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
    * @return The bytes for editCandidate.
    */
   @java.lang.Override
@@ -1554,7 +1575,7 @@ private static final long serialVersionUID = 0L;
   public static final int SET_HALT_BLOCK_FIELD_NUMBER = 21;
   private volatile java.lang.Object setHaltBlock_;
   /**
-   * <code>string set_halt_block = 21;</code>
+   * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
    * @return The setHaltBlock.
    */
   @java.lang.Override
@@ -1571,7 +1592,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string set_halt_block = 21;</code>
+   * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
    * @return The bytes for setHaltBlock.
    */
   @java.lang.Override
@@ -1592,7 +1613,7 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_TICKER_OWNER_FIELD_NUMBER = 22;
   private volatile java.lang.Object editTickerOwner_;
   /**
-   * <code>string edit_ticker_owner = 22;</code>
+   * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
    * @return The editTickerOwner.
    */
   @java.lang.Override
@@ -1609,7 +1630,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string edit_ticker_owner = 22;</code>
+   * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
    * @return The bytes for editTickerOwner.
    */
   @java.lang.Override
@@ -1630,7 +1651,7 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_MULTISIG_FIELD_NUMBER = 23;
   private volatile java.lang.Object editMultisig_;
   /**
-   * <code>string edit_multisig = 23;</code>
+   * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
    * @return The editMultisig.
    */
   @java.lang.Override
@@ -1647,7 +1668,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string edit_multisig = 23;</code>
+   * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
    * @return The bytes for editMultisig.
    */
   @java.lang.Override
@@ -1668,7 +1689,7 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_CANDIDATE_PUBLIC_KEY_FIELD_NUMBER = 25;
   private volatile java.lang.Object editCandidatePublicKey_;
   /**
-   * <code>string edit_candidate_public_key = 25;</code>
+   * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
    * @return The editCandidatePublicKey.
    */
   @java.lang.Override
@@ -1685,7 +1706,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string edit_candidate_public_key = 25;</code>
+   * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
    * @return The bytes for editCandidatePublicKey.
    */
   @java.lang.Override
@@ -1706,7 +1727,7 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_SWAP_POOL_FIELD_NUMBER = 48;
   private volatile java.lang.Object createSwapPool_;
   /**
-   * <code>string create_swap_pool = 48;</code>
+   * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
    * @return The createSwapPool.
    */
   @java.lang.Override
@@ -1723,7 +1744,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string create_swap_pool = 48;</code>
+   * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
    * @return The bytes for createSwapPool.
    */
   @java.lang.Override
@@ -1744,7 +1765,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADD_LIQUIDITY_FIELD_NUMBER = 49;
   private volatile java.lang.Object addLiquidity_;
   /**
-   * <code>string add_liquidity = 49;</code>
+   * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
    * @return The addLiquidity.
    */
   @java.lang.Override
@@ -1761,7 +1782,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string add_liquidity = 49;</code>
+   * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
    * @return The bytes for addLiquidity.
    */
   @java.lang.Override
@@ -1782,7 +1803,7 @@ private static final long serialVersionUID = 0L;
   public static final int REMOVE_LIQUIDITY_FIELD_NUMBER = 50;
   private volatile java.lang.Object removeLiquidity_;
   /**
-   * <code>string remove_liquidity = 50;</code>
+   * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
    * @return The removeLiquidity.
    */
   @java.lang.Override
@@ -1799,7 +1820,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string remove_liquidity = 50;</code>
+   * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
    * @return The bytes for removeLiquidity.
    */
   @java.lang.Override
@@ -1820,7 +1841,7 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_CANDIDATE_COMMISSION_FIELD_NUMBER = 28;
   private volatile java.lang.Object editCandidateCommission_;
   /**
-   * <code>string edit_candidate_commission = 28;</code>
+   * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
    * @return The editCandidateCommission.
    */
   @java.lang.Override
@@ -1837,7 +1858,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string edit_candidate_commission = 28;</code>
+   * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
    * @return The bytes for editCandidateCommission.
    */
   @java.lang.Override
@@ -1858,7 +1879,7 @@ private static final long serialVersionUID = 0L;
   public static final int MINT_TOKEN_FIELD_NUMBER = 46;
   private volatile java.lang.Object mintToken_;
   /**
-   * <code>string mint_token = 46;</code>
+   * <code>string mint_token = 46 [json_name = "mintToken"];</code>
    * @return The mintToken.
    */
   @java.lang.Override
@@ -1875,7 +1896,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string mint_token = 46;</code>
+   * <code>string mint_token = 46 [json_name = "mintToken"];</code>
    * @return The bytes for mintToken.
    */
   @java.lang.Override
@@ -1896,7 +1917,7 @@ private static final long serialVersionUID = 0L;
   public static final int BURN_TOKEN_FIELD_NUMBER = 47;
   private volatile java.lang.Object burnToken_;
   /**
-   * <code>string burn_token = 47;</code>
+   * <code>string burn_token = 47 [json_name = "burnToken"];</code>
    * @return The burnToken.
    */
   @java.lang.Override
@@ -1913,7 +1934,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string burn_token = 47;</code>
+   * <code>string burn_token = 47 [json_name = "burnToken"];</code>
    * @return The bytes for burnToken.
    */
   @java.lang.Override
@@ -1934,7 +1955,7 @@ private static final long serialVersionUID = 0L;
   public static final int VOTE_COMMISSION_FIELD_NUMBER = 31;
   private volatile java.lang.Object voteCommission_;
   /**
-   * <code>string vote_commission = 31;</code>
+   * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
    * @return The voteCommission.
    */
   @java.lang.Override
@@ -1951,7 +1972,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string vote_commission = 31;</code>
+   * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
    * @return The bytes for voteCommission.
    */
   @java.lang.Override
@@ -1972,7 +1993,7 @@ private static final long serialVersionUID = 0L;
   public static final int VOTE_UPDATE_FIELD_NUMBER = 32;
   private volatile java.lang.Object voteUpdate_;
   /**
-   * <code>string vote_update = 32;</code>
+   * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
    * @return The voteUpdate.
    */
   @java.lang.Override
@@ -1989,7 +2010,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string vote_update = 32;</code>
+   * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
    * @return The bytes for voteUpdate.
    */
   @java.lang.Override
@@ -2010,7 +2031,7 @@ private static final long serialVersionUID = 0L;
   public static final int FAILED_TX_FIELD_NUMBER = 56;
   private volatile java.lang.Object failedTx_;
   /**
-   * <code>string failed_tx = 56;</code>
+   * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
    * @return The failedTx.
    */
   @java.lang.Override
@@ -2027,7 +2048,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string failed_tx = 56;</code>
+   * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
    * @return The bytes for failedTx.
    */
   @java.lang.Override
@@ -2048,7 +2069,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADD_LIMIT_ORDER_FIELD_NUMBER = 57;
   private volatile java.lang.Object addLimitOrder_;
   /**
-   * <code>string add_limit_order = 57;</code>
+   * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
    * @return The addLimitOrder.
    */
   @java.lang.Override
@@ -2065,7 +2086,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string add_limit_order = 57;</code>
+   * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
    * @return The bytes for addLimitOrder.
    */
   @java.lang.Override
@@ -2086,7 +2107,7 @@ private static final long serialVersionUID = 0L;
   public static final int REMOVE_LIMIT_ORDER_FIELD_NUMBER = 58;
   private volatile java.lang.Object removeLimitOrder_;
   /**
-   * <code>string remove_limit_order = 58;</code>
+   * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
    * @return The removeLimitOrder.
    */
   @java.lang.Override
@@ -2103,7 +2124,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string remove_limit_order = 58;</code>
+   * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
    * @return The bytes for removeLimitOrder.
    */
   @java.lang.Override
@@ -2115,6 +2136,120 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       removeLimitOrder_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MOVE_STAKE_FIELD_NUMBER = 59;
+  private volatile java.lang.Object moveStake_;
+  /**
+   * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+   * @return The moveStake.
+   */
+  @java.lang.Override
+  public java.lang.String getMoveStake() {
+    java.lang.Object ref = moveStake_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      moveStake_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+   * @return The bytes for moveStake.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMoveStakeBytes() {
+    java.lang.Object ref = moveStake_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      moveStake_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LOCK_STAKE_FIELD_NUMBER = 60;
+  private volatile java.lang.Object lockStake_;
+  /**
+   * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+   * @return The lockStake.
+   */
+  @java.lang.Override
+  public java.lang.String getLockStake() {
+    java.lang.Object ref = lockStake_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lockStake_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+   * @return The bytes for lockStake.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLockStakeBytes() {
+    java.lang.Object ref = lockStake_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lockStake_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LOCK_FIELD_NUMBER = 61;
+  private volatile java.lang.Object lock_;
+  /**
+   * <code>string lock = 61 [json_name = "lock"];</code>
+   * @return The lock.
+   */
+  @java.lang.Override
+  public java.lang.String getLock() {
+    java.lang.Object ref = lock_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lock_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string lock = 61 [json_name = "lock"];</code>
+   * @return The bytes for lock.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLockBytes() {
+    java.lang.Object ref = lock_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lock_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -2138,140 +2273,149 @@ private static final long serialVersionUID = 0L;
     if (coin_ != 0L) {
       output.writeUInt64(3, coin_);
     }
-    if (!getPayloadByteBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadByte_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payloadByte_);
     }
-    if (!getSendBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(send_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, send_);
     }
-    if (!getCreateTicker3Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker3_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createTicker3_);
     }
-    if (!getCreateTicker4Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker4_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, createTicker4_);
     }
-    if (!getCreateTicker5Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker5_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, createTicker5_);
     }
-    if (!getCreateTicker6Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker6_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, createTicker6_);
     }
-    if (!getCreateTicker710Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker710_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, createTicker710_);
     }
-    if (!getDeclareCandidacyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(declareCandidacy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, declareCandidacy_);
     }
-    if (!getDelegateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, delegate_);
     }
-    if (!getUnbondBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbond_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, unbond_);
     }
-    if (!getRedeemCheckBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemCheck_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, redeemCheck_);
     }
-    if (!getCreateMultisigBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createMultisig_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, createMultisig_);
     }
-    if (!getEditCandidateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, editCandidate_);
     }
-    if (!getSetHaltBlockBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setHaltBlock_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, setHaltBlock_);
     }
-    if (!getEditTickerOwnerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editTickerOwner_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 22, editTickerOwner_);
     }
-    if (!getEditMultisigBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editMultisig_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 23, editMultisig_);
     }
-    if (!getEditCandidatePublicKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidatePublicKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 25, editCandidatePublicKey_);
     }
-    if (!getEditCandidateCommissionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidateCommission_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 28, editCandidateCommission_);
     }
-    if (!getVoteCommissionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteCommission_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 31, voteCommission_);
     }
-    if (!getVoteUpdateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteUpdate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 32, voteUpdate_);
     }
-    if (!getCreateCoinBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createCoin_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 34, createCoin_);
     }
-    if (!getCreateTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 35, createToken_);
     }
-    if (!getRecreateCoinBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateCoin_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 36, recreateCoin_);
     }
-    if (!getRecreateTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, recreateToken_);
     }
-    if (!getBuyBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyBancor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 38, buyBancor_);
     }
-    if (!getSellBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellBancor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 39, sellBancor_);
     }
-    if (!getSellAllBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllBancor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 40, sellAllBancor_);
     }
-    if (!getBuyPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolBase_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 41, buyPoolBase_);
     }
-    if (!getSellPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolBase_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 42, sellPoolBase_);
     }
-    if (!getSellAllPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolBase_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 43, sellAllPoolBase_);
     }
-    if (!getSetCandidateOnBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOn_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 44, setCandidateOn_);
     }
-    if (!getSetCandidateOffBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOff_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 45, setCandidateOff_);
     }
-    if (!getMintTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 46, mintToken_);
     }
-    if (!getBurnTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 47, burnToken_);
     }
-    if (!getCreateSwapPoolBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createSwapPool_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 48, createSwapPool_);
     }
-    if (!getAddLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLiquidity_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 49, addLiquidity_);
     }
-    if (!getRemoveLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLiquidity_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 50, removeLiquidity_);
     }
-    if (!getMultisendBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendBase_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 51, multisendBase_);
     }
-    if (!getMultisendDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendDelta_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 52, multisendDelta_);
     }
-    if (!getBuyPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolDelta_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 53, buyPoolDelta_);
     }
-    if (!getSellPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolDelta_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 54, sellPoolDelta_);
     }
-    if (!getSellAllPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolDelta_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 55, sellAllPoolDelta_);
     }
-    if (!getFailedTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failedTx_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 56, failedTx_);
     }
-    if (!getAddLimitOrderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLimitOrder_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 57, addLimitOrder_);
     }
-    if (!getRemoveLimitOrderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLimitOrder_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 58, removeLimitOrder_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moveStake_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 59, moveStake_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockStake_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 60, lockStake_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lock_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 61, lock_);
     }
     unknownFields.writeTo(output);
   }
@@ -2286,140 +2430,149 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(3, coin_);
     }
-    if (!getPayloadByteBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadByte_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payloadByte_);
     }
-    if (!getSendBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(send_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, send_);
     }
-    if (!getCreateTicker3Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker3_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createTicker3_);
     }
-    if (!getCreateTicker4Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker4_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, createTicker4_);
     }
-    if (!getCreateTicker5Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker5_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, createTicker5_);
     }
-    if (!getCreateTicker6Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker6_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, createTicker6_);
     }
-    if (!getCreateTicker710Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker710_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, createTicker710_);
     }
-    if (!getDeclareCandidacyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(declareCandidacy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, declareCandidacy_);
     }
-    if (!getDelegateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, delegate_);
     }
-    if (!getUnbondBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbond_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, unbond_);
     }
-    if (!getRedeemCheckBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemCheck_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, redeemCheck_);
     }
-    if (!getCreateMultisigBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createMultisig_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, createMultisig_);
     }
-    if (!getEditCandidateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, editCandidate_);
     }
-    if (!getSetHaltBlockBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setHaltBlock_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, setHaltBlock_);
     }
-    if (!getEditTickerOwnerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editTickerOwner_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, editTickerOwner_);
     }
-    if (!getEditMultisigBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editMultisig_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, editMultisig_);
     }
-    if (!getEditCandidatePublicKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidatePublicKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, editCandidatePublicKey_);
     }
-    if (!getEditCandidateCommissionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidateCommission_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, editCandidateCommission_);
     }
-    if (!getVoteCommissionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteCommission_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, voteCommission_);
     }
-    if (!getVoteUpdateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteUpdate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, voteUpdate_);
     }
-    if (!getCreateCoinBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createCoin_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, createCoin_);
     }
-    if (!getCreateTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, createToken_);
     }
-    if (!getRecreateCoinBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateCoin_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, recreateCoin_);
     }
-    if (!getRecreateTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, recreateToken_);
     }
-    if (!getBuyBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyBancor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, buyBancor_);
     }
-    if (!getSellBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellBancor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, sellBancor_);
     }
-    if (!getSellAllBancorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllBancor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, sellAllBancor_);
     }
-    if (!getBuyPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolBase_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, buyPoolBase_);
     }
-    if (!getSellPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolBase_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, sellPoolBase_);
     }
-    if (!getSellAllPoolBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolBase_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, sellAllPoolBase_);
     }
-    if (!getSetCandidateOnBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOn_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(44, setCandidateOn_);
     }
-    if (!getSetCandidateOffBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOff_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(45, setCandidateOff_);
     }
-    if (!getMintTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, mintToken_);
     }
-    if (!getBurnTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, burnToken_);
     }
-    if (!getCreateSwapPoolBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createSwapPool_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(48, createSwapPool_);
     }
-    if (!getAddLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLiquidity_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(49, addLiquidity_);
     }
-    if (!getRemoveLiquidityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLiquidity_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, removeLiquidity_);
     }
-    if (!getMultisendBaseBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendBase_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(51, multisendBase_);
     }
-    if (!getMultisendDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendDelta_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(52, multisendDelta_);
     }
-    if (!getBuyPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolDelta_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(53, buyPoolDelta_);
     }
-    if (!getSellPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolDelta_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(54, sellPoolDelta_);
     }
-    if (!getSellAllPoolDeltaBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolDelta_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(55, sellAllPoolDelta_);
     }
-    if (!getFailedTxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failedTx_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(56, failedTx_);
     }
-    if (!getAddLimitOrderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLimitOrder_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(57, addLimitOrder_);
     }
-    if (!getRemoveLimitOrderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLimitOrder_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(58, removeLimitOrder_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moveStake_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(59, moveStake_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockStake_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(60, lockStake_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lock_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(61, lock_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2528,6 +2681,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAddLimitOrder())) return false;
     if (!getRemoveLimitOrder()
         .equals(other.getRemoveLimitOrder())) return false;
+    if (!getMoveStake()
+        .equals(other.getMoveStake())) return false;
+    if (!getLockStake()
+        .equals(other.getLockStake())) return false;
+    if (!getLock()
+        .equals(other.getLock())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2632,6 +2791,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAddLimitOrder().hashCode();
     hash = (37 * hash) + REMOVE_LIMIT_ORDER_FIELD_NUMBER;
     hash = (53 * hash) + getRemoveLimitOrder().hashCode();
+    hash = (37 * hash) + MOVE_STAKE_FIELD_NUMBER;
+    hash = (53 * hash) + getMoveStake().hashCode();
+    hash = (37 * hash) + LOCK_STAKE_FIELD_NUMBER;
+    hash = (53 * hash) + getLockStake().hashCode();
+    hash = (37 * hash) + LOCK_FIELD_NUMBER;
+    hash = (53 * hash) + getLock().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2857,6 +3022,12 @@ private static final long serialVersionUID = 0L;
 
       removeLimitOrder_ = "";
 
+      moveStake_ = "";
+
+      lockStake_ = "";
+
+      lock_ = "";
+
       return this;
     }
 
@@ -2929,6 +3100,9 @@ private static final long serialVersionUID = 0L;
       result.failedTx_ = failedTx_;
       result.addLimitOrder_ = addLimitOrder_;
       result.removeLimitOrder_ = removeLimitOrder_;
+      result.moveStake_ = moveStake_;
+      result.lockStake_ = lockStake_;
+      result.lock_ = lock_;
       onBuilt();
       return result;
     }
@@ -3160,6 +3334,18 @@ private static final long serialVersionUID = 0L;
         removeLimitOrder_ = other.removeLimitOrder_;
         onChanged();
       }
+      if (!other.getMoveStake().isEmpty()) {
+        moveStake_ = other.moveStake_;
+        onChanged();
+      }
+      if (!other.getLockStake().isEmpty()) {
+        lockStake_ = other.lockStake_;
+        onChanged();
+      }
+      if (!other.getLock().isEmpty()) {
+        lock_ = other.lock_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -3191,7 +3377,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin_ ;
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      * @return The coin.
      */
     @java.lang.Override
@@ -3199,7 +3385,7 @@ private static final long serialVersionUID = 0L;
       return coin_;
     }
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      * @param value The coin to set.
      * @return This builder for chaining.
      */
@@ -3210,7 +3396,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin() {
@@ -3222,7 +3408,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object payloadByte_ = "";
     /**
-     * <code>string payload_byte = 4;</code>
+     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
      * @return The payloadByte.
      */
     public java.lang.String getPayloadByte() {
@@ -3238,7 +3424,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string payload_byte = 4;</code>
+     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
      * @return The bytes for payloadByte.
      */
     public com.google.protobuf.ByteString
@@ -3255,7 +3441,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string payload_byte = 4;</code>
+     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
      * @param value The payloadByte to set.
      * @return This builder for chaining.
      */
@@ -3270,7 +3456,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string payload_byte = 4;</code>
+     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPayloadByte() {
@@ -3280,7 +3466,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string payload_byte = 4;</code>
+     * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
      * @param value The bytes for payloadByte to set.
      * @return This builder for chaining.
      */
@@ -3298,7 +3484,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object send_ = "";
     /**
-     * <code>string send = 5;</code>
+     * <code>string send = 5 [json_name = "send"];</code>
      * @return The send.
      */
     public java.lang.String getSend() {
@@ -3314,7 +3500,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string send = 5;</code>
+     * <code>string send = 5 [json_name = "send"];</code>
      * @return The bytes for send.
      */
     public com.google.protobuf.ByteString
@@ -3331,7 +3517,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string send = 5;</code>
+     * <code>string send = 5 [json_name = "send"];</code>
      * @param value The send to set.
      * @return This builder for chaining.
      */
@@ -3346,7 +3532,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string send = 5;</code>
+     * <code>string send = 5 [json_name = "send"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSend() {
@@ -3356,7 +3542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string send = 5;</code>
+     * <code>string send = 5 [json_name = "send"];</code>
      * @param value The bytes for send to set.
      * @return This builder for chaining.
      */
@@ -3374,7 +3560,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object buyBancor_ = "";
     /**
-     * <code>string buy_bancor = 38;</code>
+     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
      * @return The buyBancor.
      */
     public java.lang.String getBuyBancor() {
@@ -3390,7 +3576,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_bancor = 38;</code>
+     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
      * @return The bytes for buyBancor.
      */
     public com.google.protobuf.ByteString
@@ -3407,7 +3593,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_bancor = 38;</code>
+     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
      * @param value The buyBancor to set.
      * @return This builder for chaining.
      */
@@ -3422,7 +3608,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_bancor = 38;</code>
+     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBuyBancor() {
@@ -3432,7 +3618,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_bancor = 38;</code>
+     * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
      * @param value The bytes for buyBancor to set.
      * @return This builder for chaining.
      */
@@ -3450,7 +3636,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellBancor_ = "";
     /**
-     * <code>string sell_bancor = 39;</code>
+     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
      * @return The sellBancor.
      */
     public java.lang.String getSellBancor() {
@@ -3466,7 +3652,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_bancor = 39;</code>
+     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
      * @return The bytes for sellBancor.
      */
     public com.google.protobuf.ByteString
@@ -3483,7 +3669,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_bancor = 39;</code>
+     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
      * @param value The sellBancor to set.
      * @return This builder for chaining.
      */
@@ -3498,7 +3684,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_bancor = 39;</code>
+     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellBancor() {
@@ -3508,7 +3694,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_bancor = 39;</code>
+     * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
      * @param value The bytes for sellBancor to set.
      * @return This builder for chaining.
      */
@@ -3526,7 +3712,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellAllBancor_ = "";
     /**
-     * <code>string sell_all_bancor = 40;</code>
+     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
      * @return The sellAllBancor.
      */
     public java.lang.String getSellAllBancor() {
@@ -3542,7 +3728,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_bancor = 40;</code>
+     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
      * @return The bytes for sellAllBancor.
      */
     public com.google.protobuf.ByteString
@@ -3559,7 +3745,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_bancor = 40;</code>
+     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
      * @param value The sellAllBancor to set.
      * @return This builder for chaining.
      */
@@ -3574,7 +3760,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_bancor = 40;</code>
+     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellAllBancor() {
@@ -3584,7 +3770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_bancor = 40;</code>
+     * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
      * @param value The bytes for sellAllBancor to set.
      * @return This builder for chaining.
      */
@@ -3602,7 +3788,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object buyPoolBase_ = "";
     /**
-     * <code>string buy_pool_base = 41;</code>
+     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
      * @return The buyPoolBase.
      */
     public java.lang.String getBuyPoolBase() {
@@ -3618,7 +3804,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_pool_base = 41;</code>
+     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
      * @return The bytes for buyPoolBase.
      */
     public com.google.protobuf.ByteString
@@ -3635,7 +3821,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_pool_base = 41;</code>
+     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
      * @param value The buyPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3650,7 +3836,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_pool_base = 41;</code>
+     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBuyPoolBase() {
@@ -3660,7 +3846,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_pool_base = 41;</code>
+     * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
      * @param value The bytes for buyPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3678,7 +3864,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object buyPoolDelta_ = "";
     /**
-     * <code>string buy_pool_delta = 53;</code>
+     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
      * @return The buyPoolDelta.
      */
     public java.lang.String getBuyPoolDelta() {
@@ -3694,7 +3880,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_pool_delta = 53;</code>
+     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
      * @return The bytes for buyPoolDelta.
      */
     public com.google.protobuf.ByteString
@@ -3711,7 +3897,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string buy_pool_delta = 53;</code>
+     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
      * @param value The buyPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -3726,7 +3912,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_pool_delta = 53;</code>
+     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBuyPoolDelta() {
@@ -3736,7 +3922,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string buy_pool_delta = 53;</code>
+     * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
      * @param value The bytes for buyPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -3754,7 +3940,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellPoolBase_ = "";
     /**
-     * <code>string sell_pool_base = 42;</code>
+     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
      * @return The sellPoolBase.
      */
     public java.lang.String getSellPoolBase() {
@@ -3770,7 +3956,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_pool_base = 42;</code>
+     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
      * @return The bytes for sellPoolBase.
      */
     public com.google.protobuf.ByteString
@@ -3787,7 +3973,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_pool_base = 42;</code>
+     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
      * @param value The sellPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3802,7 +3988,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_pool_base = 42;</code>
+     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellPoolBase() {
@@ -3812,7 +3998,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_pool_base = 42;</code>
+     * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
      * @param value The bytes for sellPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3830,7 +4016,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellPoolDelta_ = "";
     /**
-     * <code>string sell_pool_delta = 54;</code>
+     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
      * @return The sellPoolDelta.
      */
     public java.lang.String getSellPoolDelta() {
@@ -3846,7 +4032,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_pool_delta = 54;</code>
+     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
      * @return The bytes for sellPoolDelta.
      */
     public com.google.protobuf.ByteString
@@ -3863,7 +4049,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_pool_delta = 54;</code>
+     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
      * @param value The sellPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -3878,7 +4064,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_pool_delta = 54;</code>
+     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellPoolDelta() {
@@ -3888,7 +4074,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_pool_delta = 54;</code>
+     * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
      * @param value The bytes for sellPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -3906,7 +4092,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellAllPoolBase_ = "";
     /**
-     * <code>string sell_all_pool_base = 43;</code>
+     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
      * @return The sellAllPoolBase.
      */
     public java.lang.String getSellAllPoolBase() {
@@ -3922,7 +4108,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_pool_base = 43;</code>
+     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
      * @return The bytes for sellAllPoolBase.
      */
     public com.google.protobuf.ByteString
@@ -3939,7 +4125,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_pool_base = 43;</code>
+     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
      * @param value The sellAllPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3954,7 +4140,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_pool_base = 43;</code>
+     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellAllPoolBase() {
@@ -3964,7 +4150,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_pool_base = 43;</code>
+     * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
      * @param value The bytes for sellAllPoolBase to set.
      * @return This builder for chaining.
      */
@@ -3982,7 +4168,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object sellAllPoolDelta_ = "";
     /**
-     * <code>string sell_all_pool_delta = 55;</code>
+     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
      * @return The sellAllPoolDelta.
      */
     public java.lang.String getSellAllPoolDelta() {
@@ -3998,7 +4184,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_pool_delta = 55;</code>
+     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
      * @return The bytes for sellAllPoolDelta.
      */
     public com.google.protobuf.ByteString
@@ -4015,7 +4201,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sell_all_pool_delta = 55;</code>
+     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
      * @param value The sellAllPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -4030,7 +4216,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_pool_delta = 55;</code>
+     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSellAllPoolDelta() {
@@ -4040,7 +4226,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sell_all_pool_delta = 55;</code>
+     * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
      * @param value The bytes for sellAllPoolDelta to set.
      * @return This builder for chaining.
      */
@@ -4058,7 +4244,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createTicker3_ = "";
     /**
-     * <code>string create_ticker3 = 7;</code>
+     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
      * @return The createTicker3.
      */
     public java.lang.String getCreateTicker3() {
@@ -4074,7 +4260,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker3 = 7;</code>
+     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
      * @return The bytes for createTicker3.
      */
     public com.google.protobuf.ByteString
@@ -4091,7 +4277,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker3 = 7;</code>
+     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
      * @param value The createTicker3 to set.
      * @return This builder for chaining.
      */
@@ -4106,7 +4292,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker3 = 7;</code>
+     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateTicker3() {
@@ -4116,7 +4302,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker3 = 7;</code>
+     * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
      * @param value The bytes for createTicker3 to set.
      * @return This builder for chaining.
      */
@@ -4134,7 +4320,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createTicker4_ = "";
     /**
-     * <code>string create_ticker4 = 8;</code>
+     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
      * @return The createTicker4.
      */
     public java.lang.String getCreateTicker4() {
@@ -4150,7 +4336,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker4 = 8;</code>
+     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
      * @return The bytes for createTicker4.
      */
     public com.google.protobuf.ByteString
@@ -4167,7 +4353,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker4 = 8;</code>
+     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
      * @param value The createTicker4 to set.
      * @return This builder for chaining.
      */
@@ -4182,7 +4368,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker4 = 8;</code>
+     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateTicker4() {
@@ -4192,7 +4378,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker4 = 8;</code>
+     * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
      * @param value The bytes for createTicker4 to set.
      * @return This builder for chaining.
      */
@@ -4210,7 +4396,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createTicker5_ = "";
     /**
-     * <code>string create_ticker5 = 9;</code>
+     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
      * @return The createTicker5.
      */
     public java.lang.String getCreateTicker5() {
@@ -4226,7 +4412,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker5 = 9;</code>
+     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
      * @return The bytes for createTicker5.
      */
     public com.google.protobuf.ByteString
@@ -4243,7 +4429,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker5 = 9;</code>
+     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
      * @param value The createTicker5 to set.
      * @return This builder for chaining.
      */
@@ -4258,7 +4444,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker5 = 9;</code>
+     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateTicker5() {
@@ -4268,7 +4454,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker5 = 9;</code>
+     * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
      * @param value The bytes for createTicker5 to set.
      * @return This builder for chaining.
      */
@@ -4286,7 +4472,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createTicker6_ = "";
     /**
-     * <code>string create_ticker6 = 10;</code>
+     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
      * @return The createTicker6.
      */
     public java.lang.String getCreateTicker6() {
@@ -4302,7 +4488,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker6 = 10;</code>
+     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
      * @return The bytes for createTicker6.
      */
     public com.google.protobuf.ByteString
@@ -4319,7 +4505,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker6 = 10;</code>
+     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
      * @param value The createTicker6 to set.
      * @return This builder for chaining.
      */
@@ -4334,7 +4520,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker6 = 10;</code>
+     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateTicker6() {
@@ -4344,7 +4530,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker6 = 10;</code>
+     * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
      * @param value The bytes for createTicker6 to set.
      * @return This builder for chaining.
      */
@@ -4362,7 +4548,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createTicker710_ = "";
     /**
-     * <code>string create_ticker7_10 = 11;</code>
+     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
      * @return The createTicker710.
      */
     public java.lang.String getCreateTicker710() {
@@ -4378,7 +4564,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker7_10 = 11;</code>
+     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
      * @return The bytes for createTicker710.
      */
     public com.google.protobuf.ByteString
@@ -4395,7 +4581,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_ticker7_10 = 11;</code>
+     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
      * @param value The createTicker710 to set.
      * @return This builder for chaining.
      */
@@ -4410,7 +4596,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker7_10 = 11;</code>
+     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateTicker710() {
@@ -4420,7 +4606,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_ticker7_10 = 11;</code>
+     * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
      * @param value The bytes for createTicker710 to set.
      * @return This builder for chaining.
      */
@@ -4438,7 +4624,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createCoin_ = "";
     /**
-     * <code>string create_coin = 34;</code>
+     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
      * @return The createCoin.
      */
     public java.lang.String getCreateCoin() {
@@ -4454,7 +4640,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_coin = 34;</code>
+     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
      * @return The bytes for createCoin.
      */
     public com.google.protobuf.ByteString
@@ -4471,7 +4657,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_coin = 34;</code>
+     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
      * @param value The createCoin to set.
      * @return This builder for chaining.
      */
@@ -4486,7 +4672,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_coin = 34;</code>
+     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateCoin() {
@@ -4496,7 +4682,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_coin = 34;</code>
+     * <code>string create_coin = 34 [json_name = "createCoin"];</code>
      * @param value The bytes for createCoin to set.
      * @return This builder for chaining.
      */
@@ -4514,7 +4700,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createToken_ = "";
     /**
-     * <code>string create_token = 35;</code>
+     * <code>string create_token = 35 [json_name = "createToken"];</code>
      * @return The createToken.
      */
     public java.lang.String getCreateToken() {
@@ -4530,7 +4716,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_token = 35;</code>
+     * <code>string create_token = 35 [json_name = "createToken"];</code>
      * @return The bytes for createToken.
      */
     public com.google.protobuf.ByteString
@@ -4547,7 +4733,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_token = 35;</code>
+     * <code>string create_token = 35 [json_name = "createToken"];</code>
      * @param value The createToken to set.
      * @return This builder for chaining.
      */
@@ -4562,7 +4748,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_token = 35;</code>
+     * <code>string create_token = 35 [json_name = "createToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateToken() {
@@ -4572,7 +4758,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_token = 35;</code>
+     * <code>string create_token = 35 [json_name = "createToken"];</code>
      * @param value The bytes for createToken to set.
      * @return This builder for chaining.
      */
@@ -4590,7 +4776,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object recreateCoin_ = "";
     /**
-     * <code>string recreate_coin = 36;</code>
+     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
      * @return The recreateCoin.
      */
     public java.lang.String getRecreateCoin() {
@@ -4606,7 +4792,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recreate_coin = 36;</code>
+     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
      * @return The bytes for recreateCoin.
      */
     public com.google.protobuf.ByteString
@@ -4623,7 +4809,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recreate_coin = 36;</code>
+     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
      * @param value The recreateCoin to set.
      * @return This builder for chaining.
      */
@@ -4638,7 +4824,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recreate_coin = 36;</code>
+     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecreateCoin() {
@@ -4648,7 +4834,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recreate_coin = 36;</code>
+     * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
      * @param value The bytes for recreateCoin to set.
      * @return This builder for chaining.
      */
@@ -4666,7 +4852,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object recreateToken_ = "";
     /**
-     * <code>string recreate_token = 37;</code>
+     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
      * @return The recreateToken.
      */
     public java.lang.String getRecreateToken() {
@@ -4682,7 +4868,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recreate_token = 37;</code>
+     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
      * @return The bytes for recreateToken.
      */
     public com.google.protobuf.ByteString
@@ -4699,7 +4885,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recreate_token = 37;</code>
+     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
      * @param value The recreateToken to set.
      * @return This builder for chaining.
      */
@@ -4714,7 +4900,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recreate_token = 37;</code>
+     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecreateToken() {
@@ -4724,7 +4910,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recreate_token = 37;</code>
+     * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
      * @param value The bytes for recreateToken to set.
      * @return This builder for chaining.
      */
@@ -4742,7 +4928,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object declareCandidacy_ = "";
     /**
-     * <code>string declare_candidacy = 13;</code>
+     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
      * @return The declareCandidacy.
      */
     public java.lang.String getDeclareCandidacy() {
@@ -4758,7 +4944,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string declare_candidacy = 13;</code>
+     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
      * @return The bytes for declareCandidacy.
      */
     public com.google.protobuf.ByteString
@@ -4775,7 +4961,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string declare_candidacy = 13;</code>
+     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
      * @param value The declareCandidacy to set.
      * @return This builder for chaining.
      */
@@ -4790,7 +4976,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string declare_candidacy = 13;</code>
+     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDeclareCandidacy() {
@@ -4800,7 +4986,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string declare_candidacy = 13;</code>
+     * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
      * @param value The bytes for declareCandidacy to set.
      * @return This builder for chaining.
      */
@@ -4818,7 +5004,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object delegate_ = "";
     /**
-     * <code>string delegate = 14;</code>
+     * <code>string delegate = 14 [json_name = "delegate"];</code>
      * @return The delegate.
      */
     public java.lang.String getDelegate() {
@@ -4834,7 +5020,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string delegate = 14;</code>
+     * <code>string delegate = 14 [json_name = "delegate"];</code>
      * @return The bytes for delegate.
      */
     public com.google.protobuf.ByteString
@@ -4851,7 +5037,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string delegate = 14;</code>
+     * <code>string delegate = 14 [json_name = "delegate"];</code>
      * @param value The delegate to set.
      * @return This builder for chaining.
      */
@@ -4866,7 +5052,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string delegate = 14;</code>
+     * <code>string delegate = 14 [json_name = "delegate"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDelegate() {
@@ -4876,7 +5062,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string delegate = 14;</code>
+     * <code>string delegate = 14 [json_name = "delegate"];</code>
      * @param value The bytes for delegate to set.
      * @return This builder for chaining.
      */
@@ -4894,7 +5080,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object unbond_ = "";
     /**
-     * <code>string unbond = 15;</code>
+     * <code>string unbond = 15 [json_name = "unbond"];</code>
      * @return The unbond.
      */
     public java.lang.String getUnbond() {
@@ -4910,7 +5096,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string unbond = 15;</code>
+     * <code>string unbond = 15 [json_name = "unbond"];</code>
      * @return The bytes for unbond.
      */
     public com.google.protobuf.ByteString
@@ -4927,7 +5113,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string unbond = 15;</code>
+     * <code>string unbond = 15 [json_name = "unbond"];</code>
      * @param value The unbond to set.
      * @return This builder for chaining.
      */
@@ -4942,7 +5128,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string unbond = 15;</code>
+     * <code>string unbond = 15 [json_name = "unbond"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUnbond() {
@@ -4952,7 +5138,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string unbond = 15;</code>
+     * <code>string unbond = 15 [json_name = "unbond"];</code>
      * @param value The bytes for unbond to set.
      * @return This builder for chaining.
      */
@@ -4970,7 +5156,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object redeemCheck_ = "";
     /**
-     * <code>string redeem_check = 16;</code>
+     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
      * @return The redeemCheck.
      */
     public java.lang.String getRedeemCheck() {
@@ -4986,7 +5172,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string redeem_check = 16;</code>
+     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
      * @return The bytes for redeemCheck.
      */
     public com.google.protobuf.ByteString
@@ -5003,7 +5189,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string redeem_check = 16;</code>
+     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
      * @param value The redeemCheck to set.
      * @return This builder for chaining.
      */
@@ -5018,7 +5204,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string redeem_check = 16;</code>
+     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRedeemCheck() {
@@ -5028,7 +5214,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string redeem_check = 16;</code>
+     * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
      * @param value The bytes for redeemCheck to set.
      * @return This builder for chaining.
      */
@@ -5046,7 +5232,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object setCandidateOn_ = "";
     /**
-     * <code>string set_candidate_on = 44;</code>
+     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
      * @return The setCandidateOn.
      */
     public java.lang.String getSetCandidateOn() {
@@ -5062,7 +5248,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_candidate_on = 44;</code>
+     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
      * @return The bytes for setCandidateOn.
      */
     public com.google.protobuf.ByteString
@@ -5079,7 +5265,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_candidate_on = 44;</code>
+     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
      * @param value The setCandidateOn to set.
      * @return This builder for chaining.
      */
@@ -5094,7 +5280,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_candidate_on = 44;</code>
+     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSetCandidateOn() {
@@ -5104,7 +5290,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_candidate_on = 44;</code>
+     * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
      * @param value The bytes for setCandidateOn to set.
      * @return This builder for chaining.
      */
@@ -5122,7 +5308,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object setCandidateOff_ = "";
     /**
-     * <code>string set_candidate_off = 45;</code>
+     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
      * @return The setCandidateOff.
      */
     public java.lang.String getSetCandidateOff() {
@@ -5138,7 +5324,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_candidate_off = 45;</code>
+     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
      * @return The bytes for setCandidateOff.
      */
     public com.google.protobuf.ByteString
@@ -5155,7 +5341,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_candidate_off = 45;</code>
+     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
      * @param value The setCandidateOff to set.
      * @return This builder for chaining.
      */
@@ -5170,7 +5356,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_candidate_off = 45;</code>
+     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSetCandidateOff() {
@@ -5180,7 +5366,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_candidate_off = 45;</code>
+     * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
      * @param value The bytes for setCandidateOff to set.
      * @return This builder for chaining.
      */
@@ -5198,7 +5384,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createMultisig_ = "";
     /**
-     * <code>string create_multisig = 18;</code>
+     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
      * @return The createMultisig.
      */
     public java.lang.String getCreateMultisig() {
@@ -5214,7 +5400,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_multisig = 18;</code>
+     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
      * @return The bytes for createMultisig.
      */
     public com.google.protobuf.ByteString
@@ -5231,7 +5417,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_multisig = 18;</code>
+     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
      * @param value The createMultisig to set.
      * @return This builder for chaining.
      */
@@ -5246,7 +5432,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_multisig = 18;</code>
+     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateMultisig() {
@@ -5256,7 +5442,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_multisig = 18;</code>
+     * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
      * @param value The bytes for createMultisig to set.
      * @return This builder for chaining.
      */
@@ -5274,7 +5460,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object multisendBase_ = "";
     /**
-     * <code>string multisend_base = 51;</code>
+     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
      * @return The multisendBase.
      */
     public java.lang.String getMultisendBase() {
@@ -5290,7 +5476,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string multisend_base = 51;</code>
+     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
      * @return The bytes for multisendBase.
      */
     public com.google.protobuf.ByteString
@@ -5307,7 +5493,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string multisend_base = 51;</code>
+     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
      * @param value The multisendBase to set.
      * @return This builder for chaining.
      */
@@ -5322,7 +5508,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string multisend_base = 51;</code>
+     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMultisendBase() {
@@ -5332,7 +5518,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string multisend_base = 51;</code>
+     * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
      * @param value The bytes for multisendBase to set.
      * @return This builder for chaining.
      */
@@ -5350,7 +5536,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object multisendDelta_ = "";
     /**
-     * <code>string multisend_delta = 52;</code>
+     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
      * @return The multisendDelta.
      */
     public java.lang.String getMultisendDelta() {
@@ -5366,7 +5552,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string multisend_delta = 52;</code>
+     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
      * @return The bytes for multisendDelta.
      */
     public com.google.protobuf.ByteString
@@ -5383,7 +5569,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string multisend_delta = 52;</code>
+     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
      * @param value The multisendDelta to set.
      * @return This builder for chaining.
      */
@@ -5398,7 +5584,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string multisend_delta = 52;</code>
+     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMultisendDelta() {
@@ -5408,7 +5594,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string multisend_delta = 52;</code>
+     * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
      * @param value The bytes for multisendDelta to set.
      * @return This builder for chaining.
      */
@@ -5426,7 +5612,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object editCandidate_ = "";
     /**
-     * <code>string edit_candidate = 20;</code>
+     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
      * @return The editCandidate.
      */
     public java.lang.String getEditCandidate() {
@@ -5442,7 +5628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate = 20;</code>
+     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
      * @return The bytes for editCandidate.
      */
     public com.google.protobuf.ByteString
@@ -5459,7 +5645,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate = 20;</code>
+     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
      * @param value The editCandidate to set.
      * @return This builder for chaining.
      */
@@ -5474,7 +5660,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate = 20;</code>
+     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEditCandidate() {
@@ -5484,7 +5670,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate = 20;</code>
+     * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
      * @param value The bytes for editCandidate to set.
      * @return This builder for chaining.
      */
@@ -5502,7 +5688,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object setHaltBlock_ = "";
     /**
-     * <code>string set_halt_block = 21;</code>
+     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
      * @return The setHaltBlock.
      */
     public java.lang.String getSetHaltBlock() {
@@ -5518,7 +5704,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_halt_block = 21;</code>
+     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
      * @return The bytes for setHaltBlock.
      */
     public com.google.protobuf.ByteString
@@ -5535,7 +5721,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string set_halt_block = 21;</code>
+     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
      * @param value The setHaltBlock to set.
      * @return This builder for chaining.
      */
@@ -5550,7 +5736,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_halt_block = 21;</code>
+     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSetHaltBlock() {
@@ -5560,7 +5746,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string set_halt_block = 21;</code>
+     * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
      * @param value The bytes for setHaltBlock to set.
      * @return This builder for chaining.
      */
@@ -5578,7 +5764,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object editTickerOwner_ = "";
     /**
-     * <code>string edit_ticker_owner = 22;</code>
+     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
      * @return The editTickerOwner.
      */
     public java.lang.String getEditTickerOwner() {
@@ -5594,7 +5780,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_ticker_owner = 22;</code>
+     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
      * @return The bytes for editTickerOwner.
      */
     public com.google.protobuf.ByteString
@@ -5611,7 +5797,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_ticker_owner = 22;</code>
+     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
      * @param value The editTickerOwner to set.
      * @return This builder for chaining.
      */
@@ -5626,7 +5812,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_ticker_owner = 22;</code>
+     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEditTickerOwner() {
@@ -5636,7 +5822,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_ticker_owner = 22;</code>
+     * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
      * @param value The bytes for editTickerOwner to set.
      * @return This builder for chaining.
      */
@@ -5654,7 +5840,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object editMultisig_ = "";
     /**
-     * <code>string edit_multisig = 23;</code>
+     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
      * @return The editMultisig.
      */
     public java.lang.String getEditMultisig() {
@@ -5670,7 +5856,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_multisig = 23;</code>
+     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
      * @return The bytes for editMultisig.
      */
     public com.google.protobuf.ByteString
@@ -5687,7 +5873,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_multisig = 23;</code>
+     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
      * @param value The editMultisig to set.
      * @return This builder for chaining.
      */
@@ -5702,7 +5888,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_multisig = 23;</code>
+     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEditMultisig() {
@@ -5712,7 +5898,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_multisig = 23;</code>
+     * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
      * @param value The bytes for editMultisig to set.
      * @return This builder for chaining.
      */
@@ -5730,7 +5916,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object editCandidatePublicKey_ = "";
     /**
-     * <code>string edit_candidate_public_key = 25;</code>
+     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
      * @return The editCandidatePublicKey.
      */
     public java.lang.String getEditCandidatePublicKey() {
@@ -5746,7 +5932,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate_public_key = 25;</code>
+     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
      * @return The bytes for editCandidatePublicKey.
      */
     public com.google.protobuf.ByteString
@@ -5763,7 +5949,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate_public_key = 25;</code>
+     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
      * @param value The editCandidatePublicKey to set.
      * @return This builder for chaining.
      */
@@ -5778,7 +5964,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate_public_key = 25;</code>
+     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEditCandidatePublicKey() {
@@ -5788,7 +5974,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate_public_key = 25;</code>
+     * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
      * @param value The bytes for editCandidatePublicKey to set.
      * @return This builder for chaining.
      */
@@ -5806,7 +5992,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createSwapPool_ = "";
     /**
-     * <code>string create_swap_pool = 48;</code>
+     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
      * @return The createSwapPool.
      */
     public java.lang.String getCreateSwapPool() {
@@ -5822,7 +6008,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_swap_pool = 48;</code>
+     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
      * @return The bytes for createSwapPool.
      */
     public com.google.protobuf.ByteString
@@ -5839,7 +6025,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string create_swap_pool = 48;</code>
+     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
      * @param value The createSwapPool to set.
      * @return This builder for chaining.
      */
@@ -5854,7 +6040,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_swap_pool = 48;</code>
+     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateSwapPool() {
@@ -5864,7 +6050,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string create_swap_pool = 48;</code>
+     * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
      * @param value The bytes for createSwapPool to set.
      * @return This builder for chaining.
      */
@@ -5882,7 +6068,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object addLiquidity_ = "";
     /**
-     * <code>string add_liquidity = 49;</code>
+     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
      * @return The addLiquidity.
      */
     public java.lang.String getAddLiquidity() {
@@ -5898,7 +6084,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string add_liquidity = 49;</code>
+     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
      * @return The bytes for addLiquidity.
      */
     public com.google.protobuf.ByteString
@@ -5915,7 +6101,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string add_liquidity = 49;</code>
+     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
      * @param value The addLiquidity to set.
      * @return This builder for chaining.
      */
@@ -5930,7 +6116,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string add_liquidity = 49;</code>
+     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAddLiquidity() {
@@ -5940,7 +6126,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string add_liquidity = 49;</code>
+     * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
      * @param value The bytes for addLiquidity to set.
      * @return This builder for chaining.
      */
@@ -5958,7 +6144,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object removeLiquidity_ = "";
     /**
-     * <code>string remove_liquidity = 50;</code>
+     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
      * @return The removeLiquidity.
      */
     public java.lang.String getRemoveLiquidity() {
@@ -5974,7 +6160,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string remove_liquidity = 50;</code>
+     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
      * @return The bytes for removeLiquidity.
      */
     public com.google.protobuf.ByteString
@@ -5991,7 +6177,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string remove_liquidity = 50;</code>
+     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
      * @param value The removeLiquidity to set.
      * @return This builder for chaining.
      */
@@ -6006,7 +6192,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string remove_liquidity = 50;</code>
+     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRemoveLiquidity() {
@@ -6016,7 +6202,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string remove_liquidity = 50;</code>
+     * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
      * @param value The bytes for removeLiquidity to set.
      * @return This builder for chaining.
      */
@@ -6034,7 +6220,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object editCandidateCommission_ = "";
     /**
-     * <code>string edit_candidate_commission = 28;</code>
+     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
      * @return The editCandidateCommission.
      */
     public java.lang.String getEditCandidateCommission() {
@@ -6050,7 +6236,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate_commission = 28;</code>
+     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
      * @return The bytes for editCandidateCommission.
      */
     public com.google.protobuf.ByteString
@@ -6067,7 +6253,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string edit_candidate_commission = 28;</code>
+     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
      * @param value The editCandidateCommission to set.
      * @return This builder for chaining.
      */
@@ -6082,7 +6268,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate_commission = 28;</code>
+     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEditCandidateCommission() {
@@ -6092,7 +6278,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string edit_candidate_commission = 28;</code>
+     * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
      * @param value The bytes for editCandidateCommission to set.
      * @return This builder for chaining.
      */
@@ -6110,7 +6296,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object mintToken_ = "";
     /**
-     * <code>string mint_token = 46;</code>
+     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
      * @return The mintToken.
      */
     public java.lang.String getMintToken() {
@@ -6126,7 +6312,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string mint_token = 46;</code>
+     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
      * @return The bytes for mintToken.
      */
     public com.google.protobuf.ByteString
@@ -6143,7 +6329,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string mint_token = 46;</code>
+     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
      * @param value The mintToken to set.
      * @return This builder for chaining.
      */
@@ -6158,7 +6344,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string mint_token = 46;</code>
+     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMintToken() {
@@ -6168,7 +6354,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string mint_token = 46;</code>
+     * <code>string mint_token = 46 [json_name = "mintToken"];</code>
      * @param value The bytes for mintToken to set.
      * @return This builder for chaining.
      */
@@ -6186,7 +6372,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object burnToken_ = "";
     /**
-     * <code>string burn_token = 47;</code>
+     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
      * @return The burnToken.
      */
     public java.lang.String getBurnToken() {
@@ -6202,7 +6388,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string burn_token = 47;</code>
+     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
      * @return The bytes for burnToken.
      */
     public com.google.protobuf.ByteString
@@ -6219,7 +6405,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string burn_token = 47;</code>
+     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
      * @param value The burnToken to set.
      * @return This builder for chaining.
      */
@@ -6234,7 +6420,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string burn_token = 47;</code>
+     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBurnToken() {
@@ -6244,7 +6430,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string burn_token = 47;</code>
+     * <code>string burn_token = 47 [json_name = "burnToken"];</code>
      * @param value The bytes for burnToken to set.
      * @return This builder for chaining.
      */
@@ -6262,7 +6448,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object voteCommission_ = "";
     /**
-     * <code>string vote_commission = 31;</code>
+     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
      * @return The voteCommission.
      */
     public java.lang.String getVoteCommission() {
@@ -6278,7 +6464,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string vote_commission = 31;</code>
+     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
      * @return The bytes for voteCommission.
      */
     public com.google.protobuf.ByteString
@@ -6295,7 +6481,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string vote_commission = 31;</code>
+     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
      * @param value The voteCommission to set.
      * @return This builder for chaining.
      */
@@ -6310,7 +6496,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string vote_commission = 31;</code>
+     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVoteCommission() {
@@ -6320,7 +6506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string vote_commission = 31;</code>
+     * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
      * @param value The bytes for voteCommission to set.
      * @return This builder for chaining.
      */
@@ -6338,7 +6524,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object voteUpdate_ = "";
     /**
-     * <code>string vote_update = 32;</code>
+     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
      * @return The voteUpdate.
      */
     public java.lang.String getVoteUpdate() {
@@ -6354,7 +6540,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string vote_update = 32;</code>
+     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
      * @return The bytes for voteUpdate.
      */
     public com.google.protobuf.ByteString
@@ -6371,7 +6557,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string vote_update = 32;</code>
+     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
      * @param value The voteUpdate to set.
      * @return This builder for chaining.
      */
@@ -6386,7 +6572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string vote_update = 32;</code>
+     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVoteUpdate() {
@@ -6396,7 +6582,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string vote_update = 32;</code>
+     * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
      * @param value The bytes for voteUpdate to set.
      * @return This builder for chaining.
      */
@@ -6414,7 +6600,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object failedTx_ = "";
     /**
-     * <code>string failed_tx = 56;</code>
+     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
      * @return The failedTx.
      */
     public java.lang.String getFailedTx() {
@@ -6430,7 +6616,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string failed_tx = 56;</code>
+     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
      * @return The bytes for failedTx.
      */
     public com.google.protobuf.ByteString
@@ -6447,7 +6633,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string failed_tx = 56;</code>
+     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
      * @param value The failedTx to set.
      * @return This builder for chaining.
      */
@@ -6462,7 +6648,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string failed_tx = 56;</code>
+     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFailedTx() {
@@ -6472,7 +6658,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string failed_tx = 56;</code>
+     * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
      * @param value The bytes for failedTx to set.
      * @return This builder for chaining.
      */
@@ -6490,7 +6676,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object addLimitOrder_ = "";
     /**
-     * <code>string add_limit_order = 57;</code>
+     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
      * @return The addLimitOrder.
      */
     public java.lang.String getAddLimitOrder() {
@@ -6506,7 +6692,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string add_limit_order = 57;</code>
+     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
      * @return The bytes for addLimitOrder.
      */
     public com.google.protobuf.ByteString
@@ -6523,7 +6709,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string add_limit_order = 57;</code>
+     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
      * @param value The addLimitOrder to set.
      * @return This builder for chaining.
      */
@@ -6538,7 +6724,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string add_limit_order = 57;</code>
+     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAddLimitOrder() {
@@ -6548,7 +6734,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string add_limit_order = 57;</code>
+     * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
      * @param value The bytes for addLimitOrder to set.
      * @return This builder for chaining.
      */
@@ -6566,7 +6752,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object removeLimitOrder_ = "";
     /**
-     * <code>string remove_limit_order = 58;</code>
+     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
      * @return The removeLimitOrder.
      */
     public java.lang.String getRemoveLimitOrder() {
@@ -6582,7 +6768,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string remove_limit_order = 58;</code>
+     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
      * @return The bytes for removeLimitOrder.
      */
     public com.google.protobuf.ByteString
@@ -6599,7 +6785,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string remove_limit_order = 58;</code>
+     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
      * @param value The removeLimitOrder to set.
      * @return This builder for chaining.
      */
@@ -6614,7 +6800,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string remove_limit_order = 58;</code>
+     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRemoveLimitOrder() {
@@ -6624,7 +6810,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string remove_limit_order = 58;</code>
+     * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
      * @param value The bytes for removeLimitOrder to set.
      * @return This builder for chaining.
      */
@@ -6636,6 +6822,234 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       removeLimitOrder_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object moveStake_ = "";
+    /**
+     * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+     * @return The moveStake.
+     */
+    public java.lang.String getMoveStake() {
+      java.lang.Object ref = moveStake_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moveStake_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+     * @return The bytes for moveStake.
+     */
+    public com.google.protobuf.ByteString
+        getMoveStakeBytes() {
+      java.lang.Object ref = moveStake_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moveStake_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+     * @param value The moveStake to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMoveStake(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      moveStake_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMoveStake() {
+      
+      moveStake_ = getDefaultInstance().getMoveStake();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+     * @param value The bytes for moveStake to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMoveStakeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      moveStake_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lockStake_ = "";
+    /**
+     * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+     * @return The lockStake.
+     */
+    public java.lang.String getLockStake() {
+      java.lang.Object ref = lockStake_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lockStake_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+     * @return The bytes for lockStake.
+     */
+    public com.google.protobuf.ByteString
+        getLockStakeBytes() {
+      java.lang.Object ref = lockStake_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lockStake_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+     * @param value The lockStake to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLockStake(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      lockStake_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLockStake() {
+      
+      lockStake_ = getDefaultInstance().getLockStake();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+     * @param value The bytes for lockStake to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLockStakeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      lockStake_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lock_ = "";
+    /**
+     * <code>string lock = 61 [json_name = "lock"];</code>
+     * @return The lock.
+     */
+    public java.lang.String getLock() {
+      java.lang.Object ref = lock_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lock_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string lock = 61 [json_name = "lock"];</code>
+     * @return The bytes for lock.
+     */
+    public com.google.protobuf.ByteString
+        getLockBytes() {
+      java.lang.Object ref = lock_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lock_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string lock = 61 [json_name = "lock"];</code>
+     * @param value The lock to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLock(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      lock_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lock = 61 [json_name = "lock"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLock() {
+      
+      lock_ = getDefaultInstance().getLock();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lock = 61 [json_name = "lock"];</code>
+     * @param value The bytes for lock to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLockBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      lock_ = value;
       onChanged();
       return this;
     }

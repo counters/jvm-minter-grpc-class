@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun recreateTokenData(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RecreateTokenData =
+public inline fun recreateTokenData(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateTokenData =
   counters.minter.grpc.client.RecreateTokenDataKt.Dsl._create(counters.minter.grpc.client.RecreateTokenData.newBuilder()).apply { block() }._build()
-object RecreateTokenDataKt {
+public object RecreateTokenDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.RecreateTokenData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.RecreateTokenData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.RecreateTokenData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object RecreateTokenDataKt {
     internal fun _build(): counters.minter.grpc.client.RecreateTokenData = _builder.build()
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      */
-    var name: kotlin.String
+    public var name: kotlin.String
       @JvmName("getName")
       get() = _builder.getName()
       @JvmName("setName")
@@ -33,16 +33,16 @@ object RecreateTokenDataKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      */
-    fun clearName() {
+    public fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string symbol = 2;</code>
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
-    var symbol: kotlin.String
+    public var symbol: kotlin.String
       @JvmName("getSymbol")
       get() = _builder.getSymbol()
       @JvmName("setSymbol")
@@ -50,16 +50,16 @@ object RecreateTokenDataKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2;</code>
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
-    fun clearSymbol() {
+    public fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string initial_amount = 3;</code>
+     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
      */
-    var initialAmount: kotlin.String
+    public var initialAmount: kotlin.String
       @JvmName("getInitialAmount")
       get() = _builder.getInitialAmount()
       @JvmName("setInitialAmount")
@@ -67,16 +67,16 @@ object RecreateTokenDataKt {
         _builder.setInitialAmount(value)
       }
     /**
-     * <code>string initial_amount = 3;</code>
+     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
      */
-    fun clearInitialAmount() {
+    public fun clearInitialAmount() {
       _builder.clearInitialAmount()
     }
 
     /**
-     * <code>string max_supply = 4;</code>
+     * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
      */
-    var maxSupply: kotlin.String
+    public var maxSupply: kotlin.String
       @JvmName("getMaxSupply")
       get() = _builder.getMaxSupply()
       @JvmName("setMaxSupply")
@@ -84,16 +84,16 @@ object RecreateTokenDataKt {
         _builder.setMaxSupply(value)
       }
     /**
-     * <code>string max_supply = 4;</code>
+     * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
      */
-    fun clearMaxSupply() {
+    public fun clearMaxSupply() {
       _builder.clearMaxSupply()
     }
 
     /**
-     * <code>bool mintable = 5;</code>
+     * <code>bool mintable = 5 [json_name = "mintable"];</code>
      */
-    var mintable: kotlin.Boolean
+    public var mintable: kotlin.Boolean
       @JvmName("getMintable")
       get() = _builder.getMintable()
       @JvmName("setMintable")
@@ -101,16 +101,16 @@ object RecreateTokenDataKt {
         _builder.setMintable(value)
       }
     /**
-     * <code>bool mintable = 5;</code>
+     * <code>bool mintable = 5 [json_name = "mintable"];</code>
      */
-    fun clearMintable() {
+    public fun clearMintable() {
       _builder.clearMintable()
     }
 
     /**
-     * <code>bool burnable = 6;</code>
+     * <code>bool burnable = 6 [json_name = "burnable"];</code>
      */
-    var burnable: kotlin.Boolean
+    public var burnable: kotlin.Boolean
       @JvmName("getBurnable")
       get() = _builder.getBurnable()
       @JvmName("setBurnable")
@@ -118,13 +118,13 @@ object RecreateTokenDataKt {
         _builder.setBurnable(value)
       }
     /**
-     * <code>bool burnable = 6;</code>
+     * <code>bool burnable = 6 [json_name = "burnable"];</code>
      */
-    fun clearBurnable() {
+    public fun clearBurnable() {
       _builder.clearBurnable()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.RecreateTokenData.copy(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RecreateTokenData =
+public inline fun counters.minter.grpc.client.RecreateTokenData.copy(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateTokenData =
   counters.minter.grpc.client.RecreateTokenDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

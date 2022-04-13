@@ -94,12 +94,12 @@ private static final long serialVersionUID = 0L;
   private long height_;
   /**
    * <pre>
-   *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-   *    };
+   *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+   * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+   * };
    * </pre>
    *
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 2;
   private long id_;
   /**
-   * <code>uint64 id = 2;</code>
+   * <code>uint64 id = 2 [json_name = "id"];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -442,12 +442,12 @@ private static final long serialVersionUID = 0L;
     private long height_ ;
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     * };
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -456,12 +456,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     * };
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -473,12 +473,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     * };
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
 
     private long id_ ;
     /**
-     * <code>uint64 id = 2;</code>
+     * <code>uint64 id = 2 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
       return id_;
     }
     /**
-     * <code>uint64 id = 2;</code>
+     * <code>uint64 id = 2 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 id = 2;</code>
+     * <code>uint64 id = 2 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {

@@ -8,24 +8,24 @@ public interface RedeemCheckDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string raw_check = 1;</code>
+   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
    * @return The rawCheck.
    */
   java.lang.String getRawCheck();
   /**
-   * <code>string raw_check = 1;</code>
+   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
    * @return The bytes for rawCheck.
    */
   com.google.protobuf.ByteString
       getRawCheckBytes();
 
   /**
-   * <code>string proof = 2;</code>
+   * <code>string proof = 2 [json_name = "proof"];</code>
    * @return The proof.
    */
   java.lang.String getProof();
   /**
-   * <code>string proof = 2;</code>
+   * <code>string proof = 2 [json_name = "proof"];</code>
    * @return The bytes for proof.
    */
   com.google.protobuf.ByteString

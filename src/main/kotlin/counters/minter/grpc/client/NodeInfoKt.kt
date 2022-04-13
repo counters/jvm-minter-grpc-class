@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun nodeInfo(block: counters.minter.grpc.client.NodeInfoKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo =
+public inline fun nodeInfo(block: counters.minter.grpc.client.NodeInfoKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo =
   counters.minter.grpc.client.NodeInfoKt.Dsl._create(counters.minter.grpc.client.NodeInfo.newBuilder()).apply { block() }._build()
-object NodeInfoKt {
+public object NodeInfoKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NodeInfo.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.NodeInfo.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.NodeInfo.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object NodeInfoKt {
     internal fun _build(): counters.minter.grpc.client.NodeInfo = _builder.build()
 
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
-    var protocolVersion: counters.minter.grpc.client.NodeInfo.ProtocolVersion
+    public var protocolVersion: counters.minter.grpc.client.NodeInfo.ProtocolVersion
       @JvmName("getProtocolVersion")
       get() = _builder.getProtocolVersion()
       @JvmName("setProtocolVersion")
@@ -33,23 +33,23 @@ object NodeInfoKt {
         _builder.setProtocolVersion(value)
       }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
-    fun clearProtocolVersion() {
+    public fun clearProtocolVersion() {
       _builder.clearProtocolVersion()
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      * @return Whether the protocolVersion field is set.
      */
-    fun hasProtocolVersion(): kotlin.Boolean {
+    public fun hasProtocolVersion(): kotlin.Boolean {
       return _builder.hasProtocolVersion()
     }
 
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      */
-    var id: kotlin.String
+    public var id: kotlin.String
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -57,16 +57,16 @@ object NodeInfoKt {
         _builder.setId(value)
       }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      */
-    fun clearId() {
+    public fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      */
-    var listenAddr: kotlin.String
+    public var listenAddr: kotlin.String
       @JvmName("getListenAddr")
       get() = _builder.getListenAddr()
       @JvmName("setListenAddr")
@@ -74,16 +74,16 @@ object NodeInfoKt {
         _builder.setListenAddr(value)
       }
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      */
-    fun clearListenAddr() {
+    public fun clearListenAddr() {
       _builder.clearListenAddr()
     }
 
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      */
-    var network: kotlin.String
+    public var network: kotlin.String
       @JvmName("getNetwork")
       get() = _builder.getNetwork()
       @JvmName("setNetwork")
@@ -91,16 +91,16 @@ object NodeInfoKt {
         _builder.setNetwork(value)
       }
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      */
-    fun clearNetwork() {
+    public fun clearNetwork() {
       _builder.clearNetwork()
     }
 
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      */
-    var version: kotlin.String
+    public var version: kotlin.String
       @JvmName("getVersion")
       get() = _builder.getVersion()
       @JvmName("setVersion")
@@ -108,16 +108,16 @@ object NodeInfoKt {
         _builder.setVersion(value)
       }
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      */
-    fun clearVersion() {
+    public fun clearVersion() {
       _builder.clearVersion()
     }
 
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      */
-    var channels: kotlin.String
+    public var channels: kotlin.String
       @JvmName("getChannels")
       get() = _builder.getChannels()
       @JvmName("setChannels")
@@ -125,16 +125,16 @@ object NodeInfoKt {
         _builder.setChannels(value)
       }
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      */
-    fun clearChannels() {
+    public fun clearChannels() {
       _builder.clearChannels()
     }
 
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      */
-    var moniker: kotlin.String
+    public var moniker: kotlin.String
       @JvmName("getMoniker")
       get() = _builder.getMoniker()
       @JvmName("setMoniker")
@@ -142,16 +142,16 @@ object NodeInfoKt {
         _builder.setMoniker(value)
       }
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      */
-    fun clearMoniker() {
+    public fun clearMoniker() {
       _builder.clearMoniker()
     }
 
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
-    var other: counters.minter.grpc.client.NodeInfo.Other
+    public var other: counters.minter.grpc.client.NodeInfo.Other
       @JvmName("getOther")
       get() = _builder.getOther()
       @JvmName("setOther")
@@ -159,29 +159,29 @@ object NodeInfoKt {
         _builder.setOther(value)
       }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
-    fun clearOther() {
+    public fun clearOther() {
       _builder.clearOther()
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      * @return Whether the other field is set.
      */
-    fun hasOther(): kotlin.Boolean {
+    public fun hasOther(): kotlin.Boolean {
       return _builder.hasOther()
     }
   }
   @kotlin.jvm.JvmSynthetic
-  inline fun protocolVersion(block: counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo.ProtocolVersion =
+  public inline fun protocolVersion(block: counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo.ProtocolVersion =
     counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl._create(counters.minter.grpc.client.NodeInfo.ProtocolVersion.newBuilder()).apply { block() }._build()
-  object ProtocolVersionKt {
+  public object ProtocolVersionKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    class Dsl private constructor(
-      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder
+    public class Dsl private constructor(
+      private val _builder: counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder
     ) {
-      companion object {
+      public companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder): Dsl = Dsl(builder)
@@ -192,9 +192,9 @@ object NodeInfoKt {
       internal fun _build(): counters.minter.grpc.client.NodeInfo.ProtocolVersion = _builder.build()
 
       /**
-       * <code>uint64 p2p = 3;</code>
+       * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
        */
-      var p2P: kotlin.Long
+      public var p2P: kotlin.Long
         @JvmName("getP2P")
         get() = _builder.getP2P()
         @JvmName("setP2P")
@@ -202,16 +202,16 @@ object NodeInfoKt {
           _builder.setP2P(value)
         }
       /**
-       * <code>uint64 p2p = 3;</code>
+       * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
        */
-      fun clearP2P() {
+      public fun clearP2P() {
         _builder.clearP2P()
       }
 
       /**
-       * <code>uint64 block = 1;</code>
+       * <code>uint64 block = 1 [json_name = "block"];</code>
        */
-      var block: kotlin.Long
+      public var block: kotlin.Long
         @JvmName("getBlock")
         get() = _builder.getBlock()
         @JvmName("setBlock")
@@ -219,16 +219,16 @@ object NodeInfoKt {
           _builder.setBlock(value)
         }
       /**
-       * <code>uint64 block = 1;</code>
+       * <code>uint64 block = 1 [json_name = "block"];</code>
        */
-      fun clearBlock() {
+      public fun clearBlock() {
         _builder.clearBlock()
       }
 
       /**
-       * <code>uint64 app = 2;</code>
+       * <code>uint64 app = 2 [json_name = "app"];</code>
        */
-      var app: kotlin.Long
+      public var app: kotlin.Long
         @JvmName("getApp")
         get() = _builder.getApp()
         @JvmName("setApp")
@@ -236,23 +236,23 @@ object NodeInfoKt {
           _builder.setApp(value)
         }
       /**
-       * <code>uint64 app = 2;</code>
+       * <code>uint64 app = 2 [json_name = "app"];</code>
        */
-      fun clearApp() {
+      public fun clearApp() {
         _builder.clearApp()
       }
     }
   }
   @kotlin.jvm.JvmSynthetic
-  inline fun other(block: counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo.Other =
+  public inline fun other(block: counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo.Other =
     counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl._create(counters.minter.grpc.client.NodeInfo.Other.newBuilder()).apply { block() }._build()
-  object OtherKt {
+  public object OtherKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
-    class Dsl private constructor(
-      @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.NodeInfo.Other.Builder
+    public class Dsl private constructor(
+      private val _builder: counters.minter.grpc.client.NodeInfo.Other.Builder
     ) {
-      companion object {
+      public companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
         internal fun _create(builder: counters.minter.grpc.client.NodeInfo.Other.Builder): Dsl = Dsl(builder)
@@ -263,9 +263,9 @@ object NodeInfoKt {
       internal fun _build(): counters.minter.grpc.client.NodeInfo.Other = _builder.build()
 
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        */
-      var txIndex: kotlin.String
+      public var txIndex: kotlin.String
         @JvmName("getTxIndex")
         get() = _builder.getTxIndex()
         @JvmName("setTxIndex")
@@ -273,16 +273,16 @@ object NodeInfoKt {
           _builder.setTxIndex(value)
         }
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        */
-      fun clearTxIndex() {
+      public fun clearTxIndex() {
         _builder.clearTxIndex()
       }
 
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        */
-      var rpcAddress: kotlin.String
+      public var rpcAddress: kotlin.String
         @JvmName("getRpcAddress")
         get() = _builder.getRpcAddress()
         @JvmName("setRpcAddress")
@@ -290,20 +290,20 @@ object NodeInfoKt {
           _builder.setRpcAddress(value)
         }
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        */
-      fun clearRpcAddress() {
+      public fun clearRpcAddress() {
         _builder.clearRpcAddress()
       }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.NodeInfo.copy(block: counters.minter.grpc.client.NodeInfoKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo =
+public inline fun counters.minter.grpc.client.NodeInfo.copy(block: counters.minter.grpc.client.NodeInfoKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo =
   counters.minter.grpc.client.NodeInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.NodeInfo.ProtocolVersion.copy(block: counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo.ProtocolVersion =
+public inline fun counters.minter.grpc.client.NodeInfo.ProtocolVersion.copy(block: counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo.ProtocolVersion =
   counters.minter.grpc.client.NodeInfoKt.ProtocolVersionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.NodeInfo.Other.copy(block: counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl.() -> Unit): counters.minter.grpc.client.NodeInfo.Other =
+public inline fun counters.minter.grpc.client.NodeInfo.Other.copy(block: counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.NodeInfo.Other =
   counters.minter.grpc.client.NodeInfoKt.OtherKt.Dsl._create(this.toBuilder()).apply { block() }._build()

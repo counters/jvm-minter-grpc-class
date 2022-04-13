@@ -8,24 +8,24 @@ public interface EstimateCoinSellAllResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string will_get = 1;</code>
+   * <code>string will_get = 1 [json_name = "willGet"];</code>
    * @return The willGet.
    */
   java.lang.String getWillGet();
   /**
-   * <code>string will_get = 1;</code>
+   * <code>string will_get = 1 [json_name = "willGet"];</code>
    * @return The bytes for willGet.
    */
   com.google.protobuf.ByteString
       getWillGetBytes();
 
   /**
-   * <code>.api_pb.SwapFrom swap_from = 2;</code>
+   * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   int getSwapFromValue();
   /**
-   * <code>.api_pb.SwapFrom swap_from = 2;</code>
+   * <code>.api_pb.SwapFrom swap_from = 2 [json_name = "swapFrom"];</code>
    * @return The swapFrom.
    */
   counters.minter.grpc.client.SwapFrom getSwapFrom();

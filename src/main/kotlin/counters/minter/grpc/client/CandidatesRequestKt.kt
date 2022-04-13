@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun candidatesRequest(block: counters.minter.grpc.client.CandidatesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidatesRequest =
+public inline fun candidatesRequest(block: counters.minter.grpc.client.CandidatesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidatesRequest =
   counters.minter.grpc.client.CandidatesRequestKt.Dsl._create(counters.minter.grpc.client.CandidatesRequest.newBuilder()).apply { block() }._build()
-object CandidatesRequestKt {
+public object CandidatesRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CandidatesRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.CandidatesRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CandidatesRequest.Builder): Dsl = Dsl(builder)
@@ -27,9 +27,9 @@ object CandidatesRequestKt {
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -41,9 +41,9 @@ object CandidatesRequestKt {
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
 
@@ -52,9 +52,9 @@ object CandidatesRequestKt {
      * Calculate field values used_slots, uniq_users, min_stake
      * </pre>
      *
-     * <code>bool include_stakes = 2;</code>
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
      */
-    var includeStakes: kotlin.Boolean
+    public var includeStakes: kotlin.Boolean
       @JvmName("getIncludeStakes")
       get() = _builder.getIncludeStakes()
       @JvmName("setIncludeStakes")
@@ -66,9 +66,9 @@ object CandidatesRequestKt {
      * Calculate field values used_slots, uniq_users, min_stake
      * </pre>
      *
-     * <code>bool include_stakes = 2;</code>
+     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
      */
-    fun clearIncludeStakes() {
+    public fun clearIncludeStakes() {
       _builder.clearIncludeStakes()
     }
 
@@ -77,9 +77,9 @@ object CandidatesRequestKt {
      * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
      * </pre>
      *
-     * <code>bool not_show_stakes = 4;</code>
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
      */
-    var notShowStakes: kotlin.Boolean
+    public var notShowStakes: kotlin.Boolean
       @JvmName("getNotShowStakes")
       get() = _builder.getNotShowStakes()
       @JvmName("setNotShowStakes")
@@ -91,16 +91,16 @@ object CandidatesRequestKt {
      * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
      * </pre>
      *
-     * <code>bool not_show_stakes = 4;</code>
+     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
      */
-    fun clearNotShowStakes() {
+    public fun clearNotShowStakes() {
       _builder.clearNotShowStakes()
     }
 
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
      */
-    var status: counters.minter.grpc.client.CandidatesRequest.CandidateStatus
+    public var status: counters.minter.grpc.client.CandidatesRequest.CandidateStatus
       @JvmName("getStatus")
       get() = _builder.getStatus()
       @JvmName("setStatus")
@@ -108,13 +108,13 @@ object CandidatesRequestKt {
         _builder.setStatus(value)
       }
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
      */
-    fun clearStatus() {
+    public fun clearStatus() {
       _builder.clearStatus()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.CandidatesRequest.copy(block: counters.minter.grpc.client.CandidatesRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.CandidatesRequest =
+public inline fun counters.minter.grpc.client.CandidatesRequest.copy(block: counters.minter.grpc.client.CandidatesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidatesRequest =
   counters.minter.grpc.client.CandidatesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

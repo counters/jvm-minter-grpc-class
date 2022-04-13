@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun limitOrdersRequest(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrdersRequest =
+public inline fun limitOrdersRequest(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersRequest =
   counters.minter.grpc.client.LimitOrdersRequestKt.Dsl._create(counters.minter.grpc.client.LimitOrdersRequest.newBuilder()).apply { block() }._build()
-object LimitOrdersRequestKt {
+public object LimitOrdersRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.LimitOrdersRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.LimitOrdersRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.LimitOrdersRequest.Builder): Dsl = Dsl(builder)
@@ -27,68 +27,70 @@ object LimitOrdersRequestKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class IdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class IdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      */
-     val ids: com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>
+     public val ids: com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getIdsList()
       )
     /**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @param value The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addIds")
-    fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.add(value: kotlin.Long) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.add(value: kotlin.Long) {
       _builder.addIds(value)
     }/**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @param value The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignIds")
-    inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(value: kotlin.Long) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @param values The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllIds")
-    fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllIds(values)
     }/**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @param values The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllIds")
-    inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @param index The index to set the value at.
      * @param value The ids to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setIds")
-    operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setIds(index, value)
     }/**
-     * <code>repeated uint64 ids = 1;</code>
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearIds")
-    fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.clear() {
       _builder.clearIds()
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    var height: kotlin.Long
+    public var height: kotlin.Long
       @JvmName("getHeight")
       get() = _builder.getHeight()
       @JvmName("setHeight")
@@ -96,13 +98,13 @@ object LimitOrdersRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      */
-    fun clearHeight() {
+    public fun clearHeight() {
       _builder.clearHeight()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.LimitOrdersRequest.copy(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.LimitOrdersRequest =
+public inline fun counters.minter.grpc.client.LimitOrdersRequest.copy(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersRequest =
   counters.minter.grpc.client.LimitOrdersRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

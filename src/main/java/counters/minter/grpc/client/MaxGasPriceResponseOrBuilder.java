@@ -8,7 +8,7 @@ public interface MaxGasPriceResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 max_gas_price = 3;</code>
+   * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
    * @return The maxGasPrice.
    */
   long getMaxGasPrice();

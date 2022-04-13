@@ -8,12 +8,12 @@ public interface UpdateNetworkEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string version = 1;</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The version.
    */
   java.lang.String getVersion();
   /**
-   * <code>string version = 1;</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   com.google.protobuf.ByteString

@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The address.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The bytes for address.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN_ID_FIELD_NUMBER = 2;
   private com.google.protobuf.UInt64Value coinId_;
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    * @return Whether the coinId field is set.
    */
   @java.lang.Override
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
     return coinId_ != null;
   }
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    * @return The coinId.
    */
   @java.lang.Override
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
     return coinId_ == null ? com.google.protobuf.UInt64Value.getDefaultInstance() : coinId_;
   }
   /**
-   * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+   * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.UInt64ValueOrBuilder getCoinIdOrBuilder() {
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 3;
   private long height_;
   /**
-   * <code>uint64 height = 3;</code>
+   * <code>uint64 height = 3 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
     }
     if (coinId_ != null) {
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
     }
     if (coinId_ != null) {
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      * @return The address.
      */
     public java.lang.String getAddress() {
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      * @param value The address to set.
      * @return This builder for chaining.
      */
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
      */
@@ -610,14 +610,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> coinIdBuilder_;
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      * @return Whether the coinId field is set.
      */
     public boolean hasCoinId() {
       return coinIdBuilder_ != null || coinId_ != null;
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      * @return The coinId.
      */
     public com.google.protobuf.UInt64Value getCoinId() {
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public Builder setCoinId(com.google.protobuf.UInt64Value value) {
       if (coinIdBuilder_ == null) {
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public Builder setCoinId(
         com.google.protobuf.UInt64Value.Builder builderForValue) {
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public Builder mergeCoinId(com.google.protobuf.UInt64Value value) {
       if (coinIdBuilder_ == null) {
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public Builder clearCoinId() {
       if (coinIdBuilder_ == null) {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public com.google.protobuf.UInt64Value.Builder getCoinIdBuilder() {
       
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
       return getCoinIdFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     public com.google.protobuf.UInt64ValueOrBuilder getCoinIdOrBuilder() {
       if (coinIdBuilder_ != null) {
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> 
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 3;</code>
+     * <code>uint64 height = 3 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

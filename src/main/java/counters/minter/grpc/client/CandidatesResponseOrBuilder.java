@@ -8,25 +8,25 @@ public interface CandidatesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
    */
   java.util.List<counters.minter.grpc.client.CandidateResponse> 
       getCandidatesList();
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
    */
   counters.minter.grpc.client.CandidateResponse getCandidates(int index);
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
    */
   int getCandidatesCount();
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.CandidateResponseOrBuilder> 
       getCandidatesOrBuilderList();
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
    */
   counters.minter.grpc.client.CandidateResponseOrBuilder getCandidatesOrBuilder(
       int index);

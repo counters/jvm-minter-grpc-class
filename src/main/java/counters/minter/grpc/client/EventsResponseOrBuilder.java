@@ -8,25 +8,25 @@ public interface EventsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .google.protobuf.Struct events = 1;</code>
+   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
    */
   java.util.List<com.google.protobuf.Struct> 
       getEventsList();
   /**
-   * <code>repeated .google.protobuf.Struct events = 1;</code>
+   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
    */
   com.google.protobuf.Struct getEvents(int index);
   /**
-   * <code>repeated .google.protobuf.Struct events = 1;</code>
+   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
    */
   int getEventsCount();
   /**
-   * <code>repeated .google.protobuf.Struct events = 1;</code>
+   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
    */
   java.util.List<? extends com.google.protobuf.StructOrBuilder> 
       getEventsOrBuilderList();
   /**
-   * <code>repeated .google.protobuf.Struct events = 1;</code>
+   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
    */
   com.google.protobuf.StructOrBuilder getEventsOrBuilder(
       int index);

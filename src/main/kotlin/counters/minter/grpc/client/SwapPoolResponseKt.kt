@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun swapPoolResponse(block: counters.minter.grpc.client.SwapPoolResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.SwapPoolResponse =
+public inline fun swapPoolResponse(block: counters.minter.grpc.client.SwapPoolResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolResponse =
   counters.minter.grpc.client.SwapPoolResponseKt.Dsl._create(counters.minter.grpc.client.SwapPoolResponse.newBuilder()).apply { block() }._build()
-object SwapPoolResponseKt {
+public object SwapPoolResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SwapPoolResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.SwapPoolResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SwapPoolResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,26 @@ object SwapPoolResponseKt {
     internal fun _build(): counters.minter.grpc.client.SwapPoolResponse = _builder.build()
 
     /**
-     * <code>string price = 4;</code>
+     * <code>uint64 id = 5 [json_name = "id"];</code>
      */
-    var price: kotlin.String
+    public var id: kotlin.Long
+      @JvmName("getId")
+      get() = _builder.getId()
+      @JvmName("setId")
+      set(value) {
+        _builder.setId(value)
+      }
+    /**
+     * <code>uint64 id = 5 [json_name = "id"];</code>
+     */
+    public fun clearId() {
+      _builder.clearId()
+    }
+
+    /**
+     * <code>string price = 4 [json_name = "price"];</code>
+     */
+    public var price: kotlin.String
       @JvmName("getPrice")
       get() = _builder.getPrice()
       @JvmName("setPrice")
@@ -33,16 +50,16 @@ object SwapPoolResponseKt {
         _builder.setPrice(value)
       }
     /**
-     * <code>string price = 4;</code>
+     * <code>string price = 4 [json_name = "price"];</code>
      */
-    fun clearPrice() {
+    public fun clearPrice() {
       _builder.clearPrice()
     }
 
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      */
-    var amount0: kotlin.String
+    public var amount0: kotlin.String
       @JvmName("getAmount0")
       get() = _builder.getAmount0()
       @JvmName("setAmount0")
@@ -50,16 +67,16 @@ object SwapPoolResponseKt {
         _builder.setAmount0(value)
       }
     /**
-     * <code>string amount0 = 1;</code>
+     * <code>string amount0 = 1 [json_name = "amount0"];</code>
      */
-    fun clearAmount0() {
+    public fun clearAmount0() {
       _builder.clearAmount0()
     }
 
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      */
-    var amount1: kotlin.String
+    public var amount1: kotlin.String
       @JvmName("getAmount1")
       get() = _builder.getAmount1()
       @JvmName("setAmount1")
@@ -67,16 +84,16 @@ object SwapPoolResponseKt {
         _builder.setAmount1(value)
       }
     /**
-     * <code>string amount1 = 2;</code>
+     * <code>string amount1 = 2 [json_name = "amount1"];</code>
      */
-    fun clearAmount1() {
+    public fun clearAmount1() {
       _builder.clearAmount1()
     }
 
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      */
-    var liquidity: kotlin.String
+    public var liquidity: kotlin.String
       @JvmName("getLiquidity")
       get() = _builder.getLiquidity()
       @JvmName("setLiquidity")
@@ -84,13 +101,13 @@ object SwapPoolResponseKt {
         _builder.setLiquidity(value)
       }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      */
-    fun clearLiquidity() {
+    public fun clearLiquidity() {
       _builder.clearLiquidity()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.SwapPoolResponse.copy(block: counters.minter.grpc.client.SwapPoolResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.SwapPoolResponse =
+public inline fun counters.minter.grpc.client.SwapPoolResponse.copy(block: counters.minter.grpc.client.SwapPoolResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolResponse =
   counters.minter.grpc.client.SwapPoolResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

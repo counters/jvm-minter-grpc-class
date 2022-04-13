@@ -8,13 +8,13 @@ public interface LimitOrderRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 order_id = 1;</code>
+   * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
    * @return The orderId.
    */
   long getOrderId();
 
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

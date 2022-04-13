@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun orderExpiredEvent(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> Unit): counters.minter.grpc.client.OrderExpiredEvent =
+public inline fun orderExpiredEvent(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.OrderExpiredEvent =
   counters.minter.grpc.client.OrderExpiredEventKt.Dsl._create(counters.minter.grpc.client.OrderExpiredEvent.newBuilder()).apply { block() }._build()
-object OrderExpiredEventKt {
+public object OrderExpiredEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.OrderExpiredEvent.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.OrderExpiredEvent.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.OrderExpiredEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object OrderExpiredEventKt {
     internal fun _build(): counters.minter.grpc.client.OrderExpiredEvent = _builder.build()
 
     /**
-     * <code>uint64 id = 1;</code>
+     * <code>uint64 id = 1 [json_name = "id"];</code>
      */
-    var id: kotlin.Long
+    public var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -33,16 +33,16 @@ object OrderExpiredEventKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 1;</code>
+     * <code>uint64 id = 1 [json_name = "id"];</code>
      */
-    fun clearId() {
+    public fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    var address: kotlin.String
+    public var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -50,16 +50,16 @@ object OrderExpiredEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    fun clearAddress() {
+    public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      */
-    var coin: kotlin.Long
+    public var coin: kotlin.Long
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -67,16 +67,16 @@ object OrderExpiredEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3;</code>
+     * <code>uint64 coin = 3 [json_name = "coin"];</code>
      */
-    fun clearCoin() {
+    public fun clearCoin() {
       _builder.clearCoin()
     }
 
     /**
-     * <code>string amount = 4;</code>
+     * <code>string amount = 4 [json_name = "amount"];</code>
      */
-    var amount: kotlin.String
+    public var amount: kotlin.String
       @JvmName("getAmount")
       get() = _builder.getAmount()
       @JvmName("setAmount")
@@ -84,13 +84,13 @@ object OrderExpiredEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 4;</code>
+     * <code>string amount = 4 [json_name = "amount"];</code>
      */
-    fun clearAmount() {
+    public fun clearAmount() {
       _builder.clearAmount()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.OrderExpiredEvent.copy(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> Unit): counters.minter.grpc.client.OrderExpiredEvent =
+public inline fun counters.minter.grpc.client.OrderExpiredEvent.copy(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.OrderExpiredEvent =
   counters.minter.grpc.client.OrderExpiredEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

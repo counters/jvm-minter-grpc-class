@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   public static final int LIMIT_FIELD_NUMBER = 1;
   private int limit_;
   /**
-   * <code>int32 limit = 1;</code>
+   * <code>int32 limit = 1 [json_name = "limit"];</code>
    * @return The limit.
    */
   @java.lang.Override
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
 
     private int limit_ ;
     /**
-     * <code>int32 limit = 1;</code>
+     * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
       return limit_;
     }
     /**
-     * <code>int32 limit = 1;</code>
+     * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @param value The limit to set.
      * @return This builder for chaining.
      */
@@ -419,7 +419,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 limit = 1;</code>
+     * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLimit() {

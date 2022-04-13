@@ -9,23 +9,23 @@ public interface CoinOrBuilder extends
 
   /**
    * <pre>
-   *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-   *};
+   *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+   * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+   * };
    * </pre>
    *
-   * <code>uint64 id = 1;</code>
+   * <code>uint64 id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   long getId();
 
   /**
-   * <code>string symbol = 2;</code>
+   * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <code>string symbol = 2;</code>
+   * <code>string symbol = 2 [json_name = "symbol"];</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString

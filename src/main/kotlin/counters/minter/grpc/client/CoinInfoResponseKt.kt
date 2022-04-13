@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun coinInfoResponse(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinInfoResponse =
+public inline fun coinInfoResponse(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoResponse =
   counters.minter.grpc.client.CoinInfoResponseKt.Dsl._create(counters.minter.grpc.client.CoinInfoResponse.newBuilder()).apply { block() }._build()
-object CoinInfoResponseKt {
+public object CoinInfoResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.CoinInfoResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.CoinInfoResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.CoinInfoResponse.Builder): Dsl = Dsl(builder)
@@ -24,14 +24,14 @@ object CoinInfoResponseKt {
 
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+     * };
      * </pre>
      *
-     * <code>uint64 id = 6;</code>
+     * <code>uint64 id = 6 [json_name = "id"];</code>
      */
-    var id: kotlin.Long
+    public var id: kotlin.Long
       @JvmName("getId")
       get() = _builder.getId()
       @JvmName("setId")
@@ -40,21 +40,21 @@ object CoinInfoResponseKt {
       }
     /**
      * <pre>
-     *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     *        example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-     *    };
+     *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+     * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+     * };
      * </pre>
      *
-     * <code>uint64 id = 6;</code>
+     * <code>uint64 id = 6 [json_name = "id"];</code>
      */
-    fun clearId() {
+    public fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      */
-    var name: kotlin.String
+    public var name: kotlin.String
       @JvmName("getName")
       get() = _builder.getName()
       @JvmName("setName")
@@ -62,16 +62,16 @@ object CoinInfoResponseKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      */
-    fun clearName() {
+    public fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string symbol = 2;</code>
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
-    var symbol: kotlin.String
+    public var symbol: kotlin.String
       @JvmName("getSymbol")
       get() = _builder.getSymbol()
       @JvmName("setSymbol")
@@ -79,16 +79,16 @@ object CoinInfoResponseKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2;</code>
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
      */
-    fun clearSymbol() {
+    public fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string volume = 3;</code>
+     * <code>string volume = 3 [json_name = "volume"];</code>
      */
-    var volume: kotlin.String
+    public var volume: kotlin.String
       @JvmName("getVolume")
       get() = _builder.getVolume()
       @JvmName("setVolume")
@@ -96,16 +96,16 @@ object CoinInfoResponseKt {
         _builder.setVolume(value)
       }
     /**
-     * <code>string volume = 3;</code>
+     * <code>string volume = 3 [json_name = "volume"];</code>
      */
-    fun clearVolume() {
+    public fun clearVolume() {
       _builder.clearVolume()
     }
 
     /**
-     * <code>uint64 crr = 4;</code>
+     * <code>uint64 crr = 4 [json_name = "crr"];</code>
      */
-    var crr: kotlin.Long
+    public var crr: kotlin.Long
       @JvmName("getCrr")
       get() = _builder.getCrr()
       @JvmName("setCrr")
@@ -113,16 +113,16 @@ object CoinInfoResponseKt {
         _builder.setCrr(value)
       }
     /**
-     * <code>uint64 crr = 4;</code>
+     * <code>uint64 crr = 4 [json_name = "crr"];</code>
      */
-    fun clearCrr() {
+    public fun clearCrr() {
       _builder.clearCrr()
     }
 
     /**
-     * <code>string reserve_balance = 5;</code>
+     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
      */
-    var reserveBalance: kotlin.String
+    public var reserveBalance: kotlin.String
       @JvmName("getReserveBalance")
       get() = _builder.getReserveBalance()
       @JvmName("setReserveBalance")
@@ -130,16 +130,16 @@ object CoinInfoResponseKt {
         _builder.setReserveBalance(value)
       }
     /**
-     * <code>string reserve_balance = 5;</code>
+     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
      */
-    fun clearReserveBalance() {
+    public fun clearReserveBalance() {
       _builder.clearReserveBalance()
     }
 
     /**
-     * <code>string max_supply = 8;</code>
+     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
      */
-    var maxSupply: kotlin.String
+    public var maxSupply: kotlin.String
       @JvmName("getMaxSupply")
       get() = _builder.getMaxSupply()
       @JvmName("setMaxSupply")
@@ -147,16 +147,16 @@ object CoinInfoResponseKt {
         _builder.setMaxSupply(value)
       }
     /**
-     * <code>string max_supply = 8;</code>
+     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
      */
-    fun clearMaxSupply() {
+    public fun clearMaxSupply() {
       _builder.clearMaxSupply()
     }
 
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7;</code>
+     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
      */
-    var ownerAddress: com.google.protobuf.StringValue
+    public var ownerAddress: com.google.protobuf.StringValue
       @JvmName("getOwnerAddress")
       get() = _builder.getOwnerAddress()
       @JvmName("setOwnerAddress")
@@ -164,23 +164,23 @@ object CoinInfoResponseKt {
         _builder.setOwnerAddress(value)
       }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7;</code>
+     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
      */
-    fun clearOwnerAddress() {
+    public fun clearOwnerAddress() {
       _builder.clearOwnerAddress()
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7;</code>
+     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
      * @return Whether the ownerAddress field is set.
      */
-    fun hasOwnerAddress(): kotlin.Boolean {
+    public fun hasOwnerAddress(): kotlin.Boolean {
       return _builder.hasOwnerAddress()
     }
 
     /**
-     * <code>bool mintable = 9;</code>
+     * <code>bool mintable = 9 [json_name = "mintable"];</code>
      */
-    var mintable: kotlin.Boolean
+    public var mintable: kotlin.Boolean
       @JvmName("getMintable")
       get() = _builder.getMintable()
       @JvmName("setMintable")
@@ -188,16 +188,16 @@ object CoinInfoResponseKt {
         _builder.setMintable(value)
       }
     /**
-     * <code>bool mintable = 9;</code>
+     * <code>bool mintable = 9 [json_name = "mintable"];</code>
      */
-    fun clearMintable() {
+    public fun clearMintable() {
       _builder.clearMintable()
     }
 
     /**
-     * <code>bool burnable = 10;</code>
+     * <code>bool burnable = 10 [json_name = "burnable"];</code>
      */
-    var burnable: kotlin.Boolean
+    public var burnable: kotlin.Boolean
       @JvmName("getBurnable")
       get() = _builder.getBurnable()
       @JvmName("setBurnable")
@@ -205,13 +205,13 @@ object CoinInfoResponseKt {
         _builder.setBurnable(value)
       }
     /**
-     * <code>bool burnable = 10;</code>
+     * <code>bool burnable = 10 [json_name = "burnable"];</code>
      */
-    fun clearBurnable() {
+    public fun clearBurnable() {
       _builder.clearBurnable()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.CoinInfoResponse.copy(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.CoinInfoResponse =
+public inline fun counters.minter.grpc.client.CoinInfoResponse.copy(block: counters.minter.grpc.client.CoinInfoResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoResponse =
   counters.minter.grpc.client.CoinInfoResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

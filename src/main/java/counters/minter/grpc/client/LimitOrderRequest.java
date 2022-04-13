@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_ID_FIELD_NUMBER = 1;
   private long orderId_;
   /**
-   * <code>uint64 order_id = 1;</code>
+   * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
    * @return The orderId.
    */
   @java.lang.Override
@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 2;
   private long height_;
   /**
-   * <code>uint64 height = 2;</code>
+   * <code>uint64 height = 2 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
 
     private long orderId_ ;
     /**
-     * <code>uint64 order_id = 1;</code>
+     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
      * @return The orderId.
      */
     @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
       return orderId_;
     }
     /**
-     * <code>uint64 order_id = 1;</code>
+     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
      * @param value The orderId to set.
      * @return This builder for chaining.
      */
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 order_id = 1;</code>
+     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 2;</code>
+     * <code>uint64 height = 2 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

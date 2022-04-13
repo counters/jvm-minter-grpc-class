@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun blocksRequest(block: counters.minter.grpc.client.BlocksRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.BlocksRequest =
+public inline fun blocksRequest(block: counters.minter.grpc.client.BlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlocksRequest =
   counters.minter.grpc.client.BlocksRequestKt.Dsl._create(counters.minter.grpc.client.BlocksRequest.newBuilder()).apply { block() }._build()
-object BlocksRequestKt {
+public object BlocksRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.BlocksRequest.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.BlocksRequest.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.BlocksRequest.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object BlocksRequestKt {
     internal fun _build(): counters.minter.grpc.client.BlocksRequest = _builder.build()
 
     /**
-     * <code>uint64 from_height = 1;</code>
+     * <code>uint64 from_height = 1 [json_name = "fromHeight"];</code>
      */
-    var fromHeight: kotlin.Long
+    public var fromHeight: kotlin.Long
       @JvmName("getFromHeight")
       get() = _builder.getFromHeight()
       @JvmName("setFromHeight")
@@ -33,16 +33,16 @@ object BlocksRequestKt {
         _builder.setFromHeight(value)
       }
     /**
-     * <code>uint64 from_height = 1;</code>
+     * <code>uint64 from_height = 1 [json_name = "fromHeight"];</code>
      */
-    fun clearFromHeight() {
+    public fun clearFromHeight() {
       _builder.clearFromHeight()
     }
 
     /**
-     * <code>uint64 to_height = 2;</code>
+     * <code>uint64 to_height = 2 [json_name = "toHeight"];</code>
      */
-    var toHeight: kotlin.Long
+    public var toHeight: kotlin.Long
       @JvmName("getToHeight")
       get() = _builder.getToHeight()
       @JvmName("setToHeight")
@@ -50,9 +50,9 @@ object BlocksRequestKt {
         _builder.setToHeight(value)
       }
     /**
-     * <code>uint64 to_height = 2;</code>
+     * <code>uint64 to_height = 2 [json_name = "toHeight"];</code>
      */
-    fun clearToHeight() {
+    public fun clearToHeight() {
       _builder.clearToHeight()
     }
 
@@ -61,68 +61,70 @@ object BlocksRequestKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class FieldsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class FieldsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      */
-     val fields: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>
+     public val fields: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getFieldsList()
       )
     /**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      * @param value The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addFields")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.add(value: counters.minter.grpc.client.BlockField) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.add(value: counters.minter.grpc.client.BlockField) {
       _builder.addFields(value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      * @param value The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignFields")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(value: counters.minter.grpc.client.BlockField) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(value: counters.minter.grpc.client.BlockField) {
       add(value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      * @param values The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllFields")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       _builder.addAllFields(values)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      * @param values The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllFields")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setFields")
-    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockField) {
+    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockField) {
       _builder.setFields(index, value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 3;</code>
+     * <code>repeated .api_pb.BlockField fields = 3 [json_name = "fields"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearFields")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.clear() {
       _builder.clearFields()
     }
     /**
-     * <code>bool failed_txs = 4;</code>
+     * <code>bool failed_txs = 4 [json_name = "failedTxs"];</code>
      */
-    var failedTxs: kotlin.Boolean
+    public var failedTxs: kotlin.Boolean
       @JvmName("getFailedTxs")
       get() = _builder.getFailedTxs()
       @JvmName("setFailedTxs")
@@ -130,16 +132,16 @@ object BlocksRequestKt {
         _builder.setFailedTxs(value)
       }
     /**
-     * <code>bool failed_txs = 4;</code>
+     * <code>bool failed_txs = 4 [json_name = "failedTxs"];</code>
      */
-    fun clearFailedTxs() {
+    public fun clearFailedTxs() {
       _builder.clearFailedTxs()
     }
 
     /**
-     * <code>bool events = 5;</code>
+     * <code>bool events = 5 [json_name = "events"];</code>
      */
-    var events: kotlin.Boolean
+    public var events: kotlin.Boolean
       @JvmName("getEvents")
       get() = _builder.getEvents()
       @JvmName("setEvents")
@@ -147,13 +149,13 @@ object BlocksRequestKt {
         _builder.setEvents(value)
       }
     /**
-     * <code>bool events = 5;</code>
+     * <code>bool events = 5 [json_name = "events"];</code>
      */
-    fun clearEvents() {
+    public fun clearEvents() {
       _builder.clearEvents()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.BlocksRequest.copy(block: counters.minter.grpc.client.BlocksRequestKt.Dsl.() -> Unit): counters.minter.grpc.client.BlocksRequest =
+public inline fun counters.minter.grpc.client.BlocksRequest.copy(block: counters.minter.grpc.client.BlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlocksRequest =
   counters.minter.grpc.client.BlocksRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()

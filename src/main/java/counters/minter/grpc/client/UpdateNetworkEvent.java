@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int VERSION_FIELD_NUMBER = 1;
   private volatile java.lang.Object version_;
   /**
-   * <code>string version = 1;</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The version.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string version = 1;</code>
+   * <code>string version = 1 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
     }
     unknownFields.writeTo(output);
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
     }
     size += unknownFields.getSerializedSize();
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object version_ = "";
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return The version.
      */
     public java.lang.String getVersion() {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 1;</code>
+     * <code>string version = 1 [json_name = "version"];</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
      */

@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun minGasPriceResponse(block: counters.minter.grpc.client.MinGasPriceResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MinGasPriceResponse =
+public inline fun minGasPriceResponse(block: counters.minter.grpc.client.MinGasPriceResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MinGasPriceResponse =
   counters.minter.grpc.client.MinGasPriceResponseKt.Dsl._create(counters.minter.grpc.client.MinGasPriceResponse.newBuilder()).apply { block() }._build()
-object MinGasPriceResponseKt {
+public object MinGasPriceResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.MinGasPriceResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.MinGasPriceResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.MinGasPriceResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object MinGasPriceResponseKt {
     internal fun _build(): counters.minter.grpc.client.MinGasPriceResponse = _builder.build()
 
     /**
-     * <code>uint64 min_gas_price = 3;</code>
+     * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
      */
-    var minGasPrice: kotlin.Long
+    public var minGasPrice: kotlin.Long
       @JvmName("getMinGasPrice")
       get() = _builder.getMinGasPrice()
       @JvmName("setMinGasPrice")
@@ -33,13 +33,13 @@ object MinGasPriceResponseKt {
         _builder.setMinGasPrice(value)
       }
     /**
-     * <code>uint64 min_gas_price = 3;</code>
+     * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
      */
-    fun clearMinGasPrice() {
+    public fun clearMinGasPrice() {
       _builder.clearMinGasPrice()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.MinGasPriceResponse.copy(block: counters.minter.grpc.client.MinGasPriceResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.MinGasPriceResponse =
+public inline fun counters.minter.grpc.client.MinGasPriceResponse.copy(block: counters.minter.grpc.client.MinGasPriceResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MinGasPriceResponse =
   counters.minter.grpc.client.MinGasPriceResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

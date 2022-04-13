@@ -111,14 +111,14 @@ private static final long serialVersionUID = 0L;
   public static final int COINS_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.Coin> coins_;
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.Coin> getCoinsList() {
     return coins_;
   }
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.CoinOrBuilder> 
@@ -126,21 +126,21 @@ private static final long serialVersionUID = 0L;
     return coins_;
   }
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   @java.lang.Override
   public int getCoinsCount() {
     return coins_.size();
   }
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.Coin getCoins(int index) {
     return coins_.get(index);
   }
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CoinOrBuilder getCoinsOrBuilder(
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_TO_SELL_FIELD_NUMBER = 2;
   private volatile java.lang.Object valueToSell_;
   /**
-   * <code>string value_to_sell = 2;</code>
+   * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
    * @return The valueToSell.
    */
   @java.lang.Override
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value_to_sell = 2;</code>
+   * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
    * @return The bytes for valueToSell.
    */
   @java.lang.Override
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
   public static final int MINIMUM_VALUE_TO_BUY_FIELD_NUMBER = 4;
   private volatile java.lang.Object minimumValueToBuy_;
   /**
-   * <code>string minimum_value_to_buy = 4;</code>
+   * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
    * @return The minimumValueToBuy.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string minimum_value_to_buy = 4;</code>
+   * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
    * @return The bytes for minimumValueToBuy.
    */
   @java.lang.Override
@@ -241,10 +241,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < coins_.size(); i++) {
       output.writeMessage(1, coins_.get(i));
     }
-    if (!getValueToSellBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, valueToSell_);
     }
-    if (!getMinimumValueToBuyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minimumValueToBuy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, minimumValueToBuy_);
     }
     unknownFields.writeTo(output);
@@ -260,10 +260,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, coins_.get(i));
     }
-    if (!getValueToSellBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, valueToSell_);
     }
-    if (!getMinimumValueToBuyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minimumValueToBuy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, minimumValueToBuy_);
     }
     size += unknownFields.getSerializedSize();
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> coinsBuilder_;
 
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public java.util.List<counters.minter.grpc.client.Coin> getCoinsList() {
       if (coinsBuilder_ == null) {
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public int getCoinsCount() {
       if (coinsBuilder_ == null) {
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public counters.minter.grpc.client.Coin getCoins(int index) {
       if (coinsBuilder_ == null) {
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder setCoins(
         int index, counters.minter.grpc.client.Coin value) {
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder setCoins(
         int index, counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder addCoins(counters.minter.grpc.client.Coin value) {
       if (coinsBuilder_ == null) {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder addCoins(
         int index, counters.minter.grpc.client.Coin value) {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder addCoins(
         counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder addCoins(
         int index, counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder addAllCoins(
         java.lang.Iterable<? extends counters.minter.grpc.client.Coin> values) {
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder clearCoins() {
       if (coinsBuilder_ == null) {
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public Builder removeCoins(int index) {
       if (coinsBuilder_ == null) {
@@ -776,14 +776,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public counters.minter.grpc.client.Coin.Builder getCoinsBuilder(
         int index) {
       return getCoinsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public counters.minter.grpc.client.CoinOrBuilder getCoinsOrBuilder(
         int index) {
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.CoinOrBuilder> 
          getCoinsOrBuilderList() {
@@ -804,14 +804,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public counters.minter.grpc.client.Coin.Builder addCoinsBuilder() {
       return getCoinsFieldBuilder().addBuilder(
           counters.minter.grpc.client.Coin.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public counters.minter.grpc.client.Coin.Builder addCoinsBuilder(
         int index) {
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.Coin.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.Coin coins = 1;</code>
+     * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
      */
     public java.util.List<counters.minter.grpc.client.Coin.Builder> 
          getCoinsBuilderList() {
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object valueToSell_ = "";
     /**
-     * <code>string value_to_sell = 2;</code>
+     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
      * @return The valueToSell.
      */
     public java.lang.String getValueToSell() {
@@ -858,7 +858,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_to_sell = 2;</code>
+     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
      * @return The bytes for valueToSell.
      */
     public com.google.protobuf.ByteString
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_to_sell = 2;</code>
+     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
      * @param value The valueToSell to set.
      * @return This builder for chaining.
      */
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_to_sell = 2;</code>
+     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValueToSell() {
@@ -900,7 +900,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_to_sell = 2;</code>
+     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
      * @param value The bytes for valueToSell to set.
      * @return This builder for chaining.
      */
@@ -918,7 +918,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object minimumValueToBuy_ = "";
     /**
-     * <code>string minimum_value_to_buy = 4;</code>
+     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
      * @return The minimumValueToBuy.
      */
     public java.lang.String getMinimumValueToBuy() {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string minimum_value_to_buy = 4;</code>
+     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
      * @return The bytes for minimumValueToBuy.
      */
     public com.google.protobuf.ByteString
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string minimum_value_to_buy = 4;</code>
+     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
      * @param value The minimumValueToBuy to set.
      * @return This builder for chaining.
      */
@@ -966,7 +966,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string minimum_value_to_buy = 4;</code>
+     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMinimumValueToBuy() {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string minimum_value_to_buy = 4;</code>
+     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
      * @param value The bytes for minimumValueToBuy to set.
      * @return This builder for chaining.
      */

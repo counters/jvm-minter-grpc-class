@@ -8,48 +8,48 @@ public interface BlockRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>repeated .api_pb.BlockField fields = 2;</code>
+   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return A list containing the fields.
    */
   java.util.List<counters.minter.grpc.client.BlockField> getFieldsList();
   /**
-   * <code>repeated .api_pb.BlockField fields = 2;</code>
+   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return The count of fields.
    */
   int getFieldsCount();
   /**
-   * <code>repeated .api_pb.BlockField fields = 2;</code>
+   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @param index The index of the element to return.
    * @return The fields at the given index.
    */
   counters.minter.grpc.client.BlockField getFields(int index);
   /**
-   * <code>repeated .api_pb.BlockField fields = 2;</code>
+   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @return A list containing the enum numeric values on the wire for fields.
    */
   java.util.List<java.lang.Integer>
   getFieldsValueList();
   /**
-   * <code>repeated .api_pb.BlockField fields = 2;</code>
+   * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fields at the given index.
    */
   int getFieldsValue(int index);
 
   /**
-   * <code>bool failed_txs = 3;</code>
+   * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
    * @return The failedTxs.
    */
   boolean getFailedTxs();
 
   /**
-   * <code>bool events = 4;</code>
+   * <code>bool events = 4 [json_name = "events"];</code>
    * @return The events.
    */
   boolean getEvents();

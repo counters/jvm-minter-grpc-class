@@ -137,49 +137,64 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      * @return Whether the block field is set.
      */
     boolean hasBlock();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      * @return The block.
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block getBlock();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.BlockOrBuilder getBlockOrBuilder();
 
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      * @return Whether the evidence field is set.
      */
     boolean hasEvidence();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      * @return The evidence.
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence getEvidence();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.EvidenceOrBuilder getEvidenceOrBuilder();
 
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      * @return Whether the validator field is set.
      */
     boolean hasValidator();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      * @return The validator.
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator getValidator();
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.ConsensusParams.ValidatorOrBuilder getValidatorOrBuilder();
+
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getVersion();
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder getVersionOrBuilder();
   }
   /**
    * Protobuf type {@code api_pb.GenesisResponse.ConsensusParams}
@@ -265,6 +280,19 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            case 34: {
+              counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder subBuilder = null;
+              if (version_ != null) {
+                subBuilder = version_.toBuilder();
+              }
+              version_ = input.readMessage(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(version_);
+                version_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -302,19 +330,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>int64 max_bytes = 1;</code>
+       * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
        * @return The maxBytes.
        */
       long getMaxBytes();
 
       /**
-       * <code>int64 max_gas = 2;</code>
+       * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
        * @return The maxGas.
        */
       long getMaxGas();
 
       /**
-       * <code>int64 time_iota_ms = 3;</code>
+       * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
        * @return The timeIotaMs.
        */
       long getTimeIotaMs();
@@ -414,7 +442,7 @@ private static final long serialVersionUID = 0L;
       public static final int MAX_BYTES_FIELD_NUMBER = 1;
       private long maxBytes_;
       /**
-       * <code>int64 max_bytes = 1;</code>
+       * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
        * @return The maxBytes.
        */
       @java.lang.Override
@@ -425,7 +453,7 @@ private static final long serialVersionUID = 0L;
       public static final int MAX_GAS_FIELD_NUMBER = 2;
       private long maxGas_;
       /**
-       * <code>int64 max_gas = 2;</code>
+       * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
        * @return The maxGas.
        */
       @java.lang.Override
@@ -436,7 +464,7 @@ private static final long serialVersionUID = 0L;
       public static final int TIME_IOTA_MS_FIELD_NUMBER = 3;
       private long timeIotaMs_;
       /**
-       * <code>int64 time_iota_ms = 3;</code>
+       * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
        * @return The timeIotaMs.
        */
       @java.lang.Override
@@ -785,7 +813,7 @@ private static final long serialVersionUID = 0L;
 
         private long maxBytes_ ;
         /**
-         * <code>int64 max_bytes = 1;</code>
+         * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
          * @return The maxBytes.
          */
         @java.lang.Override
@@ -793,7 +821,7 @@ private static final long serialVersionUID = 0L;
           return maxBytes_;
         }
         /**
-         * <code>int64 max_bytes = 1;</code>
+         * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
          * @param value The maxBytes to set.
          * @return This builder for chaining.
          */
@@ -804,7 +832,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 max_bytes = 1;</code>
+         * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMaxBytes() {
@@ -816,7 +844,7 @@ private static final long serialVersionUID = 0L;
 
         private long maxGas_ ;
         /**
-         * <code>int64 max_gas = 2;</code>
+         * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
          * @return The maxGas.
          */
         @java.lang.Override
@@ -824,7 +852,7 @@ private static final long serialVersionUID = 0L;
           return maxGas_;
         }
         /**
-         * <code>int64 max_gas = 2;</code>
+         * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
          * @param value The maxGas to set.
          * @return This builder for chaining.
          */
@@ -835,7 +863,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 max_gas = 2;</code>
+         * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMaxGas() {
@@ -847,7 +875,7 @@ private static final long serialVersionUID = 0L;
 
         private long timeIotaMs_ ;
         /**
-         * <code>int64 time_iota_ms = 3;</code>
+         * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
          * @return The timeIotaMs.
          */
         @java.lang.Override
@@ -855,7 +883,7 @@ private static final long serialVersionUID = 0L;
           return timeIotaMs_;
         }
         /**
-         * <code>int64 time_iota_ms = 3;</code>
+         * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
          * @param value The timeIotaMs to set.
          * @return This builder for chaining.
          */
@@ -866,7 +894,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 time_iota_ms = 3;</code>
+         * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTimeIotaMs() {
@@ -933,13 +961,13 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>int64 max_age_num_blocks = 1;</code>
+       * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
        * @return The maxAgeNumBlocks.
        */
       long getMaxAgeNumBlocks();
 
       /**
-       * <code>int64 max_age_duration = 2;</code>
+       * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
        * @return The maxAgeDuration.
        */
       long getMaxAgeDuration();
@@ -1034,7 +1062,7 @@ private static final long serialVersionUID = 0L;
       public static final int MAX_AGE_NUM_BLOCKS_FIELD_NUMBER = 1;
       private long maxAgeNumBlocks_;
       /**
-       * <code>int64 max_age_num_blocks = 1;</code>
+       * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
        * @return The maxAgeNumBlocks.
        */
       @java.lang.Override
@@ -1045,7 +1073,7 @@ private static final long serialVersionUID = 0L;
       public static final int MAX_AGE_DURATION_FIELD_NUMBER = 2;
       private long maxAgeDuration_;
       /**
-       * <code>int64 max_age_duration = 2;</code>
+       * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
        * @return The maxAgeDuration.
        */
       @java.lang.Override
@@ -1376,7 +1404,7 @@ private static final long serialVersionUID = 0L;
 
         private long maxAgeNumBlocks_ ;
         /**
-         * <code>int64 max_age_num_blocks = 1;</code>
+         * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
          * @return The maxAgeNumBlocks.
          */
         @java.lang.Override
@@ -1384,7 +1412,7 @@ private static final long serialVersionUID = 0L;
           return maxAgeNumBlocks_;
         }
         /**
-         * <code>int64 max_age_num_blocks = 1;</code>
+         * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
          * @param value The maxAgeNumBlocks to set.
          * @return This builder for chaining.
          */
@@ -1395,7 +1423,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 max_age_num_blocks = 1;</code>
+         * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMaxAgeNumBlocks() {
@@ -1407,7 +1435,7 @@ private static final long serialVersionUID = 0L;
 
         private long maxAgeDuration_ ;
         /**
-         * <code>int64 max_age_duration = 2;</code>
+         * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
          * @return The maxAgeDuration.
          */
         @java.lang.Override
@@ -1415,7 +1443,7 @@ private static final long serialVersionUID = 0L;
           return maxAgeDuration_;
         }
         /**
-         * <code>int64 max_age_duration = 2;</code>
+         * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
          * @param value The maxAgeDuration to set.
          * @return This builder for chaining.
          */
@@ -1426,7 +1454,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 max_age_duration = 2;</code>
+         * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMaxAgeDuration() {
@@ -1493,24 +1521,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @return A list containing the pubKeyTypes.
        */
       java.util.List<java.lang.String>
           getPubKeyTypesList();
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @return The count of pubKeyTypes.
        */
       int getPubKeyTypesCount();
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @param index The index of the element to return.
        * @return The pubKeyTypes at the given index.
        */
       java.lang.String getPubKeyTypes(int index);
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the pubKeyTypes at the given index.
        */
@@ -1611,7 +1639,7 @@ private static final long serialVersionUID = 0L;
       public static final int PUB_KEY_TYPES_FIELD_NUMBER = 1;
       private com.google.protobuf.LazyStringList pubKeyTypes_;
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @return A list containing the pubKeyTypes.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1619,14 +1647,14 @@ private static final long serialVersionUID = 0L;
         return pubKeyTypes_;
       }
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @return The count of pubKeyTypes.
        */
       public int getPubKeyTypesCount() {
         return pubKeyTypes_.size();
       }
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @param index The index of the element to return.
        * @return The pubKeyTypes at the given index.
        */
@@ -1634,7 +1662,7 @@ private static final long serialVersionUID = 0L;
         return pubKeyTypes_.get(index);
       }
       /**
-       * <code>repeated string pub_key_types = 1;</code>
+       * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the pubKeyTypes at the given index.
        */
@@ -1972,7 +2000,7 @@ private static final long serialVersionUID = 0L;
            }
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @return A list containing the pubKeyTypes.
          */
         public com.google.protobuf.ProtocolStringList
@@ -1980,14 +2008,14 @@ private static final long serialVersionUID = 0L;
           return pubKeyTypes_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @return The count of pubKeyTypes.
          */
         public int getPubKeyTypesCount() {
           return pubKeyTypes_.size();
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param index The index of the element to return.
          * @return The pubKeyTypes at the given index.
          */
@@ -1995,7 +2023,7 @@ private static final long serialVersionUID = 0L;
           return pubKeyTypes_.get(index);
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the pubKeyTypes at the given index.
          */
@@ -2004,7 +2032,7 @@ private static final long serialVersionUID = 0L;
           return pubKeyTypes_.getByteString(index);
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param index The index to set the value at.
          * @param value The pubKeyTypes to set.
          * @return This builder for chaining.
@@ -2020,7 +2048,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param value The pubKeyTypes to add.
          * @return This builder for chaining.
          */
@@ -2035,7 +2063,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param values The pubKeyTypes to add.
          * @return This builder for chaining.
          */
@@ -2048,7 +2076,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPubKeyTypes() {
@@ -2058,7 +2086,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string pub_key_types = 1;</code>
+         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
          * @param value The bytes of the pubKeyTypes to add.
          * @return This builder for chaining.
          */
@@ -2126,10 +2154,499 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface VersionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.ConsensusParams.Version)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+       * @return The appVersion.
+       */
+      long getAppVersion();
+    }
+    /**
+     * Protobuf type {@code api_pb.GenesisResponse.ConsensusParams.Version}
+     */
+    public static final class Version extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.ConsensusParams.Version)
+        VersionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Version.newBuilder() to construct.
+      private Version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Version() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Version();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Version(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                appVersion_ = input.readUInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_ConsensusParams_Version_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.class, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder.class);
+      }
+
+      public static final int APP_VERSION_FIELD_NUMBER = 1;
+      private long appVersion_;
+      /**
+       * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+       * @return The appVersion.
+       */
+      @java.lang.Override
+      public long getAppVersion() {
+        return appVersion_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (appVersion_ != 0L) {
+          output.writeUInt64(1, appVersion_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (appVersion_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, appVersion_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version)) {
+          return super.equals(obj);
+        }
+        counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version other = (counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version) obj;
+
+        if (getAppVersion()
+            != other.getAppVersion()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + APP_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAppVersion());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.ConsensusParams.Version}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.ConsensusParams.Version)
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_ConsensusParams_Version_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.class, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder.class);
+        }
+
+        // Construct using counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          appVersion_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_ConsensusParams_Version_descriptor;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getDefaultInstanceForType() {
+          return counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version build() {
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version buildPartial() {
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version result = new counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version(this);
+          result.appVersion_ = appVersion_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version) {
+            return mergeFrom((counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version other) {
+          if (other == counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.getDefaultInstance()) return this;
+          if (other.getAppVersion() != 0L) {
+            setAppVersion(other.getAppVersion());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long appVersion_ ;
+        /**
+         * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+         * @return The appVersion.
+         */
+        @java.lang.Override
+        public long getAppVersion() {
+          return appVersion_;
+        }
+        /**
+         * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+         * @param value The appVersion to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAppVersion(long value) {
+          
+          appVersion_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAppVersion() {
+          
+          appVersion_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.ConsensusParams.Version)
+      }
+
+      // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.ConsensusParams.Version)
+      private static final counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version();
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Version>
+          PARSER = new com.google.protobuf.AbstractParser<Version>() {
+        @java.lang.Override
+        public Version parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Version(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Version> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Version> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int BLOCK_FIELD_NUMBER = 1;
     private counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block block_;
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      * @return Whether the block field is set.
      */
     @java.lang.Override
@@ -2137,7 +2654,7 @@ private static final long serialVersionUID = 0L;
       return block_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      * @return The block.
      */
     @java.lang.Override
@@ -2145,7 +2662,7 @@ private static final long serialVersionUID = 0L;
       return block_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.getDefaultInstance() : block_;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.ConsensusParams.BlockOrBuilder getBlockOrBuilder() {
@@ -2155,7 +2672,7 @@ private static final long serialVersionUID = 0L;
     public static final int EVIDENCE_FIELD_NUMBER = 2;
     private counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence evidence_;
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      * @return Whether the evidence field is set.
      */
     @java.lang.Override
@@ -2163,7 +2680,7 @@ private static final long serialVersionUID = 0L;
       return evidence_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      * @return The evidence.
      */
     @java.lang.Override
@@ -2171,7 +2688,7 @@ private static final long serialVersionUID = 0L;
       return evidence_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.getDefaultInstance() : evidence_;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.ConsensusParams.EvidenceOrBuilder getEvidenceOrBuilder() {
@@ -2181,7 +2698,7 @@ private static final long serialVersionUID = 0L;
     public static final int VALIDATOR_FIELD_NUMBER = 3;
     private counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator validator_;
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      * @return Whether the validator field is set.
      */
     @java.lang.Override
@@ -2189,7 +2706,7 @@ private static final long serialVersionUID = 0L;
       return validator_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      * @return The validator.
      */
     @java.lang.Override
@@ -2197,11 +2714,37 @@ private static final long serialVersionUID = 0L;
       return validator_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.getDefaultInstance() : validator_;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.ConsensusParams.ValidatorOrBuilder getValidatorOrBuilder() {
       return getValidator();
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 4;
+    private counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version version_;
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return version_ != null;
+    }
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getVersion() {
+      return version_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.getDefaultInstance() : version_;
+    }
+    /**
+     * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder getVersionOrBuilder() {
+      return getVersion();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2227,6 +2770,9 @@ private static final long serialVersionUID = 0L;
       if (validator_ != null) {
         output.writeMessage(3, getValidator());
       }
+      if (version_ != null) {
+        output.writeMessage(4, getVersion());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2247,6 +2793,10 @@ private static final long serialVersionUID = 0L;
       if (validator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getValidator());
+      }
+      if (version_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getVersion());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2278,6 +2828,11 @@ private static final long serialVersionUID = 0L;
         if (!getValidator()
             .equals(other.getValidator())) return false;
       }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2300,6 +2855,10 @@ private static final long serialVersionUID = 0L;
       if (hasValidator()) {
         hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
         hash = (53 * hash) + getValidator().hashCode();
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2452,6 +3011,12 @@ private static final long serialVersionUID = 0L;
           validator_ = null;
           validatorBuilder_ = null;
         }
+        if (versionBuilder_ == null) {
+          version_ = null;
+        } else {
+          version_ = null;
+          versionBuilder_ = null;
+        }
         return this;
       }
 
@@ -2492,6 +3057,11 @@ private static final long serialVersionUID = 0L;
           result.validator_ = validator_;
         } else {
           result.validator_ = validatorBuilder_.build();
+        }
+        if (versionBuilder_ == null) {
+          result.version_ = version_;
+        } else {
+          result.version_ = versionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2550,6 +3120,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasValidator()) {
           mergeValidator(other.getValidator());
         }
+        if (other.hasVersion()) {
+          mergeVersion(other.getVersion());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2583,14 +3156,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.BlockOrBuilder> blockBuilder_;
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        * @return Whether the block field is set.
        */
       public boolean hasBlock() {
         return blockBuilder_ != null || block_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        * @return The block.
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block getBlock() {
@@ -2601,7 +3174,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public Builder setBlock(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block value) {
         if (blockBuilder_ == null) {
@@ -2617,7 +3190,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public Builder setBlock(
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.Builder builderForValue) {
@@ -2631,7 +3204,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public Builder mergeBlock(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block value) {
         if (blockBuilder_ == null) {
@@ -2649,7 +3222,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public Builder clearBlock() {
         if (blockBuilder_ == null) {
@@ -2663,7 +3236,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.Builder getBlockBuilder() {
         
@@ -2671,7 +3244,7 @@ private static final long serialVersionUID = 0L;
         return getBlockFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.BlockOrBuilder getBlockOrBuilder() {
         if (blockBuilder_ != null) {
@@ -2682,7 +3255,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.BlockOrBuilder> 
@@ -2702,14 +3275,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.EvidenceOrBuilder> evidenceBuilder_;
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        * @return Whether the evidence field is set.
        */
       public boolean hasEvidence() {
         return evidenceBuilder_ != null || evidence_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        * @return The evidence.
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence getEvidence() {
@@ -2720,7 +3293,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public Builder setEvidence(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence value) {
         if (evidenceBuilder_ == null) {
@@ -2736,7 +3309,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public Builder setEvidence(
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.Builder builderForValue) {
@@ -2750,7 +3323,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public Builder mergeEvidence(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence value) {
         if (evidenceBuilder_ == null) {
@@ -2768,7 +3341,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public Builder clearEvidence() {
         if (evidenceBuilder_ == null) {
@@ -2782,7 +3355,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.Builder getEvidenceBuilder() {
         
@@ -2790,7 +3363,7 @@ private static final long serialVersionUID = 0L;
         return getEvidenceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.EvidenceOrBuilder getEvidenceOrBuilder() {
         if (evidenceBuilder_ != null) {
@@ -2801,7 +3374,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.EvidenceOrBuilder> 
@@ -2821,14 +3394,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.ValidatorOrBuilder> validatorBuilder_;
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        * @return Whether the validator field is set.
        */
       public boolean hasValidator() {
         return validatorBuilder_ != null || validator_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        * @return The validator.
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator getValidator() {
@@ -2839,7 +3412,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public Builder setValidator(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator value) {
         if (validatorBuilder_ == null) {
@@ -2855,7 +3428,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public Builder setValidator(
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.Builder builderForValue) {
@@ -2869,7 +3442,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public Builder mergeValidator(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator value) {
         if (validatorBuilder_ == null) {
@@ -2887,7 +3460,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public Builder clearValidator() {
         if (validatorBuilder_ == null) {
@@ -2901,7 +3474,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.Builder getValidatorBuilder() {
         
@@ -2909,7 +3482,7 @@ private static final long serialVersionUID = 0L;
         return getValidatorFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.ConsensusParams.ValidatorOrBuilder getValidatorOrBuilder() {
         if (validatorBuilder_ != null) {
@@ -2920,7 +3493,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.ValidatorOrBuilder> 
@@ -2934,6 +3507,125 @@ private static final long serialVersionUID = 0L;
           validator_ = null;
         }
         return validatorBuilder_;
+      }
+
+      private counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version version_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder> versionBuilder_;
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       * @return Whether the version field is set.
+       */
+      public boolean hasVersion() {
+        return versionBuilder_ != null || version_ != null;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       * @return The version.
+       */
+      public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version getVersion() {
+        if (versionBuilder_ == null) {
+          return version_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.getDefaultInstance() : version_;
+        } else {
+          return versionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public Builder setVersion(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version value) {
+        if (versionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          version_ = value;
+          onChanged();
+        } else {
+          versionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public Builder setVersion(
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder builderForValue) {
+        if (versionBuilder_ == null) {
+          version_ = builderForValue.build();
+          onChanged();
+        } else {
+          versionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public Builder mergeVersion(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version value) {
+        if (versionBuilder_ == null) {
+          if (version_ != null) {
+            version_ =
+              counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.newBuilder(version_).mergeFrom(value).buildPartial();
+          } else {
+            version_ = value;
+          }
+          onChanged();
+        } else {
+          versionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public Builder clearVersion() {
+        if (versionBuilder_ == null) {
+          version_ = null;
+          onChanged();
+        } else {
+          version_ = null;
+          versionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder getVersionBuilder() {
+        
+        onChanged();
+        return getVersionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder getVersionOrBuilder() {
+        if (versionBuilder_ != null) {
+          return versionBuilder_.getMessageOrBuilder();
+        } else {
+          return version_ == null ?
+              counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.getDefaultInstance() : version_;
+        }
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder> 
+          getVersionFieldBuilder() {
+        if (versionBuilder_ == null) {
+          versionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParams.VersionOrBuilder>(
+                  getVersion(),
+                  getParentForChildren(),
+                  isClean());
+          version_ = null;
+        }
+        return versionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2993,144 +3685,168 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string version = 19;</code>
+     * <code>string version = 19 [json_name = "version"];</code>
      * @return The version.
      */
     java.lang.String getVersion();
     /**
-     * <code>string version = 19;</code>
+     * <code>string version = 19 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
-     * <code>string note = 10;</code>
+     * <code>string note = 10 [json_name = "note"];</code>
      * @return The note.
      */
     java.lang.String getNote();
     /**
-     * <code>string note = 10;</code>
+     * <code>string note = 10 [json_name = "note"];</code>
      * @return The bytes for note.
      */
     com.google.protobuf.ByteString
         getNoteBytes();
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Validators> 
         getValidatorsList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Validators getValidators(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     int getValidatorsCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder> 
         getValidatorsOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder getValidatorsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate> 
         getCandidatesList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Candidate getCandidates(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     int getCandidatesCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder> 
         getCandidatesOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder getCandidatesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> 
+        getDeletedCandidatesList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDeletedCandidates(int index);
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    int getDeletedCandidatesCount();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder> 
+        getDeletedCandidatesOrBuilderList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder getDeletedCandidatesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin> 
         getCoinsList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Coin getCoins(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     int getCoinsCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder> 
         getCoinsOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder getCoinsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> 
         getFrozenFundsList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund getFrozenFunds(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     int getFrozenFundsCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder> 
         getFrozenFundsOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder getFrozenFundsOrBuilder(
         int index);
 
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @return A list containing the blockListCandidates.
      */
     java.util.List<java.lang.String>
         getBlockListCandidatesList();
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @return The count of blockListCandidates.
      */
     int getBlockListCandidatesCount();
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @param index The index of the element to return.
      * @return The blockListCandidates at the given index.
      */
     java.lang.String getBlockListCandidates(int index);
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the blockListCandidates at the given index.
      */
@@ -3138,159 +3854,189 @@ private static final long serialVersionUID = 0L;
         getBlockListCandidatesBytes(int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> 
         getWaitlistList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Waitlist getWaitlist(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     int getWaitlistCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder> 
         getWaitlistOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder getWaitlistOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account> 
         getAccountsList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Account getAccounts(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     int getAccountsCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder> 
         getAccountsOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder getAccountsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> 
         getHaltBlocksList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock getHaltBlocks(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     int getHaltBlocksCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder> 
         getHaltBlocksOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder getHaltBlocksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool> 
         getPoolsList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Pool getPools(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     int getPoolsCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder> 
         getPoolsOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder getPoolsOrBuilder(
         int index);
 
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+     * @return The nextOrderId.
+     */
+    long getNextOrderId();
+
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      * @return Whether the commission field is set.
      */
     boolean hasCommission();
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      * @return The commission.
      */
     counters.minter.grpc.client.GenesisResponse.AppState.Commission getCommission();
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder();
 
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> 
         getCommissionVotesList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote getCommissionVotes(int index);
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     int getCommissionVotesCount();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder> 
         getCommissionVotesOrBuilderList();
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder getCommissionVotesOrBuilder(
         int index);
 
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> 
+        getUpdateVotesList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getUpdateVotes(int index);
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    int getUpdateVotesCount();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder> 
+        getUpdateVotesOrBuilderList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder getUpdateVotesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @return A list containing the usedChecks.
      */
     java.util.List<java.lang.String>
         getUsedChecksList();
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @return The count of usedChecks.
      */
     int getUsedChecksCount();
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @param index The index of the element to return.
      * @return The usedChecks at the given index.
      */
     java.lang.String getUsedChecks(int index);
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the usedChecks at the given index.
      */
@@ -3298,22 +4044,73 @@ private static final long serialVersionUID = 0L;
         getUsedChecksBytes(int index);
 
     /**
-     * <code>uint64 max_gas = 7;</code>
+     * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
      * @return The maxGas.
      */
     long getMaxGas();
 
     /**
-     * <code>string total_slashed = 8;</code>
+     * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
      * @return The totalSlashed.
      */
     java.lang.String getTotalSlashed();
     /**
-     * <code>string total_slashed = 8;</code>
+     * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
      * @return The bytes for totalSlashed.
      */
     com.google.protobuf.ByteString
         getTotalSlashedBytes();
+
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version> 
+        getVersionsList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.Version getVersions(int index);
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    int getVersionsCount();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder> 
+        getVersionsOrBuilderList();
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder getVersionsOrBuilder(
+        int index);
+
+    /**
+     * <code>string emission = 24 [json_name = "emission"];</code>
+     * @return The emission.
+     */
+    java.lang.String getEmission();
+    /**
+     * <code>string emission = 24 [json_name = "emission"];</code>
+     * @return The bytes for emission.
+     */
+    com.google.protobuf.ByteString
+        getEmissionBytes();
+
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     * @return Whether the prevReward field is set.
+     */
+    boolean hasPrevReward();
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     * @return The prevReward.
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getPrevReward();
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     */
+    counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder getPrevRewardOrBuilder();
   }
   /**
    * Protobuf type {@code api_pb.GenesisResponse.AppState}
@@ -3332,6 +4129,7 @@ private static final long serialVersionUID = 0L;
       note_ = "";
       validators_ = java.util.Collections.emptyList();
       candidates_ = java.util.Collections.emptyList();
+      deletedCandidates_ = java.util.Collections.emptyList();
       coins_ = java.util.Collections.emptyList();
       frozenFunds_ = java.util.Collections.emptyList();
       blockListCandidates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3340,8 +4138,11 @@ private static final long serialVersionUID = 0L;
       haltBlocks_ = java.util.Collections.emptyList();
       pools_ = java.util.Collections.emptyList();
       commissionVotes_ = java.util.Collections.emptyList();
+      updateVotes_ = java.util.Collections.emptyList();
       usedChecks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       totalSlashed_ = "";
+      versions_ = java.util.Collections.emptyList();
+      emission_ = "";
     }
 
     @java.lang.Override
@@ -3394,18 +4195,18 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 coins_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Coin>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               coins_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Coin.parser(), extensionRegistry));
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 frozenFunds_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               frozenFunds_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.parser(), extensionRegistry));
@@ -3430,44 +4231,44 @@ private static final long serialVersionUID = 0L;
             }
             case 90: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 usedChecks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00001000;
               }
               usedChecks_.add(s);
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 haltBlocks_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000100;
               }
               haltBlocks_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.parser(), extensionRegistry));
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 waitlist_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000040;
               }
               waitlist_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.parser(), extensionRegistry));
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 accounts_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Account>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000080;
               }
               accounts_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Account.parser(), extensionRegistry));
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 pools_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Pool>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000200;
               }
               pools_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Pool.parser(), extensionRegistry));
@@ -3487,9 +4288,9 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 commissionVotes_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote>();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000400;
               }
               commissionVotes_.add(
                   input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.parser(), extensionRegistry));
@@ -3497,9 +4298,9 @@ private static final long serialVersionUID = 0L;
             }
             case 146: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 blockListCandidates_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000020;
               }
               blockListCandidates_.add(s);
               break;
@@ -3508,6 +4309,57 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               version_ = s;
+              break;
+            }
+            case 162: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                deletedCandidates_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              deletedCandidates_.add(
+                  input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.parser(), extensionRegistry));
+              break;
+            }
+            case 168: {
+
+              nextOrderId_ = input.readUInt64();
+              break;
+            }
+            case 178: {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+                updateVotes_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              updateVotes_.add(
+                  input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.parser(), extensionRegistry));
+              break;
+            }
+            case 186: {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
+                versions_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Version>();
+                mutable_bitField0_ |= 0x00002000;
+              }
+              versions_.add(
+                  input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Version.parser(), extensionRegistry));
+              break;
+            }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              emission_ = s;
+              break;
+            }
+            case 202: {
+              counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder subBuilder = null;
+              if (prevReward_ != null) {
+                subBuilder = prevReward_.toBuilder();
+              }
+              prevReward_ = input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(prevReward_);
+                prevReward_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3531,32 +4383,41 @@ private static final long serialVersionUID = 0L;
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           candidates_ = java.util.Collections.unmodifiableList(candidates_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           coins_ = java.util.Collections.unmodifiableList(coins_);
         }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           frozenFunds_ = java.util.Collections.unmodifiableList(frozenFunds_);
         }
-        if (((mutable_bitField0_ & 0x00000400) != 0)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           usedChecks_ = usedChecks_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           haltBlocks_ = java.util.Collections.unmodifiableList(haltBlocks_);
         }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           waitlist_ = java.util.Collections.unmodifiableList(waitlist_);
         }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           accounts_ = java.util.Collections.unmodifiableList(accounts_);
         }
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           pools_ = java.util.Collections.unmodifiableList(pools_);
         }
-        if (((mutable_bitField0_ & 0x00000200) != 0)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           commissionVotes_ = java.util.Collections.unmodifiableList(commissionVotes_);
         }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           blockListCandidates_ = blockListCandidates_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          deletedCandidates_ = java.util.Collections.unmodifiableList(deletedCandidates_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
+          updateVotes_ = java.util.Collections.unmodifiableList(updateVotes_);
+        }
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
+          versions_ = java.util.Collections.unmodifiableList(versions_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3580,48 +4441,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The totalBipStake.
        */
       java.lang.String getTotalBipStake();
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The bytes for totalBipStake.
        */
       com.google.protobuf.ByteString
           getTotalBipStakeBytes();
 
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The publicKey.
        */
       java.lang.String getPublicKey();
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The bytes for publicKey.
        */
       com.google.protobuf.ByteString
           getPublicKeyBytes();
 
       /**
-       * <code>string accum_reward = 2;</code>
+       * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
        * @return The accumReward.
        */
       java.lang.String getAccumReward();
       /**
-       * <code>string accum_reward = 2;</code>
+       * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
        * @return The bytes for accumReward.
        */
       com.google.protobuf.ByteString
           getAccumRewardBytes();
 
       /**
-       * <code>string absent_times = 3;</code>
+       * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
        * @return The absentTimes.
        */
       java.lang.String getAbsentTimes();
       /**
-       * <code>string absent_times = 3;</code>
+       * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
        * @return The bytes for absentTimes.
        */
       com.google.protobuf.ByteString
@@ -3735,7 +4596,7 @@ private static final long serialVersionUID = 0L;
       public static final int TOTAL_BIP_STAKE_FIELD_NUMBER = 4;
       private volatile java.lang.Object totalBipStake_;
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The totalBipStake.
        */
       @java.lang.Override
@@ -3752,7 +4613,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The bytes for totalBipStake.
        */
       @java.lang.Override
@@ -3773,7 +4634,7 @@ private static final long serialVersionUID = 0L;
       public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
       private volatile java.lang.Object publicKey_;
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The publicKey.
        */
       @java.lang.Override
@@ -3790,7 +4651,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 1;</code>
+       * <code>string public_key = 1 [json_name = "publicKey"];</code>
        * @return The bytes for publicKey.
        */
       @java.lang.Override
@@ -3811,7 +4672,7 @@ private static final long serialVersionUID = 0L;
       public static final int ACCUM_REWARD_FIELD_NUMBER = 2;
       private volatile java.lang.Object accumReward_;
       /**
-       * <code>string accum_reward = 2;</code>
+       * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
        * @return The accumReward.
        */
       @java.lang.Override
@@ -3828,7 +4689,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string accum_reward = 2;</code>
+       * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
        * @return The bytes for accumReward.
        */
       @java.lang.Override
@@ -3849,7 +4710,7 @@ private static final long serialVersionUID = 0L;
       public static final int ABSENT_TIMES_FIELD_NUMBER = 3;
       private volatile java.lang.Object absentTimes_;
       /**
-       * <code>string absent_times = 3;</code>
+       * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
        * @return The absentTimes.
        */
       @java.lang.Override
@@ -3866,7 +4727,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string absent_times = 3;</code>
+       * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
        * @return The bytes for absentTimes.
        */
       @java.lang.Override
@@ -3898,16 +4759,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getPublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicKey_);
         }
-        if (!getAccumRewardBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accumReward_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accumReward_);
         }
-        if (!getAbsentTimesBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(absentTimes_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, absentTimes_);
         }
-        if (!getTotalBipStakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalBipStake_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, totalBipStake_);
         }
         unknownFields.writeTo(output);
@@ -3919,16 +4780,16 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getPublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicKey_);
         }
-        if (!getAccumRewardBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accumReward_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accumReward_);
         }
-        if (!getAbsentTimesBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(absentTimes_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, absentTimes_);
         }
-        if (!getTotalBipStakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalBipStake_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, totalBipStake_);
         }
         size += unknownFields.getSerializedSize();
@@ -4239,7 +5100,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object totalBipStake_ = "";
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return The totalBipStake.
          */
         public java.lang.String getTotalBipStake() {
@@ -4255,7 +5116,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return The bytes for totalBipStake.
          */
         public com.google.protobuf.ByteString
@@ -4272,7 +5133,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @param value The totalBipStake to set.
          * @return This builder for chaining.
          */
@@ -4287,7 +5148,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTotalBipStake() {
@@ -4297,7 +5158,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @param value The bytes for totalBipStake to set.
          * @return This builder for chaining.
          */
@@ -4315,7 +5176,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object publicKey_ = "";
         /**
-         * <code>string public_key = 1;</code>
+         * <code>string public_key = 1 [json_name = "publicKey"];</code>
          * @return The publicKey.
          */
         public java.lang.String getPublicKey() {
@@ -4331,7 +5192,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string public_key = 1;</code>
+         * <code>string public_key = 1 [json_name = "publicKey"];</code>
          * @return The bytes for publicKey.
          */
         public com.google.protobuf.ByteString
@@ -4348,7 +5209,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string public_key = 1;</code>
+         * <code>string public_key = 1 [json_name = "publicKey"];</code>
          * @param value The publicKey to set.
          * @return This builder for chaining.
          */
@@ -4363,7 +5224,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string public_key = 1;</code>
+         * <code>string public_key = 1 [json_name = "publicKey"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPublicKey() {
@@ -4373,7 +5234,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string public_key = 1;</code>
+         * <code>string public_key = 1 [json_name = "publicKey"];</code>
          * @param value The bytes for publicKey to set.
          * @return This builder for chaining.
          */
@@ -4391,7 +5252,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object accumReward_ = "";
         /**
-         * <code>string accum_reward = 2;</code>
+         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
          * @return The accumReward.
          */
         public java.lang.String getAccumReward() {
@@ -4407,7 +5268,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string accum_reward = 2;</code>
+         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
          * @return The bytes for accumReward.
          */
         public com.google.protobuf.ByteString
@@ -4424,7 +5285,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string accum_reward = 2;</code>
+         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
          * @param value The accumReward to set.
          * @return This builder for chaining.
          */
@@ -4439,7 +5300,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string accum_reward = 2;</code>
+         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAccumReward() {
@@ -4449,7 +5310,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string accum_reward = 2;</code>
+         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
          * @param value The bytes for accumReward to set.
          * @return This builder for chaining.
          */
@@ -4467,7 +5328,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object absentTimes_ = "";
         /**
-         * <code>string absent_times = 3;</code>
+         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
          * @return The absentTimes.
          */
         public java.lang.String getAbsentTimes() {
@@ -4483,7 +5344,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string absent_times = 3;</code>
+         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
          * @return The bytes for absentTimes.
          */
         public com.google.protobuf.ByteString
@@ -4500,7 +5361,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string absent_times = 3;</code>
+         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
          * @param value The absentTimes to set.
          * @return This builder for chaining.
          */
@@ -4515,7 +5376,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string absent_times = 3;</code>
+         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAbsentTimes() {
@@ -4525,7 +5386,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string absent_times = 3;</code>
+         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
          * @param value The bytes for absentTimes to set.
          * @return This builder for chaining.
          */
@@ -4598,139 +5459,139 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 id = 10;</code>
+       * <code>uint64 id = 10 [json_name = "id"];</code>
        * @return The id.
        */
       long getId();
 
       /**
-       * <code>string reward_address = 1;</code>
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
        * @return The rewardAddress.
        */
       java.lang.String getRewardAddress();
       /**
-       * <code>string reward_address = 1;</code>
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
        * @return The bytes for rewardAddress.
        */
       com.google.protobuf.ByteString
           getRewardAddressBytes();
 
       /**
-       * <code>string owner_address = 2;</code>
+       * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
        * @return The ownerAddress.
        */
       java.lang.String getOwnerAddress();
       /**
-       * <code>string owner_address = 2;</code>
+       * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
        * @return The bytes for ownerAddress.
        */
       com.google.protobuf.ByteString
           getOwnerAddressBytes();
 
       /**
-       * <code>string control_address = 3;</code>
+       * <code>string control_address = 3 [json_name = "controlAddress"];</code>
        * @return The controlAddress.
        */
       java.lang.String getControlAddress();
       /**
-       * <code>string control_address = 3;</code>
+       * <code>string control_address = 3 [json_name = "controlAddress"];</code>
        * @return The bytes for controlAddress.
        */
       com.google.protobuf.ByteString
           getControlAddressBytes();
 
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The totalBipStake.
        */
       java.lang.String getTotalBipStake();
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The bytes for totalBipStake.
        */
       com.google.protobuf.ByteString
           getTotalBipStakeBytes();
 
       /**
-       * <code>string public_key = 5;</code>
+       * <code>string public_key = 5 [json_name = "publicKey"];</code>
        * @return The publicKey.
        */
       java.lang.String getPublicKey();
       /**
-       * <code>string public_key = 5;</code>
+       * <code>string public_key = 5 [json_name = "publicKey"];</code>
        * @return The bytes for publicKey.
        */
       com.google.protobuf.ByteString
           getPublicKeyBytes();
 
       /**
-       * <code>uint64 commission = 6;</code>
+       * <code>uint64 commission = 6 [json_name = "commission"];</code>
        * @return The commission.
        */
       long getCommission();
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> 
           getStakesList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getStakes(int index);
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       int getStakesCount();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
           getStakesOrBuilderList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getStakesOrBuilder(
           int index);
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> 
           getUpdatesList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getUpdates(int index);
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       int getUpdatesCount();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
           getUpdatesOrBuilderList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getUpdatesOrBuilder(
           int index);
 
       /**
-       * <code>int64 status = 9;</code>
+       * <code>int64 status = 9 [json_name = "status"];</code>
        * @return The status.
        */
       long getStatus();
 
       /**
-       * <code>int64 jailed_until = 11;</code>
+       * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
        * @return The jailedUntil.
        */
       long getJailedUntil();
 
       /**
-       * <code>int64 last_edit_commission_height = 12;</code>
+       * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
        * @return The lastEditCommissionHeight.
        */
       long getLastEditCommissionHeight();
@@ -4904,42 +5765,42 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>string owner = 4;</code>
+         * <code>string owner = 4 [json_name = "owner"];</code>
          * @return The owner.
          */
         java.lang.String getOwner();
         /**
-         * <code>string owner = 4;</code>
+         * <code>string owner = 4 [json_name = "owner"];</code>
          * @return The bytes for owner.
          */
         com.google.protobuf.ByteString
             getOwnerBytes();
 
         /**
-         * <code>uint64 coin = 1;</code>
+         * <code>uint64 coin = 1 [json_name = "coin"];</code>
          * @return The coin.
          */
         long getCoin();
 
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The value.
          */
         java.lang.String getValue();
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         com.google.protobuf.ByteString
             getValueBytes();
 
         /**
-         * <code>string bip_value = 3;</code>
+         * <code>string bip_value = 3 [json_name = "bipValue"];</code>
          * @return The bipValue.
          */
         java.lang.String getBipValue();
         /**
-         * <code>string bip_value = 3;</code>
+         * <code>string bip_value = 3 [json_name = "bipValue"];</code>
          * @return The bytes for bipValue.
          */
         com.google.protobuf.ByteString
@@ -5051,7 +5912,7 @@ private static final long serialVersionUID = 0L;
         public static final int OWNER_FIELD_NUMBER = 4;
         private volatile java.lang.Object owner_;
         /**
-         * <code>string owner = 4;</code>
+         * <code>string owner = 4 [json_name = "owner"];</code>
          * @return The owner.
          */
         @java.lang.Override
@@ -5068,7 +5929,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner = 4;</code>
+         * <code>string owner = 4 [json_name = "owner"];</code>
          * @return The bytes for owner.
          */
         @java.lang.Override
@@ -5089,7 +5950,7 @@ private static final long serialVersionUID = 0L;
         public static final int COIN_FIELD_NUMBER = 1;
         private long coin_;
         /**
-         * <code>uint64 coin = 1;</code>
+         * <code>uint64 coin = 1 [json_name = "coin"];</code>
          * @return The coin.
          */
         @java.lang.Override
@@ -5100,7 +5961,7 @@ private static final long serialVersionUID = 0L;
         public static final int VALUE_FIELD_NUMBER = 2;
         private volatile java.lang.Object value_;
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The value.
          */
         @java.lang.Override
@@ -5117,7 +5978,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         @java.lang.Override
@@ -5138,7 +5999,7 @@ private static final long serialVersionUID = 0L;
         public static final int BIP_VALUE_FIELD_NUMBER = 3;
         private volatile java.lang.Object bipValue_;
         /**
-         * <code>string bip_value = 3;</code>
+         * <code>string bip_value = 3 [json_name = "bipValue"];</code>
          * @return The bipValue.
          */
         @java.lang.Override
@@ -5155,7 +6016,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string bip_value = 3;</code>
+         * <code>string bip_value = 3 [json_name = "bipValue"];</code>
          * @return The bytes for bipValue.
          */
         @java.lang.Override
@@ -5190,13 +6051,13 @@ private static final long serialVersionUID = 0L;
           if (coin_ != 0L) {
             output.writeUInt64(1, coin_);
           }
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
           }
-          if (!getBipValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bipValue_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bipValue_);
           }
-          if (!getOwnerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 4, owner_);
           }
           unknownFields.writeTo(output);
@@ -5212,13 +6073,13 @@ private static final long serialVersionUID = 0L;
             size += com.google.protobuf.CodedOutputStream
               .computeUInt64Size(1, coin_);
           }
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
           }
-          if (!getBipValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bipValue_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bipValue_);
           }
-          if (!getOwnerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, owner_);
           }
           size += unknownFields.getSerializedSize();
@@ -5529,7 +6390,7 @@ private static final long serialVersionUID = 0L;
 
           private java.lang.Object owner_ = "";
           /**
-           * <code>string owner = 4;</code>
+           * <code>string owner = 4 [json_name = "owner"];</code>
            * @return The owner.
            */
           public java.lang.String getOwner() {
@@ -5545,7 +6406,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string owner = 4;</code>
+           * <code>string owner = 4 [json_name = "owner"];</code>
            * @return The bytes for owner.
            */
           public com.google.protobuf.ByteString
@@ -5562,7 +6423,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string owner = 4;</code>
+           * <code>string owner = 4 [json_name = "owner"];</code>
            * @param value The owner to set.
            * @return This builder for chaining.
            */
@@ -5577,7 +6438,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string owner = 4;</code>
+           * <code>string owner = 4 [json_name = "owner"];</code>
            * @return This builder for chaining.
            */
           public Builder clearOwner() {
@@ -5587,7 +6448,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string owner = 4;</code>
+           * <code>string owner = 4 [json_name = "owner"];</code>
            * @param value The bytes for owner to set.
            * @return This builder for chaining.
            */
@@ -5605,7 +6466,7 @@ private static final long serialVersionUID = 0L;
 
           private long coin_ ;
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @return The coin.
            */
           @java.lang.Override
@@ -5613,7 +6474,7 @@ private static final long serialVersionUID = 0L;
             return coin_;
           }
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @param value The coin to set.
            * @return This builder for chaining.
            */
@@ -5624,7 +6485,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @return This builder for chaining.
            */
           public Builder clearCoin() {
@@ -5636,7 +6497,7 @@ private static final long serialVersionUID = 0L;
 
           private java.lang.Object value_ = "";
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return The value.
            */
           public java.lang.String getValue() {
@@ -5652,7 +6513,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return The bytes for value.
            */
           public com.google.protobuf.ByteString
@@ -5669,7 +6530,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @param value The value to set.
            * @return This builder for chaining.
            */
@@ -5684,7 +6545,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return This builder for chaining.
            */
           public Builder clearValue() {
@@ -5694,7 +6555,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @param value The bytes for value to set.
            * @return This builder for chaining.
            */
@@ -5712,7 +6573,7 @@ private static final long serialVersionUID = 0L;
 
           private java.lang.Object bipValue_ = "";
           /**
-           * <code>string bip_value = 3;</code>
+           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
            * @return The bipValue.
            */
           public java.lang.String getBipValue() {
@@ -5728,7 +6589,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string bip_value = 3;</code>
+           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
            * @return The bytes for bipValue.
            */
           public com.google.protobuf.ByteString
@@ -5745,7 +6606,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string bip_value = 3;</code>
+           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
            * @param value The bipValue to set.
            * @return This builder for chaining.
            */
@@ -5760,7 +6621,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string bip_value = 3;</code>
+           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
            * @return This builder for chaining.
            */
           public Builder clearBipValue() {
@@ -5770,7 +6631,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string bip_value = 3;</code>
+           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
            * @param value The bytes for bipValue to set.
            * @return This builder for chaining.
            */
@@ -5841,7 +6702,7 @@ private static final long serialVersionUID = 0L;
       public static final int ID_FIELD_NUMBER = 10;
       private long id_;
       /**
-       * <code>uint64 id = 10;</code>
+       * <code>uint64 id = 10 [json_name = "id"];</code>
        * @return The id.
        */
       @java.lang.Override
@@ -5852,7 +6713,7 @@ private static final long serialVersionUID = 0L;
       public static final int REWARD_ADDRESS_FIELD_NUMBER = 1;
       private volatile java.lang.Object rewardAddress_;
       /**
-       * <code>string reward_address = 1;</code>
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
        * @return The rewardAddress.
        */
       @java.lang.Override
@@ -5869,7 +6730,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string reward_address = 1;</code>
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
        * @return The bytes for rewardAddress.
        */
       @java.lang.Override
@@ -5890,7 +6751,7 @@ private static final long serialVersionUID = 0L;
       public static final int OWNER_ADDRESS_FIELD_NUMBER = 2;
       private volatile java.lang.Object ownerAddress_;
       /**
-       * <code>string owner_address = 2;</code>
+       * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
        * @return The ownerAddress.
        */
       @java.lang.Override
@@ -5907,7 +6768,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string owner_address = 2;</code>
+       * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
        * @return The bytes for ownerAddress.
        */
       @java.lang.Override
@@ -5928,7 +6789,7 @@ private static final long serialVersionUID = 0L;
       public static final int CONTROL_ADDRESS_FIELD_NUMBER = 3;
       private volatile java.lang.Object controlAddress_;
       /**
-       * <code>string control_address = 3;</code>
+       * <code>string control_address = 3 [json_name = "controlAddress"];</code>
        * @return The controlAddress.
        */
       @java.lang.Override
@@ -5945,7 +6806,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string control_address = 3;</code>
+       * <code>string control_address = 3 [json_name = "controlAddress"];</code>
        * @return The bytes for controlAddress.
        */
       @java.lang.Override
@@ -5966,7 +6827,7 @@ private static final long serialVersionUID = 0L;
       public static final int TOTAL_BIP_STAKE_FIELD_NUMBER = 4;
       private volatile java.lang.Object totalBipStake_;
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The totalBipStake.
        */
       @java.lang.Override
@@ -5983,7 +6844,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string total_bip_stake = 4;</code>
+       * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
        * @return The bytes for totalBipStake.
        */
       @java.lang.Override
@@ -6004,7 +6865,7 @@ private static final long serialVersionUID = 0L;
       public static final int PUBLIC_KEY_FIELD_NUMBER = 5;
       private volatile java.lang.Object publicKey_;
       /**
-       * <code>string public_key = 5;</code>
+       * <code>string public_key = 5 [json_name = "publicKey"];</code>
        * @return The publicKey.
        */
       @java.lang.Override
@@ -6021,7 +6882,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 5;</code>
+       * <code>string public_key = 5 [json_name = "publicKey"];</code>
        * @return The bytes for publicKey.
        */
       @java.lang.Override
@@ -6042,7 +6903,7 @@ private static final long serialVersionUID = 0L;
       public static final int COMMISSION_FIELD_NUMBER = 6;
       private long commission_;
       /**
-       * <code>uint64 commission = 6;</code>
+       * <code>uint64 commission = 6 [json_name = "commission"];</code>
        * @return The commission.
        */
       @java.lang.Override
@@ -6053,14 +6914,14 @@ private static final long serialVersionUID = 0L;
       public static final int STAKES_FIELD_NUMBER = 7;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> stakes_;
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       @java.lang.Override
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> getStakesList() {
         return stakes_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
@@ -6068,21 +6929,21 @@ private static final long serialVersionUID = 0L;
         return stakes_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       @java.lang.Override
       public int getStakesCount() {
         return stakes_.size();
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getStakes(int index) {
         return stakes_.get(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getStakesOrBuilder(
@@ -6093,14 +6954,14 @@ private static final long serialVersionUID = 0L;
       public static final int UPDATES_FIELD_NUMBER = 8;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> updates_;
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       @java.lang.Override
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> getUpdatesList() {
         return updates_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
@@ -6108,21 +6969,21 @@ private static final long serialVersionUID = 0L;
         return updates_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       @java.lang.Override
       public int getUpdatesCount() {
         return updates_.size();
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getUpdates(int index) {
         return updates_.get(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getUpdatesOrBuilder(
@@ -6133,7 +6994,7 @@ private static final long serialVersionUID = 0L;
       public static final int STATUS_FIELD_NUMBER = 9;
       private long status_;
       /**
-       * <code>int64 status = 9;</code>
+       * <code>int64 status = 9 [json_name = "status"];</code>
        * @return The status.
        */
       @java.lang.Override
@@ -6144,7 +7005,7 @@ private static final long serialVersionUID = 0L;
       public static final int JAILED_UNTIL_FIELD_NUMBER = 11;
       private long jailedUntil_;
       /**
-       * <code>int64 jailed_until = 11;</code>
+       * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
        * @return The jailedUntil.
        */
       @java.lang.Override
@@ -6155,7 +7016,7 @@ private static final long serialVersionUID = 0L;
       public static final int LAST_EDIT_COMMISSION_HEIGHT_FIELD_NUMBER = 12;
       private long lastEditCommissionHeight_;
       /**
-       * <code>int64 last_edit_commission_height = 12;</code>
+       * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
        * @return The lastEditCommissionHeight.
        */
       @java.lang.Override
@@ -6177,19 +7038,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getRewardAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rewardAddress_);
         }
-        if (!getOwnerAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ownerAddress_);
         }
-        if (!getControlAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlAddress_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, controlAddress_);
         }
-        if (!getTotalBipStakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalBipStake_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, totalBipStake_);
         }
-        if (!getPublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, publicKey_);
         }
         if (commission_ != 0L) {
@@ -6222,19 +7083,19 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getRewardAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rewardAddress_);
         }
-        if (!getOwnerAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ownerAddress_);
         }
-        if (!getControlAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlAddress_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, controlAddress_);
         }
-        if (!getTotalBipStakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalBipStake_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, totalBipStake_);
         }
-        if (!getPublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, publicKey_);
         }
         if (commission_ != 0L) {
@@ -6737,7 +7598,7 @@ private static final long serialVersionUID = 0L;
 
         private long id_ ;
         /**
-         * <code>uint64 id = 10;</code>
+         * <code>uint64 id = 10 [json_name = "id"];</code>
          * @return The id.
          */
         @java.lang.Override
@@ -6745,7 +7606,7 @@ private static final long serialVersionUID = 0L;
           return id_;
         }
         /**
-         * <code>uint64 id = 10;</code>
+         * <code>uint64 id = 10 [json_name = "id"];</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -6756,7 +7617,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 id = 10;</code>
+         * <code>uint64 id = 10 [json_name = "id"];</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
@@ -6768,7 +7629,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object rewardAddress_ = "";
         /**
-         * <code>string reward_address = 1;</code>
+         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
          * @return The rewardAddress.
          */
         public java.lang.String getRewardAddress() {
@@ -6784,7 +7645,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reward_address = 1;</code>
+         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
          * @return The bytes for rewardAddress.
          */
         public com.google.protobuf.ByteString
@@ -6801,7 +7662,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reward_address = 1;</code>
+         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
          * @param value The rewardAddress to set.
          * @return This builder for chaining.
          */
@@ -6816,7 +7677,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reward_address = 1;</code>
+         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRewardAddress() {
@@ -6826,7 +7687,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reward_address = 1;</code>
+         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
          * @param value The bytes for rewardAddress to set.
          * @return This builder for chaining.
          */
@@ -6844,7 +7705,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object ownerAddress_ = "";
         /**
-         * <code>string owner_address = 2;</code>
+         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
          * @return The ownerAddress.
          */
         public java.lang.String getOwnerAddress() {
@@ -6860,7 +7721,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner_address = 2;</code>
+         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
          * @return The bytes for ownerAddress.
          */
         public com.google.protobuf.ByteString
@@ -6877,7 +7738,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner_address = 2;</code>
+         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
          * @param value The ownerAddress to set.
          * @return This builder for chaining.
          */
@@ -6892,7 +7753,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner_address = 2;</code>
+         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOwnerAddress() {
@@ -6902,7 +7763,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner_address = 2;</code>
+         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
          * @param value The bytes for ownerAddress to set.
          * @return This builder for chaining.
          */
@@ -6920,7 +7781,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object controlAddress_ = "";
         /**
-         * <code>string control_address = 3;</code>
+         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
          * @return The controlAddress.
          */
         public java.lang.String getControlAddress() {
@@ -6936,7 +7797,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string control_address = 3;</code>
+         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
          * @return The bytes for controlAddress.
          */
         public com.google.protobuf.ByteString
@@ -6953,7 +7814,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string control_address = 3;</code>
+         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
          * @param value The controlAddress to set.
          * @return This builder for chaining.
          */
@@ -6968,7 +7829,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string control_address = 3;</code>
+         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
          * @return This builder for chaining.
          */
         public Builder clearControlAddress() {
@@ -6978,7 +7839,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string control_address = 3;</code>
+         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
          * @param value The bytes for controlAddress to set.
          * @return This builder for chaining.
          */
@@ -6996,7 +7857,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object totalBipStake_ = "";
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return The totalBipStake.
          */
         public java.lang.String getTotalBipStake() {
@@ -7012,7 +7873,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return The bytes for totalBipStake.
          */
         public com.google.protobuf.ByteString
@@ -7029,7 +7890,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @param value The totalBipStake to set.
          * @return This builder for chaining.
          */
@@ -7044,7 +7905,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @return This builder for chaining.
          */
         public Builder clearTotalBipStake() {
@@ -7054,7 +7915,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string total_bip_stake = 4;</code>
+         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
          * @param value The bytes for totalBipStake to set.
          * @return This builder for chaining.
          */
@@ -7072,7 +7933,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object publicKey_ = "";
         /**
-         * <code>string public_key = 5;</code>
+         * <code>string public_key = 5 [json_name = "publicKey"];</code>
          * @return The publicKey.
          */
         public java.lang.String getPublicKey() {
@@ -7088,7 +7949,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string public_key = 5;</code>
+         * <code>string public_key = 5 [json_name = "publicKey"];</code>
          * @return The bytes for publicKey.
          */
         public com.google.protobuf.ByteString
@@ -7105,7 +7966,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string public_key = 5;</code>
+         * <code>string public_key = 5 [json_name = "publicKey"];</code>
          * @param value The publicKey to set.
          * @return This builder for chaining.
          */
@@ -7120,7 +7981,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string public_key = 5;</code>
+         * <code>string public_key = 5 [json_name = "publicKey"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPublicKey() {
@@ -7130,7 +7991,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string public_key = 5;</code>
+         * <code>string public_key = 5 [json_name = "publicKey"];</code>
          * @param value The bytes for publicKey to set.
          * @return This builder for chaining.
          */
@@ -7148,7 +8009,7 @@ private static final long serialVersionUID = 0L;
 
         private long commission_ ;
         /**
-         * <code>uint64 commission = 6;</code>
+         * <code>uint64 commission = 6 [json_name = "commission"];</code>
          * @return The commission.
          */
         @java.lang.Override
@@ -7156,7 +8017,7 @@ private static final long serialVersionUID = 0L;
           return commission_;
         }
         /**
-         * <code>uint64 commission = 6;</code>
+         * <code>uint64 commission = 6 [json_name = "commission"];</code>
          * @param value The commission to set.
          * @return This builder for chaining.
          */
@@ -7167,7 +8028,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 commission = 6;</code>
+         * <code>uint64 commission = 6 [json_name = "commission"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCommission() {
@@ -7190,7 +8051,7 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> stakesBuilder_;
 
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> getStakesList() {
           if (stakesBuilder_ == null) {
@@ -7200,7 +8061,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public int getStakesCount() {
           if (stakesBuilder_ == null) {
@@ -7210,7 +8071,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getStakes(int index) {
           if (stakesBuilder_ == null) {
@@ -7220,7 +8081,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder setStakes(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
@@ -7237,7 +8098,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder setStakes(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7251,7 +8112,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder addStakes(counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
           if (stakesBuilder_ == null) {
@@ -7267,7 +8128,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder addStakes(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
@@ -7284,7 +8145,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder addStakes(
             counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7298,7 +8159,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder addStakes(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7312,7 +8173,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder addAllStakes(
             java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> values) {
@@ -7327,7 +8188,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder clearStakes() {
           if (stakesBuilder_ == null) {
@@ -7340,7 +8201,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public Builder removeStakes(int index) {
           if (stakesBuilder_ == null) {
@@ -7353,14 +8214,14 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder getStakesBuilder(
             int index) {
           return getStakesFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getStakesOrBuilder(
             int index) {
@@ -7370,7 +8231,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
              getStakesOrBuilderList() {
@@ -7381,14 +8242,14 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder addStakesBuilder() {
           return getStakesFieldBuilder().addBuilder(
               counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder addStakesBuilder(
             int index) {
@@ -7396,7 +8257,7 @@ private static final long serialVersionUID = 0L;
               index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder> 
              getStakesBuilderList() {
@@ -7430,7 +8291,7 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> updatesBuilder_;
 
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> getUpdatesList() {
           if (updatesBuilder_ == null) {
@@ -7440,7 +8301,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public int getUpdatesCount() {
           if (updatesBuilder_ == null) {
@@ -7450,7 +8311,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake getUpdates(int index) {
           if (updatesBuilder_ == null) {
@@ -7460,7 +8321,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder setUpdates(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
@@ -7477,7 +8338,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder setUpdates(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7491,7 +8352,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder addUpdates(counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
           if (updatesBuilder_ == null) {
@@ -7507,7 +8368,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder addUpdates(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake value) {
@@ -7524,7 +8385,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder addUpdates(
             counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7538,7 +8399,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder addUpdates(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder builderForValue) {
@@ -7552,7 +8413,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder addAllUpdates(
             java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake> values) {
@@ -7567,7 +8428,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder clearUpdates() {
           if (updatesBuilder_ == null) {
@@ -7580,7 +8441,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public Builder removeUpdates(int index) {
           if (updatesBuilder_ == null) {
@@ -7593,14 +8454,14 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder getUpdatesBuilder(
             int index) {
           return getUpdatesFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder getUpdatesOrBuilder(
             int index) {
@@ -7610,7 +8471,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate.StakeOrBuilder> 
              getUpdatesOrBuilderList() {
@@ -7621,14 +8482,14 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder addUpdatesBuilder() {
           return getUpdatesFieldBuilder().addBuilder(
               counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder addUpdatesBuilder(
             int index) {
@@ -7636,7 +8497,7 @@ private static final long serialVersionUID = 0L;
               index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.Builder> 
              getUpdatesBuilderList() {
@@ -7659,7 +8520,7 @@ private static final long serialVersionUID = 0L;
 
         private long status_ ;
         /**
-         * <code>int64 status = 9;</code>
+         * <code>int64 status = 9 [json_name = "status"];</code>
          * @return The status.
          */
         @java.lang.Override
@@ -7667,7 +8528,7 @@ private static final long serialVersionUID = 0L;
           return status_;
         }
         /**
-         * <code>int64 status = 9;</code>
+         * <code>int64 status = 9 [json_name = "status"];</code>
          * @param value The status to set.
          * @return This builder for chaining.
          */
@@ -7678,7 +8539,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 status = 9;</code>
+         * <code>int64 status = 9 [json_name = "status"];</code>
          * @return This builder for chaining.
          */
         public Builder clearStatus() {
@@ -7690,7 +8551,7 @@ private static final long serialVersionUID = 0L;
 
         private long jailedUntil_ ;
         /**
-         * <code>int64 jailed_until = 11;</code>
+         * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
          * @return The jailedUntil.
          */
         @java.lang.Override
@@ -7698,7 +8559,7 @@ private static final long serialVersionUID = 0L;
           return jailedUntil_;
         }
         /**
-         * <code>int64 jailed_until = 11;</code>
+         * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
          * @param value The jailedUntil to set.
          * @return This builder for chaining.
          */
@@ -7709,7 +8570,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 jailed_until = 11;</code>
+         * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
          * @return This builder for chaining.
          */
         public Builder clearJailedUntil() {
@@ -7721,7 +8582,7 @@ private static final long serialVersionUID = 0L;
 
         private long lastEditCommissionHeight_ ;
         /**
-         * <code>int64 last_edit_commission_height = 12;</code>
+         * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
          * @return The lastEditCommissionHeight.
          */
         @java.lang.Override
@@ -7729,7 +8590,7 @@ private static final long serialVersionUID = 0L;
           return lastEditCommissionHeight_;
         }
         /**
-         * <code>int64 last_edit_commission_height = 12;</code>
+         * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
          * @param value The lastEditCommissionHeight to set.
          * @return This builder for chaining.
          */
@@ -7740,7 +8601,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>int64 last_edit_commission_height = 12;</code>
+         * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
          * @return This builder for chaining.
          */
         public Builder clearLastEditCommissionHeight() {
@@ -7802,111 +8663,750 @@ private static final long serialVersionUID = 0L;
 
     }
 
-    public interface CoinOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.Coin)
+    public interface DeletedCandidateOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.DeletedCandidate)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 id = 9;</code>
+       * <code>uint64 id = 1 [json_name = "id"];</code>
        * @return The id.
        */
       long getId();
 
       /**
-       * <code>string name = 1;</code>
+       * <code>string public_key = 2 [json_name = "publicKey"];</code>
+       * @return The publicKey.
+       */
+      java.lang.String getPublicKey();
+      /**
+       * <code>string public_key = 2 [json_name = "publicKey"];</code>
+       * @return The bytes for publicKey.
+       */
+      com.google.protobuf.ByteString
+          getPublicKeyBytes();
+    }
+    /**
+     * Protobuf type {@code api_pb.GenesisResponse.AppState.DeletedCandidate}
+     */
+    public static final class DeletedCandidate extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.AppState.DeletedCandidate)
+        DeletedCandidateOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DeletedCandidate.newBuilder() to construct.
+      private DeletedCandidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DeletedCandidate() {
+        publicKey_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DeletedCandidate();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DeletedCandidate(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                id_ = input.readUInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                publicKey_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.class, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder.class);
+      }
+
+      public static final int ID_FIELD_NUMBER = 1;
+      private long id_;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+
+      public static final int PUBLIC_KEY_FIELD_NUMBER = 2;
+      private volatile java.lang.Object publicKey_;
+      /**
+       * <code>string public_key = 2 [json_name = "publicKey"];</code>
+       * @return The publicKey.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicKey() {
+        java.lang.Object ref = publicKey_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicKey_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string public_key = 2 [json_name = "publicKey"];</code>
+       * @return The bytes for publicKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicKeyBytes() {
+        java.lang.Object ref = publicKey_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (id_ != 0L) {
+          output.writeUInt64(1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, publicKey_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (id_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, id_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, publicKey_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate)) {
+          return super.equals(obj);
+        }
+        counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate other = (counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) obj;
+
+        if (getId()
+            != other.getId()) return false;
+        if (!getPublicKey()
+            .equals(other.getPublicKey())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
+        hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getPublicKey().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.AppState.DeletedCandidate}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.AppState.DeletedCandidate)
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.class, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder.class);
+        }
+
+        // Construct using counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          id_ = 0L;
+
+          publicKey_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_DeletedCandidate_descriptor;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDefaultInstanceForType() {
+          return counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate build() {
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate buildPartial() {
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate result = new counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate(this);
+          result.id_ = id_;
+          result.publicKey_ = publicKey_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) {
+            return mergeFrom((counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate other) {
+          if (other == counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.getDefaultInstance()) return this;
+          if (other.getId() != 0L) {
+            setId(other.getId());
+          }
+          if (!other.getPublicKey().isEmpty()) {
+            publicKey_ = other.publicKey_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long id_ ;
+        /**
+         * <code>uint64 id = 1 [json_name = "id"];</code>
+         * @return The id.
+         */
+        @java.lang.Override
+        public long getId() {
+          return id_;
+        }
+        /**
+         * <code>uint64 id = 1 [json_name = "id"];</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setId(long value) {
+          
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 id = 1 [json_name = "id"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearId() {
+          
+          id_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object publicKey_ = "";
+        /**
+         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * @return The publicKey.
+         */
+        public java.lang.String getPublicKey() {
+          java.lang.Object ref = publicKey_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            publicKey_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * @return The bytes for publicKey.
+         */
+        public com.google.protobuf.ByteString
+            getPublicKeyBytes() {
+          java.lang.Object ref = publicKey_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            publicKey_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * @param value The publicKey to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPublicKey(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          publicKey_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPublicKey() {
+          
+          publicKey_ = getDefaultInstance().getPublicKey();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * @param value The bytes for publicKey to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPublicKeyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          publicKey_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.AppState.DeletedCandidate)
+      }
+
+      // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.AppState.DeletedCandidate)
+      private static final counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate();
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DeletedCandidate>
+          PARSER = new com.google.protobuf.AbstractParser<DeletedCandidate>() {
+        @java.lang.Override
+        public DeletedCandidate parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeletedCandidate(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DeletedCandidate> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DeletedCandidate> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CoinOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.Coin)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 id = 9 [json_name = "id"];</code>
+       * @return The id.
+       */
+      long getId();
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       java.lang.String getName();
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>string symbol = 2;</code>
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
        * @return The symbol.
        */
       java.lang.String getSymbol();
       /**
-       * <code>string symbol = 2;</code>
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
        * @return The bytes for symbol.
        */
       com.google.protobuf.ByteString
           getSymbolBytes();
 
       /**
-       * <code>string volume = 3;</code>
+       * <code>string volume = 3 [json_name = "volume"];</code>
        * @return The volume.
        */
       java.lang.String getVolume();
       /**
-       * <code>string volume = 3;</code>
+       * <code>string volume = 3 [json_name = "volume"];</code>
        * @return The bytes for volume.
        */
       com.google.protobuf.ByteString
           getVolumeBytes();
 
       /**
-       * <code>uint64 crr = 4;</code>
+       * <code>uint64 crr = 4 [json_name = "crr"];</code>
        * @return The crr.
        */
       long getCrr();
 
       /**
-       * <code>string reserve = 5;</code>
+       * <code>string reserve = 5 [json_name = "reserve"];</code>
        * @return The reserve.
        */
       java.lang.String getReserve();
       /**
-       * <code>string reserve = 5;</code>
+       * <code>string reserve = 5 [json_name = "reserve"];</code>
        * @return The bytes for reserve.
        */
       com.google.protobuf.ByteString
           getReserveBytes();
 
       /**
-       * <code>string max_supply = 6;</code>
+       * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
        * @return The maxSupply.
        */
       java.lang.String getMaxSupply();
       /**
-       * <code>string max_supply = 6;</code>
+       * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
        * @return The bytes for maxSupply.
        */
       com.google.protobuf.ByteString
           getMaxSupplyBytes();
 
       /**
-       * <code>uint64 version = 7;</code>
+       * <code>uint64 version = 7 [json_name = "version"];</code>
        * @return The version.
        */
       long getVersion();
 
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        * @return Whether the ownerAddress field is set.
        */
       boolean hasOwnerAddress();
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        * @return The ownerAddress.
        */
       com.google.protobuf.StringValue getOwnerAddress();
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        */
       com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder();
 
       /**
-       * <code>bool mintable = 10;</code>
+       * <code>bool mintable = 10 [json_name = "mintable"];</code>
        * @return The mintable.
        */
       boolean getMintable();
 
       /**
-       * <code>bool burnable = 11;</code>
+       * <code>bool burnable = 11 [json_name = "burnable"];</code>
        * @return The burnable.
        */
       boolean getBurnable();
@@ -8064,7 +9564,7 @@ private static final long serialVersionUID = 0L;
       public static final int ID_FIELD_NUMBER = 9;
       private long id_;
       /**
-       * <code>uint64 id = 9;</code>
+       * <code>uint64 id = 9 [json_name = "id"];</code>
        * @return The id.
        */
       @java.lang.Override
@@ -8075,7 +9575,7 @@ private static final long serialVersionUID = 0L;
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
       @java.lang.Override
@@ -8092,7 +9592,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -8113,7 +9613,7 @@ private static final long serialVersionUID = 0L;
       public static final int SYMBOL_FIELD_NUMBER = 2;
       private volatile java.lang.Object symbol_;
       /**
-       * <code>string symbol = 2;</code>
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
        * @return The symbol.
        */
       @java.lang.Override
@@ -8130,7 +9630,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string symbol = 2;</code>
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
        * @return The bytes for symbol.
        */
       @java.lang.Override
@@ -8151,7 +9651,7 @@ private static final long serialVersionUID = 0L;
       public static final int VOLUME_FIELD_NUMBER = 3;
       private volatile java.lang.Object volume_;
       /**
-       * <code>string volume = 3;</code>
+       * <code>string volume = 3 [json_name = "volume"];</code>
        * @return The volume.
        */
       @java.lang.Override
@@ -8168,7 +9668,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string volume = 3;</code>
+       * <code>string volume = 3 [json_name = "volume"];</code>
        * @return The bytes for volume.
        */
       @java.lang.Override
@@ -8189,7 +9689,7 @@ private static final long serialVersionUID = 0L;
       public static final int CRR_FIELD_NUMBER = 4;
       private long crr_;
       /**
-       * <code>uint64 crr = 4;</code>
+       * <code>uint64 crr = 4 [json_name = "crr"];</code>
        * @return The crr.
        */
       @java.lang.Override
@@ -8200,7 +9700,7 @@ private static final long serialVersionUID = 0L;
       public static final int RESERVE_FIELD_NUMBER = 5;
       private volatile java.lang.Object reserve_;
       /**
-       * <code>string reserve = 5;</code>
+       * <code>string reserve = 5 [json_name = "reserve"];</code>
        * @return The reserve.
        */
       @java.lang.Override
@@ -8217,7 +9717,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string reserve = 5;</code>
+       * <code>string reserve = 5 [json_name = "reserve"];</code>
        * @return The bytes for reserve.
        */
       @java.lang.Override
@@ -8238,7 +9738,7 @@ private static final long serialVersionUID = 0L;
       public static final int MAX_SUPPLY_FIELD_NUMBER = 6;
       private volatile java.lang.Object maxSupply_;
       /**
-       * <code>string max_supply = 6;</code>
+       * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
        * @return The maxSupply.
        */
       @java.lang.Override
@@ -8255,7 +9755,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string max_supply = 6;</code>
+       * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
        * @return The bytes for maxSupply.
        */
       @java.lang.Override
@@ -8276,7 +9776,7 @@ private static final long serialVersionUID = 0L;
       public static final int VERSION_FIELD_NUMBER = 7;
       private long version_;
       /**
-       * <code>uint64 version = 7;</code>
+       * <code>uint64 version = 7 [json_name = "version"];</code>
        * @return The version.
        */
       @java.lang.Override
@@ -8287,7 +9787,7 @@ private static final long serialVersionUID = 0L;
       public static final int OWNER_ADDRESS_FIELD_NUMBER = 8;
       private com.google.protobuf.StringValue ownerAddress_;
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        * @return Whether the ownerAddress field is set.
        */
       @java.lang.Override
@@ -8295,7 +9795,7 @@ private static final long serialVersionUID = 0L;
         return ownerAddress_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        * @return The ownerAddress.
        */
       @java.lang.Override
@@ -8303,7 +9803,7 @@ private static final long serialVersionUID = 0L;
         return ownerAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ownerAddress_;
       }
       /**
-       * <code>.google.protobuf.StringValue owner_address = 8;</code>
+       * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder() {
@@ -8313,7 +9813,7 @@ private static final long serialVersionUID = 0L;
       public static final int MINTABLE_FIELD_NUMBER = 10;
       private boolean mintable_;
       /**
-       * <code>bool mintable = 10;</code>
+       * <code>bool mintable = 10 [json_name = "mintable"];</code>
        * @return The mintable.
        */
       @java.lang.Override
@@ -8324,7 +9824,7 @@ private static final long serialVersionUID = 0L;
       public static final int BURNABLE_FIELD_NUMBER = 11;
       private boolean burnable_;
       /**
-       * <code>bool burnable = 11;</code>
+       * <code>bool burnable = 11 [json_name = "burnable"];</code>
        * @return The burnable.
        */
       @java.lang.Override
@@ -8346,22 +9846,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
-        if (!getSymbolBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
         }
-        if (!getVolumeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, volume_);
         }
         if (crr_ != 0L) {
           output.writeUInt64(4, crr_);
         }
-        if (!getReserveBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reserve_);
         }
-        if (!getMaxSupplyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, maxSupply_);
         }
         if (version_ != 0L) {
@@ -8388,23 +9888,23 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
-        if (!getSymbolBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
         }
-        if (!getVolumeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, volume_);
         }
         if (crr_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(4, crr_);
         }
-        if (!getReserveBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reserve_);
         }
-        if (!getMaxSupplyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, maxSupply_);
         }
         if (version_ != 0L) {
@@ -8824,7 +10324,7 @@ private static final long serialVersionUID = 0L;
 
         private long id_ ;
         /**
-         * <code>uint64 id = 9;</code>
+         * <code>uint64 id = 9 [json_name = "id"];</code>
          * @return The id.
          */
         @java.lang.Override
@@ -8832,7 +10332,7 @@ private static final long serialVersionUID = 0L;
           return id_;
         }
         /**
-         * <code>uint64 id = 9;</code>
+         * <code>uint64 id = 9 [json_name = "id"];</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -8843,7 +10343,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 id = 9;</code>
+         * <code>uint64 id = 9 [json_name = "id"];</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
@@ -8855,7 +10355,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object name_ = "";
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The name.
          */
         public java.lang.String getName() {
@@ -8871,7 +10371,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
@@ -8888,7 +10388,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The name to set.
          * @return This builder for chaining.
          */
@@ -8903,7 +10403,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @return This builder for chaining.
          */
         public Builder clearName() {
@@ -8913,7 +10413,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string name = 1;</code>
+         * <code>string name = 1 [json_name = "name"];</code>
          * @param value The bytes for name to set.
          * @return This builder for chaining.
          */
@@ -8931,7 +10431,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object symbol_ = "";
         /**
-         * <code>string symbol = 2;</code>
+         * <code>string symbol = 2 [json_name = "symbol"];</code>
          * @return The symbol.
          */
         public java.lang.String getSymbol() {
@@ -8947,7 +10447,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string symbol = 2;</code>
+         * <code>string symbol = 2 [json_name = "symbol"];</code>
          * @return The bytes for symbol.
          */
         public com.google.protobuf.ByteString
@@ -8964,7 +10464,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string symbol = 2;</code>
+         * <code>string symbol = 2 [json_name = "symbol"];</code>
          * @param value The symbol to set.
          * @return This builder for chaining.
          */
@@ -8979,7 +10479,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string symbol = 2;</code>
+         * <code>string symbol = 2 [json_name = "symbol"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSymbol() {
@@ -8989,7 +10489,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string symbol = 2;</code>
+         * <code>string symbol = 2 [json_name = "symbol"];</code>
          * @param value The bytes for symbol to set.
          * @return This builder for chaining.
          */
@@ -9007,7 +10507,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object volume_ = "";
         /**
-         * <code>string volume = 3;</code>
+         * <code>string volume = 3 [json_name = "volume"];</code>
          * @return The volume.
          */
         public java.lang.String getVolume() {
@@ -9023,7 +10523,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string volume = 3;</code>
+         * <code>string volume = 3 [json_name = "volume"];</code>
          * @return The bytes for volume.
          */
         public com.google.protobuf.ByteString
@@ -9040,7 +10540,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string volume = 3;</code>
+         * <code>string volume = 3 [json_name = "volume"];</code>
          * @param value The volume to set.
          * @return This builder for chaining.
          */
@@ -9055,7 +10555,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string volume = 3;</code>
+         * <code>string volume = 3 [json_name = "volume"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVolume() {
@@ -9065,7 +10565,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string volume = 3;</code>
+         * <code>string volume = 3 [json_name = "volume"];</code>
          * @param value The bytes for volume to set.
          * @return This builder for chaining.
          */
@@ -9083,7 +10583,7 @@ private static final long serialVersionUID = 0L;
 
         private long crr_ ;
         /**
-         * <code>uint64 crr = 4;</code>
+         * <code>uint64 crr = 4 [json_name = "crr"];</code>
          * @return The crr.
          */
         @java.lang.Override
@@ -9091,7 +10591,7 @@ private static final long serialVersionUID = 0L;
           return crr_;
         }
         /**
-         * <code>uint64 crr = 4;</code>
+         * <code>uint64 crr = 4 [json_name = "crr"];</code>
          * @param value The crr to set.
          * @return This builder for chaining.
          */
@@ -9102,7 +10602,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 crr = 4;</code>
+         * <code>uint64 crr = 4 [json_name = "crr"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCrr() {
@@ -9114,7 +10614,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object reserve_ = "";
         /**
-         * <code>string reserve = 5;</code>
+         * <code>string reserve = 5 [json_name = "reserve"];</code>
          * @return The reserve.
          */
         public java.lang.String getReserve() {
@@ -9130,7 +10630,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve = 5;</code>
+         * <code>string reserve = 5 [json_name = "reserve"];</code>
          * @return The bytes for reserve.
          */
         public com.google.protobuf.ByteString
@@ -9147,7 +10647,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve = 5;</code>
+         * <code>string reserve = 5 [json_name = "reserve"];</code>
          * @param value The reserve to set.
          * @return This builder for chaining.
          */
@@ -9162,7 +10662,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve = 5;</code>
+         * <code>string reserve = 5 [json_name = "reserve"];</code>
          * @return This builder for chaining.
          */
         public Builder clearReserve() {
@@ -9172,7 +10672,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve = 5;</code>
+         * <code>string reserve = 5 [json_name = "reserve"];</code>
          * @param value The bytes for reserve to set.
          * @return This builder for chaining.
          */
@@ -9190,7 +10690,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object maxSupply_ = "";
         /**
-         * <code>string max_supply = 6;</code>
+         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
          * @return The maxSupply.
          */
         public java.lang.String getMaxSupply() {
@@ -9206,7 +10706,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string max_supply = 6;</code>
+         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
          * @return The bytes for maxSupply.
          */
         public com.google.protobuf.ByteString
@@ -9223,7 +10723,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string max_supply = 6;</code>
+         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
          * @param value The maxSupply to set.
          * @return This builder for chaining.
          */
@@ -9238,7 +10738,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string max_supply = 6;</code>
+         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMaxSupply() {
@@ -9248,7 +10748,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string max_supply = 6;</code>
+         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
          * @param value The bytes for maxSupply to set.
          * @return This builder for chaining.
          */
@@ -9266,7 +10766,7 @@ private static final long serialVersionUID = 0L;
 
         private long version_ ;
         /**
-         * <code>uint64 version = 7;</code>
+         * <code>uint64 version = 7 [json_name = "version"];</code>
          * @return The version.
          */
         @java.lang.Override
@@ -9274,7 +10774,7 @@ private static final long serialVersionUID = 0L;
           return version_;
         }
         /**
-         * <code>uint64 version = 7;</code>
+         * <code>uint64 version = 7 [json_name = "version"];</code>
          * @param value The version to set.
          * @return This builder for chaining.
          */
@@ -9285,7 +10785,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 version = 7;</code>
+         * <code>uint64 version = 7 [json_name = "version"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVersion() {
@@ -9299,14 +10799,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ownerAddressBuilder_;
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          * @return Whether the ownerAddress field is set.
          */
         public boolean hasOwnerAddress() {
           return ownerAddressBuilder_ != null || ownerAddress_ != null;
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          * @return The ownerAddress.
          */
         public com.google.protobuf.StringValue getOwnerAddress() {
@@ -9317,7 +10817,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public Builder setOwnerAddress(com.google.protobuf.StringValue value) {
           if (ownerAddressBuilder_ == null) {
@@ -9333,7 +10833,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public Builder setOwnerAddress(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -9347,7 +10847,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public Builder mergeOwnerAddress(com.google.protobuf.StringValue value) {
           if (ownerAddressBuilder_ == null) {
@@ -9365,7 +10865,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public Builder clearOwnerAddress() {
           if (ownerAddressBuilder_ == null) {
@@ -9379,7 +10879,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public com.google.protobuf.StringValue.Builder getOwnerAddressBuilder() {
           
@@ -9387,7 +10887,7 @@ private static final long serialVersionUID = 0L;
           return getOwnerAddressFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder() {
           if (ownerAddressBuilder_ != null) {
@@ -9398,7 +10898,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8;</code>
+         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -9416,7 +10916,7 @@ private static final long serialVersionUID = 0L;
 
         private boolean mintable_ ;
         /**
-         * <code>bool mintable = 10;</code>
+         * <code>bool mintable = 10 [json_name = "mintable"];</code>
          * @return The mintable.
          */
         @java.lang.Override
@@ -9424,7 +10924,7 @@ private static final long serialVersionUID = 0L;
           return mintable_;
         }
         /**
-         * <code>bool mintable = 10;</code>
+         * <code>bool mintable = 10 [json_name = "mintable"];</code>
          * @param value The mintable to set.
          * @return This builder for chaining.
          */
@@ -9435,7 +10935,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>bool mintable = 10;</code>
+         * <code>bool mintable = 10 [json_name = "mintable"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMintable() {
@@ -9447,7 +10947,7 @@ private static final long serialVersionUID = 0L;
 
         private boolean burnable_ ;
         /**
-         * <code>bool burnable = 11;</code>
+         * <code>bool burnable = 11 [json_name = "burnable"];</code>
          * @return The burnable.
          */
         @java.lang.Override
@@ -9455,7 +10955,7 @@ private static final long serialVersionUID = 0L;
           return burnable_;
         }
         /**
-         * <code>bool burnable = 11;</code>
+         * <code>bool burnable = 11 [json_name = "burnable"];</code>
          * @param value The burnable to set.
          * @return This builder for chaining.
          */
@@ -9466,7 +10966,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>bool burnable = 11;</code>
+         * <code>bool burnable = 11 [json_name = "burnable"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBurnable() {
@@ -9533,61 +11033,76 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 height = 5;</code>
+       * <code>uint64 height = 5 [json_name = "height"];</code>
        * @return The height.
        */
       long getHeight();
 
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The address.
        */
       java.lang.String getAddress();
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The bytes for address.
        */
       com.google.protobuf.ByteString
           getAddressBytes();
 
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return Whether the candidateKey field is set.
        */
       boolean hasCandidateKey();
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The candidateKey.
        */
       com.google.protobuf.StringValue getCandidateKey();
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        */
       com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder();
 
       /**
-       * <code>uint64 candidate_id = 6;</code>
+       * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
        * @return The candidateId.
        */
       long getCandidateId();
 
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       long getCoin();
 
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The value.
        */
       java.lang.String getValue();
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       com.google.protobuf.ByteString
           getValueBytes();
+
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       * @return Whether the toCandidateKey field is set.
+       */
+      boolean hasToCandidateKey();
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       * @return The toCandidateKey.
+       */
+      com.google.protobuf.StringValue getToCandidateKey();
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getToCandidateKeyOrBuilder();
     }
     /**
      * Protobuf type {@code api_pb.GenesisResponse.AppState.FrozenFund}
@@ -9676,6 +11191,19 @@ private static final long serialVersionUID = 0L;
                 candidateId_ = input.readUInt64();
                 break;
               }
+              case 58: {
+                com.google.protobuf.StringValue.Builder subBuilder = null;
+                if (toCandidateKey_ != null) {
+                  subBuilder = toCandidateKey_.toBuilder();
+                }
+                toCandidateKey_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(toCandidateKey_);
+                  toCandidateKey_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -9711,7 +11239,7 @@ private static final long serialVersionUID = 0L;
       public static final int HEIGHT_FIELD_NUMBER = 5;
       private long height_;
       /**
-       * <code>uint64 height = 5;</code>
+       * <code>uint64 height = 5 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -9722,7 +11250,7 @@ private static final long serialVersionUID = 0L;
       public static final int ADDRESS_FIELD_NUMBER = 1;
       private volatile java.lang.Object address_;
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The address.
        */
       @java.lang.Override
@@ -9739,7 +11267,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The bytes for address.
        */
       @java.lang.Override
@@ -9760,7 +11288,7 @@ private static final long serialVersionUID = 0L;
       public static final int CANDIDATE_KEY_FIELD_NUMBER = 2;
       private com.google.protobuf.StringValue candidateKey_;
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return Whether the candidateKey field is set.
        */
       @java.lang.Override
@@ -9768,7 +11296,7 @@ private static final long serialVersionUID = 0L;
         return candidateKey_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The candidateKey.
        */
       @java.lang.Override
@@ -9776,7 +11304,7 @@ private static final long serialVersionUID = 0L;
         return candidateKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : candidateKey_;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+       * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder() {
@@ -9786,7 +11314,7 @@ private static final long serialVersionUID = 0L;
       public static final int CANDIDATE_ID_FIELD_NUMBER = 6;
       private long candidateId_;
       /**
-       * <code>uint64 candidate_id = 6;</code>
+       * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
        * @return The candidateId.
        */
       @java.lang.Override
@@ -9797,7 +11325,7 @@ private static final long serialVersionUID = 0L;
       public static final int COIN_FIELD_NUMBER = 3;
       private long coin_;
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       @java.lang.Override
@@ -9808,7 +11336,7 @@ private static final long serialVersionUID = 0L;
       public static final int VALUE_FIELD_NUMBER = 4;
       private volatile java.lang.Object value_;
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The value.
        */
       @java.lang.Override
@@ -9825,7 +11353,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       @java.lang.Override
@@ -9843,6 +11371,32 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      public static final int TO_CANDIDATE_KEY_FIELD_NUMBER = 7;
+      private com.google.protobuf.StringValue toCandidateKey_;
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       * @return Whether the toCandidateKey field is set.
+       */
+      @java.lang.Override
+      public boolean hasToCandidateKey() {
+        return toCandidateKey_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       * @return The toCandidateKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getToCandidateKey() {
+        return toCandidateKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : toCandidateKey_;
+      }
+      /**
+       * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getToCandidateKeyOrBuilder() {
+        return getToCandidateKey();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9857,7 +11411,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
         }
         if (candidateKey_ != null) {
@@ -9866,7 +11420,7 @@ private static final long serialVersionUID = 0L;
         if (coin_ != 0L) {
           output.writeUInt64(3, coin_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
         }
         if (height_ != 0L) {
@@ -9874,6 +11428,9 @@ private static final long serialVersionUID = 0L;
         }
         if (candidateId_ != 0L) {
           output.writeUInt64(6, candidateId_);
+        }
+        if (toCandidateKey_ != null) {
+          output.writeMessage(7, getToCandidateKey());
         }
         unknownFields.writeTo(output);
       }
@@ -9884,7 +11441,7 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
         }
         if (candidateKey_ != null) {
@@ -9895,7 +11452,7 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(3, coin_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
         }
         if (height_ != 0L) {
@@ -9905,6 +11462,10 @@ private static final long serialVersionUID = 0L;
         if (candidateId_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(6, candidateId_);
+        }
+        if (toCandidateKey_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getToCandidateKey());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -9936,6 +11497,11 @@ private static final long serialVersionUID = 0L;
             != other.getCoin()) return false;
         if (!getValue()
             .equals(other.getValue())) return false;
+        if (hasToCandidateKey() != other.hasToCandidateKey()) return false;
+        if (hasToCandidateKey()) {
+          if (!getToCandidateKey()
+              .equals(other.getToCandidateKey())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -9964,6 +11530,10 @@ private static final long serialVersionUID = 0L;
             getCoin());
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
+        if (hasToCandidateKey()) {
+          hash = (37 * hash) + TO_CANDIDATE_KEY_FIELD_NUMBER;
+          hash = (53 * hash) + getToCandidateKey().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -10113,6 +11683,12 @@ private static final long serialVersionUID = 0L;
 
           value_ = "";
 
+          if (toCandidateKeyBuilder_ == null) {
+            toCandidateKey_ = null;
+          } else {
+            toCandidateKey_ = null;
+            toCandidateKeyBuilder_ = null;
+          }
           return this;
         }
 
@@ -10149,6 +11725,11 @@ private static final long serialVersionUID = 0L;
           result.candidateId_ = candidateId_;
           result.coin_ = coin_;
           result.value_ = value_;
+          if (toCandidateKeyBuilder_ == null) {
+            result.toCandidateKey_ = toCandidateKey_;
+          } else {
+            result.toCandidateKey_ = toCandidateKeyBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -10217,6 +11798,9 @@ private static final long serialVersionUID = 0L;
             value_ = other.value_;
             onChanged();
           }
+          if (other.hasToCandidateKey()) {
+            mergeToCandidateKey(other.getToCandidateKey());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -10248,7 +11832,7 @@ private static final long serialVersionUID = 0L;
 
         private long height_ ;
         /**
-         * <code>uint64 height = 5;</code>
+         * <code>uint64 height = 5 [json_name = "height"];</code>
          * @return The height.
          */
         @java.lang.Override
@@ -10256,7 +11840,7 @@ private static final long serialVersionUID = 0L;
           return height_;
         }
         /**
-         * <code>uint64 height = 5;</code>
+         * <code>uint64 height = 5 [json_name = "height"];</code>
          * @param value The height to set.
          * @return This builder for chaining.
          */
@@ -10267,7 +11851,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 height = 5;</code>
+         * <code>uint64 height = 5 [json_name = "height"];</code>
          * @return This builder for chaining.
          */
         public Builder clearHeight() {
@@ -10279,7 +11863,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object address_ = "";
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return The address.
          */
         public java.lang.String getAddress() {
@@ -10295,7 +11879,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return The bytes for address.
          */
         public com.google.protobuf.ByteString
@@ -10312,7 +11896,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @param value The address to set.
          * @return This builder for chaining.
          */
@@ -10327,7 +11911,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAddress() {
@@ -10337,7 +11921,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @param value The bytes for address to set.
          * @return This builder for chaining.
          */
@@ -10357,14 +11941,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> candidateKeyBuilder_;
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          * @return Whether the candidateKey field is set.
          */
         public boolean hasCandidateKey() {
           return candidateKeyBuilder_ != null || candidateKey_ != null;
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          * @return The candidateKey.
          */
         public com.google.protobuf.StringValue getCandidateKey() {
@@ -10375,7 +11959,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public Builder setCandidateKey(com.google.protobuf.StringValue value) {
           if (candidateKeyBuilder_ == null) {
@@ -10391,7 +11975,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public Builder setCandidateKey(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -10405,7 +11989,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public Builder mergeCandidateKey(com.google.protobuf.StringValue value) {
           if (candidateKeyBuilder_ == null) {
@@ -10423,7 +12007,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public Builder clearCandidateKey() {
           if (candidateKeyBuilder_ == null) {
@@ -10437,7 +12021,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public com.google.protobuf.StringValue.Builder getCandidateKeyBuilder() {
           
@@ -10445,7 +12029,7 @@ private static final long serialVersionUID = 0L;
           return getCandidateKeyFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder() {
           if (candidateKeyBuilder_ != null) {
@@ -10456,7 +12040,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -10474,7 +12058,7 @@ private static final long serialVersionUID = 0L;
 
         private long candidateId_ ;
         /**
-         * <code>uint64 candidate_id = 6;</code>
+         * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
          * @return The candidateId.
          */
         @java.lang.Override
@@ -10482,7 +12066,7 @@ private static final long serialVersionUID = 0L;
           return candidateId_;
         }
         /**
-         * <code>uint64 candidate_id = 6;</code>
+         * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
          * @param value The candidateId to set.
          * @return This builder for chaining.
          */
@@ -10493,7 +12077,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 candidate_id = 6;</code>
+         * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCandidateId() {
@@ -10505,7 +12089,7 @@ private static final long serialVersionUID = 0L;
 
         private long coin_ ;
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return The coin.
          */
         @java.lang.Override
@@ -10513,7 +12097,7 @@ private static final long serialVersionUID = 0L;
           return coin_;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @param value The coin to set.
          * @return This builder for chaining.
          */
@@ -10524,7 +12108,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCoin() {
@@ -10536,7 +12120,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object value_ = "";
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return The value.
          */
         public java.lang.String getValue() {
@@ -10552,7 +12136,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         public com.google.protobuf.ByteString
@@ -10569,7 +12153,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @param value The value to set.
          * @return This builder for chaining.
          */
@@ -10584,7 +12168,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return This builder for chaining.
          */
         public Builder clearValue() {
@@ -10594,7 +12178,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @param value The bytes for value to set.
          * @return This builder for chaining.
          */
@@ -10608,6 +12192,125 @@ private static final long serialVersionUID = 0L;
           value_ = value;
           onChanged();
           return this;
+        }
+
+        private com.google.protobuf.StringValue toCandidateKey_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> toCandidateKeyBuilder_;
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         * @return Whether the toCandidateKey field is set.
+         */
+        public boolean hasToCandidateKey() {
+          return toCandidateKeyBuilder_ != null || toCandidateKey_ != null;
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         * @return The toCandidateKey.
+         */
+        public com.google.protobuf.StringValue getToCandidateKey() {
+          if (toCandidateKeyBuilder_ == null) {
+            return toCandidateKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : toCandidateKey_;
+          } else {
+            return toCandidateKeyBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public Builder setToCandidateKey(com.google.protobuf.StringValue value) {
+          if (toCandidateKeyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            toCandidateKey_ = value;
+            onChanged();
+          } else {
+            toCandidateKeyBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public Builder setToCandidateKey(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (toCandidateKeyBuilder_ == null) {
+            toCandidateKey_ = builderForValue.build();
+            onChanged();
+          } else {
+            toCandidateKeyBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public Builder mergeToCandidateKey(com.google.protobuf.StringValue value) {
+          if (toCandidateKeyBuilder_ == null) {
+            if (toCandidateKey_ != null) {
+              toCandidateKey_ =
+                com.google.protobuf.StringValue.newBuilder(toCandidateKey_).mergeFrom(value).buildPartial();
+            } else {
+              toCandidateKey_ = value;
+            }
+            onChanged();
+          } else {
+            toCandidateKeyBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public Builder clearToCandidateKey() {
+          if (toCandidateKeyBuilder_ == null) {
+            toCandidateKey_ = null;
+            onChanged();
+          } else {
+            toCandidateKey_ = null;
+            toCandidateKeyBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getToCandidateKeyBuilder() {
+          
+          onChanged();
+          return getToCandidateKeyFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getToCandidateKeyOrBuilder() {
+          if (toCandidateKeyBuilder_ != null) {
+            return toCandidateKeyBuilder_.getMessageOrBuilder();
+          } else {
+            return toCandidateKey_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : toCandidateKey_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getToCandidateKeyFieldBuilder() {
+          if (toCandidateKeyBuilder_ == null) {
+            toCandidateKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getToCandidateKey(),
+                    getParentForChildren(),
+                    isClean());
+            toCandidateKey_ = null;
+          }
+          return toCandidateKeyBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -10667,36 +12370,36 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 candidate_id = 1;</code>
+       * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
        * @return The candidateId.
        */
       long getCandidateId();
 
       /**
-       * <code>string owner = 2;</code>
+       * <code>string owner = 2 [json_name = "owner"];</code>
        * @return The owner.
        */
       java.lang.String getOwner();
       /**
-       * <code>string owner = 2;</code>
+       * <code>string owner = 2 [json_name = "owner"];</code>
        * @return The bytes for owner.
        */
       com.google.protobuf.ByteString
           getOwnerBytes();
 
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       long getCoin();
 
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The value.
        */
       java.lang.String getValue();
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       com.google.protobuf.ByteString
@@ -10806,7 +12509,7 @@ private static final long serialVersionUID = 0L;
       public static final int CANDIDATE_ID_FIELD_NUMBER = 1;
       private long candidateId_;
       /**
-       * <code>uint64 candidate_id = 1;</code>
+       * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
        * @return The candidateId.
        */
       @java.lang.Override
@@ -10817,7 +12520,7 @@ private static final long serialVersionUID = 0L;
       public static final int OWNER_FIELD_NUMBER = 2;
       private volatile java.lang.Object owner_;
       /**
-       * <code>string owner = 2;</code>
+       * <code>string owner = 2 [json_name = "owner"];</code>
        * @return The owner.
        */
       @java.lang.Override
@@ -10834,7 +12537,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string owner = 2;</code>
+       * <code>string owner = 2 [json_name = "owner"];</code>
        * @return The bytes for owner.
        */
       @java.lang.Override
@@ -10855,7 +12558,7 @@ private static final long serialVersionUID = 0L;
       public static final int COIN_FIELD_NUMBER = 3;
       private long coin_;
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       @java.lang.Override
@@ -10866,7 +12569,7 @@ private static final long serialVersionUID = 0L;
       public static final int VALUE_FIELD_NUMBER = 4;
       private volatile java.lang.Object value_;
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The value.
        */
       @java.lang.Override
@@ -10883,7 +12586,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 4;</code>
+       * <code>string value = 4 [json_name = "value"];</code>
        * @return The bytes for value.
        */
       @java.lang.Override
@@ -10918,13 +12621,13 @@ private static final long serialVersionUID = 0L;
         if (candidateId_ != 0L) {
           output.writeUInt64(1, candidateId_);
         }
-        if (!getOwnerBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
         }
         if (coin_ != 0L) {
           output.writeUInt64(3, coin_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
         }
         unknownFields.writeTo(output);
@@ -10940,14 +12643,14 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(1, candidateId_);
         }
-        if (!getOwnerBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
         }
         if (coin_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(3, coin_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
         }
         size += unknownFields.getSerializedSize();
@@ -11258,7 +12961,7 @@ private static final long serialVersionUID = 0L;
 
         private long candidateId_ ;
         /**
-         * <code>uint64 candidate_id = 1;</code>
+         * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
          * @return The candidateId.
          */
         @java.lang.Override
@@ -11266,7 +12969,7 @@ private static final long serialVersionUID = 0L;
           return candidateId_;
         }
         /**
-         * <code>uint64 candidate_id = 1;</code>
+         * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
          * @param value The candidateId to set.
          * @return This builder for chaining.
          */
@@ -11277,7 +12980,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 candidate_id = 1;</code>
+         * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCandidateId() {
@@ -11289,7 +12992,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object owner_ = "";
         /**
-         * <code>string owner = 2;</code>
+         * <code>string owner = 2 [json_name = "owner"];</code>
          * @return The owner.
          */
         public java.lang.String getOwner() {
@@ -11305,7 +13008,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner = 2;</code>
+         * <code>string owner = 2 [json_name = "owner"];</code>
          * @return The bytes for owner.
          */
         public com.google.protobuf.ByteString
@@ -11322,7 +13025,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner = 2;</code>
+         * <code>string owner = 2 [json_name = "owner"];</code>
          * @param value The owner to set.
          * @return This builder for chaining.
          */
@@ -11337,7 +13040,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner = 2;</code>
+         * <code>string owner = 2 [json_name = "owner"];</code>
          * @return This builder for chaining.
          */
         public Builder clearOwner() {
@@ -11347,7 +13050,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner = 2;</code>
+         * <code>string owner = 2 [json_name = "owner"];</code>
          * @param value The bytes for owner to set.
          * @return This builder for chaining.
          */
@@ -11365,7 +13068,7 @@ private static final long serialVersionUID = 0L;
 
         private long coin_ ;
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return The coin.
          */
         @java.lang.Override
@@ -11373,7 +13076,7 @@ private static final long serialVersionUID = 0L;
           return coin_;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @param value The coin to set.
          * @return This builder for chaining.
          */
@@ -11384,7 +13087,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCoin() {
@@ -11396,7 +13099,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object value_ = "";
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return The value.
          */
         public java.lang.String getValue() {
@@ -11412,7 +13115,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         public com.google.protobuf.ByteString
@@ -11429,7 +13132,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @param value The value to set.
          * @return This builder for chaining.
          */
@@ -11444,7 +13147,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @return This builder for chaining.
          */
         public Builder clearValue() {
@@ -11454,7 +13157,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string value = 4;</code>
+         * <code>string value = 4 [json_name = "value"];</code>
          * @param value The bytes for value to set.
          * @return This builder for chaining.
          */
@@ -11527,61 +13230,67 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The address.
        */
       java.lang.String getAddress();
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The bytes for address.
        */
       com.google.protobuf.ByteString
           getAddressBytes();
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance> 
           getBalanceList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance getBalance(int index);
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       int getBalanceCount();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder> 
           getBalanceOrBuilderList();
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder getBalanceOrBuilder(
           int index);
 
       /**
-       * <code>uint64 nonce = 3;</code>
+       * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
        * @return The nonce.
        */
       long getNonce();
 
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        * @return Whether the multisigData field is set.
        */
       boolean hasMultisigData();
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        * @return The multisigData.
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData getMultisigData();
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigDataOrBuilder getMultisigDataOrBuilder();
+
+      /**
+       * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+       * @return The lockStakeUntilBlock.
+       */
+      long getLockStakeUntilBlock();
     }
     /**
      * Protobuf type {@code api_pb.GenesisResponse.AppState.Account}
@@ -11664,6 +13373,11 @@ private static final long serialVersionUID = 0L;
 
                 break;
               }
+              case 40: {
+
+                lockStakeUntilBlock_ = input.readUInt64();
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -11704,18 +13418,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>uint64 coin = 1;</code>
+         * <code>uint64 coin = 1 [json_name = "coin"];</code>
          * @return The coin.
          */
         long getCoin();
 
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The value.
          */
         java.lang.String getValue();
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         com.google.protobuf.ByteString
@@ -11813,7 +13527,7 @@ private static final long serialVersionUID = 0L;
         public static final int COIN_FIELD_NUMBER = 1;
         private long coin_;
         /**
-         * <code>uint64 coin = 1;</code>
+         * <code>uint64 coin = 1 [json_name = "coin"];</code>
          * @return The coin.
          */
         @java.lang.Override
@@ -11824,7 +13538,7 @@ private static final long serialVersionUID = 0L;
         public static final int VALUE_FIELD_NUMBER = 2;
         private volatile java.lang.Object value_;
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The value.
          */
         @java.lang.Override
@@ -11841,7 +13555,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string value = 2;</code>
+         * <code>string value = 2 [json_name = "value"];</code>
          * @return The bytes for value.
          */
         @java.lang.Override
@@ -11876,7 +13590,7 @@ private static final long serialVersionUID = 0L;
           if (coin_ != 0L) {
             output.writeUInt64(1, coin_);
           }
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
           }
           unknownFields.writeTo(output);
@@ -11892,7 +13606,7 @@ private static final long serialVersionUID = 0L;
             size += com.google.protobuf.CodedOutputStream
               .computeUInt64Size(1, coin_);
           }
-          if (!getValueBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
           }
           size += unknownFields.getSerializedSize();
@@ -12181,7 +13895,7 @@ private static final long serialVersionUID = 0L;
 
           private long coin_ ;
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @return The coin.
            */
           @java.lang.Override
@@ -12189,7 +13903,7 @@ private static final long serialVersionUID = 0L;
             return coin_;
           }
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @param value The coin to set.
            * @return This builder for chaining.
            */
@@ -12200,7 +13914,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>uint64 coin = 1;</code>
+           * <code>uint64 coin = 1 [json_name = "coin"];</code>
            * @return This builder for chaining.
            */
           public Builder clearCoin() {
@@ -12212,7 +13926,7 @@ private static final long serialVersionUID = 0L;
 
           private java.lang.Object value_ = "";
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return The value.
            */
           public java.lang.String getValue() {
@@ -12228,7 +13942,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return The bytes for value.
            */
           public com.google.protobuf.ByteString
@@ -12245,7 +13959,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @param value The value to set.
            * @return This builder for chaining.
            */
@@ -12260,7 +13974,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @return This builder for chaining.
            */
           public Builder clearValue() {
@@ -12270,7 +13984,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string value = 2;</code>
+           * <code>string value = 2 [json_name = "value"];</code>
            * @param value The bytes for value to set.
            * @return This builder for chaining.
            */
@@ -12343,47 +14057,47 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>uint64 threshold = 1;</code>
+         * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
          * @return The threshold.
          */
         long getThreshold();
 
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @return A list containing the weights.
          */
         java.util.List<java.lang.Long> getWeightsList();
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @return The count of weights.
          */
         int getWeightsCount();
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @param index The index of the element to return.
          * @return The weights at the given index.
          */
         long getWeights(int index);
 
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @return A list containing the addresses.
          */
         java.util.List<java.lang.String>
             getAddressesList();
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @return The count of addresses.
          */
         int getAddressesCount();
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @param index The index of the element to return.
          * @return The addresses at the given index.
          */
         java.lang.String getAddresses(int index);
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the addresses at the given index.
          */
@@ -12514,7 +14228,7 @@ private static final long serialVersionUID = 0L;
         public static final int THRESHOLD_FIELD_NUMBER = 1;
         private long threshold_;
         /**
-         * <code>uint64 threshold = 1;</code>
+         * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
          * @return The threshold.
          */
         @java.lang.Override
@@ -12525,7 +14239,7 @@ private static final long serialVersionUID = 0L;
         public static final int WEIGHTS_FIELD_NUMBER = 2;
         private com.google.protobuf.Internal.LongList weights_;
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @return A list containing the weights.
          */
         @java.lang.Override
@@ -12534,14 +14248,14 @@ private static final long serialVersionUID = 0L;
           return weights_;
         }
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @return The count of weights.
          */
         public int getWeightsCount() {
           return weights_.size();
         }
         /**
-         * <code>repeated uint64 weights = 2;</code>
+         * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
          * @param index The index of the element to return.
          * @return The weights at the given index.
          */
@@ -12553,7 +14267,7 @@ private static final long serialVersionUID = 0L;
         public static final int ADDRESSES_FIELD_NUMBER = 3;
         private com.google.protobuf.LazyStringList addresses_;
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @return A list containing the addresses.
          */
         public com.google.protobuf.ProtocolStringList
@@ -12561,14 +14275,14 @@ private static final long serialVersionUID = 0L;
           return addresses_;
         }
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @return The count of addresses.
          */
         public int getAddressesCount() {
           return addresses_.size();
         }
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @param index The index of the element to return.
          * @return The addresses at the given index.
          */
@@ -12576,7 +14290,7 @@ private static final long serialVersionUID = 0L;
           return addresses_.get(index);
         }
         /**
-         * <code>repeated string addresses = 3;</code>
+         * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the addresses at the given index.
          */
@@ -12971,7 +14685,7 @@ private static final long serialVersionUID = 0L;
 
           private long threshold_ ;
           /**
-           * <code>uint64 threshold = 1;</code>
+           * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
            * @return The threshold.
            */
           @java.lang.Override
@@ -12979,7 +14693,7 @@ private static final long serialVersionUID = 0L;
             return threshold_;
           }
           /**
-           * <code>uint64 threshold = 1;</code>
+           * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
            * @param value The threshold to set.
            * @return This builder for chaining.
            */
@@ -12990,7 +14704,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>uint64 threshold = 1;</code>
+           * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
            * @return This builder for chaining.
            */
           public Builder clearThreshold() {
@@ -13008,7 +14722,7 @@ private static final long serialVersionUID = 0L;
              }
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @return A list containing the weights.
            */
           public java.util.List<java.lang.Long>
@@ -13017,14 +14731,14 @@ private static final long serialVersionUID = 0L;
                      java.util.Collections.unmodifiableList(weights_) : weights_;
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @return The count of weights.
            */
           public int getWeightsCount() {
             return weights_.size();
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @param index The index of the element to return.
            * @return The weights at the given index.
            */
@@ -13032,7 +14746,7 @@ private static final long serialVersionUID = 0L;
             return weights_.getLong(index);
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @param index The index to set the value at.
            * @param value The weights to set.
            * @return This builder for chaining.
@@ -13045,7 +14759,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @param value The weights to add.
            * @return This builder for chaining.
            */
@@ -13056,7 +14770,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @param values The weights to add.
            * @return This builder for chaining.
            */
@@ -13069,7 +14783,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated uint64 weights = 2;</code>
+           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
            * @return This builder for chaining.
            */
           public Builder clearWeights() {
@@ -13087,7 +14801,7 @@ private static final long serialVersionUID = 0L;
              }
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @return A list containing the addresses.
            */
           public com.google.protobuf.ProtocolStringList
@@ -13095,14 +14809,14 @@ private static final long serialVersionUID = 0L;
             return addresses_.getUnmodifiableView();
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @return The count of addresses.
            */
           public int getAddressesCount() {
             return addresses_.size();
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param index The index of the element to return.
            * @return The addresses at the given index.
            */
@@ -13110,7 +14824,7 @@ private static final long serialVersionUID = 0L;
             return addresses_.get(index);
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param index The index of the value to return.
            * @return The bytes of the addresses at the given index.
            */
@@ -13119,7 +14833,7 @@ private static final long serialVersionUID = 0L;
             return addresses_.getByteString(index);
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param index The index to set the value at.
            * @param value The addresses to set.
            * @return This builder for chaining.
@@ -13135,7 +14849,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param value The addresses to add.
            * @return This builder for chaining.
            */
@@ -13150,7 +14864,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param values The addresses to add.
            * @return This builder for chaining.
            */
@@ -13163,7 +14877,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @return This builder for chaining.
            */
           public Builder clearAddresses() {
@@ -13173,7 +14887,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated string addresses = 3;</code>
+           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
            * @param value The bytes of the addresses to add.
            * @return This builder for chaining.
            */
@@ -13244,7 +14958,7 @@ private static final long serialVersionUID = 0L;
       public static final int ADDRESS_FIELD_NUMBER = 1;
       private volatile java.lang.Object address_;
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The address.
        */
       @java.lang.Override
@@ -13261,7 +14975,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string address = 1;</code>
+       * <code>string address = 1 [json_name = "address"];</code>
        * @return The bytes for address.
        */
       @java.lang.Override
@@ -13282,14 +14996,14 @@ private static final long serialVersionUID = 0L;
       public static final int BALANCE_FIELD_NUMBER = 2;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance> balance_;
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       @java.lang.Override
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance> getBalanceList() {
         return balance_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder> 
@@ -13297,21 +15011,21 @@ private static final long serialVersionUID = 0L;
         return balance_;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       @java.lang.Override
       public int getBalanceCount() {
         return balance_.size();
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance getBalance(int index) {
         return balance_.get(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder getBalanceOrBuilder(
@@ -13322,7 +15036,7 @@ private static final long serialVersionUID = 0L;
       public static final int NONCE_FIELD_NUMBER = 3;
       private long nonce_;
       /**
-       * <code>uint64 nonce = 3;</code>
+       * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
        * @return The nonce.
        */
       @java.lang.Override
@@ -13333,7 +15047,7 @@ private static final long serialVersionUID = 0L;
       public static final int MULTISIG_DATA_FIELD_NUMBER = 4;
       private counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData multisigData_;
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        * @return Whether the multisigData field is set.
        */
       @java.lang.Override
@@ -13341,7 +15055,7 @@ private static final long serialVersionUID = 0L;
         return multisigData_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        * @return The multisigData.
        */
       @java.lang.Override
@@ -13349,11 +15063,22 @@ private static final long serialVersionUID = 0L;
         return multisigData_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.getDefaultInstance() : multisigData_;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigDataOrBuilder getMultisigDataOrBuilder() {
         return getMultisigData();
+      }
+
+      public static final int LOCK_STAKE_UNTIL_BLOCK_FIELD_NUMBER = 5;
+      private long lockStakeUntilBlock_;
+      /**
+       * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+       * @return The lockStakeUntilBlock.
+       */
+      @java.lang.Override
+      public long getLockStakeUntilBlock() {
+        return lockStakeUntilBlock_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -13370,7 +15095,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
         }
         for (int i = 0; i < balance_.size(); i++) {
@@ -13382,6 +15107,9 @@ private static final long serialVersionUID = 0L;
         if (multisigData_ != null) {
           output.writeMessage(4, getMultisigData());
         }
+        if (lockStakeUntilBlock_ != 0L) {
+          output.writeUInt64(5, lockStakeUntilBlock_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -13391,7 +15119,7 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getAddressBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
         }
         for (int i = 0; i < balance_.size(); i++) {
@@ -13405,6 +15133,10 @@ private static final long serialVersionUID = 0L;
         if (multisigData_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, getMultisigData());
+        }
+        if (lockStakeUntilBlock_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(5, lockStakeUntilBlock_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13432,6 +15164,8 @@ private static final long serialVersionUID = 0L;
           if (!getMultisigData()
               .equals(other.getMultisigData())) return false;
         }
+        if (getLockStakeUntilBlock()
+            != other.getLockStakeUntilBlock()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -13456,6 +15190,9 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + MULTISIG_DATA_FIELD_NUMBER;
           hash = (53 * hash) + getMultisigData().hashCode();
         }
+        hash = (37 * hash) + LOCK_STAKE_UNTIL_BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLockStakeUntilBlock());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -13606,6 +15343,8 @@ private static final long serialVersionUID = 0L;
             multisigData_ = null;
             multisigDataBuilder_ = null;
           }
+          lockStakeUntilBlock_ = 0L;
+
           return this;
         }
 
@@ -13649,6 +15388,7 @@ private static final long serialVersionUID = 0L;
           } else {
             result.multisigData_ = multisigDataBuilder_.build();
           }
+          result.lockStakeUntilBlock_ = lockStakeUntilBlock_;
           onBuilt();
           return result;
         }
@@ -13733,6 +15473,9 @@ private static final long serialVersionUID = 0L;
           if (other.hasMultisigData()) {
             mergeMultisigData(other.getMultisigData());
           }
+          if (other.getLockStakeUntilBlock() != 0L) {
+            setLockStakeUntilBlock(other.getLockStakeUntilBlock());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -13765,7 +15508,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object address_ = "";
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return The address.
          */
         public java.lang.String getAddress() {
@@ -13781,7 +15524,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return The bytes for address.
          */
         public com.google.protobuf.ByteString
@@ -13798,7 +15541,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @param value The address to set.
          * @return This builder for chaining.
          */
@@ -13813,7 +15556,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAddress() {
@@ -13823,7 +15566,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string address = 1;</code>
+         * <code>string address = 1 [json_name = "address"];</code>
          * @param value The bytes for address to set.
          * @return This builder for chaining.
          */
@@ -13852,7 +15595,7 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder> balanceBuilder_;
 
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance> getBalanceList() {
           if (balanceBuilder_ == null) {
@@ -13862,7 +15605,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public int getBalanceCount() {
           if (balanceBuilder_ == null) {
@@ -13872,7 +15615,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance getBalance(int index) {
           if (balanceBuilder_ == null) {
@@ -13882,7 +15625,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder setBalance(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance value) {
@@ -13899,7 +15642,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder setBalance(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder builderForValue) {
@@ -13913,7 +15656,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder addBalance(counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance value) {
           if (balanceBuilder_ == null) {
@@ -13929,7 +15672,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder addBalance(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance value) {
@@ -13946,7 +15689,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder addBalance(
             counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder builderForValue) {
@@ -13960,7 +15703,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder addBalance(
             int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder builderForValue) {
@@ -13974,7 +15717,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder addAllBalance(
             java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance> values) {
@@ -13989,7 +15732,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder clearBalance() {
           if (balanceBuilder_ == null) {
@@ -14002,7 +15745,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public Builder removeBalance(int index) {
           if (balanceBuilder_ == null) {
@@ -14015,14 +15758,14 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder getBalanceBuilder(
             int index) {
           return getBalanceFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder getBalanceOrBuilder(
             int index) {
@@ -14032,7 +15775,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Account.BalanceOrBuilder> 
              getBalanceOrBuilderList() {
@@ -14043,14 +15786,14 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder addBalanceBuilder() {
           return getBalanceFieldBuilder().addBuilder(
               counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder addBalanceBuilder(
             int index) {
@@ -14058,7 +15801,7 @@ private static final long serialVersionUID = 0L;
               index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
          */
         public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.Builder> 
              getBalanceBuilderList() {
@@ -14081,7 +15824,7 @@ private static final long serialVersionUID = 0L;
 
         private long nonce_ ;
         /**
-         * <code>uint64 nonce = 3;</code>
+         * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
          * @return The nonce.
          */
         @java.lang.Override
@@ -14089,7 +15832,7 @@ private static final long serialVersionUID = 0L;
           return nonce_;
         }
         /**
-         * <code>uint64 nonce = 3;</code>
+         * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
          * @param value The nonce to set.
          * @return This builder for chaining.
          */
@@ -14100,7 +15843,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 nonce = 3;</code>
+         * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
          * @return This builder for chaining.
          */
         public Builder clearNonce() {
@@ -14114,14 +15857,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData, counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigDataOrBuilder> multisigDataBuilder_;
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          * @return Whether the multisigData field is set.
          */
         public boolean hasMultisigData() {
           return multisigDataBuilder_ != null || multisigData_ != null;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          * @return The multisigData.
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData getMultisigData() {
@@ -14132,7 +15875,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public Builder setMultisigData(counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData value) {
           if (multisigDataBuilder_ == null) {
@@ -14148,7 +15891,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public Builder setMultisigData(
             counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.Builder builderForValue) {
@@ -14162,7 +15905,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public Builder mergeMultisigData(counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData value) {
           if (multisigDataBuilder_ == null) {
@@ -14180,7 +15923,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public Builder clearMultisigData() {
           if (multisigDataBuilder_ == null) {
@@ -14194,7 +15937,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.Builder getMultisigDataBuilder() {
           
@@ -14202,7 +15945,7 @@ private static final long serialVersionUID = 0L;
           return getMultisigDataFieldBuilder().getBuilder();
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigDataOrBuilder getMultisigDataOrBuilder() {
           if (multisigDataBuilder_ != null) {
@@ -14213,7 +15956,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData, counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigDataOrBuilder> 
@@ -14227,6 +15970,37 @@ private static final long serialVersionUID = 0L;
             multisigData_ = null;
           }
           return multisigDataBuilder_;
+        }
+
+        private long lockStakeUntilBlock_ ;
+        /**
+         * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+         * @return The lockStakeUntilBlock.
+         */
+        @java.lang.Override
+        public long getLockStakeUntilBlock() {
+          return lockStakeUntilBlock_;
+        }
+        /**
+         * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+         * @param value The lockStakeUntilBlock to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLockStakeUntilBlock(long value) {
+          
+          lockStakeUntilBlock_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLockStakeUntilBlock() {
+          
+          lockStakeUntilBlock_ = 0L;
+          onChanged();
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -14286,18 +16060,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 height = 1;</code>
+       * <code>uint64 height = 1 [json_name = "height"];</code>
        * @return The height.
        */
       long getHeight();
 
       /**
-       * <code>string candidate_key = 2;</code>
+       * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The candidateKey.
        */
       java.lang.String getCandidateKey();
       /**
-       * <code>string candidate_key = 2;</code>
+       * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The bytes for candidateKey.
        */
       com.google.protobuf.ByteString
@@ -14395,7 +16169,7 @@ private static final long serialVersionUID = 0L;
       public static final int HEIGHT_FIELD_NUMBER = 1;
       private long height_;
       /**
-       * <code>uint64 height = 1;</code>
+       * <code>uint64 height = 1 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -14406,7 +16180,7 @@ private static final long serialVersionUID = 0L;
       public static final int CANDIDATE_KEY_FIELD_NUMBER = 2;
       private volatile java.lang.Object candidateKey_;
       /**
-       * <code>string candidate_key = 2;</code>
+       * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The candidateKey.
        */
       @java.lang.Override
@@ -14423,7 +16197,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string candidate_key = 2;</code>
+       * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
        * @return The bytes for candidateKey.
        */
       @java.lang.Override
@@ -14458,7 +16232,7 @@ private static final long serialVersionUID = 0L;
         if (height_ != 0L) {
           output.writeUInt64(1, height_);
         }
-        if (!getCandidateKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(candidateKey_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, candidateKey_);
         }
         unknownFields.writeTo(output);
@@ -14474,7 +16248,7 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(1, height_);
         }
-        if (!getCandidateKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(candidateKey_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, candidateKey_);
         }
         size += unknownFields.getSerializedSize();
@@ -14763,7 +16537,7 @@ private static final long serialVersionUID = 0L;
 
         private long height_ ;
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @return The height.
          */
         @java.lang.Override
@@ -14771,7 +16545,7 @@ private static final long serialVersionUID = 0L;
           return height_;
         }
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @param value The height to set.
          * @return This builder for chaining.
          */
@@ -14782,7 +16556,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @return This builder for chaining.
          */
         public Builder clearHeight() {
@@ -14794,7 +16568,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object candidateKey_ = "";
         /**
-         * <code>string candidate_key = 2;</code>
+         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
          * @return The candidateKey.
          */
         public java.lang.String getCandidateKey() {
@@ -14810,7 +16584,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string candidate_key = 2;</code>
+         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
          * @return The bytes for candidateKey.
          */
         public com.google.protobuf.ByteString
@@ -14827,7 +16601,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string candidate_key = 2;</code>
+         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
          * @param value The candidateKey to set.
          * @return This builder for chaining.
          */
@@ -14842,7 +16616,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string candidate_key = 2;</code>
+         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCandidateKey() {
@@ -14852,7 +16626,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string candidate_key = 2;</code>
+         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
          * @param value The bytes for candidateKey to set.
          * @return This builder for chaining.
          */
@@ -14925,46 +16699,70 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 coin0 = 1;</code>
+       * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
        * @return The coin0.
        */
       long getCoin0();
 
       /**
-       * <code>uint64 coin1 = 2;</code>
+       * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
        * @return The coin1.
        */
       long getCoin1();
 
       /**
-       * <code>string reserve0 = 3;</code>
+       * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
        * @return The reserve0.
        */
       java.lang.String getReserve0();
       /**
-       * <code>string reserve0 = 3;</code>
+       * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
        * @return The bytes for reserve0.
        */
       com.google.protobuf.ByteString
           getReserve0Bytes();
 
       /**
-       * <code>string reserve1 = 4;</code>
+       * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
        * @return The reserve1.
        */
       java.lang.String getReserve1();
       /**
-       * <code>string reserve1 = 4;</code>
+       * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
        * @return The bytes for reserve1.
        */
       com.google.protobuf.ByteString
           getReserve1Bytes();
 
       /**
-       * <code>uint64 id = 5;</code>
+       * <code>uint64 id = 5 [json_name = "id"];</code>
        * @return The id.
        */
       long getId();
+
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> 
+          getOrdersList();
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getOrders(int index);
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      int getOrdersCount();
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder> 
+          getOrdersOrBuilderList();
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder getOrdersOrBuilder(
+          int index);
     }
     /**
      * Protobuf type {@code api_pb.GenesisResponse.AppState.Pool}
@@ -14981,6 +16779,7 @@ private static final long serialVersionUID = 0L;
       private Pool() {
         reserve0_ = "";
         reserve1_ = "";
+        orders_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -15003,6 +16802,7 @@ private static final long serialVersionUID = 0L;
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -15040,6 +16840,15 @@ private static final long serialVersionUID = 0L;
                 id_ = input.readUInt64();
                 break;
               }
+              case 50: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  orders_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                orders_.add(
+                    input.readMessage(counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.parser(), extensionRegistry));
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -15055,6 +16864,9 @@ private static final long serialVersionUID = 0L;
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            orders_ = java.util.Collections.unmodifiableList(orders_);
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -15072,10 +16884,1163 @@ private static final long serialVersionUID = 0L;
                 counters.minter.grpc.client.GenesisResponse.AppState.Pool.class, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder.class);
       }
 
+      public interface OrderOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.Pool.Order)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+         * @return The isSale.
+         */
+        boolean getIsSale();
+
+        /**
+         * <pre>
+         * buy
+         * </pre>
+         *
+         * <code>string volume0 = 2 [json_name = "volume0"];</code>
+         * @return The volume0.
+         */
+        java.lang.String getVolume0();
+        /**
+         * <pre>
+         * buy
+         * </pre>
+         *
+         * <code>string volume0 = 2 [json_name = "volume0"];</code>
+         * @return The bytes for volume0.
+         */
+        com.google.protobuf.ByteString
+            getVolume0Bytes();
+
+        /**
+         * <pre>
+         * sell
+         * </pre>
+         *
+         * <code>string volume1 = 3 [json_name = "volume1"];</code>
+         * @return The volume1.
+         */
+        java.lang.String getVolume1();
+        /**
+         * <pre>
+         * sell
+         * </pre>
+         *
+         * <code>string volume1 = 3 [json_name = "volume1"];</code>
+         * @return The bytes for volume1.
+         */
+        com.google.protobuf.ByteString
+            getVolume1Bytes();
+
+        /**
+         * <code>uint64 id = 4 [json_name = "id"];</code>
+         * @return The id.
+         */
+        long getId();
+
+        /**
+         * <code>string owner = 5 [json_name = "owner"];</code>
+         * @return The owner.
+         */
+        java.lang.String getOwner();
+        /**
+         * <code>string owner = 5 [json_name = "owner"];</code>
+         * @return The bytes for owner.
+         */
+        com.google.protobuf.ByteString
+            getOwnerBytes();
+
+        /**
+         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * @return The height.
+         */
+        long getHeight();
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.AppState.Pool.Order}
+       */
+      public static final class Order extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.AppState.Pool.Order)
+          OrderOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Order.newBuilder() to construct.
+        private Order(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Order() {
+          volume0_ = "";
+          volume1_ = "";
+          owner_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Order();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Order(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+
+                  isSale_ = input.readBool();
+                  break;
+                }
+                case 18: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  volume0_ = s;
+                  break;
+                }
+                case 26: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  volume1_ = s;
+                  break;
+                }
+                case 32: {
+
+                  id_ = input.readUInt64();
+                  break;
+                }
+                case 42: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  owner_ = s;
+                  break;
+                }
+                case 48: {
+
+                  height_ = input.readUInt64();
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Pool_Order_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.class, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder.class);
+        }
+
+        public static final int IS_SALE_FIELD_NUMBER = 1;
+        private boolean isSale_;
+        /**
+         * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+         * @return The isSale.
+         */
+        @java.lang.Override
+        public boolean getIsSale() {
+          return isSale_;
+        }
+
+        public static final int VOLUME0_FIELD_NUMBER = 2;
+        private volatile java.lang.Object volume0_;
+        /**
+         * <pre>
+         * buy
+         * </pre>
+         *
+         * <code>string volume0 = 2 [json_name = "volume0"];</code>
+         * @return The volume0.
+         */
+        @java.lang.Override
+        public java.lang.String getVolume0() {
+          java.lang.Object ref = volume0_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            volume0_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * buy
+         * </pre>
+         *
+         * <code>string volume0 = 2 [json_name = "volume0"];</code>
+         * @return The bytes for volume0.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getVolume0Bytes() {
+          java.lang.Object ref = volume0_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            volume0_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int VOLUME1_FIELD_NUMBER = 3;
+        private volatile java.lang.Object volume1_;
+        /**
+         * <pre>
+         * sell
+         * </pre>
+         *
+         * <code>string volume1 = 3 [json_name = "volume1"];</code>
+         * @return The volume1.
+         */
+        @java.lang.Override
+        public java.lang.String getVolume1() {
+          java.lang.Object ref = volume1_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            volume1_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * sell
+         * </pre>
+         *
+         * <code>string volume1 = 3 [json_name = "volume1"];</code>
+         * @return The bytes for volume1.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getVolume1Bytes() {
+          java.lang.Object ref = volume1_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            volume1_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int ID_FIELD_NUMBER = 4;
+        private long id_;
+        /**
+         * <code>uint64 id = 4 [json_name = "id"];</code>
+         * @return The id.
+         */
+        @java.lang.Override
+        public long getId() {
+          return id_;
+        }
+
+        public static final int OWNER_FIELD_NUMBER = 5;
+        private volatile java.lang.Object owner_;
+        /**
+         * <code>string owner = 5 [json_name = "owner"];</code>
+         * @return The owner.
+         */
+        @java.lang.Override
+        public java.lang.String getOwner() {
+          java.lang.Object ref = owner_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            owner_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string owner = 5 [json_name = "owner"];</code>
+         * @return The bytes for owner.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getOwnerBytes() {
+          java.lang.Object ref = owner_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            owner_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int HEIGHT_FIELD_NUMBER = 6;
+        private long height_;
+        /**
+         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * @return The height.
+         */
+        @java.lang.Override
+        public long getHeight() {
+          return height_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (isSale_ != false) {
+            output.writeBool(1, isSale_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume0_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, volume0_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume1_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, volume1_);
+          }
+          if (id_ != 0L) {
+            output.writeUInt64(4, id_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 5, owner_);
+          }
+          if (height_ != 0L) {
+            output.writeUInt64(6, height_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (isSale_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(1, isSale_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume0_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, volume0_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volume1_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, volume1_);
+          }
+          if (id_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt64Size(4, id_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, owner_);
+          }
+          if (height_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt64Size(6, height_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order)) {
+            return super.equals(obj);
+          }
+          counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order other = (counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) obj;
+
+          if (getIsSale()
+              != other.getIsSale()) return false;
+          if (!getVolume0()
+              .equals(other.getVolume0())) return false;
+          if (!getVolume1()
+              .equals(other.getVolume1())) return false;
+          if (getId()
+              != other.getId()) return false;
+          if (!getOwner()
+              .equals(other.getOwner())) return false;
+          if (getHeight()
+              != other.getHeight()) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + IS_SALE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getIsSale());
+          hash = (37 * hash) + VOLUME0_FIELD_NUMBER;
+          hash = (53 * hash) + getVolume0().hashCode();
+          hash = (37 * hash) + VOLUME1_FIELD_NUMBER;
+          hash = (53 * hash) + getVolume1().hashCode();
+          hash = (37 * hash) + ID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getId());
+          hash = (37 * hash) + OWNER_FIELD_NUMBER;
+          hash = (53 * hash) + getOwner().hashCode();
+          hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getHeight());
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code api_pb.GenesisResponse.AppState.Pool.Order}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.AppState.Pool.Order)
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Pool_Order_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.class, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder.class);
+          }
+
+          // Construct using counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            isSale_ = false;
+
+            volume0_ = "";
+
+            volume1_ = "";
+
+            id_ = 0L;
+
+            owner_ = "";
+
+            height_ = 0L;
+
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Pool_Order_descriptor;
+          }
+
+          @java.lang.Override
+          public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getDefaultInstanceForType() {
+            return counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order build() {
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order buildPartial() {
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order result = new counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order(this);
+            result.isSale_ = isSale_;
+            result.volume0_ = volume0_;
+            result.volume1_ = volume1_;
+            result.id_ = id_;
+            result.owner_ = owner_;
+            result.height_ = height_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) {
+              return mergeFrom((counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order other) {
+            if (other == counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.getDefaultInstance()) return this;
+            if (other.getIsSale() != false) {
+              setIsSale(other.getIsSale());
+            }
+            if (!other.getVolume0().isEmpty()) {
+              volume0_ = other.volume0_;
+              onChanged();
+            }
+            if (!other.getVolume1().isEmpty()) {
+              volume1_ = other.volume1_;
+              onChanged();
+            }
+            if (other.getId() != 0L) {
+              setId(other.getId());
+            }
+            if (!other.getOwner().isEmpty()) {
+              owner_ = other.owner_;
+              onChanged();
+            }
+            if (other.getHeight() != 0L) {
+              setHeight(other.getHeight());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private boolean isSale_ ;
+          /**
+           * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+           * @return The isSale.
+           */
+          @java.lang.Override
+          public boolean getIsSale() {
+            return isSale_;
+          }
+          /**
+           * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+           * @param value The isSale to set.
+           * @return This builder for chaining.
+           */
+          public Builder setIsSale(boolean value) {
+            
+            isSale_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearIsSale() {
+            
+            isSale_ = false;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object volume0_ = "";
+          /**
+           * <pre>
+           * buy
+           * </pre>
+           *
+           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * @return The volume0.
+           */
+          public java.lang.String getVolume0() {
+            java.lang.Object ref = volume0_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              volume0_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * buy
+           * </pre>
+           *
+           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * @return The bytes for volume0.
+           */
+          public com.google.protobuf.ByteString
+              getVolume0Bytes() {
+            java.lang.Object ref = volume0_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              volume0_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * buy
+           * </pre>
+           *
+           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * @param value The volume0 to set.
+           * @return This builder for chaining.
+           */
+          public Builder setVolume0(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            volume0_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * buy
+           * </pre>
+           *
+           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearVolume0() {
+            
+            volume0_ = getDefaultInstance().getVolume0();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * buy
+           * </pre>
+           *
+           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * @param value The bytes for volume0 to set.
+           * @return This builder for chaining.
+           */
+          public Builder setVolume0Bytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            volume0_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object volume1_ = "";
+          /**
+           * <pre>
+           * sell
+           * </pre>
+           *
+           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * @return The volume1.
+           */
+          public java.lang.String getVolume1() {
+            java.lang.Object ref = volume1_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              volume1_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * sell
+           * </pre>
+           *
+           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * @return The bytes for volume1.
+           */
+          public com.google.protobuf.ByteString
+              getVolume1Bytes() {
+            java.lang.Object ref = volume1_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              volume1_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * sell
+           * </pre>
+           *
+           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * @param value The volume1 to set.
+           * @return This builder for chaining.
+           */
+          public Builder setVolume1(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            volume1_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * sell
+           * </pre>
+           *
+           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearVolume1() {
+            
+            volume1_ = getDefaultInstance().getVolume1();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * sell
+           * </pre>
+           *
+           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * @param value The bytes for volume1 to set.
+           * @return This builder for chaining.
+           */
+          public Builder setVolume1Bytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            volume1_ = value;
+            onChanged();
+            return this;
+          }
+
+          private long id_ ;
+          /**
+           * <code>uint64 id = 4 [json_name = "id"];</code>
+           * @return The id.
+           */
+          @java.lang.Override
+          public long getId() {
+            return id_;
+          }
+          /**
+           * <code>uint64 id = 4 [json_name = "id"];</code>
+           * @param value The id to set.
+           * @return This builder for chaining.
+           */
+          public Builder setId(long value) {
+            
+            id_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>uint64 id = 4 [json_name = "id"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearId() {
+            
+            id_ = 0L;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object owner_ = "";
+          /**
+           * <code>string owner = 5 [json_name = "owner"];</code>
+           * @return The owner.
+           */
+          public java.lang.String getOwner() {
+            java.lang.Object ref = owner_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              owner_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string owner = 5 [json_name = "owner"];</code>
+           * @return The bytes for owner.
+           */
+          public com.google.protobuf.ByteString
+              getOwnerBytes() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              owner_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string owner = 5 [json_name = "owner"];</code>
+           * @param value The owner to set.
+           * @return This builder for chaining.
+           */
+          public Builder setOwner(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            owner_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string owner = 5 [json_name = "owner"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearOwner() {
+            
+            owner_ = getDefaultInstance().getOwner();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string owner = 5 [json_name = "owner"];</code>
+           * @param value The bytes for owner to set.
+           * @return This builder for chaining.
+           */
+          public Builder setOwnerBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            owner_ = value;
+            onChanged();
+            return this;
+          }
+
+          private long height_ ;
+          /**
+           * <code>uint64 height = 6 [json_name = "height"];</code>
+           * @return The height.
+           */
+          @java.lang.Override
+          public long getHeight() {
+            return height_;
+          }
+          /**
+           * <code>uint64 height = 6 [json_name = "height"];</code>
+           * @param value The height to set.
+           * @return This builder for chaining.
+           */
+          public Builder setHeight(long value) {
+            
+            height_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>uint64 height = 6 [json_name = "height"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearHeight() {
+            
+            height_ = 0L;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.AppState.Pool.Order)
+        }
+
+        // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.AppState.Pool.Order)
+        private static final counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order();
+        }
+
+        public static counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Order>
+            PARSER = new com.google.protobuf.AbstractParser<Order>() {
+          @java.lang.Override
+          public Order parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Order(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Order> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Order> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       public static final int COIN0_FIELD_NUMBER = 1;
       private long coin0_;
       /**
-       * <code>uint64 coin0 = 1;</code>
+       * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
        * @return The coin0.
        */
       @java.lang.Override
@@ -15086,7 +18051,7 @@ private static final long serialVersionUID = 0L;
       public static final int COIN1_FIELD_NUMBER = 2;
       private long coin1_;
       /**
-       * <code>uint64 coin1 = 2;</code>
+       * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
        * @return The coin1.
        */
       @java.lang.Override
@@ -15097,7 +18062,7 @@ private static final long serialVersionUID = 0L;
       public static final int RESERVE0_FIELD_NUMBER = 3;
       private volatile java.lang.Object reserve0_;
       /**
-       * <code>string reserve0 = 3;</code>
+       * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
        * @return The reserve0.
        */
       @java.lang.Override
@@ -15114,7 +18079,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string reserve0 = 3;</code>
+       * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
        * @return The bytes for reserve0.
        */
       @java.lang.Override
@@ -15135,7 +18100,7 @@ private static final long serialVersionUID = 0L;
       public static final int RESERVE1_FIELD_NUMBER = 4;
       private volatile java.lang.Object reserve1_;
       /**
-       * <code>string reserve1 = 4;</code>
+       * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
        * @return The reserve1.
        */
       @java.lang.Override
@@ -15152,7 +18117,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string reserve1 = 4;</code>
+       * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
        * @return The bytes for reserve1.
        */
       @java.lang.Override
@@ -15173,12 +18138,52 @@ private static final long serialVersionUID = 0L;
       public static final int ID_FIELD_NUMBER = 5;
       private long id_;
       /**
-       * <code>uint64 id = 5;</code>
+       * <code>uint64 id = 5 [json_name = "id"];</code>
        * @return The id.
        */
       @java.lang.Override
       public long getId() {
         return id_;
+      }
+
+      public static final int ORDERS_FIELD_NUMBER = 6;
+      private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> orders_;
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> getOrdersList() {
+        return orders_;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder> 
+          getOrdersOrBuilderList() {
+        return orders_;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      @java.lang.Override
+      public int getOrdersCount() {
+        return orders_.size();
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getOrders(int index) {
+        return orders_.get(index);
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+       */
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder getOrdersOrBuilder(
+          int index) {
+        return orders_.get(index);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -15201,14 +18206,17 @@ private static final long serialVersionUID = 0L;
         if (coin1_ != 0L) {
           output.writeUInt64(2, coin1_);
         }
-        if (!getReserve0Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve0_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reserve0_);
         }
-        if (!getReserve1Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve1_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reserve1_);
         }
         if (id_ != 0L) {
           output.writeUInt64(5, id_);
+        }
+        for (int i = 0; i < orders_.size(); i++) {
+          output.writeMessage(6, orders_.get(i));
         }
         unknownFields.writeTo(output);
       }
@@ -15227,15 +18235,19 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(2, coin1_);
         }
-        if (!getReserve0Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve0_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reserve0_);
         }
-        if (!getReserve1Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserve1_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reserve1_);
         }
         if (id_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(5, id_);
+        }
+        for (int i = 0; i < orders_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, orders_.get(i));
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -15262,6 +18274,8 @@ private static final long serialVersionUID = 0L;
             .equals(other.getReserve1())) return false;
         if (getId()
             != other.getId()) return false;
+        if (!getOrdersList()
+            .equals(other.getOrdersList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -15286,6 +18300,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getId());
+        if (getOrdersCount() > 0) {
+          hash = (37 * hash) + ORDERS_FIELD_NUMBER;
+          hash = (53 * hash) + getOrdersList().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -15414,6 +18432,7 @@ private static final long serialVersionUID = 0L;
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessageV3
                   .alwaysUseFieldBuilders) {
+            getOrdersFieldBuilder();
           }
         }
         @java.lang.Override
@@ -15429,6 +18448,12 @@ private static final long serialVersionUID = 0L;
 
           id_ = 0L;
 
+          if (ordersBuilder_ == null) {
+            orders_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ordersBuilder_.clear();
+          }
           return this;
         }
 
@@ -15455,11 +18480,21 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public counters.minter.grpc.client.GenesisResponse.AppState.Pool buildPartial() {
           counters.minter.grpc.client.GenesisResponse.AppState.Pool result = new counters.minter.grpc.client.GenesisResponse.AppState.Pool(this);
+          int from_bitField0_ = bitField0_;
           result.coin0_ = coin0_;
           result.coin1_ = coin1_;
           result.reserve0_ = reserve0_;
           result.reserve1_ = reserve1_;
           result.id_ = id_;
+          if (ordersBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              orders_ = java.util.Collections.unmodifiableList(orders_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.orders_ = orders_;
+          } else {
+            result.orders_ = ordersBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -15525,6 +18560,32 @@ private static final long serialVersionUID = 0L;
           if (other.getId() != 0L) {
             setId(other.getId());
           }
+          if (ordersBuilder_ == null) {
+            if (!other.orders_.isEmpty()) {
+              if (orders_.isEmpty()) {
+                orders_ = other.orders_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureOrdersIsMutable();
+                orders_.addAll(other.orders_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.orders_.isEmpty()) {
+              if (ordersBuilder_.isEmpty()) {
+                ordersBuilder_.dispose();
+                ordersBuilder_ = null;
+                orders_ = other.orders_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                ordersBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getOrdersFieldBuilder() : null;
+              } else {
+                ordersBuilder_.addAllMessages(other.orders_);
+              }
+            }
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -15553,10 +18614,11 @@ private static final long serialVersionUID = 0L;
           }
           return this;
         }
+        private int bitField0_;
 
         private long coin0_ ;
         /**
-         * <code>uint64 coin0 = 1;</code>
+         * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
          * @return The coin0.
          */
         @java.lang.Override
@@ -15564,7 +18626,7 @@ private static final long serialVersionUID = 0L;
           return coin0_;
         }
         /**
-         * <code>uint64 coin0 = 1;</code>
+         * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
          * @param value The coin0 to set.
          * @return This builder for chaining.
          */
@@ -15575,7 +18637,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 coin0 = 1;</code>
+         * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCoin0() {
@@ -15587,7 +18649,7 @@ private static final long serialVersionUID = 0L;
 
         private long coin1_ ;
         /**
-         * <code>uint64 coin1 = 2;</code>
+         * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
          * @return The coin1.
          */
         @java.lang.Override
@@ -15595,7 +18657,7 @@ private static final long serialVersionUID = 0L;
           return coin1_;
         }
         /**
-         * <code>uint64 coin1 = 2;</code>
+         * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
          * @param value The coin1 to set.
          * @return This builder for chaining.
          */
@@ -15606,7 +18668,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 coin1 = 2;</code>
+         * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCoin1() {
@@ -15618,7 +18680,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object reserve0_ = "";
         /**
-         * <code>string reserve0 = 3;</code>
+         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
          * @return The reserve0.
          */
         public java.lang.String getReserve0() {
@@ -15634,7 +18696,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve0 = 3;</code>
+         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
          * @return The bytes for reserve0.
          */
         public com.google.protobuf.ByteString
@@ -15651,7 +18713,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve0 = 3;</code>
+         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
          * @param value The reserve0 to set.
          * @return This builder for chaining.
          */
@@ -15666,7 +18728,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve0 = 3;</code>
+         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
          * @return This builder for chaining.
          */
         public Builder clearReserve0() {
@@ -15676,7 +18738,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve0 = 3;</code>
+         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
          * @param value The bytes for reserve0 to set.
          * @return This builder for chaining.
          */
@@ -15694,7 +18756,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object reserve1_ = "";
         /**
-         * <code>string reserve1 = 4;</code>
+         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
          * @return The reserve1.
          */
         public java.lang.String getReserve1() {
@@ -15710,7 +18772,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve1 = 4;</code>
+         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
          * @return The bytes for reserve1.
          */
         public com.google.protobuf.ByteString
@@ -15727,7 +18789,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string reserve1 = 4;</code>
+         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
          * @param value The reserve1 to set.
          * @return This builder for chaining.
          */
@@ -15742,7 +18804,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve1 = 4;</code>
+         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
          * @return This builder for chaining.
          */
         public Builder clearReserve1() {
@@ -15752,7 +18814,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string reserve1 = 4;</code>
+         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
          * @param value The bytes for reserve1 to set.
          * @return This builder for chaining.
          */
@@ -15770,7 +18832,7 @@ private static final long serialVersionUID = 0L;
 
         private long id_ ;
         /**
-         * <code>uint64 id = 5;</code>
+         * <code>uint64 id = 5 [json_name = "id"];</code>
          * @return The id.
          */
         @java.lang.Override
@@ -15778,7 +18840,7 @@ private static final long serialVersionUID = 0L;
           return id_;
         }
         /**
-         * <code>uint64 id = 5;</code>
+         * <code>uint64 id = 5 [json_name = "id"];</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -15789,7 +18851,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 id = 5;</code>
+         * <code>uint64 id = 5 [json_name = "id"];</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
@@ -15797,6 +18859,246 @@ private static final long serialVersionUID = 0L;
           id_ = 0L;
           onChanged();
           return this;
+        }
+
+        private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> orders_ =
+          java.util.Collections.emptyList();
+        private void ensureOrdersIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            orders_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order>(orders_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder> ordersBuilder_;
+
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> getOrdersList() {
+          if (ordersBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(orders_);
+          } else {
+            return ordersBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public int getOrdersCount() {
+          if (ordersBuilder_ == null) {
+            return orders_.size();
+          } else {
+            return ordersBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order getOrders(int index) {
+          if (ordersBuilder_ == null) {
+            return orders_.get(index);
+          } else {
+            return ordersBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder setOrders(
+            int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order value) {
+          if (ordersBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureOrdersIsMutable();
+            orders_.set(index, value);
+            onChanged();
+          } else {
+            ordersBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder setOrders(
+            int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder builderForValue) {
+          if (ordersBuilder_ == null) {
+            ensureOrdersIsMutable();
+            orders_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            ordersBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder addOrders(counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order value) {
+          if (ordersBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureOrdersIsMutable();
+            orders_.add(value);
+            onChanged();
+          } else {
+            ordersBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder addOrders(
+            int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order value) {
+          if (ordersBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureOrdersIsMutable();
+            orders_.add(index, value);
+            onChanged();
+          } else {
+            ordersBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder addOrders(
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder builderForValue) {
+          if (ordersBuilder_ == null) {
+            ensureOrdersIsMutable();
+            orders_.add(builderForValue.build());
+            onChanged();
+          } else {
+            ordersBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder addOrders(
+            int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder builderForValue) {
+          if (ordersBuilder_ == null) {
+            ensureOrdersIsMutable();
+            orders_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            ordersBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder addAllOrders(
+            java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order> values) {
+          if (ordersBuilder_ == null) {
+            ensureOrdersIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, orders_);
+            onChanged();
+          } else {
+            ordersBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder clearOrders() {
+          if (ordersBuilder_ == null) {
+            orders_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            ordersBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public Builder removeOrders(int index) {
+          if (ordersBuilder_ == null) {
+            ensureOrdersIsMutable();
+            orders_.remove(index);
+            onChanged();
+          } else {
+            ordersBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder getOrdersBuilder(
+            int index) {
+          return getOrdersFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder getOrdersOrBuilder(
+            int index) {
+          if (ordersBuilder_ == null) {
+            return orders_.get(index);  } else {
+            return ordersBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder> 
+             getOrdersOrBuilderList() {
+          if (ordersBuilder_ != null) {
+            return ordersBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(orders_);
+          }
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder addOrdersBuilder() {
+          return getOrdersFieldBuilder().addBuilder(
+              counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder addOrdersBuilder(
+            int index) {
+          return getOrdersFieldBuilder().addBuilder(
+              index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         */
+        public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder> 
+             getOrdersBuilderList() {
+          return getOrdersFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder> 
+            getOrdersFieldBuilder() {
+          if (ordersBuilder_ == null) {
+            ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.Builder, counters.minter.grpc.client.GenesisResponse.AppState.Pool.OrderOrBuilder>(
+                    orders_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            orders_ = null;
+          }
+          return ordersBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -15856,550 +19158,586 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       long getCoin();
 
       /**
-       * <code>string payload_byte = 4;</code>
+       * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
        * @return The payloadByte.
        */
       java.lang.String getPayloadByte();
       /**
-       * <code>string payload_byte = 4;</code>
+       * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
        * @return The bytes for payloadByte.
        */
       com.google.protobuf.ByteString
           getPayloadByteBytes();
 
       /**
-       * <code>string send = 5;</code>
+       * <code>string send = 5 [json_name = "send"];</code>
        * @return The send.
        */
       java.lang.String getSend();
       /**
-       * <code>string send = 5;</code>
+       * <code>string send = 5 [json_name = "send"];</code>
        * @return The bytes for send.
        */
       com.google.protobuf.ByteString
           getSendBytes();
 
       /**
-       * <code>string buy_bancor = 38;</code>
+       * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
        * @return The buyBancor.
        */
       java.lang.String getBuyBancor();
       /**
-       * <code>string buy_bancor = 38;</code>
+       * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
        * @return The bytes for buyBancor.
        */
       com.google.protobuf.ByteString
           getBuyBancorBytes();
 
       /**
-       * <code>string sell_bancor = 39;</code>
+       * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
        * @return The sellBancor.
        */
       java.lang.String getSellBancor();
       /**
-       * <code>string sell_bancor = 39;</code>
+       * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
        * @return The bytes for sellBancor.
        */
       com.google.protobuf.ByteString
           getSellBancorBytes();
 
       /**
-       * <code>string sell_all_bancor = 40;</code>
+       * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
        * @return The sellAllBancor.
        */
       java.lang.String getSellAllBancor();
       /**
-       * <code>string sell_all_bancor = 40;</code>
+       * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
        * @return The bytes for sellAllBancor.
        */
       com.google.protobuf.ByteString
           getSellAllBancorBytes();
 
       /**
-       * <code>string buy_pool_base = 41;</code>
+       * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
        * @return The buyPoolBase.
        */
       java.lang.String getBuyPoolBase();
       /**
-       * <code>string buy_pool_base = 41;</code>
+       * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
        * @return The bytes for buyPoolBase.
        */
       com.google.protobuf.ByteString
           getBuyPoolBaseBytes();
 
       /**
-       * <code>string buy_pool_delta = 53;</code>
+       * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
        * @return The buyPoolDelta.
        */
       java.lang.String getBuyPoolDelta();
       /**
-       * <code>string buy_pool_delta = 53;</code>
+       * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
        * @return The bytes for buyPoolDelta.
        */
       com.google.protobuf.ByteString
           getBuyPoolDeltaBytes();
 
       /**
-       * <code>string sell_pool_base = 42;</code>
+       * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
        * @return The sellPoolBase.
        */
       java.lang.String getSellPoolBase();
       /**
-       * <code>string sell_pool_base = 42;</code>
+       * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
        * @return The bytes for sellPoolBase.
        */
       com.google.protobuf.ByteString
           getSellPoolBaseBytes();
 
       /**
-       * <code>string sell_pool_delta = 54;</code>
+       * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
        * @return The sellPoolDelta.
        */
       java.lang.String getSellPoolDelta();
       /**
-       * <code>string sell_pool_delta = 54;</code>
+       * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
        * @return The bytes for sellPoolDelta.
        */
       com.google.protobuf.ByteString
           getSellPoolDeltaBytes();
 
       /**
-       * <code>string sell_all_pool_base = 43;</code>
+       * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
        * @return The sellAllPoolBase.
        */
       java.lang.String getSellAllPoolBase();
       /**
-       * <code>string sell_all_pool_base = 43;</code>
+       * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
        * @return The bytes for sellAllPoolBase.
        */
       com.google.protobuf.ByteString
           getSellAllPoolBaseBytes();
 
       /**
-       * <code>string sell_all_pool_delta = 55;</code>
+       * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
        * @return The sellAllPoolDelta.
        */
       java.lang.String getSellAllPoolDelta();
       /**
-       * <code>string sell_all_pool_delta = 55;</code>
+       * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
        * @return The bytes for sellAllPoolDelta.
        */
       com.google.protobuf.ByteString
           getSellAllPoolDeltaBytes();
 
       /**
-       * <code>string create_ticker3 = 7;</code>
+       * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
        * @return The createTicker3.
        */
       java.lang.String getCreateTicker3();
       /**
-       * <code>string create_ticker3 = 7;</code>
+       * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
        * @return The bytes for createTicker3.
        */
       com.google.protobuf.ByteString
           getCreateTicker3Bytes();
 
       /**
-       * <code>string create_ticker4 = 8;</code>
+       * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
        * @return The createTicker4.
        */
       java.lang.String getCreateTicker4();
       /**
-       * <code>string create_ticker4 = 8;</code>
+       * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
        * @return The bytes for createTicker4.
        */
       com.google.protobuf.ByteString
           getCreateTicker4Bytes();
 
       /**
-       * <code>string create_ticker5 = 9;</code>
+       * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
        * @return The createTicker5.
        */
       java.lang.String getCreateTicker5();
       /**
-       * <code>string create_ticker5 = 9;</code>
+       * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
        * @return The bytes for createTicker5.
        */
       com.google.protobuf.ByteString
           getCreateTicker5Bytes();
 
       /**
-       * <code>string create_ticker6 = 10;</code>
+       * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
        * @return The createTicker6.
        */
       java.lang.String getCreateTicker6();
       /**
-       * <code>string create_ticker6 = 10;</code>
+       * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
        * @return The bytes for createTicker6.
        */
       com.google.protobuf.ByteString
           getCreateTicker6Bytes();
 
       /**
-       * <code>string create_ticker7_10 = 11;</code>
+       * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
        * @return The createTicker710.
        */
       java.lang.String getCreateTicker710();
       /**
-       * <code>string create_ticker7_10 = 11;</code>
+       * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
        * @return The bytes for createTicker710.
        */
       com.google.protobuf.ByteString
           getCreateTicker710Bytes();
 
       /**
-       * <code>string create_coin = 34;</code>
+       * <code>string create_coin = 34 [json_name = "createCoin"];</code>
        * @return The createCoin.
        */
       java.lang.String getCreateCoin();
       /**
-       * <code>string create_coin = 34;</code>
+       * <code>string create_coin = 34 [json_name = "createCoin"];</code>
        * @return The bytes for createCoin.
        */
       com.google.protobuf.ByteString
           getCreateCoinBytes();
 
       /**
-       * <code>string create_token = 35;</code>
+       * <code>string create_token = 35 [json_name = "createToken"];</code>
        * @return The createToken.
        */
       java.lang.String getCreateToken();
       /**
-       * <code>string create_token = 35;</code>
+       * <code>string create_token = 35 [json_name = "createToken"];</code>
        * @return The bytes for createToken.
        */
       com.google.protobuf.ByteString
           getCreateTokenBytes();
 
       /**
-       * <code>string recreate_coin = 36;</code>
+       * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
        * @return The recreateCoin.
        */
       java.lang.String getRecreateCoin();
       /**
-       * <code>string recreate_coin = 36;</code>
+       * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
        * @return The bytes for recreateCoin.
        */
       com.google.protobuf.ByteString
           getRecreateCoinBytes();
 
       /**
-       * <code>string recreate_token = 37;</code>
+       * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
        * @return The recreateToken.
        */
       java.lang.String getRecreateToken();
       /**
-       * <code>string recreate_token = 37;</code>
+       * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
        * @return The bytes for recreateToken.
        */
       com.google.protobuf.ByteString
           getRecreateTokenBytes();
 
       /**
-       * <code>string declare_candidacy = 13;</code>
+       * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
        * @return The declareCandidacy.
        */
       java.lang.String getDeclareCandidacy();
       /**
-       * <code>string declare_candidacy = 13;</code>
+       * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
        * @return The bytes for declareCandidacy.
        */
       com.google.protobuf.ByteString
           getDeclareCandidacyBytes();
 
       /**
-       * <code>string delegate = 14;</code>
+       * <code>string delegate = 14 [json_name = "delegate"];</code>
        * @return The delegate.
        */
       java.lang.String getDelegate();
       /**
-       * <code>string delegate = 14;</code>
+       * <code>string delegate = 14 [json_name = "delegate"];</code>
        * @return The bytes for delegate.
        */
       com.google.protobuf.ByteString
           getDelegateBytes();
 
       /**
-       * <code>string unbond = 15;</code>
+       * <code>string unbond = 15 [json_name = "unbond"];</code>
        * @return The unbond.
        */
       java.lang.String getUnbond();
       /**
-       * <code>string unbond = 15;</code>
+       * <code>string unbond = 15 [json_name = "unbond"];</code>
        * @return The bytes for unbond.
        */
       com.google.protobuf.ByteString
           getUnbondBytes();
 
       /**
-       * <code>string redeem_check = 16;</code>
+       * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
        * @return The redeemCheck.
        */
       java.lang.String getRedeemCheck();
       /**
-       * <code>string redeem_check = 16;</code>
+       * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
        * @return The bytes for redeemCheck.
        */
       com.google.protobuf.ByteString
           getRedeemCheckBytes();
 
       /**
-       * <code>string set_candidate_on = 44;</code>
+       * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
        * @return The setCandidateOn.
        */
       java.lang.String getSetCandidateOn();
       /**
-       * <code>string set_candidate_on = 44;</code>
+       * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
        * @return The bytes for setCandidateOn.
        */
       com.google.protobuf.ByteString
           getSetCandidateOnBytes();
 
       /**
-       * <code>string set_candidate_off = 45;</code>
+       * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
        * @return The setCandidateOff.
        */
       java.lang.String getSetCandidateOff();
       /**
-       * <code>string set_candidate_off = 45;</code>
+       * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
        * @return The bytes for setCandidateOff.
        */
       com.google.protobuf.ByteString
           getSetCandidateOffBytes();
 
       /**
-       * <code>string create_multisig = 18;</code>
+       * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
        * @return The createMultisig.
        */
       java.lang.String getCreateMultisig();
       /**
-       * <code>string create_multisig = 18;</code>
+       * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
        * @return The bytes for createMultisig.
        */
       com.google.protobuf.ByteString
           getCreateMultisigBytes();
 
       /**
-       * <code>string multisend_base = 51;</code>
+       * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
        * @return The multisendBase.
        */
       java.lang.String getMultisendBase();
       /**
-       * <code>string multisend_base = 51;</code>
+       * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
        * @return The bytes for multisendBase.
        */
       com.google.protobuf.ByteString
           getMultisendBaseBytes();
 
       /**
-       * <code>string multisend_delta = 52;</code>
+       * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
        * @return The multisendDelta.
        */
       java.lang.String getMultisendDelta();
       /**
-       * <code>string multisend_delta = 52;</code>
+       * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
        * @return The bytes for multisendDelta.
        */
       com.google.protobuf.ByteString
           getMultisendDeltaBytes();
 
       /**
-       * <code>string edit_candidate = 20;</code>
+       * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
        * @return The editCandidate.
        */
       java.lang.String getEditCandidate();
       /**
-       * <code>string edit_candidate = 20;</code>
+       * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
        * @return The bytes for editCandidate.
        */
       com.google.protobuf.ByteString
           getEditCandidateBytes();
 
       /**
-       * <code>string set_halt_block = 21;</code>
+       * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
        * @return The setHaltBlock.
        */
       java.lang.String getSetHaltBlock();
       /**
-       * <code>string set_halt_block = 21;</code>
+       * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
        * @return The bytes for setHaltBlock.
        */
       com.google.protobuf.ByteString
           getSetHaltBlockBytes();
 
       /**
-       * <code>string edit_ticker_owner = 22;</code>
+       * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
        * @return The editTickerOwner.
        */
       java.lang.String getEditTickerOwner();
       /**
-       * <code>string edit_ticker_owner = 22;</code>
+       * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
        * @return The bytes for editTickerOwner.
        */
       com.google.protobuf.ByteString
           getEditTickerOwnerBytes();
 
       /**
-       * <code>string edit_multisig = 23;</code>
+       * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
        * @return The editMultisig.
        */
       java.lang.String getEditMultisig();
       /**
-       * <code>string edit_multisig = 23;</code>
+       * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
        * @return The bytes for editMultisig.
        */
       com.google.protobuf.ByteString
           getEditMultisigBytes();
 
       /**
-       * <code>string edit_candidate_public_key = 25;</code>
+       * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
        * @return The editCandidatePublicKey.
        */
       java.lang.String getEditCandidatePublicKey();
       /**
-       * <code>string edit_candidate_public_key = 25;</code>
+       * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
        * @return The bytes for editCandidatePublicKey.
        */
       com.google.protobuf.ByteString
           getEditCandidatePublicKeyBytes();
 
       /**
-       * <code>string create_swap_pool = 48;</code>
+       * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
        * @return The createSwapPool.
        */
       java.lang.String getCreateSwapPool();
       /**
-       * <code>string create_swap_pool = 48;</code>
+       * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
        * @return The bytes for createSwapPool.
        */
       com.google.protobuf.ByteString
           getCreateSwapPoolBytes();
 
       /**
-       * <code>string add_liquidity = 49;</code>
+       * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
        * @return The addLiquidity.
        */
       java.lang.String getAddLiquidity();
       /**
-       * <code>string add_liquidity = 49;</code>
+       * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
        * @return The bytes for addLiquidity.
        */
       com.google.protobuf.ByteString
           getAddLiquidityBytes();
 
       /**
-       * <code>string remove_liquidity = 50;</code>
+       * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
        * @return The removeLiquidity.
        */
       java.lang.String getRemoveLiquidity();
       /**
-       * <code>string remove_liquidity = 50;</code>
+       * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
        * @return The bytes for removeLiquidity.
        */
       com.google.protobuf.ByteString
           getRemoveLiquidityBytes();
 
       /**
-       * <code>string edit_candidate_commission = 28;</code>
+       * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
        * @return The editCandidateCommission.
        */
       java.lang.String getEditCandidateCommission();
       /**
-       * <code>string edit_candidate_commission = 28;</code>
+       * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
        * @return The bytes for editCandidateCommission.
        */
       com.google.protobuf.ByteString
           getEditCandidateCommissionBytes();
 
       /**
-       * <code>string mint_token = 46;</code>
+       * <code>string mint_token = 46 [json_name = "mintToken"];</code>
        * @return The mintToken.
        */
       java.lang.String getMintToken();
       /**
-       * <code>string mint_token = 46;</code>
+       * <code>string mint_token = 46 [json_name = "mintToken"];</code>
        * @return The bytes for mintToken.
        */
       com.google.protobuf.ByteString
           getMintTokenBytes();
 
       /**
-       * <code>string burn_token = 47;</code>
+       * <code>string burn_token = 47 [json_name = "burnToken"];</code>
        * @return The burnToken.
        */
       java.lang.String getBurnToken();
       /**
-       * <code>string burn_token = 47;</code>
+       * <code>string burn_token = 47 [json_name = "burnToken"];</code>
        * @return The bytes for burnToken.
        */
       com.google.protobuf.ByteString
           getBurnTokenBytes();
 
       /**
-       * <code>string vote_commission = 31;</code>
+       * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
        * @return The voteCommission.
        */
       java.lang.String getVoteCommission();
       /**
-       * <code>string vote_commission = 31;</code>
+       * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
        * @return The bytes for voteCommission.
        */
       com.google.protobuf.ByteString
           getVoteCommissionBytes();
 
       /**
-       * <code>string vote_update = 32;</code>
+       * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
        * @return The voteUpdate.
        */
       java.lang.String getVoteUpdate();
       /**
-       * <code>string vote_update = 32;</code>
+       * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
        * @return The bytes for voteUpdate.
        */
       com.google.protobuf.ByteString
           getVoteUpdateBytes();
 
       /**
-       * <code>string failed_tx = 56;</code>
+       * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
        * @return The failedTx.
        */
       java.lang.String getFailedTx();
       /**
-       * <code>string failed_tx = 56;</code>
+       * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
        * @return The bytes for failedTx.
        */
       com.google.protobuf.ByteString
           getFailedTxBytes();
 
       /**
-       * <code>string add_limit_order = 57;</code>
+       * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
        * @return The addLimitOrder.
        */
       java.lang.String getAddLimitOrder();
       /**
-       * <code>string add_limit_order = 57;</code>
+       * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
        * @return The bytes for addLimitOrder.
        */
       com.google.protobuf.ByteString
           getAddLimitOrderBytes();
 
       /**
-       * <code>string remove_limit_order = 58;</code>
+       * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
        * @return The removeLimitOrder.
        */
       java.lang.String getRemoveLimitOrder();
       /**
-       * <code>string remove_limit_order = 58;</code>
+       * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
        * @return The bytes for removeLimitOrder.
        */
       com.google.protobuf.ByteString
           getRemoveLimitOrderBytes();
+
+      /**
+       * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+       * @return The moveStake.
+       */
+      java.lang.String getMoveStake();
+      /**
+       * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+       * @return The bytes for moveStake.
+       */
+      com.google.protobuf.ByteString
+          getMoveStakeBytes();
+
+      /**
+       * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+       * @return The lockStake.
+       */
+      java.lang.String getLockStake();
+      /**
+       * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+       * @return The bytes for lockStake.
+       */
+      com.google.protobuf.ByteString
+          getLockStakeBytes();
+
+      /**
+       * <code>string lock = 61 [json_name = "lock"];</code>
+       * @return The lock.
+       */
+      java.lang.String getLock();
+      /**
+       * <code>string lock = 61 [json_name = "lock"];</code>
+       * @return The bytes for lock.
+       */
+      com.google.protobuf.ByteString
+          getLockBytes();
     }
     /**
      * Protobuf type {@code api_pb.GenesisResponse.AppState.Commission}
@@ -16459,6 +19797,9 @@ private static final long serialVersionUID = 0L;
         failedTx_ = "";
         addLimitOrder_ = "";
         removeLimitOrder_ = "";
+        moveStake_ = "";
+        lockStake_ = "";
+        lock_ = "";
       }
 
       @java.lang.Override
@@ -16766,6 +20107,24 @@ private static final long serialVersionUID = 0L;
                 removeLimitOrder_ = s;
                 break;
               }
+              case 474: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                moveStake_ = s;
+                break;
+              }
+              case 482: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                lockStake_ = s;
+                break;
+              }
+              case 490: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                lock_ = s;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -16801,7 +20160,7 @@ private static final long serialVersionUID = 0L;
       public static final int COIN_FIELD_NUMBER = 3;
       private long coin_;
       /**
-       * <code>uint64 coin = 3;</code>
+       * <code>uint64 coin = 3 [json_name = "coin"];</code>
        * @return The coin.
        */
       @java.lang.Override
@@ -16812,7 +20171,7 @@ private static final long serialVersionUID = 0L;
       public static final int PAYLOAD_BYTE_FIELD_NUMBER = 4;
       private volatile java.lang.Object payloadByte_;
       /**
-       * <code>string payload_byte = 4;</code>
+       * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
        * @return The payloadByte.
        */
       @java.lang.Override
@@ -16829,7 +20188,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string payload_byte = 4;</code>
+       * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
        * @return The bytes for payloadByte.
        */
       @java.lang.Override
@@ -16850,7 +20209,7 @@ private static final long serialVersionUID = 0L;
       public static final int SEND_FIELD_NUMBER = 5;
       private volatile java.lang.Object send_;
       /**
-       * <code>string send = 5;</code>
+       * <code>string send = 5 [json_name = "send"];</code>
        * @return The send.
        */
       @java.lang.Override
@@ -16867,7 +20226,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string send = 5;</code>
+       * <code>string send = 5 [json_name = "send"];</code>
        * @return The bytes for send.
        */
       @java.lang.Override
@@ -16888,7 +20247,7 @@ private static final long serialVersionUID = 0L;
       public static final int BUY_BANCOR_FIELD_NUMBER = 38;
       private volatile java.lang.Object buyBancor_;
       /**
-       * <code>string buy_bancor = 38;</code>
+       * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
        * @return The buyBancor.
        */
       @java.lang.Override
@@ -16905,7 +20264,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string buy_bancor = 38;</code>
+       * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
        * @return The bytes for buyBancor.
        */
       @java.lang.Override
@@ -16926,7 +20285,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_BANCOR_FIELD_NUMBER = 39;
       private volatile java.lang.Object sellBancor_;
       /**
-       * <code>string sell_bancor = 39;</code>
+       * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
        * @return The sellBancor.
        */
       @java.lang.Override
@@ -16943,7 +20302,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_bancor = 39;</code>
+       * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
        * @return The bytes for sellBancor.
        */
       @java.lang.Override
@@ -16964,7 +20323,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_ALL_BANCOR_FIELD_NUMBER = 40;
       private volatile java.lang.Object sellAllBancor_;
       /**
-       * <code>string sell_all_bancor = 40;</code>
+       * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
        * @return The sellAllBancor.
        */
       @java.lang.Override
@@ -16981,7 +20340,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_all_bancor = 40;</code>
+       * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
        * @return The bytes for sellAllBancor.
        */
       @java.lang.Override
@@ -17002,7 +20361,7 @@ private static final long serialVersionUID = 0L;
       public static final int BUY_POOL_BASE_FIELD_NUMBER = 41;
       private volatile java.lang.Object buyPoolBase_;
       /**
-       * <code>string buy_pool_base = 41;</code>
+       * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
        * @return The buyPoolBase.
        */
       @java.lang.Override
@@ -17019,7 +20378,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string buy_pool_base = 41;</code>
+       * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
        * @return The bytes for buyPoolBase.
        */
       @java.lang.Override
@@ -17040,7 +20399,7 @@ private static final long serialVersionUID = 0L;
       public static final int BUY_POOL_DELTA_FIELD_NUMBER = 53;
       private volatile java.lang.Object buyPoolDelta_;
       /**
-       * <code>string buy_pool_delta = 53;</code>
+       * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
        * @return The buyPoolDelta.
        */
       @java.lang.Override
@@ -17057,7 +20416,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string buy_pool_delta = 53;</code>
+       * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
        * @return The bytes for buyPoolDelta.
        */
       @java.lang.Override
@@ -17078,7 +20437,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_POOL_BASE_FIELD_NUMBER = 42;
       private volatile java.lang.Object sellPoolBase_;
       /**
-       * <code>string sell_pool_base = 42;</code>
+       * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
        * @return The sellPoolBase.
        */
       @java.lang.Override
@@ -17095,7 +20454,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_pool_base = 42;</code>
+       * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
        * @return The bytes for sellPoolBase.
        */
       @java.lang.Override
@@ -17116,7 +20475,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_POOL_DELTA_FIELD_NUMBER = 54;
       private volatile java.lang.Object sellPoolDelta_;
       /**
-       * <code>string sell_pool_delta = 54;</code>
+       * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
        * @return The sellPoolDelta.
        */
       @java.lang.Override
@@ -17133,7 +20492,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_pool_delta = 54;</code>
+       * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
        * @return The bytes for sellPoolDelta.
        */
       @java.lang.Override
@@ -17154,7 +20513,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_ALL_POOL_BASE_FIELD_NUMBER = 43;
       private volatile java.lang.Object sellAllPoolBase_;
       /**
-       * <code>string sell_all_pool_base = 43;</code>
+       * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
        * @return The sellAllPoolBase.
        */
       @java.lang.Override
@@ -17171,7 +20530,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_all_pool_base = 43;</code>
+       * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
        * @return The bytes for sellAllPoolBase.
        */
       @java.lang.Override
@@ -17192,7 +20551,7 @@ private static final long serialVersionUID = 0L;
       public static final int SELL_ALL_POOL_DELTA_FIELD_NUMBER = 55;
       private volatile java.lang.Object sellAllPoolDelta_;
       /**
-       * <code>string sell_all_pool_delta = 55;</code>
+       * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
        * @return The sellAllPoolDelta.
        */
       @java.lang.Override
@@ -17209,7 +20568,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string sell_all_pool_delta = 55;</code>
+       * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
        * @return The bytes for sellAllPoolDelta.
        */
       @java.lang.Override
@@ -17230,7 +20589,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TICKER3_FIELD_NUMBER = 7;
       private volatile java.lang.Object createTicker3_;
       /**
-       * <code>string create_ticker3 = 7;</code>
+       * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
        * @return The createTicker3.
        */
       @java.lang.Override
@@ -17247,7 +20606,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_ticker3 = 7;</code>
+       * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
        * @return The bytes for createTicker3.
        */
       @java.lang.Override
@@ -17268,7 +20627,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TICKER4_FIELD_NUMBER = 8;
       private volatile java.lang.Object createTicker4_;
       /**
-       * <code>string create_ticker4 = 8;</code>
+       * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
        * @return The createTicker4.
        */
       @java.lang.Override
@@ -17285,7 +20644,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_ticker4 = 8;</code>
+       * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
        * @return The bytes for createTicker4.
        */
       @java.lang.Override
@@ -17306,7 +20665,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TICKER5_FIELD_NUMBER = 9;
       private volatile java.lang.Object createTicker5_;
       /**
-       * <code>string create_ticker5 = 9;</code>
+       * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
        * @return The createTicker5.
        */
       @java.lang.Override
@@ -17323,7 +20682,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_ticker5 = 9;</code>
+       * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
        * @return The bytes for createTicker5.
        */
       @java.lang.Override
@@ -17344,7 +20703,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TICKER6_FIELD_NUMBER = 10;
       private volatile java.lang.Object createTicker6_;
       /**
-       * <code>string create_ticker6 = 10;</code>
+       * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
        * @return The createTicker6.
        */
       @java.lang.Override
@@ -17361,7 +20720,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_ticker6 = 10;</code>
+       * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
        * @return The bytes for createTicker6.
        */
       @java.lang.Override
@@ -17382,7 +20741,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TICKER7_10_FIELD_NUMBER = 11;
       private volatile java.lang.Object createTicker710_;
       /**
-       * <code>string create_ticker7_10 = 11;</code>
+       * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
        * @return The createTicker710.
        */
       @java.lang.Override
@@ -17399,7 +20758,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_ticker7_10 = 11;</code>
+       * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
        * @return The bytes for createTicker710.
        */
       @java.lang.Override
@@ -17420,7 +20779,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_COIN_FIELD_NUMBER = 34;
       private volatile java.lang.Object createCoin_;
       /**
-       * <code>string create_coin = 34;</code>
+       * <code>string create_coin = 34 [json_name = "createCoin"];</code>
        * @return The createCoin.
        */
       @java.lang.Override
@@ -17437,7 +20796,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_coin = 34;</code>
+       * <code>string create_coin = 34 [json_name = "createCoin"];</code>
        * @return The bytes for createCoin.
        */
       @java.lang.Override
@@ -17458,7 +20817,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_TOKEN_FIELD_NUMBER = 35;
       private volatile java.lang.Object createToken_;
       /**
-       * <code>string create_token = 35;</code>
+       * <code>string create_token = 35 [json_name = "createToken"];</code>
        * @return The createToken.
        */
       @java.lang.Override
@@ -17475,7 +20834,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_token = 35;</code>
+       * <code>string create_token = 35 [json_name = "createToken"];</code>
        * @return The bytes for createToken.
        */
       @java.lang.Override
@@ -17496,7 +20855,7 @@ private static final long serialVersionUID = 0L;
       public static final int RECREATE_COIN_FIELD_NUMBER = 36;
       private volatile java.lang.Object recreateCoin_;
       /**
-       * <code>string recreate_coin = 36;</code>
+       * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
        * @return The recreateCoin.
        */
       @java.lang.Override
@@ -17513,7 +20872,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string recreate_coin = 36;</code>
+       * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
        * @return The bytes for recreateCoin.
        */
       @java.lang.Override
@@ -17534,7 +20893,7 @@ private static final long serialVersionUID = 0L;
       public static final int RECREATE_TOKEN_FIELD_NUMBER = 37;
       private volatile java.lang.Object recreateToken_;
       /**
-       * <code>string recreate_token = 37;</code>
+       * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
        * @return The recreateToken.
        */
       @java.lang.Override
@@ -17551,7 +20910,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string recreate_token = 37;</code>
+       * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
        * @return The bytes for recreateToken.
        */
       @java.lang.Override
@@ -17572,7 +20931,7 @@ private static final long serialVersionUID = 0L;
       public static final int DECLARE_CANDIDACY_FIELD_NUMBER = 13;
       private volatile java.lang.Object declareCandidacy_;
       /**
-       * <code>string declare_candidacy = 13;</code>
+       * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
        * @return The declareCandidacy.
        */
       @java.lang.Override
@@ -17589,7 +20948,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string declare_candidacy = 13;</code>
+       * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
        * @return The bytes for declareCandidacy.
        */
       @java.lang.Override
@@ -17610,7 +20969,7 @@ private static final long serialVersionUID = 0L;
       public static final int DELEGATE_FIELD_NUMBER = 14;
       private volatile java.lang.Object delegate_;
       /**
-       * <code>string delegate = 14;</code>
+       * <code>string delegate = 14 [json_name = "delegate"];</code>
        * @return The delegate.
        */
       @java.lang.Override
@@ -17627,7 +20986,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string delegate = 14;</code>
+       * <code>string delegate = 14 [json_name = "delegate"];</code>
        * @return The bytes for delegate.
        */
       @java.lang.Override
@@ -17648,7 +21007,7 @@ private static final long serialVersionUID = 0L;
       public static final int UNBOND_FIELD_NUMBER = 15;
       private volatile java.lang.Object unbond_;
       /**
-       * <code>string unbond = 15;</code>
+       * <code>string unbond = 15 [json_name = "unbond"];</code>
        * @return The unbond.
        */
       @java.lang.Override
@@ -17665,7 +21024,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string unbond = 15;</code>
+       * <code>string unbond = 15 [json_name = "unbond"];</code>
        * @return The bytes for unbond.
        */
       @java.lang.Override
@@ -17686,7 +21045,7 @@ private static final long serialVersionUID = 0L;
       public static final int REDEEM_CHECK_FIELD_NUMBER = 16;
       private volatile java.lang.Object redeemCheck_;
       /**
-       * <code>string redeem_check = 16;</code>
+       * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
        * @return The redeemCheck.
        */
       @java.lang.Override
@@ -17703,7 +21062,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string redeem_check = 16;</code>
+       * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
        * @return The bytes for redeemCheck.
        */
       @java.lang.Override
@@ -17724,7 +21083,7 @@ private static final long serialVersionUID = 0L;
       public static final int SET_CANDIDATE_ON_FIELD_NUMBER = 44;
       private volatile java.lang.Object setCandidateOn_;
       /**
-       * <code>string set_candidate_on = 44;</code>
+       * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
        * @return The setCandidateOn.
        */
       @java.lang.Override
@@ -17741,7 +21100,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string set_candidate_on = 44;</code>
+       * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
        * @return The bytes for setCandidateOn.
        */
       @java.lang.Override
@@ -17762,7 +21121,7 @@ private static final long serialVersionUID = 0L;
       public static final int SET_CANDIDATE_OFF_FIELD_NUMBER = 45;
       private volatile java.lang.Object setCandidateOff_;
       /**
-       * <code>string set_candidate_off = 45;</code>
+       * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
        * @return The setCandidateOff.
        */
       @java.lang.Override
@@ -17779,7 +21138,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string set_candidate_off = 45;</code>
+       * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
        * @return The bytes for setCandidateOff.
        */
       @java.lang.Override
@@ -17800,7 +21159,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_MULTISIG_FIELD_NUMBER = 18;
       private volatile java.lang.Object createMultisig_;
       /**
-       * <code>string create_multisig = 18;</code>
+       * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
        * @return The createMultisig.
        */
       @java.lang.Override
@@ -17817,7 +21176,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_multisig = 18;</code>
+       * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
        * @return The bytes for createMultisig.
        */
       @java.lang.Override
@@ -17838,7 +21197,7 @@ private static final long serialVersionUID = 0L;
       public static final int MULTISEND_BASE_FIELD_NUMBER = 51;
       private volatile java.lang.Object multisendBase_;
       /**
-       * <code>string multisend_base = 51;</code>
+       * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
        * @return The multisendBase.
        */
       @java.lang.Override
@@ -17855,7 +21214,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string multisend_base = 51;</code>
+       * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
        * @return The bytes for multisendBase.
        */
       @java.lang.Override
@@ -17876,7 +21235,7 @@ private static final long serialVersionUID = 0L;
       public static final int MULTISEND_DELTA_FIELD_NUMBER = 52;
       private volatile java.lang.Object multisendDelta_;
       /**
-       * <code>string multisend_delta = 52;</code>
+       * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
        * @return The multisendDelta.
        */
       @java.lang.Override
@@ -17893,7 +21252,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string multisend_delta = 52;</code>
+       * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
        * @return The bytes for multisendDelta.
        */
       @java.lang.Override
@@ -17914,7 +21273,7 @@ private static final long serialVersionUID = 0L;
       public static final int EDIT_CANDIDATE_FIELD_NUMBER = 20;
       private volatile java.lang.Object editCandidate_;
       /**
-       * <code>string edit_candidate = 20;</code>
+       * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
        * @return The editCandidate.
        */
       @java.lang.Override
@@ -17931,7 +21290,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string edit_candidate = 20;</code>
+       * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
        * @return The bytes for editCandidate.
        */
       @java.lang.Override
@@ -17952,7 +21311,7 @@ private static final long serialVersionUID = 0L;
       public static final int SET_HALT_BLOCK_FIELD_NUMBER = 21;
       private volatile java.lang.Object setHaltBlock_;
       /**
-       * <code>string set_halt_block = 21;</code>
+       * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
        * @return The setHaltBlock.
        */
       @java.lang.Override
@@ -17969,7 +21328,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string set_halt_block = 21;</code>
+       * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
        * @return The bytes for setHaltBlock.
        */
       @java.lang.Override
@@ -17990,7 +21349,7 @@ private static final long serialVersionUID = 0L;
       public static final int EDIT_TICKER_OWNER_FIELD_NUMBER = 22;
       private volatile java.lang.Object editTickerOwner_;
       /**
-       * <code>string edit_ticker_owner = 22;</code>
+       * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
        * @return The editTickerOwner.
        */
       @java.lang.Override
@@ -18007,7 +21366,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string edit_ticker_owner = 22;</code>
+       * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
        * @return The bytes for editTickerOwner.
        */
       @java.lang.Override
@@ -18028,7 +21387,7 @@ private static final long serialVersionUID = 0L;
       public static final int EDIT_MULTISIG_FIELD_NUMBER = 23;
       private volatile java.lang.Object editMultisig_;
       /**
-       * <code>string edit_multisig = 23;</code>
+       * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
        * @return The editMultisig.
        */
       @java.lang.Override
@@ -18045,7 +21404,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string edit_multisig = 23;</code>
+       * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
        * @return The bytes for editMultisig.
        */
       @java.lang.Override
@@ -18066,7 +21425,7 @@ private static final long serialVersionUID = 0L;
       public static final int EDIT_CANDIDATE_PUBLIC_KEY_FIELD_NUMBER = 25;
       private volatile java.lang.Object editCandidatePublicKey_;
       /**
-       * <code>string edit_candidate_public_key = 25;</code>
+       * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
        * @return The editCandidatePublicKey.
        */
       @java.lang.Override
@@ -18083,7 +21442,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string edit_candidate_public_key = 25;</code>
+       * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
        * @return The bytes for editCandidatePublicKey.
        */
       @java.lang.Override
@@ -18104,7 +21463,7 @@ private static final long serialVersionUID = 0L;
       public static final int CREATE_SWAP_POOL_FIELD_NUMBER = 48;
       private volatile java.lang.Object createSwapPool_;
       /**
-       * <code>string create_swap_pool = 48;</code>
+       * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
        * @return The createSwapPool.
        */
       @java.lang.Override
@@ -18121,7 +21480,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string create_swap_pool = 48;</code>
+       * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
        * @return The bytes for createSwapPool.
        */
       @java.lang.Override
@@ -18142,7 +21501,7 @@ private static final long serialVersionUID = 0L;
       public static final int ADD_LIQUIDITY_FIELD_NUMBER = 49;
       private volatile java.lang.Object addLiquidity_;
       /**
-       * <code>string add_liquidity = 49;</code>
+       * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
        * @return The addLiquidity.
        */
       @java.lang.Override
@@ -18159,7 +21518,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string add_liquidity = 49;</code>
+       * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
        * @return The bytes for addLiquidity.
        */
       @java.lang.Override
@@ -18180,7 +21539,7 @@ private static final long serialVersionUID = 0L;
       public static final int REMOVE_LIQUIDITY_FIELD_NUMBER = 50;
       private volatile java.lang.Object removeLiquidity_;
       /**
-       * <code>string remove_liquidity = 50;</code>
+       * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
        * @return The removeLiquidity.
        */
       @java.lang.Override
@@ -18197,7 +21556,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string remove_liquidity = 50;</code>
+       * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
        * @return The bytes for removeLiquidity.
        */
       @java.lang.Override
@@ -18218,7 +21577,7 @@ private static final long serialVersionUID = 0L;
       public static final int EDIT_CANDIDATE_COMMISSION_FIELD_NUMBER = 28;
       private volatile java.lang.Object editCandidateCommission_;
       /**
-       * <code>string edit_candidate_commission = 28;</code>
+       * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
        * @return The editCandidateCommission.
        */
       @java.lang.Override
@@ -18235,7 +21594,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string edit_candidate_commission = 28;</code>
+       * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
        * @return The bytes for editCandidateCommission.
        */
       @java.lang.Override
@@ -18256,7 +21615,7 @@ private static final long serialVersionUID = 0L;
       public static final int MINT_TOKEN_FIELD_NUMBER = 46;
       private volatile java.lang.Object mintToken_;
       /**
-       * <code>string mint_token = 46;</code>
+       * <code>string mint_token = 46 [json_name = "mintToken"];</code>
        * @return The mintToken.
        */
       @java.lang.Override
@@ -18273,7 +21632,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string mint_token = 46;</code>
+       * <code>string mint_token = 46 [json_name = "mintToken"];</code>
        * @return The bytes for mintToken.
        */
       @java.lang.Override
@@ -18294,7 +21653,7 @@ private static final long serialVersionUID = 0L;
       public static final int BURN_TOKEN_FIELD_NUMBER = 47;
       private volatile java.lang.Object burnToken_;
       /**
-       * <code>string burn_token = 47;</code>
+       * <code>string burn_token = 47 [json_name = "burnToken"];</code>
        * @return The burnToken.
        */
       @java.lang.Override
@@ -18311,7 +21670,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string burn_token = 47;</code>
+       * <code>string burn_token = 47 [json_name = "burnToken"];</code>
        * @return The bytes for burnToken.
        */
       @java.lang.Override
@@ -18332,7 +21691,7 @@ private static final long serialVersionUID = 0L;
       public static final int VOTE_COMMISSION_FIELD_NUMBER = 31;
       private volatile java.lang.Object voteCommission_;
       /**
-       * <code>string vote_commission = 31;</code>
+       * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
        * @return The voteCommission.
        */
       @java.lang.Override
@@ -18349,7 +21708,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string vote_commission = 31;</code>
+       * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
        * @return The bytes for voteCommission.
        */
       @java.lang.Override
@@ -18370,7 +21729,7 @@ private static final long serialVersionUID = 0L;
       public static final int VOTE_UPDATE_FIELD_NUMBER = 32;
       private volatile java.lang.Object voteUpdate_;
       /**
-       * <code>string vote_update = 32;</code>
+       * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
        * @return The voteUpdate.
        */
       @java.lang.Override
@@ -18387,7 +21746,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string vote_update = 32;</code>
+       * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
        * @return The bytes for voteUpdate.
        */
       @java.lang.Override
@@ -18408,7 +21767,7 @@ private static final long serialVersionUID = 0L;
       public static final int FAILED_TX_FIELD_NUMBER = 56;
       private volatile java.lang.Object failedTx_;
       /**
-       * <code>string failed_tx = 56;</code>
+       * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
        * @return The failedTx.
        */
       @java.lang.Override
@@ -18425,7 +21784,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string failed_tx = 56;</code>
+       * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
        * @return The bytes for failedTx.
        */
       @java.lang.Override
@@ -18446,7 +21805,7 @@ private static final long serialVersionUID = 0L;
       public static final int ADD_LIMIT_ORDER_FIELD_NUMBER = 57;
       private volatile java.lang.Object addLimitOrder_;
       /**
-       * <code>string add_limit_order = 57;</code>
+       * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
        * @return The addLimitOrder.
        */
       @java.lang.Override
@@ -18463,7 +21822,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string add_limit_order = 57;</code>
+       * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
        * @return The bytes for addLimitOrder.
        */
       @java.lang.Override
@@ -18484,7 +21843,7 @@ private static final long serialVersionUID = 0L;
       public static final int REMOVE_LIMIT_ORDER_FIELD_NUMBER = 58;
       private volatile java.lang.Object removeLimitOrder_;
       /**
-       * <code>string remove_limit_order = 58;</code>
+       * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
        * @return The removeLimitOrder.
        */
       @java.lang.Override
@@ -18501,7 +21860,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string remove_limit_order = 58;</code>
+       * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
        * @return The bytes for removeLimitOrder.
        */
       @java.lang.Override
@@ -18513,6 +21872,120 @@ private static final long serialVersionUID = 0L;
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           removeLimitOrder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MOVE_STAKE_FIELD_NUMBER = 59;
+      private volatile java.lang.Object moveStake_;
+      /**
+       * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+       * @return The moveStake.
+       */
+      @java.lang.Override
+      public java.lang.String getMoveStake() {
+        java.lang.Object ref = moveStake_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moveStake_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+       * @return The bytes for moveStake.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMoveStakeBytes() {
+        java.lang.Object ref = moveStake_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moveStake_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LOCK_STAKE_FIELD_NUMBER = 60;
+      private volatile java.lang.Object lockStake_;
+      /**
+       * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+       * @return The lockStake.
+       */
+      @java.lang.Override
+      public java.lang.String getLockStake() {
+        java.lang.Object ref = lockStake_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lockStake_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+       * @return The bytes for lockStake.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLockStakeBytes() {
+        java.lang.Object ref = lockStake_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lockStake_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LOCK_FIELD_NUMBER = 61;
+      private volatile java.lang.Object lock_;
+      /**
+       * <code>string lock = 61 [json_name = "lock"];</code>
+       * @return The lock.
+       */
+      @java.lang.Override
+      public java.lang.String getLock() {
+        java.lang.Object ref = lock_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lock_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string lock = 61 [json_name = "lock"];</code>
+       * @return The bytes for lock.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLockBytes() {
+        java.lang.Object ref = lock_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lock_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -18536,140 +22009,149 @@ private static final long serialVersionUID = 0L;
         if (coin_ != 0L) {
           output.writeUInt64(3, coin_);
         }
-        if (!getPayloadByteBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadByte_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payloadByte_);
         }
-        if (!getSendBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(send_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, send_);
         }
-        if (!getCreateTicker3Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker3_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createTicker3_);
         }
-        if (!getCreateTicker4Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker4_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 8, createTicker4_);
         }
-        if (!getCreateTicker5Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker5_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 9, createTicker5_);
         }
-        if (!getCreateTicker6Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker6_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 10, createTicker6_);
         }
-        if (!getCreateTicker710Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker710_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 11, createTicker710_);
         }
-        if (!getDeclareCandidacyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(declareCandidacy_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 13, declareCandidacy_);
         }
-        if (!getDelegateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 14, delegate_);
         }
-        if (!getUnbondBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbond_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 15, unbond_);
         }
-        if (!getRedeemCheckBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemCheck_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 16, redeemCheck_);
         }
-        if (!getCreateMultisigBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createMultisig_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 18, createMultisig_);
         }
-        if (!getEditCandidateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidate_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 20, editCandidate_);
         }
-        if (!getSetHaltBlockBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setHaltBlock_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 21, setHaltBlock_);
         }
-        if (!getEditTickerOwnerBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editTickerOwner_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 22, editTickerOwner_);
         }
-        if (!getEditMultisigBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editMultisig_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 23, editMultisig_);
         }
-        if (!getEditCandidatePublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidatePublicKey_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 25, editCandidatePublicKey_);
         }
-        if (!getEditCandidateCommissionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidateCommission_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 28, editCandidateCommission_);
         }
-        if (!getVoteCommissionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteCommission_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 31, voteCommission_);
         }
-        if (!getVoteUpdateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteUpdate_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 32, voteUpdate_);
         }
-        if (!getCreateCoinBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createCoin_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 34, createCoin_);
         }
-        if (!getCreateTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 35, createToken_);
         }
-        if (!getRecreateCoinBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateCoin_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 36, recreateCoin_);
         }
-        if (!getRecreateTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 37, recreateToken_);
         }
-        if (!getBuyBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyBancor_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 38, buyBancor_);
         }
-        if (!getSellBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellBancor_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 39, sellBancor_);
         }
-        if (!getSellAllBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllBancor_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 40, sellAllBancor_);
         }
-        if (!getBuyPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolBase_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 41, buyPoolBase_);
         }
-        if (!getSellPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolBase_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 42, sellPoolBase_);
         }
-        if (!getSellAllPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolBase_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 43, sellAllPoolBase_);
         }
-        if (!getSetCandidateOnBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOn_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 44, setCandidateOn_);
         }
-        if (!getSetCandidateOffBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOff_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 45, setCandidateOff_);
         }
-        if (!getMintTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 46, mintToken_);
         }
-        if (!getBurnTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 47, burnToken_);
         }
-        if (!getCreateSwapPoolBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createSwapPool_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 48, createSwapPool_);
         }
-        if (!getAddLiquidityBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLiquidity_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 49, addLiquidity_);
         }
-        if (!getRemoveLiquidityBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLiquidity_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 50, removeLiquidity_);
         }
-        if (!getMultisendBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendBase_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 51, multisendBase_);
         }
-        if (!getMultisendDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendDelta_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 52, multisendDelta_);
         }
-        if (!getBuyPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolDelta_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 53, buyPoolDelta_);
         }
-        if (!getSellPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolDelta_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 54, sellPoolDelta_);
         }
-        if (!getSellAllPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolDelta_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 55, sellAllPoolDelta_);
         }
-        if (!getFailedTxBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failedTx_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 56, failedTx_);
         }
-        if (!getAddLimitOrderBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLimitOrder_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 57, addLimitOrder_);
         }
-        if (!getRemoveLimitOrderBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLimitOrder_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 58, removeLimitOrder_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moveStake_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 59, moveStake_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockStake_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 60, lockStake_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lock_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 61, lock_);
         }
         unknownFields.writeTo(output);
       }
@@ -18684,140 +22166,149 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(3, coin_);
         }
-        if (!getPayloadByteBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payloadByte_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payloadByte_);
         }
-        if (!getSendBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(send_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, send_);
         }
-        if (!getCreateTicker3Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker3_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createTicker3_);
         }
-        if (!getCreateTicker4Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker4_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, createTicker4_);
         }
-        if (!getCreateTicker5Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker5_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, createTicker5_);
         }
-        if (!getCreateTicker6Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker6_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, createTicker6_);
         }
-        if (!getCreateTicker710Bytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createTicker710_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, createTicker710_);
         }
-        if (!getDeclareCandidacyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(declareCandidacy_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, declareCandidacy_);
         }
-        if (!getDelegateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, delegate_);
         }
-        if (!getUnbondBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbond_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, unbond_);
         }
-        if (!getRedeemCheckBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemCheck_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, redeemCheck_);
         }
-        if (!getCreateMultisigBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createMultisig_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, createMultisig_);
         }
-        if (!getEditCandidateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidate_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, editCandidate_);
         }
-        if (!getSetHaltBlockBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setHaltBlock_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, setHaltBlock_);
         }
-        if (!getEditTickerOwnerBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editTickerOwner_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, editTickerOwner_);
         }
-        if (!getEditMultisigBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editMultisig_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, editMultisig_);
         }
-        if (!getEditCandidatePublicKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidatePublicKey_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, editCandidatePublicKey_);
         }
-        if (!getEditCandidateCommissionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editCandidateCommission_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, editCandidateCommission_);
         }
-        if (!getVoteCommissionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteCommission_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, voteCommission_);
         }
-        if (!getVoteUpdateBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteUpdate_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, voteUpdate_);
         }
-        if (!getCreateCoinBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createCoin_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, createCoin_);
         }
-        if (!getCreateTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, createToken_);
         }
-        if (!getRecreateCoinBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateCoin_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, recreateCoin_);
         }
-        if (!getRecreateTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recreateToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, recreateToken_);
         }
-        if (!getBuyBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyBancor_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, buyBancor_);
         }
-        if (!getSellBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellBancor_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, sellBancor_);
         }
-        if (!getSellAllBancorBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllBancor_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, sellAllBancor_);
         }
-        if (!getBuyPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolBase_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, buyPoolBase_);
         }
-        if (!getSellPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolBase_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, sellPoolBase_);
         }
-        if (!getSellAllPoolBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolBase_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, sellAllPoolBase_);
         }
-        if (!getSetCandidateOnBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOn_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(44, setCandidateOn_);
         }
-        if (!getSetCandidateOffBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setCandidateOff_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(45, setCandidateOff_);
         }
-        if (!getMintTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, mintToken_);
         }
-        if (!getBurnTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, burnToken_);
         }
-        if (!getCreateSwapPoolBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createSwapPool_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(48, createSwapPool_);
         }
-        if (!getAddLiquidityBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLiquidity_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(49, addLiquidity_);
         }
-        if (!getRemoveLiquidityBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLiquidity_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, removeLiquidity_);
         }
-        if (!getMultisendBaseBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendBase_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(51, multisendBase_);
         }
-        if (!getMultisendDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multisendDelta_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(52, multisendDelta_);
         }
-        if (!getBuyPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyPoolDelta_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(53, buyPoolDelta_);
         }
-        if (!getSellPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellPoolDelta_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(54, sellPoolDelta_);
         }
-        if (!getSellAllPoolDeltaBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellAllPoolDelta_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(55, sellAllPoolDelta_);
         }
-        if (!getFailedTxBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failedTx_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(56, failedTx_);
         }
-        if (!getAddLimitOrderBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addLimitOrder_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(57, addLimitOrder_);
         }
-        if (!getRemoveLimitOrderBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeLimitOrder_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(58, removeLimitOrder_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moveStake_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(59, moveStake_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockStake_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(60, lockStake_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lock_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(61, lock_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -18926,6 +22417,12 @@ private static final long serialVersionUID = 0L;
             .equals(other.getAddLimitOrder())) return false;
         if (!getRemoveLimitOrder()
             .equals(other.getRemoveLimitOrder())) return false;
+        if (!getMoveStake()
+            .equals(other.getMoveStake())) return false;
+        if (!getLockStake()
+            .equals(other.getLockStake())) return false;
+        if (!getLock()
+            .equals(other.getLock())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -19030,6 +22527,12 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getAddLimitOrder().hashCode();
         hash = (37 * hash) + REMOVE_LIMIT_ORDER_FIELD_NUMBER;
         hash = (53 * hash) + getRemoveLimitOrder().hashCode();
+        hash = (37 * hash) + MOVE_STAKE_FIELD_NUMBER;
+        hash = (53 * hash) + getMoveStake().hashCode();
+        hash = (37 * hash) + LOCK_STAKE_FIELD_NUMBER;
+        hash = (53 * hash) + getLockStake().hashCode();
+        hash = (37 * hash) + LOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getLock().hashCode();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -19255,6 +22758,12 @@ private static final long serialVersionUID = 0L;
 
           removeLimitOrder_ = "";
 
+          moveStake_ = "";
+
+          lockStake_ = "";
+
+          lock_ = "";
+
           return this;
         }
 
@@ -19327,6 +22836,9 @@ private static final long serialVersionUID = 0L;
           result.failedTx_ = failedTx_;
           result.addLimitOrder_ = addLimitOrder_;
           result.removeLimitOrder_ = removeLimitOrder_;
+          result.moveStake_ = moveStake_;
+          result.lockStake_ = lockStake_;
+          result.lock_ = lock_;
           onBuilt();
           return result;
         }
@@ -19558,6 +23070,18 @@ private static final long serialVersionUID = 0L;
             removeLimitOrder_ = other.removeLimitOrder_;
             onChanged();
           }
+          if (!other.getMoveStake().isEmpty()) {
+            moveStake_ = other.moveStake_;
+            onChanged();
+          }
+          if (!other.getLockStake().isEmpty()) {
+            lockStake_ = other.lockStake_;
+            onChanged();
+          }
+          if (!other.getLock().isEmpty()) {
+            lock_ = other.lock_;
+            onChanged();
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -19589,7 +23113,7 @@ private static final long serialVersionUID = 0L;
 
         private long coin_ ;
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return The coin.
          */
         @java.lang.Override
@@ -19597,7 +23121,7 @@ private static final long serialVersionUID = 0L;
           return coin_;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @param value The coin to set.
          * @return This builder for chaining.
          */
@@ -19608,7 +23132,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 coin = 3;</code>
+         * <code>uint64 coin = 3 [json_name = "coin"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCoin() {
@@ -19620,7 +23144,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object payloadByte_ = "";
         /**
-         * <code>string payload_byte = 4;</code>
+         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
          * @return The payloadByte.
          */
         public java.lang.String getPayloadByte() {
@@ -19636,7 +23160,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string payload_byte = 4;</code>
+         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
          * @return The bytes for payloadByte.
          */
         public com.google.protobuf.ByteString
@@ -19653,7 +23177,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string payload_byte = 4;</code>
+         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
          * @param value The payloadByte to set.
          * @return This builder for chaining.
          */
@@ -19668,7 +23192,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string payload_byte = 4;</code>
+         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPayloadByte() {
@@ -19678,7 +23202,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string payload_byte = 4;</code>
+         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
          * @param value The bytes for payloadByte to set.
          * @return This builder for chaining.
          */
@@ -19696,7 +23220,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object send_ = "";
         /**
-         * <code>string send = 5;</code>
+         * <code>string send = 5 [json_name = "send"];</code>
          * @return The send.
          */
         public java.lang.String getSend() {
@@ -19712,7 +23236,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string send = 5;</code>
+         * <code>string send = 5 [json_name = "send"];</code>
          * @return The bytes for send.
          */
         public com.google.protobuf.ByteString
@@ -19729,7 +23253,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string send = 5;</code>
+         * <code>string send = 5 [json_name = "send"];</code>
          * @param value The send to set.
          * @return This builder for chaining.
          */
@@ -19744,7 +23268,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string send = 5;</code>
+         * <code>string send = 5 [json_name = "send"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSend() {
@@ -19754,7 +23278,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string send = 5;</code>
+         * <code>string send = 5 [json_name = "send"];</code>
          * @param value The bytes for send to set.
          * @return This builder for chaining.
          */
@@ -19772,7 +23296,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object buyBancor_ = "";
         /**
-         * <code>string buy_bancor = 38;</code>
+         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
          * @return The buyBancor.
          */
         public java.lang.String getBuyBancor() {
@@ -19788,7 +23312,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_bancor = 38;</code>
+         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
          * @return The bytes for buyBancor.
          */
         public com.google.protobuf.ByteString
@@ -19805,7 +23329,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_bancor = 38;</code>
+         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
          * @param value The buyBancor to set.
          * @return This builder for chaining.
          */
@@ -19820,7 +23344,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_bancor = 38;</code>
+         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBuyBancor() {
@@ -19830,7 +23354,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_bancor = 38;</code>
+         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
          * @param value The bytes for buyBancor to set.
          * @return This builder for chaining.
          */
@@ -19848,7 +23372,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellBancor_ = "";
         /**
-         * <code>string sell_bancor = 39;</code>
+         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
          * @return The sellBancor.
          */
         public java.lang.String getSellBancor() {
@@ -19864,7 +23388,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_bancor = 39;</code>
+         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
          * @return The bytes for sellBancor.
          */
         public com.google.protobuf.ByteString
@@ -19881,7 +23405,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_bancor = 39;</code>
+         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
          * @param value The sellBancor to set.
          * @return This builder for chaining.
          */
@@ -19896,7 +23420,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_bancor = 39;</code>
+         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellBancor() {
@@ -19906,7 +23430,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_bancor = 39;</code>
+         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
          * @param value The bytes for sellBancor to set.
          * @return This builder for chaining.
          */
@@ -19924,7 +23448,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellAllBancor_ = "";
         /**
-         * <code>string sell_all_bancor = 40;</code>
+         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
          * @return The sellAllBancor.
          */
         public java.lang.String getSellAllBancor() {
@@ -19940,7 +23464,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_bancor = 40;</code>
+         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
          * @return The bytes for sellAllBancor.
          */
         public com.google.protobuf.ByteString
@@ -19957,7 +23481,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_bancor = 40;</code>
+         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
          * @param value The sellAllBancor to set.
          * @return This builder for chaining.
          */
@@ -19972,7 +23496,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_bancor = 40;</code>
+         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellAllBancor() {
@@ -19982,7 +23506,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_bancor = 40;</code>
+         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
          * @param value The bytes for sellAllBancor to set.
          * @return This builder for chaining.
          */
@@ -20000,7 +23524,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object buyPoolBase_ = "";
         /**
-         * <code>string buy_pool_base = 41;</code>
+         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
          * @return The buyPoolBase.
          */
         public java.lang.String getBuyPoolBase() {
@@ -20016,7 +23540,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_pool_base = 41;</code>
+         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
          * @return The bytes for buyPoolBase.
          */
         public com.google.protobuf.ByteString
@@ -20033,7 +23557,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_pool_base = 41;</code>
+         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
          * @param value The buyPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20048,7 +23572,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_pool_base = 41;</code>
+         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBuyPoolBase() {
@@ -20058,7 +23582,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_pool_base = 41;</code>
+         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
          * @param value The bytes for buyPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20076,7 +23600,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object buyPoolDelta_ = "";
         /**
-         * <code>string buy_pool_delta = 53;</code>
+         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
          * @return The buyPoolDelta.
          */
         public java.lang.String getBuyPoolDelta() {
@@ -20092,7 +23616,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_pool_delta = 53;</code>
+         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
          * @return The bytes for buyPoolDelta.
          */
         public com.google.protobuf.ByteString
@@ -20109,7 +23633,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string buy_pool_delta = 53;</code>
+         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
          * @param value The buyPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20124,7 +23648,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_pool_delta = 53;</code>
+         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBuyPoolDelta() {
@@ -20134,7 +23658,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string buy_pool_delta = 53;</code>
+         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
          * @param value The bytes for buyPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20152,7 +23676,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellPoolBase_ = "";
         /**
-         * <code>string sell_pool_base = 42;</code>
+         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
          * @return The sellPoolBase.
          */
         public java.lang.String getSellPoolBase() {
@@ -20168,7 +23692,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_pool_base = 42;</code>
+         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
          * @return The bytes for sellPoolBase.
          */
         public com.google.protobuf.ByteString
@@ -20185,7 +23709,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_pool_base = 42;</code>
+         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
          * @param value The sellPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20200,7 +23724,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_pool_base = 42;</code>
+         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellPoolBase() {
@@ -20210,7 +23734,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_pool_base = 42;</code>
+         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
          * @param value The bytes for sellPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20228,7 +23752,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellPoolDelta_ = "";
         /**
-         * <code>string sell_pool_delta = 54;</code>
+         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
          * @return The sellPoolDelta.
          */
         public java.lang.String getSellPoolDelta() {
@@ -20244,7 +23768,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_pool_delta = 54;</code>
+         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
          * @return The bytes for sellPoolDelta.
          */
         public com.google.protobuf.ByteString
@@ -20261,7 +23785,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_pool_delta = 54;</code>
+         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
          * @param value The sellPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20276,7 +23800,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_pool_delta = 54;</code>
+         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellPoolDelta() {
@@ -20286,7 +23810,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_pool_delta = 54;</code>
+         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
          * @param value The bytes for sellPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20304,7 +23828,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellAllPoolBase_ = "";
         /**
-         * <code>string sell_all_pool_base = 43;</code>
+         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
          * @return The sellAllPoolBase.
          */
         public java.lang.String getSellAllPoolBase() {
@@ -20320,7 +23844,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_pool_base = 43;</code>
+         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
          * @return The bytes for sellAllPoolBase.
          */
         public com.google.protobuf.ByteString
@@ -20337,7 +23861,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_pool_base = 43;</code>
+         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
          * @param value The sellAllPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20352,7 +23876,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_pool_base = 43;</code>
+         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellAllPoolBase() {
@@ -20362,7 +23886,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_pool_base = 43;</code>
+         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
          * @param value The bytes for sellAllPoolBase to set.
          * @return This builder for chaining.
          */
@@ -20380,7 +23904,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object sellAllPoolDelta_ = "";
         /**
-         * <code>string sell_all_pool_delta = 55;</code>
+         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
          * @return The sellAllPoolDelta.
          */
         public java.lang.String getSellAllPoolDelta() {
@@ -20396,7 +23920,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_pool_delta = 55;</code>
+         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
          * @return The bytes for sellAllPoolDelta.
          */
         public com.google.protobuf.ByteString
@@ -20413,7 +23937,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string sell_all_pool_delta = 55;</code>
+         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
          * @param value The sellAllPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20428,7 +23952,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_pool_delta = 55;</code>
+         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSellAllPoolDelta() {
@@ -20438,7 +23962,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string sell_all_pool_delta = 55;</code>
+         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
          * @param value The bytes for sellAllPoolDelta to set.
          * @return This builder for chaining.
          */
@@ -20456,7 +23980,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createTicker3_ = "";
         /**
-         * <code>string create_ticker3 = 7;</code>
+         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
          * @return The createTicker3.
          */
         public java.lang.String getCreateTicker3() {
@@ -20472,7 +23996,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker3 = 7;</code>
+         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
          * @return The bytes for createTicker3.
          */
         public com.google.protobuf.ByteString
@@ -20489,7 +24013,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker3 = 7;</code>
+         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
          * @param value The createTicker3 to set.
          * @return This builder for chaining.
          */
@@ -20504,7 +24028,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker3 = 7;</code>
+         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateTicker3() {
@@ -20514,7 +24038,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker3 = 7;</code>
+         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
          * @param value The bytes for createTicker3 to set.
          * @return This builder for chaining.
          */
@@ -20532,7 +24056,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createTicker4_ = "";
         /**
-         * <code>string create_ticker4 = 8;</code>
+         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
          * @return The createTicker4.
          */
         public java.lang.String getCreateTicker4() {
@@ -20548,7 +24072,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker4 = 8;</code>
+         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
          * @return The bytes for createTicker4.
          */
         public com.google.protobuf.ByteString
@@ -20565,7 +24089,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker4 = 8;</code>
+         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
          * @param value The createTicker4 to set.
          * @return This builder for chaining.
          */
@@ -20580,7 +24104,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker4 = 8;</code>
+         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateTicker4() {
@@ -20590,7 +24114,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker4 = 8;</code>
+         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
          * @param value The bytes for createTicker4 to set.
          * @return This builder for chaining.
          */
@@ -20608,7 +24132,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createTicker5_ = "";
         /**
-         * <code>string create_ticker5 = 9;</code>
+         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
          * @return The createTicker5.
          */
         public java.lang.String getCreateTicker5() {
@@ -20624,7 +24148,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker5 = 9;</code>
+         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
          * @return The bytes for createTicker5.
          */
         public com.google.protobuf.ByteString
@@ -20641,7 +24165,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker5 = 9;</code>
+         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
          * @param value The createTicker5 to set.
          * @return This builder for chaining.
          */
@@ -20656,7 +24180,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker5 = 9;</code>
+         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateTicker5() {
@@ -20666,7 +24190,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker5 = 9;</code>
+         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
          * @param value The bytes for createTicker5 to set.
          * @return This builder for chaining.
          */
@@ -20684,7 +24208,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createTicker6_ = "";
         /**
-         * <code>string create_ticker6 = 10;</code>
+         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
          * @return The createTicker6.
          */
         public java.lang.String getCreateTicker6() {
@@ -20700,7 +24224,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker6 = 10;</code>
+         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
          * @return The bytes for createTicker6.
          */
         public com.google.protobuf.ByteString
@@ -20717,7 +24241,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker6 = 10;</code>
+         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
          * @param value The createTicker6 to set.
          * @return This builder for chaining.
          */
@@ -20732,7 +24256,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker6 = 10;</code>
+         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateTicker6() {
@@ -20742,7 +24266,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker6 = 10;</code>
+         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
          * @param value The bytes for createTicker6 to set.
          * @return This builder for chaining.
          */
@@ -20760,7 +24284,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createTicker710_ = "";
         /**
-         * <code>string create_ticker7_10 = 11;</code>
+         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
          * @return The createTicker710.
          */
         public java.lang.String getCreateTicker710() {
@@ -20776,7 +24300,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker7_10 = 11;</code>
+         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
          * @return The bytes for createTicker710.
          */
         public com.google.protobuf.ByteString
@@ -20793,7 +24317,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_ticker7_10 = 11;</code>
+         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
          * @param value The createTicker710 to set.
          * @return This builder for chaining.
          */
@@ -20808,7 +24332,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker7_10 = 11;</code>
+         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateTicker710() {
@@ -20818,7 +24342,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_ticker7_10 = 11;</code>
+         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
          * @param value The bytes for createTicker710 to set.
          * @return This builder for chaining.
          */
@@ -20836,7 +24360,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createCoin_ = "";
         /**
-         * <code>string create_coin = 34;</code>
+         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
          * @return The createCoin.
          */
         public java.lang.String getCreateCoin() {
@@ -20852,7 +24376,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_coin = 34;</code>
+         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
          * @return The bytes for createCoin.
          */
         public com.google.protobuf.ByteString
@@ -20869,7 +24393,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_coin = 34;</code>
+         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
          * @param value The createCoin to set.
          * @return This builder for chaining.
          */
@@ -20884,7 +24408,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_coin = 34;</code>
+         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateCoin() {
@@ -20894,7 +24418,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_coin = 34;</code>
+         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
          * @param value The bytes for createCoin to set.
          * @return This builder for chaining.
          */
@@ -20912,7 +24436,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createToken_ = "";
         /**
-         * <code>string create_token = 35;</code>
+         * <code>string create_token = 35 [json_name = "createToken"];</code>
          * @return The createToken.
          */
         public java.lang.String getCreateToken() {
@@ -20928,7 +24452,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_token = 35;</code>
+         * <code>string create_token = 35 [json_name = "createToken"];</code>
          * @return The bytes for createToken.
          */
         public com.google.protobuf.ByteString
@@ -20945,7 +24469,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_token = 35;</code>
+         * <code>string create_token = 35 [json_name = "createToken"];</code>
          * @param value The createToken to set.
          * @return This builder for chaining.
          */
@@ -20960,7 +24484,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_token = 35;</code>
+         * <code>string create_token = 35 [json_name = "createToken"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateToken() {
@@ -20970,7 +24494,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_token = 35;</code>
+         * <code>string create_token = 35 [json_name = "createToken"];</code>
          * @param value The bytes for createToken to set.
          * @return This builder for chaining.
          */
@@ -20988,7 +24512,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object recreateCoin_ = "";
         /**
-         * <code>string recreate_coin = 36;</code>
+         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
          * @return The recreateCoin.
          */
         public java.lang.String getRecreateCoin() {
@@ -21004,7 +24528,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string recreate_coin = 36;</code>
+         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
          * @return The bytes for recreateCoin.
          */
         public com.google.protobuf.ByteString
@@ -21021,7 +24545,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string recreate_coin = 36;</code>
+         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
          * @param value The recreateCoin to set.
          * @return This builder for chaining.
          */
@@ -21036,7 +24560,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string recreate_coin = 36;</code>
+         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRecreateCoin() {
@@ -21046,7 +24570,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string recreate_coin = 36;</code>
+         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
          * @param value The bytes for recreateCoin to set.
          * @return This builder for chaining.
          */
@@ -21064,7 +24588,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object recreateToken_ = "";
         /**
-         * <code>string recreate_token = 37;</code>
+         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
          * @return The recreateToken.
          */
         public java.lang.String getRecreateToken() {
@@ -21080,7 +24604,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string recreate_token = 37;</code>
+         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
          * @return The bytes for recreateToken.
          */
         public com.google.protobuf.ByteString
@@ -21097,7 +24621,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string recreate_token = 37;</code>
+         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
          * @param value The recreateToken to set.
          * @return This builder for chaining.
          */
@@ -21112,7 +24636,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string recreate_token = 37;</code>
+         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRecreateToken() {
@@ -21122,7 +24646,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string recreate_token = 37;</code>
+         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
          * @param value The bytes for recreateToken to set.
          * @return This builder for chaining.
          */
@@ -21140,7 +24664,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object declareCandidacy_ = "";
         /**
-         * <code>string declare_candidacy = 13;</code>
+         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
          * @return The declareCandidacy.
          */
         public java.lang.String getDeclareCandidacy() {
@@ -21156,7 +24680,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string declare_candidacy = 13;</code>
+         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
          * @return The bytes for declareCandidacy.
          */
         public com.google.protobuf.ByteString
@@ -21173,7 +24697,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string declare_candidacy = 13;</code>
+         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
          * @param value The declareCandidacy to set.
          * @return This builder for chaining.
          */
@@ -21188,7 +24712,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string declare_candidacy = 13;</code>
+         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDeclareCandidacy() {
@@ -21198,7 +24722,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string declare_candidacy = 13;</code>
+         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
          * @param value The bytes for declareCandidacy to set.
          * @return This builder for chaining.
          */
@@ -21216,7 +24740,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object delegate_ = "";
         /**
-         * <code>string delegate = 14;</code>
+         * <code>string delegate = 14 [json_name = "delegate"];</code>
          * @return The delegate.
          */
         public java.lang.String getDelegate() {
@@ -21232,7 +24756,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string delegate = 14;</code>
+         * <code>string delegate = 14 [json_name = "delegate"];</code>
          * @return The bytes for delegate.
          */
         public com.google.protobuf.ByteString
@@ -21249,7 +24773,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string delegate = 14;</code>
+         * <code>string delegate = 14 [json_name = "delegate"];</code>
          * @param value The delegate to set.
          * @return This builder for chaining.
          */
@@ -21264,7 +24788,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string delegate = 14;</code>
+         * <code>string delegate = 14 [json_name = "delegate"];</code>
          * @return This builder for chaining.
          */
         public Builder clearDelegate() {
@@ -21274,7 +24798,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string delegate = 14;</code>
+         * <code>string delegate = 14 [json_name = "delegate"];</code>
          * @param value The bytes for delegate to set.
          * @return This builder for chaining.
          */
@@ -21292,7 +24816,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object unbond_ = "";
         /**
-         * <code>string unbond = 15;</code>
+         * <code>string unbond = 15 [json_name = "unbond"];</code>
          * @return The unbond.
          */
         public java.lang.String getUnbond() {
@@ -21308,7 +24832,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string unbond = 15;</code>
+         * <code>string unbond = 15 [json_name = "unbond"];</code>
          * @return The bytes for unbond.
          */
         public com.google.protobuf.ByteString
@@ -21325,7 +24849,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string unbond = 15;</code>
+         * <code>string unbond = 15 [json_name = "unbond"];</code>
          * @param value The unbond to set.
          * @return This builder for chaining.
          */
@@ -21340,7 +24864,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string unbond = 15;</code>
+         * <code>string unbond = 15 [json_name = "unbond"];</code>
          * @return This builder for chaining.
          */
         public Builder clearUnbond() {
@@ -21350,7 +24874,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string unbond = 15;</code>
+         * <code>string unbond = 15 [json_name = "unbond"];</code>
          * @param value The bytes for unbond to set.
          * @return This builder for chaining.
          */
@@ -21368,7 +24892,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object redeemCheck_ = "";
         /**
-         * <code>string redeem_check = 16;</code>
+         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
          * @return The redeemCheck.
          */
         public java.lang.String getRedeemCheck() {
@@ -21384,7 +24908,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string redeem_check = 16;</code>
+         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
          * @return The bytes for redeemCheck.
          */
         public com.google.protobuf.ByteString
@@ -21401,7 +24925,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string redeem_check = 16;</code>
+         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
          * @param value The redeemCheck to set.
          * @return This builder for chaining.
          */
@@ -21416,7 +24940,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string redeem_check = 16;</code>
+         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRedeemCheck() {
@@ -21426,7 +24950,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string redeem_check = 16;</code>
+         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
          * @param value The bytes for redeemCheck to set.
          * @return This builder for chaining.
          */
@@ -21444,7 +24968,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object setCandidateOn_ = "";
         /**
-         * <code>string set_candidate_on = 44;</code>
+         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
          * @return The setCandidateOn.
          */
         public java.lang.String getSetCandidateOn() {
@@ -21460,7 +24984,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_candidate_on = 44;</code>
+         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
          * @return The bytes for setCandidateOn.
          */
         public com.google.protobuf.ByteString
@@ -21477,7 +25001,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_candidate_on = 44;</code>
+         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
          * @param value The setCandidateOn to set.
          * @return This builder for chaining.
          */
@@ -21492,7 +25016,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_candidate_on = 44;</code>
+         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSetCandidateOn() {
@@ -21502,7 +25026,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_candidate_on = 44;</code>
+         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
          * @param value The bytes for setCandidateOn to set.
          * @return This builder for chaining.
          */
@@ -21520,7 +25044,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object setCandidateOff_ = "";
         /**
-         * <code>string set_candidate_off = 45;</code>
+         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
          * @return The setCandidateOff.
          */
         public java.lang.String getSetCandidateOff() {
@@ -21536,7 +25060,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_candidate_off = 45;</code>
+         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
          * @return The bytes for setCandidateOff.
          */
         public com.google.protobuf.ByteString
@@ -21553,7 +25077,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_candidate_off = 45;</code>
+         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
          * @param value The setCandidateOff to set.
          * @return This builder for chaining.
          */
@@ -21568,7 +25092,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_candidate_off = 45;</code>
+         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSetCandidateOff() {
@@ -21578,7 +25102,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_candidate_off = 45;</code>
+         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
          * @param value The bytes for setCandidateOff to set.
          * @return This builder for chaining.
          */
@@ -21596,7 +25120,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createMultisig_ = "";
         /**
-         * <code>string create_multisig = 18;</code>
+         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
          * @return The createMultisig.
          */
         public java.lang.String getCreateMultisig() {
@@ -21612,7 +25136,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_multisig = 18;</code>
+         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
          * @return The bytes for createMultisig.
          */
         public com.google.protobuf.ByteString
@@ -21629,7 +25153,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_multisig = 18;</code>
+         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
          * @param value The createMultisig to set.
          * @return This builder for chaining.
          */
@@ -21644,7 +25168,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_multisig = 18;</code>
+         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateMultisig() {
@@ -21654,7 +25178,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_multisig = 18;</code>
+         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
          * @param value The bytes for createMultisig to set.
          * @return This builder for chaining.
          */
@@ -21672,7 +25196,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object multisendBase_ = "";
         /**
-         * <code>string multisend_base = 51;</code>
+         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
          * @return The multisendBase.
          */
         public java.lang.String getMultisendBase() {
@@ -21688,7 +25212,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string multisend_base = 51;</code>
+         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
          * @return The bytes for multisendBase.
          */
         public com.google.protobuf.ByteString
@@ -21705,7 +25229,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string multisend_base = 51;</code>
+         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
          * @param value The multisendBase to set.
          * @return This builder for chaining.
          */
@@ -21720,7 +25244,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string multisend_base = 51;</code>
+         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMultisendBase() {
@@ -21730,7 +25254,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string multisend_base = 51;</code>
+         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
          * @param value The bytes for multisendBase to set.
          * @return This builder for chaining.
          */
@@ -21748,7 +25272,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object multisendDelta_ = "";
         /**
-         * <code>string multisend_delta = 52;</code>
+         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
          * @return The multisendDelta.
          */
         public java.lang.String getMultisendDelta() {
@@ -21764,7 +25288,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string multisend_delta = 52;</code>
+         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
          * @return The bytes for multisendDelta.
          */
         public com.google.protobuf.ByteString
@@ -21781,7 +25305,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string multisend_delta = 52;</code>
+         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
          * @param value The multisendDelta to set.
          * @return This builder for chaining.
          */
@@ -21796,7 +25320,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string multisend_delta = 52;</code>
+         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMultisendDelta() {
@@ -21806,7 +25330,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string multisend_delta = 52;</code>
+         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
          * @param value The bytes for multisendDelta to set.
          * @return This builder for chaining.
          */
@@ -21824,7 +25348,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object editCandidate_ = "";
         /**
-         * <code>string edit_candidate = 20;</code>
+         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
          * @return The editCandidate.
          */
         public java.lang.String getEditCandidate() {
@@ -21840,7 +25364,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate = 20;</code>
+         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
          * @return The bytes for editCandidate.
          */
         public com.google.protobuf.ByteString
@@ -21857,7 +25381,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate = 20;</code>
+         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
          * @param value The editCandidate to set.
          * @return This builder for chaining.
          */
@@ -21872,7 +25396,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate = 20;</code>
+         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
          * @return This builder for chaining.
          */
         public Builder clearEditCandidate() {
@@ -21882,7 +25406,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate = 20;</code>
+         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
          * @param value The bytes for editCandidate to set.
          * @return This builder for chaining.
          */
@@ -21900,7 +25424,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object setHaltBlock_ = "";
         /**
-         * <code>string set_halt_block = 21;</code>
+         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
          * @return The setHaltBlock.
          */
         public java.lang.String getSetHaltBlock() {
@@ -21916,7 +25440,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_halt_block = 21;</code>
+         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
          * @return The bytes for setHaltBlock.
          */
         public com.google.protobuf.ByteString
@@ -21933,7 +25457,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string set_halt_block = 21;</code>
+         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
          * @param value The setHaltBlock to set.
          * @return This builder for chaining.
          */
@@ -21948,7 +25472,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_halt_block = 21;</code>
+         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
          * @return This builder for chaining.
          */
         public Builder clearSetHaltBlock() {
@@ -21958,7 +25482,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string set_halt_block = 21;</code>
+         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
          * @param value The bytes for setHaltBlock to set.
          * @return This builder for chaining.
          */
@@ -21976,7 +25500,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object editTickerOwner_ = "";
         /**
-         * <code>string edit_ticker_owner = 22;</code>
+         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
          * @return The editTickerOwner.
          */
         public java.lang.String getEditTickerOwner() {
@@ -21992,7 +25516,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_ticker_owner = 22;</code>
+         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
          * @return The bytes for editTickerOwner.
          */
         public com.google.protobuf.ByteString
@@ -22009,7 +25533,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_ticker_owner = 22;</code>
+         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
          * @param value The editTickerOwner to set.
          * @return This builder for chaining.
          */
@@ -22024,7 +25548,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_ticker_owner = 22;</code>
+         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
          * @return This builder for chaining.
          */
         public Builder clearEditTickerOwner() {
@@ -22034,7 +25558,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_ticker_owner = 22;</code>
+         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
          * @param value The bytes for editTickerOwner to set.
          * @return This builder for chaining.
          */
@@ -22052,7 +25576,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object editMultisig_ = "";
         /**
-         * <code>string edit_multisig = 23;</code>
+         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
          * @return The editMultisig.
          */
         public java.lang.String getEditMultisig() {
@@ -22068,7 +25592,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_multisig = 23;</code>
+         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
          * @return The bytes for editMultisig.
          */
         public com.google.protobuf.ByteString
@@ -22085,7 +25609,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_multisig = 23;</code>
+         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
          * @param value The editMultisig to set.
          * @return This builder for chaining.
          */
@@ -22100,7 +25624,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_multisig = 23;</code>
+         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
          * @return This builder for chaining.
          */
         public Builder clearEditMultisig() {
@@ -22110,7 +25634,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_multisig = 23;</code>
+         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
          * @param value The bytes for editMultisig to set.
          * @return This builder for chaining.
          */
@@ -22128,7 +25652,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object editCandidatePublicKey_ = "";
         /**
-         * <code>string edit_candidate_public_key = 25;</code>
+         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
          * @return The editCandidatePublicKey.
          */
         public java.lang.String getEditCandidatePublicKey() {
@@ -22144,7 +25668,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate_public_key = 25;</code>
+         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
          * @return The bytes for editCandidatePublicKey.
          */
         public com.google.protobuf.ByteString
@@ -22161,7 +25685,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate_public_key = 25;</code>
+         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
          * @param value The editCandidatePublicKey to set.
          * @return This builder for chaining.
          */
@@ -22176,7 +25700,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate_public_key = 25;</code>
+         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
          * @return This builder for chaining.
          */
         public Builder clearEditCandidatePublicKey() {
@@ -22186,7 +25710,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate_public_key = 25;</code>
+         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
          * @param value The bytes for editCandidatePublicKey to set.
          * @return This builder for chaining.
          */
@@ -22204,7 +25728,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object createSwapPool_ = "";
         /**
-         * <code>string create_swap_pool = 48;</code>
+         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
          * @return The createSwapPool.
          */
         public java.lang.String getCreateSwapPool() {
@@ -22220,7 +25744,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_swap_pool = 48;</code>
+         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
          * @return The bytes for createSwapPool.
          */
         public com.google.protobuf.ByteString
@@ -22237,7 +25761,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string create_swap_pool = 48;</code>
+         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
          * @param value The createSwapPool to set.
          * @return This builder for chaining.
          */
@@ -22252,7 +25776,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_swap_pool = 48;</code>
+         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCreateSwapPool() {
@@ -22262,7 +25786,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string create_swap_pool = 48;</code>
+         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
          * @param value The bytes for createSwapPool to set.
          * @return This builder for chaining.
          */
@@ -22280,7 +25804,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object addLiquidity_ = "";
         /**
-         * <code>string add_liquidity = 49;</code>
+         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
          * @return The addLiquidity.
          */
         public java.lang.String getAddLiquidity() {
@@ -22296,7 +25820,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string add_liquidity = 49;</code>
+         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
          * @return The bytes for addLiquidity.
          */
         public com.google.protobuf.ByteString
@@ -22313,7 +25837,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string add_liquidity = 49;</code>
+         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
          * @param value The addLiquidity to set.
          * @return This builder for chaining.
          */
@@ -22328,7 +25852,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string add_liquidity = 49;</code>
+         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAddLiquidity() {
@@ -22338,7 +25862,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string add_liquidity = 49;</code>
+         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
          * @param value The bytes for addLiquidity to set.
          * @return This builder for chaining.
          */
@@ -22356,7 +25880,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object removeLiquidity_ = "";
         /**
-         * <code>string remove_liquidity = 50;</code>
+         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
          * @return The removeLiquidity.
          */
         public java.lang.String getRemoveLiquidity() {
@@ -22372,7 +25896,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string remove_liquidity = 50;</code>
+         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
          * @return The bytes for removeLiquidity.
          */
         public com.google.protobuf.ByteString
@@ -22389,7 +25913,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string remove_liquidity = 50;</code>
+         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
          * @param value The removeLiquidity to set.
          * @return This builder for chaining.
          */
@@ -22404,7 +25928,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string remove_liquidity = 50;</code>
+         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRemoveLiquidity() {
@@ -22414,7 +25938,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string remove_liquidity = 50;</code>
+         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
          * @param value The bytes for removeLiquidity to set.
          * @return This builder for chaining.
          */
@@ -22432,7 +25956,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object editCandidateCommission_ = "";
         /**
-         * <code>string edit_candidate_commission = 28;</code>
+         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
          * @return The editCandidateCommission.
          */
         public java.lang.String getEditCandidateCommission() {
@@ -22448,7 +25972,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate_commission = 28;</code>
+         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
          * @return The bytes for editCandidateCommission.
          */
         public com.google.protobuf.ByteString
@@ -22465,7 +25989,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string edit_candidate_commission = 28;</code>
+         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
          * @param value The editCandidateCommission to set.
          * @return This builder for chaining.
          */
@@ -22480,7 +26004,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate_commission = 28;</code>
+         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
          * @return This builder for chaining.
          */
         public Builder clearEditCandidateCommission() {
@@ -22490,7 +26014,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string edit_candidate_commission = 28;</code>
+         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
          * @param value The bytes for editCandidateCommission to set.
          * @return This builder for chaining.
          */
@@ -22508,7 +26032,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object mintToken_ = "";
         /**
-         * <code>string mint_token = 46;</code>
+         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
          * @return The mintToken.
          */
         public java.lang.String getMintToken() {
@@ -22524,7 +26048,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string mint_token = 46;</code>
+         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
          * @return The bytes for mintToken.
          */
         public com.google.protobuf.ByteString
@@ -22541,7 +26065,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string mint_token = 46;</code>
+         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
          * @param value The mintToken to set.
          * @return This builder for chaining.
          */
@@ -22556,7 +26080,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string mint_token = 46;</code>
+         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
          * @return This builder for chaining.
          */
         public Builder clearMintToken() {
@@ -22566,7 +26090,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string mint_token = 46;</code>
+         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
          * @param value The bytes for mintToken to set.
          * @return This builder for chaining.
          */
@@ -22584,7 +26108,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object burnToken_ = "";
         /**
-         * <code>string burn_token = 47;</code>
+         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
          * @return The burnToken.
          */
         public java.lang.String getBurnToken() {
@@ -22600,7 +26124,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string burn_token = 47;</code>
+         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
          * @return The bytes for burnToken.
          */
         public com.google.protobuf.ByteString
@@ -22617,7 +26141,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string burn_token = 47;</code>
+         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
          * @param value The burnToken to set.
          * @return This builder for chaining.
          */
@@ -22632,7 +26156,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string burn_token = 47;</code>
+         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
          * @return This builder for chaining.
          */
         public Builder clearBurnToken() {
@@ -22642,7 +26166,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string burn_token = 47;</code>
+         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
          * @param value The bytes for burnToken to set.
          * @return This builder for chaining.
          */
@@ -22660,7 +26184,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object voteCommission_ = "";
         /**
-         * <code>string vote_commission = 31;</code>
+         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
          * @return The voteCommission.
          */
         public java.lang.String getVoteCommission() {
@@ -22676,7 +26200,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string vote_commission = 31;</code>
+         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
          * @return The bytes for voteCommission.
          */
         public com.google.protobuf.ByteString
@@ -22693,7 +26217,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string vote_commission = 31;</code>
+         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
          * @param value The voteCommission to set.
          * @return This builder for chaining.
          */
@@ -22708,7 +26232,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string vote_commission = 31;</code>
+         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVoteCommission() {
@@ -22718,7 +26242,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string vote_commission = 31;</code>
+         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
          * @param value The bytes for voteCommission to set.
          * @return This builder for chaining.
          */
@@ -22736,7 +26260,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object voteUpdate_ = "";
         /**
-         * <code>string vote_update = 32;</code>
+         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
          * @return The voteUpdate.
          */
         public java.lang.String getVoteUpdate() {
@@ -22752,7 +26276,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string vote_update = 32;</code>
+         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
          * @return The bytes for voteUpdate.
          */
         public com.google.protobuf.ByteString
@@ -22769,7 +26293,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string vote_update = 32;</code>
+         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
          * @param value The voteUpdate to set.
          * @return This builder for chaining.
          */
@@ -22784,7 +26308,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string vote_update = 32;</code>
+         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVoteUpdate() {
@@ -22794,7 +26318,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string vote_update = 32;</code>
+         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
          * @param value The bytes for voteUpdate to set.
          * @return This builder for chaining.
          */
@@ -22812,7 +26336,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object failedTx_ = "";
         /**
-         * <code>string failed_tx = 56;</code>
+         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
          * @return The failedTx.
          */
         public java.lang.String getFailedTx() {
@@ -22828,7 +26352,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string failed_tx = 56;</code>
+         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
          * @return The bytes for failedTx.
          */
         public com.google.protobuf.ByteString
@@ -22845,7 +26369,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string failed_tx = 56;</code>
+         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
          * @param value The failedTx to set.
          * @return This builder for chaining.
          */
@@ -22860,7 +26384,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string failed_tx = 56;</code>
+         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
          * @return This builder for chaining.
          */
         public Builder clearFailedTx() {
@@ -22870,7 +26394,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string failed_tx = 56;</code>
+         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
          * @param value The bytes for failedTx to set.
          * @return This builder for chaining.
          */
@@ -22888,7 +26412,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object addLimitOrder_ = "";
         /**
-         * <code>string add_limit_order = 57;</code>
+         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
          * @return The addLimitOrder.
          */
         public java.lang.String getAddLimitOrder() {
@@ -22904,7 +26428,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string add_limit_order = 57;</code>
+         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
          * @return The bytes for addLimitOrder.
          */
         public com.google.protobuf.ByteString
@@ -22921,7 +26445,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string add_limit_order = 57;</code>
+         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
          * @param value The addLimitOrder to set.
          * @return This builder for chaining.
          */
@@ -22936,7 +26460,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string add_limit_order = 57;</code>
+         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAddLimitOrder() {
@@ -22946,7 +26470,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string add_limit_order = 57;</code>
+         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
          * @param value The bytes for addLimitOrder to set.
          * @return This builder for chaining.
          */
@@ -22964,7 +26488,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object removeLimitOrder_ = "";
         /**
-         * <code>string remove_limit_order = 58;</code>
+         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
          * @return The removeLimitOrder.
          */
         public java.lang.String getRemoveLimitOrder() {
@@ -22980,7 +26504,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string remove_limit_order = 58;</code>
+         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
          * @return The bytes for removeLimitOrder.
          */
         public com.google.protobuf.ByteString
@@ -22997,7 +26521,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string remove_limit_order = 58;</code>
+         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
          * @param value The removeLimitOrder to set.
          * @return This builder for chaining.
          */
@@ -23012,7 +26536,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string remove_limit_order = 58;</code>
+         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
          * @return This builder for chaining.
          */
         public Builder clearRemoveLimitOrder() {
@@ -23022,7 +26546,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string remove_limit_order = 58;</code>
+         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
          * @param value The bytes for removeLimitOrder to set.
          * @return This builder for chaining.
          */
@@ -23034,6 +26558,234 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
           
           removeLimitOrder_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object moveStake_ = "";
+        /**
+         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * @return The moveStake.
+         */
+        public java.lang.String getMoveStake() {
+          java.lang.Object ref = moveStake_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            moveStake_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * @return The bytes for moveStake.
+         */
+        public com.google.protobuf.ByteString
+            getMoveStakeBytes() {
+          java.lang.Object ref = moveStake_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            moveStake_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * @param value The moveStake to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMoveStake(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          moveStake_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMoveStake() {
+          
+          moveStake_ = getDefaultInstance().getMoveStake();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * @param value The bytes for moveStake to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMoveStakeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          moveStake_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object lockStake_ = "";
+        /**
+         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * @return The lockStake.
+         */
+        public java.lang.String getLockStake() {
+          java.lang.Object ref = lockStake_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            lockStake_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * @return The bytes for lockStake.
+         */
+        public com.google.protobuf.ByteString
+            getLockStakeBytes() {
+          java.lang.Object ref = lockStake_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            lockStake_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * @param value The lockStake to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLockStake(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          lockStake_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLockStake() {
+          
+          lockStake_ = getDefaultInstance().getLockStake();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * @param value The bytes for lockStake to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLockStakeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          lockStake_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object lock_ = "";
+        /**
+         * <code>string lock = 61 [json_name = "lock"];</code>
+         * @return The lock.
+         */
+        public java.lang.String getLock() {
+          java.lang.Object ref = lock_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            lock_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string lock = 61 [json_name = "lock"];</code>
+         * @return The bytes for lock.
+         */
+        public com.google.protobuf.ByteString
+            getLockBytes() {
+          java.lang.Object ref = lock_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            lock_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string lock = 61 [json_name = "lock"];</code>
+         * @param value The lock to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLock(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          lock_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string lock = 61 [json_name = "lock"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLock() {
+          
+          lock_ = getDefaultInstance().getLock();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string lock = 61 [json_name = "lock"];</code>
+         * @param value The bytes for lock to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLockBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          lock_ = value;
           onChanged();
           return this;
         }
@@ -23095,30 +26847,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 height = 1;</code>
+       * <code>uint64 height = 1 [json_name = "height"];</code>
        * @return The height.
        */
       long getHeight();
 
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @return A list containing the votes.
        */
       java.util.List<java.lang.String>
           getVotesList();
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @return The count of votes.
        */
       int getVotesCount();
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @param index The index of the element to return.
        * @return The votes at the given index.
        */
       java.lang.String getVotes(int index);
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the votes at the given index.
        */
@@ -23126,17 +26878,17 @@ private static final long serialVersionUID = 0L;
           getVotesBytes(int index);
 
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        * @return Whether the commission field is set.
        */
       boolean hasCommission();
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        * @return The commission.
        */
       counters.minter.grpc.client.GenesisResponse.AppState.Commission getCommission();
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        */
       counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder();
     }
@@ -23252,7 +27004,7 @@ private static final long serialVersionUID = 0L;
       public static final int HEIGHT_FIELD_NUMBER = 1;
       private long height_;
       /**
-       * <code>uint64 height = 1;</code>
+       * <code>uint64 height = 1 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
@@ -23263,7 +27015,7 @@ private static final long serialVersionUID = 0L;
       public static final int VOTES_FIELD_NUMBER = 2;
       private com.google.protobuf.LazyStringList votes_;
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @return A list containing the votes.
        */
       public com.google.protobuf.ProtocolStringList
@@ -23271,14 +27023,14 @@ private static final long serialVersionUID = 0L;
         return votes_;
       }
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @return The count of votes.
        */
       public int getVotesCount() {
         return votes_.size();
       }
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @param index The index of the element to return.
        * @return The votes at the given index.
        */
@@ -23286,7 +27038,7 @@ private static final long serialVersionUID = 0L;
         return votes_.get(index);
       }
       /**
-       * <code>repeated string votes = 2;</code>
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the votes at the given index.
        */
@@ -23298,7 +27050,7 @@ private static final long serialVersionUID = 0L;
       public static final int COMMISSION_FIELD_NUMBER = 3;
       private counters.minter.grpc.client.GenesisResponse.AppState.Commission commission_;
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        * @return Whether the commission field is set.
        */
       @java.lang.Override
@@ -23306,7 +27058,7 @@ private static final long serialVersionUID = 0L;
         return commission_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        * @return The commission.
        */
       @java.lang.Override
@@ -23314,7 +27066,7 @@ private static final long serialVersionUID = 0L;
         return commission_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.Commission.getDefaultInstance() : commission_;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder() {
@@ -23692,7 +27444,7 @@ private static final long serialVersionUID = 0L;
 
         private long height_ ;
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @return The height.
          */
         @java.lang.Override
@@ -23700,7 +27452,7 @@ private static final long serialVersionUID = 0L;
           return height_;
         }
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @param value The height to set.
          * @return This builder for chaining.
          */
@@ -23711,7 +27463,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 height = 1;</code>
+         * <code>uint64 height = 1 [json_name = "height"];</code>
          * @return This builder for chaining.
          */
         public Builder clearHeight() {
@@ -23729,7 +27481,7 @@ private static final long serialVersionUID = 0L;
            }
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @return A list containing the votes.
          */
         public com.google.protobuf.ProtocolStringList
@@ -23737,14 +27489,14 @@ private static final long serialVersionUID = 0L;
           return votes_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @return The count of votes.
          */
         public int getVotesCount() {
           return votes_.size();
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param index The index of the element to return.
          * @return The votes at the given index.
          */
@@ -23752,7 +27504,7 @@ private static final long serialVersionUID = 0L;
           return votes_.get(index);
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the votes at the given index.
          */
@@ -23761,7 +27513,7 @@ private static final long serialVersionUID = 0L;
           return votes_.getByteString(index);
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param index The index to set the value at.
          * @param value The votes to set.
          * @return This builder for chaining.
@@ -23777,7 +27529,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param value The votes to add.
          * @return This builder for chaining.
          */
@@ -23792,7 +27544,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param values The votes to add.
          * @return This builder for chaining.
          */
@@ -23805,7 +27557,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVotes() {
@@ -23815,7 +27567,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated string votes = 2;</code>
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
          * @param value The bytes of the votes to add.
          * @return This builder for chaining.
          */
@@ -23835,14 +27587,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.GenesisResponse.AppState.Commission, counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder> commissionBuilder_;
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          * @return Whether the commission field is set.
          */
         public boolean hasCommission() {
           return commissionBuilder_ != null || commission_ != null;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          * @return The commission.
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Commission getCommission() {
@@ -23853,7 +27605,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public Builder setCommission(counters.minter.grpc.client.GenesisResponse.AppState.Commission value) {
           if (commissionBuilder_ == null) {
@@ -23869,7 +27621,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public Builder setCommission(
             counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder builderForValue) {
@@ -23883,7 +27635,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public Builder mergeCommission(counters.minter.grpc.client.GenesisResponse.AppState.Commission value) {
           if (commissionBuilder_ == null) {
@@ -23901,7 +27653,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public Builder clearCommission() {
           if (commissionBuilder_ == null) {
@@ -23915,7 +27667,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder getCommissionBuilder() {
           
@@ -23923,7 +27675,7 @@ private static final long serialVersionUID = 0L;
           return getCommissionFieldBuilder().getBuilder();
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         public counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder() {
           if (commissionBuilder_ != null) {
@@ -23934,7 +27686,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.GenesisResponse.AppState.Commission, counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder> 
@@ -24002,10 +27754,2518 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface UpdateVoteOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.UpdateVote)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      long getHeight();
+
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @return A list containing the votes.
+       */
+      java.util.List<java.lang.String>
+          getVotesList();
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @return The count of votes.
+       */
+      int getVotesCount();
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @param index The index of the element to return.
+       * @return The votes at the given index.
+       */
+      java.lang.String getVotes(int index);
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the votes at the given index.
+       */
+      com.google.protobuf.ByteString
+          getVotesBytes(int index);
+
+      /**
+       * <code>string version = 3 [json_name = "version"];</code>
+       * @return The version.
+       */
+      java.lang.String getVersion();
+      /**
+       * <code>string version = 3 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      com.google.protobuf.ByteString
+          getVersionBytes();
+    }
+    /**
+     * Protobuf type {@code api_pb.GenesisResponse.AppState.UpdateVote}
+     */
+    public static final class UpdateVote extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.AppState.UpdateVote)
+        UpdateVoteOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use UpdateVote.newBuilder() to construct.
+      private UpdateVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private UpdateVote() {
+        votes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        version_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new UpdateVote();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private UpdateVote(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                height_ = input.readUInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  votes_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                votes_.add(s);
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                version_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            votes_ = votes_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_UpdateVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.class, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder.class);
+      }
+
+      public static final int HEIGHT_FIELD_NUMBER = 1;
+      private long height_;
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+
+      public static final int VOTES_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList votes_;
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @return A list containing the votes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getVotesList() {
+        return votes_;
+      }
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @return The count of votes.
+       */
+      public int getVotesCount() {
+        return votes_.size();
+      }
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @param index The index of the element to return.
+       * @return The votes at the given index.
+       */
+      public java.lang.String getVotes(int index) {
+        return votes_.get(index);
+      }
+      /**
+       * <code>repeated string votes = 2 [json_name = "votes"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the votes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getVotesBytes(int index) {
+        return votes_.getByteString(index);
+      }
+
+      public static final int VERSION_FIELD_NUMBER = 3;
+      private volatile java.lang.Object version_;
+      /**
+       * <code>string version = 3 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string version = 3 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (height_ != 0L) {
+          output.writeUInt64(1, height_);
+        }
+        for (int i = 0; i < votes_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, votes_.getRaw(i));
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (height_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, height_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < votes_.size(); i++) {
+            dataSize += computeStringSizeNoTag(votes_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getVotesList().size();
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote)) {
+          return super.equals(obj);
+        }
+        counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote other = (counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) obj;
+
+        if (getHeight()
+            != other.getHeight()) return false;
+        if (!getVotesList()
+            .equals(other.getVotesList())) return false;
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getHeight());
+        if (getVotesCount() > 0) {
+          hash = (37 * hash) + VOTES_FIELD_NUMBER;
+          hash = (53 * hash) + getVotesList().hashCode();
+        }
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.AppState.UpdateVote}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.AppState.UpdateVote)
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_UpdateVote_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.class, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder.class);
+        }
+
+        // Construct using counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          height_ = 0L;
+
+          votes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          version_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_UpdateVote_descriptor;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getDefaultInstanceForType() {
+          return counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote build() {
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote buildPartial() {
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote result = new counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote(this);
+          int from_bitField0_ = bitField0_;
+          result.height_ = height_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            votes_ = votes_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.votes_ = votes_;
+          result.version_ = version_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) {
+            return mergeFrom((counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote other) {
+          if (other == counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.getDefaultInstance()) return this;
+          if (other.getHeight() != 0L) {
+            setHeight(other.getHeight());
+          }
+          if (!other.votes_.isEmpty()) {
+            if (votes_.isEmpty()) {
+              votes_ = other.votes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVotesIsMutable();
+              votes_.addAll(other.votes_);
+            }
+            onChanged();
+          }
+          if (!other.getVersion().isEmpty()) {
+            version_ = other.version_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private long height_ ;
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @return The height.
+         */
+        @java.lang.Override
+        public long getHeight() {
+          return height_;
+        }
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @param value The height to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeight(long value) {
+          
+          height_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHeight() {
+          
+          height_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList votes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureVotesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            votes_ = new com.google.protobuf.LazyStringArrayList(votes_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @return A list containing the votes.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getVotesList() {
+          return votes_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @return The count of votes.
+         */
+        public int getVotesCount() {
+          return votes_.size();
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param index The index of the element to return.
+         * @return The votes at the given index.
+         */
+        public java.lang.String getVotes(int index) {
+          return votes_.get(index);
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the votes at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getVotesBytes(int index) {
+          return votes_.getByteString(index);
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param index The index to set the value at.
+         * @param value The votes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVotes(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVotesIsMutable();
+          votes_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param value The votes to add.
+         * @return This builder for chaining.
+         */
+        public Builder addVotes(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVotesIsMutable();
+          votes_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param values The votes to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllVotes(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, votes_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearVotes() {
+          votes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * @param value The bytes of the votes to add.
+         * @return This builder for chaining.
+         */
+        public Builder addVotesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureVotesIsMutable();
+          votes_.add(value);
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object version_ = "";
+        /**
+         * <code>string version = 3 [json_name = "version"];</code>
+         * @return The version.
+         */
+        public java.lang.String getVersion() {
+          java.lang.Object ref = version_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            version_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string version = 3 [json_name = "version"];</code>
+         * @return The bytes for version.
+         */
+        public com.google.protobuf.ByteString
+            getVersionBytes() {
+          java.lang.Object ref = version_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            version_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string version = 3 [json_name = "version"];</code>
+         * @param value The version to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVersion(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          version_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string version = 3 [json_name = "version"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearVersion() {
+          
+          version_ = getDefaultInstance().getVersion();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string version = 3 [json_name = "version"];</code>
+         * @param value The bytes for version to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVersionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          version_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.AppState.UpdateVote)
+      }
+
+      // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.AppState.UpdateVote)
+      private static final counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote();
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<UpdateVote>
+          PARSER = new com.google.protobuf.AbstractParser<UpdateVote>() {
+        @java.lang.Override
+        public UpdateVote parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new UpdateVote(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<UpdateVote> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<UpdateVote> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface VersionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.Version)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      long getHeight();
+
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+    }
+    /**
+     * Protobuf type {@code api_pb.GenesisResponse.AppState.Version}
+     */
+    public static final class Version extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.AppState.Version)
+        VersionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Version.newBuilder() to construct.
+      private Version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Version() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Version();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Version(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                height_ = input.readUInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Version_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Version_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                counters.minter.grpc.client.GenesisResponse.AppState.Version.class, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder.class);
+      }
+
+      public static final int HEIGHT_FIELD_NUMBER = 1;
+      private long height_;
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+
+      public static final int NAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (height_ != 0L) {
+          output.writeUInt64(1, height_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (height_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, height_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.AppState.Version)) {
+          return super.equals(obj);
+        }
+        counters.minter.grpc.client.GenesisResponse.AppState.Version other = (counters.minter.grpc.client.GenesisResponse.AppState.Version) obj;
+
+        if (getHeight()
+            != other.getHeight()) return false;
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getHeight());
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.AppState.Version prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.AppState.Version}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.AppState.Version)
+          counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Version_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Version_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.AppState.Version.class, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder.class);
+        }
+
+        // Construct using counters.minter.grpc.client.GenesisResponse.AppState.Version.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          height_ = 0L;
+
+          name_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_Version_descriptor;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.Version getDefaultInstanceForType() {
+          return counters.minter.grpc.client.GenesisResponse.AppState.Version.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.Version build() {
+          counters.minter.grpc.client.GenesisResponse.AppState.Version result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.Version buildPartial() {
+          counters.minter.grpc.client.GenesisResponse.AppState.Version result = new counters.minter.grpc.client.GenesisResponse.AppState.Version(this);
+          result.height_ = height_;
+          result.name_ = name_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof counters.minter.grpc.client.GenesisResponse.AppState.Version) {
+            return mergeFrom((counters.minter.grpc.client.GenesisResponse.AppState.Version)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.AppState.Version other) {
+          if (other == counters.minter.grpc.client.GenesisResponse.AppState.Version.getDefaultInstance()) return this;
+          if (other.getHeight() != 0L) {
+            setHeight(other.getHeight());
+          }
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          counters.minter.grpc.client.GenesisResponse.AppState.Version parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (counters.minter.grpc.client.GenesisResponse.AppState.Version) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long height_ ;
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @return The height.
+         */
+        @java.lang.Override
+        public long getHeight() {
+          return height_;
+        }
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @param value The height to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeight(long value) {
+          
+          height_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHeight() {
+          
+          height_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 2 [json_name = "name"];</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 2 [json_name = "name"];</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 2 [json_name = "name"];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 2 [json_name = "name"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 2 [json_name = "name"];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.AppState.Version)
+      }
+
+      // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.AppState.Version)
+      private static final counters.minter.grpc.client.GenesisResponse.AppState.Version DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.AppState.Version();
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.Version getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Version>
+          PARSER = new com.google.protobuf.AbstractParser<Version>() {
+        @java.lang.Override
+        public Version parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Version(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Version> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Version> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.Version getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface RewardPriceOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api_pb.GenesisResponse.AppState.RewardPrice)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 time = 1 [json_name = "time"];</code>
+       * @return The time.
+       */
+      long getTime();
+
+      /**
+       * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+       * @return The amountBip.
+       */
+      java.lang.String getAmountBip();
+      /**
+       * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+       * @return The bytes for amountBip.
+       */
+      com.google.protobuf.ByteString
+          getAmountBipBytes();
+
+      /**
+       * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+       * @return The amountUsdt.
+       */
+      java.lang.String getAmountUsdt();
+      /**
+       * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+       * @return The bytes for amountUsdt.
+       */
+      com.google.protobuf.ByteString
+          getAmountUsdtBytes();
+
+      /**
+       * <code>bool off = 4 [json_name = "off"];</code>
+       * @return The off.
+       */
+      boolean getOff();
+
+      /**
+       * <code>string reward = 5 [json_name = "reward"];</code>
+       * @return The reward.
+       */
+      java.lang.String getReward();
+      /**
+       * <code>string reward = 5 [json_name = "reward"];</code>
+       * @return The bytes for reward.
+       */
+      com.google.protobuf.ByteString
+          getRewardBytes();
+    }
+    /**
+     * Protobuf type {@code api_pb.GenesisResponse.AppState.RewardPrice}
+     */
+    public static final class RewardPrice extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api_pb.GenesisResponse.AppState.RewardPrice)
+        RewardPriceOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RewardPrice.newBuilder() to construct.
+      private RewardPrice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RewardPrice() {
+        amountBip_ = "";
+        amountUsdt_ = "";
+        reward_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RewardPrice();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RewardPrice(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                time_ = input.readUInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                amountBip_ = s;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                amountUsdt_ = s;
+                break;
+              }
+              case 32: {
+
+                off_ = input.readBool();
+                break;
+              }
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                reward_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_RewardPrice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.class, counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder.class);
+      }
+
+      public static final int TIME_FIELD_NUMBER = 1;
+      private long time_;
+      /**
+       * <code>uint64 time = 1 [json_name = "time"];</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+
+      public static final int AMOUNT_BIP_FIELD_NUMBER = 2;
+      private volatile java.lang.Object amountBip_;
+      /**
+       * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+       * @return The amountBip.
+       */
+      @java.lang.Override
+      public java.lang.String getAmountBip() {
+        java.lang.Object ref = amountBip_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amountBip_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+       * @return The bytes for amountBip.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAmountBipBytes() {
+        java.lang.Object ref = amountBip_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amountBip_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int AMOUNT_USDT_FIELD_NUMBER = 3;
+      private volatile java.lang.Object amountUsdt_;
+      /**
+       * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+       * @return The amountUsdt.
+       */
+      @java.lang.Override
+      public java.lang.String getAmountUsdt() {
+        java.lang.Object ref = amountUsdt_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amountUsdt_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+       * @return The bytes for amountUsdt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAmountUsdtBytes() {
+        java.lang.Object ref = amountUsdt_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amountUsdt_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int OFF_FIELD_NUMBER = 4;
+      private boolean off_;
+      /**
+       * <code>bool off = 4 [json_name = "off"];</code>
+       * @return The off.
+       */
+      @java.lang.Override
+      public boolean getOff() {
+        return off_;
+      }
+
+      public static final int REWARD_FIELD_NUMBER = 5;
+      private volatile java.lang.Object reward_;
+      /**
+       * <code>string reward = 5 [json_name = "reward"];</code>
+       * @return The reward.
+       */
+      @java.lang.Override
+      public java.lang.String getReward() {
+        java.lang.Object ref = reward_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reward_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string reward = 5 [json_name = "reward"];</code>
+       * @return The bytes for reward.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRewardBytes() {
+        java.lang.Object ref = reward_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reward_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (time_ != 0L) {
+          output.writeUInt64(1, time_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountBip_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amountBip_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountUsdt_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amountUsdt_);
+        }
+        if (off_ != false) {
+          output.writeBool(4, off_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reward_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reward_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (time_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, time_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountBip_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amountBip_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountUsdt_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amountUsdt_);
+        }
+        if (off_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, off_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reward_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reward_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice)) {
+          return super.equals(obj);
+        }
+        counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice other = (counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice) obj;
+
+        if (getTime()
+            != other.getTime()) return false;
+        if (!getAmountBip()
+            .equals(other.getAmountBip())) return false;
+        if (!getAmountUsdt()
+            .equals(other.getAmountUsdt())) return false;
+        if (getOff()
+            != other.getOff()) return false;
+        if (!getReward()
+            .equals(other.getReward())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTime());
+        hash = (37 * hash) + AMOUNT_BIP_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountBip().hashCode();
+        hash = (37 * hash) + AMOUNT_USDT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountUsdt().hashCode();
+        hash = (37 * hash) + OFF_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getOff());
+        hash = (37 * hash) + REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getReward().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api_pb.GenesisResponse.AppState.RewardPrice}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api_pb.GenesisResponse.AppState.RewardPrice)
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_RewardPrice_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.class, counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder.class);
+        }
+
+        // Construct using counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          time_ = 0L;
+
+          amountBip_ = "";
+
+          amountUsdt_ = "";
+
+          off_ = false;
+
+          reward_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return counters.minter.grpc.client.Resources.internal_static_api_pb_GenesisResponse_AppState_RewardPrice_descriptor;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getDefaultInstanceForType() {
+          return counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice build() {
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice buildPartial() {
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice result = new counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice(this);
+          result.time_ = time_;
+          result.amountBip_ = amountBip_;
+          result.amountUsdt_ = amountUsdt_;
+          result.off_ = off_;
+          result.reward_ = reward_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice) {
+            return mergeFrom((counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice other) {
+          if (other == counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.getDefaultInstance()) return this;
+          if (other.getTime() != 0L) {
+            setTime(other.getTime());
+          }
+          if (!other.getAmountBip().isEmpty()) {
+            amountBip_ = other.amountBip_;
+            onChanged();
+          }
+          if (!other.getAmountUsdt().isEmpty()) {
+            amountUsdt_ = other.amountUsdt_;
+            onChanged();
+          }
+          if (other.getOff() != false) {
+            setOff(other.getOff());
+          }
+          if (!other.getReward().isEmpty()) {
+            reward_ = other.reward_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long time_ ;
+        /**
+         * <code>uint64 time = 1 [json_name = "time"];</code>
+         * @return The time.
+         */
+        @java.lang.Override
+        public long getTime() {
+          return time_;
+        }
+        /**
+         * <code>uint64 time = 1 [json_name = "time"];</code>
+         * @param value The time to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTime(long value) {
+          
+          time_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 time = 1 [json_name = "time"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTime() {
+          
+          time_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object amountBip_ = "";
+        /**
+         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * @return The amountBip.
+         */
+        public java.lang.String getAmountBip() {
+          java.lang.Object ref = amountBip_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            amountBip_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * @return The bytes for amountBip.
+         */
+        public com.google.protobuf.ByteString
+            getAmountBipBytes() {
+          java.lang.Object ref = amountBip_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            amountBip_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * @param value The amountBip to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAmountBip(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          amountBip_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAmountBip() {
+          
+          amountBip_ = getDefaultInstance().getAmountBip();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * @param value The bytes for amountBip to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAmountBipBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          amountBip_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object amountUsdt_ = "";
+        /**
+         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * @return The amountUsdt.
+         */
+        public java.lang.String getAmountUsdt() {
+          java.lang.Object ref = amountUsdt_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            amountUsdt_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * @return The bytes for amountUsdt.
+         */
+        public com.google.protobuf.ByteString
+            getAmountUsdtBytes() {
+          java.lang.Object ref = amountUsdt_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            amountUsdt_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * @param value The amountUsdt to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAmountUsdt(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          amountUsdt_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAmountUsdt() {
+          
+          amountUsdt_ = getDefaultInstance().getAmountUsdt();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * @param value The bytes for amountUsdt to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAmountUsdtBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          amountUsdt_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean off_ ;
+        /**
+         * <code>bool off = 4 [json_name = "off"];</code>
+         * @return The off.
+         */
+        @java.lang.Override
+        public boolean getOff() {
+          return off_;
+        }
+        /**
+         * <code>bool off = 4 [json_name = "off"];</code>
+         * @param value The off to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOff(boolean value) {
+          
+          off_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool off = 4 [json_name = "off"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOff() {
+          
+          off_ = false;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object reward_ = "";
+        /**
+         * <code>string reward = 5 [json_name = "reward"];</code>
+         * @return The reward.
+         */
+        public java.lang.String getReward() {
+          java.lang.Object ref = reward_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            reward_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string reward = 5 [json_name = "reward"];</code>
+         * @return The bytes for reward.
+         */
+        public com.google.protobuf.ByteString
+            getRewardBytes() {
+          java.lang.Object ref = reward_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            reward_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string reward = 5 [json_name = "reward"];</code>
+         * @param value The reward to set.
+         * @return This builder for chaining.
+         */
+        public Builder setReward(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          reward_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string reward = 5 [json_name = "reward"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearReward() {
+          
+          reward_ = getDefaultInstance().getReward();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string reward = 5 [json_name = "reward"];</code>
+         * @param value The bytes for reward to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRewardBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          reward_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api_pb.GenesisResponse.AppState.RewardPrice)
+      }
+
+      // @@protoc_insertion_point(class_scope:api_pb.GenesisResponse.AppState.RewardPrice)
+      private static final counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice();
+      }
+
+      public static counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RewardPrice>
+          PARSER = new com.google.protobuf.AbstractParser<RewardPrice>() {
+        @java.lang.Override
+        public RewardPrice parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RewardPrice(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RewardPrice> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RewardPrice> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int VERSION_FIELD_NUMBER = 19;
     private volatile java.lang.Object version_;
     /**
-     * <code>string version = 19;</code>
+     * <code>string version = 19 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
@@ -24022,7 +30282,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 19;</code>
+     * <code>string version = 19 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     @java.lang.Override
@@ -24043,7 +30303,7 @@ private static final long serialVersionUID = 0L;
     public static final int NOTE_FIELD_NUMBER = 10;
     private volatile java.lang.Object note_;
     /**
-     * <code>string note = 10;</code>
+     * <code>string note = 10 [json_name = "note"];</code>
      * @return The note.
      */
     @java.lang.Override
@@ -24060,7 +30320,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string note = 10;</code>
+     * <code>string note = 10 [json_name = "note"];</code>
      * @return The bytes for note.
      */
     @java.lang.Override
@@ -24081,14 +30341,14 @@ private static final long serialVersionUID = 0L;
     public static final int VALIDATORS_FIELD_NUMBER = 2;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Validators> validators_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Validators> getValidatorsList() {
       return validators_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder> 
@@ -24096,21 +30356,21 @@ private static final long serialVersionUID = 0L;
       return validators_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     @java.lang.Override
     public int getValidatorsCount() {
       return validators_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Validators getValidators(int index) {
       return validators_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder getValidatorsOrBuilder(
@@ -24121,14 +30381,14 @@ private static final long serialVersionUID = 0L;
     public static final int CANDIDATES_FIELD_NUMBER = 3;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate> candidates_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate> getCandidatesList() {
       return candidates_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder> 
@@ -24136,21 +30396,21 @@ private static final long serialVersionUID = 0L;
       return candidates_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     @java.lang.Override
     public int getCandidatesCount() {
       return candidates_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Candidate getCandidates(int index) {
       return candidates_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder getCandidatesOrBuilder(
@@ -24158,17 +30418,57 @@ private static final long serialVersionUID = 0L;
       return candidates_.get(index);
     }
 
+    public static final int DELETED_CANDIDATES_FIELD_NUMBER = 20;
+    private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> deletedCandidates_;
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> getDeletedCandidatesList() {
+      return deletedCandidates_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder> 
+        getDeletedCandidatesOrBuilderList() {
+      return deletedCandidates_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    @java.lang.Override
+    public int getDeletedCandidatesCount() {
+      return deletedCandidates_.size();
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDeletedCandidates(int index) {
+      return deletedCandidates_.get(index);
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder getDeletedCandidatesOrBuilder(
+        int index) {
+      return deletedCandidates_.get(index);
+    }
+
     public static final int COINS_FIELD_NUMBER = 5;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin> coins_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin> getCoinsList() {
       return coins_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder> 
@@ -24176,21 +30476,21 @@ private static final long serialVersionUID = 0L;
       return coins_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     @java.lang.Override
     public int getCoinsCount() {
       return coins_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Coin getCoins(int index) {
       return coins_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder getCoinsOrBuilder(
@@ -24201,14 +30501,14 @@ private static final long serialVersionUID = 0L;
     public static final int FROZEN_FUNDS_FIELD_NUMBER = 6;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> frozenFunds_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> getFrozenFundsList() {
       return frozenFunds_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder> 
@@ -24216,21 +30516,21 @@ private static final long serialVersionUID = 0L;
       return frozenFunds_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     @java.lang.Override
     public int getFrozenFundsCount() {
       return frozenFunds_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund getFrozenFunds(int index) {
       return frozenFunds_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder getFrozenFundsOrBuilder(
@@ -24241,7 +30541,7 @@ private static final long serialVersionUID = 0L;
     public static final int BLOCK_LIST_CANDIDATES_FIELD_NUMBER = 18;
     private com.google.protobuf.LazyStringList blockListCandidates_;
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @return A list containing the blockListCandidates.
      */
     public com.google.protobuf.ProtocolStringList
@@ -24249,14 +30549,14 @@ private static final long serialVersionUID = 0L;
       return blockListCandidates_;
     }
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @return The count of blockListCandidates.
      */
     public int getBlockListCandidatesCount() {
       return blockListCandidates_.size();
     }
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @param index The index of the element to return.
      * @return The blockListCandidates at the given index.
      */
@@ -24264,7 +30564,7 @@ private static final long serialVersionUID = 0L;
       return blockListCandidates_.get(index);
     }
     /**
-     * <code>repeated string block_list_candidates = 18;</code>
+     * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the blockListCandidates at the given index.
      */
@@ -24276,14 +30576,14 @@ private static final long serialVersionUID = 0L;
     public static final int WAITLIST_FIELD_NUMBER = 13;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> waitlist_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> getWaitlistList() {
       return waitlist_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder> 
@@ -24291,21 +30591,21 @@ private static final long serialVersionUID = 0L;
       return waitlist_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     @java.lang.Override
     public int getWaitlistCount() {
       return waitlist_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Waitlist getWaitlist(int index) {
       return waitlist_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder getWaitlistOrBuilder(
@@ -24316,14 +30616,14 @@ private static final long serialVersionUID = 0L;
     public static final int ACCOUNTS_FIELD_NUMBER = 14;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account> accounts_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account> getAccountsList() {
       return accounts_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder> 
@@ -24331,21 +30631,21 @@ private static final long serialVersionUID = 0L;
       return accounts_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     @java.lang.Override
     public int getAccountsCount() {
       return accounts_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Account getAccounts(int index) {
       return accounts_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder getAccountsOrBuilder(
@@ -24356,14 +30656,14 @@ private static final long serialVersionUID = 0L;
     public static final int HALT_BLOCKS_FIELD_NUMBER = 12;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> haltBlocks_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> getHaltBlocksList() {
       return haltBlocks_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder> 
@@ -24371,21 +30671,21 @@ private static final long serialVersionUID = 0L;
       return haltBlocks_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     @java.lang.Override
     public int getHaltBlocksCount() {
       return haltBlocks_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock getHaltBlocks(int index) {
       return haltBlocks_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder getHaltBlocksOrBuilder(
@@ -24396,14 +30696,14 @@ private static final long serialVersionUID = 0L;
     public static final int POOLS_FIELD_NUMBER = 15;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool> pools_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool> getPoolsList() {
       return pools_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder> 
@@ -24411,21 +30711,21 @@ private static final long serialVersionUID = 0L;
       return pools_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     @java.lang.Override
     public int getPoolsCount() {
       return pools_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.Pool getPools(int index) {
       return pools_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder getPoolsOrBuilder(
@@ -24433,10 +30733,21 @@ private static final long serialVersionUID = 0L;
       return pools_.get(index);
     }
 
+    public static final int NEXT_ORDER_ID_FIELD_NUMBER = 21;
+    private long nextOrderId_;
+    /**
+     * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+     * @return The nextOrderId.
+     */
+    @java.lang.Override
+    public long getNextOrderId() {
+      return nextOrderId_;
+    }
+
     public static final int COMMISSION_FIELD_NUMBER = 16;
     private counters.minter.grpc.client.GenesisResponse.AppState.Commission commission_;
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      * @return Whether the commission field is set.
      */
     @java.lang.Override
@@ -24444,7 +30755,7 @@ private static final long serialVersionUID = 0L;
       return commission_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      * @return The commission.
      */
     @java.lang.Override
@@ -24452,7 +30763,7 @@ private static final long serialVersionUID = 0L;
       return commission_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.Commission.getDefaultInstance() : commission_;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+     * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder() {
@@ -24462,14 +30773,14 @@ private static final long serialVersionUID = 0L;
     public static final int COMMISSION_VOTES_FIELD_NUMBER = 17;
     private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> commissionVotes_;
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> getCommissionVotesList() {
       return commissionVotes_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder> 
@@ -24477,21 +30788,21 @@ private static final long serialVersionUID = 0L;
       return commissionVotes_;
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     @java.lang.Override
     public int getCommissionVotesCount() {
       return commissionVotes_.size();
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote getCommissionVotes(int index) {
       return commissionVotes_.get(index);
     }
     /**
-     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+     * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder getCommissionVotesOrBuilder(
@@ -24499,10 +30810,50 @@ private static final long serialVersionUID = 0L;
       return commissionVotes_.get(index);
     }
 
+    public static final int UPDATE_VOTES_FIELD_NUMBER = 22;
+    private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> updateVotes_;
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> getUpdateVotesList() {
+      return updateVotes_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder> 
+        getUpdateVotesOrBuilderList() {
+      return updateVotes_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    @java.lang.Override
+    public int getUpdateVotesCount() {
+      return updateVotes_.size();
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getUpdateVotes(int index) {
+      return updateVotes_.get(index);
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder getUpdateVotesOrBuilder(
+        int index) {
+      return updateVotes_.get(index);
+    }
+
     public static final int USED_CHECKS_FIELD_NUMBER = 11;
     private com.google.protobuf.LazyStringList usedChecks_;
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @return A list containing the usedChecks.
      */
     public com.google.protobuf.ProtocolStringList
@@ -24510,14 +30861,14 @@ private static final long serialVersionUID = 0L;
       return usedChecks_;
     }
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @return The count of usedChecks.
      */
     public int getUsedChecksCount() {
       return usedChecks_.size();
     }
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @param index The index of the element to return.
      * @return The usedChecks at the given index.
      */
@@ -24525,7 +30876,7 @@ private static final long serialVersionUID = 0L;
       return usedChecks_.get(index);
     }
     /**
-     * <code>repeated string used_checks = 11;</code>
+     * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the usedChecks at the given index.
      */
@@ -24537,7 +30888,7 @@ private static final long serialVersionUID = 0L;
     public static final int MAX_GAS_FIELD_NUMBER = 7;
     private long maxGas_;
     /**
-     * <code>uint64 max_gas = 7;</code>
+     * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
      * @return The maxGas.
      */
     @java.lang.Override
@@ -24548,7 +30899,7 @@ private static final long serialVersionUID = 0L;
     public static final int TOTAL_SLASHED_FIELD_NUMBER = 8;
     private volatile java.lang.Object totalSlashed_;
     /**
-     * <code>string total_slashed = 8;</code>
+     * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
      * @return The totalSlashed.
      */
     @java.lang.Override
@@ -24565,7 +30916,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string total_slashed = 8;</code>
+     * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
      * @return The bytes for totalSlashed.
      */
     @java.lang.Override
@@ -24581,6 +30932,110 @@ private static final long serialVersionUID = 0L;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int VERSIONS_FIELD_NUMBER = 23;
+    private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version> versions_;
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version> getVersionsList() {
+      return versions_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder> 
+        getVersionsOrBuilderList() {
+      return versions_;
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    @java.lang.Override
+    public int getVersionsCount() {
+      return versions_.size();
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.Version getVersions(int index) {
+      return versions_.get(index);
+    }
+    /**
+     * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder getVersionsOrBuilder(
+        int index) {
+      return versions_.get(index);
+    }
+
+    public static final int EMISSION_FIELD_NUMBER = 24;
+    private volatile java.lang.Object emission_;
+    /**
+     * <code>string emission = 24 [json_name = "emission"];</code>
+     * @return The emission.
+     */
+    @java.lang.Override
+    public java.lang.String getEmission() {
+      java.lang.Object ref = emission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        emission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string emission = 24 [json_name = "emission"];</code>
+     * @return The bytes for emission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmissionBytes() {
+      java.lang.Object ref = emission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        emission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREV_REWARD_FIELD_NUMBER = 25;
+    private counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice prevReward_;
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     * @return Whether the prevReward field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrevReward() {
+      return prevReward_ != null;
+    }
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     * @return The prevReward.
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getPrevReward() {
+      return prevReward_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.getDefaultInstance() : prevReward_;
+    }
+    /**
+     * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+     */
+    @java.lang.Override
+    public counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder getPrevRewardOrBuilder() {
+      return getPrevReward();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24612,10 +31067,10 @@ private static final long serialVersionUID = 0L;
       if (maxGas_ != 0L) {
         output.writeUInt64(7, maxGas_);
       }
-      if (!getTotalSlashedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalSlashed_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, totalSlashed_);
       }
-      if (!getNoteBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(note_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, note_);
       }
       for (int i = 0; i < usedChecks_.size(); i++) {
@@ -24642,8 +31097,26 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < blockListCandidates_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, blockListCandidates_.getRaw(i));
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, version_);
+      }
+      for (int i = 0; i < deletedCandidates_.size(); i++) {
+        output.writeMessage(20, deletedCandidates_.get(i));
+      }
+      if (nextOrderId_ != 0L) {
+        output.writeUInt64(21, nextOrderId_);
+      }
+      for (int i = 0; i < updateVotes_.size(); i++) {
+        output.writeMessage(22, updateVotes_.get(i));
+      }
+      for (int i = 0; i < versions_.size(); i++) {
+        output.writeMessage(23, versions_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, emission_);
+      }
+      if (prevReward_ != null) {
+        output.writeMessage(25, getPrevReward());
       }
       unknownFields.writeTo(output);
     }
@@ -24674,10 +31147,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(7, maxGas_);
       }
-      if (!getTotalSlashedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalSlashed_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, totalSlashed_);
       }
-      if (!getNoteBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(note_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, note_);
       }
       {
@@ -24720,8 +31193,31 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 2 * getBlockListCandidatesList().size();
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, version_);
+      }
+      for (int i = 0; i < deletedCandidates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, deletedCandidates_.get(i));
+      }
+      if (nextOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(21, nextOrderId_);
+      }
+      for (int i = 0; i < updateVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, updateVotes_.get(i));
+      }
+      for (int i = 0; i < versions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, versions_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, emission_);
+      }
+      if (prevReward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getPrevReward());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24746,6 +31242,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getValidatorsList())) return false;
       if (!getCandidatesList()
           .equals(other.getCandidatesList())) return false;
+      if (!getDeletedCandidatesList()
+          .equals(other.getDeletedCandidatesList())) return false;
       if (!getCoinsList()
           .equals(other.getCoinsList())) return false;
       if (!getFrozenFundsList()
@@ -24760,6 +31258,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getHaltBlocksList())) return false;
       if (!getPoolsList()
           .equals(other.getPoolsList())) return false;
+      if (getNextOrderId()
+          != other.getNextOrderId()) return false;
       if (hasCommission() != other.hasCommission()) return false;
       if (hasCommission()) {
         if (!getCommission()
@@ -24767,12 +31267,23 @@ private static final long serialVersionUID = 0L;
       }
       if (!getCommissionVotesList()
           .equals(other.getCommissionVotesList())) return false;
+      if (!getUpdateVotesList()
+          .equals(other.getUpdateVotesList())) return false;
       if (!getUsedChecksList()
           .equals(other.getUsedChecksList())) return false;
       if (getMaxGas()
           != other.getMaxGas()) return false;
       if (!getTotalSlashed()
           .equals(other.getTotalSlashed())) return false;
+      if (!getVersionsList()
+          .equals(other.getVersionsList())) return false;
+      if (!getEmission()
+          .equals(other.getEmission())) return false;
+      if (hasPrevReward() != other.hasPrevReward()) return false;
+      if (hasPrevReward()) {
+        if (!getPrevReward()
+            .equals(other.getPrevReward())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24795,6 +31306,10 @@ private static final long serialVersionUID = 0L;
       if (getCandidatesCount() > 0) {
         hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
         hash = (53 * hash) + getCandidatesList().hashCode();
+      }
+      if (getDeletedCandidatesCount() > 0) {
+        hash = (37 * hash) + DELETED_CANDIDATES_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletedCandidatesList().hashCode();
       }
       if (getCoinsCount() > 0) {
         hash = (37 * hash) + COINS_FIELD_NUMBER;
@@ -24824,6 +31339,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + POOLS_FIELD_NUMBER;
         hash = (53 * hash) + getPoolsList().hashCode();
       }
+      hash = (37 * hash) + NEXT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextOrderId());
       if (hasCommission()) {
         hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
         hash = (53 * hash) + getCommission().hashCode();
@@ -24831,6 +31349,10 @@ private static final long serialVersionUID = 0L;
       if (getCommissionVotesCount() > 0) {
         hash = (37 * hash) + COMMISSION_VOTES_FIELD_NUMBER;
         hash = (53 * hash) + getCommissionVotesList().hashCode();
+      }
+      if (getUpdateVotesCount() > 0) {
+        hash = (37 * hash) + UPDATE_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateVotesList().hashCode();
       }
       if (getUsedChecksCount() > 0) {
         hash = (37 * hash) + USED_CHECKS_FIELD_NUMBER;
@@ -24841,6 +31363,16 @@ private static final long serialVersionUID = 0L;
           getMaxGas());
       hash = (37 * hash) + TOTAL_SLASHED_FIELD_NUMBER;
       hash = (53 * hash) + getTotalSlashed().hashCode();
+      if (getVersionsCount() > 0) {
+        hash = (37 * hash) + VERSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getVersionsList().hashCode();
+      }
+      hash = (37 * hash) + EMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getEmission().hashCode();
+      if (hasPrevReward()) {
+        hash = (37 * hash) + PREV_REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getPrevReward().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24971,6 +31503,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
           getValidatorsFieldBuilder();
           getCandidatesFieldBuilder();
+          getDeletedCandidatesFieldBuilder();
           getCoinsFieldBuilder();
           getFrozenFundsFieldBuilder();
           getWaitlistFieldBuilder();
@@ -24978,6 +31511,8 @@ private static final long serialVersionUID = 0L;
           getHaltBlocksFieldBuilder();
           getPoolsFieldBuilder();
           getCommissionVotesFieldBuilder();
+          getUpdateVotesFieldBuilder();
+          getVersionsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -24999,44 +31534,52 @@ private static final long serialVersionUID = 0L;
         } else {
           candidatesBuilder_.clear();
         }
+        if (deletedCandidatesBuilder_ == null) {
+          deletedCandidates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          deletedCandidatesBuilder_.clear();
+        }
         if (coinsBuilder_ == null) {
           coins_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           coinsBuilder_.clear();
         }
         if (frozenFundsBuilder_ == null) {
           frozenFunds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           frozenFundsBuilder_.clear();
         }
         blockListCandidates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (waitlistBuilder_ == null) {
           waitlist_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           waitlistBuilder_.clear();
         }
         if (accountsBuilder_ == null) {
           accounts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           accountsBuilder_.clear();
         }
         if (haltBlocksBuilder_ == null) {
           haltBlocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           haltBlocksBuilder_.clear();
         }
         if (poolsBuilder_ == null) {
           pools_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           poolsBuilder_.clear();
         }
+        nextOrderId_ = 0L;
+
         if (commissionBuilder_ == null) {
           commission_ = null;
         } else {
@@ -25045,16 +31588,36 @@ private static final long serialVersionUID = 0L;
         }
         if (commissionVotesBuilder_ == null) {
           commissionVotes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           commissionVotesBuilder_.clear();
         }
+        if (updateVotesBuilder_ == null) {
+          updateVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          updateVotesBuilder_.clear();
+        }
         usedChecks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         maxGas_ = 0L;
 
         totalSlashed_ = "";
 
+        if (versionsBuilder_ == null) {
+          versions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00002000);
+        } else {
+          versionsBuilder_.clear();
+        }
+        emission_ = "";
+
+        if (prevRewardBuilder_ == null) {
+          prevReward_ = null;
+        } else {
+          prevReward_ = null;
+          prevRewardBuilder_ = null;
+        }
         return this;
       }
 
@@ -25102,86 +31665,120 @@ private static final long serialVersionUID = 0L;
         } else {
           result.candidates_ = candidatesBuilder_.build();
         }
-        if (coinsBuilder_ == null) {
+        if (deletedCandidatesBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
-            coins_ = java.util.Collections.unmodifiableList(coins_);
+            deletedCandidates_ = java.util.Collections.unmodifiableList(deletedCandidates_);
             bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.deletedCandidates_ = deletedCandidates_;
+        } else {
+          result.deletedCandidates_ = deletedCandidatesBuilder_.build();
+        }
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.coins_ = coins_;
         } else {
           result.coins_ = coinsBuilder_.build();
         }
         if (frozenFundsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             frozenFunds_ = java.util.Collections.unmodifiableList(frozenFunds_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.frozenFunds_ = frozenFunds_;
         } else {
           result.frozenFunds_ = frozenFundsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           blockListCandidates_ = blockListCandidates_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.blockListCandidates_ = blockListCandidates_;
         if (waitlistBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             waitlist_ = java.util.Collections.unmodifiableList(waitlist_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.waitlist_ = waitlist_;
         } else {
           result.waitlist_ = waitlistBuilder_.build();
         }
         if (accountsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             accounts_ = java.util.Collections.unmodifiableList(accounts_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.accounts_ = accounts_;
         } else {
           result.accounts_ = accountsBuilder_.build();
         }
         if (haltBlocksBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             haltBlocks_ = java.util.Collections.unmodifiableList(haltBlocks_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.haltBlocks_ = haltBlocks_;
         } else {
           result.haltBlocks_ = haltBlocksBuilder_.build();
         }
         if (poolsBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             pools_ = java.util.Collections.unmodifiableList(pools_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.pools_ = pools_;
         } else {
           result.pools_ = poolsBuilder_.build();
         }
+        result.nextOrderId_ = nextOrderId_;
         if (commissionBuilder_ == null) {
           result.commission_ = commission_;
         } else {
           result.commission_ = commissionBuilder_.build();
         }
         if (commissionVotesBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) != 0)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             commissionVotes_ = java.util.Collections.unmodifiableList(commissionVotes_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           }
           result.commissionVotes_ = commissionVotes_;
         } else {
           result.commissionVotes_ = commissionVotesBuilder_.build();
         }
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (updateVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            updateVotes_ = java.util.Collections.unmodifiableList(updateVotes_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.updateVotes_ = updateVotes_;
+        } else {
+          result.updateVotes_ = updateVotesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00001000) != 0)) {
           usedChecks_ = usedChecks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.usedChecks_ = usedChecks_;
         result.maxGas_ = maxGas_;
         result.totalSlashed_ = totalSlashed_;
+        if (versionsBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0)) {
+            versions_ = java.util.Collections.unmodifiableList(versions_);
+            bitField0_ = (bitField0_ & ~0x00002000);
+          }
+          result.versions_ = versions_;
+        } else {
+          result.versions_ = versionsBuilder_.build();
+        }
+        result.emission_ = emission_;
+        if (prevRewardBuilder_ == null) {
+          result.prevReward_ = prevReward_;
+        } else {
+          result.prevReward_ = prevRewardBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -25290,11 +31887,37 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (deletedCandidatesBuilder_ == null) {
+          if (!other.deletedCandidates_.isEmpty()) {
+            if (deletedCandidates_.isEmpty()) {
+              deletedCandidates_ = other.deletedCandidates_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDeletedCandidatesIsMutable();
+              deletedCandidates_.addAll(other.deletedCandidates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deletedCandidates_.isEmpty()) {
+            if (deletedCandidatesBuilder_.isEmpty()) {
+              deletedCandidatesBuilder_.dispose();
+              deletedCandidatesBuilder_ = null;
+              deletedCandidates_ = other.deletedCandidates_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              deletedCandidatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeletedCandidatesFieldBuilder() : null;
+            } else {
+              deletedCandidatesBuilder_.addAllMessages(other.deletedCandidates_);
+            }
+          }
+        }
         if (coinsBuilder_ == null) {
           if (!other.coins_.isEmpty()) {
             if (coins_.isEmpty()) {
               coins_ = other.coins_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureCoinsIsMutable();
               coins_.addAll(other.coins_);
@@ -25307,7 +31930,7 @@ private static final long serialVersionUID = 0L;
               coinsBuilder_.dispose();
               coinsBuilder_ = null;
               coins_ = other.coins_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               coinsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCoinsFieldBuilder() : null;
@@ -25320,7 +31943,7 @@ private static final long serialVersionUID = 0L;
           if (!other.frozenFunds_.isEmpty()) {
             if (frozenFunds_.isEmpty()) {
               frozenFunds_ = other.frozenFunds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureFrozenFundsIsMutable();
               frozenFunds_.addAll(other.frozenFunds_);
@@ -25333,7 +31956,7 @@ private static final long serialVersionUID = 0L;
               frozenFundsBuilder_.dispose();
               frozenFundsBuilder_ = null;
               frozenFunds_ = other.frozenFunds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               frozenFundsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFrozenFundsFieldBuilder() : null;
@@ -25345,7 +31968,7 @@ private static final long serialVersionUID = 0L;
         if (!other.blockListCandidates_.isEmpty()) {
           if (blockListCandidates_.isEmpty()) {
             blockListCandidates_ = other.blockListCandidates_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureBlockListCandidatesIsMutable();
             blockListCandidates_.addAll(other.blockListCandidates_);
@@ -25356,7 +31979,7 @@ private static final long serialVersionUID = 0L;
           if (!other.waitlist_.isEmpty()) {
             if (waitlist_.isEmpty()) {
               waitlist_ = other.waitlist_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureWaitlistIsMutable();
               waitlist_.addAll(other.waitlist_);
@@ -25369,7 +31992,7 @@ private static final long serialVersionUID = 0L;
               waitlistBuilder_.dispose();
               waitlistBuilder_ = null;
               waitlist_ = other.waitlist_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               waitlistBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getWaitlistFieldBuilder() : null;
@@ -25382,7 +32005,7 @@ private static final long serialVersionUID = 0L;
           if (!other.accounts_.isEmpty()) {
             if (accounts_.isEmpty()) {
               accounts_ = other.accounts_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureAccountsIsMutable();
               accounts_.addAll(other.accounts_);
@@ -25395,7 +32018,7 @@ private static final long serialVersionUID = 0L;
               accountsBuilder_.dispose();
               accountsBuilder_ = null;
               accounts_ = other.accounts_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
               accountsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAccountsFieldBuilder() : null;
@@ -25408,7 +32031,7 @@ private static final long serialVersionUID = 0L;
           if (!other.haltBlocks_.isEmpty()) {
             if (haltBlocks_.isEmpty()) {
               haltBlocks_ = other.haltBlocks_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensureHaltBlocksIsMutable();
               haltBlocks_.addAll(other.haltBlocks_);
@@ -25421,7 +32044,7 @@ private static final long serialVersionUID = 0L;
               haltBlocksBuilder_.dispose();
               haltBlocksBuilder_ = null;
               haltBlocks_ = other.haltBlocks_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
               haltBlocksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHaltBlocksFieldBuilder() : null;
@@ -25434,7 +32057,7 @@ private static final long serialVersionUID = 0L;
           if (!other.pools_.isEmpty()) {
             if (pools_.isEmpty()) {
               pools_ = other.pools_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensurePoolsIsMutable();
               pools_.addAll(other.pools_);
@@ -25447,7 +32070,7 @@ private static final long serialVersionUID = 0L;
               poolsBuilder_.dispose();
               poolsBuilder_ = null;
               pools_ = other.pools_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000200);
               poolsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPoolsFieldBuilder() : null;
@@ -25456,6 +32079,9 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (other.getNextOrderId() != 0L) {
+          setNextOrderId(other.getNextOrderId());
+        }
         if (other.hasCommission()) {
           mergeCommission(other.getCommission());
         }
@@ -25463,7 +32089,7 @@ private static final long serialVersionUID = 0L;
           if (!other.commissionVotes_.isEmpty()) {
             if (commissionVotes_.isEmpty()) {
               commissionVotes_ = other.commissionVotes_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
             } else {
               ensureCommissionVotesIsMutable();
               commissionVotes_.addAll(other.commissionVotes_);
@@ -25476,7 +32102,7 @@ private static final long serialVersionUID = 0L;
               commissionVotesBuilder_.dispose();
               commissionVotesBuilder_ = null;
               commissionVotes_ = other.commissionVotes_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
               commissionVotesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCommissionVotesFieldBuilder() : null;
@@ -25485,10 +32111,36 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (updateVotesBuilder_ == null) {
+          if (!other.updateVotes_.isEmpty()) {
+            if (updateVotes_.isEmpty()) {
+              updateVotes_ = other.updateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureUpdateVotesIsMutable();
+              updateVotes_.addAll(other.updateVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.updateVotes_.isEmpty()) {
+            if (updateVotesBuilder_.isEmpty()) {
+              updateVotesBuilder_.dispose();
+              updateVotesBuilder_ = null;
+              updateVotes_ = other.updateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              updateVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUpdateVotesFieldBuilder() : null;
+            } else {
+              updateVotesBuilder_.addAllMessages(other.updateVotes_);
+            }
+          }
+        }
         if (!other.usedChecks_.isEmpty()) {
           if (usedChecks_.isEmpty()) {
             usedChecks_ = other.usedChecks_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureUsedChecksIsMutable();
             usedChecks_.addAll(other.usedChecks_);
@@ -25501,6 +32153,39 @@ private static final long serialVersionUID = 0L;
         if (!other.getTotalSlashed().isEmpty()) {
           totalSlashed_ = other.totalSlashed_;
           onChanged();
+        }
+        if (versionsBuilder_ == null) {
+          if (!other.versions_.isEmpty()) {
+            if (versions_.isEmpty()) {
+              versions_ = other.versions_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+            } else {
+              ensureVersionsIsMutable();
+              versions_.addAll(other.versions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.versions_.isEmpty()) {
+            if (versionsBuilder_.isEmpty()) {
+              versionsBuilder_.dispose();
+              versionsBuilder_ = null;
+              versions_ = other.versions_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+              versionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVersionsFieldBuilder() : null;
+            } else {
+              versionsBuilder_.addAllMessages(other.versions_);
+            }
+          }
+        }
+        if (!other.getEmission().isEmpty()) {
+          emission_ = other.emission_;
+          onChanged();
+        }
+        if (other.hasPrevReward()) {
+          mergePrevReward(other.getPrevReward());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25534,7 +32219,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object version_ = "";
       /**
-       * <code>string version = 19;</code>
+       * <code>string version = 19 [json_name = "version"];</code>
        * @return The version.
        */
       public java.lang.String getVersion() {
@@ -25550,7 +32235,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string version = 19;</code>
+       * <code>string version = 19 [json_name = "version"];</code>
        * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
@@ -25567,7 +32252,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string version = 19;</code>
+       * <code>string version = 19 [json_name = "version"];</code>
        * @param value The version to set.
        * @return This builder for chaining.
        */
@@ -25582,7 +32267,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string version = 19;</code>
+       * <code>string version = 19 [json_name = "version"];</code>
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
@@ -25592,7 +32277,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string version = 19;</code>
+       * <code>string version = 19 [json_name = "version"];</code>
        * @param value The bytes for version to set.
        * @return This builder for chaining.
        */
@@ -25610,7 +32295,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object note_ = "";
       /**
-       * <code>string note = 10;</code>
+       * <code>string note = 10 [json_name = "note"];</code>
        * @return The note.
        */
       public java.lang.String getNote() {
@@ -25626,7 +32311,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string note = 10;</code>
+       * <code>string note = 10 [json_name = "note"];</code>
        * @return The bytes for note.
        */
       public com.google.protobuf.ByteString
@@ -25643,7 +32328,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string note = 10;</code>
+       * <code>string note = 10 [json_name = "note"];</code>
        * @param value The note to set.
        * @return This builder for chaining.
        */
@@ -25658,7 +32343,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string note = 10;</code>
+       * <code>string note = 10 [json_name = "note"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNote() {
@@ -25668,7 +32353,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string note = 10;</code>
+       * <code>string note = 10 [json_name = "note"];</code>
        * @param value The bytes for note to set.
        * @return This builder for chaining.
        */
@@ -25697,7 +32382,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Validators, counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder, counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder> validatorsBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Validators> getValidatorsList() {
         if (validatorsBuilder_ == null) {
@@ -25707,7 +32392,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public int getValidatorsCount() {
         if (validatorsBuilder_ == null) {
@@ -25717,7 +32402,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Validators getValidators(int index) {
         if (validatorsBuilder_ == null) {
@@ -25727,7 +32412,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder setValidators(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Validators value) {
@@ -25744,7 +32429,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder setValidators(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder builderForValue) {
@@ -25758,7 +32443,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder addValidators(counters.minter.grpc.client.GenesisResponse.AppState.Validators value) {
         if (validatorsBuilder_ == null) {
@@ -25774,7 +32459,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder addValidators(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Validators value) {
@@ -25791,7 +32476,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder addValidators(
           counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder builderForValue) {
@@ -25805,7 +32490,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder addValidators(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder builderForValue) {
@@ -25819,7 +32504,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder addAllValidators(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Validators> values) {
@@ -25834,7 +32519,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder clearValidators() {
         if (validatorsBuilder_ == null) {
@@ -25847,7 +32532,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public Builder removeValidators(int index) {
         if (validatorsBuilder_ == null) {
@@ -25860,14 +32545,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder getValidatorsBuilder(
           int index) {
         return getValidatorsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder getValidatorsOrBuilder(
           int index) {
@@ -25877,7 +32562,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.ValidatorsOrBuilder> 
            getValidatorsOrBuilderList() {
@@ -25888,14 +32573,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder addValidatorsBuilder() {
         return getValidatorsFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Validators.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder addValidatorsBuilder(
           int index) {
@@ -25903,7 +32588,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Validators.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Validators.Builder> 
            getValidatorsBuilderList() {
@@ -25937,7 +32622,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Candidate, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder> candidatesBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate> getCandidatesList() {
         if (candidatesBuilder_ == null) {
@@ -25947,7 +32632,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public int getCandidatesCount() {
         if (candidatesBuilder_ == null) {
@@ -25957,7 +32642,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate getCandidates(int index) {
         if (candidatesBuilder_ == null) {
@@ -25967,7 +32652,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder setCandidates(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate value) {
@@ -25984,7 +32669,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder setCandidates(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder builderForValue) {
@@ -25998,7 +32683,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(counters.minter.grpc.client.GenesisResponse.AppState.Candidate value) {
         if (candidatesBuilder_ == null) {
@@ -26014,7 +32699,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate value) {
@@ -26031,7 +32716,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
           counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder builderForValue) {
@@ -26045,7 +32730,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder builderForValue) {
@@ -26059,7 +32744,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder addAllCandidates(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Candidate> values) {
@@ -26074,7 +32759,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder clearCandidates() {
         if (candidatesBuilder_ == null) {
@@ -26087,7 +32772,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public Builder removeCandidates(int index) {
         if (candidatesBuilder_ == null) {
@@ -26100,14 +32785,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder getCandidatesBuilder(
           int index) {
         return getCandidatesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder getCandidatesOrBuilder(
           int index) {
@@ -26117,7 +32802,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CandidateOrBuilder> 
            getCandidatesOrBuilderList() {
@@ -26128,14 +32813,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder addCandidatesBuilder() {
         return getCandidatesFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder addCandidatesBuilder(
           int index) {
@@ -26143,7 +32828,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Candidate.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Builder> 
            getCandidatesBuilderList() {
@@ -26164,12 +32849,252 @@ private static final long serialVersionUID = 0L;
         return candidatesBuilder_;
       }
 
+      private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> deletedCandidates_ =
+        java.util.Collections.emptyList();
+      private void ensureDeletedCandidatesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          deletedCandidates_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate>(deletedCandidates_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder> deletedCandidatesBuilder_;
+
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> getDeletedCandidatesList() {
+        if (deletedCandidatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deletedCandidates_);
+        } else {
+          return deletedCandidatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public int getDeletedCandidatesCount() {
+        if (deletedCandidatesBuilder_ == null) {
+          return deletedCandidates_.size();
+        } else {
+          return deletedCandidatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate getDeletedCandidates(int index) {
+        if (deletedCandidatesBuilder_ == null) {
+          return deletedCandidates_.get(index);
+        } else {
+          return deletedCandidatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder setDeletedCandidates(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate value) {
+        if (deletedCandidatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.set(index, value);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder setDeletedCandidates(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder builderForValue) {
+        if (deletedCandidatesBuilder_ == null) {
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder addDeletedCandidates(counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate value) {
+        if (deletedCandidatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.add(value);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder addDeletedCandidates(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate value) {
+        if (deletedCandidatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.add(index, value);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder addDeletedCandidates(
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder builderForValue) {
+        if (deletedCandidatesBuilder_ == null) {
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder addDeletedCandidates(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder builderForValue) {
+        if (deletedCandidatesBuilder_ == null) {
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder addAllDeletedCandidates(
+          java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate> values) {
+        if (deletedCandidatesBuilder_ == null) {
+          ensureDeletedCandidatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deletedCandidates_);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder clearDeletedCandidates() {
+        if (deletedCandidatesBuilder_ == null) {
+          deletedCandidates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public Builder removeDeletedCandidates(int index) {
+        if (deletedCandidatesBuilder_ == null) {
+          ensureDeletedCandidatesIsMutable();
+          deletedCandidates_.remove(index);
+          onChanged();
+        } else {
+          deletedCandidatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder getDeletedCandidatesBuilder(
+          int index) {
+        return getDeletedCandidatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder getDeletedCandidatesOrBuilder(
+          int index) {
+        if (deletedCandidatesBuilder_ == null) {
+          return deletedCandidates_.get(index);  } else {
+          return deletedCandidatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder> 
+           getDeletedCandidatesOrBuilderList() {
+        if (deletedCandidatesBuilder_ != null) {
+          return deletedCandidatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deletedCandidates_);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder addDeletedCandidatesBuilder() {
+        return getDeletedCandidatesFieldBuilder().addBuilder(
+            counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder addDeletedCandidatesBuilder(
+          int index) {
+        return getDeletedCandidatesFieldBuilder().addBuilder(
+            index, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder> 
+           getDeletedCandidatesBuilderList() {
+        return getDeletedCandidatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder> 
+          getDeletedCandidatesFieldBuilder() {
+        if (deletedCandidatesBuilder_ == null) {
+          deletedCandidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.Builder, counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidateOrBuilder>(
+                  deletedCandidates_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deletedCandidates_ = null;
+        }
+        return deletedCandidatesBuilder_;
+      }
+
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin> coins_ =
         java.util.Collections.emptyList();
       private void ensureCoinsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           coins_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Coin>(coins_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -26177,7 +33102,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Coin, counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder> coinsBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin> getCoinsList() {
         if (coinsBuilder_ == null) {
@@ -26187,7 +33112,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public int getCoinsCount() {
         if (coinsBuilder_ == null) {
@@ -26197,7 +33122,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Coin getCoins(int index) {
         if (coinsBuilder_ == null) {
@@ -26207,7 +33132,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder setCoins(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Coin value) {
@@ -26224,7 +33149,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder setCoins(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder builderForValue) {
@@ -26238,7 +33163,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder addCoins(counters.minter.grpc.client.GenesisResponse.AppState.Coin value) {
         if (coinsBuilder_ == null) {
@@ -26254,7 +33179,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder addCoins(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Coin value) {
@@ -26271,7 +33196,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder addCoins(
           counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder builderForValue) {
@@ -26285,7 +33210,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder addCoins(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder builderForValue) {
@@ -26299,7 +33224,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder addAllCoins(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Coin> values) {
@@ -26314,12 +33239,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder clearCoins() {
         if (coinsBuilder_ == null) {
           coins_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           coinsBuilder_.clear();
@@ -26327,7 +33252,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public Builder removeCoins(int index) {
         if (coinsBuilder_ == null) {
@@ -26340,14 +33265,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder getCoinsBuilder(
           int index) {
         return getCoinsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder getCoinsOrBuilder(
           int index) {
@@ -26357,7 +33282,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder> 
            getCoinsOrBuilderList() {
@@ -26368,14 +33293,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder addCoinsBuilder() {
         return getCoinsFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder addCoinsBuilder(
           int index) {
@@ -26383,7 +33308,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder> 
            getCoinsBuilderList() {
@@ -26396,7 +33321,7 @@ private static final long serialVersionUID = 0L;
           coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.Coin, counters.minter.grpc.client.GenesisResponse.AppState.Coin.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder>(
                   coins_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           coins_ = null;
@@ -26407,9 +33332,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> frozenFunds_ =
         java.util.Collections.emptyList();
       private void ensureFrozenFundsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           frozenFunds_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund>(frozenFunds_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -26417,7 +33342,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder> frozenFundsBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> getFrozenFundsList() {
         if (frozenFundsBuilder_ == null) {
@@ -26427,7 +33352,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public int getFrozenFundsCount() {
         if (frozenFundsBuilder_ == null) {
@@ -26437,7 +33362,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund getFrozenFunds(int index) {
         if (frozenFundsBuilder_ == null) {
@@ -26447,7 +33372,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder setFrozenFunds(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund value) {
@@ -26464,7 +33389,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder setFrozenFunds(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder builderForValue) {
@@ -26478,7 +33403,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder addFrozenFunds(counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund value) {
         if (frozenFundsBuilder_ == null) {
@@ -26494,7 +33419,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder addFrozenFunds(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund value) {
@@ -26511,7 +33436,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder addFrozenFunds(
           counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder builderForValue) {
@@ -26525,7 +33450,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder addFrozenFunds(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder builderForValue) {
@@ -26539,7 +33464,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder addAllFrozenFunds(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund> values) {
@@ -26554,12 +33479,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder clearFrozenFunds() {
         if (frozenFundsBuilder_ == null) {
           frozenFunds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           frozenFundsBuilder_.clear();
@@ -26567,7 +33492,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public Builder removeFrozenFunds(int index) {
         if (frozenFundsBuilder_ == null) {
@@ -26580,14 +33505,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder getFrozenFundsBuilder(
           int index) {
         return getFrozenFundsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder getFrozenFundsOrBuilder(
           int index) {
@@ -26597,7 +33522,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder> 
            getFrozenFundsOrBuilderList() {
@@ -26608,14 +33533,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder addFrozenFundsBuilder() {
         return getFrozenFundsFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder addFrozenFundsBuilder(
           int index) {
@@ -26623,7 +33548,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder> 
            getFrozenFundsBuilderList() {
@@ -26636,7 +33561,7 @@ private static final long serialVersionUID = 0L;
           frozenFundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.Builder, counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder>(
                   frozenFunds_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           frozenFunds_ = null;
@@ -26646,13 +33571,13 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.LazyStringList blockListCandidates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureBlockListCandidatesIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           blockListCandidates_ = new com.google.protobuf.LazyStringArrayList(blockListCandidates_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @return A list containing the blockListCandidates.
        */
       public com.google.protobuf.ProtocolStringList
@@ -26660,14 +33585,14 @@ private static final long serialVersionUID = 0L;
         return blockListCandidates_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @return The count of blockListCandidates.
        */
       public int getBlockListCandidatesCount() {
         return blockListCandidates_.size();
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param index The index of the element to return.
        * @return The blockListCandidates at the given index.
        */
@@ -26675,7 +33600,7 @@ private static final long serialVersionUID = 0L;
         return blockListCandidates_.get(index);
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the blockListCandidates at the given index.
        */
@@ -26684,7 +33609,7 @@ private static final long serialVersionUID = 0L;
         return blockListCandidates_.getByteString(index);
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param index The index to set the value at.
        * @param value The blockListCandidates to set.
        * @return This builder for chaining.
@@ -26700,7 +33625,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param value The blockListCandidates to add.
        * @return This builder for chaining.
        */
@@ -26715,7 +33640,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param values The blockListCandidates to add.
        * @return This builder for chaining.
        */
@@ -26728,17 +33653,17 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlockListCandidates() {
         blockListCandidates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string block_list_candidates = 18;</code>
+       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
        * @param value The bytes of the blockListCandidates to add.
        * @return This builder for chaining.
        */
@@ -26757,9 +33682,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> waitlist_ =
         java.util.Collections.emptyList();
       private void ensureWaitlistIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           waitlist_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist>(waitlist_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -26767,7 +33692,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder, counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder> waitlistBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> getWaitlistList() {
         if (waitlistBuilder_ == null) {
@@ -26777,7 +33702,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public int getWaitlistCount() {
         if (waitlistBuilder_ == null) {
@@ -26787,7 +33712,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Waitlist getWaitlist(int index) {
         if (waitlistBuilder_ == null) {
@@ -26797,7 +33722,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder setWaitlist(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist value) {
@@ -26814,7 +33739,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder setWaitlist(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder builderForValue) {
@@ -26828,7 +33753,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder addWaitlist(counters.minter.grpc.client.GenesisResponse.AppState.Waitlist value) {
         if (waitlistBuilder_ == null) {
@@ -26844,7 +33769,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder addWaitlist(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist value) {
@@ -26861,7 +33786,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder addWaitlist(
           counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder builderForValue) {
@@ -26875,7 +33800,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder addWaitlist(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder builderForValue) {
@@ -26889,7 +33814,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder addAllWaitlist(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Waitlist> values) {
@@ -26904,12 +33829,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder clearWaitlist() {
         if (waitlistBuilder_ == null) {
           waitlist_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           waitlistBuilder_.clear();
@@ -26917,7 +33842,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public Builder removeWaitlist(int index) {
         if (waitlistBuilder_ == null) {
@@ -26930,14 +33855,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder getWaitlistBuilder(
           int index) {
         return getWaitlistFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder getWaitlistOrBuilder(
           int index) {
@@ -26947,7 +33872,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder> 
            getWaitlistOrBuilderList() {
@@ -26958,14 +33883,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder addWaitlistBuilder() {
         return getWaitlistFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder addWaitlistBuilder(
           int index) {
@@ -26973,7 +33898,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder> 
            getWaitlistBuilderList() {
@@ -26986,7 +33911,7 @@ private static final long serialVersionUID = 0L;
           waitlistBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.Builder, counters.minter.grpc.client.GenesisResponse.AppState.WaitlistOrBuilder>(
                   waitlist_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           waitlist_ = null;
@@ -26997,9 +33922,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account> accounts_ =
         java.util.Collections.emptyList();
       private void ensureAccountsIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           accounts_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Account>(accounts_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -27007,7 +33932,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Account, counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder, counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder> accountsBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account> getAccountsList() {
         if (accountsBuilder_ == null) {
@@ -27017,7 +33942,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public int getAccountsCount() {
         if (accountsBuilder_ == null) {
@@ -27027,7 +33952,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Account getAccounts(int index) {
         if (accountsBuilder_ == null) {
@@ -27037,7 +33962,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder setAccounts(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Account value) {
@@ -27054,7 +33979,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder setAccounts(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder builderForValue) {
@@ -27068,7 +33993,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder addAccounts(counters.minter.grpc.client.GenesisResponse.AppState.Account value) {
         if (accountsBuilder_ == null) {
@@ -27084,7 +34009,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder addAccounts(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Account value) {
@@ -27101,7 +34026,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder addAccounts(
           counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder builderForValue) {
@@ -27115,7 +34040,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder addAccounts(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder builderForValue) {
@@ -27129,7 +34054,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder addAllAccounts(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Account> values) {
@@ -27144,12 +34069,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder clearAccounts() {
         if (accountsBuilder_ == null) {
           accounts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           accountsBuilder_.clear();
@@ -27157,7 +34082,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public Builder removeAccounts(int index) {
         if (accountsBuilder_ == null) {
@@ -27170,14 +34095,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder getAccountsBuilder(
           int index) {
         return getAccountsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder getAccountsOrBuilder(
           int index) {
@@ -27187,7 +34112,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder> 
            getAccountsOrBuilderList() {
@@ -27198,14 +34123,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder addAccountsBuilder() {
         return getAccountsFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Account.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder addAccountsBuilder(
           int index) {
@@ -27213,7 +34138,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Account.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder> 
            getAccountsBuilderList() {
@@ -27226,7 +34151,7 @@ private static final long serialVersionUID = 0L;
           accountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.Account, counters.minter.grpc.client.GenesisResponse.AppState.Account.Builder, counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder>(
                   accounts_,
-                  ((bitField0_ & 0x00000040) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           accounts_ = null;
@@ -27237,9 +34162,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> haltBlocks_ =
         java.util.Collections.emptyList();
       private void ensureHaltBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           haltBlocks_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock>(haltBlocks_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -27247,7 +34172,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder> haltBlocksBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> getHaltBlocksList() {
         if (haltBlocksBuilder_ == null) {
@@ -27257,7 +34182,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public int getHaltBlocksCount() {
         if (haltBlocksBuilder_ == null) {
@@ -27267,7 +34192,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock getHaltBlocks(int index) {
         if (haltBlocksBuilder_ == null) {
@@ -27277,7 +34202,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder setHaltBlocks(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock value) {
@@ -27294,7 +34219,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder setHaltBlocks(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder builderForValue) {
@@ -27308,7 +34233,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder addHaltBlocks(counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock value) {
         if (haltBlocksBuilder_ == null) {
@@ -27324,7 +34249,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder addHaltBlocks(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock value) {
@@ -27341,7 +34266,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder addHaltBlocks(
           counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder builderForValue) {
@@ -27355,7 +34280,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder addHaltBlocks(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder builderForValue) {
@@ -27369,7 +34294,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder addAllHaltBlocks(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock> values) {
@@ -27384,12 +34309,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder clearHaltBlocks() {
         if (haltBlocksBuilder_ == null) {
           haltBlocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           haltBlocksBuilder_.clear();
@@ -27397,7 +34322,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public Builder removeHaltBlocks(int index) {
         if (haltBlocksBuilder_ == null) {
@@ -27410,14 +34335,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder getHaltBlocksBuilder(
           int index) {
         return getHaltBlocksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder getHaltBlocksOrBuilder(
           int index) {
@@ -27427,7 +34352,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder> 
            getHaltBlocksOrBuilderList() {
@@ -27438,14 +34363,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder addHaltBlocksBuilder() {
         return getHaltBlocksFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder addHaltBlocksBuilder(
           int index) {
@@ -27453,7 +34378,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder> 
            getHaltBlocksBuilderList() {
@@ -27466,7 +34391,7 @@ private static final long serialVersionUID = 0L;
           haltBlocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.Builder, counters.minter.grpc.client.GenesisResponse.AppState.HaltBlockOrBuilder>(
                   haltBlocks_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           haltBlocks_ = null;
@@ -27477,9 +34402,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool> pools_ =
         java.util.Collections.emptyList();
       private void ensurePoolsIsMutable() {
-        if (!((bitField0_ & 0x00000100) != 0)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           pools_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Pool>(pools_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -27487,7 +34412,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.Pool, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder, counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder> poolsBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool> getPoolsList() {
         if (poolsBuilder_ == null) {
@@ -27497,7 +34422,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public int getPoolsCount() {
         if (poolsBuilder_ == null) {
@@ -27507,7 +34432,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Pool getPools(int index) {
         if (poolsBuilder_ == null) {
@@ -27517,7 +34442,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder setPools(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool value) {
@@ -27534,7 +34459,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder setPools(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder builderForValue) {
@@ -27548,7 +34473,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder addPools(counters.minter.grpc.client.GenesisResponse.AppState.Pool value) {
         if (poolsBuilder_ == null) {
@@ -27564,7 +34489,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder addPools(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool value) {
@@ -27581,7 +34506,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder addPools(
           counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder builderForValue) {
@@ -27595,7 +34520,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder addPools(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder builderForValue) {
@@ -27609,7 +34534,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder addAllPools(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Pool> values) {
@@ -27624,12 +34549,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder clearPools() {
         if (poolsBuilder_ == null) {
           pools_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           poolsBuilder_.clear();
@@ -27637,7 +34562,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public Builder removePools(int index) {
         if (poolsBuilder_ == null) {
@@ -27650,14 +34575,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder getPoolsBuilder(
           int index) {
         return getPoolsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder getPoolsOrBuilder(
           int index) {
@@ -27667,7 +34592,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder> 
            getPoolsOrBuilderList() {
@@ -27678,14 +34603,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder addPoolsBuilder() {
         return getPoolsFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.Pool.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder addPoolsBuilder(
           int index) {
@@ -27693,7 +34618,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.Pool.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder> 
            getPoolsBuilderList() {
@@ -27706,7 +34631,7 @@ private static final long serialVersionUID = 0L;
           poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.Pool, counters.minter.grpc.client.GenesisResponse.AppState.Pool.Builder, counters.minter.grpc.client.GenesisResponse.AppState.PoolOrBuilder>(
                   pools_,
-                  ((bitField0_ & 0x00000100) != 0),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           pools_ = null;
@@ -27714,18 +34639,49 @@ private static final long serialVersionUID = 0L;
         return poolsBuilder_;
       }
 
+      private long nextOrderId_ ;
+      /**
+       * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+       * @return The nextOrderId.
+       */
+      @java.lang.Override
+      public long getNextOrderId() {
+        return nextOrderId_;
+      }
+      /**
+       * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+       * @param value The nextOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextOrderId(long value) {
+        
+        nextOrderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextOrderId() {
+        
+        nextOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private counters.minter.grpc.client.GenesisResponse.AppState.Commission commission_;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.AppState.Commission, counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder> commissionBuilder_;
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        * @return Whether the commission field is set.
        */
       public boolean hasCommission() {
         return commissionBuilder_ != null || commission_ != null;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        * @return The commission.
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Commission getCommission() {
@@ -27736,7 +34692,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public Builder setCommission(counters.minter.grpc.client.GenesisResponse.AppState.Commission value) {
         if (commissionBuilder_ == null) {
@@ -27752,7 +34708,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public Builder setCommission(
           counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder builderForValue) {
@@ -27766,7 +34722,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public Builder mergeCommission(counters.minter.grpc.client.GenesisResponse.AppState.Commission value) {
         if (commissionBuilder_ == null) {
@@ -27784,7 +34740,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public Builder clearCommission() {
         if (commissionBuilder_ == null) {
@@ -27798,7 +34754,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder getCommissionBuilder() {
         
@@ -27806,7 +34762,7 @@ private static final long serialVersionUID = 0L;
         return getCommissionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder getCommissionOrBuilder() {
         if (commissionBuilder_ != null) {
@@ -27817,7 +34773,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.GenesisResponse.AppState.Commission, counters.minter.grpc.client.GenesisResponse.AppState.Commission.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionOrBuilder> 
@@ -27836,9 +34792,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> commissionVotes_ =
         java.util.Collections.emptyList();
       private void ensureCommissionVotesIsMutable() {
-        if (!((bitField0_ & 0x00000200) != 0)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           commissionVotes_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote>(commissionVotes_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
          }
       }
 
@@ -27846,7 +34802,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder> commissionVotesBuilder_;
 
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> getCommissionVotesList() {
         if (commissionVotesBuilder_ == null) {
@@ -27856,7 +34812,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public int getCommissionVotesCount() {
         if (commissionVotesBuilder_ == null) {
@@ -27866,7 +34822,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote getCommissionVotes(int index) {
         if (commissionVotesBuilder_ == null) {
@@ -27876,7 +34832,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder setCommissionVotes(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote value) {
@@ -27893,7 +34849,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder setCommissionVotes(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder builderForValue) {
@@ -27907,7 +34863,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder addCommissionVotes(counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote value) {
         if (commissionVotesBuilder_ == null) {
@@ -27923,7 +34879,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder addCommissionVotes(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote value) {
@@ -27940,7 +34896,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder addCommissionVotes(
           counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder builderForValue) {
@@ -27954,7 +34910,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder addCommissionVotes(
           int index, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder builderForValue) {
@@ -27968,7 +34924,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder addAllCommissionVotes(
           java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote> values) {
@@ -27983,12 +34939,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder clearCommissionVotes() {
         if (commissionVotesBuilder_ == null) {
           commissionVotes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
         } else {
           commissionVotesBuilder_.clear();
@@ -27996,7 +34952,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public Builder removeCommissionVotes(int index) {
         if (commissionVotesBuilder_ == null) {
@@ -28009,14 +34965,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder getCommissionVotesBuilder(
           int index) {
         return getCommissionVotesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder getCommissionVotesOrBuilder(
           int index) {
@@ -28026,7 +34982,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder> 
            getCommissionVotesOrBuilderList() {
@@ -28037,14 +34993,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder addCommissionVotesBuilder() {
         return getCommissionVotesFieldBuilder().addBuilder(
             counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder addCommissionVotesBuilder(
           int index) {
@@ -28052,7 +35008,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
        */
       public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder> 
            getCommissionVotesBuilderList() {
@@ -28065,7 +35021,7 @@ private static final long serialVersionUID = 0L;
           commissionVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.Builder, counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder>(
                   commissionVotes_,
-                  ((bitField0_ & 0x00000200) != 0),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           commissionVotes_ = null;
@@ -28073,15 +35029,255 @@ private static final long serialVersionUID = 0L;
         return commissionVotesBuilder_;
       }
 
+      private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> updateVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureUpdateVotesIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          updateVotes_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote>(updateVotes_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder> updateVotesBuilder_;
+
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> getUpdateVotesList() {
+        if (updateVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(updateVotes_);
+        } else {
+          return updateVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public int getUpdateVotesCount() {
+        if (updateVotesBuilder_ == null) {
+          return updateVotes_.size();
+        } else {
+          return updateVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote getUpdateVotes(int index) {
+        if (updateVotesBuilder_ == null) {
+          return updateVotes_.get(index);
+        } else {
+          return updateVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder setUpdateVotes(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote value) {
+        if (updateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateVotesIsMutable();
+          updateVotes_.set(index, value);
+          onChanged();
+        } else {
+          updateVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder setUpdateVotes(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder builderForValue) {
+        if (updateVotesBuilder_ == null) {
+          ensureUpdateVotesIsMutable();
+          updateVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder addUpdateVotes(counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote value) {
+        if (updateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateVotesIsMutable();
+          updateVotes_.add(value);
+          onChanged();
+        } else {
+          updateVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder addUpdateVotes(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote value) {
+        if (updateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateVotesIsMutable();
+          updateVotes_.add(index, value);
+          onChanged();
+        } else {
+          updateVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder addUpdateVotes(
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder builderForValue) {
+        if (updateVotesBuilder_ == null) {
+          ensureUpdateVotesIsMutable();
+          updateVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          updateVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder addUpdateVotes(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder builderForValue) {
+        if (updateVotesBuilder_ == null) {
+          ensureUpdateVotesIsMutable();
+          updateVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder addAllUpdateVotes(
+          java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote> values) {
+        if (updateVotesBuilder_ == null) {
+          ensureUpdateVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, updateVotes_);
+          onChanged();
+        } else {
+          updateVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder clearUpdateVotes() {
+        if (updateVotesBuilder_ == null) {
+          updateVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          updateVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public Builder removeUpdateVotes(int index) {
+        if (updateVotesBuilder_ == null) {
+          ensureUpdateVotesIsMutable();
+          updateVotes_.remove(index);
+          onChanged();
+        } else {
+          updateVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder getUpdateVotesBuilder(
+          int index) {
+        return getUpdateVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder getUpdateVotesOrBuilder(
+          int index) {
+        if (updateVotesBuilder_ == null) {
+          return updateVotes_.get(index);  } else {
+          return updateVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder> 
+           getUpdateVotesOrBuilderList() {
+        if (updateVotesBuilder_ != null) {
+          return updateVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(updateVotes_);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder addUpdateVotesBuilder() {
+        return getUpdateVotesFieldBuilder().addBuilder(
+            counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder addUpdateVotesBuilder(
+          int index) {
+        return getUpdateVotesFieldBuilder().addBuilder(
+            index, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder> 
+           getUpdateVotesBuilderList() {
+        return getUpdateVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder> 
+          getUpdateVotesFieldBuilder() {
+        if (updateVotesBuilder_ == null) {
+          updateVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.Builder, counters.minter.grpc.client.GenesisResponse.AppState.UpdateVoteOrBuilder>(
+                  updateVotes_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          updateVotes_ = null;
+        }
+        return updateVotesBuilder_;
+      }
+
       private com.google.protobuf.LazyStringList usedChecks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureUsedChecksIsMutable() {
-        if (!((bitField0_ & 0x00000400) != 0)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           usedChecks_ = new com.google.protobuf.LazyStringArrayList(usedChecks_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00001000;
          }
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @return A list containing the usedChecks.
        */
       public com.google.protobuf.ProtocolStringList
@@ -28089,14 +35285,14 @@ private static final long serialVersionUID = 0L;
         return usedChecks_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @return The count of usedChecks.
        */
       public int getUsedChecksCount() {
         return usedChecks_.size();
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param index The index of the element to return.
        * @return The usedChecks at the given index.
        */
@@ -28104,7 +35300,7 @@ private static final long serialVersionUID = 0L;
         return usedChecks_.get(index);
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the usedChecks at the given index.
        */
@@ -28113,7 +35309,7 @@ private static final long serialVersionUID = 0L;
         return usedChecks_.getByteString(index);
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param index The index to set the value at.
        * @param value The usedChecks to set.
        * @return This builder for chaining.
@@ -28129,7 +35325,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param value The usedChecks to add.
        * @return This builder for chaining.
        */
@@ -28144,7 +35340,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param values The usedChecks to add.
        * @return This builder for chaining.
        */
@@ -28157,17 +35353,17 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUsedChecks() {
         usedChecks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string used_checks = 11;</code>
+       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
        * @param value The bytes of the usedChecks to add.
        * @return This builder for chaining.
        */
@@ -28185,7 +35381,7 @@ private static final long serialVersionUID = 0L;
 
       private long maxGas_ ;
       /**
-       * <code>uint64 max_gas = 7;</code>
+       * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
        * @return The maxGas.
        */
       @java.lang.Override
@@ -28193,7 +35389,7 @@ private static final long serialVersionUID = 0L;
         return maxGas_;
       }
       /**
-       * <code>uint64 max_gas = 7;</code>
+       * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
        * @param value The maxGas to set.
        * @return This builder for chaining.
        */
@@ -28204,7 +35400,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 max_gas = 7;</code>
+       * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxGas() {
@@ -28216,7 +35412,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object totalSlashed_ = "";
       /**
-       * <code>string total_slashed = 8;</code>
+       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
        * @return The totalSlashed.
        */
       public java.lang.String getTotalSlashed() {
@@ -28232,7 +35428,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string total_slashed = 8;</code>
+       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
        * @return The bytes for totalSlashed.
        */
       public com.google.protobuf.ByteString
@@ -28249,7 +35445,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string total_slashed = 8;</code>
+       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
        * @param value The totalSlashed to set.
        * @return This builder for chaining.
        */
@@ -28264,7 +35460,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string total_slashed = 8;</code>
+       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalSlashed() {
@@ -28274,7 +35470,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string total_slashed = 8;</code>
+       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
        * @param value The bytes for totalSlashed to set.
        * @return This builder for chaining.
        */
@@ -28288,6 +35484,441 @@ private static final long serialVersionUID = 0L;
         totalSlashed_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version> versions_ =
+        java.util.Collections.emptyList();
+      private void ensureVersionsIsMutable() {
+        if (!((bitField0_ & 0x00002000) != 0)) {
+          versions_ = new java.util.ArrayList<counters.minter.grpc.client.GenesisResponse.AppState.Version>(versions_);
+          bitField0_ |= 0x00002000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.Version, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder, counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder> versionsBuilder_;
+
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version> getVersionsList() {
+        if (versionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(versions_);
+        } else {
+          return versionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public int getVersionsCount() {
+        if (versionsBuilder_ == null) {
+          return versions_.size();
+        } else {
+          return versionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.Version getVersions(int index) {
+        if (versionsBuilder_ == null) {
+          return versions_.get(index);
+        } else {
+          return versionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder setVersions(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.set(index, value);
+          onChanged();
+        } else {
+          versionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder setVersions(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder addVersions(counters.minter.grpc.client.GenesisResponse.AppState.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.add(value);
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder addVersions(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.add(index, value);
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder addVersions(
+          counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder addVersions(
+          int index, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder addAllVersions(
+          java.lang.Iterable<? extends counters.minter.grpc.client.GenesisResponse.AppState.Version> values) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, versions_);
+          onChanged();
+        } else {
+          versionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder clearVersions() {
+        if (versionsBuilder_ == null) {
+          versions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00002000);
+          onChanged();
+        } else {
+          versionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public Builder removeVersions(int index) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.remove(index);
+          onChanged();
+        } else {
+          versionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder getVersionsBuilder(
+          int index) {
+        return getVersionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder getVersionsOrBuilder(
+          int index) {
+        if (versionsBuilder_ == null) {
+          return versions_.get(index);  } else {
+          return versionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public java.util.List<? extends counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder> 
+           getVersionsOrBuilderList() {
+        if (versionsBuilder_ != null) {
+          return versionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(versions_);
+        }
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder addVersionsBuilder() {
+        return getVersionsFieldBuilder().addBuilder(
+            counters.minter.grpc.client.GenesisResponse.AppState.Version.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder addVersionsBuilder(
+          int index) {
+        return getVersionsFieldBuilder().addBuilder(
+            index, counters.minter.grpc.client.GenesisResponse.AppState.Version.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       */
+      public java.util.List<counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder> 
+           getVersionsBuilderList() {
+        return getVersionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.Version, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder, counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder> 
+          getVersionsFieldBuilder() {
+        if (versionsBuilder_ == null) {
+          versionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              counters.minter.grpc.client.GenesisResponse.AppState.Version, counters.minter.grpc.client.GenesisResponse.AppState.Version.Builder, counters.minter.grpc.client.GenesisResponse.AppState.VersionOrBuilder>(
+                  versions_,
+                  ((bitField0_ & 0x00002000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          versions_ = null;
+        }
+        return versionsBuilder_;
+      }
+
+      private java.lang.Object emission_ = "";
+      /**
+       * <code>string emission = 24 [json_name = "emission"];</code>
+       * @return The emission.
+       */
+      public java.lang.String getEmission() {
+        java.lang.Object ref = emission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          emission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string emission = 24 [json_name = "emission"];</code>
+       * @return The bytes for emission.
+       */
+      public com.google.protobuf.ByteString
+          getEmissionBytes() {
+        java.lang.Object ref = emission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          emission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string emission = 24 [json_name = "emission"];</code>
+       * @param value The emission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmission(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        emission_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emission = 24 [json_name = "emission"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmission() {
+        
+        emission_ = getDefaultInstance().getEmission();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emission = 24 [json_name = "emission"];</code>
+       * @param value The bytes for emission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        emission_ = value;
+        onChanged();
+        return this;
+      }
+
+      private counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice prevReward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice, counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder, counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder> prevRewardBuilder_;
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       * @return Whether the prevReward field is set.
+       */
+      public boolean hasPrevReward() {
+        return prevRewardBuilder_ != null || prevReward_ != null;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       * @return The prevReward.
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice getPrevReward() {
+        if (prevRewardBuilder_ == null) {
+          return prevReward_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.getDefaultInstance() : prevReward_;
+        } else {
+          return prevRewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public Builder setPrevReward(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice value) {
+        if (prevRewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prevReward_ = value;
+          onChanged();
+        } else {
+          prevRewardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public Builder setPrevReward(
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder builderForValue) {
+        if (prevRewardBuilder_ == null) {
+          prevReward_ = builderForValue.build();
+          onChanged();
+        } else {
+          prevRewardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public Builder mergePrevReward(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice value) {
+        if (prevRewardBuilder_ == null) {
+          if (prevReward_ != null) {
+            prevReward_ =
+              counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.newBuilder(prevReward_).mergeFrom(value).buildPartial();
+          } else {
+            prevReward_ = value;
+          }
+          onChanged();
+        } else {
+          prevRewardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public Builder clearPrevReward() {
+        if (prevRewardBuilder_ == null) {
+          prevReward_ = null;
+          onChanged();
+        } else {
+          prevReward_ = null;
+          prevRewardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder getPrevRewardBuilder() {
+        
+        onChanged();
+        return getPrevRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      public counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder getPrevRewardOrBuilder() {
+        if (prevRewardBuilder_ != null) {
+          return prevRewardBuilder_.getMessageOrBuilder();
+        } else {
+          return prevReward_ == null ?
+              counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.getDefaultInstance() : prevReward_;
+        }
+      }
+      /**
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice, counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder, counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder> 
+          getPrevRewardFieldBuilder() {
+        if (prevRewardBuilder_ == null) {
+          prevRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice, counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.Builder, counters.minter.grpc.client.GenesisResponse.AppState.RewardPriceOrBuilder>(
+                  getPrevReward(),
+                  getParentForChildren(),
+                  isClean());
+          prevReward_ = null;
+        }
+        return prevRewardBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -28345,7 +35976,7 @@ private static final long serialVersionUID = 0L;
   public static final int GENESIS_TIME_FIELD_NUMBER = 1;
   private volatile java.lang.Object genesisTime_;
   /**
-   * <code>string genesis_time = 1;</code>
+   * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
    * @return The genesisTime.
    */
   @java.lang.Override
@@ -28362,7 +35993,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string genesis_time = 1;</code>
+   * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
    * @return The bytes for genesisTime.
    */
   @java.lang.Override
@@ -28383,7 +36014,7 @@ private static final long serialVersionUID = 0L;
   public static final int CHAIN_ID_FIELD_NUMBER = 2;
   private volatile java.lang.Object chainId_;
   /**
-   * <code>string chain_id = 2;</code>
+   * <code>string chain_id = 2 [json_name = "chainId"];</code>
    * @return The chainId.
    */
   @java.lang.Override
@@ -28400,7 +36031,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string chain_id = 2;</code>
+   * <code>string chain_id = 2 [json_name = "chainId"];</code>
    * @return The bytes for chainId.
    */
   @java.lang.Override
@@ -28421,7 +36052,7 @@ private static final long serialVersionUID = 0L;
   public static final int INITIAL_HEIGHT_FIELD_NUMBER = 6;
   private long initialHeight_;
   /**
-   * <code>uint64 initial_height = 6;</code>
+   * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
    * @return The initialHeight.
    */
   @java.lang.Override
@@ -28432,7 +36063,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONSENSUS_PARAMS_FIELD_NUMBER = 3;
   private counters.minter.grpc.client.GenesisResponse.ConsensusParams consensusParams_;
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
    * @return Whether the consensusParams field is set.
    */
   @java.lang.Override
@@ -28440,7 +36071,7 @@ private static final long serialVersionUID = 0L;
     return consensusParams_ != null;
   }
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
    * @return The consensusParams.
    */
   @java.lang.Override
@@ -28448,7 +36079,7 @@ private static final long serialVersionUID = 0L;
     return consensusParams_ == null ? counters.minter.grpc.client.GenesisResponse.ConsensusParams.getDefaultInstance() : consensusParams_;
   }
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder getConsensusParamsOrBuilder() {
@@ -28458,7 +36089,7 @@ private static final long serialVersionUID = 0L;
   public static final int APP_HASH_FIELD_NUMBER = 4;
   private volatile java.lang.Object appHash_;
   /**
-   * <code>string app_hash = 4;</code>
+   * <code>string app_hash = 4 [json_name = "appHash"];</code>
    * @return The appHash.
    */
   @java.lang.Override
@@ -28475,7 +36106,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string app_hash = 4;</code>
+   * <code>string app_hash = 4 [json_name = "appHash"];</code>
    * @return The bytes for appHash.
    */
   @java.lang.Override
@@ -28496,7 +36127,7 @@ private static final long serialVersionUID = 0L;
   public static final int APP_STATE_FIELD_NUMBER = 5;
   private counters.minter.grpc.client.GenesisResponse.AppState appState_;
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
    * @return Whether the appState field is set.
    */
   @java.lang.Override
@@ -28504,7 +36135,7 @@ private static final long serialVersionUID = 0L;
     return appState_ != null;
   }
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
    * @return The appState.
    */
   @java.lang.Override
@@ -28512,7 +36143,7 @@ private static final long serialVersionUID = 0L;
     return appState_ == null ? counters.minter.grpc.client.GenesisResponse.AppState.getDefaultInstance() : appState_;
   }
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder getAppStateOrBuilder() {
@@ -28533,16 +36164,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getGenesisTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, genesisTime_);
     }
-    if (!getChainIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
     }
     if (consensusParams_ != null) {
       output.writeMessage(3, getConsensusParams());
     }
-    if (!getAppHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appHash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, appHash_);
     }
     if (appState_ != null) {
@@ -28560,17 +36191,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getGenesisTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, genesisTime_);
     }
-    if (!getChainIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
     }
     if (consensusParams_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConsensusParams());
     }
-    if (!getAppHashBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appHash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, appHash_);
     }
     if (appState_ != null) {
@@ -28935,7 +36566,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object genesisTime_ = "";
     /**
-     * <code>string genesis_time = 1;</code>
+     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
      * @return The genesisTime.
      */
     public java.lang.String getGenesisTime() {
@@ -28951,7 +36582,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string genesis_time = 1;</code>
+     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
      * @return The bytes for genesisTime.
      */
     public com.google.protobuf.ByteString
@@ -28968,7 +36599,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string genesis_time = 1;</code>
+     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
      * @param value The genesisTime to set.
      * @return This builder for chaining.
      */
@@ -28983,7 +36614,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string genesis_time = 1;</code>
+     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
      * @return This builder for chaining.
      */
     public Builder clearGenesisTime() {
@@ -28993,7 +36624,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string genesis_time = 1;</code>
+     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
      * @param value The bytes for genesisTime to set.
      * @return This builder for chaining.
      */
@@ -29011,7 +36642,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object chainId_ = "";
     /**
-     * <code>string chain_id = 2;</code>
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
      * @return The chainId.
      */
     public java.lang.String getChainId() {
@@ -29027,7 +36658,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string chain_id = 2;</code>
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
      * @return The bytes for chainId.
      */
     public com.google.protobuf.ByteString
@@ -29044,7 +36675,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string chain_id = 2;</code>
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
      * @param value The chainId to set.
      * @return This builder for chaining.
      */
@@ -29059,7 +36690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string chain_id = 2;</code>
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearChainId() {
@@ -29069,7 +36700,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string chain_id = 2;</code>
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
      * @param value The bytes for chainId to set.
      * @return This builder for chaining.
      */
@@ -29087,7 +36718,7 @@ private static final long serialVersionUID = 0L;
 
     private long initialHeight_ ;
     /**
-     * <code>uint64 initial_height = 6;</code>
+     * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
      * @return The initialHeight.
      */
     @java.lang.Override
@@ -29095,7 +36726,7 @@ private static final long serialVersionUID = 0L;
       return initialHeight_;
     }
     /**
-     * <code>uint64 initial_height = 6;</code>
+     * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
      * @param value The initialHeight to set.
      * @return This builder for chaining.
      */
@@ -29106,7 +36737,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 initial_height = 6;</code>
+     * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
      * @return This builder for chaining.
      */
     public Builder clearInitialHeight() {
@@ -29120,14 +36751,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.GenesisResponse.ConsensusParams, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder> consensusParamsBuilder_;
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      * @return Whether the consensusParams field is set.
      */
     public boolean hasConsensusParams() {
       return consensusParamsBuilder_ != null || consensusParams_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      * @return The consensusParams.
      */
     public counters.minter.grpc.client.GenesisResponse.ConsensusParams getConsensusParams() {
@@ -29138,7 +36769,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public Builder setConsensusParams(counters.minter.grpc.client.GenesisResponse.ConsensusParams value) {
       if (consensusParamsBuilder_ == null) {
@@ -29154,7 +36785,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public Builder setConsensusParams(
         counters.minter.grpc.client.GenesisResponse.ConsensusParams.Builder builderForValue) {
@@ -29168,7 +36799,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public Builder mergeConsensusParams(counters.minter.grpc.client.GenesisResponse.ConsensusParams value) {
       if (consensusParamsBuilder_ == null) {
@@ -29186,7 +36817,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public Builder clearConsensusParams() {
       if (consensusParamsBuilder_ == null) {
@@ -29200,7 +36831,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public counters.minter.grpc.client.GenesisResponse.ConsensusParams.Builder getConsensusParamsBuilder() {
       
@@ -29208,7 +36839,7 @@ private static final long serialVersionUID = 0L;
       return getConsensusParamsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     public counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder getConsensusParamsOrBuilder() {
       if (consensusParamsBuilder_ != null) {
@@ -29219,7 +36850,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.GenesisResponse.ConsensusParams, counters.minter.grpc.client.GenesisResponse.ConsensusParams.Builder, counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder> 
@@ -29237,7 +36868,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object appHash_ = "";
     /**
-     * <code>string app_hash = 4;</code>
+     * <code>string app_hash = 4 [json_name = "appHash"];</code>
      * @return The appHash.
      */
     public java.lang.String getAppHash() {
@@ -29253,7 +36884,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string app_hash = 4;</code>
+     * <code>string app_hash = 4 [json_name = "appHash"];</code>
      * @return The bytes for appHash.
      */
     public com.google.protobuf.ByteString
@@ -29270,7 +36901,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string app_hash = 4;</code>
+     * <code>string app_hash = 4 [json_name = "appHash"];</code>
      * @param value The appHash to set.
      * @return This builder for chaining.
      */
@@ -29285,7 +36916,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string app_hash = 4;</code>
+     * <code>string app_hash = 4 [json_name = "appHash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAppHash() {
@@ -29295,7 +36926,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string app_hash = 4;</code>
+     * <code>string app_hash = 4 [json_name = "appHash"];</code>
      * @param value The bytes for appHash to set.
      * @return This builder for chaining.
      */
@@ -29315,14 +36946,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.GenesisResponse.AppState, counters.minter.grpc.client.GenesisResponse.AppState.Builder, counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder> appStateBuilder_;
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      * @return Whether the appState field is set.
      */
     public boolean hasAppState() {
       return appStateBuilder_ != null || appState_ != null;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      * @return The appState.
      */
     public counters.minter.grpc.client.GenesisResponse.AppState getAppState() {
@@ -29333,7 +36964,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public Builder setAppState(counters.minter.grpc.client.GenesisResponse.AppState value) {
       if (appStateBuilder_ == null) {
@@ -29349,7 +36980,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public Builder setAppState(
         counters.minter.grpc.client.GenesisResponse.AppState.Builder builderForValue) {
@@ -29363,7 +36994,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public Builder mergeAppState(counters.minter.grpc.client.GenesisResponse.AppState value) {
       if (appStateBuilder_ == null) {
@@ -29381,7 +37012,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public Builder clearAppState() {
       if (appStateBuilder_ == null) {
@@ -29395,7 +37026,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public counters.minter.grpc.client.GenesisResponse.AppState.Builder getAppStateBuilder() {
       
@@ -29403,7 +37034,7 @@ private static final long serialVersionUID = 0L;
       return getAppStateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     public counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder getAppStateOrBuilder() {
       if (appStateBuilder_ != null) {
@@ -29414,7 +37045,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.GenesisResponse.AppState, counters.minter.grpc.client.GenesisResponse.AppState.Builder, counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder> 

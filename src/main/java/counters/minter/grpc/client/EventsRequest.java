@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 1;
   private long height_;
   /**
-   * <code>uint64 height = 1;</code>
+   * <code>uint64 height = 1 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @return A list containing the search.
    */
   public com.google.protobuf.ProtocolStringList
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @return The count of search.
    */
   public int getSearchCount() {
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @param index The index of the element to return.
    * @return The search at the given index.
    */
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Array of public keys of validators and wallet addresses of delegators for filtering
    * </pre>
    *
-   * <code>repeated string search = 2;</code>
+   * <code>repeated string search = 2 [json_name = "search"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the search at the given index.
    */
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 1;</code>
+     * <code>uint64 height = 1 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @return A list containing the search.
      */
     public com.google.protobuf.ProtocolStringList
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @return The count of search.
      */
     public int getSearchCount() {
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param index The index of the element to return.
      * @return The search at the given index.
      */
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the search at the given index.
      */
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param index The index to set the value at.
      * @param value The search to set.
      * @return This builder for chaining.
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param value The search to add.
      * @return This builder for chaining.
      */
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param values The search to add.
      * @return This builder for chaining.
      */
@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSearch() {
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2;</code>
+     * <code>repeated string search = 2 [json_name = "search"];</code>
      * @param value The bytes of the search to add.
      * @return This builder for chaining.
      */

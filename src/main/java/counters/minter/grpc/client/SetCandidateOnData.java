@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int PUB_KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object pubKey_;
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The pubKey.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The bytes for pubKey.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPubKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pubKey_);
     }
     unknownFields.writeTo(output);
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPubKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pubKey_);
     }
     size += unknownFields.getSerializedSize();
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object pubKey_ = "";
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return The pubKey.
      */
     public java.lang.String getPubKey() {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return The bytes for pubKey.
      */
     public com.google.protobuf.ByteString
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @param value The pubKey to set.
      * @return This builder for chaining.
      */
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPubKey() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @param value The bytes for pubKey to set.
      * @return This builder for chaining.
      */

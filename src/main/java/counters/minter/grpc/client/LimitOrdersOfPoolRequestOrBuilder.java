@@ -8,25 +8,25 @@ public interface LimitOrdersOfPoolRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 sell_coin = 1;</code>
+   * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
    * @return The sellCoin.
    */
   long getSellCoin();
 
   /**
-   * <code>uint64 buy_coin = 2;</code>
+   * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
    * @return The buyCoin.
    */
   long getBuyCoin();
 
   /**
-   * <code>int32 limit = 3;</code>
+   * <code>int32 limit = 3 [json_name = "limit"];</code>
    * @return The limit.
    */
   int getLimit();
 
   /**
-   * <code>uint64 height = 4;</code>
+   * <code>uint64 height = 4 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

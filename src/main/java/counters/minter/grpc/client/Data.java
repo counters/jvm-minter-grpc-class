@@ -184,6 +184,21 @@ public final class Data {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_pb_RemoveLimitOrderData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_MoveStakeData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_MoveStakeData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_LockStakeData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_LockStakeData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_pb_LockData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_pb_LockData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -193,114 +208,167 @@ public final class Data {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ndata.proto\022\006api_pb\032\017resources.proto\"A\n" +
-      "\010SendData\022\032\n\004coin\030\001 \001(\0132\014.api_pb.Coin\022\n\n" +
-      "\002to\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"\212\001\n\014SellCoinDat" +
-      "a\022\"\n\014coin_to_sell\030\001 \001(\0132\014.api_pb.Coin\022\025\n" +
-      "\rvalue_to_sell\030\002 \001(\t\022!\n\013coin_to_buy\030\003 \001(" +
-      "\0132\014.api_pb.Coin\022\034\n\024minimum_value_to_buy\030" +
-      "\004 \001(\t\"v\n\017SellAllCoinData\022\"\n\014coin_to_sell" +
-      "\030\001 \001(\0132\014.api_pb.Coin\022!\n\013coin_to_buy\030\002 \001(" +
-      "\0132\014.api_pb.Coin\022\034\n\024minimum_value_to_buy\030" +
-      "\003 \001(\t\"\211\001\n\013BuyCoinData\022!\n\013coin_to_buy\030\001 \001" +
-      "(\0132\014.api_pb.Coin\022\024\n\014value_to_buy\030\002 \001(\t\022\"" +
-      "\n\014coin_to_sell\030\003 \001(\0132\014.api_pb.Coin\022\035\n\025ma" +
-      "ximum_value_to_sell\030\004 \001(\t\"\223\001\n\016CreateCoin" +
-      "Data\022\014\n\004name\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\026\n\016in" +
-      "itial_amount\030\003 \001(\t\022\027\n\017initial_reserve\030\004 " +
-      "\001(\t\022\036\n\026constant_reserve_ratio\030\005 \001(\004\022\022\n\nm" +
-      "ax_supply\030\006 \001(\t\"w\n\024DeclareCandidacyData\022" +
-      "\017\n\007address\030\001 \001(\t\022\017\n\007pub_key\030\002 \001(\t\022\022\n\ncom" +
-      "mission\030\003 \001(\004\022\032\n\004coin\030\004 \001(\0132\014.api_pb.Coi" +
-      "n\022\r\n\005stake\030\005 \001(\t\"J\n\014DelegateData\022\017\n\007pub_" +
-      "key\030\001 \001(\t\022\032\n\004coin\030\002 \001(\0132\014.api_pb.Coin\022\r\n" +
-      "\005value\030\003 \001(\t\"H\n\nUnbondData\022\017\n\007pub_key\030\001 " +
-      "\001(\t\022\032\n\004coin\030\002 \001(\0132\014.api_pb.Coin\022\r\n\005value" +
-      "\030\003 \001(\t\"3\n\017RedeemCheckData\022\021\n\traw_check\030\001" +
-      " \001(\t\022\r\n\005proof\030\002 \001(\t\"%\n\022SetCandidateOnDat" +
-      "a\022\017\n\007pub_key\030\001 \001(\t\"&\n\023SetCandidateOffDat" +
-      "a\022\017\n\007pub_key\030\001 \001(\t\"K\n\022CreateMultisigData" +
-      "\022\021\n\tthreshold\030\001 \001(\004\022\017\n\007weights\030\002 \003(\004\022\021\n\t" +
-      "addresses\030\003 \003(\t\"/\n\rMultiSendData\022\036\n\004list" +
-      "\030\001 \003(\0132\020.api_pb.SendData\"l\n\021EditCandidat" +
-      "eData\022\017\n\007pub_key\030\001 \001(\t\022\026\n\016reward_address" +
-      "\030\003 \001(\t\022\025\n\rowner_address\030\004 \001(\t\022\027\n\017control" +
-      "_address\030\005 \001(\t\"3\n\020SetHaltBlockData\022\017\n\007pu" +
-      "b_key\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\"\225\001\n\020Recreate" +
-      "CoinData\022\014\n\004name\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\026" +
-      "\n\016initial_amount\030\003 \001(\t\022\027\n\017initial_reserv" +
-      "e\030\004 \001(\t\022\036\n\026constant_reserve_ratio\030\005 \001(\004\022" +
-      "\022\n\nmax_supply\030\006 \001(\t\"6\n\021EditCoinOwnerData" +
-      "\022\016\n\006symbol\030\001 \001(\t\022\021\n\tnew_owner\030\002 \001(\t\"I\n\020E" +
-      "ditMultisigData\022\021\n\tthreshold\030\001 \001(\004\022\017\n\007we" +
-      "ights\030\002 \003(\004\022\021\n\taddresses\030\003 \003(\t\"B\n\032EditCa" +
-      "ndidatePublicKeyData\022\017\n\007pub_key\030\001 \001(\t\022\023\n" +
-      "\013new_pub_key\030\002 \001(\t\"p\n\022CreateSwapPoolData" +
-      "\022\033\n\005coin0\030\001 \001(\0132\014.api_pb.Coin\022\033\n\005coin1\030\002" +
-      " \001(\0132\014.api_pb.Coin\022\017\n\007volume0\030\003 \001(\t\022\017\n\007v" +
-      "olume1\030\004 \001(\t\"v\n\020AddLiquidityData\022\033\n\005coin" +
-      "0\030\001 \001(\0132\014.api_pb.Coin\022\033\n\005coin1\030\002 \001(\0132\014.a" +
-      "pi_pb.Coin\022\017\n\007volume0\030\003 \001(\t\022\027\n\017maximum_v" +
-      "olume1\030\004 \001(\t\"\224\001\n\023RemoveLiquidityData\022\033\n\005" +
-      "coin0\030\001 \001(\0132\014.api_pb.Coin\022\033\n\005coin1\030\002 \001(\013" +
-      "2\014.api_pb.Coin\022\021\n\tliquidity\030\003 \001(\t\022\027\n\017min" +
-      "imum_volume0\030\004 \001(\t\022\027\n\017minimum_volume1\030\005 " +
-      "\001(\t\"d\n\020SellSwapPoolData\022\033\n\005coins\030\001 \003(\0132\014" +
-      ".api_pb.Coin\022\025\n\rvalue_to_sell\030\002 \001(\t\022\034\n\024m" +
-      "inimum_value_to_buy\030\004 \001(\t\"P\n\023SellAllSwap" +
-      "PoolData\022\033\n\005coins\030\001 \003(\0132\014.api_pb.Coin\022\034\n" +
-      "\024minimum_value_to_buy\030\003 \001(\t\"c\n\017BuySwapPo" +
-      "olData\022\033\n\005coins\030\001 \003(\0132\014.api_pb.Coin\022\024\n\014v" +
-      "alue_to_buy\030\002 \001(\t\022\035\n\025maximum_value_to_se" +
-      "ll\030\004 \001(\t\">\n\027EditCandidateCommission\022\017\n\007p" +
-      "ub_key\030\001 \001(\t\022\022\n\ncommission\030\002 \001(\004\":\n\rMint" +
-      "TokenData\022\032\n\004coin\030\001 \001(\0132\014.api_pb.Coin\022\r\n" +
-      "\005value\030\002 \001(\t\":\n\rBurnTokenData\022\032\n\004coin\030\001 " +
-      "\001(\0132\014.api_pb.Coin\022\r\n\005value\030\002 \001(\t\"\177\n\017Crea" +
-      "teTokenData\022\014\n\004name\030\001 \001(\t\022\016\n\006symbol\030\002 \001(" +
-      "\t\022\026\n\016initial_amount\030\003 \001(\t\022\022\n\nmax_supply\030" +
-      "\004 \001(\t\022\020\n\010mintable\030\005 \001(\010\022\020\n\010burnable\030\006 \001(" +
-      "\010\"\201\001\n\021RecreateTokenData\022\014\n\004name\030\001 \001(\t\022\016\n" +
-      "\006symbol\030\002 \001(\t\022\026\n\016initial_amount\030\003 \001(\t\022\022\n" +
-      "\nmax_supply\030\004 \001(\t\022\020\n\010mintable\030\005 \001(\010\022\020\n\010b" +
-      "urnable\030\006 \001(\010\"\210\t\n\022VoteCommissionData\022\017\n\007" +
-      "pub_key\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\032\n\004coin\030\003 " +
-      "\001(\0132\014.api_pb.Coin\022\024\n\014payload_byte\030\004 \001(\t\022" +
-      "\014\n\004send\030\005 \001(\t\022\022\n\nbuy_bancor\030& \001(\t\022\023\n\013sel" +
-      "l_bancor\030\' \001(\t\022\027\n\017sell_all_bancor\030( \001(\t\022" +
-      "\025\n\rbuy_pool_base\030) \001(\t\022\026\n\016buy_pool_delta" +
-      "\0305 \001(\t\022\026\n\016sell_pool_base\030* \001(\t\022\027\n\017sell_p" +
-      "ool_delta\0306 \001(\t\022\032\n\022sell_all_pool_base\030+ " +
-      "\001(\t\022\033\n\023sell_all_pool_delta\0307 \001(\t\022\026\n\016crea" +
-      "te_ticker3\030\007 \001(\t\022\026\n\016create_ticker4\030\010 \001(\t" +
-      "\022\026\n\016create_ticker5\030\t \001(\t\022\026\n\016create_ticke" +
-      "r6\030\n \001(\t\022\031\n\021create_ticker7_10\030\013 \001(\t\022\023\n\013c" +
-      "reate_coin\030\" \001(\t\022\024\n\014create_token\030# \001(\t\022\025" +
-      "\n\rrecreate_coin\030$ \001(\t\022\026\n\016recreate_token\030" +
-      "% \001(\t\022\031\n\021declare_candidacy\030\r \001(\t\022\020\n\010dele" +
-      "gate\030\016 \001(\t\022\016\n\006unbond\030\017 \001(\t\022\024\n\014redeem_che" +
-      "ck\030\020 \001(\t\022\030\n\020set_candidate_on\030, \001(\t\022\031\n\021se" +
-      "t_candidate_off\030- \001(\t\022\027\n\017create_multisig" +
-      "\030\022 \001(\t\022\026\n\016multisend_base\0303 \001(\t\022\027\n\017multis" +
-      "end_delta\0304 \001(\t\022\026\n\016edit_candidate\030\024 \001(\t\022" +
-      "\026\n\016set_halt_block\030\025 \001(\t\022\031\n\021edit_ticker_o" +
-      "wner\030\026 \001(\t\022\025\n\redit_multisig\030\027 \001(\t\022!\n\031edi" +
-      "t_candidate_public_key\030\031 \001(\t\022\030\n\020create_s" +
-      "wap_pool\0300 \001(\t\022\025\n\radd_liquidity\0301 \001(\t\022\030\n" +
-      "\020remove_liquidity\0302 \001(\t\022!\n\031edit_candidat" +
-      "e_commission\030\034 \001(\t\022\022\n\nmint_token\030. \001(\t\022\022" +
-      "\n\nburn_token\030/ \001(\t\022\027\n\017vote_commission\030\037 " +
-      "\001(\t\022\023\n\013vote_update\030  \001(\t\022\021\n\tfailed_tx\0308 " +
-      "\001(\t\022\027\n\017add_limit_order\0309 \001(\t\022\032\n\022remove_l" +
-      "imit_order\030: \001(\t\"B\n\016VoteUpdateData\022\017\n\007pu" +
-      "b_key\030\001 \001(\t\022\016\n\006height\030\002 \001(\004\022\017\n\007version\030\003" +
-      " \001(\t\"\207\001\n\021AddLimitOrderData\022\"\n\014coin_to_se" +
-      "ll\030\001 \001(\0132\014.api_pb.Coin\022\025\n\rvalue_to_sell\030" +
-      "\002 \001(\t\022!\n\013coin_to_buy\030\003 \001(\0132\014.api_pb.Coin" +
-      "\022\024\n\014value_to_buy\030\004 \001(\t\"\"\n\024RemoveLimitOrd" +
-      "erData\022\n\n\002id\030\001 \001(\004BV\n\033counters.minter.gr" +
-      "pc.clientP\001Z5github.com/MinterTeam/node-" +
-      "grpc-gateway/gen/go;api_pbb\006proto3"
+      "\n\ndata.proto\022\006api_pb\032\017resources.proto\"R\n" +
+      "\010SendData\022 \n\004coin\030\001 \001(\0132\014.api_pb.CoinR\004c" +
+      "oin\022\016\n\002to\030\002 \001(\tR\002to\022\024\n\005value\030\003 \001(\tR\005valu" +
+      "e\"\301\001\n\014SellCoinData\022.\n\014coin_to_sell\030\001 \001(\013" +
+      "2\014.api_pb.CoinR\ncoinToSell\022\"\n\rvalue_to_s" +
+      "ell\030\002 \001(\tR\013valueToSell\022,\n\013coin_to_buy\030\003 " +
+      "\001(\0132\014.api_pb.CoinR\tcoinToBuy\022/\n\024minimum_" +
+      "value_to_buy\030\004 \001(\tR\021minimumValueToBuy\"\240\001" +
+      "\n\017SellAllCoinData\022.\n\014coin_to_sell\030\001 \001(\0132" +
+      "\014.api_pb.CoinR\ncoinToSell\022,\n\013coin_to_buy" +
+      "\030\002 \001(\0132\014.api_pb.CoinR\tcoinToBuy\022/\n\024minim" +
+      "um_value_to_buy\030\003 \001(\tR\021minimumValueToBuy" +
+      "\"\300\001\n\013BuyCoinData\022,\n\013coin_to_buy\030\001 \001(\0132\014." +
+      "api_pb.CoinR\tcoinToBuy\022 \n\014value_to_buy\030\002" +
+      " \001(\tR\nvalueToBuy\022.\n\014coin_to_sell\030\003 \001(\0132\014" +
+      ".api_pb.CoinR\ncoinToSell\0221\n\025maximum_valu" +
+      "e_to_sell\030\004 \001(\tR\022maximumValueToSell\"\341\001\n\016" +
+      "CreateCoinData\022\022\n\004name\030\001 \001(\tR\004name\022\026\n\006sy" +
+      "mbol\030\002 \001(\tR\006symbol\022%\n\016initial_amount\030\003 \001" +
+      "(\tR\rinitialAmount\022\'\n\017initial_reserve\030\004 \001" +
+      "(\tR\016initialReserve\0224\n\026constant_reserve_r" +
+      "atio\030\005 \001(\004R\024constantReserveRatio\022\035\n\nmax_" +
+      "supply\030\006 \001(\tR\tmaxSupply\"\241\001\n\024DeclareCandi" +
+      "dacyData\022\030\n\007address\030\001 \001(\tR\007address\022\027\n\007pu" +
+      "b_key\030\002 \001(\tR\006pubKey\022\036\n\ncommission\030\003 \001(\004R" +
+      "\ncommission\022 \n\004coin\030\004 \001(\0132\014.api_pb.CoinR" +
+      "\004coin\022\024\n\005stake\030\005 \001(\tR\005stake\"_\n\014DelegateD" +
+      "ata\022\027\n\007pub_key\030\001 \001(\tR\006pubKey\022 \n\004coin\030\002 \001" +
+      "(\0132\014.api_pb.CoinR\004coin\022\024\n\005value\030\003 \001(\tR\005v" +
+      "alue\"]\n\nUnbondData\022\027\n\007pub_key\030\001 \001(\tR\006pub" +
+      "Key\022 \n\004coin\030\002 \001(\0132\014.api_pb.CoinR\004coin\022\024\n" +
+      "\005value\030\003 \001(\tR\005value\"D\n\017RedeemCheckData\022\033" +
+      "\n\traw_check\030\001 \001(\tR\010rawCheck\022\024\n\005proof\030\002 \001" +
+      "(\tR\005proof\"-\n\022SetCandidateOnData\022\027\n\007pub_k" +
+      "ey\030\001 \001(\tR\006pubKey\".\n\023SetCandidateOffData\022" +
+      "\027\n\007pub_key\030\001 \001(\tR\006pubKey\"j\n\022CreateMultis" +
+      "igData\022\034\n\tthreshold\030\001 \001(\004R\tthreshold\022\030\n\007" +
+      "weights\030\002 \003(\004R\007weights\022\034\n\taddresses\030\003 \003(" +
+      "\tR\taddresses\"5\n\rMultiSendData\022$\n\004list\030\001 " +
+      "\003(\0132\020.api_pb.SendDataR\004list\"\241\001\n\021EditCand" +
+      "idateData\022\027\n\007pub_key\030\001 \001(\tR\006pubKey\022%\n\016re" +
+      "ward_address\030\003 \001(\tR\rrewardAddress\022#\n\rown" +
+      "er_address\030\004 \001(\tR\014ownerAddress\022\'\n\017contro" +
+      "l_address\030\005 \001(\tR\016controlAddress\"C\n\020SetHa" +
+      "ltBlockData\022\027\n\007pub_key\030\001 \001(\tR\006pubKey\022\026\n\006" +
+      "height\030\002 \001(\004R\006height\"\343\001\n\020RecreateCoinDat" +
+      "a\022\022\n\004name\030\001 \001(\tR\004name\022\026\n\006symbol\030\002 \001(\tR\006s" +
+      "ymbol\022%\n\016initial_amount\030\003 \001(\tR\rinitialAm" +
+      "ount\022\'\n\017initial_reserve\030\004 \001(\tR\016initialRe" +
+      "serve\0224\n\026constant_reserve_ratio\030\005 \001(\004R\024c" +
+      "onstantReserveRatio\022\035\n\nmax_supply\030\006 \001(\tR" +
+      "\tmaxSupply\"H\n\021EditCoinOwnerData\022\026\n\006symbo" +
+      "l\030\001 \001(\tR\006symbol\022\033\n\tnew_owner\030\002 \001(\tR\010newO" +
+      "wner\"h\n\020EditMultisigData\022\034\n\tthreshold\030\001 " +
+      "\001(\004R\tthreshold\022\030\n\007weights\030\002 \003(\004R\007weights" +
+      "\022\034\n\taddresses\030\003 \003(\tR\taddresses\"U\n\032EditCa" +
+      "ndidatePublicKeyData\022\027\n\007pub_key\030\001 \001(\tR\006p" +
+      "ubKey\022\036\n\013new_pub_key\030\002 \001(\tR\tnewPubKey\"\220\001" +
+      "\n\022CreateSwapPoolData\022\"\n\005coin0\030\001 \001(\0132\014.ap" +
+      "i_pb.CoinR\005coin0\022\"\n\005coin1\030\002 \001(\0132\014.api_pb" +
+      ".CoinR\005coin1\022\030\n\007volume0\030\003 \001(\tR\007volume0\022\030" +
+      "\n\007volume1\030\004 \001(\tR\007volume1\"\235\001\n\020AddLiquidit" +
+      "yData\022\"\n\005coin0\030\001 \001(\0132\014.api_pb.CoinR\005coin" +
+      "0\022\"\n\005coin1\030\002 \001(\0132\014.api_pb.CoinR\005coin1\022\030\n" +
+      "\007volume0\030\003 \001(\tR\007volume0\022\'\n\017maximum_volum" +
+      "e1\030\004 \001(\tR\016maximumVolume1\"\315\001\n\023RemoveLiqui" +
+      "dityData\022\"\n\005coin0\030\001 \001(\0132\014.api_pb.CoinR\005c" +
+      "oin0\022\"\n\005coin1\030\002 \001(\0132\014.api_pb.CoinR\005coin1" +
+      "\022\034\n\tliquidity\030\003 \001(\tR\tliquidity\022\'\n\017minimu" +
+      "m_volume0\030\004 \001(\tR\016minimumVolume0\022\'\n\017minim" +
+      "um_volume1\030\005 \001(\tR\016minimumVolume1\"\213\001\n\020Sel" +
+      "lSwapPoolData\022\"\n\005coins\030\001 \003(\0132\014.api_pb.Co" +
+      "inR\005coins\022\"\n\rvalue_to_sell\030\002 \001(\tR\013valueT" +
+      "oSell\022/\n\024minimum_value_to_buy\030\004 \001(\tR\021min" +
+      "imumValueToBuy\"j\n\023SellAllSwapPoolData\022\"\n" +
+      "\005coins\030\001 \003(\0132\014.api_pb.CoinR\005coins\022/\n\024min" +
+      "imum_value_to_buy\030\003 \001(\tR\021minimumValueToB" +
+      "uy\"\212\001\n\017BuySwapPoolData\022\"\n\005coins\030\001 \003(\0132\014." +
+      "api_pb.CoinR\005coins\022 \n\014value_to_buy\030\002 \001(\t" +
+      "R\nvalueToBuy\0221\n\025maximum_value_to_sell\030\004 " +
+      "\001(\tR\022maximumValueToSell\"R\n\027EditCandidate" +
+      "Commission\022\027\n\007pub_key\030\001 \001(\tR\006pubKey\022\036\n\nc" +
+      "ommission\030\002 \001(\004R\ncommission\"G\n\rMintToken" +
+      "Data\022 \n\004coin\030\001 \001(\0132\014.api_pb.CoinR\004coin\022\024" +
+      "\n\005value\030\002 \001(\tR\005value\"G\n\rBurnTokenData\022 \n" +
+      "\004coin\030\001 \001(\0132\014.api_pb.CoinR\004coin\022\024\n\005value" +
+      "\030\002 \001(\tR\005value\"\273\001\n\017CreateTokenData\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022\026\n\006symbol\030\002 \001(\tR\006symbol\022%\n" +
+      "\016initial_amount\030\003 \001(\tR\rinitialAmount\022\035\n\n" +
+      "max_supply\030\004 \001(\tR\tmaxSupply\022\032\n\010mintable\030" +
+      "\005 \001(\010R\010mintable\022\032\n\010burnable\030\006 \001(\010R\010burna" +
+      "ble\"\275\001\n\021RecreateTokenData\022\022\n\004name\030\001 \001(\tR" +
+      "\004name\022\026\n\006symbol\030\002 \001(\tR\006symbol\022%\n\016initial" +
+      "_amount\030\003 \001(\tR\rinitialAmount\022\035\n\nmax_supp" +
+      "ly\030\004 \001(\tR\tmaxSupply\022\032\n\010mintable\030\005 \001(\010R\010m" +
+      "intable\022\032\n\010burnable\030\006 \001(\010R\010burnable\"\201\017\n\022" +
+      "VoteCommissionData\022\027\n\007pub_key\030\001 \001(\tR\006pub" +
+      "Key\022\026\n\006height\030\002 \001(\004R\006height\022 \n\004coin\030\003 \001(" +
+      "\0132\014.api_pb.CoinR\004coin\022!\n\014payload_byte\030\004 " +
+      "\001(\tR\013payloadByte\022\022\n\004send\030\005 \001(\tR\004send\022\035\n\n" +
+      "buy_bancor\030& \001(\tR\tbuyBancor\022\037\n\013sell_banc" +
+      "or\030\' \001(\tR\nsellBancor\022&\n\017sell_all_bancor\030" +
+      "( \001(\tR\rsellAllBancor\022\"\n\rbuy_pool_base\030) " +
+      "\001(\tR\013buyPoolBase\022$\n\016buy_pool_delta\0305 \001(\t" +
+      "R\014buyPoolDelta\022$\n\016sell_pool_base\030* \001(\tR\014" +
+      "sellPoolBase\022&\n\017sell_pool_delta\0306 \001(\tR\rs" +
+      "ellPoolDelta\022+\n\022sell_all_pool_base\030+ \001(\t" +
+      "R\017sellAllPoolBase\022-\n\023sell_all_pool_delta" +
+      "\0307 \001(\tR\020sellAllPoolDelta\022%\n\016create_ticke" +
+      "r3\030\007 \001(\tR\rcreateTicker3\022%\n\016create_ticker" +
+      "4\030\010 \001(\tR\rcreateTicker4\022%\n\016create_ticker5" +
+      "\030\t \001(\tR\rcreateTicker5\022%\n\016create_ticker6\030" +
+      "\n \001(\tR\rcreateTicker6\022*\n\021create_ticker7_1" +
+      "0\030\013 \001(\tR\017createTicker710\022\037\n\013create_coin\030" +
+      "\" \001(\tR\ncreateCoin\022!\n\014create_token\030# \001(\tR" +
+      "\013createToken\022#\n\rrecreate_coin\030$ \001(\tR\014rec" +
+      "reateCoin\022%\n\016recreate_token\030% \001(\tR\rrecre" +
+      "ateToken\022+\n\021declare_candidacy\030\r \001(\tR\020dec" +
+      "lareCandidacy\022\032\n\010delegate\030\016 \001(\tR\010delegat" +
+      "e\022\026\n\006unbond\030\017 \001(\tR\006unbond\022!\n\014redeem_chec" +
+      "k\030\020 \001(\tR\013redeemCheck\022(\n\020set_candidate_on" +
+      "\030, \001(\tR\016setCandidateOn\022*\n\021set_candidate_" +
+      "off\030- \001(\tR\017setCandidateOff\022\'\n\017create_mul" +
+      "tisig\030\022 \001(\tR\016createMultisig\022%\n\016multisend" +
+      "_base\0303 \001(\tR\rmultisendBase\022\'\n\017multisend_" +
+      "delta\0304 \001(\tR\016multisendDelta\022%\n\016edit_cand" +
+      "idate\030\024 \001(\tR\reditCandidate\022$\n\016set_halt_b" +
+      "lock\030\025 \001(\tR\014setHaltBlock\022*\n\021edit_ticker_" +
+      "owner\030\026 \001(\tR\017editTickerOwner\022#\n\redit_mul" +
+      "tisig\030\027 \001(\tR\014editMultisig\0229\n\031edit_candid" +
+      "ate_public_key\030\031 \001(\tR\026editCandidatePubli" +
+      "cKey\022(\n\020create_swap_pool\0300 \001(\tR\016createSw" +
+      "apPool\022#\n\radd_liquidity\0301 \001(\tR\014addLiquid" +
+      "ity\022)\n\020remove_liquidity\0302 \001(\tR\017removeLiq" +
+      "uidity\022:\n\031edit_candidate_commission\030\034 \001(" +
+      "\tR\027editCandidateCommission\022\035\n\nmint_token" +
+      "\030. \001(\tR\tmintToken\022\035\n\nburn_token\030/ \001(\tR\tb" +
+      "urnToken\022\'\n\017vote_commission\030\037 \001(\tR\016voteC" +
+      "ommission\022\037\n\013vote_update\030  \001(\tR\nvoteUpda" +
+      "te\022\033\n\tfailed_tx\0308 \001(\tR\010failedTx\022&\n\017add_l" +
+      "imit_order\0309 \001(\tR\raddLimitOrder\022,\n\022remov" +
+      "e_limit_order\030: \001(\tR\020removeLimitOrder\022\035\n" +
+      "\nmove_stake\030; \001(\tR\tmoveStake\022\035\n\nlock_sta" +
+      "ke\030< \001(\tR\tlockStake\022\022\n\004lock\030= \001(\tR\004lock\"" +
+      "[\n\016VoteUpdateData\022\027\n\007pub_key\030\001 \001(\tR\006pubK" +
+      "ey\022\026\n\006height\030\002 \001(\004R\006height\022\030\n\007version\030\003 " +
+      "\001(\tR\007version\"\267\001\n\021AddLimitOrderData\022.\n\014co" +
+      "in_to_sell\030\001 \001(\0132\014.api_pb.CoinR\ncoinToSe" +
+      "ll\022\"\n\rvalue_to_sell\030\002 \001(\tR\013valueToSell\022," +
+      "\n\013coin_to_buy\030\003 \001(\0132\014.api_pb.CoinR\tcoinT" +
+      "oBuy\022 \n\014value_to_buy\030\004 \001(\tR\nvalueToBuy\"&" +
+      "\n\024RemoveLimitOrderData\022\016\n\002id\030\001 \001(\004R\002id\"\207" +
+      "\001\n\rMoveStakeData\022 \n\014from_pub_key\030\001 \001(\tR\n" +
+      "fromPubKey\022\034\n\nto_pub_key\030\004 \001(\tR\010toPubKey" +
+      "\022 \n\004coin\030\002 \001(\0132\014.api_pb.CoinR\004coin\022\024\n\005va" +
+      "lue\030\003 \001(\tR\005value\"\017\n\rLockStakeData\"_\n\010Loc" +
+      "kData\022\033\n\tdue_block\030\001 \001(\004R\010dueBlock\022 \n\004co" +
+      "in\030\002 \001(\0132\014.api_pb.CoinR\004coin\022\024\n\005value\030\003 " +
+      "\001(\tR\005valueBV\n\033counters.minter.grpc.clien" +
+      "tP\001Z5github.com/MinterTeam/node-grpc-gat" +
+      "eway/gen/go;api_pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -492,7 +560,7 @@ public final class Data {
     internal_static_api_pb_VoteCommissionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_VoteCommissionData_descriptor,
-        new java.lang.String[] { "PubKey", "Height", "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", });
+        new java.lang.String[] { "PubKey", "Height", "Coin", "PayloadByte", "Send", "BuyBancor", "SellBancor", "SellAllBancor", "BuyPoolBase", "BuyPoolDelta", "SellPoolBase", "SellPoolDelta", "SellAllPoolBase", "SellAllPoolDelta", "CreateTicker3", "CreateTicker4", "CreateTicker5", "CreateTicker6", "CreateTicker710", "CreateCoin", "CreateToken", "RecreateCoin", "RecreateToken", "DeclareCandidacy", "Delegate", "Unbond", "RedeemCheck", "SetCandidateOn", "SetCandidateOff", "CreateMultisig", "MultisendBase", "MultisendDelta", "EditCandidate", "SetHaltBlock", "EditTickerOwner", "EditMultisig", "EditCandidatePublicKey", "CreateSwapPool", "AddLiquidity", "RemoveLiquidity", "EditCandidateCommission", "MintToken", "BurnToken", "VoteCommission", "VoteUpdate", "FailedTx", "AddLimitOrder", "RemoveLimitOrder", "MoveStake", "LockStake", "Lock", });
     internal_static_api_pb_VoteUpdateData_descriptor =
       getDescriptor().getMessageTypes().get(31);
     internal_static_api_pb_VoteUpdateData_fieldAccessorTable = new
@@ -511,6 +579,24 @@ public final class Data {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_pb_RemoveLimitOrderData_descriptor,
         new java.lang.String[] { "Id", });
+    internal_static_api_pb_MoveStakeData_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_api_pb_MoveStakeData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_MoveStakeData_descriptor,
+        new java.lang.String[] { "FromPubKey", "ToPubKey", "Coin", "Value", });
+    internal_static_api_pb_LockStakeData_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_api_pb_LockStakeData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_LockStakeData_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_pb_LockData_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_api_pb_LockData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_pb_LockData_descriptor,
+        new java.lang.String[] { "DueBlock", "Coin", "Value", });
     counters.minter.grpc.client.Resources.getDescriptor();
   }
 

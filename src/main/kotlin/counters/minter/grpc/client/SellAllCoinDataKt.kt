@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun sellAllCoinData(block: counters.minter.grpc.client.SellAllCoinDataKt.Dsl.() -> Unit): counters.minter.grpc.client.SellAllCoinData =
+public inline fun sellAllCoinData(block: counters.minter.grpc.client.SellAllCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SellAllCoinData =
   counters.minter.grpc.client.SellAllCoinDataKt.Dsl._create(counters.minter.grpc.client.SellAllCoinData.newBuilder()).apply { block() }._build()
-object SellAllCoinDataKt {
+public object SellAllCoinDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.SellAllCoinData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.SellAllCoinData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.SellAllCoinData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object SellAllCoinDataKt {
     internal fun _build(): counters.minter.grpc.client.SellAllCoinData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1;</code>
+     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
      */
-    var coinToSell: counters.minter.grpc.client.Coin
+    public var coinToSell: counters.minter.grpc.client.Coin
       @JvmName("getCoinToSell")
       get() = _builder.getCoinToSell()
       @JvmName("setCoinToSell")
@@ -33,23 +33,23 @@ object SellAllCoinDataKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1;</code>
+     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
      */
-    fun clearCoinToSell() {
+    public fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1;</code>
+     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
      * @return Whether the coinToSell field is set.
      */
-    fun hasCoinToSell(): kotlin.Boolean {
+    public fun hasCoinToSell(): kotlin.Boolean {
       return _builder.hasCoinToSell()
     }
 
     /**
-     * <code>.api_pb.Coin coin_to_buy = 2;</code>
+     * <code>.api_pb.Coin coin_to_buy = 2 [json_name = "coinToBuy"];</code>
      */
-    var coinToBuy: counters.minter.grpc.client.Coin
+    public var coinToBuy: counters.minter.grpc.client.Coin
       @JvmName("getCoinToBuy")
       get() = _builder.getCoinToBuy()
       @JvmName("setCoinToBuy")
@@ -57,23 +57,23 @@ object SellAllCoinDataKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 2;</code>
+     * <code>.api_pb.Coin coin_to_buy = 2 [json_name = "coinToBuy"];</code>
      */
-    fun clearCoinToBuy() {
+    public fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 2;</code>
+     * <code>.api_pb.Coin coin_to_buy = 2 [json_name = "coinToBuy"];</code>
      * @return Whether the coinToBuy field is set.
      */
-    fun hasCoinToBuy(): kotlin.Boolean {
+    public fun hasCoinToBuy(): kotlin.Boolean {
       return _builder.hasCoinToBuy()
     }
 
     /**
-     * <code>string minimum_value_to_buy = 3;</code>
+     * <code>string minimum_value_to_buy = 3 [json_name = "minimumValueToBuy"];</code>
      */
-    var minimumValueToBuy: kotlin.String
+    public var minimumValueToBuy: kotlin.String
       @JvmName("getMinimumValueToBuy")
       get() = _builder.getMinimumValueToBuy()
       @JvmName("setMinimumValueToBuy")
@@ -81,13 +81,13 @@ object SellAllCoinDataKt {
         _builder.setMinimumValueToBuy(value)
       }
     /**
-     * <code>string minimum_value_to_buy = 3;</code>
+     * <code>string minimum_value_to_buy = 3 [json_name = "minimumValueToBuy"];</code>
      */
-    fun clearMinimumValueToBuy() {
+    public fun clearMinimumValueToBuy() {
       _builder.clearMinimumValueToBuy()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.SellAllCoinData.copy(block: counters.minter.grpc.client.SellAllCoinDataKt.Dsl.() -> Unit): counters.minter.grpc.client.SellAllCoinData =
+public inline fun counters.minter.grpc.client.SellAllCoinData.copy(block: counters.minter.grpc.client.SellAllCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SellAllCoinData =
   counters.minter.grpc.client.SellAllCoinDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -153,19 +153,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 p2p = 3;</code>
+     * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
      * @return The p2p.
      */
     long getP2P();
 
     /**
-     * <code>uint64 block = 1;</code>
+     * <code>uint64 block = 1 [json_name = "block"];</code>
      * @return The block.
      */
     long getBlock();
 
     /**
-     * <code>uint64 app = 2;</code>
+     * <code>uint64 app = 2 [json_name = "app"];</code>
      * @return The app.
      */
     long getApp();
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
     public static final int P2P_FIELD_NUMBER = 3;
     private long p2P_;
     /**
-     * <code>uint64 p2p = 3;</code>
+     * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
      * @return The p2p.
      */
     @java.lang.Override
@@ -276,7 +276,7 @@ private static final long serialVersionUID = 0L;
     public static final int BLOCK_FIELD_NUMBER = 1;
     private long block_;
     /**
-     * <code>uint64 block = 1;</code>
+     * <code>uint64 block = 1 [json_name = "block"];</code>
      * @return The block.
      */
     @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
     public static final int APP_FIELD_NUMBER = 2;
     private long app_;
     /**
-     * <code>uint64 app = 2;</code>
+     * <code>uint64 app = 2 [json_name = "app"];</code>
      * @return The app.
      */
     @java.lang.Override
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
 
       private long p2P_ ;
       /**
-       * <code>uint64 p2p = 3;</code>
+       * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
        * @return The p2p.
        */
       @java.lang.Override
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
         return p2P_;
       }
       /**
-       * <code>uint64 p2p = 3;</code>
+       * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
        * @param value The p2p to set.
        * @return This builder for chaining.
        */
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 p2p = 3;</code>
+       * <code>uint64 p2p = 3 [json_name = "p2p"];</code>
        * @return This builder for chaining.
        */
       public Builder clearP2P() {
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
 
       private long block_ ;
       /**
-       * <code>uint64 block = 1;</code>
+       * <code>uint64 block = 1 [json_name = "block"];</code>
        * @return The block.
        */
       @java.lang.Override
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
         return block_;
       }
       /**
-       * <code>uint64 block = 1;</code>
+       * <code>uint64 block = 1 [json_name = "block"];</code>
        * @param value The block to set.
        * @return This builder for chaining.
        */
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 block = 1;</code>
+       * <code>uint64 block = 1 [json_name = "block"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlock() {
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
 
       private long app_ ;
       /**
-       * <code>uint64 app = 2;</code>
+       * <code>uint64 app = 2 [json_name = "app"];</code>
        * @return The app.
        */
       @java.lang.Override
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
         return app_;
       }
       /**
-       * <code>uint64 app = 2;</code>
+       * <code>uint64 app = 2 [json_name = "app"];</code>
        * @param value The app to set.
        * @return This builder for chaining.
        */
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 app = 2;</code>
+       * <code>uint64 app = 2 [json_name = "app"];</code>
        * @return This builder for chaining.
        */
       public Builder clearApp() {
@@ -784,24 +784,24 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string tx_index = 2;</code>
+     * <code>string tx_index = 2 [json_name = "txIndex"];</code>
      * @return The txIndex.
      */
     java.lang.String getTxIndex();
     /**
-     * <code>string tx_index = 2;</code>
+     * <code>string tx_index = 2 [json_name = "txIndex"];</code>
      * @return The bytes for txIndex.
      */
     com.google.protobuf.ByteString
         getTxIndexBytes();
 
     /**
-     * <code>string rpc_address = 1;</code>
+     * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
      * @return The rpcAddress.
      */
     java.lang.String getRpcAddress();
     /**
-     * <code>string rpc_address = 1;</code>
+     * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
      * @return The bytes for rpcAddress.
      */
     com.google.protobuf.ByteString
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
     public static final int TX_INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object txIndex_;
     /**
-     * <code>string tx_index = 2;</code>
+     * <code>string tx_index = 2 [json_name = "txIndex"];</code>
      * @return The txIndex.
      */
     @java.lang.Override
@@ -918,7 +918,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string tx_index = 2;</code>
+     * <code>string tx_index = 2 [json_name = "txIndex"];</code>
      * @return The bytes for txIndex.
      */
     @java.lang.Override
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
     public static final int RPC_ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object rpcAddress_;
     /**
-     * <code>string rpc_address = 1;</code>
+     * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
      * @return The rpcAddress.
      */
     @java.lang.Override
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string rpc_address = 1;</code>
+     * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
      * @return The bytes for rpcAddress.
      */
     @java.lang.Override
@@ -988,10 +988,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRpcAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rpcAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rpcAddress_);
       }
-      if (!getTxIndexBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txIndex_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, txIndex_);
       }
       unknownFields.writeTo(output);
@@ -1003,10 +1003,10 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getRpcAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rpcAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rpcAddress_);
       }
-      if (!getTxIndexBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txIndex_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, txIndex_);
       }
       size += unknownFields.getSerializedSize();
@@ -1295,7 +1295,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object txIndex_ = "";
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        * @return The txIndex.
        */
       public java.lang.String getTxIndex() {
@@ -1311,7 +1311,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        * @return The bytes for txIndex.
        */
       public com.google.protobuf.ByteString
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        * @param value The txIndex to set.
        * @return This builder for chaining.
        */
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTxIndex() {
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string tx_index = 2;</code>
+       * <code>string tx_index = 2 [json_name = "txIndex"];</code>
        * @param value The bytes for txIndex to set.
        * @return This builder for chaining.
        */
@@ -1371,7 +1371,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object rpcAddress_ = "";
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        * @return The rpcAddress.
        */
       public java.lang.String getRpcAddress() {
@@ -1387,7 +1387,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        * @return The bytes for rpcAddress.
        */
       public com.google.protobuf.ByteString
@@ -1404,7 +1404,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        * @param value The rpcAddress to set.
        * @return This builder for chaining.
        */
@@ -1419,7 +1419,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRpcAddress() {
@@ -1429,7 +1429,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string rpc_address = 1;</code>
+       * <code>string rpc_address = 1 [json_name = "rpcAddress"];</code>
        * @param value The bytes for rpcAddress to set.
        * @return This builder for chaining.
        */
@@ -1500,7 +1500,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROTOCOL_VERSION_FIELD_NUMBER = 8;
   private counters.minter.grpc.client.NodeInfo.ProtocolVersion protocolVersion_;
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
    * @return Whether the protocolVersion field is set.
    */
   @java.lang.Override
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
     return protocolVersion_ != null;
   }
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
    * @return The protocolVersion.
    */
   @java.lang.Override
@@ -1516,7 +1516,7 @@ private static final long serialVersionUID = 0L;
     return protocolVersion_ == null ? counters.minter.grpc.client.NodeInfo.ProtocolVersion.getDefaultInstance() : protocolVersion_;
   }
   /**
-   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+   * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.NodeInfo.ProtocolVersionOrBuilder getProtocolVersionOrBuilder() {
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1;</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -1543,7 +1543,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1;</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -1564,7 +1564,7 @@ private static final long serialVersionUID = 0L;
   public static final int LISTEN_ADDR_FIELD_NUMBER = 2;
   private volatile java.lang.Object listenAddr_;
   /**
-   * <code>string listen_addr = 2;</code>
+   * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
    * @return The listenAddr.
    */
   @java.lang.Override
@@ -1581,7 +1581,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string listen_addr = 2;</code>
+   * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
    * @return The bytes for listenAddr.
    */
   @java.lang.Override
@@ -1602,7 +1602,7 @@ private static final long serialVersionUID = 0L;
   public static final int NETWORK_FIELD_NUMBER = 3;
   private volatile java.lang.Object network_;
   /**
-   * <code>string network = 3;</code>
+   * <code>string network = 3 [json_name = "network"];</code>
    * @return The network.
    */
   @java.lang.Override
@@ -1619,7 +1619,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string network = 3;</code>
+   * <code>string network = 3 [json_name = "network"];</code>
    * @return The bytes for network.
    */
   @java.lang.Override
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
   public static final int VERSION_FIELD_NUMBER = 4;
   private volatile java.lang.Object version_;
   /**
-   * <code>string version = 4;</code>
+   * <code>string version = 4 [json_name = "version"];</code>
    * @return The version.
    */
   @java.lang.Override
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string version = 4;</code>
+   * <code>string version = 4 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   @java.lang.Override
@@ -1678,7 +1678,7 @@ private static final long serialVersionUID = 0L;
   public static final int CHANNELS_FIELD_NUMBER = 5;
   private volatile java.lang.Object channels_;
   /**
-   * <code>string channels = 5;</code>
+   * <code>string channels = 5 [json_name = "channels"];</code>
    * @return The channels.
    */
   @java.lang.Override
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string channels = 5;</code>
+   * <code>string channels = 5 [json_name = "channels"];</code>
    * @return The bytes for channels.
    */
   @java.lang.Override
@@ -1716,7 +1716,7 @@ private static final long serialVersionUID = 0L;
   public static final int MONIKER_FIELD_NUMBER = 6;
   private volatile java.lang.Object moniker_;
   /**
-   * <code>string moniker = 6;</code>
+   * <code>string moniker = 6 [json_name = "moniker"];</code>
    * @return The moniker.
    */
   @java.lang.Override
@@ -1733,7 +1733,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string moniker = 6;</code>
+   * <code>string moniker = 6 [json_name = "moniker"];</code>
    * @return The bytes for moniker.
    */
   @java.lang.Override
@@ -1754,7 +1754,7 @@ private static final long serialVersionUID = 0L;
   public static final int OTHER_FIELD_NUMBER = 7;
   private counters.minter.grpc.client.NodeInfo.Other other_;
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7;</code>
+   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
    * @return Whether the other field is set.
    */
   @java.lang.Override
@@ -1762,7 +1762,7 @@ private static final long serialVersionUID = 0L;
     return other_ != null;
   }
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7;</code>
+   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
    * @return The other.
    */
   @java.lang.Override
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
     return other_ == null ? counters.minter.grpc.client.NodeInfo.Other.getDefaultInstance() : other_;
   }
   /**
-   * <code>.api_pb.NodeInfo.Other other = 7;</code>
+   * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.NodeInfo.OtherOrBuilder getOtherOrBuilder() {
@@ -1791,22 +1791,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!getListenAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenAddr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenAddr_);
     }
-    if (!getNetworkBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, network_);
     }
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, version_);
     }
-    if (!getChannelsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channels_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, channels_);
     }
-    if (!getMonikerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, moniker_);
     }
     if (other_ != null) {
@@ -1824,22 +1824,22 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (!getListenAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenAddr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenAddr_);
     }
-    if (!getNetworkBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, network_);
     }
-    if (!getVersionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, version_);
     }
-    if (!getChannelsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channels_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, channels_);
     }
-    if (!getMonikerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, moniker_);
     }
     if (other_ != null) {
@@ -2228,14 +2228,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.NodeInfo.ProtocolVersion, counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder, counters.minter.grpc.client.NodeInfo.ProtocolVersionOrBuilder> protocolVersionBuilder_;
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      * @return Whether the protocolVersion field is set.
      */
     public boolean hasProtocolVersion() {
       return protocolVersionBuilder_ != null || protocolVersion_ != null;
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      * @return The protocolVersion.
      */
     public counters.minter.grpc.client.NodeInfo.ProtocolVersion getProtocolVersion() {
@@ -2246,7 +2246,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public Builder setProtocolVersion(counters.minter.grpc.client.NodeInfo.ProtocolVersion value) {
       if (protocolVersionBuilder_ == null) {
@@ -2262,7 +2262,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public Builder setProtocolVersion(
         counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder builderForValue) {
@@ -2276,7 +2276,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public Builder mergeProtocolVersion(counters.minter.grpc.client.NodeInfo.ProtocolVersion value) {
       if (protocolVersionBuilder_ == null) {
@@ -2294,7 +2294,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public Builder clearProtocolVersion() {
       if (protocolVersionBuilder_ == null) {
@@ -2308,7 +2308,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder getProtocolVersionBuilder() {
       
@@ -2316,7 +2316,7 @@ private static final long serialVersionUID = 0L;
       return getProtocolVersionFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     public counters.minter.grpc.client.NodeInfo.ProtocolVersionOrBuilder getProtocolVersionOrBuilder() {
       if (protocolVersionBuilder_ != null) {
@@ -2327,7 +2327,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8;</code>
+     * <code>.api_pb.NodeInfo.ProtocolVersion protocol_version = 8 [json_name = "protocolVersion"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.NodeInfo.ProtocolVersion, counters.minter.grpc.client.NodeInfo.ProtocolVersion.Builder, counters.minter.grpc.client.NodeInfo.ProtocolVersionOrBuilder> 
@@ -2345,7 +2345,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -2361,7 +2361,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -2378,7 +2378,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2393,7 +2393,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2403,7 +2403,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -2421,7 +2421,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object listenAddr_ = "";
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      * @return The listenAddr.
      */
     public java.lang.String getListenAddr() {
@@ -2437,7 +2437,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      * @return The bytes for listenAddr.
      */
     public com.google.protobuf.ByteString
@@ -2454,7 +2454,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      * @param value The listenAddr to set.
      * @return This builder for chaining.
      */
@@ -2469,7 +2469,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      * @return This builder for chaining.
      */
     public Builder clearListenAddr() {
@@ -2479,7 +2479,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string listen_addr = 2;</code>
+     * <code>string listen_addr = 2 [json_name = "listenAddr"];</code>
      * @param value The bytes for listenAddr to set.
      * @return This builder for chaining.
      */
@@ -2497,7 +2497,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object network_ = "";
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      * @return The network.
      */
     public java.lang.String getNetwork() {
@@ -2513,7 +2513,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      * @return The bytes for network.
      */
     public com.google.protobuf.ByteString
@@ -2530,7 +2530,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      * @param value The network to set.
      * @return This builder for chaining.
      */
@@ -2545,7 +2545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNetwork() {
@@ -2555,7 +2555,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string network = 3;</code>
+     * <code>string network = 3 [json_name = "network"];</code>
      * @param value The bytes for network to set.
      * @return This builder for chaining.
      */
@@ -2573,7 +2573,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object version_ = "";
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      * @return The version.
      */
     public java.lang.String getVersion() {
@@ -2589,7 +2589,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
@@ -2606,7 +2606,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      * @param value The version to set.
      * @return This builder for chaining.
      */
@@ -2621,7 +2621,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
@@ -2631,7 +2631,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string version = 4;</code>
+     * <code>string version = 4 [json_name = "version"];</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
      */
@@ -2649,7 +2649,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object channels_ = "";
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      * @return The channels.
      */
     public java.lang.String getChannels() {
@@ -2665,7 +2665,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      * @return The bytes for channels.
      */
     public com.google.protobuf.ByteString
@@ -2682,7 +2682,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      * @param value The channels to set.
      * @return This builder for chaining.
      */
@@ -2697,7 +2697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      * @return This builder for chaining.
      */
     public Builder clearChannels() {
@@ -2707,7 +2707,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string channels = 5;</code>
+     * <code>string channels = 5 [json_name = "channels"];</code>
      * @param value The bytes for channels to set.
      * @return This builder for chaining.
      */
@@ -2725,7 +2725,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object moniker_ = "";
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      * @return The moniker.
      */
     public java.lang.String getMoniker() {
@@ -2741,7 +2741,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
     public com.google.protobuf.ByteString
@@ -2758,7 +2758,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      * @param value The moniker to set.
      * @return This builder for chaining.
      */
@@ -2773,7 +2773,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMoniker() {
@@ -2783,7 +2783,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string moniker = 6;</code>
+     * <code>string moniker = 6 [json_name = "moniker"];</code>
      * @param value The bytes for moniker to set.
      * @return This builder for chaining.
      */
@@ -2803,14 +2803,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.NodeInfo.Other, counters.minter.grpc.client.NodeInfo.Other.Builder, counters.minter.grpc.client.NodeInfo.OtherOrBuilder> otherBuilder_;
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      * @return Whether the other field is set.
      */
     public boolean hasOther() {
       return otherBuilder_ != null || other_ != null;
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      * @return The other.
      */
     public counters.minter.grpc.client.NodeInfo.Other getOther() {
@@ -2821,7 +2821,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public Builder setOther(counters.minter.grpc.client.NodeInfo.Other value) {
       if (otherBuilder_ == null) {
@@ -2837,7 +2837,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public Builder setOther(
         counters.minter.grpc.client.NodeInfo.Other.Builder builderForValue) {
@@ -2851,7 +2851,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public Builder mergeOther(counters.minter.grpc.client.NodeInfo.Other value) {
       if (otherBuilder_ == null) {
@@ -2869,7 +2869,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public Builder clearOther() {
       if (otherBuilder_ == null) {
@@ -2883,7 +2883,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public counters.minter.grpc.client.NodeInfo.Other.Builder getOtherBuilder() {
       
@@ -2891,7 +2891,7 @@ private static final long serialVersionUID = 0L;
       return getOtherFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     public counters.minter.grpc.client.NodeInfo.OtherOrBuilder getOtherOrBuilder() {
       if (otherBuilder_ != null) {
@@ -2902,7 +2902,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.NodeInfo.Other other = 7;</code>
+     * <code>.api_pb.NodeInfo.Other other = 7 [json_name = "other"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.NodeInfo.Other, counters.minter.grpc.client.NodeInfo.Other.Builder, counters.minter.grpc.client.NodeInfo.OtherOrBuilder> 

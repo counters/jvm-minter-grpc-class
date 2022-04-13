@@ -8,25 +8,25 @@ public interface BlocksResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
    */
   java.util.List<counters.minter.grpc.client.BlockResponse> 
       getBlocksList();
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
    */
   counters.minter.grpc.client.BlockResponse getBlocks(int index);
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
    */
   int getBlocksCount();
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.BlockResponseOrBuilder> 
       getBlocksOrBuilderList();
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
    */
   counters.minter.grpc.client.BlockResponseOrBuilder getBlocksOrBuilder(
       int index);

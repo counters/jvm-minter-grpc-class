@@ -53,13 +53,13 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 8: {
-            buyCase_ = 1;
             buy_ = input.readUInt64();
+            buyCase_ = 1;
             break;
           }
           case 16: {
-            sellCase_ = 2;
             sell_ = input.readUInt64();
+            sellCase_ = 2;
             break;
           }
           case 26: {
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int COIN_ID_TO_BUY_FIELD_NUMBER = 1;
   /**
-   * <code>uint64 coin_id_to_buy = 1;</code>
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
    * @return Whether the coinIdToBuy field is set.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
     return buyCase_ == 1;
   }
   /**
-   * <code>uint64 coin_id_to_buy = 1;</code>
+   * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
    * @return The coinIdToBuy.
    */
   @java.lang.Override
@@ -257,14 +257,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int COIN_TO_BUY_FIELD_NUMBER = 7;
   /**
-   * <code>string coin_to_buy = 7;</code>
+   * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
    * @return Whether the coinToBuy field is set.
    */
   public boolean hasCoinToBuy() {
     return buyCase_ == 7;
   }
   /**
-   * <code>string coin_to_buy = 7;</code>
+   * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
    * @return The coinToBuy.
    */
   public java.lang.String getCoinToBuy() {
@@ -285,7 +285,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string coin_to_buy = 7;</code>
+   * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
    * @return The bytes for coinToBuy.
    */
   public com.google.protobuf.ByteString
@@ -309,7 +309,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int COIN_ID_TO_SELL_FIELD_NUMBER = 2;
   /**
-   * <code>uint64 coin_id_to_sell = 2;</code>
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
    * @return Whether the coinIdToSell field is set.
    */
   @java.lang.Override
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
     return sellCase_ == 2;
   }
   /**
-   * <code>uint64 coin_id_to_sell = 2;</code>
+   * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
    * @return The coinIdToSell.
    */
   @java.lang.Override
@@ -330,14 +330,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int COIN_TO_SELL_FIELD_NUMBER = 6;
   /**
-   * <code>string coin_to_sell = 6;</code>
+   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return Whether the coinToSell field is set.
    */
   public boolean hasCoinToSell() {
     return sellCase_ == 6;
   }
   /**
-   * <code>string coin_to_sell = 6;</code>
+   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The coinToSell.
    */
   public java.lang.String getCoinToSell() {
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string coin_to_sell = 6;</code>
+   * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
    * @return The bytes for coinToSell.
    */
   public com.google.protobuf.ByteString
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_TO_SELL_FIELD_NUMBER = 3;
   private volatile java.lang.Object valueToSell_;
   /**
-   * <code>string value_to_sell = 3;</code>
+   * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
    * @return The valueToSell.
    */
   @java.lang.Override
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value_to_sell = 3;</code>
+   * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
    * @return The bytes for valueToSell.
    */
   @java.lang.Override
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
   public static final int GAS_PRICE_FIELD_NUMBER = 4;
   private long gasPrice_;
   /**
-   * <code>uint64 gas_price = 4;</code>
+   * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
    * @return The gasPrice.
    */
   @java.lang.Override
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 5;
   private long height_;
   /**
-   * <code>uint64 height = 5;</code>
+   * <code>uint64 height = 5 [json_name = "height"];</code>
    * @return The height.
    */
   @java.lang.Override
@@ -443,14 +443,14 @@ private static final long serialVersionUID = 0L;
   public static final int SWAP_FROM_FIELD_NUMBER = 8;
   private int swapFrom_;
   /**
-   * <code>.api_pb.SwapFrom swap_from = 8;</code>
+   * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   @java.lang.Override public int getSwapFromValue() {
     return swapFrom_;
   }
   /**
-   * <code>.api_pb.SwapFrom swap_from = 8;</code>
+   * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
    * @return The swapFrom.
    */
   @java.lang.Override public counters.minter.grpc.client.SwapFrom getSwapFrom() {
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
   public static final int ROUTE_FIELD_NUMBER = 11;
   private com.google.protobuf.Internal.LongList route_;
   /**
-   * <code>repeated uint64 route = 11;</code>
+   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
    * @return A list containing the route.
    */
   @java.lang.Override
@@ -471,14 +471,14 @@ private static final long serialVersionUID = 0L;
     return route_;
   }
   /**
-   * <code>repeated uint64 route = 11;</code>
+   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
    * @return The count of route.
    */
   public int getRouteCount() {
     return route_.size();
   }
   /**
-   * <code>repeated uint64 route = 11;</code>
+   * <code>repeated uint64 route = 11 [json_name = "route"];</code>
    * @param index The index of the element to return.
    * @return The route at the given index.
    */
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
       output.writeUInt64(
           2, (long)((java.lang.Long) sell_));
     }
-    if (!getValueToSellBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueToSell_);
     }
     if (gasPrice_ != 0L) {
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
         .computeUInt64Size(
             2, (long)((java.lang.Long) sell_));
     }
-    if (!getValueToSellBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueToSell_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueToSell_);
     }
     if (gasPrice_ != 0L) {
@@ -1049,14 +1049,14 @@ private static final long serialVersionUID = 0L;
     private int bitField0_;
 
     /**
-     * <code>uint64 coin_id_to_buy = 1;</code>
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
      * @return Whether the coinIdToBuy field is set.
      */
     public boolean hasCoinIdToBuy() {
       return buyCase_ == 1;
     }
     /**
-     * <code>uint64 coin_id_to_buy = 1;</code>
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
      * @return The coinIdToBuy.
      */
     public long getCoinIdToBuy() {
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
       return 0L;
     }
     /**
-     * <code>uint64 coin_id_to_buy = 1;</code>
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
      * @param value The coinIdToBuy to set.
      * @return This builder for chaining.
      */
@@ -1077,7 +1077,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin_id_to_buy = 1;</code>
+     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoinIdToBuy() {
@@ -1090,7 +1090,7 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @return Whether the coinToBuy field is set.
      */
     @java.lang.Override
@@ -1098,7 +1098,7 @@ private static final long serialVersionUID = 0L;
       return buyCase_ == 7;
     }
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @return The coinToBuy.
      */
     @java.lang.Override
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @return The bytes for coinToBuy.
      */
     @java.lang.Override
@@ -1143,7 +1143,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @param value The coinToBuy to set.
      * @return This builder for chaining.
      */
@@ -1158,7 +1158,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoinToBuy() {
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string coin_to_buy = 7;</code>
+     * <code>string coin_to_buy = 7 [json_name = "coinToBuy"];</code>
      * @param value The bytes for coinToBuy to set.
      * @return This builder for chaining.
      */
@@ -1187,14 +1187,14 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * <code>uint64 coin_id_to_sell = 2;</code>
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
      * @return Whether the coinIdToSell field is set.
      */
     public boolean hasCoinIdToSell() {
       return sellCase_ == 2;
     }
     /**
-     * <code>uint64 coin_id_to_sell = 2;</code>
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
      * @return The coinIdToSell.
      */
     public long getCoinIdToSell() {
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
       return 0L;
     }
     /**
-     * <code>uint64 coin_id_to_sell = 2;</code>
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
      * @param value The coinIdToSell to set.
      * @return This builder for chaining.
      */
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin_id_to_sell = 2;</code>
+     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoinIdToSell() {
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return Whether the coinToSell field is set.
      */
     @java.lang.Override
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
       return sellCase_ == 6;
     }
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return The coinToSell.
      */
     @java.lang.Override
@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return The bytes for coinToSell.
      */
     @java.lang.Override
@@ -1281,7 +1281,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @param value The coinToSell to set.
      * @return This builder for chaining.
      */
@@ -1296,7 +1296,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoinToSell() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string coin_to_sell = 6;</code>
+     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
      * @param value The bytes for coinToSell to set.
      * @return This builder for chaining.
      */
@@ -1326,7 +1326,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object valueToSell_ = "";
     /**
-     * <code>string value_to_sell = 3;</code>
+     * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
      * @return The valueToSell.
      */
     public java.lang.String getValueToSell() {
@@ -1342,7 +1342,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_to_sell = 3;</code>
+     * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
      * @return The bytes for valueToSell.
      */
     public com.google.protobuf.ByteString
@@ -1359,7 +1359,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_to_sell = 3;</code>
+     * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
      * @param value The valueToSell to set.
      * @return This builder for chaining.
      */
@@ -1374,7 +1374,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_to_sell = 3;</code>
+     * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValueToSell() {
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_to_sell = 3;</code>
+     * <code>string value_to_sell = 3 [json_name = "valueToSell"];</code>
      * @param value The bytes for valueToSell to set.
      * @return This builder for chaining.
      */
@@ -1402,7 +1402,7 @@ private static final long serialVersionUID = 0L;
 
     private long gasPrice_ ;
     /**
-     * <code>uint64 gas_price = 4;</code>
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
      * @return The gasPrice.
      */
     @java.lang.Override
@@ -1410,7 +1410,7 @@ private static final long serialVersionUID = 0L;
       return gasPrice_;
     }
     /**
-     * <code>uint64 gas_price = 4;</code>
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
      * @param value The gasPrice to set.
      * @return This builder for chaining.
      */
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 gas_price = 4;</code>
+     * <code>uint64 gas_price = 4 [json_name = "gasPrice"];</code>
      * @return This builder for chaining.
      */
     public Builder clearGasPrice() {
@@ -1433,7 +1433,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 5;</code>
+     * <code>uint64 height = 5 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 5;</code>
+     * <code>uint64 height = 5 [json_name = "height"];</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 5;</code>
+     * <code>uint64 height = 5 [json_name = "height"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -1464,14 +1464,14 @@ private static final long serialVersionUID = 0L;
 
     private int swapFrom_ = 0;
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8;</code>
+     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return The enum numeric value on the wire for swapFrom.
      */
     @java.lang.Override public int getSwapFromValue() {
       return swapFrom_;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8;</code>
+     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @param value The enum numeric value on the wire for swapFrom to set.
      * @return This builder for chaining.
      */
@@ -1482,7 +1482,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8;</code>
+     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return The swapFrom.
      */
     @java.lang.Override
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.SwapFrom.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8;</code>
+     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @param value The swapFrom to set.
      * @return This builder for chaining.
      */
@@ -1506,7 +1506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8;</code>
+     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSwapFrom() {
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @return A list containing the route.
      */
     public java.util.List<java.lang.Long>
@@ -1533,14 +1533,14 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(route_) : route_;
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @return The count of route.
      */
     public int getRouteCount() {
       return route_.size();
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @param index The index of the element to return.
      * @return The route at the given index.
      */
@@ -1548,7 +1548,7 @@ private static final long serialVersionUID = 0L;
       return route_.getLong(index);
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @param index The index to set the value at.
      * @param value The route to set.
      * @return This builder for chaining.
@@ -1561,7 +1561,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @param value The route to add.
      * @return This builder for chaining.
      */
@@ -1572,7 +1572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @param values The route to add.
      * @return This builder for chaining.
      */
@@ -1585,7 +1585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 route = 11;</code>
+     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRoute() {

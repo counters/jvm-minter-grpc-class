@@ -8,39 +8,39 @@ public interface DelegateDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The pubKey.
    */
   java.lang.String getPubKey();
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The bytes for pubKey.
    */
   com.google.protobuf.ByteString
       getPubKeyBytes();
 
   /**
-   * <code>.api_pb.Coin coin = 2;</code>
+   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 2;</code>
+   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 2;</code>
+   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string value = 3;</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 3;</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

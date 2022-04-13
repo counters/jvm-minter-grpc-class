@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun removeLiquidityData(block: counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RemoveLiquidityData =
+public inline fun removeLiquidityData(block: counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLiquidityData =
   counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl._create(counters.minter.grpc.client.RemoveLiquidityData.newBuilder()).apply { block() }._build()
-object RemoveLiquidityDataKt {
+public object RemoveLiquidityDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.RemoveLiquidityData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.RemoveLiquidityData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.RemoveLiquidityData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object RemoveLiquidityDataKt {
     internal fun _build(): counters.minter.grpc.client.RemoveLiquidityData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      */
-    var coin0: counters.minter.grpc.client.Coin
+    public var coin0: counters.minter.grpc.client.Coin
       @JvmName("getCoin0")
       get() = _builder.getCoin0()
       @JvmName("setCoin0")
@@ -33,23 +33,23 @@ object RemoveLiquidityDataKt {
         _builder.setCoin0(value)
       }
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      */
-    fun clearCoin0() {
+    public fun clearCoin0() {
       _builder.clearCoin0()
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1;</code>
+     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
      * @return Whether the coin0 field is set.
      */
-    fun hasCoin0(): kotlin.Boolean {
+    public fun hasCoin0(): kotlin.Boolean {
       return _builder.hasCoin0()
     }
 
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      */
-    var coin1: counters.minter.grpc.client.Coin
+    public var coin1: counters.minter.grpc.client.Coin
       @JvmName("getCoin1")
       get() = _builder.getCoin1()
       @JvmName("setCoin1")
@@ -57,23 +57,23 @@ object RemoveLiquidityDataKt {
         _builder.setCoin1(value)
       }
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      */
-    fun clearCoin1() {
+    public fun clearCoin1() {
       _builder.clearCoin1()
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2;</code>
+     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
      * @return Whether the coin1 field is set.
      */
-    fun hasCoin1(): kotlin.Boolean {
+    public fun hasCoin1(): kotlin.Boolean {
       return _builder.hasCoin1()
     }
 
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      */
-    var liquidity: kotlin.String
+    public var liquidity: kotlin.String
       @JvmName("getLiquidity")
       get() = _builder.getLiquidity()
       @JvmName("setLiquidity")
@@ -81,16 +81,16 @@ object RemoveLiquidityDataKt {
         _builder.setLiquidity(value)
       }
     /**
-     * <code>string liquidity = 3;</code>
+     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
      */
-    fun clearLiquidity() {
+    public fun clearLiquidity() {
       _builder.clearLiquidity()
     }
 
     /**
-     * <code>string minimum_volume0 = 4;</code>
+     * <code>string minimum_volume0 = 4 [json_name = "minimumVolume0"];</code>
      */
-    var minimumVolume0: kotlin.String
+    public var minimumVolume0: kotlin.String
       @JvmName("getMinimumVolume0")
       get() = _builder.getMinimumVolume0()
       @JvmName("setMinimumVolume0")
@@ -98,16 +98,16 @@ object RemoveLiquidityDataKt {
         _builder.setMinimumVolume0(value)
       }
     /**
-     * <code>string minimum_volume0 = 4;</code>
+     * <code>string minimum_volume0 = 4 [json_name = "minimumVolume0"];</code>
      */
-    fun clearMinimumVolume0() {
+    public fun clearMinimumVolume0() {
       _builder.clearMinimumVolume0()
     }
 
     /**
-     * <code>string minimum_volume1 = 5;</code>
+     * <code>string minimum_volume1 = 5 [json_name = "minimumVolume1"];</code>
      */
-    var minimumVolume1: kotlin.String
+    public var minimumVolume1: kotlin.String
       @JvmName("getMinimumVolume1")
       get() = _builder.getMinimumVolume1()
       @JvmName("setMinimumVolume1")
@@ -115,13 +115,13 @@ object RemoveLiquidityDataKt {
         _builder.setMinimumVolume1(value)
       }
     /**
-     * <code>string minimum_volume1 = 5;</code>
+     * <code>string minimum_volume1 = 5 [json_name = "minimumVolume1"];</code>
      */
-    fun clearMinimumVolume1() {
+    public fun clearMinimumVolume1() {
       _builder.clearMinimumVolume1()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.RemoveLiquidityData.copy(block: counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl.() -> Unit): counters.minter.grpc.client.RemoveLiquidityData =
+public inline fun counters.minter.grpc.client.RemoveLiquidityData.copy(block: counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLiquidityData =
   counters.minter.grpc.client.RemoveLiquidityDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

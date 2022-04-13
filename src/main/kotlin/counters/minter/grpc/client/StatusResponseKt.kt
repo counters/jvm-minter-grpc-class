@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun statusResponse(block: counters.minter.grpc.client.StatusResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.StatusResponse =
+public inline fun statusResponse(block: counters.minter.grpc.client.StatusResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.StatusResponse =
   counters.minter.grpc.client.StatusResponseKt.Dsl._create(counters.minter.grpc.client.StatusResponse.newBuilder()).apply { block() }._build()
-object StatusResponseKt {
+public object StatusResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.StatusResponse.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.StatusResponse.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.StatusResponse.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object StatusResponseKt {
     internal fun _build(): counters.minter.grpc.client.StatusResponse = _builder.build()
 
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      */
-    var version: kotlin.String
+    public var version: kotlin.String
       @JvmName("getVersion")
       get() = _builder.getVersion()
       @JvmName("setVersion")
@@ -33,16 +33,16 @@ object StatusResponseKt {
         _builder.setVersion(value)
       }
     /**
-     * <code>string version = 8;</code>
+     * <code>string version = 8 [json_name = "version"];</code>
      */
-    fun clearVersion() {
+    public fun clearVersion() {
       _builder.clearVersion()
     }
 
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      */
-    var network: kotlin.String
+    public var network: kotlin.String
       @JvmName("getNetwork")
       get() = _builder.getNetwork()
       @JvmName("setNetwork")
@@ -50,16 +50,16 @@ object StatusResponseKt {
         _builder.setNetwork(value)
       }
     /**
-     * <code>string network = 11;</code>
+     * <code>string network = 11 [json_name = "network"];</code>
      */
-    fun clearNetwork() {
+    public fun clearNetwork() {
       _builder.clearNetwork()
     }
 
     /**
-     * <code>uint64 initial_height = 12;</code>
+     * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
      */
-    var initialHeight: kotlin.Long
+    public var initialHeight: kotlin.Long
       @JvmName("getInitialHeight")
       get() = _builder.getInitialHeight()
       @JvmName("setInitialHeight")
@@ -67,16 +67,16 @@ object StatusResponseKt {
         _builder.setInitialHeight(value)
       }
     /**
-     * <code>uint64 initial_height = 12;</code>
+     * <code>uint64 initial_height = 12 [json_name = "initialHeight"];</code>
      */
-    fun clearInitialHeight() {
+    public fun clearInitialHeight() {
       _builder.clearInitialHeight()
     }
 
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      */
-    var latestBlockHash: kotlin.String
+    public var latestBlockHash: kotlin.String
       @JvmName("getLatestBlockHash")
       get() = _builder.getLatestBlockHash()
       @JvmName("setLatestBlockHash")
@@ -84,16 +84,16 @@ object StatusResponseKt {
         _builder.setLatestBlockHash(value)
       }
     /**
-     * <code>string latest_block_hash = 1;</code>
+     * <code>string latest_block_hash = 1 [json_name = "latestBlockHash"];</code>
      */
-    fun clearLatestBlockHash() {
+    public fun clearLatestBlockHash() {
       _builder.clearLatestBlockHash()
     }
 
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      */
-    var latestAppHash: kotlin.String
+    public var latestAppHash: kotlin.String
       @JvmName("getLatestAppHash")
       get() = _builder.getLatestAppHash()
       @JvmName("setLatestAppHash")
@@ -101,16 +101,16 @@ object StatusResponseKt {
         _builder.setLatestAppHash(value)
       }
     /**
-     * <code>string latest_app_hash = 2;</code>
+     * <code>string latest_app_hash = 2 [json_name = "latestAppHash"];</code>
      */
-    fun clearLatestAppHash() {
+    public fun clearLatestAppHash() {
       _builder.clearLatestAppHash()
     }
 
     /**
-     * <code>uint64 latest_block_height = 3;</code>
+     * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
      */
-    var latestBlockHeight: kotlin.Long
+    public var latestBlockHeight: kotlin.Long
       @JvmName("getLatestBlockHeight")
       get() = _builder.getLatestBlockHeight()
       @JvmName("setLatestBlockHeight")
@@ -118,16 +118,16 @@ object StatusResponseKt {
         _builder.setLatestBlockHeight(value)
       }
     /**
-     * <code>uint64 latest_block_height = 3;</code>
+     * <code>uint64 latest_block_height = 3 [json_name = "latestBlockHeight"];</code>
      */
-    fun clearLatestBlockHeight() {
+    public fun clearLatestBlockHeight() {
       _builder.clearLatestBlockHeight()
     }
 
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      */
-    var latestBlockTime: kotlin.String
+    public var latestBlockTime: kotlin.String
       @JvmName("getLatestBlockTime")
       get() = _builder.getLatestBlockTime()
       @JvmName("setLatestBlockTime")
@@ -135,16 +135,16 @@ object StatusResponseKt {
         _builder.setLatestBlockTime(value)
       }
     /**
-     * <code>string latest_block_time = 4;</code>
+     * <code>string latest_block_time = 4 [json_name = "latestBlockTime"];</code>
      */
-    fun clearLatestBlockTime() {
+    public fun clearLatestBlockTime() {
       _builder.clearLatestBlockTime()
     }
 
     /**
-     * <code>uint64 keep_last_states = 5;</code>
+     * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
      */
-    var keepLastStates: kotlin.Long
+    public var keepLastStates: kotlin.Long
       @JvmName("getKeepLastStates")
       get() = _builder.getKeepLastStates()
       @JvmName("setKeepLastStates")
@@ -152,16 +152,16 @@ object StatusResponseKt {
         _builder.setKeepLastStates(value)
       }
     /**
-     * <code>uint64 keep_last_states = 5;</code>
+     * <code>uint64 keep_last_states = 5 [json_name = "keepLastStates"];</code>
      */
-    fun clearKeepLastStates() {
+    public fun clearKeepLastStates() {
       _builder.clearKeepLastStates()
     }
 
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      */
-    var totalSlashed: kotlin.String
+    public var totalSlashed: kotlin.String
       @JvmName("getTotalSlashed")
       get() = _builder.getTotalSlashed()
       @JvmName("setTotalSlashed")
@@ -169,16 +169,33 @@ object StatusResponseKt {
         _builder.setTotalSlashed(value)
       }
     /**
-     * <code>string total_slashed = 10;</code>
+     * <code>string total_slashed = 10 [json_name = "totalSlashed"];</code>
      */
-    fun clearTotalSlashed() {
+    public fun clearTotalSlashed() {
       _builder.clearTotalSlashed()
     }
 
     /**
-     * <code>bool catching_up = 6;</code>
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
      */
-    var catchingUp: kotlin.Boolean
+    public var currentEmission: kotlin.String
+      @JvmName("getCurrentEmission")
+      get() = _builder.getCurrentEmission()
+      @JvmName("setCurrentEmission")
+      set(value) {
+        _builder.setCurrentEmission(value)
+      }
+    /**
+     * <code>string current_emission = 14 [json_name = "currentEmission"];</code>
+     */
+    public fun clearCurrentEmission() {
+      _builder.clearCurrentEmission()
+    }
+
+    /**
+     * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
+     */
+    public var catchingUp: kotlin.Boolean
       @JvmName("getCatchingUp")
       get() = _builder.getCatchingUp()
       @JvmName("setCatchingUp")
@@ -186,16 +203,16 @@ object StatusResponseKt {
         _builder.setCatchingUp(value)
       }
     /**
-     * <code>bool catching_up = 6;</code>
+     * <code>bool catching_up = 6 [json_name = "catchingUp"];</code>
      */
-    fun clearCatchingUp() {
+    public fun clearCatchingUp() {
       _builder.clearCatchingUp()
     }
 
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      */
-    var publicKey: kotlin.String
+    public var publicKey: kotlin.String
       @JvmName("getPublicKey")
       get() = _builder.getPublicKey()
       @JvmName("setPublicKey")
@@ -203,16 +220,16 @@ object StatusResponseKt {
         _builder.setPublicKey(value)
       }
     /**
-     * <code>string public_key = 7;</code>
+     * <code>string public_key = 7 [json_name = "publicKey"];</code>
      */
-    fun clearPublicKey() {
+    public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      */
-    var nodeId: kotlin.String
+    public var nodeId: kotlin.String
       @JvmName("getNodeId")
       get() = _builder.getNodeId()
       @JvmName("setNodeId")
@@ -220,16 +237,16 @@ object StatusResponseKt {
         _builder.setNodeId(value)
       }
     /**
-     * <code>string node_id = 9;</code>
+     * <code>string node_id = 9 [json_name = "nodeId"];</code>
      */
-    fun clearNodeId() {
+    public fun clearNodeId() {
       _builder.clearNodeId()
     }
 
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      */
-    var moniker: kotlin.String
+    public var moniker: kotlin.String
       @JvmName("getMoniker")
       get() = _builder.getMoniker()
       @JvmName("setMoniker")
@@ -237,13 +254,13 @@ object StatusResponseKt {
         _builder.setMoniker(value)
       }
     /**
-     * <code>string moniker = 13;</code>
+     * <code>string moniker = 13 [json_name = "moniker"];</code>
      */
-    fun clearMoniker() {
+    public fun clearMoniker() {
       _builder.clearMoniker()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.StatusResponse.copy(block: counters.minter.grpc.client.StatusResponseKt.Dsl.() -> Unit): counters.minter.grpc.client.StatusResponse =
+public inline fun counters.minter.grpc.client.StatusResponse.copy(block: counters.minter.grpc.client.StatusResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.StatusResponse =
   counters.minter.grpc.client.StatusResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()

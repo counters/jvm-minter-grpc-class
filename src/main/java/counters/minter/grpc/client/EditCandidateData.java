@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
   public static final int PUB_KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object pubKey_;
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The pubKey.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string pub_key = 1;</code>
+   * <code>string pub_key = 1 [json_name = "pubKey"];</code>
    * @return The bytes for pubKey.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
   public static final int REWARD_ADDRESS_FIELD_NUMBER = 3;
   private volatile java.lang.Object rewardAddress_;
   /**
-   * <code>string reward_address = 3;</code>
+   * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
    * @return The rewardAddress.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string reward_address = 3;</code>
+   * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
    * @return The bytes for rewardAddress.
    */
   @java.lang.Override
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
   public static final int OWNER_ADDRESS_FIELD_NUMBER = 4;
   private volatile java.lang.Object ownerAddress_;
   /**
-   * <code>string owner_address = 4;</code>
+   * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
    * @return The ownerAddress.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string owner_address = 4;</code>
+   * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
    * @return The bytes for ownerAddress.
    */
   @java.lang.Override
@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONTROL_ADDRESS_FIELD_NUMBER = 5;
   private volatile java.lang.Object controlAddress_;
   /**
-   * <code>string control_address = 5;</code>
+   * <code>string control_address = 5 [json_name = "controlAddress"];</code>
    * @return The controlAddress.
    */
   @java.lang.Override
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string control_address = 5;</code>
+   * <code>string control_address = 5 [json_name = "controlAddress"];</code>
    * @return The bytes for controlAddress.
    */
   @java.lang.Override
@@ -274,16 +274,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPubKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pubKey_);
     }
-    if (!getRewardAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rewardAddress_);
     }
-    if (!getOwnerAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ownerAddress_);
     }
-    if (!getControlAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, controlAddress_);
     }
     unknownFields.writeTo(output);
@@ -295,16 +295,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPubKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pubKey_);
     }
-    if (!getRewardAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rewardAddress_);
     }
-    if (!getOwnerAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ownerAddress_);
     }
-    if (!getControlAddressBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controlAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, controlAddress_);
     }
     size += unknownFields.getSerializedSize();
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object pubKey_ = "";
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return The pubKey.
      */
     public java.lang.String getPubKey() {
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return The bytes for pubKey.
      */
     public com.google.protobuf.ByteString
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @param value The pubKey to set.
      * @return This builder for chaining.
      */
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPubKey() {
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string pub_key = 1;</code>
+     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
      * @param value The bytes for pubKey to set.
      * @return This builder for chaining.
      */
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object rewardAddress_ = "";
     /**
-     * <code>string reward_address = 3;</code>
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
      * @return The rewardAddress.
      */
     public java.lang.String getRewardAddress() {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reward_address = 3;</code>
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
      * @return The bytes for rewardAddress.
      */
     public com.google.protobuf.ByteString
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reward_address = 3;</code>
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
      * @param value The rewardAddress to set.
      * @return This builder for chaining.
      */
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string reward_address = 3;</code>
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRewardAddress() {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string reward_address = 3;</code>
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
      * @param value The bytes for rewardAddress to set.
      * @return This builder for chaining.
      */
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ownerAddress_ = "";
     /**
-     * <code>string owner_address = 4;</code>
+     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
      * @return The ownerAddress.
      */
     public java.lang.String getOwnerAddress() {
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string owner_address = 4;</code>
+     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
      * @return The bytes for ownerAddress.
      */
     public com.google.protobuf.ByteString
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string owner_address = 4;</code>
+     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
      * @param value The ownerAddress to set.
      * @return This builder for chaining.
      */
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string owner_address = 4;</code>
+     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerAddress() {
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string owner_address = 4;</code>
+     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
      * @param value The bytes for ownerAddress to set.
      * @return This builder for chaining.
      */
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object controlAddress_ = "";
     /**
-     * <code>string control_address = 5;</code>
+     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
      * @return The controlAddress.
      */
     public java.lang.String getControlAddress() {
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string control_address = 5;</code>
+     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
      * @return The bytes for controlAddress.
      */
     public com.google.protobuf.ByteString
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string control_address = 5;</code>
+     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
      * @param value The controlAddress to set.
      * @return This builder for chaining.
      */
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string control_address = 5;</code>
+     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
      * @return This builder for chaining.
      */
     public Builder clearControlAddress() {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string control_address = 5;</code>
+     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
      * @param value The bytes for controlAddress to set.
      * @return This builder for chaining.
      */

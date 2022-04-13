@@ -8,24 +8,24 @@ public interface EditCoinOwnerDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string symbol = 1;</code>
+   * <code>string symbol = 1 [json_name = "symbol"];</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <code>string symbol = 1;</code>
+   * <code>string symbol = 1 [json_name = "symbol"];</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString
       getSymbolBytes();
 
   /**
-   * <code>string new_owner = 2;</code>
+   * <code>string new_owner = 2 [json_name = "newOwner"];</code>
    * @return The newOwner.
    */
   java.lang.String getNewOwner();
   /**
-   * <code>string new_owner = 2;</code>
+   * <code>string new_owner = 2 [json_name = "newOwner"];</code>
    * @return The bytes for newOwner.
    */
   com.google.protobuf.ByteString

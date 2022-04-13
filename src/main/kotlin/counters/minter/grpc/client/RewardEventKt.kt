@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun rewardEvent(block: counters.minter.grpc.client.RewardEventKt.Dsl.() -> Unit): counters.minter.grpc.client.RewardEvent =
+public inline fun rewardEvent(block: counters.minter.grpc.client.RewardEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RewardEvent =
   counters.minter.grpc.client.RewardEventKt.Dsl._create(counters.minter.grpc.client.RewardEvent.newBuilder()).apply { block() }._build()
-object RewardEventKt {
+public object RewardEventKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.RewardEvent.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.RewardEvent.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.RewardEvent.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object RewardEventKt {
     internal fun _build(): counters.minter.grpc.client.RewardEvent = _builder.build()
 
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1;</code>
+     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
      */
-    var role: counters.minter.grpc.client.RewardEvent.Role
+    public var role: counters.minter.grpc.client.RewardEvent.Role
       @JvmName("getRole")
       get() = _builder.getRole()
       @JvmName("setRole")
@@ -33,16 +33,16 @@ object RewardEventKt {
         _builder.setRole(value)
       }
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1;</code>
+     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
      */
-    fun clearRole() {
+    public fun clearRole() {
       _builder.clearRole()
     }
 
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    var address: kotlin.String
+    public var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -50,16 +50,16 @@ object RewardEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 2;</code>
+     * <code>string address = 2 [json_name = "address"];</code>
      */
-    fun clearAddress() {
+    public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string amount = 3;</code>
+     * <code>string amount = 3 [json_name = "amount"];</code>
      */
-    var amount: kotlin.String
+    public var amount: kotlin.String
       @JvmName("getAmount")
       get() = _builder.getAmount()
       @JvmName("setAmount")
@@ -67,33 +67,16 @@ object RewardEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 3;</code>
+     * <code>string amount = 3 [json_name = "amount"];</code>
      */
-    fun clearAmount() {
+    public fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>uint64 coin = 5;</code>
+     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
      */
-    var coin: kotlin.Long
-      @JvmName("getCoin")
-      get() = _builder.getCoin()
-      @JvmName("setCoin")
-      set(value) {
-        _builder.setCoin(value)
-      }
-    /**
-     * <code>uint64 coin = 5;</code>
-     */
-    fun clearCoin() {
-      _builder.clearCoin()
-    }
-
-    /**
-     * <code>string validator_pub_key = 4;</code>
-     */
-    var validatorPubKey: kotlin.String
+    public var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
       get() = _builder.getValidatorPubKey()
       @JvmName("setValidatorPubKey")
@@ -101,9 +84,9 @@ object RewardEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 4;</code>
+     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
      */
-    fun clearValidatorPubKey() {
+    public fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
     }
 
@@ -112,9 +95,9 @@ object RewardEventKt {
      * coin for which the delegator received the reward
      * </pre>
      *
-     * <code>uint64 for_coin = 6;</code>
+     * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
      */
-    var forCoin: kotlin.Long
+    public var forCoin: kotlin.Long
       @JvmName("getForCoin")
       get() = _builder.getForCoin()
       @JvmName("setForCoin")
@@ -126,13 +109,13 @@ object RewardEventKt {
      * coin for which the delegator received the reward
      * </pre>
      *
-     * <code>uint64 for_coin = 6;</code>
+     * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
      */
-    fun clearForCoin() {
+    public fun clearForCoin() {
       _builder.clearForCoin()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.RewardEvent.copy(block: counters.minter.grpc.client.RewardEventKt.Dsl.() -> Unit): counters.minter.grpc.client.RewardEvent =
+public inline fun counters.minter.grpc.client.RewardEvent.copy(block: counters.minter.grpc.client.RewardEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RewardEvent =
   counters.minter.grpc.client.RewardEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()

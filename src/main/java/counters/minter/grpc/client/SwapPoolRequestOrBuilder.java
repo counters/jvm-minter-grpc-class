@@ -8,19 +8,19 @@ public interface SwapPoolRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 coin0 = 1;</code>
+   * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
    * @return The coin0.
    */
   long getCoin0();
 
   /**
-   * <code>uint64 coin1 = 2;</code>
+   * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
    * @return The coin1.
    */
   long getCoin1();
 
   /**
-   * <code>uint64 height = 4;</code>
+   * <code>uint64 height = 4 [json_name = "height"];</code>
    * @return The height.
    */
   long getHeight();

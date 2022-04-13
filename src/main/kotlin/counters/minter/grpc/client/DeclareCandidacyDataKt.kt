@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun declareCandidacyData(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> Unit): counters.minter.grpc.client.DeclareCandidacyData =
+public inline fun declareCandidacyData(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DeclareCandidacyData =
   counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl._create(counters.minter.grpc.client.DeclareCandidacyData.newBuilder()).apply { block() }._build()
-object DeclareCandidacyDataKt {
+public object DeclareCandidacyDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.DeclareCandidacyData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.DeclareCandidacyData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.DeclareCandidacyData.Builder): Dsl = Dsl(builder)
@@ -23,9 +23,9 @@ object DeclareCandidacyDataKt {
     internal fun _build(): counters.minter.grpc.client.DeclareCandidacyData = _builder.build()
 
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      */
-    var address: kotlin.String
+    public var address: kotlin.String
       @JvmName("getAddress")
       get() = _builder.getAddress()
       @JvmName("setAddress")
@@ -33,16 +33,16 @@ object DeclareCandidacyDataKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1;</code>
+     * <code>string address = 1 [json_name = "address"];</code>
      */
-    fun clearAddress() {
+    public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string pub_key = 2;</code>
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
      */
-    var pubKey: kotlin.String
+    public var pubKey: kotlin.String
       @JvmName("getPubKey")
       get() = _builder.getPubKey()
       @JvmName("setPubKey")
@@ -50,16 +50,16 @@ object DeclareCandidacyDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 2;</code>
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
      */
-    fun clearPubKey() {
+    public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 commission = 3;</code>
+     * <code>uint64 commission = 3 [json_name = "commission"];</code>
      */
-    var commission: kotlin.Long
+    public var commission: kotlin.Long
       @JvmName("getCommission")
       get() = _builder.getCommission()
       @JvmName("setCommission")
@@ -67,16 +67,16 @@ object DeclareCandidacyDataKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>uint64 commission = 3;</code>
+     * <code>uint64 commission = 3 [json_name = "commission"];</code>
      */
-    fun clearCommission() {
+    public fun clearCommission() {
       _builder.clearCommission()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 4;</code>
+     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
      */
-    var coin: counters.minter.grpc.client.Coin
+    public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
       get() = _builder.getCoin()
       @JvmName("setCoin")
@@ -84,23 +84,23 @@ object DeclareCandidacyDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 4;</code>
+     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
      */
-    fun clearCoin() {
+    public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 4;</code>
+     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
      * @return Whether the coin field is set.
      */
-    fun hasCoin(): kotlin.Boolean {
+    public fun hasCoin(): kotlin.Boolean {
       return _builder.hasCoin()
     }
 
     /**
-     * <code>string stake = 5;</code>
+     * <code>string stake = 5 [json_name = "stake"];</code>
      */
-    var stake: kotlin.String
+    public var stake: kotlin.String
       @JvmName("getStake")
       get() = _builder.getStake()
       @JvmName("setStake")
@@ -108,13 +108,13 @@ object DeclareCandidacyDataKt {
         _builder.setStake(value)
       }
     /**
-     * <code>string stake = 5;</code>
+     * <code>string stake = 5 [json_name = "stake"];</code>
      */
-    fun clearStake() {
+    public fun clearStake() {
       _builder.clearStake()
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.DeclareCandidacyData.copy(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> Unit): counters.minter.grpc.client.DeclareCandidacyData =
+public inline fun counters.minter.grpc.client.DeclareCandidacyData.copy(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DeclareCandidacyData =
   counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

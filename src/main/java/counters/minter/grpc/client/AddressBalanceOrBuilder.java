@@ -8,39 +8,39 @@ public interface AddressBalanceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api_pb.Coin coin = 1;</code>
+   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 1;</code>
+   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 1;</code>
+   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string value = 2;</code>
+   * <code>string value = 2 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 2;</code>
+   * <code>string value = 2 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
       getValueBytes();
 
   /**
-   * <code>string bip_value = 3;</code>
+   * <code>string bip_value = 3 [json_name = "bipValue"];</code>
    * @return The bipValue.
    */
   java.lang.String getBipValue();
   /**
-   * <code>string bip_value = 3;</code>
+   * <code>string bip_value = 3 [json_name = "bipValue"];</code>
    * @return The bytes for bipValue.
    */
   com.google.protobuf.ByteString

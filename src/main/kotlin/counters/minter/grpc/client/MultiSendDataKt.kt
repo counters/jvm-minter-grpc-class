@@ -4,15 +4,15 @@
 package counters.minter.grpc.client;
 
 @kotlin.jvm.JvmSynthetic
-inline fun multiSendData(block: counters.minter.grpc.client.MultiSendDataKt.Dsl.() -> Unit): counters.minter.grpc.client.MultiSendData =
+public inline fun multiSendData(block: counters.minter.grpc.client.MultiSendDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MultiSendData =
   counters.minter.grpc.client.MultiSendDataKt.Dsl._create(counters.minter.grpc.client.MultiSendData.newBuilder()).apply { block() }._build()
-object MultiSendDataKt {
+public object MultiSendDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
-  class Dsl private constructor(
-    @kotlin.jvm.JvmField private val _builder: counters.minter.grpc.client.MultiSendData.Builder
+  public class Dsl private constructor(
+    private val _builder: counters.minter.grpc.client.MultiSendData.Builder
   ) {
-    companion object {
+    public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
       internal fun _create(builder: counters.minter.grpc.client.MultiSendData.Builder): Dsl = Dsl(builder)
@@ -27,65 +27,67 @@ object MultiSendDataKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    class ListProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class ListProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      */
-     val list: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>
+     public val list: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getListList()
       )
     /**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.add(value: counters.minter.grpc.client.SendData) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.add(value: counters.minter.grpc.client.SendData) {
       _builder.addList(value)
     }/**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignList")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.plusAssign(value: counters.minter.grpc.client.SendData) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.plusAssign(value: counters.minter.grpc.client.SendData) {
       add(value)
     }/**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SendData>) {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SendData>) {
       _builder.addAllList(values)
     }/**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllList")
-    inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SendData>) {
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SendData>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      * @param index The index to set the value at.
      * @param value The list to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setList")
-    operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SendData) {
+    public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SendData) {
       _builder.setList(index, value)
     }/**
-     * <code>repeated .api_pb.SendData list = 1;</code>
+     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearList")
-    fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SendData, ListProxy>.clear() {
       _builder.clearList()
     }}
 }
 @kotlin.jvm.JvmSynthetic
-inline fun counters.minter.grpc.client.MultiSendData.copy(block: counters.minter.grpc.client.MultiSendDataKt.Dsl.() -> Unit): counters.minter.grpc.client.MultiSendData =
+public inline fun counters.minter.grpc.client.MultiSendData.copy(block: counters.minter.grpc.client.MultiSendDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MultiSendData =
   counters.minter.grpc.client.MultiSendDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()

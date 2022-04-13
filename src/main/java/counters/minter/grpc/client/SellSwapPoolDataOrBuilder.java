@@ -8,48 +8,48 @@ public interface SellSwapPoolDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   java.util.List<counters.minter.grpc.client.Coin> 
       getCoinsList();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   counters.minter.grpc.client.Coin getCoins(int index);
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   int getCoinsCount();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   java.util.List<? extends counters.minter.grpc.client.CoinOrBuilder> 
       getCoinsOrBuilderList();
   /**
-   * <code>repeated .api_pb.Coin coins = 1;</code>
+   * <code>repeated .api_pb.Coin coins = 1 [json_name = "coins"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinsOrBuilder(
       int index);
 
   /**
-   * <code>string value_to_sell = 2;</code>
+   * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
    * @return The valueToSell.
    */
   java.lang.String getValueToSell();
   /**
-   * <code>string value_to_sell = 2;</code>
+   * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
    * @return The bytes for valueToSell.
    */
   com.google.protobuf.ByteString
       getValueToSellBytes();
 
   /**
-   * <code>string minimum_value_to_buy = 4;</code>
+   * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
    * @return The minimumValueToBuy.
    */
   java.lang.String getMinimumValueToBuy();
   /**
-   * <code>string minimum_value_to_buy = 4;</code>
+   * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
    * @return The bytes for minimumValueToBuy.
    */
   com.google.protobuf.ByteString

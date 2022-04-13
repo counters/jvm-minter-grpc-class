@@ -8,19 +8,19 @@ public interface JailEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string validator_pub_key = 1;</code>
+   * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
    * @return The validatorPubKey.
    */
   java.lang.String getValidatorPubKey();
   /**
-   * <code>string validator_pub_key = 1;</code>
+   * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
    * @return The bytes for validatorPubKey.
    */
   com.google.protobuf.ByteString
       getValidatorPubKeyBytes();
 
   /**
-   * <code>uint64 jailed_until = 2;</code>
+   * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
    * @return The jailedUntil.
    */
   long getJailedUntil();

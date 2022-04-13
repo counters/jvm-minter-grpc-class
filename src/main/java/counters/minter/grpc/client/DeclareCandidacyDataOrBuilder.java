@@ -8,57 +8,57 @@ public interface DeclareCandidacyDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [json_name = "address"];</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>string pub_key = 2;</code>
+   * <code>string pub_key = 2 [json_name = "pubKey"];</code>
    * @return The pubKey.
    */
   java.lang.String getPubKey();
   /**
-   * <code>string pub_key = 2;</code>
+   * <code>string pub_key = 2 [json_name = "pubKey"];</code>
    * @return The bytes for pubKey.
    */
   com.google.protobuf.ByteString
       getPubKeyBytes();
 
   /**
-   * <code>uint64 commission = 3;</code>
+   * <code>uint64 commission = 3 [json_name = "commission"];</code>
    * @return The commission.
    */
   long getCommission();
 
   /**
-   * <code>.api_pb.Coin coin = 4;</code>
+   * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 4;</code>
+   * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 4;</code>
+   * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string stake = 5;</code>
+   * <code>string stake = 5 [json_name = "stake"];</code>
    * @return The stake.
    */
   java.lang.String getStake();
   /**
-   * <code>string stake = 5;</code>
+   * <code>string stake = 5 [json_name = "stake"];</code>
    * @return The bytes for stake.
    */
   com.google.protobuf.ByteString
