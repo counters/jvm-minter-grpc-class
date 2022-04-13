@@ -1,0 +1,439 @@
+syntax = "proto3";
+
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
+package api_pb;
+
+option java_multiple_files = true;
+option java_package = "counters.minter.grpc.client";
+
+import "google/protobuf/empty.proto";
+import "resources.proto";
+/*import "google/api/annotations.proto";*/
+///*import "protoc-gen-openapiv2/options/annotations.proto";*/
+
+service ApiService {
+    // Subscribe
+    // 
+    // Subscribe returns a subscription for events by query. Only supported in WS and gRPC methods.
+    rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse) {
+        /*option (google.api.http) = {
+            get: "/subscribe"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "WebSockets";*/
+    }
+
+    // Halts 
+    //
+    // Halts returns the candidate votes for stopping the network at block.
+    rpc Halts (HaltsRequest) returns (HaltsResponse) {
+        /*option (google.api.http) = {
+            get: "/halts/{height}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";*/
+    }
+
+    // Genesis
+    //
+    // Genesis returns genesis file.
+    rpc Genesis (google.protobuf.Empty) returns (GenesisResponse) {
+        /*option (google.api.http) = {
+            get: "/genesis"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // MinGasPrice
+    //
+    // MinGasPrice returns current min gas price.
+    rpc MinGasPrice (google.protobuf.Empty) returns (MinGasPriceResponse) {
+        /*option (google.api.http) = {
+            get: "/min_gas_price"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // NetInfo
+    //
+    // NetInfo returns network info
+    rpc NetInfo (google.protobuf.Empty) returns (NetInfoResponse) {
+        /*option (google.api.http) = {
+            get: "/net_info"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Status
+    //
+    // Status returns node status including pubkey, latest block.
+    rpc Status (google.protobuf.Empty) returns (StatusResponse) {
+        /*option (google.api.http) = {
+            get: "/status"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Address
+    //
+    // Address returns coins list, balance and transaction count of an address.
+    rpc Address (AddressRequest) returns (AddressResponse) {
+        /*option (google.api.http) = {
+            get: "/address/{address}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";*/
+    }
+
+    // Addresses
+    //
+    // Addresses returns list of addresses.
+    rpc Addresses (AddressesRequest) returns (AddressesResponse) {
+        /*option (google.api.http) = {
+            get: "/addresses"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";*/
+    }
+
+    // Block
+    //
+    // Block returns block data at given height.
+    rpc Block (BlockRequest) returns (BlockResponse) {
+        /*option (google.api.http) = {
+            get: "/block/{height}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Candidate
+    //
+    // Candidate returns candidate’s info by provided public key.
+    //
+    // {{import "fields.md"}}
+    rpc Candidate (CandidateRequest) returns (CandidateResponse) {
+        /*option (google.api.http) = {
+            get: "/candidate/{public_key}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";*/
+    }
+
+    // Candidates
+    //
+    // Candidates returns list of candidates.
+    rpc Candidates (CandidatesRequest) returns (CandidatesResponse) {
+        /*option (google.api.http) = {
+            get: "/candidates"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";*/
+    }
+
+    // CoinInfoById
+    //
+    // CoinInfoById returns information about coin ID.
+    rpc CoinInfoById (CoinIdRequest) returns (CoinInfoResponse) {
+        /*option (google.api.http) = {
+            get: "/coin_info_by_id/{id}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // CoinInfo
+    //
+    // CoinInfo returns information about coin symbol.
+    rpc CoinInfo (CoinInfoRequest) returns (CoinInfoResponse) {
+        /*option (google.api.http) = {
+            get: "/coin_info/{symbol}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // EstimateCoinBuy
+    //
+    // EstimateCoinBuy returns estimate of buy coin transaction.
+    rpc EstimateCoinBuy (EstimateCoinBuyRequest) returns (EstimateCoinBuyResponse) {
+        /*option (google.api.http) = {
+            get: "/estimate_coin_buy"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // EstimateCoinSell
+    //
+    // EstimateCoinSell returns estimate of sell coin transaction.
+    rpc EstimateCoinSell (EstimateCoinSellRequest) returns (EstimateCoinSellResponse) {
+        /*option (google.api.http) = {
+            get: "/estimate_coin_sell"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // EstimateCoinSellAll
+    //
+    // EstimateCoinSellAll returns estimate of sell all coin transaction.
+    rpc EstimateCoinSellAll (EstimateCoinSellAllRequest) returns (EstimateCoinSellAllResponse) {
+        /*option (google.api.http) = {
+            get: "/estimate_coin_sell_all"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // EstimateTxCommission
+    //
+    // EstimateTxCommission returns estimate of transaction.
+    rpc EstimateTxCommission (EstimateTxCommissionRequest) returns (EstimateTxCommissionResponse) {
+        /*option (google.api.http) = {
+            get: "/estimate_tx_commission/{tx}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // Events
+    //
+    // Events returns events at given height.
+    rpc Events (EventsRequest) returns (EventsResponse) {
+        /*option (google.api.http) = {
+            get: "/events/{height}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Event";*/
+    }
+
+    // MaxGasPrice
+    //
+    // MaxGasPrice returns current max gas.
+    rpc MaxGasPrice (MaxGasPriceRequest) returns (MaxGasPriceResponse) {
+        /*option (google.api.http) = {
+            get: "/max_gas_price"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // MissedBlocks
+    //
+    // MissedBlocks returns missed blocks by validator public key.
+    rpc MissedBlocks (MissedBlocksRequest) returns (MissedBlocksResponse) {
+        /*option (google.api.http) = {
+            get: "/missed_blocks/{public_key}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";*/
+    }
+
+    // SendTransaction
+    //
+    // SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+    //
+    rpc SendTransaction (SendTransactionRequest) returns (SendTransactionResponse) {
+        /*option (google.api.http) = {
+            get: "/send_transaction/{tx}"
+            additional_bindings {
+                post: "/send_transaction"
+                body: "*"
+            }
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).external_docs = {
+            url: "https://www.minter.network/docs#transactions"
+            description: "More about Minter transactions"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Transaction
+    //
+    // Transaction returns transaction info.
+    rpc Transaction (TransactionRequest) returns (TransactionResponse) {
+        /*option (google.api.http) = {
+            get: "/transaction/{hash}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Transactions
+    //
+    // Transactions returns transactions by query.
+    rpc Transactions (TransactionsRequest) returns (TransactionsResponse) {
+        /*option (google.api.http) = {
+            get: "/transactions"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // UnconfirmedTxs
+    //
+    // UnconfirmedTxs returns unconfirmed transactions.
+    rpc UnconfirmedTxs (UnconfirmedTxsRequest) returns (UnconfirmedTxsResponse) {
+        /*option (google.api.http) = {
+            get: "/unconfirmed_txs"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // Validators
+    //
+    // Validators returns list of active validators.
+    rpc Validators (ValidatorsRequest) returns (ValidatorsResponse) {
+        /*option (google.api.http) = {
+            get: "/validators"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Validator";*/
+    }
+
+    // Frozen
+    //
+    // Frozen returns frozen balance.
+    // Deprecated: Use FrozenAll instead.
+    rpc Frozen (FrozenRequest) returns (FrozenResponse) {
+        /*option (google.api.http) = {
+            get: "/frozen/{address}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";*/
+    }
+
+    // FrozenAll
+    //
+    // FrozenAll returns frozen balance.
+    rpc FrozenAll (FrozenAllRequest) returns (FrozenResponse) {
+        /*option (google.api.http) = {
+            get: "/frozen_all"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";*/
+    }
+
+    // WaitList
+    //
+    // WaitList returns the list of address stakes in waitlist.
+    rpc WaitList (WaitListRequest) returns (WaitListResponse) {
+        /*option (google.api.http) = {
+            get: "/waitlist/{address}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";*/
+    }
+
+    // TestBlock
+    //
+    // TestBlock returns the list of example transactions in block. Available only testnet mode.
+    rpc TestBlock (google.protobuf.Empty) returns (BlockResponse) {
+        /*option (google.api.http) = {
+            get: "/test/block"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Test";*/
+    }
+
+    // SwapPool
+    //
+    // SwapPool returns total supply and reserves.
+    rpc SwapPool (SwapPoolRequest) returns (SwapPoolResponse) {
+        /*option (google.api.http) = {
+            get: "/swap_pool/{coin0}/{coin1}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // SwapPools
+    //
+    // SwapPools returns list of all pools.
+    rpc SwapPools (SwapPoolsRequest) returns (SwapPoolsResponse) {
+        // /*option (google.api.method_visibility).restriction = "INTERNAL";*/
+        /*option (google.api.http) = {
+            get: "/swap_pools"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // SwapPoolProvider
+    //
+    // SwapPoolProvider returns reserves and liquidity balance of provider.
+    rpc SwapPoolProvider (SwapPoolProviderRequest) returns (SwapPoolResponse) {
+        /*option (google.api.http) = {
+            get: "/swap_pool/{coin0}/{coin1}/{provider}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // PriceCommission
+    //
+    // PriceCommission returns commissions.
+    rpc PriceCommission (PriceCommissionRequest) returns (PriceCommissionResponse) {
+        /*option (google.api.http) = {
+            get: "/price_commissions"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+
+    // VersionNetwork
+    //
+    // VersionNetwork returns versions network.
+    rpc VersionNetwork (VersionNetworkRequest) returns (VersionNetworkResponse) {
+        /*option (google.api.http) = {
+            get: "/version_network"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+    // CommissionVotes
+    //
+    // CommissionVotes returns votes for update commissions.
+    rpc CommissionVotes (CommissionVotesRequest) returns (CommissionVotesResponse) {
+        /*option (google.api.http) = {
+            get: "/commission_votes/{target_version}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";*/
+    }
+
+    // UpdateVotes
+    //
+    // UpdateVotes returns votes for update network.
+    rpc UpdateVotes (UpdateVotesRequest) returns (UpdateVotesResponse) {
+        /*option (google.api.http) = {
+            get: "/update_votes/{target_version}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Vote";*/
+    }
+
+    // Blocks
+    //
+    // Blocks returns blocks at given interval.
+    rpc Blocks (BlocksRequest) returns (BlocksResponse) {
+        /*option (google.api.http) = {
+            get: "/blocks"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";*/
+    }
+
+
+    // LimitOrder
+    //
+    // LimitOrder returns order by ID.
+    rpc LimitOrder (LimitOrderRequest) returns (LimitOrderResponse) {
+        /*option (google.api.http) = {
+            get: "/limit_order/{order_id}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // LimitOrdersOfPool
+    //
+    // LimitOrdersOfPool returns sell orders for a pair of coins.
+    rpc LimitOrdersOfPool (LimitOrdersOfPoolRequest) returns (LimitOrdersOfPoolResponse) {
+        /*option (google.api.http) = {
+            get: "/limit_orders/{sell_coin}/{buy_coin}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // LimitOrders
+    //
+    // LimitOrders returns orders by IDs.
+    rpc LimitOrders (LimitOrdersRequest) returns (LimitOrdersResponse) {
+        /*option (google.api.http) = {
+            get: "/limit_orders"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";*/
+    }
+
+    // BestTrade
+    //
+    // BestTrade returns optimal exchange route.
+    rpc BestTrade (BestTradeRequest) returns (BestTradeResponse) {
+        // /*option (google.api.method_visibility).restriction = "INTERNAL";*/
+        /*option (google.api.http) = {
+            get: "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}"
+        };*/
+        /*option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";*/
+    }
+}
