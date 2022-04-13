@@ -125,7 +125,12 @@ type ApiServiceClient interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(ctx context.Context, in *FrozenRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
+	// FrozenAll
+	//
+	// FrozenAll returns frozen balance.
+	FrozenAll(ctx context.Context, in *FrozenAllRequest, opts ...grpc.CallOption) (*FrozenResponse, error)
 	// WaitList
 	//
 	// WaitList returns the list of address stakes in waitlist.
@@ -136,44 +141,52 @@ type ApiServiceClient interface {
 	TestBlock(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*BlockResponse, error)
 	// SwapPool
 	//
-	//
+	// SwapPool returns total supply and reserves.
 	SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
+	// SwapPools
+	//
+	// SwapPools returns list of all pools.
+	SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
-	//
+	// SwapPoolProvider returns reserves and liquidity balance of provider.
 	SwapPoolProvider(ctx context.Context, in *SwapPoolProviderRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error)
 	// PriceCommission
 	//
-	//
+	// PriceCommission returns commissions.
 	PriceCommission(ctx context.Context, in *PriceCommissionRequest, opts ...grpc.CallOption) (*PriceCommissionResponse, error)
 	// VersionNetwork
 	//
-	//
+	// VersionNetwork returns versions network.
 	VersionNetwork(ctx context.Context, in *VersionNetworkRequest, opts ...grpc.CallOption) (*VersionNetworkResponse, error)
 	// CommissionVotes
 	//
-	//
+	// CommissionVotes returns votes for update commissions.
 	CommissionVotes(ctx context.Context, in *CommissionVotesRequest, opts ...grpc.CallOption) (*CommissionVotesResponse, error)
 	// UpdateVotes
 	//
-	//
+	// UpdateVotes returns votes for update network.
 	UpdateVotes(ctx context.Context, in *UpdateVotesRequest, opts ...grpc.CallOption) (*UpdateVotesResponse, error)
 	// Blocks
 	//
-	//
+	// Blocks returns blocks at given interval.
 	Blocks(ctx context.Context, in *BlocksRequest, opts ...grpc.CallOption) (*BlocksResponse, error)
 	// LimitOrder
 	//
-	//
+	// LimitOrder returns order by ID.
 	LimitOrder(ctx context.Context, in *LimitOrderRequest, opts ...grpc.CallOption) (*LimitOrderResponse, error)
 	// LimitOrdersOfPool
 	//
-	//
+	// LimitOrdersOfPool returns sell orders for a pair of coins.
 	LimitOrdersOfPool(ctx context.Context, in *LimitOrdersOfPoolRequest, opts ...grpc.CallOption) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
-	//
+	// LimitOrders returns orders by IDs.
 	LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error)
+	// BestTrade
+	//
+	// BestTrade returns optimal exchange route.
+	BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
 }
 
 type apiServiceClient struct {
@@ -441,6 +454,15 @@ func (c *apiServiceClient) Frozen(ctx context.Context, in *FrozenRequest, opts .
 	return out, nil
 }
 
+func (c *apiServiceClient) FrozenAll(ctx context.Context, in *FrozenAllRequest, opts ...grpc.CallOption) (*FrozenResponse, error) {
+	out := new(FrozenResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/FrozenAll", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *apiServiceClient) WaitList(ctx context.Context, in *WaitListRequest, opts ...grpc.CallOption) (*WaitListResponse, error) {
 	out := new(WaitListResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/WaitList", in, out, opts...)
@@ -462,6 +484,15 @@ func (c *apiServiceClient) TestBlock(ctx context.Context, in *emptypb.Empty, opt
 func (c *apiServiceClient) SwapPool(ctx context.Context, in *SwapPoolRequest, opts ...grpc.CallOption) (*SwapPoolResponse, error) {
 	out := new(SwapPoolResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPool", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) SwapPools(ctx context.Context, in *SwapPoolsRequest, opts ...grpc.CallOption) (*SwapPoolsResponse, error) {
+	out := new(SwapPoolsResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/SwapPools", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -543,6 +574,15 @@ func (c *apiServiceClient) LimitOrdersOfPool(ctx context.Context, in *LimitOrder
 func (c *apiServiceClient) LimitOrders(ctx context.Context, in *LimitOrdersRequest, opts ...grpc.CallOption) (*LimitOrdersResponse, error) {
 	out := new(LimitOrdersResponse)
 	err := c.cc.Invoke(ctx, "/api_pb.ApiService/LimitOrders", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *apiServiceClient) BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error) {
+	out := new(BestTradeResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/BestTrade", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -659,7 +699,12 @@ type ApiServiceServer interface {
 	// Frozen
 	//
 	// Frozen returns frozen balance.
+	// Deprecated: Use FrozenAll instead.
 	Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error)
+	// FrozenAll
+	//
+	// FrozenAll returns frozen balance.
+	FrozenAll(context.Context, *FrozenAllRequest) (*FrozenResponse, error)
 	// WaitList
 	//
 	// WaitList returns the list of address stakes in waitlist.
@@ -670,44 +715,52 @@ type ApiServiceServer interface {
 	TestBlock(context.Context, *emptypb.Empty) (*BlockResponse, error)
 	// SwapPool
 	//
-	//
+	// SwapPool returns total supply and reserves.
 	SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error)
+	// SwapPools
+	//
+	// SwapPools returns list of all pools.
+	SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error)
 	// SwapPoolProvider
 	//
-	//
+	// SwapPoolProvider returns reserves and liquidity balance of provider.
 	SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error)
 	// PriceCommission
 	//
-	//
+	// PriceCommission returns commissions.
 	PriceCommission(context.Context, *PriceCommissionRequest) (*PriceCommissionResponse, error)
 	// VersionNetwork
 	//
-	//
+	// VersionNetwork returns versions network.
 	VersionNetwork(context.Context, *VersionNetworkRequest) (*VersionNetworkResponse, error)
 	// CommissionVotes
 	//
-	//
+	// CommissionVotes returns votes for update commissions.
 	CommissionVotes(context.Context, *CommissionVotesRequest) (*CommissionVotesResponse, error)
 	// UpdateVotes
 	//
-	//
+	// UpdateVotes returns votes for update network.
 	UpdateVotes(context.Context, *UpdateVotesRequest) (*UpdateVotesResponse, error)
 	// Blocks
 	//
-	//
+	// Blocks returns blocks at given interval.
 	Blocks(context.Context, *BlocksRequest) (*BlocksResponse, error)
 	// LimitOrder
 	//
-	//
+	// LimitOrder returns order by ID.
 	LimitOrder(context.Context, *LimitOrderRequest) (*LimitOrderResponse, error)
 	// LimitOrdersOfPool
 	//
-	//
+	// LimitOrdersOfPool returns sell orders for a pair of coins.
 	LimitOrdersOfPool(context.Context, *LimitOrdersOfPoolRequest) (*LimitOrdersOfPoolResponse, error)
 	// LimitOrders
 	//
-	//
+	// LimitOrders returns orders by IDs.
 	LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error)
+	// BestTrade
+	//
+	// BestTrade returns optimal exchange route.
+	BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -793,6 +846,9 @@ func (UnimplementedApiServiceServer) Validators(context.Context, *ValidatorsRequ
 func (UnimplementedApiServiceServer) Frozen(context.Context, *FrozenRequest) (*FrozenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Frozen not implemented")
 }
+func (UnimplementedApiServiceServer) FrozenAll(context.Context, *FrozenAllRequest) (*FrozenResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FrozenAll not implemented")
+}
 func (UnimplementedApiServiceServer) WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WaitList not implemented")
 }
@@ -801,6 +857,9 @@ func (UnimplementedApiServiceServer) TestBlock(context.Context, *emptypb.Empty) 
 }
 func (UnimplementedApiServiceServer) SwapPool(context.Context, *SwapPoolRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPool not implemented")
+}
+func (UnimplementedApiServiceServer) SwapPools(context.Context, *SwapPoolsRequest) (*SwapPoolsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SwapPools not implemented")
 }
 func (UnimplementedApiServiceServer) SwapPoolProvider(context.Context, *SwapPoolProviderRequest) (*SwapPoolResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SwapPoolProvider not implemented")
@@ -828,6 +887,9 @@ func (UnimplementedApiServiceServer) LimitOrdersOfPool(context.Context, *LimitOr
 }
 func (UnimplementedApiServiceServer) LimitOrders(context.Context, *LimitOrdersRequest) (*LimitOrdersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LimitOrders not implemented")
+}
+func (UnimplementedApiServiceServer) BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BestTrade not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1313,6 +1375,24 @@ func _ApiService_Frozen_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_FrozenAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FrozenAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).FrozenAll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/FrozenAll",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).FrozenAll(ctx, req.(*FrozenAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _ApiService_WaitList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(WaitListRequest)
 	if err := dec(in); err != nil {
@@ -1363,6 +1443,24 @@ func _ApiService_SwapPool_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ApiServiceServer).SwapPool(ctx, req.(*SwapPoolRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ApiService_SwapPools_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SwapPoolsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).SwapPools(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/SwapPools",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).SwapPools(ctx, req.(*SwapPoolsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1529,6 +1627,24 @@ func _ApiService_LimitOrders_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_BestTrade_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BestTradeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).BestTrade(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/BestTrade",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).BestTrade(ctx, req.(*BestTradeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ApiService_ServiceDesc is the grpc.ServiceDesc for ApiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1637,6 +1753,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _ApiService_Frozen_Handler,
 		},
 		{
+			MethodName: "FrozenAll",
+			Handler:    _ApiService_FrozenAll_Handler,
+		},
+		{
 			MethodName: "WaitList",
 			Handler:    _ApiService_WaitList_Handler,
 		},
@@ -1647,6 +1767,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SwapPool",
 			Handler:    _ApiService_SwapPool_Handler,
+		},
+		{
+			MethodName: "SwapPools",
+			Handler:    _ApiService_SwapPools_Handler,
 		},
 		{
 			MethodName: "SwapPoolProvider",
@@ -1683,6 +1807,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "LimitOrders",
 			Handler:    _ApiService_LimitOrders_Handler,
+		},
+		{
+			MethodName: "BestTrade",
+			Handler:    _ApiService_BestTrade_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

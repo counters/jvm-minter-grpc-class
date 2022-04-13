@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -140,6 +140,86 @@
         ]
       }
     },
+    "/best_trade/{sell_coin}/{buy_coin}/{type}/{amount}": {
+      "get": {
+        "summary": "BestTrade",
+        "description": "BestTrade returns optimal exchange route.",
+        "operationId": "BestTrade",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BestTradeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "sell_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "buy_coin",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "name": "amount",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "max_depth",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": "4"
+          }
+        ],
+        "tags": [
+          "Price"
+        ]
+      }
+    },
     "/block/{height}": {
       "get": {
         "summary": "Block",
@@ -218,6 +298,7 @@
     "/blocks": {
       "get": {
         "summary": "Blocks",
+        "description": "Blocks returns blocks at given interval.",
         "operationId": "Blocks",
         "responses": {
           "200": {
@@ -334,7 +415,7 @@
           },
           {
             "name": "height",
-            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -342,7 +423,7 @@
           },
           {
             "name": "not_show_stakes",
-            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled.",
+            "description": "Do not display a list of steaks. Note: used_slots, uniq_users, min_stake will be filled",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -385,7 +466,7 @@
         "parameters": [
           {
             "name": "height",
-            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used.",
+            "description": "Blockchain state height for the current request. Optional, the last default state of the node is used",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -393,7 +474,7 @@
           },
           {
             "name": "include_stakes",
-            "description": "Calculate field values used_slots, uniq_users, min_stake.",
+            "description": "Calculate field values used_slots, uniq_users, min_stake",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -401,7 +482,7 @@
           },
           {
             "name": "not_show_stakes",
-            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used.",
+            "description": "Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used",
             "in": "query",
             "required": false,
             "type": "boolean",
@@ -526,6 +607,7 @@
     "/commission_votes/{target_version}": {
       "get": {
         "summary": "CommissionVotes",
+        "description": "CommissionVotes returns votes for update commissions.",
         "operationId": "CommissionVotes",
         "responses": {
           "200": {
@@ -677,7 +759,7 @@
           }
         ],
         "tags": [
-          "Coin"
+          "Price"
         ]
       }
     },
@@ -787,7 +869,7 @@
           }
         ],
         "tags": [
-          "Coin"
+          "Price"
         ]
       }
     },
@@ -892,7 +974,7 @@
           }
         ],
         "tags": [
-          "Coin"
+          "Price"
         ]
       }
     },
@@ -982,7 +1064,7 @@
           },
           {
             "name": "search",
-            "description": "Array of public keys of validators and wallet addresses of delegators for filtering.",
+            "description": "Array of public keys of validators and wallet addresses of delegators for filtering",
             "in": "query",
             "required": false,
             "type": "array",
@@ -1000,7 +1082,7 @@
     "/frozen/{address}": {
       "get": {
         "summary": "Frozen",
-        "description": "Frozen returns frozen balance.",
+        "description": "Frozen returns frozen balance.\nDeprecated: Use FrozenAll instead.",
         "operationId": "Frozen",
         "responses": {
           "200": {
@@ -1045,6 +1127,83 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
+    },
+    "/frozen_all": {
+      "get": {
+        "summary": "FrozenAll",
+        "description": "FrozenAll returns frozen balance.",
+        "operationId": "FrozenAll",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/FrozenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "start_height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "end_height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "addresses",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "coin_ids",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uint64"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -1130,6 +1289,7 @@
     "/limit_order/{order_id}": {
       "get": {
         "summary": "LimitOrder",
+        "description": "LimitOrder returns order by ID.",
         "operationId": "LimitOrder",
         "responses": {
           "200": {
@@ -1178,6 +1338,7 @@
     "/limit_orders": {
       "get": {
         "summary": "LimitOrders",
+        "description": "LimitOrders returns orders by IDs.",
         "operationId": "LimitOrders",
         "responses": {
           "200": {
@@ -1230,6 +1391,7 @@
     "/limit_orders/{sell_coin}/{buy_coin}": {
       "get": {
         "summary": "LimitOrdersOfPool",
+        "description": "LimitOrdersOfPool returns sell orders for a pair of coins.",
         "operationId": "LimitOrdersOfPool",
         "responses": {
           "200": {
@@ -1449,6 +1611,7 @@
     "/price_commissions": {
       "get": {
         "summary": "PriceCommission",
+        "description": "PriceCommission returns commissions.",
         "operationId": "PriceCommission",
         "responses": {
           "200": {
@@ -1666,6 +1829,7 @@
     "/swap_pool/{coin0}/{coin1}": {
       "get": {
         "summary": "SwapPool",
+        "description": "SwapPool returns total supply and reserves.",
         "operationId": "SwapPool",
         "responses": {
           "200": {
@@ -1721,6 +1885,7 @@
     "/swap_pool/{coin0}/{coin1}/{provider}": {
       "get": {
         "summary": "SwapPoolProvider",
+        "description": "SwapPoolProvider returns reserves and liquidity balance of provider.",
         "operationId": "SwapPoolProvider",
         "responses": {
           "200": {
@@ -1772,6 +1937,55 @@
             "required": false,
             "type": "integer",
             "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Coin"
+        ]
+      }
+    },
+    "/swap_pools": {
+      "get": {
+        "summary": "SwapPools",
+        "description": "SwapPools returns list of all pools.",
+        "operationId": "SwapPools",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SwapPoolsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          },
+          {
+            "name": "orders",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": "false"
           }
         ],
         "tags": [
@@ -1956,6 +2170,7 @@
     "/update_votes/{target_version}": {
       "get": {
         "summary": "UpdateVotes",
+        "description": "UpdateVotes returns votes for update network.",
         "operationId": "UpdateVotes",
         "responses": {
           "200": {
@@ -2046,6 +2261,7 @@
     "/version_network": {
       "get": {
         "summary": "VersionNetwork",
+        "description": "VersionNetwork returns versions network.",
         "operationId": "VersionNetwork",
         "responses": {
           "200": {
@@ -2183,6 +2399,10 @@
         },
         "multisig_data": {
           "$ref": "#/definitions/AccountMultisigData"
+        },
+        "lock_stake_until_block": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2397,6 +2617,15 @@
         },
         "remove_limit_order": {
           "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "lock_stake": {
+          "type": "string"
+        },
+        "lock": {
+          "type": "string"
         }
       }
     },
@@ -2415,6 +2644,18 @@
         },
         "commission": {
           "$ref": "#/definitions/AppStateCommission"
+        }
+      }
+    },
+    "AppStateDeletedCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "public_key": {
+          "type": "string"
         }
       }
     },
@@ -2440,6 +2681,9 @@
           "format": "uint64"
         },
         "value": {
+          "type": "string"
+        },
+        "to_candidate_key": {
           "type": "string"
         }
       }
@@ -2476,6 +2720,51 @@
         "id": {
           "type": "string",
           "format": "uint64"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PoolOrder"
+          }
+        }
+      }
+    },
+    "AppStateRewardPrice": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "amount_bip": {
+          "type": "string"
+        },
+        "amount_usdt": {
+          "type": "string"
+        },
+        "off": {
+          "type": "boolean"
+        },
+        "reward": {
+          "type": "string"
+        }
+      }
+    },
+    "AppStateUpdateVote": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string"
         }
       }
     },
@@ -2657,6 +2946,9 @@
         },
         "value": {
           "type": "string"
+        },
+        "move_to_candidate_key": {
+          "type": "string"
         }
       }
     },
@@ -2679,6 +2971,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateCandidate"
+          }
+        },
+        "deleted_candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateDeletedCandidate"
           }
         },
         "coins": {
@@ -2723,6 +3021,10 @@
             "$ref": "#/definitions/AppStatePool"
           }
         },
+        "next_order_id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "commission": {
           "$ref": "#/definitions/AppStateCommission"
         },
@@ -2730,6 +3032,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/AppStateCommissionVote"
+          }
+        },
+        "update_votes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppStateUpdateVote"
           }
         },
         "used_checks": {
@@ -2744,6 +3052,18 @@
         },
         "total_slashed": {
           "type": "string"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GenesisResponseAppStateVersion"
+          }
+        },
+        "emission": {
+          "type": "string"
+        },
+        "prev_reward": {
+          "$ref": "#/definitions/AppStateRewardPrice"
         }
       }
     },
@@ -2788,6 +3108,18 @@
         }
       }
     },
+    "GenesisResponseAppStateVersion": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "GenesisResponseConsensusParams": {
       "type": "object",
       "properties": {
@@ -2799,6 +3131,9 @@
         },
         "validator": {
           "$ref": "#/definitions/GenesisResponseConsensusParamsValidator"
+        },
+        "version": {
+          "$ref": "#/definitions/GenesisResponseConsensusParamsVersion"
         }
       }
     },
@@ -2823,6 +3158,15 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "GenesisResponseConsensusParamsVersion": {
+      "type": "object",
+      "properties": {
+        "app_version": {
+          "type": "string",
+          "format": "uint64"
         }
       }
     },
@@ -2897,6 +3241,31 @@
         }
       }
     },
+    "PoolOrder": {
+      "type": "object",
+      "properties": {
+        "is_sale": {
+          "type": "boolean"
+        },
+        "volume0": {
+          "type": "string"
+        },
+        "volume1": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
     "SubscribeResponseEvent": {
       "type": "object",
       "properties": {
@@ -2911,15 +3280,69 @@
         }
       }
     },
-    "VersionNetworkResponseVersion": {
+    "SwapPoolLimitOrder": {
       "type": "object",
       "properties": {
-        "name": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "want_sell": {
+          "type": "string"
+        },
+        "want_buy": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "owner": {
           "type": "string"
         },
         "height": {
           "type": "string",
           "format": "uint64"
+        }
+      }
+    },
+    "SwapPoolsResponseSwapPool": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "price": {
+          "type": "string"
+        },
+        "coin0": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "coin1": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "amount0": {
+          "type": "string"
+        },
+        "amount1": {
+          "type": "string"
+        },
+        "liquidity": {
+          "type": "string"
+        },
+        "orders_sell": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
+        },
+        "orders_buy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolLimitOrder"
+          }
         }
       }
     },
@@ -2996,6 +3419,10 @@
         "bip_value": {
           "type": "string"
         },
+        "locked_stake_until_block": {
+          "type": "string",
+          "format": "uint64"
+        },
         "multisig": {
           "$ref": "#/definitions/Multisig"
         }
@@ -3042,8 +3469,35 @@
         "bip_value": {
           "type": "string"
         },
+        "locked_stake_until_block": {
+          "type": "string",
+          "format": "uint64"
+        },
         "multisig": {
           "$ref": "#/definitions/Multisig"
+        }
+      }
+    },
+    "BestTradeRequestType": {
+      "type": "string",
+      "enum": [
+        "input",
+        "output"
+      ],
+      "default": "input"
+    },
+    "BestTradeResponse": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "result": {
+          "type": "string"
         }
       }
     },
@@ -3084,6 +3538,9 @@
           }
         },
         "block_reward": {
+          "type": "string"
+        },
+        "locked_stake_rewards": {
           "type": "string"
         },
         "size": {
@@ -3746,6 +4203,15 @@
         },
         "remove_limit_order": {
           "type": "string"
+        },
+        "move_stake": {
+          "type": "string"
+        },
+        "lock_stake": {
+          "type": "string"
+        },
+        "lock": {
+          "type": "string"
         }
       }
     },
@@ -3810,6 +4276,9 @@
         "total_slashed": {
           "type": "string"
         },
+        "current_emission": {
+          "type": "string"
+        },
         "catching_up": {
           "type": "boolean"
         },
@@ -3853,6 +4322,10 @@
     "SwapPoolResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
         "price": {
           "type": "string"
         },
@@ -3864,6 +4337,17 @@
         },
         "liquidity": {
           "type": "string"
+        }
+      }
+    },
+    "SwapPoolsResponse": {
+      "type": "object",
+      "properties": {
+        "pools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwapPoolsResponseSwapPool"
+          }
         }
       }
     },
@@ -4032,6 +4516,18 @@
         }
       }
     },
+    "VersionNetworkResponseVersion": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
     "WaitListResponse": {
       "type": "object",
       "properties": {
@@ -4046,16 +4542,12 @@
     "protobufAny": {
       "type": "object",
       "properties": {
-        "type_url": {
+        "@type": {
           "type": "string",
           "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
-        },
-        "value": {
-          "type": "string",
-          "format": "byte",
-          "description": "Must be a valid serialized protocol buffer of the above specified type."
         }
       },
+      "additionalProperties": {},
       "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
     },
     "protobufNullValue": {

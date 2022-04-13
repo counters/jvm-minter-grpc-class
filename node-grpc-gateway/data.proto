@@ -243,6 +243,9 @@ message VoteCommissionData {
     string failed_tx = 56;
     string add_limit_order = 57;
     string remove_limit_order = 58;
+    string move_stake = 59;
+    string lock_stake = 60;
+    string lock = 61;
 }
 
 message VoteUpdateData {
@@ -262,3 +265,18 @@ message RemoveLimitOrderData {
     uint64 id = 1;
 }
 
+message MoveStakeData {
+    string from_pub_key = 1;
+    string to_pub_key = 4;
+    Coin coin = 2;
+    string value = 3;
+}
+
+message LockStakeData {
+}
+
+message LockData {
+    uint64 due_block = 1;
+    Coin coin = 2;
+    string value = 3;
+}
