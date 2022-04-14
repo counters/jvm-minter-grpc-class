@@ -9,16 +9,6 @@ Use
 ```
 
 
-# Разное
-**Добавление**
-```shell
-git subtree add --prefix node-grpc-gateway https://github.com/MinterTeam/node-grpc-gateway.git master
-```
-**Обновление**
-```shell
-git subtree pull --prefix node-grpc-gateway https://github.com/MinterTeam/node-grpc-gateway.git master
-```
-
 Update/Install
 ```shell
 git clone https://github.com/MinterTeam/node-grpc-gateway.git
@@ -35,7 +25,7 @@ rm -r node-grpc-gateway
 rm node-grpc-gateway/api.proto
 rm node-grpc-gateway/swagger.proto
 ```
-- fix proto files `node-grpc-gateway/*.proto` (@TODO)
+- fix proto files `protos/*.proto` (@TODO)
 ```protobuf
 option java_multiple_files = true;
 option java_package = "counters.minter.grpc.client";
