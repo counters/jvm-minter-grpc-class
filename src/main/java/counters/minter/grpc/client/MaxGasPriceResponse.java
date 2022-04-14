@@ -64,6 +64,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -88,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_GAS_PRICE_FIELD_NUMBER = 3;
   private long maxGasPrice_;
   /**
-   * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+   * <code>uint64 max_gas_price = 3;</code>
    * @return The maxGasPrice.
    */
   @java.lang.Override
@@ -401,7 +403,7 @@ private static final long serialVersionUID = 0L;
 
     private long maxGasPrice_ ;
     /**
-     * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+     * <code>uint64 max_gas_price = 3;</code>
      * @return The maxGasPrice.
      */
     @java.lang.Override
@@ -409,7 +411,7 @@ private static final long serialVersionUID = 0L;
       return maxGasPrice_;
     }
     /**
-     * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+     * <code>uint64 max_gas_price = 3;</code>
      * @param value The maxGasPrice to set.
      * @return This builder for chaining.
      */
@@ -420,7 +422,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 max_gas_price = 3 [json_name = "maxGasPrice"];</code>
+     * <code>uint64 max_gas_price = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxGasPrice() {

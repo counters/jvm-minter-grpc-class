@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeredeemCheckData")
 public inline fun redeemCheckData(block: counters.minter.grpc.client.RedeemCheckDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RedeemCheckData =
   counters.minter.grpc.client.RedeemCheckDataKt.Dsl._create(counters.minter.grpc.client.RedeemCheckData.newBuilder()).apply { block() }._build()
 public object RedeemCheckDataKt {
@@ -23,7 +23,7 @@ public object RedeemCheckDataKt {
     internal fun _build(): counters.minter.grpc.client.RedeemCheckData = _builder.build()
 
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      */
     public var rawCheck: kotlin.String
       @JvmName("getRawCheck")
@@ -33,14 +33,14 @@ public object RedeemCheckDataKt {
         _builder.setRawCheck(value)
       }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      */
     public fun clearRawCheck() {
       _builder.clearRawCheck()
     }
 
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      */
     public var proof: kotlin.String
       @JvmName("getProof")
@@ -50,7 +50,7 @@ public object RedeemCheckDataKt {
         _builder.setProof(value)
       }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      */
     public fun clearProof() {
       _builder.clearProof()
@@ -60,3 +60,4 @@ public object RedeemCheckDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.RedeemCheckData.copy(block: counters.minter.grpc.client.RedeemCheckDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RedeemCheckData =
   counters.minter.grpc.client.RedeemCheckDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

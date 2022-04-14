@@ -8,51 +8,51 @@ public interface AddressDelegatedBalanceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 1;</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 1;</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 1;</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
+   * <code>string value = 2;</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
+   * <code>string value = 2;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
       getValueBytes();
 
   /**
-   * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+   * <code>string bip_value = 3;</code>
    * @return The bipValue.
    */
   java.lang.String getBipValue();
   /**
-   * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+   * <code>string bip_value = 3;</code>
    * @return The bytes for bipValue.
    */
   com.google.protobuf.ByteString
       getBipValueBytes();
 
   /**
-   * <code>string delegate_bip_value = 4 [json_name = "delegateBipValue"];</code>
+   * <code>string delegate_bip_value = 4;</code>
    * @return The delegateBipValue.
    */
   java.lang.String getDelegateBipValue();
   /**
-   * <code>string delegate_bip_value = 4 [json_name = "delegateBipValue"];</code>
+   * <code>string delegate_bip_value = 4;</code>
    * @return The bytes for delegateBipValue.
    */
   com.google.protobuf.ByteString

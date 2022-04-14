@@ -81,6 +81,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -235,7 +237,7 @@ private static final long serialVersionUID = 0L;
    * Blockchain state height for the current request. Optional, the last default state of the node is used
    * </pre>
    *
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -250,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * Calculate field values used_slots, uniq_users, min_stake
    * </pre>
    *
-   * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+   * <code>bool include_stakes = 2;</code>
    * @return The includeStakes.
    */
   @java.lang.Override
@@ -265,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
    * </pre>
    *
-   * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+   * <code>bool not_show_stakes = 4;</code>
    * @return The notShowStakes.
    */
   @java.lang.Override
@@ -276,14 +278,14 @@ private static final long serialVersionUID = 0L;
   public static final int STATUS_FIELD_NUMBER = 3;
   private int status_;
   /**
-   * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+   * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
    * @return The enum numeric value on the wire for status.
    */
   @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
-   * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+   * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
    * @return The status.
    */
   @java.lang.Override public counters.minter.grpc.client.CandidatesRequest.CandidateStatus getStatus() {
@@ -653,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -665,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -680,7 +682,7 @@ private static final long serialVersionUID = 0L;
      * Blockchain state height for the current request. Optional, the last default state of the node is used
      * </pre>
      *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -696,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * Calculate field values used_slots, uniq_users, min_stake
      * </pre>
      *
-     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * <code>bool include_stakes = 2;</code>
      * @return The includeStakes.
      */
     @java.lang.Override
@@ -708,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * Calculate field values used_slots, uniq_users, min_stake
      * </pre>
      *
-     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * <code>bool include_stakes = 2;</code>
      * @param value The includeStakes to set.
      * @return This builder for chaining.
      */
@@ -723,7 +725,7 @@ private static final long serialVersionUID = 0L;
      * Calculate field values used_slots, uniq_users, min_stake
      * </pre>
      *
-     * <code>bool include_stakes = 2 [json_name = "includeStakes"];</code>
+     * <code>bool include_stakes = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeStakes() {
@@ -739,7 +741,7 @@ private static final long serialVersionUID = 0L;
      * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @return The notShowStakes.
      */
     @java.lang.Override
@@ -751,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @param value The notShowStakes to set.
      * @return This builder for chaining.
      */
@@ -766,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * Do not display the list of stakes, the include_stakes flag is also required to display. Note: used_slots, uniq_users, min_stake will still be filled if include_stakes flag is used
      * </pre>
      *
-     * <code>bool not_show_stakes = 4 [json_name = "notShowStakes"];</code>
+     * <code>bool not_show_stakes = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearNotShowStakes() {
@@ -778,14 +780,14 @@ private static final long serialVersionUID = 0L;
 
     private int status_ = 0;
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
      * @param value The enum numeric value on the wire for status to set.
      * @return This builder for chaining.
      */
@@ -796,7 +798,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -806,7 +808,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.CandidatesRequest.CandidateStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
      * @param value The status to set.
      * @return This builder for chaining.
      */
@@ -820,7 +822,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3 [json_name = "status"];</code>
+     * <code>.api_pb.CandidatesRequest.CandidateStatus status = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearStatus() {

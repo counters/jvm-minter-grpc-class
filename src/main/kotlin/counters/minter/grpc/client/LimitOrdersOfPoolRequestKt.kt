@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelimitOrdersOfPoolRequest")
 public inline fun limitOrdersOfPoolRequest(block: counters.minter.grpc.client.LimitOrdersOfPoolRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersOfPoolRequest =
   counters.minter.grpc.client.LimitOrdersOfPoolRequestKt.Dsl._create(counters.minter.grpc.client.LimitOrdersOfPoolRequest.newBuilder()).apply { block() }._build()
 public object LimitOrdersOfPoolRequestKt {
@@ -23,7 +23,7 @@ public object LimitOrdersOfPoolRequestKt {
     internal fun _build(): counters.minter.grpc.client.LimitOrdersOfPoolRequest = _builder.build()
 
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      */
     public var sellCoin: kotlin.Long
       @JvmName("getSellCoin")
@@ -33,14 +33,14 @@ public object LimitOrdersOfPoolRequestKt {
         _builder.setSellCoin(value)
       }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      */
     public fun clearSellCoin() {
       _builder.clearSellCoin()
     }
 
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      */
     public var buyCoin: kotlin.Long
       @JvmName("getBuyCoin")
@@ -50,14 +50,14 @@ public object LimitOrdersOfPoolRequestKt {
         _builder.setBuyCoin(value)
       }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      */
     public fun clearBuyCoin() {
       _builder.clearBuyCoin()
     }
 
     /**
-     * <code>int32 limit = 3 [json_name = "limit"];</code>
+     * <code>int32 limit = 3;</code>
      */
     public var limit: kotlin.Int
       @JvmName("getLimit")
@@ -67,14 +67,14 @@ public object LimitOrdersOfPoolRequestKt {
         _builder.setLimit(value)
       }
     /**
-     * <code>int32 limit = 3 [json_name = "limit"];</code>
+     * <code>int32 limit = 3;</code>
      */
     public fun clearLimit() {
       _builder.clearLimit()
     }
 
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -84,7 +84,7 @@ public object LimitOrdersOfPoolRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -94,3 +94,4 @@ public object LimitOrdersOfPoolRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.LimitOrdersOfPoolRequest.copy(block: counters.minter.grpc.client.LimitOrdersOfPoolRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersOfPoolRequest =
   counters.minter.grpc.client.LimitOrdersOfPoolRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

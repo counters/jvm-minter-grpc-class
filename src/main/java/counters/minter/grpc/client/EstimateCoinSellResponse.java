@@ -80,6 +80,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -104,7 +106,7 @@ private static final long serialVersionUID = 0L;
   public static final int WILL_GET_FIELD_NUMBER = 1;
   private volatile java.lang.Object willGet_;
   /**
-   * <code>string will_get = 1 [json_name = "willGet"];</code>
+   * <code>string will_get = 1;</code>
    * @return The willGet.
    */
   @java.lang.Override
@@ -121,7 +123,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string will_get = 1 [json_name = "willGet"];</code>
+   * <code>string will_get = 1;</code>
    * @return The bytes for willGet.
    */
   @java.lang.Override
@@ -142,7 +144,7 @@ private static final long serialVersionUID = 0L;
   public static final int COMMISSION_FIELD_NUMBER = 2;
   private volatile java.lang.Object commission_;
   /**
-   * <code>string commission = 2 [json_name = "commission"];</code>
+   * <code>string commission = 2;</code>
    * @return The commission.
    */
   @java.lang.Override
@@ -159,7 +161,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string commission = 2 [json_name = "commission"];</code>
+   * <code>string commission = 2;</code>
    * @return The bytes for commission.
    */
   @java.lang.Override
@@ -180,14 +182,14 @@ private static final long serialVersionUID = 0L;
   public static final int SWAP_FROM_FIELD_NUMBER = 3;
   private int swapFrom_;
   /**
-   * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 3;</code>
    * @return The enum numeric value on the wire for swapFrom.
    */
   @java.lang.Override public int getSwapFromValue() {
     return swapFrom_;
   }
   /**
-   * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+   * <code>.api_pb.SwapFrom swap_from = 3;</code>
    * @return The swapFrom.
    */
   @java.lang.Override public counters.minter.grpc.client.SwapFrom getSwapFrom() {
@@ -533,7 +535,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object willGet_ = "";
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return The willGet.
      */
     public java.lang.String getWillGet() {
@@ -549,7 +551,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return The bytes for willGet.
      */
     public com.google.protobuf.ByteString
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @param value The willGet to set.
      * @return This builder for chaining.
      */
@@ -581,7 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearWillGet() {
@@ -591,7 +593,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      * @param value The bytes for willGet to set.
      * @return This builder for chaining.
      */
@@ -609,7 +611,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object commission_ = "";
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      * @return The commission.
      */
     public java.lang.String getCommission() {
@@ -625,7 +627,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      * @return The bytes for commission.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +644,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      * @param value The commission to set.
      * @return This builder for chaining.
      */
@@ -657,7 +659,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCommission() {
@@ -667,7 +669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      * @param value The bytes for commission to set.
      * @return This builder for chaining.
      */
@@ -685,14 +687,14 @@ private static final long serialVersionUID = 0L;
 
     private int swapFrom_ = 0;
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      * @return The enum numeric value on the wire for swapFrom.
      */
     @java.lang.Override public int getSwapFromValue() {
       return swapFrom_;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      * @param value The enum numeric value on the wire for swapFrom to set.
      * @return This builder for chaining.
      */
@@ -703,7 +705,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      * @return The swapFrom.
      */
     @java.lang.Override
@@ -713,7 +715,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.SwapFrom.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      * @param value The swapFrom to set.
      * @return This builder for chaining.
      */
@@ -727,7 +729,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearSwapFrom() {

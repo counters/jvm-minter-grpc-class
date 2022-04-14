@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializepriceCommissionRequest")
 public inline fun priceCommissionRequest(block: counters.minter.grpc.client.PriceCommissionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.PriceCommissionRequest =
   counters.minter.grpc.client.PriceCommissionRequestKt.Dsl._create(counters.minter.grpc.client.PriceCommissionRequest.newBuilder()).apply { block() }._build()
 public object PriceCommissionRequestKt {
@@ -23,7 +23,7 @@ public object PriceCommissionRequestKt {
     internal fun _build(): counters.minter.grpc.client.PriceCommissionRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,7 +33,7 @@ public object PriceCommissionRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -43,3 +43,4 @@ public object PriceCommissionRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.PriceCommissionRequest.copy(block: counters.minter.grpc.client.PriceCommissionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.PriceCommissionRequest =
   counters.minter.grpc.client.PriceCommissionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeaddressesRequest")
 public inline fun addressesRequest(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesRequest =
   counters.minter.grpc.client.AddressesRequestKt.Dsl._create(counters.minter.grpc.client.AddressesRequest.newBuilder()).apply { block() }._build()
 public object AddressesRequestKt {
@@ -29,7 +29,7 @@ public object AddressesRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @return A list containing the addresses.
      */
     public val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
@@ -38,7 +38,7 @@ public object AddressesRequestKt {
         _builder.getAddressesList()
       )
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -47,7 +47,7 @@ public object AddressesRequestKt {
       _builder.addAddresses(value)
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -57,7 +57,7 @@ public object AddressesRequestKt {
       add(value)
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -66,7 +66,7 @@ public object AddressesRequestKt {
       _builder.addAllAddresses(values)
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -76,7 +76,7 @@ public object AddressesRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      */
@@ -85,7 +85,7 @@ public object AddressesRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setAddresses(index, value)
     }/**
-     * <code>repeated string addresses = 1 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearAddresses")
@@ -93,7 +93,7 @@ public object AddressesRequestKt {
       _builder.clearAddresses()
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -103,14 +103,14 @@ public object AddressesRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
     public var delegated: kotlin.Boolean
       @JvmName("getDelegated")
@@ -120,7 +120,7 @@ public object AddressesRequestKt {
         _builder.setDelegated(value)
       }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
     public fun clearDelegated() {
       _builder.clearDelegated()
@@ -130,3 +130,4 @@ public object AddressesRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.AddressesRequest.copy(block: counters.minter.grpc.client.AddressesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressesRequest =
   counters.minter.grpc.client.AddressesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -169,6 +169,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -198,51 +200,51 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string owner = 1 [json_name = "owner"];</code>
+     * <code>string owner = 1;</code>
      * @return The owner.
      */
     java.lang.String getOwner();
     /**
-     * <code>string owner = 1 [json_name = "owner"];</code>
+     * <code>string owner = 1;</code>
      * @return The bytes for owner.
      */
     com.google.protobuf.ByteString
         getOwnerBytes();
 
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return Whether the coin field is set.
      */
     boolean hasCoin();
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return The coin.
      */
     counters.minter.grpc.client.Coin getCoin();
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
 
     /**
-     * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 4;</code>
      * @return The bipValue.
      */
     java.lang.String getBipValue();
     /**
-     * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 4;</code>
      * @return The bytes for bipValue.
      */
     com.google.protobuf.ByteString
@@ -338,6 +340,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -362,7 +366,7 @@ private static final long serialVersionUID = 0L;
     public static final int OWNER_FIELD_NUMBER = 1;
     private volatile java.lang.Object owner_;
     /**
-     * <code>string owner = 1 [json_name = "owner"];</code>
+     * <code>string owner = 1;</code>
      * @return The owner.
      */
     @java.lang.Override
@@ -379,7 +383,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string owner = 1 [json_name = "owner"];</code>
+     * <code>string owner = 1;</code>
      * @return The bytes for owner.
      */
     @java.lang.Override
@@ -400,7 +404,7 @@ private static final long serialVersionUID = 0L;
     public static final int COIN_FIELD_NUMBER = 2;
     private counters.minter.grpc.client.Coin coin_;
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return Whether the coin field is set.
      */
     @java.lang.Override
@@ -408,7 +412,7 @@ private static final long serialVersionUID = 0L;
       return coin_ != null;
     }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return The coin.
      */
     @java.lang.Override
@@ -416,7 +420,7 @@ private static final long serialVersionUID = 0L;
       return coin_ == null ? counters.minter.grpc.client.Coin.getDefaultInstance() : coin_;
     }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder() {
@@ -426,7 +430,7 @@ private static final long serialVersionUID = 0L;
     public static final int VALUE_FIELD_NUMBER = 3;
     private volatile java.lang.Object value_;
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -443,7 +447,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -464,7 +468,7 @@ private static final long serialVersionUID = 0L;
     public static final int BIP_VALUE_FIELD_NUMBER = 4;
     private volatile java.lang.Object bipValue_;
     /**
-     * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 4;</code>
      * @return The bipValue.
      */
     @java.lang.Override
@@ -481,7 +485,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 4;</code>
      * @return The bytes for bipValue.
      */
     @java.lang.Override
@@ -867,7 +871,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object owner_ = "";
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        * @return The owner.
        */
       public java.lang.String getOwner() {
@@ -883,7 +887,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        * @return The bytes for owner.
        */
       public com.google.protobuf.ByteString
@@ -900,7 +904,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        * @param value The owner to set.
        * @return This builder for chaining.
        */
@@ -915,7 +919,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearOwner() {
@@ -925,7 +929,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string owner = 1 [json_name = "owner"];</code>
+       * <code>string owner = 1;</code>
        * @param value The bytes for owner to set.
        * @return This builder for chaining.
        */
@@ -945,14 +949,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> coinBuilder_;
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        * @return Whether the coin field is set.
        */
       public boolean hasCoin() {
         return coinBuilder_ != null || coin_ != null;
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        * @return The coin.
        */
       public counters.minter.grpc.client.Coin getCoin() {
@@ -963,7 +967,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public Builder setCoin(counters.minter.grpc.client.Coin value) {
         if (coinBuilder_ == null) {
@@ -979,7 +983,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public Builder setCoin(
           counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -993,7 +997,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public Builder mergeCoin(counters.minter.grpc.client.Coin value) {
         if (coinBuilder_ == null) {
@@ -1011,7 +1015,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public Builder clearCoin() {
         if (coinBuilder_ == null) {
@@ -1025,7 +1029,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public counters.minter.grpc.client.Coin.Builder getCoinBuilder() {
         
@@ -1033,7 +1037,7 @@ private static final long serialVersionUID = 0L;
         return getCoinFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       public counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder() {
         if (coinBuilder_ != null) {
@@ -1044,7 +1048,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> 
@@ -1062,7 +1066,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -1078,7 +1082,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -1095,7 +1099,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -1110,7 +1114,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -1120,7 +1124,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string value = 3 [json_name = "value"];</code>
+       * <code>string value = 3;</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -1138,7 +1142,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object bipValue_ = "";
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        * @return The bipValue.
        */
       public java.lang.String getBipValue() {
@@ -1154,7 +1158,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        * @return The bytes for bipValue.
        */
       public com.google.protobuf.ByteString
@@ -1171,7 +1175,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        * @param value The bipValue to set.
        * @return This builder for chaining.
        */
@@ -1186,7 +1190,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearBipValue() {
@@ -1196,7 +1200,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string bip_value = 4 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 4;</code>
        * @param value The bytes for bipValue to set.
        * @return This builder for chaining.
        */
@@ -1267,7 +1271,7 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 14;
   private long id_;
   /**
-   * <code>uint64 id = 14 [json_name = "id"];</code>
+   * <code>uint64 id = 14;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -1282,7 +1286,7 @@ private static final long serialVersionUID = 0L;
    * Address where validator’s rewards go to.
    * </pre>
    *
-   * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+   * <code>string reward_address = 1;</code>
    * @return The rewardAddress.
    */
   @java.lang.Override
@@ -1303,7 +1307,7 @@ private static final long serialVersionUID = 0L;
    * Address where validator’s rewards go to.
    * </pre>
    *
-   * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+   * <code>string reward_address = 1;</code>
    * @return The bytes for rewardAddress.
    */
   @java.lang.Override
@@ -1328,7 +1332,7 @@ private static final long serialVersionUID = 0L;
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
    * </pre>
    *
-   * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+   * <code>string owner_address = 10;</code>
    * @return The ownerAddress.
    */
   @java.lang.Override
@@ -1349,7 +1353,7 @@ private static final long serialVersionUID = 0L;
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
    * </pre>
    *
-   * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+   * <code>string owner_address = 10;</code>
    * @return The bytes for ownerAddress.
    */
   @java.lang.Override
@@ -1374,7 +1378,7 @@ private static final long serialVersionUID = 0L;
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
    * </pre>
    *
-   * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+   * <code>string control_address = 11;</code>
    * @return The controlAddress.
    */
   @java.lang.Override
@@ -1395,7 +1399,7 @@ private static final long serialVersionUID = 0L;
    * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
    * </pre>
    *
-   * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+   * <code>string control_address = 11;</code>
    * @return The bytes for controlAddress.
    */
   @java.lang.Override
@@ -1420,7 +1424,7 @@ private static final long serialVersionUID = 0L;
    * Total stake of a candidate
    * </pre>
    *
-   * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+   * <code>string total_stake = 2;</code>
    * @return The totalStake.
    */
   @java.lang.Override
@@ -1441,7 +1445,7 @@ private static final long serialVersionUID = 0L;
    * Total stake of a candidate
    * </pre>
    *
-   * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+   * <code>string total_stake = 2;</code>
    * @return The bytes for totalStake.
    */
   @java.lang.Override
@@ -1466,7 +1470,7 @@ private static final long serialVersionUID = 0L;
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 3 [json_name = "publicKey"];</code>
+   * <code>string public_key = 3;</code>
    * @return The publicKey.
    */
   @java.lang.Override
@@ -1487,7 +1491,7 @@ private static final long serialVersionUID = 0L;
    * Public key of a candidate
    * </pre>
    *
-   * <code>string public_key = 3 [json_name = "publicKey"];</code>
+   * <code>string public_key = 3;</code>
    * @return The bytes for publicKey.
    */
   @java.lang.Override
@@ -1512,7 +1516,7 @@ private static final long serialVersionUID = 0L;
    * Commission (from 0 to 100) from rewards which delegators will pay to validator
    * </pre>
    *
-   * <code>uint64 commission = 4 [json_name = "commission"];</code>
+   * <code>uint64 commission = 4;</code>
    * @return The commission.
    */
   @java.lang.Override
@@ -1527,7 +1531,7 @@ private static final long serialVersionUID = 0L;
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
    * @return Whether the usedSlots field is set.
    */
   @java.lang.Override
@@ -1539,7 +1543,7 @@ private static final long serialVersionUID = 0L;
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
    * @return The usedSlots.
    */
   @java.lang.Override
@@ -1551,7 +1555,7 @@ private static final long serialVersionUID = 0L;
    * Number of occupied steak slots. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+   * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
    */
   @java.lang.Override
   public com.google.protobuf.UInt64ValueOrBuilder getUsedSlotsOrBuilder() {
@@ -1565,7 +1569,7 @@ private static final long serialVersionUID = 0L;
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
    * @return Whether the uniqUsers field is set.
    */
   @java.lang.Override
@@ -1577,7 +1581,7 @@ private static final long serialVersionUID = 0L;
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
    * @return The uniqUsers.
    */
   @java.lang.Override
@@ -1589,7 +1593,7 @@ private static final long serialVersionUID = 0L;
    * Number of unique wallets in steaks. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+   * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
    */
   @java.lang.Override
   public com.google.protobuf.UInt64ValueOrBuilder getUniqUsersOrBuilder() {
@@ -1603,7 +1607,7 @@ private static final long serialVersionUID = 0L;
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+   * <code>.google.protobuf.StringValue min_stake = 9;</code>
    * @return Whether the minStake field is set.
    */
   @java.lang.Override
@@ -1615,7 +1619,7 @@ private static final long serialVersionUID = 0L;
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+   * <code>.google.protobuf.StringValue min_stake = 9;</code>
    * @return The minStake.
    */
   @java.lang.Override
@@ -1627,7 +1631,7 @@ private static final long serialVersionUID = 0L;
    * Smallest steak size. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+   * <code>.google.protobuf.StringValue min_stake = 9;</code>
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMinStakeOrBuilder() {
@@ -1641,7 +1645,7 @@ private static final long serialVersionUID = 0L;
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.CandidateResponse.Stake> getStakesList() {
@@ -1652,7 +1656,7 @@ private static final long serialVersionUID = 0L;
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.CandidateResponse.StakeOrBuilder> 
@@ -1664,7 +1668,7 @@ private static final long serialVersionUID = 0L;
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
    */
   @java.lang.Override
   public int getStakesCount() {
@@ -1675,7 +1679,7 @@ private static final long serialVersionUID = 0L;
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CandidateResponse.Stake getStakes(int index) {
@@ -1686,7 +1690,7 @@ private static final long serialVersionUID = 0L;
    * List of stakes. Note: filled in when request includes_stakes
    * </pre>
    *
-   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+   * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CandidateResponse.StakeOrBuilder getStakesOrBuilder(
@@ -1701,7 +1705,7 @@ private static final long serialVersionUID = 0L;
    * Candidate status. Available values: offline = 1, online = 2
    * </pre>
    *
-   * <code>uint64 status = 6 [json_name = "status"];</code>
+   * <code>uint64 status = 6;</code>
    * @return The status.
    */
   @java.lang.Override
@@ -1716,7 +1720,7 @@ private static final long serialVersionUID = 0L;
    * Is a validator at the current height
    * </pre>
    *
-   * <code>bool validator = 12 [json_name = "validator"];</code>
+   * <code>bool validator = 12;</code>
    * @return The validator.
    */
   @java.lang.Override
@@ -1727,7 +1731,7 @@ private static final long serialVersionUID = 0L;
   public static final int JAILED_UNTIL_FIELD_NUMBER = 13;
   private long jailedUntil_;
   /**
-   * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+   * <code>uint64 jailed_until = 13;</code>
    * @return The jailedUntil.
    */
   @java.lang.Override
@@ -2344,7 +2348,7 @@ private static final long serialVersionUID = 0L;
 
     private long id_ ;
     /**
-     * <code>uint64 id = 14 [json_name = "id"];</code>
+     * <code>uint64 id = 14;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2352,7 +2356,7 @@ private static final long serialVersionUID = 0L;
       return id_;
     }
     /**
-     * <code>uint64 id = 14 [json_name = "id"];</code>
+     * <code>uint64 id = 14;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2363,7 +2367,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 id = 14 [json_name = "id"];</code>
+     * <code>uint64 id = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2379,7 +2383,7 @@ private static final long serialVersionUID = 0L;
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      * @return The rewardAddress.
      */
     public java.lang.String getRewardAddress() {
@@ -2399,7 +2403,7 @@ private static final long serialVersionUID = 0L;
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      * @return The bytes for rewardAddress.
      */
     public com.google.protobuf.ByteString
@@ -2420,7 +2424,7 @@ private static final long serialVersionUID = 0L;
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      * @param value The rewardAddress to set.
      * @return This builder for chaining.
      */
@@ -2439,7 +2443,7 @@ private static final long serialVersionUID = 0L;
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearRewardAddress() {
@@ -2453,7 +2457,7 @@ private static final long serialVersionUID = 0L;
      * Address where validator’s rewards go to.
      * </pre>
      *
-     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 1;</code>
      * @param value The bytes for rewardAddress to set.
      * @return This builder for chaining.
      */
@@ -2475,7 +2479,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      * @return The ownerAddress.
      */
     public java.lang.String getOwnerAddress() {
@@ -2495,7 +2499,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      * @return The bytes for ownerAddress.
      */
     public com.google.protobuf.ByteString
@@ -2516,7 +2520,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      * @param value The ownerAddress to set.
      * @return This builder for chaining.
      */
@@ -2535,7 +2539,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerAddress() {
@@ -2549,7 +2553,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction. It also enables the owner to edit the node by sending EditCandidate.
      * </pre>
      *
-     * <code>string owner_address = 10 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 10;</code>
      * @param value The bytes for ownerAddress to set.
      * @return This builder for chaining.
      */
@@ -2571,7 +2575,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      * @return The controlAddress.
      */
     public java.lang.String getControlAddress() {
@@ -2591,7 +2595,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      * @return The bytes for controlAddress.
      */
     public com.google.protobuf.ByteString
@@ -2612,7 +2616,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      * @param value The controlAddress to set.
      * @return This builder for chaining.
      */
@@ -2631,7 +2635,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearControlAddress() {
@@ -2645,7 +2649,7 @@ private static final long serialVersionUID = 0L;
      * Address that allows one to start the candidate by sending the SetCandidateOnline transaction or stop it by sending the SetCandidateOffline transaction.
      * </pre>
      *
-     * <code>string control_address = 11 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 11;</code>
      * @param value The bytes for controlAddress to set.
      * @return This builder for chaining.
      */
@@ -2667,7 +2671,7 @@ private static final long serialVersionUID = 0L;
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      * @return The totalStake.
      */
     public java.lang.String getTotalStake() {
@@ -2687,7 +2691,7 @@ private static final long serialVersionUID = 0L;
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      * @return The bytes for totalStake.
      */
     public com.google.protobuf.ByteString
@@ -2708,7 +2712,7 @@ private static final long serialVersionUID = 0L;
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      * @param value The totalStake to set.
      * @return This builder for chaining.
      */
@@ -2727,7 +2731,7 @@ private static final long serialVersionUID = 0L;
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalStake() {
@@ -2741,7 +2745,7 @@ private static final long serialVersionUID = 0L;
      * Total stake of a candidate
      * </pre>
      *
-     * <code>string total_stake = 2 [json_name = "totalStake"];</code>
+     * <code>string total_stake = 2;</code>
      * @param value The bytes for totalStake to set.
      * @return This builder for chaining.
      */
@@ -2763,7 +2767,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      * @return The publicKey.
      */
     public java.lang.String getPublicKey() {
@@ -2783,7 +2787,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      * @return The bytes for publicKey.
      */
     public com.google.protobuf.ByteString
@@ -2804,7 +2808,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      * @param value The publicKey to set.
      * @return This builder for chaining.
      */
@@ -2823,7 +2827,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearPublicKey() {
@@ -2837,7 +2841,7 @@ private static final long serialVersionUID = 0L;
      * Public key of a candidate
      * </pre>
      *
-     * <code>string public_key = 3 [json_name = "publicKey"];</code>
+     * <code>string public_key = 3;</code>
      * @param value The bytes for publicKey to set.
      * @return This builder for chaining.
      */
@@ -2859,7 +2863,7 @@ private static final long serialVersionUID = 0L;
      * Commission (from 0 to 100) from rewards which delegators will pay to validator
      * </pre>
      *
-     * <code>uint64 commission = 4 [json_name = "commission"];</code>
+     * <code>uint64 commission = 4;</code>
      * @return The commission.
      */
     @java.lang.Override
@@ -2871,7 +2875,7 @@ private static final long serialVersionUID = 0L;
      * Commission (from 0 to 100) from rewards which delegators will pay to validator
      * </pre>
      *
-     * <code>uint64 commission = 4 [json_name = "commission"];</code>
+     * <code>uint64 commission = 4;</code>
      * @param value The commission to set.
      * @return This builder for chaining.
      */
@@ -2886,7 +2890,7 @@ private static final long serialVersionUID = 0L;
      * Commission (from 0 to 100) from rewards which delegators will pay to validator
      * </pre>
      *
-     * <code>uint64 commission = 4 [json_name = "commission"];</code>
+     * <code>uint64 commission = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCommission() {
@@ -2904,7 +2908,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      * @return Whether the usedSlots field is set.
      */
     public boolean hasUsedSlots() {
@@ -2915,7 +2919,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      * @return The usedSlots.
      */
     public com.google.protobuf.UInt64Value getUsedSlots() {
@@ -2930,7 +2934,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public Builder setUsedSlots(com.google.protobuf.UInt64Value value) {
       if (usedSlotsBuilder_ == null) {
@@ -2950,7 +2954,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public Builder setUsedSlots(
         com.google.protobuf.UInt64Value.Builder builderForValue) {
@@ -2968,7 +2972,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public Builder mergeUsedSlots(com.google.protobuf.UInt64Value value) {
       if (usedSlotsBuilder_ == null) {
@@ -2990,7 +2994,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public Builder clearUsedSlots() {
       if (usedSlotsBuilder_ == null) {
@@ -3008,7 +3012,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public com.google.protobuf.UInt64Value.Builder getUsedSlotsBuilder() {
       
@@ -3020,7 +3024,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     public com.google.protobuf.UInt64ValueOrBuilder getUsedSlotsOrBuilder() {
       if (usedSlotsBuilder_ != null) {
@@ -3035,7 +3039,7 @@ private static final long serialVersionUID = 0L;
      * Number of occupied steak slots. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value used_slots = 7 [json_name = "usedSlots"];</code>
+     * <code>.google.protobuf.UInt64Value used_slots = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> 
@@ -3059,7 +3063,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      * @return Whether the uniqUsers field is set.
      */
     public boolean hasUniqUsers() {
@@ -3070,7 +3074,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      * @return The uniqUsers.
      */
     public com.google.protobuf.UInt64Value getUniqUsers() {
@@ -3085,7 +3089,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public Builder setUniqUsers(com.google.protobuf.UInt64Value value) {
       if (uniqUsersBuilder_ == null) {
@@ -3105,7 +3109,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public Builder setUniqUsers(
         com.google.protobuf.UInt64Value.Builder builderForValue) {
@@ -3123,7 +3127,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public Builder mergeUniqUsers(com.google.protobuf.UInt64Value value) {
       if (uniqUsersBuilder_ == null) {
@@ -3145,7 +3149,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public Builder clearUniqUsers() {
       if (uniqUsersBuilder_ == null) {
@@ -3163,7 +3167,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public com.google.protobuf.UInt64Value.Builder getUniqUsersBuilder() {
       
@@ -3175,7 +3179,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     public com.google.protobuf.UInt64ValueOrBuilder getUniqUsersOrBuilder() {
       if (uniqUsersBuilder_ != null) {
@@ -3190,7 +3194,7 @@ private static final long serialVersionUID = 0L;
      * Number of unique wallets in steaks. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value uniq_users = 8 [json_name = "uniqUsers"];</code>
+     * <code>.google.protobuf.UInt64Value uniq_users = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> 
@@ -3214,7 +3218,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      * @return Whether the minStake field is set.
      */
     public boolean hasMinStake() {
@@ -3225,7 +3229,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      * @return The minStake.
      */
     public com.google.protobuf.StringValue getMinStake() {
@@ -3240,7 +3244,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public Builder setMinStake(com.google.protobuf.StringValue value) {
       if (minStakeBuilder_ == null) {
@@ -3260,7 +3264,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public Builder setMinStake(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3278,7 +3282,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public Builder mergeMinStake(com.google.protobuf.StringValue value) {
       if (minStakeBuilder_ == null) {
@@ -3300,7 +3304,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public Builder clearMinStake() {
       if (minStakeBuilder_ == null) {
@@ -3318,7 +3322,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public com.google.protobuf.StringValue.Builder getMinStakeBuilder() {
       
@@ -3330,7 +3334,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     public com.google.protobuf.StringValueOrBuilder getMinStakeOrBuilder() {
       if (minStakeBuilder_ != null) {
@@ -3345,7 +3349,7 @@ private static final long serialVersionUID = 0L;
      * Smallest steak size. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>.google.protobuf.StringValue min_stake = 9 [json_name = "minStake"];</code>
+     * <code>.google.protobuf.StringValue min_stake = 9;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3378,7 +3382,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public java.util.List<counters.minter.grpc.client.CandidateResponse.Stake> getStakesList() {
       if (stakesBuilder_ == null) {
@@ -3392,7 +3396,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public int getStakesCount() {
       if (stakesBuilder_ == null) {
@@ -3406,7 +3410,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Stake getStakes(int index) {
       if (stakesBuilder_ == null) {
@@ -3420,7 +3424,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder setStakes(
         int index, counters.minter.grpc.client.CandidateResponse.Stake value) {
@@ -3441,7 +3445,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder setStakes(
         int index, counters.minter.grpc.client.CandidateResponse.Stake.Builder builderForValue) {
@@ -3459,7 +3463,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder addStakes(counters.minter.grpc.client.CandidateResponse.Stake value) {
       if (stakesBuilder_ == null) {
@@ -3479,7 +3483,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder addStakes(
         int index, counters.minter.grpc.client.CandidateResponse.Stake value) {
@@ -3500,7 +3504,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder addStakes(
         counters.minter.grpc.client.CandidateResponse.Stake.Builder builderForValue) {
@@ -3518,7 +3522,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder addStakes(
         int index, counters.minter.grpc.client.CandidateResponse.Stake.Builder builderForValue) {
@@ -3536,7 +3540,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder addAllStakes(
         java.lang.Iterable<? extends counters.minter.grpc.client.CandidateResponse.Stake> values) {
@@ -3555,7 +3559,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder clearStakes() {
       if (stakesBuilder_ == null) {
@@ -3572,7 +3576,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public Builder removeStakes(int index) {
       if (stakesBuilder_ == null) {
@@ -3589,7 +3593,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Stake.Builder getStakesBuilder(
         int index) {
@@ -3600,7 +3604,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.StakeOrBuilder getStakesOrBuilder(
         int index) {
@@ -3614,7 +3618,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.CandidateResponse.StakeOrBuilder> 
          getStakesOrBuilderList() {
@@ -3629,7 +3633,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Stake.Builder addStakesBuilder() {
       return getStakesFieldBuilder().addBuilder(
@@ -3640,7 +3644,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Stake.Builder addStakesBuilder(
         int index) {
@@ -3652,7 +3656,7 @@ private static final long serialVersionUID = 0L;
      * List of stakes. Note: filled in when request includes_stakes
      * </pre>
      *
-     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5 [json_name = "stakes"];</code>
+     * <code>repeated .api_pb.CandidateResponse.Stake stakes = 5;</code>
      */
     public java.util.List<counters.minter.grpc.client.CandidateResponse.Stake.Builder> 
          getStakesBuilderList() {
@@ -3679,7 +3683,7 @@ private static final long serialVersionUID = 0L;
      * Candidate status. Available values: offline = 1, online = 2
      * </pre>
      *
-     * <code>uint64 status = 6 [json_name = "status"];</code>
+     * <code>uint64 status = 6;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -3691,7 +3695,7 @@ private static final long serialVersionUID = 0L;
      * Candidate status. Available values: offline = 1, online = 2
      * </pre>
      *
-     * <code>uint64 status = 6 [json_name = "status"];</code>
+     * <code>uint64 status = 6;</code>
      * @param value The status to set.
      * @return This builder for chaining.
      */
@@ -3706,7 +3710,7 @@ private static final long serialVersionUID = 0L;
      * Candidate status. Available values: offline = 1, online = 2
      * </pre>
      *
-     * <code>uint64 status = 6 [json_name = "status"];</code>
+     * <code>uint64 status = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
@@ -3722,7 +3726,7 @@ private static final long serialVersionUID = 0L;
      * Is a validator at the current height
      * </pre>
      *
-     * <code>bool validator = 12 [json_name = "validator"];</code>
+     * <code>bool validator = 12;</code>
      * @return The validator.
      */
     @java.lang.Override
@@ -3734,7 +3738,7 @@ private static final long serialVersionUID = 0L;
      * Is a validator at the current height
      * </pre>
      *
-     * <code>bool validator = 12 [json_name = "validator"];</code>
+     * <code>bool validator = 12;</code>
      * @param value The validator to set.
      * @return This builder for chaining.
      */
@@ -3749,7 +3753,7 @@ private static final long serialVersionUID = 0L;
      * Is a validator at the current height
      * </pre>
      *
-     * <code>bool validator = 12 [json_name = "validator"];</code>
+     * <code>bool validator = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidator() {
@@ -3761,7 +3765,7 @@ private static final long serialVersionUID = 0L;
 
     private long jailedUntil_ ;
     /**
-     * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 13;</code>
      * @return The jailedUntil.
      */
     @java.lang.Override
@@ -3769,7 +3773,7 @@ private static final long serialVersionUID = 0L;
       return jailedUntil_;
     }
     /**
-     * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 13;</code>
      * @param value The jailedUntil to set.
      * @return This builder for chaining.
      */
@@ -3780,7 +3784,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 jailed_until = 13 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearJailedUntil() {

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeaddLiquidityData")
 public inline fun addLiquidityData(block: counters.minter.grpc.client.AddLiquidityDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddLiquidityData =
   counters.minter.grpc.client.AddLiquidityDataKt.Dsl._create(counters.minter.grpc.client.AddLiquidityData.newBuilder()).apply { block() }._build()
 public object AddLiquidityDataKt {
@@ -23,7 +23,7 @@ public object AddLiquidityDataKt {
     internal fun _build(): counters.minter.grpc.client.AddLiquidityData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public var coin0: counters.minter.grpc.client.Coin
       @JvmName("getCoin0")
@@ -33,13 +33,13 @@ public object AddLiquidityDataKt {
         _builder.setCoin0(value)
       }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public fun clearCoin0() {
       _builder.clearCoin0()
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      * @return Whether the coin0 field is set.
      */
     public fun hasCoin0(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object AddLiquidityDataKt {
     }
 
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public var coin1: counters.minter.grpc.client.Coin
       @JvmName("getCoin1")
@@ -57,13 +57,13 @@ public object AddLiquidityDataKt {
         _builder.setCoin1(value)
       }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public fun clearCoin1() {
       _builder.clearCoin1()
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      * @return Whether the coin1 field is set.
      */
     public fun hasCoin1(): kotlin.Boolean {
@@ -71,7 +71,7 @@ public object AddLiquidityDataKt {
     }
 
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      */
     public var volume0: kotlin.String
       @JvmName("getVolume0")
@@ -81,14 +81,14 @@ public object AddLiquidityDataKt {
         _builder.setVolume0(value)
       }
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      */
     public fun clearVolume0() {
       _builder.clearVolume0()
     }
 
     /**
-     * <code>string maximum_volume1 = 4 [json_name = "maximumVolume1"];</code>
+     * <code>string maximum_volume1 = 4;</code>
      */
     public var maximumVolume1: kotlin.String
       @JvmName("getMaximumVolume1")
@@ -98,7 +98,7 @@ public object AddLiquidityDataKt {
         _builder.setMaximumVolume1(value)
       }
     /**
-     * <code>string maximum_volume1 = 4 [json_name = "maximumVolume1"];</code>
+     * <code>string maximum_volume1 = 4;</code>
      */
     public fun clearMaximumVolume1() {
       _builder.clearMaximumVolume1()
@@ -108,3 +108,10 @@ public object AddLiquidityDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.AddLiquidityData.copy(block: counters.minter.grpc.client.AddLiquidityDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddLiquidityData =
   counters.minter.grpc.client.AddLiquidityDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.AddLiquidityDataOrBuilder.coin0OrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin0()) getCoin0() else null
+
+val counters.minter.grpc.client.AddLiquidityDataOrBuilder.coin1OrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin1()) getCoin1() else null
+

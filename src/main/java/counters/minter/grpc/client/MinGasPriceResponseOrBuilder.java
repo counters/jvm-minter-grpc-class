@@ -8,7 +8,7 @@ public interface MinGasPriceResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 min_gas_price = 3 [json_name = "minGasPrice"];</code>
+   * <code>uint64 min_gas_price = 3;</code>
    * @return The minGasPrice.
    */
   long getMinGasPrice();

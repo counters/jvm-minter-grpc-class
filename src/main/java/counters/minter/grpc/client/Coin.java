@@ -71,6 +71,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,11 +99,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-   * };
+   *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+   *};
    * </pre>
    *
-   * <code>uint64 id = 1 [json_name = "id"];</code>
+   * <code>uint64 id = 1;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -112,7 +114,7 @@ private static final long serialVersionUID = 0L;
   public static final int SYMBOL_FIELD_NUMBER = 2;
   private volatile java.lang.Object symbol_;
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -129,7 +131,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -471,11 +473,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -485,11 +487,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -502,11 +504,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -518,7 +520,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object symbol_ = "";
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -534,7 +536,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -551,7 +553,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -576,7 +578,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */

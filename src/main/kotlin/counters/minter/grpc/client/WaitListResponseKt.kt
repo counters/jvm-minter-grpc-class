@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializewaitListResponse")
 public inline fun waitListResponse(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse =
   counters.minter.grpc.client.WaitListResponseKt.Dsl._create(counters.minter.grpc.client.WaitListResponse.newBuilder()).apply { block() }._build()
 public object WaitListResponseKt {
@@ -29,7 +29,7 @@ public object WaitListResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ListProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      */
      public val list: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,15 +37,16 @@ public object WaitListResponseKt {
         _builder.getListList()
       )
     /**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addList")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.add(value: counters.minter.grpc.client.WaitListResponse.Wait) {
       _builder.addList(value)
-    }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      * @param value The list to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -53,16 +54,18 @@ public object WaitListResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(value: counters.minter.grpc.client.WaitListResponse.Wait) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllList")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
       _builder.addAllList(values)
-    }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      * @param values The list to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,8 +73,9 @@ public object WaitListResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.WaitListResponse.Wait>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      * @param index The index to set the value at.
      * @param value The list to set.
      */
@@ -79,15 +83,18 @@ public object WaitListResponseKt {
     @kotlin.jvm.JvmName("setList")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.WaitListResponse.Wait) {
       _builder.setList(index, value)
-    }/**
-     * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearList")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.WaitListResponse.Wait, ListProxy>.clear() {
       _builder.clearList()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializewait")
   public inline fun wait(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse.Wait =
     counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl._create(counters.minter.grpc.client.WaitListResponse.Wait.newBuilder()).apply { block() }._build()
   public object WaitKt {
@@ -107,7 +114,7 @@ public object WaitListResponseKt {
       internal fun _build(): counters.minter.grpc.client.WaitListResponse.Wait = _builder.build()
 
       /**
-       * <code>string public_key = 3 [json_name = "publicKey"];</code>
+       * <code>string public_key = 3;</code>
        */
       public var publicKey: kotlin.String
         @JvmName("getPublicKey")
@@ -117,14 +124,14 @@ public object WaitListResponseKt {
           _builder.setPublicKey(value)
         }
       /**
-       * <code>string public_key = 3 [json_name = "publicKey"];</code>
+       * <code>string public_key = 3;</code>
        */
       public fun clearPublicKey() {
         _builder.clearPublicKey()
       }
 
       /**
-       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 1;</code>
        */
       public var coin: counters.minter.grpc.client.Coin
         @JvmName("getCoin")
@@ -134,13 +141,13 @@ public object WaitListResponseKt {
           _builder.setCoin(value)
         }
       /**
-       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 1;</code>
        */
       public fun clearCoin() {
         _builder.clearCoin()
       }
       /**
-       * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 1;</code>
        * @return Whether the coin field is set.
        */
       public fun hasCoin(): kotlin.Boolean {
@@ -148,7 +155,7 @@ public object WaitListResponseKt {
       }
 
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <code>string value = 2;</code>
        */
       public var value: kotlin.String
         @JvmName("getValue")
@@ -158,7 +165,7 @@ public object WaitListResponseKt {
           _builder.setValue(value)
         }
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <code>string value = 2;</code>
        */
       public fun clearValue() {
         _builder.clearValue()
@@ -169,6 +176,11 @@ public object WaitListResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.WaitListResponse.copy(block: counters.minter.grpc.client.WaitListResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse =
   counters.minter.grpc.client.WaitListResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.WaitListResponse.Wait.copy(block: counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListResponse.Wait =
   counters.minter.grpc.client.WaitListResponseKt.WaitKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.WaitListResponse.WaitOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

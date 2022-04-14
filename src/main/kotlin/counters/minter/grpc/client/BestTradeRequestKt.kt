@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializebestTradeRequest")
 public inline fun bestTradeRequest(block: counters.minter.grpc.client.BestTradeRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BestTradeRequest =
   counters.minter.grpc.client.BestTradeRequestKt.Dsl._create(counters.minter.grpc.client.BestTradeRequest.newBuilder()).apply { block() }._build()
 public object BestTradeRequestKt {
@@ -23,7 +23,7 @@ public object BestTradeRequestKt {
     internal fun _build(): counters.minter.grpc.client.BestTradeRequest = _builder.build()
 
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      */
     public var sellCoin: kotlin.Long
       @JvmName("getSellCoin")
@@ -33,14 +33,14 @@ public object BestTradeRequestKt {
         _builder.setSellCoin(value)
       }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      */
     public fun clearSellCoin() {
       _builder.clearSellCoin()
     }
 
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      */
     public var buyCoin: kotlin.Long
       @JvmName("getBuyCoin")
@@ -50,14 +50,14 @@ public object BestTradeRequestKt {
         _builder.setBuyCoin(value)
       }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      */
     public fun clearBuyCoin() {
       _builder.clearBuyCoin()
     }
 
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      */
     public var amount: kotlin.String
       @JvmName("getAmount")
@@ -67,14 +67,14 @@ public object BestTradeRequestKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      */
     public var type: counters.minter.grpc.client.BestTradeRequest.Type
       @JvmName("getType")
@@ -84,14 +84,14 @@ public object BestTradeRequestKt {
         _builder.setType(value)
       }
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      */
     public fun clearType() {
       _builder.clearType()
     }
 
     /**
-     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * <code>uint64 height = 5;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -101,14 +101,14 @@ public object BestTradeRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * <code>uint64 height = 5;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+     * <code>int32 max_depth = 6;</code>
      */
     public var maxDepth: kotlin.Int
       @JvmName("getMaxDepth")
@@ -118,7 +118,7 @@ public object BestTradeRequestKt {
         _builder.setMaxDepth(value)
       }
     /**
-     * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+     * <code>int32 max_depth = 6;</code>
      */
     public fun clearMaxDepth() {
       _builder.clearMaxDepth()
@@ -128,3 +128,4 @@ public object BestTradeRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.BestTradeRequest.copy(block: counters.minter.grpc.client.BestTradeRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BestTradeRequest =
   counters.minter.grpc.client.BestTradeRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -8,18 +8,18 @@ public interface CoinInfoRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString

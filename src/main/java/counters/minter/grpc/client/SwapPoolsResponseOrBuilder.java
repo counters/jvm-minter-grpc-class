@@ -8,25 +8,25 @@ public interface SwapPoolsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool> 
       getPoolsList();
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   counters.minter.grpc.client.SwapPoolsResponse.SwapPool getPools(int index);
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   int getPoolsCount();
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder> 
       getPoolsOrBuilderList();
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder getPoolsOrBuilder(
       int index);

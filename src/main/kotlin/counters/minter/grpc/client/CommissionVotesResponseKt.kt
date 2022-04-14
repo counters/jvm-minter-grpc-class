@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecommissionVotesResponse")
 public inline fun commissionVotesResponse(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse =
   counters.minter.grpc.client.CommissionVotesResponseKt.Dsl._create(counters.minter.grpc.client.CommissionVotesResponse.newBuilder()).apply { block() }._build()
 public object CommissionVotesResponseKt {
@@ -29,7 +29,7 @@ public object CommissionVotesResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class VotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
      public val votes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,15 +37,16 @@ public object CommissionVotesResponseKt {
         _builder.getVotesList()
       )
     /**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param value The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addVotes")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.add(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       _builder.addVotes(value)
-    }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param value The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -53,16 +54,18 @@ public object CommissionVotesResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param values The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllVotes")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
       _builder.addAllVotes(values)
-    }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param values The votes to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,8 +73,9 @@ public object CommissionVotesResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CommissionVotesResponse.Vote>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      * @param index The index to set the value at.
      * @param value The votes to set.
      */
@@ -79,15 +83,18 @@ public object CommissionVotesResponseKt {
     @kotlin.jvm.JvmName("setVotes")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CommissionVotesResponse.Vote) {
       _builder.setVotes(index, value)
-    }/**
-     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CommissionVotesResponse.Vote votes = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearVotes")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CommissionVotesResponse.Vote, VotesProxy>.clear() {
       _builder.clearVotes()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializevote")
   public inline fun vote(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
     counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl._create(counters.minter.grpc.client.CommissionVotesResponse.Vote.newBuilder()).apply { block() }._build()
   public object VoteKt {
@@ -107,7 +114,7 @@ public object CommissionVotesResponseKt {
       internal fun _build(): counters.minter.grpc.client.CommissionVotesResponse.Vote = _builder.build()
 
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public var price: counters.minter.grpc.client.PriceCommissionResponse
         @JvmName("getPrice")
@@ -117,13 +124,13 @@ public object CommissionVotesResponseKt {
           _builder.setPrice(value)
         }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        */
       public fun clearPrice() {
         _builder.clearPrice()
       }
       /**
-       * <code>.api_pb.PriceCommissionResponse price = 2 [json_name = "price"];</code>
+       * <code>.api_pb.PriceCommissionResponse price = 2;</code>
        * @return Whether the price field is set.
        */
       public fun hasPrice(): kotlin.Boolean {
@@ -137,7 +144,7 @@ public object CommissionVotesResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return A list containing the publicKeys.
        */
       public val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
@@ -146,7 +153,7 @@ public object CommissionVotesResponseKt {
           _builder.getPublicKeysList()
         )
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -155,7 +162,7 @@ public object CommissionVotesResponseKt {
         _builder.addPublicKeys(value)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -165,7 +172,7 @@ public object CommissionVotesResponseKt {
         add(value)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -174,7 +181,7 @@ public object CommissionVotesResponseKt {
         _builder.addAllPublicKeys(values)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -184,7 +191,7 @@ public object CommissionVotesResponseKt {
         addAll(values)
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index to set the value at.
        * @param value The publicKeys to set.
        */
@@ -193,7 +200,7 @@ public object CommissionVotesResponseKt {
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setPublicKeys(index, value)
       }/**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearPublicKeys")
@@ -205,6 +212,11 @@ public object CommissionVotesResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CommissionVotesResponse.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse =
   counters.minter.grpc.client.CommissionVotesResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CommissionVotesResponse.Vote.copy(block: counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CommissionVotesResponse.Vote =
   counters.minter.grpc.client.CommissionVotesResponseKt.VoteKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.CommissionVotesResponse.VoteOrBuilder.priceOrNull: counters.minter.grpc.client.PriceCommissionResponse?
+  get() = if (hasPrice()) getPrice() else null
+

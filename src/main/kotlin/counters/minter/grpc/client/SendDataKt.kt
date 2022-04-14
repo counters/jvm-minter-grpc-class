@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesendData")
 public inline fun sendData(block: counters.minter.grpc.client.SendDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendData =
   counters.minter.grpc.client.SendDataKt.Dsl._create(counters.minter.grpc.client.SendData.newBuilder()).apply { block() }._build()
 public object SendDataKt {
@@ -23,7 +23,7 @@ public object SendDataKt {
     internal fun _build(): counters.minter.grpc.client.SendData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -33,13 +33,13 @@ public object SendDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object SendDataKt {
     }
 
     /**
-     * <code>string to = 2 [json_name = "to"];</code>
+     * <code>string to = 2;</code>
      */
     public var to: kotlin.String
       @JvmName("getTo")
@@ -57,14 +57,14 @@ public object SendDataKt {
         _builder.setTo(value)
       }
     /**
-     * <code>string to = 2 [json_name = "to"];</code>
+     * <code>string to = 2;</code>
      */
     public fun clearTo() {
       _builder.clearTo()
     }
 
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -74,7 +74,7 @@ public object SendDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
@@ -84,3 +84,7 @@ public object SendDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SendData.copy(block: counters.minter.grpc.client.SendDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendData =
   counters.minter.grpc.client.SendDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.SendDataOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

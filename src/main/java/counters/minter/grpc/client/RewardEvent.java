@@ -92,6 +92,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -242,14 +244,14 @@ private static final long serialVersionUID = 0L;
   public static final int ROLE_FIELD_NUMBER = 1;
   private int role_;
   /**
-   * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+   * <code>.api_pb.RewardEvent.Role role = 1;</code>
    * @return The enum numeric value on the wire for role.
    */
   @java.lang.Override public int getRoleValue() {
     return role_;
   }
   /**
-   * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+   * <code>.api_pb.RewardEvent.Role role = 1;</code>
    * @return The role.
    */
   @java.lang.Override public counters.minter.grpc.client.RewardEvent.Role getRole() {
@@ -261,7 +263,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 2;
   private volatile java.lang.Object address_;
   /**
-   * <code>string address = 2 [json_name = "address"];</code>
+   * <code>string address = 2;</code>
    * @return The address.
    */
   @java.lang.Override
@@ -278,7 +280,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string address = 2 [json_name = "address"];</code>
+   * <code>string address = 2;</code>
    * @return The bytes for address.
    */
   @java.lang.Override
@@ -299,7 +301,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT_FIELD_NUMBER = 3;
   private volatile java.lang.Object amount_;
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The amount.
    */
   @java.lang.Override
@@ -316,7 +318,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The bytes for amount.
    */
   @java.lang.Override
@@ -337,7 +339,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATOR_PUB_KEY_FIELD_NUMBER = 4;
   private volatile java.lang.Object validatorPubKey_;
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The validatorPubKey.
    */
   @java.lang.Override
@@ -354,7 +356,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The bytes for validatorPubKey.
    */
   @java.lang.Override
@@ -379,7 +381,7 @@ private static final long serialVersionUID = 0L;
    * coin for which the delegator received the reward
    * </pre>
    *
-   * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
+   * <code>uint64 for_coin = 6;</code>
    * @return The forCoin.
    */
   @java.lang.Override
@@ -759,14 +761,14 @@ private static final long serialVersionUID = 0L;
 
     private int role_ = 0;
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+     * <code>.api_pb.RewardEvent.Role role = 1;</code>
      * @return The enum numeric value on the wire for role.
      */
     @java.lang.Override public int getRoleValue() {
       return role_;
     }
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+     * <code>.api_pb.RewardEvent.Role role = 1;</code>
      * @param value The enum numeric value on the wire for role to set.
      * @return This builder for chaining.
      */
@@ -777,7 +779,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+     * <code>.api_pb.RewardEvent.Role role = 1;</code>
      * @return The role.
      */
     @java.lang.Override
@@ -787,7 +789,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.RewardEvent.Role.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+     * <code>.api_pb.RewardEvent.Role role = 1;</code>
      * @param value The role to set.
      * @return This builder for chaining.
      */
@@ -801,7 +803,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.RewardEvent.Role role = 1 [json_name = "role"];</code>
+     * <code>.api_pb.RewardEvent.Role role = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearRole() {
@@ -813,7 +815,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The address.
      */
     public java.lang.String getAddress() {
@@ -829,7 +831,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
@@ -846,7 +848,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @param value The address to set.
      * @return This builder for chaining.
      */
@@ -861,7 +863,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
@@ -871,7 +873,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
      */
@@ -889,7 +891,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount_ = "";
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return The amount.
      */
     public java.lang.String getAmount() {
@@ -905,7 +907,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return The bytes for amount.
      */
     public com.google.protobuf.ByteString
@@ -922,7 +924,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @param value The amount to set.
      * @return This builder for chaining.
      */
@@ -937,7 +939,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount() {
@@ -947,7 +949,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @param value The bytes for amount to set.
      * @return This builder for chaining.
      */
@@ -965,7 +967,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object validatorPubKey_ = "";
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return The validatorPubKey.
      */
     public java.lang.String getValidatorPubKey() {
@@ -981,7 +983,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return The bytes for validatorPubKey.
      */
     public com.google.protobuf.ByteString
@@ -998,7 +1000,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @param value The validatorPubKey to set.
      * @return This builder for chaining.
      */
@@ -1013,7 +1015,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidatorPubKey() {
@@ -1023,7 +1025,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @param value The bytes for validatorPubKey to set.
      * @return This builder for chaining.
      */
@@ -1045,7 +1047,7 @@ private static final long serialVersionUID = 0L;
      * coin for which the delegator received the reward
      * </pre>
      *
-     * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
+     * <code>uint64 for_coin = 6;</code>
      * @return The forCoin.
      */
     @java.lang.Override
@@ -1057,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * coin for which the delegator received the reward
      * </pre>
      *
-     * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
+     * <code>uint64 for_coin = 6;</code>
      * @param value The forCoin to set.
      * @return This builder for chaining.
      */
@@ -1072,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * coin for which the delegator received the reward
      * </pre>
      *
-     * <code>uint64 for_coin = 6 [json_name = "forCoin"];</code>
+     * <code>uint64 for_coin = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearForCoin() {

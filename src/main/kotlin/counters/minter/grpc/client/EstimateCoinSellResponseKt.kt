@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeestimateCoinSellResponse")
 public inline fun estimateCoinSellResponse(block: counters.minter.grpc.client.EstimateCoinSellResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinSellResponse =
   counters.minter.grpc.client.EstimateCoinSellResponseKt.Dsl._create(counters.minter.grpc.client.EstimateCoinSellResponse.newBuilder()).apply { block() }._build()
 public object EstimateCoinSellResponseKt {
@@ -23,7 +23,7 @@ public object EstimateCoinSellResponseKt {
     internal fun _build(): counters.minter.grpc.client.EstimateCoinSellResponse = _builder.build()
 
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      */
     public var willGet: kotlin.String
       @JvmName("getWillGet")
@@ -33,14 +33,14 @@ public object EstimateCoinSellResponseKt {
         _builder.setWillGet(value)
       }
     /**
-     * <code>string will_get = 1 [json_name = "willGet"];</code>
+     * <code>string will_get = 1;</code>
      */
     public fun clearWillGet() {
       _builder.clearWillGet()
     }
 
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      */
     public var commission: kotlin.String
       @JvmName("getCommission")
@@ -50,14 +50,14 @@ public object EstimateCoinSellResponseKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>string commission = 2 [json_name = "commission"];</code>
+     * <code>string commission = 2;</code>
      */
     public fun clearCommission() {
       _builder.clearCommission()
     }
 
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      */
     public var swapFrom: counters.minter.grpc.client.SwapFrom
       @JvmName("getSwapFrom")
@@ -67,7 +67,7 @@ public object EstimateCoinSellResponseKt {
         _builder.setSwapFrom(value)
       }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 3 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 3;</code>
      */
     public fun clearSwapFrom() {
       _builder.clearSwapFrom()
@@ -77,3 +77,4 @@ public object EstimateCoinSellResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EstimateCoinSellResponse.copy(block: counters.minter.grpc.client.EstimateCoinSellResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinSellResponse =
   counters.minter.grpc.client.EstimateCoinSellResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

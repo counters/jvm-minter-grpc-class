@@ -73,6 +73,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,7 +99,7 @@ private static final long serialVersionUID = 0L;
   public static final int RAW_CHECK_FIELD_NUMBER = 1;
   private volatile java.lang.Object rawCheck_;
   /**
-   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+   * <code>string raw_check = 1;</code>
    * @return The rawCheck.
    */
   @java.lang.Override
@@ -114,7 +116,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+   * <code>string raw_check = 1;</code>
    * @return The bytes for rawCheck.
    */
   @java.lang.Override
@@ -135,7 +137,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROOF_FIELD_NUMBER = 2;
   private volatile java.lang.Object proof_;
   /**
-   * <code>string proof = 2 [json_name = "proof"];</code>
+   * <code>string proof = 2;</code>
    * @return The proof.
    */
   @java.lang.Override
@@ -152,7 +154,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string proof = 2 [json_name = "proof"];</code>
+   * <code>string proof = 2;</code>
    * @return The bytes for proof.
    */
   @java.lang.Override
@@ -491,7 +493,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object rawCheck_ = "";
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return The rawCheck.
      */
     public java.lang.String getRawCheck() {
@@ -507,7 +509,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return The bytes for rawCheck.
      */
     public com.google.protobuf.ByteString
@@ -524,7 +526,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @param value The rawCheck to set.
      * @return This builder for chaining.
      */
@@ -539,7 +541,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearRawCheck() {
@@ -549,7 +551,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string raw_check = 1 [json_name = "rawCheck"];</code>
+     * <code>string raw_check = 1;</code>
      * @param value The bytes for rawCheck to set.
      * @return This builder for chaining.
      */
@@ -567,7 +569,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object proof_ = "";
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return The proof.
      */
     public java.lang.String getProof() {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return The bytes for proof.
      */
     public com.google.protobuf.ByteString
@@ -600,7 +602,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @param value The proof to set.
      * @return This builder for chaining.
      */
@@ -615,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearProof() {
@@ -625,7 +627,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string proof = 2 [json_name = "proof"];</code>
+     * <code>string proof = 2;</code>
      * @param value The bytes for proof to set.
      * @return This builder for chaining.
      */

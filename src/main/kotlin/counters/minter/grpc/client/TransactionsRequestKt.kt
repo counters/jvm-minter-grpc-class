@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializetransactionsRequest")
 public inline fun transactionsRequest(block: counters.minter.grpc.client.TransactionsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionsRequest =
   counters.minter.grpc.client.TransactionsRequestKt.Dsl._create(counters.minter.grpc.client.TransactionsRequest.newBuilder()).apply { block() }._build()
 public object TransactionsRequestKt {
@@ -23,7 +23,7 @@ public object TransactionsRequestKt {
     internal fun _build(): counters.minter.grpc.client.TransactionsRequest = _builder.build()
 
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public var query: kotlin.String
       @JvmName("getQuery")
@@ -33,14 +33,14 @@ public object TransactionsRequestKt {
         _builder.setQuery(value)
       }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public fun clearQuery() {
       _builder.clearQuery()
     }
 
     /**
-     * <code>int32 page = 2 [json_name = "page"];</code>
+     * <code>int32 page = 2;</code>
      */
     public var page: kotlin.Int
       @JvmName("getPage")
@@ -50,14 +50,14 @@ public object TransactionsRequestKt {
         _builder.setPage(value)
       }
     /**
-     * <code>int32 page = 2 [json_name = "page"];</code>
+     * <code>int32 page = 2;</code>
      */
     public fun clearPage() {
       _builder.clearPage()
     }
 
     /**
-     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     * <code>int32 per_page = 3;</code>
      */
     public var perPage: kotlin.Int
       @JvmName("getPerPage")
@@ -67,7 +67,7 @@ public object TransactionsRequestKt {
         _builder.setPerPage(value)
       }
     /**
-     * <code>int32 per_page = 3 [json_name = "perPage"];</code>
+     * <code>int32 per_page = 3;</code>
      */
     public fun clearPerPage() {
       _builder.clearPerPage()
@@ -77,3 +77,4 @@ public object TransactionsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.TransactionsRequest.copy(block: counters.minter.grpc.client.TransactionsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionsRequest =
   counters.minter.grpc.client.TransactionsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

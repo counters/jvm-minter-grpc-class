@@ -8,48 +8,48 @@ public interface BestTradeRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+   * <code>uint64 sell_coin = 1;</code>
    * @return The sellCoin.
    */
   long getSellCoin();
 
   /**
-   * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+   * <code>uint64 buy_coin = 2;</code>
    * @return The buyCoin.
    */
   long getBuyCoin();
 
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The amount.
    */
   java.lang.String getAmount();
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The bytes for amount.
    */
   com.google.protobuf.ByteString
       getAmountBytes();
 
   /**
-   * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+   * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
-   * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+   * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
    * @return The type.
    */
   counters.minter.grpc.client.BestTradeRequest.Type getType();
 
   /**
-   * <code>uint64 height = 5 [json_name = "height"];</code>
+   * <code>uint64 height = 5;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+   * <code>int32 max_depth = 6;</code>
    * @return The maxDepth.
    */
   int getMaxDepth();

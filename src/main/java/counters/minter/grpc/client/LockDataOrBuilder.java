@@ -8,33 +8,33 @@ public interface LockDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 due_block = 1 [json_name = "dueBlock"];</code>
+   * <code>uint64 due_block = 1;</code>
    * @return The dueBlock.
    */
   long getDueBlock();
 
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 3;</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 3;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

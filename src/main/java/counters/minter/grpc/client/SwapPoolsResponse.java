@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -99,115 +101,115 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 id = 5 [json_name = "id"];</code>
+     * <code>uint64 id = 5;</code>
      * @return The id.
      */
     long getId();
 
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The price.
      */
     java.lang.String getPrice();
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The bytes for price.
      */
     com.google.protobuf.ByteString
         getPriceBytes();
 
     /**
-     * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 6;</code>
      * @return The coin0.
      */
     long getCoin0();
 
     /**
-     * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 7;</code>
      * @return The coin1.
      */
     long getCoin1();
 
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The amount0.
      */
     java.lang.String getAmount0();
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The bytes for amount0.
      */
     com.google.protobuf.ByteString
         getAmount0Bytes();
 
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The amount1.
      */
     java.lang.String getAmount1();
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The bytes for amount1.
      */
     com.google.protobuf.ByteString
         getAmount1Bytes();
 
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The liquidity.
      */
     java.lang.String getLiquidity();
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The bytes for liquidity.
      */
     com.google.protobuf.ByteString
         getLiquidityBytes();
 
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> 
         getOrdersSellList();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersSell(int index);
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     int getOrdersSellCount();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
         getOrdersSellOrBuilderList();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersSellOrBuilder(
         int index);
 
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> 
         getOrdersBuyList();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersBuy(int index);
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     int getOrdersBuyCount();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
         getOrdersBuyOrBuilderList();
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersBuyOrBuilder(
         int index);
@@ -332,6 +334,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -364,61 +368,61 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 id = 7 [json_name = "id"];</code>
+       * <code>uint64 id = 7;</code>
        * @return The id.
        */
       long getId();
 
       /**
-       * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+       * <code>string want_sell = 3;</code>
        * @return The wantSell.
        */
       java.lang.String getWantSell();
       /**
-       * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+       * <code>string want_sell = 3;</code>
        * @return The bytes for wantSell.
        */
       com.google.protobuf.ByteString
           getWantSellBytes();
 
       /**
-       * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+       * <code>string want_buy = 4;</code>
        * @return The wantBuy.
        */
       java.lang.String getWantBuy();
       /**
-       * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+       * <code>string want_buy = 4;</code>
        * @return The bytes for wantBuy.
        */
       com.google.protobuf.ByteString
           getWantBuyBytes();
 
       /**
-       * <code>string price = 8 [json_name = "price"];</code>
+       * <code>string price = 8;</code>
        * @return The price.
        */
       java.lang.String getPrice();
       /**
-       * <code>string price = 8 [json_name = "price"];</code>
+       * <code>string price = 8;</code>
        * @return The bytes for price.
        */
       com.google.protobuf.ByteString
           getPriceBytes();
 
       /**
-       * <code>string owner = 5 [json_name = "owner"];</code>
+       * <code>string owner = 5;</code>
        * @return The owner.
        */
       java.lang.String getOwner();
       /**
-       * <code>string owner = 5 [json_name = "owner"];</code>
+       * <code>string owner = 5;</code>
        * @return The bytes for owner.
        */
       com.google.protobuf.ByteString
           getOwnerBytes();
 
       /**
-       * <code>uint64 height = 6 [json_name = "height"];</code>
+       * <code>uint64 height = 6;</code>
        * @return The height.
        */
       long getHeight();
@@ -517,6 +521,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -541,7 +547,7 @@ private static final long serialVersionUID = 0L;
       public static final int ID_FIELD_NUMBER = 7;
       private long id_;
       /**
-       * <code>uint64 id = 7 [json_name = "id"];</code>
+       * <code>uint64 id = 7;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -552,7 +558,7 @@ private static final long serialVersionUID = 0L;
       public static final int WANT_SELL_FIELD_NUMBER = 3;
       private volatile java.lang.Object wantSell_;
       /**
-       * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+       * <code>string want_sell = 3;</code>
        * @return The wantSell.
        */
       @java.lang.Override
@@ -569,7 +575,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+       * <code>string want_sell = 3;</code>
        * @return The bytes for wantSell.
        */
       @java.lang.Override
@@ -590,7 +596,7 @@ private static final long serialVersionUID = 0L;
       public static final int WANT_BUY_FIELD_NUMBER = 4;
       private volatile java.lang.Object wantBuy_;
       /**
-       * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+       * <code>string want_buy = 4;</code>
        * @return The wantBuy.
        */
       @java.lang.Override
@@ -607,7 +613,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+       * <code>string want_buy = 4;</code>
        * @return The bytes for wantBuy.
        */
       @java.lang.Override
@@ -628,7 +634,7 @@ private static final long serialVersionUID = 0L;
       public static final int PRICE_FIELD_NUMBER = 8;
       private volatile java.lang.Object price_;
       /**
-       * <code>string price = 8 [json_name = "price"];</code>
+       * <code>string price = 8;</code>
        * @return The price.
        */
       @java.lang.Override
@@ -645,7 +651,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string price = 8 [json_name = "price"];</code>
+       * <code>string price = 8;</code>
        * @return The bytes for price.
        */
       @java.lang.Override
@@ -666,7 +672,7 @@ private static final long serialVersionUID = 0L;
       public static final int OWNER_FIELD_NUMBER = 5;
       private volatile java.lang.Object owner_;
       /**
-       * <code>string owner = 5 [json_name = "owner"];</code>
+       * <code>string owner = 5;</code>
        * @return The owner.
        */
       @java.lang.Override
@@ -683,7 +689,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string owner = 5 [json_name = "owner"];</code>
+       * <code>string owner = 5;</code>
        * @return The bytes for owner.
        */
       @java.lang.Override
@@ -704,7 +710,7 @@ private static final long serialVersionUID = 0L;
       public static final int HEIGHT_FIELD_NUMBER = 6;
       private long height_;
       /**
-       * <code>uint64 height = 6 [json_name = "height"];</code>
+       * <code>uint64 height = 6;</code>
        * @return The height.
        */
       @java.lang.Override
@@ -1103,7 +1109,7 @@ private static final long serialVersionUID = 0L;
 
         private long id_ ;
         /**
-         * <code>uint64 id = 7 [json_name = "id"];</code>
+         * <code>uint64 id = 7;</code>
          * @return The id.
          */
         @java.lang.Override
@@ -1111,7 +1117,7 @@ private static final long serialVersionUID = 0L;
           return id_;
         }
         /**
-         * <code>uint64 id = 7 [json_name = "id"];</code>
+         * <code>uint64 id = 7;</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -1122,7 +1128,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 id = 7 [json_name = "id"];</code>
+         * <code>uint64 id = 7;</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
@@ -1134,7 +1140,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object wantSell_ = "";
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          * @return The wantSell.
          */
         public java.lang.String getWantSell() {
@@ -1150,7 +1156,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          * @return The bytes for wantSell.
          */
         public com.google.protobuf.ByteString
@@ -1167,7 +1173,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          * @param value The wantSell to set.
          * @return This builder for chaining.
          */
@@ -1182,7 +1188,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          * @return This builder for chaining.
          */
         public Builder clearWantSell() {
@@ -1192,7 +1198,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          * @param value The bytes for wantSell to set.
          * @return This builder for chaining.
          */
@@ -1210,7 +1216,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object wantBuy_ = "";
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          * @return The wantBuy.
          */
         public java.lang.String getWantBuy() {
@@ -1226,7 +1232,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          * @return The bytes for wantBuy.
          */
         public com.google.protobuf.ByteString
@@ -1243,7 +1249,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          * @param value The wantBuy to set.
          * @return This builder for chaining.
          */
@@ -1258,7 +1264,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          * @return This builder for chaining.
          */
         public Builder clearWantBuy() {
@@ -1268,7 +1274,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          * @param value The bytes for wantBuy to set.
          * @return This builder for chaining.
          */
@@ -1286,7 +1292,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object price_ = "";
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          * @return The price.
          */
         public java.lang.String getPrice() {
@@ -1302,7 +1308,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          * @return The bytes for price.
          */
         public com.google.protobuf.ByteString
@@ -1319,7 +1325,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          * @param value The price to set.
          * @return This builder for chaining.
          */
@@ -1334,7 +1340,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          * @return This builder for chaining.
          */
         public Builder clearPrice() {
@@ -1344,7 +1350,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          * @param value The bytes for price to set.
          * @return This builder for chaining.
          */
@@ -1362,7 +1368,7 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object owner_ = "";
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          * @return The owner.
          */
         public java.lang.String getOwner() {
@@ -1378,7 +1384,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          * @return The bytes for owner.
          */
         public com.google.protobuf.ByteString
@@ -1395,7 +1401,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          * @param value The owner to set.
          * @return This builder for chaining.
          */
@@ -1410,7 +1416,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          * @return This builder for chaining.
          */
         public Builder clearOwner() {
@@ -1420,7 +1426,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          * @param value The bytes for owner to set.
          * @return This builder for chaining.
          */
@@ -1438,7 +1444,7 @@ private static final long serialVersionUID = 0L;
 
         private long height_ ;
         /**
-         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * <code>uint64 height = 6;</code>
          * @return The height.
          */
         @java.lang.Override
@@ -1446,7 +1452,7 @@ private static final long serialVersionUID = 0L;
           return height_;
         }
         /**
-         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * <code>uint64 height = 6;</code>
          * @param value The height to set.
          * @return This builder for chaining.
          */
@@ -1457,7 +1463,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * <code>uint64 height = 6;</code>
          * @return This builder for chaining.
          */
         public Builder clearHeight() {
@@ -1522,7 +1528,7 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 5;
     private long id_;
     /**
-     * <code>uint64 id = 5 [json_name = "id"];</code>
+     * <code>uint64 id = 5;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1533,7 +1539,7 @@ private static final long serialVersionUID = 0L;
     public static final int PRICE_FIELD_NUMBER = 4;
     private volatile java.lang.Object price_;
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -1550,7 +1556,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string price = 4 [json_name = "price"];</code>
+     * <code>string price = 4;</code>
      * @return The bytes for price.
      */
     @java.lang.Override
@@ -1571,7 +1577,7 @@ private static final long serialVersionUID = 0L;
     public static final int COIN0_FIELD_NUMBER = 6;
     private long coin0_;
     /**
-     * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 6;</code>
      * @return The coin0.
      */
     @java.lang.Override
@@ -1582,7 +1588,7 @@ private static final long serialVersionUID = 0L;
     public static final int COIN1_FIELD_NUMBER = 7;
     private long coin1_;
     /**
-     * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 7;</code>
      * @return The coin1.
      */
     @java.lang.Override
@@ -1593,7 +1599,7 @@ private static final long serialVersionUID = 0L;
     public static final int AMOUNT0_FIELD_NUMBER = 1;
     private volatile java.lang.Object amount0_;
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The amount0.
      */
     @java.lang.Override
@@ -1610,7 +1616,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0"];</code>
+     * <code>string amount0 = 1;</code>
      * @return The bytes for amount0.
      */
     @java.lang.Override
@@ -1631,7 +1637,7 @@ private static final long serialVersionUID = 0L;
     public static final int AMOUNT1_FIELD_NUMBER = 2;
     private volatile java.lang.Object amount1_;
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The amount1.
      */
     @java.lang.Override
@@ -1648,7 +1654,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1"];</code>
+     * <code>string amount1 = 2;</code>
      * @return The bytes for amount1.
      */
     @java.lang.Override
@@ -1669,7 +1675,7 @@ private static final long serialVersionUID = 0L;
     public static final int LIQUIDITY_FIELD_NUMBER = 3;
     private volatile java.lang.Object liquidity_;
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The liquidity.
      */
     @java.lang.Override
@@ -1686,7 +1692,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+     * <code>string liquidity = 3;</code>
      * @return The bytes for liquidity.
      */
     @java.lang.Override
@@ -1707,14 +1713,14 @@ private static final long serialVersionUID = 0L;
     public static final int ORDERS_SELL_FIELD_NUMBER = 8;
     private java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> ordersSell_;
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> getOrdersSellList() {
       return ordersSell_;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
@@ -1722,21 +1728,21 @@ private static final long serialVersionUID = 0L;
       return ordersSell_;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     @java.lang.Override
     public int getOrdersSellCount() {
       return ordersSell_.size();
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersSell(int index) {
       return ordersSell_.get(index);
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersSellOrBuilder(
@@ -1747,14 +1753,14 @@ private static final long serialVersionUID = 0L;
     public static final int ORDERS_BUY_FIELD_NUMBER = 9;
     private java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> ordersBuy_;
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> getOrdersBuyList() {
       return ordersBuy_;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
@@ -1762,21 +1768,21 @@ private static final long serialVersionUID = 0L;
       return ordersBuy_;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     @java.lang.Override
     public int getOrdersBuyCount() {
       return ordersBuy_.size();
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersBuy(int index) {
       return ordersBuy_.get(index);
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersBuyOrBuilder(
@@ -2305,7 +2311,7 @@ private static final long serialVersionUID = 0L;
 
       private long id_ ;
       /**
-       * <code>uint64 id = 5 [json_name = "id"];</code>
+       * <code>uint64 id = 5;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -2313,7 +2319,7 @@ private static final long serialVersionUID = 0L;
         return id_;
       }
       /**
-       * <code>uint64 id = 5 [json_name = "id"];</code>
+       * <code>uint64 id = 5;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -2324,7 +2330,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 id = 5 [json_name = "id"];</code>
+       * <code>uint64 id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -2336,7 +2342,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object price_ = "";
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        * @return The price.
        */
       public java.lang.String getPrice() {
@@ -2352,7 +2358,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        * @return The bytes for price.
        */
       public com.google.protobuf.ByteString
@@ -2369,7 +2375,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        * @param value The price to set.
        * @return This builder for chaining.
        */
@@ -2384,7 +2390,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearPrice() {
@@ -2394,7 +2400,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        * @param value The bytes for price to set.
        * @return This builder for chaining.
        */
@@ -2412,7 +2418,7 @@ private static final long serialVersionUID = 0L;
 
       private long coin0_ ;
       /**
-       * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+       * <code>uint64 coin0 = 6;</code>
        * @return The coin0.
        */
       @java.lang.Override
@@ -2420,7 +2426,7 @@ private static final long serialVersionUID = 0L;
         return coin0_;
       }
       /**
-       * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+       * <code>uint64 coin0 = 6;</code>
        * @param value The coin0 to set.
        * @return This builder for chaining.
        */
@@ -2431,7 +2437,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+       * <code>uint64 coin0 = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCoin0() {
@@ -2443,7 +2449,7 @@ private static final long serialVersionUID = 0L;
 
       private long coin1_ ;
       /**
-       * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+       * <code>uint64 coin1 = 7;</code>
        * @return The coin1.
        */
       @java.lang.Override
@@ -2451,7 +2457,7 @@ private static final long serialVersionUID = 0L;
         return coin1_;
       }
       /**
-       * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+       * <code>uint64 coin1 = 7;</code>
        * @param value The coin1 to set.
        * @return This builder for chaining.
        */
@@ -2462,7 +2468,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+       * <code>uint64 coin1 = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearCoin1() {
@@ -2474,7 +2480,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object amount0_ = "";
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        * @return The amount0.
        */
       public java.lang.String getAmount0() {
@@ -2490,7 +2496,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        * @return The bytes for amount0.
        */
       public com.google.protobuf.ByteString
@@ -2507,7 +2513,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        * @param value The amount0 to set.
        * @return This builder for chaining.
        */
@@ -2522,7 +2528,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount0() {
@@ -2532,7 +2538,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        * @param value The bytes for amount0 to set.
        * @return This builder for chaining.
        */
@@ -2550,7 +2556,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object amount1_ = "";
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        * @return The amount1.
        */
       public java.lang.String getAmount1() {
@@ -2566,7 +2572,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        * @return The bytes for amount1.
        */
       public com.google.protobuf.ByteString
@@ -2583,7 +2589,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        * @param value The amount1 to set.
        * @return This builder for chaining.
        */
@@ -2598,7 +2604,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount1() {
@@ -2608,7 +2614,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        * @param value The bytes for amount1 to set.
        * @return This builder for chaining.
        */
@@ -2626,7 +2632,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object liquidity_ = "";
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        * @return The liquidity.
        */
       public java.lang.String getLiquidity() {
@@ -2642,7 +2648,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        * @return The bytes for liquidity.
        */
       public com.google.protobuf.ByteString
@@ -2659,7 +2665,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        * @param value The liquidity to set.
        * @return This builder for chaining.
        */
@@ -2674,7 +2680,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearLiquidity() {
@@ -2684,7 +2690,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        * @param value The bytes for liquidity to set.
        * @return This builder for chaining.
        */
@@ -2713,7 +2719,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> ordersSellBuilder_;
 
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> getOrdersSellList() {
         if (ordersSellBuilder_ == null) {
@@ -2723,7 +2729,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public int getOrdersSellCount() {
         if (ordersSellBuilder_ == null) {
@@ -2733,7 +2739,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersSell(int index) {
         if (ordersSellBuilder_ == null) {
@@ -2743,7 +2749,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder setOrdersSell(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
@@ -2760,7 +2766,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder setOrdersSell(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -2774,7 +2780,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder addOrdersSell(counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
         if (ordersSellBuilder_ == null) {
@@ -2790,7 +2796,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder addOrdersSell(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
@@ -2807,7 +2813,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder addOrdersSell(
           counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -2821,7 +2827,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder addOrdersSell(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -2835,7 +2841,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder addAllOrdersSell(
           java.lang.Iterable<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> values) {
@@ -2850,7 +2856,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder clearOrdersSell() {
         if (ordersSellBuilder_ == null) {
@@ -2863,7 +2869,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public Builder removeOrdersSell(int index) {
         if (ordersSellBuilder_ == null) {
@@ -2876,14 +2882,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder getOrdersSellBuilder(
           int index) {
         return getOrdersSellFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersSellOrBuilder(
           int index) {
@@ -2893,7 +2899,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
            getOrdersSellOrBuilderList() {
@@ -2904,14 +2910,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder addOrdersSellBuilder() {
         return getOrdersSellFieldBuilder().addBuilder(
             counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder addOrdersSellBuilder(
           int index) {
@@ -2919,7 +2925,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder> 
            getOrdersSellBuilderList() {
@@ -2953,7 +2959,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> ordersBuyBuilder_;
 
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> getOrdersBuyList() {
         if (ordersBuyBuilder_ == null) {
@@ -2963,7 +2969,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public int getOrdersBuyCount() {
         if (ordersBuyBuilder_ == null) {
@@ -2973,7 +2979,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder getOrdersBuy(int index) {
         if (ordersBuyBuilder_ == null) {
@@ -2983,7 +2989,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder setOrdersBuy(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
@@ -3000,7 +3006,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder setOrdersBuy(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -3014,7 +3020,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder addOrdersBuy(counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
         if (ordersBuyBuilder_ == null) {
@@ -3030,7 +3036,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder addOrdersBuy(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder value) {
@@ -3047,7 +3053,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder addOrdersBuy(
           counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -3061,7 +3067,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder addOrdersBuy(
           int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder builderForValue) {
@@ -3075,7 +3081,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder addAllOrdersBuy(
           java.lang.Iterable<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder> values) {
@@ -3090,7 +3096,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder clearOrdersBuy() {
         if (ordersBuyBuilder_ == null) {
@@ -3103,7 +3109,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public Builder removeOrdersBuy(int index) {
         if (ordersBuyBuilder_ == null) {
@@ -3116,14 +3122,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder getOrdersBuyBuilder(
           int index) {
         return getOrdersBuyFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder getOrdersBuyOrBuilder(
           int index) {
@@ -3133,7 +3139,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrderOrBuilder> 
            getOrdersBuyOrBuilderList() {
@@ -3144,14 +3150,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder addOrdersBuyBuilder() {
         return getOrdersBuyFieldBuilder().addBuilder(
             counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder addOrdersBuyBuilder(
           int index) {
@@ -3159,7 +3165,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.Builder> 
            getOrdersBuyBuilderList() {
@@ -3235,14 +3241,14 @@ private static final long serialVersionUID = 0L;
   public static final int POOLS_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool> pools_;
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool> getPoolsList() {
     return pools_;
   }
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder> 
@@ -3250,21 +3256,21 @@ private static final long serialVersionUID = 0L;
     return pools_;
   }
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   @java.lang.Override
   public int getPoolsCount() {
     return pools_.size();
   }
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SwapPoolsResponse.SwapPool getPools(int index) {
     return pools_.get(index);
   }
   /**
-   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+   * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder getPoolsOrBuilder(
@@ -3627,7 +3633,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.SwapPoolsResponse.SwapPool, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder, counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder> poolsBuilder_;
 
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool> getPoolsList() {
       if (poolsBuilder_ == null) {
@@ -3637,7 +3643,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public int getPoolsCount() {
       if (poolsBuilder_ == null) {
@@ -3647,7 +3653,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool getPools(int index) {
       if (poolsBuilder_ == null) {
@@ -3657,7 +3663,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder setPools(
         int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool value) {
@@ -3674,7 +3680,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder setPools(
         int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder builderForValue) {
@@ -3688,7 +3694,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder addPools(counters.minter.grpc.client.SwapPoolsResponse.SwapPool value) {
       if (poolsBuilder_ == null) {
@@ -3704,7 +3710,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder addPools(
         int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool value) {
@@ -3721,7 +3727,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder addPools(
         counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder builderForValue) {
@@ -3735,7 +3741,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder addPools(
         int index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder builderForValue) {
@@ -3749,7 +3755,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder addAllPools(
         java.lang.Iterable<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPool> values) {
@@ -3764,7 +3770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder clearPools() {
       if (poolsBuilder_ == null) {
@@ -3777,7 +3783,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public Builder removePools(int index) {
       if (poolsBuilder_ == null) {
@@ -3790,14 +3796,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder getPoolsBuilder(
         int index) {
       return getPoolsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder getPoolsOrBuilder(
         int index) {
@@ -3807,7 +3813,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.SwapPoolsResponse.SwapPoolOrBuilder> 
          getPoolsOrBuilderList() {
@@ -3818,14 +3824,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder addPoolsBuilder() {
       return getPoolsFieldBuilder().addBuilder(
           counters.minter.grpc.client.SwapPoolsResponse.SwapPool.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder addPoolsBuilder(
         int index) {
@@ -3833,7 +3839,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.SwapPoolsResponse.SwapPool.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.Builder> 
          getPoolsBuilderList() {

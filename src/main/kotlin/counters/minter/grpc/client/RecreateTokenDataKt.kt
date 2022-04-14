@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializerecreateTokenData")
 public inline fun recreateTokenData(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateTokenData =
   counters.minter.grpc.client.RecreateTokenDataKt.Dsl._create(counters.minter.grpc.client.RecreateTokenData.newBuilder()).apply { block() }._build()
 public object RecreateTokenDataKt {
@@ -23,7 +23,7 @@ public object RecreateTokenDataKt {
     internal fun _build(): counters.minter.grpc.client.RecreateTokenData = _builder.build()
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
     public var name: kotlin.String
       @JvmName("getName")
@@ -33,14 +33,14 @@ public object RecreateTokenDataKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
     public fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public var symbol: kotlin.String
       @JvmName("getSymbol")
@@ -50,14 +50,14 @@ public object RecreateTokenDataKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      */
     public var initialAmount: kotlin.String
       @JvmName("getInitialAmount")
@@ -67,14 +67,14 @@ public object RecreateTokenDataKt {
         _builder.setInitialAmount(value)
       }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      */
     public fun clearInitialAmount() {
       _builder.clearInitialAmount()
     }
 
     /**
-     * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 4;</code>
      */
     public var maxSupply: kotlin.String
       @JvmName("getMaxSupply")
@@ -84,14 +84,14 @@ public object RecreateTokenDataKt {
         _builder.setMaxSupply(value)
       }
     /**
-     * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 4;</code>
      */
     public fun clearMaxSupply() {
       _builder.clearMaxSupply()
     }
 
     /**
-     * <code>bool mintable = 5 [json_name = "mintable"];</code>
+     * <code>bool mintable = 5;</code>
      */
     public var mintable: kotlin.Boolean
       @JvmName("getMintable")
@@ -101,14 +101,14 @@ public object RecreateTokenDataKt {
         _builder.setMintable(value)
       }
     /**
-     * <code>bool mintable = 5 [json_name = "mintable"];</code>
+     * <code>bool mintable = 5;</code>
      */
     public fun clearMintable() {
       _builder.clearMintable()
     }
 
     /**
-     * <code>bool burnable = 6 [json_name = "burnable"];</code>
+     * <code>bool burnable = 6;</code>
      */
     public var burnable: kotlin.Boolean
       @JvmName("getBurnable")
@@ -118,7 +118,7 @@ public object RecreateTokenDataKt {
         _builder.setBurnable(value)
       }
     /**
-     * <code>bool burnable = 6 [json_name = "burnable"];</code>
+     * <code>bool burnable = 6;</code>
      */
     public fun clearBurnable() {
       _builder.clearBurnable()
@@ -128,3 +128,4 @@ public object RecreateTokenDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.RecreateTokenData.copy(block: counters.minter.grpc.client.RecreateTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateTokenData =
   counters.minter.grpc.client.RecreateTokenDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

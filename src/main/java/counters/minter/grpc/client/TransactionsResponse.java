@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTIONS_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.TransactionResponse> transactions_;
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.TransactionResponse> getTransactionsList() {
     return transactions_;
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.TransactionResponseOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return transactions_;
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
    */
   @java.lang.Override
   public int getTransactionsCount() {
     return transactions_.size();
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.TransactionResponse getTransactions(int index) {
     return transactions_.get(index);
   }
   /**
-   * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+   * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.TransactionResponseOrBuilder getTransactionsOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.TransactionResponse, counters.minter.grpc.client.TransactionResponse.Builder, counters.minter.grpc.client.TransactionResponseOrBuilder> transactionsBuilder_;
 
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.TransactionResponse> getTransactionsList() {
       if (transactionsBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public int getTransactionsCount() {
       if (transactionsBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public counters.minter.grpc.client.TransactionResponse getTransactions(int index) {
       if (transactionsBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder setTransactions(
         int index, counters.minter.grpc.client.TransactionResponse value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder setTransactions(
         int index, counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder addTransactions(counters.minter.grpc.client.TransactionResponse value) {
       if (transactionsBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder addTransactions(
         int index, counters.minter.grpc.client.TransactionResponse value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder addTransactions(
         counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder addTransactions(
         int index, counters.minter.grpc.client.TransactionResponse.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder addAllTransactions(
         java.lang.Iterable<? extends counters.minter.grpc.client.TransactionResponse> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder clearTransactions() {
       if (transactionsBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public Builder removeTransactions(int index) {
       if (transactionsBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder getTransactionsBuilder(
         int index) {
       return getTransactionsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public counters.minter.grpc.client.TransactionResponseOrBuilder getTransactionsOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.TransactionResponseOrBuilder> 
          getTransactionsOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder addTransactionsBuilder() {
       return getTransactionsFieldBuilder().addBuilder(
           counters.minter.grpc.client.TransactionResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public counters.minter.grpc.client.TransactionResponse.Builder addTransactionsBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.TransactionResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.TransactionResponse transactions = 3 [json_name = "transactions"];</code>
+     * <code>repeated .api_pb.TransactionResponse transactions = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.TransactionResponse.Builder> 
          getTransactionsBuilderList() {

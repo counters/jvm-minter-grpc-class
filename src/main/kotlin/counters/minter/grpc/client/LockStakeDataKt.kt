@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelockStakeData")
 public inline fun lockStakeData(block: counters.minter.grpc.client.LockStakeDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LockStakeData =
   counters.minter.grpc.client.LockStakeDataKt.Dsl._create(counters.minter.grpc.client.LockStakeData.newBuilder()).apply { block() }._build()
 public object LockStakeDataKt {
@@ -26,3 +26,4 @@ public object LockStakeDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.LockStakeData.copy(block: counters.minter.grpc.client.LockStakeDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LockStakeData =
   counters.minter.grpc.client.LockStakeDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

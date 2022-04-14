@@ -107,6 +107,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -137,7 +139,7 @@ private static final long serialVersionUID = 0L;
   public static final int START_HEIGHT_FIELD_NUMBER = 1;
   private long startHeight_;
   /**
-   * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+   * <code>uint64 start_height = 1;</code>
    * @return The startHeight.
    */
   @java.lang.Override
@@ -148,7 +150,7 @@ private static final long serialVersionUID = 0L;
   public static final int END_HEIGHT_FIELD_NUMBER = 2;
   private long endHeight_;
   /**
-   * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+   * <code>uint64 end_height = 2;</code>
    * @return The endHeight.
    */
   @java.lang.Override
@@ -159,7 +161,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 3;
   private long height_;
   /**
-   * <code>uint64 height = 3 [json_name = "height"];</code>
+   * <code>uint64 height = 3;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -170,7 +172,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESSES_FIELD_NUMBER = 4;
   private com.google.protobuf.LazyStringList addresses_;
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @return A list containing the addresses.
    */
   public com.google.protobuf.ProtocolStringList
@@ -178,14 +180,14 @@ private static final long serialVersionUID = 0L;
     return addresses_;
   }
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @return The count of addresses.
    */
   public int getAddressesCount() {
     return addresses_.size();
   }
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @param index The index of the element to return.
    * @return The addresses at the given index.
    */
@@ -193,7 +195,7 @@ private static final long serialVersionUID = 0L;
     return addresses_.get(index);
   }
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @param index The index of the value to return.
    * @return The bytes of the addresses at the given index.
    */
@@ -205,7 +207,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN_IDS_FIELD_NUMBER = 5;
   private com.google.protobuf.Internal.LongList coinIds_;
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @return A list containing the coinIds.
    */
   @java.lang.Override
@@ -214,14 +216,14 @@ private static final long serialVersionUID = 0L;
     return coinIds_;
   }
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @return The count of coinIds.
    */
   public int getCoinIdsCount() {
     return coinIds_.size();
   }
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @param index The index of the element to return.
    * @return The coinIds at the given index.
    */
@@ -652,7 +654,7 @@ private static final long serialVersionUID = 0L;
 
     private long startHeight_ ;
     /**
-     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * <code>uint64 start_height = 1;</code>
      * @return The startHeight.
      */
     @java.lang.Override
@@ -660,7 +662,7 @@ private static final long serialVersionUID = 0L;
       return startHeight_;
     }
     /**
-     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * <code>uint64 start_height = 1;</code>
      * @param value The startHeight to set.
      * @return This builder for chaining.
      */
@@ -671,7 +673,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * <code>uint64 start_height = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartHeight() {
@@ -683,7 +685,7 @@ private static final long serialVersionUID = 0L;
 
     private long endHeight_ ;
     /**
-     * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+     * <code>uint64 end_height = 2;</code>
      * @return The endHeight.
      */
     @java.lang.Override
@@ -691,7 +693,7 @@ private static final long serialVersionUID = 0L;
       return endHeight_;
     }
     /**
-     * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+     * <code>uint64 end_height = 2;</code>
      * @param value The endHeight to set.
      * @return This builder for chaining.
      */
@@ -702,7 +704,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+     * <code>uint64 end_height = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndHeight() {
@@ -714,7 +716,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -722,7 +724,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -733,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -751,7 +753,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @return A list containing the addresses.
      */
     public com.google.protobuf.ProtocolStringList
@@ -759,14 +761,14 @@ private static final long serialVersionUID = 0L;
       return addresses_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @return The count of addresses.
      */
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param index The index of the element to return.
      * @return The addresses at the given index.
      */
@@ -774,7 +776,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.get(index);
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param index The index of the value to return.
      * @return The bytes of the addresses at the given index.
      */
@@ -783,7 +785,7 @@ private static final long serialVersionUID = 0L;
       return addresses_.getByteString(index);
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      * @return This builder for chaining.
@@ -799,7 +801,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param value The addresses to add.
      * @return This builder for chaining.
      */
@@ -814,7 +816,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param values The addresses to add.
      * @return This builder for chaining.
      */
@@ -827,7 +829,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddresses() {
@@ -837,7 +839,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param value The bytes of the addresses to add.
      * @return This builder for chaining.
      */
@@ -861,7 +863,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @return A list containing the coinIds.
      */
     public java.util.List<java.lang.Long>
@@ -870,14 +872,14 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(coinIds_) : coinIds_;
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @return The count of coinIds.
      */
     public int getCoinIdsCount() {
       return coinIds_.size();
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param index The index of the element to return.
      * @return The coinIds at the given index.
      */
@@ -885,7 +887,7 @@ private static final long serialVersionUID = 0L;
       return coinIds_.getLong(index);
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param index The index to set the value at.
      * @param value The coinIds to set.
      * @return This builder for chaining.
@@ -898,7 +900,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param value The coinIds to add.
      * @return This builder for chaining.
      */
@@ -909,7 +911,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param values The coinIds to add.
      * @return This builder for chaining.
      */
@@ -922,7 +924,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearCoinIds() {

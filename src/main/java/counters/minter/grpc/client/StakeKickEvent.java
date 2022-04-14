@@ -85,6 +85,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -109,7 +111,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The address.
    */
   @java.lang.Override
@@ -126,7 +128,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string address = 1 [json_name = "address"];</code>
+   * <code>string address = 1;</code>
    * @return The bytes for address.
    */
   @java.lang.Override
@@ -147,7 +149,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT_FIELD_NUMBER = 2;
   private volatile java.lang.Object amount_;
   /**
-   * <code>string amount = 2 [json_name = "amount"];</code>
+   * <code>string amount = 2;</code>
    * @return The amount.
    */
   @java.lang.Override
@@ -164,7 +166,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount = 2 [json_name = "amount"];</code>
+   * <code>string amount = 2;</code>
    * @return The bytes for amount.
    */
   @java.lang.Override
@@ -185,7 +187,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN_FIELD_NUMBER = 3;
   private long coin_;
   /**
-   * <code>uint64 coin = 3 [json_name = "coin"];</code>
+   * <code>uint64 coin = 3;</code>
    * @return The coin.
    */
   @java.lang.Override
@@ -196,7 +198,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATOR_PUB_KEY_FIELD_NUMBER = 4;
   private volatile java.lang.Object validatorPubKey_;
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The validatorPubKey.
    */
   @java.lang.Override
@@ -213,7 +215,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+   * <code>string validator_pub_key = 4;</code>
    * @return The bytes for validatorPubKey.
    */
   @java.lang.Override
@@ -587,7 +589,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return The address.
      */
     public java.lang.String getAddress() {
@@ -603,7 +605,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
@@ -620,7 +622,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @param value The address to set.
      * @return This builder for chaining.
      */
@@ -635,7 +637,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
@@ -645,7 +647,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      * @param value The bytes for address to set.
      * @return This builder for chaining.
      */
@@ -663,7 +665,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount_ = "";
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      * @return The amount.
      */
     public java.lang.String getAmount() {
@@ -679,7 +681,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      * @return The bytes for amount.
      */
     public com.google.protobuf.ByteString
@@ -696,7 +698,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      * @param value The amount to set.
      * @return This builder for chaining.
      */
@@ -711,7 +713,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount() {
@@ -721,7 +723,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      * @param value The bytes for amount to set.
      * @return This builder for chaining.
      */
@@ -739,7 +741,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin_ ;
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      * @return The coin.
      */
     @java.lang.Override
@@ -747,7 +749,7 @@ private static final long serialVersionUID = 0L;
       return coin_;
     }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      * @param value The coin to set.
      * @return This builder for chaining.
      */
@@ -758,7 +760,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin() {
@@ -770,7 +772,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object validatorPubKey_ = "";
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return The validatorPubKey.
      */
     public java.lang.String getValidatorPubKey() {
@@ -786,7 +788,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return The bytes for validatorPubKey.
      */
     public com.google.protobuf.ByteString
@@ -803,7 +805,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @param value The validatorPubKey to set.
      * @return This builder for chaining.
      */
@@ -818,7 +820,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidatorPubKey() {
@@ -828,7 +830,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      * @param value The bytes for validatorPubKey to set.
      * @return This builder for chaining.
      */

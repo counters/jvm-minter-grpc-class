@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelimitOrderRequest")
 public inline fun limitOrderRequest(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrderRequest =
   counters.minter.grpc.client.LimitOrderRequestKt.Dsl._create(counters.minter.grpc.client.LimitOrderRequest.newBuilder()).apply { block() }._build()
 public object LimitOrderRequestKt {
@@ -23,7 +23,7 @@ public object LimitOrderRequestKt {
     internal fun _build(): counters.minter.grpc.client.LimitOrderRequest = _builder.build()
 
     /**
-     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * <code>uint64 order_id = 1;</code>
      */
     public var orderId: kotlin.Long
       @JvmName("getOrderId")
@@ -33,14 +33,14 @@ public object LimitOrderRequestKt {
         _builder.setOrderId(value)
       }
     /**
-     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * <code>uint64 order_id = 1;</code>
      */
     public fun clearOrderId() {
       _builder.clearOrderId()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -50,7 +50,7 @@ public object LimitOrderRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -60,3 +60,4 @@ public object LimitOrderRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.LimitOrderRequest.copy(block: counters.minter.grpc.client.LimitOrderRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrderRequest =
   counters.minter.grpc.client.LimitOrderRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

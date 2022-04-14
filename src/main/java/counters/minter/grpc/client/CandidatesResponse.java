@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int CANDIDATES_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.CandidateResponse> candidates_;
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.CandidateResponse> getCandidatesList() {
     return candidates_;
   }
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.CandidateResponseOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return candidates_;
   }
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
    */
   @java.lang.Override
   public int getCandidatesCount() {
     return candidates_.size();
   }
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CandidateResponse getCandidates(int index) {
     return candidates_.get(index);
   }
   /**
-   * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+   * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CandidateResponseOrBuilder getCandidatesOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.CandidateResponse, counters.minter.grpc.client.CandidateResponse.Builder, counters.minter.grpc.client.CandidateResponseOrBuilder> candidatesBuilder_;
 
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.CandidateResponse> getCandidatesList() {
       if (candidatesBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public int getCandidatesCount() {
       if (candidatesBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public counters.minter.grpc.client.CandidateResponse getCandidates(int index) {
       if (candidatesBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder setCandidates(
         int index, counters.minter.grpc.client.CandidateResponse value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder setCandidates(
         int index, counters.minter.grpc.client.CandidateResponse.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder addCandidates(counters.minter.grpc.client.CandidateResponse value) {
       if (candidatesBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder addCandidates(
         int index, counters.minter.grpc.client.CandidateResponse value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder addCandidates(
         counters.minter.grpc.client.CandidateResponse.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder addCandidates(
         int index, counters.minter.grpc.client.CandidateResponse.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder addAllCandidates(
         java.lang.Iterable<? extends counters.minter.grpc.client.CandidateResponse> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder clearCandidates() {
       if (candidatesBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public Builder removeCandidates(int index) {
       if (candidatesBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Builder getCandidatesBuilder(
         int index) {
       return getCandidatesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public counters.minter.grpc.client.CandidateResponseOrBuilder getCandidatesOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.CandidateResponseOrBuilder> 
          getCandidatesOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Builder addCandidatesBuilder() {
       return getCandidatesFieldBuilder().addBuilder(
           counters.minter.grpc.client.CandidateResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public counters.minter.grpc.client.CandidateResponse.Builder addCandidatesBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.CandidateResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.CandidateResponse.Builder> 
          getCandidatesBuilderList() {

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeswapPoolsResponse")
 public inline fun swapPoolsResponse(block: counters.minter.grpc.client.SwapPoolsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse =
   counters.minter.grpc.client.SwapPoolsResponseKt.Dsl._create(counters.minter.grpc.client.SwapPoolsResponse.newBuilder()).apply { block() }._build()
 public object SwapPoolsResponseKt {
@@ -29,7 +29,7 @@ public object SwapPoolsResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class PoolsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
      public val pools: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,15 +37,16 @@ public object SwapPoolsResponseKt {
         _builder.getPoolsList()
       )
     /**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      * @param value The pools to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addPools")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.add(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool) {
       _builder.addPools(value)
-    }/**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      * @param value The pools to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -53,16 +54,18 @@ public object SwapPoolsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.plusAssign(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      * @param values The pools to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllPools")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool>) {
       _builder.addAllPools(values)
-    }/**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      * @param values The pools to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,8 +73,9 @@ public object SwapPoolsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      * @param index The index to set the value at.
      * @param value The pools to set.
      */
@@ -79,15 +83,18 @@ public object SwapPoolsResponseKt {
     @kotlin.jvm.JvmName("setPools")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool) {
       _builder.setPools(index, value)
-    }/**
-     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1 [json_name = "pools"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SwapPoolsResponse.SwapPool pools = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearPools")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool, PoolsProxy>.clear() {
       _builder.clearPools()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializeswapPool")
   public inline fun swapPool(block: counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse.SwapPool =
     counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.Dsl._create(counters.minter.grpc.client.SwapPoolsResponse.SwapPool.newBuilder()).apply { block() }._build()
   public object SwapPoolKt {
@@ -107,7 +114,7 @@ public object SwapPoolsResponseKt {
       internal fun _build(): counters.minter.grpc.client.SwapPoolsResponse.SwapPool = _builder.build()
 
       /**
-       * <code>uint64 id = 5 [json_name = "id"];</code>
+       * <code>uint64 id = 5;</code>
        */
       public var id: kotlin.Long
         @JvmName("getId")
@@ -117,14 +124,14 @@ public object SwapPoolsResponseKt {
           _builder.setId(value)
         }
       /**
-       * <code>uint64 id = 5 [json_name = "id"];</code>
+       * <code>uint64 id = 5;</code>
        */
       public fun clearId() {
         _builder.clearId()
       }
 
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        */
       public var price: kotlin.String
         @JvmName("getPrice")
@@ -134,14 +141,14 @@ public object SwapPoolsResponseKt {
           _builder.setPrice(value)
         }
       /**
-       * <code>string price = 4 [json_name = "price"];</code>
+       * <code>string price = 4;</code>
        */
       public fun clearPrice() {
         _builder.clearPrice()
       }
 
       /**
-       * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+       * <code>uint64 coin0 = 6;</code>
        */
       public var coin0: kotlin.Long
         @JvmName("getCoin0")
@@ -151,14 +158,14 @@ public object SwapPoolsResponseKt {
           _builder.setCoin0(value)
         }
       /**
-       * <code>uint64 coin0 = 6 [json_name = "coin0"];</code>
+       * <code>uint64 coin0 = 6;</code>
        */
       public fun clearCoin0() {
         _builder.clearCoin0()
       }
 
       /**
-       * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+       * <code>uint64 coin1 = 7;</code>
        */
       public var coin1: kotlin.Long
         @JvmName("getCoin1")
@@ -168,14 +175,14 @@ public object SwapPoolsResponseKt {
           _builder.setCoin1(value)
         }
       /**
-       * <code>uint64 coin1 = 7 [json_name = "coin1"];</code>
+       * <code>uint64 coin1 = 7;</code>
        */
       public fun clearCoin1() {
         _builder.clearCoin1()
       }
 
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        */
       public var amount0: kotlin.String
         @JvmName("getAmount0")
@@ -185,14 +192,14 @@ public object SwapPoolsResponseKt {
           _builder.setAmount0(value)
         }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0"];</code>
+       * <code>string amount0 = 1;</code>
        */
       public fun clearAmount0() {
         _builder.clearAmount0()
       }
 
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        */
       public var amount1: kotlin.String
         @JvmName("getAmount1")
@@ -202,14 +209,14 @@ public object SwapPoolsResponseKt {
           _builder.setAmount1(value)
         }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1"];</code>
+       * <code>string amount1 = 2;</code>
        */
       public fun clearAmount1() {
         _builder.clearAmount1()
       }
 
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        */
       public var liquidity: kotlin.String
         @JvmName("getLiquidity")
@@ -219,7 +226,7 @@ public object SwapPoolsResponseKt {
           _builder.setLiquidity(value)
         }
       /**
-       * <code>string liquidity = 3 [json_name = "liquidity"];</code>
+       * <code>string liquidity = 3;</code>
        */
       public fun clearLiquidity() {
         _builder.clearLiquidity()
@@ -232,7 +239,7 @@ public object SwapPoolsResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class OrdersSellProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
        public val ordersSell: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>
         @kotlin.jvm.JvmSynthetic
@@ -240,15 +247,16 @@ public object SwapPoolsResponseKt {
           _builder.getOrdersSellList()
         )
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        * @param value The ordersSell to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addOrdersSell")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.add(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         _builder.addOrdersSell(value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        * @param value The ordersSell to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -256,16 +264,18 @@ public object SwapPoolsResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.plusAssign(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        * @param values The ordersSell to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllOrdersSell")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder>) {
         _builder.addAllOrdersSell(values)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        * @param values The ordersSell to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -273,8 +283,9 @@ public object SwapPoolsResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        * @param index The index to set the value at.
        * @param value The ordersSell to set.
        */
@@ -282,14 +293,17 @@ public object SwapPoolsResponseKt {
       @kotlin.jvm.JvmName("setOrdersSell")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         _builder.setOrdersSell(index, value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8 [json_name = "ordersSell"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_sell = 8;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearOrdersSell")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersSellProxy>.clear() {
         _builder.clearOrdersSell()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -297,7 +311,7 @@ public object SwapPoolsResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class OrdersBuyProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
        public val ordersBuy: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>
         @kotlin.jvm.JvmSynthetic
@@ -305,15 +319,16 @@ public object SwapPoolsResponseKt {
           _builder.getOrdersBuyList()
         )
       /**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        * @param value The ordersBuy to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addOrdersBuy")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.add(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         _builder.addOrdersBuy(value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        * @param value The ordersBuy to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -321,16 +336,18 @@ public object SwapPoolsResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.plusAssign(value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        * @param values The ordersBuy to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllOrdersBuy")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder>) {
         _builder.addAllOrdersBuy(values)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        * @param values The ordersBuy to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -338,8 +355,9 @@ public object SwapPoolsResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        * @param index The index to set the value at.
        * @param value The ordersBuy to set.
        */
@@ -347,15 +365,18 @@ public object SwapPoolsResponseKt {
       @kotlin.jvm.JvmName("setOrdersBuy")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder) {
         _builder.setOrdersBuy(index, value)
-      }/**
-       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9 [json_name = "ordersBuy"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.SwapPoolsResponse.SwapPool.LimitOrder orders_buy = 9;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearOrdersBuy")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder, OrdersBuyProxy>.clear() {
         _builder.clearOrdersBuy()
-      }}
-    @kotlin.jvm.JvmSynthetic
+      }
+
+    }
+    @kotlin.jvm.JvmName("-initializelimitOrder")
     public inline fun limitOrder(block: counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.LimitOrderKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder =
       counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.LimitOrderKt.Dsl._create(counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.newBuilder()).apply { block() }._build()
     public object LimitOrderKt {
@@ -375,7 +396,7 @@ public object SwapPoolsResponseKt {
         internal fun _build(): counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder = _builder.build()
 
         /**
-         * <code>uint64 id = 7 [json_name = "id"];</code>
+         * <code>uint64 id = 7;</code>
          */
         public var id: kotlin.Long
           @JvmName("getId")
@@ -385,14 +406,14 @@ public object SwapPoolsResponseKt {
             _builder.setId(value)
           }
         /**
-         * <code>uint64 id = 7 [json_name = "id"];</code>
+         * <code>uint64 id = 7;</code>
          */
         public fun clearId() {
           _builder.clearId()
         }
 
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          */
         public var wantSell: kotlin.String
           @JvmName("getWantSell")
@@ -402,14 +423,14 @@ public object SwapPoolsResponseKt {
             _builder.setWantSell(value)
           }
         /**
-         * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+         * <code>string want_sell = 3;</code>
          */
         public fun clearWantSell() {
           _builder.clearWantSell()
         }
 
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          */
         public var wantBuy: kotlin.String
           @JvmName("getWantBuy")
@@ -419,14 +440,14 @@ public object SwapPoolsResponseKt {
             _builder.setWantBuy(value)
           }
         /**
-         * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+         * <code>string want_buy = 4;</code>
          */
         public fun clearWantBuy() {
           _builder.clearWantBuy()
         }
 
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          */
         public var price: kotlin.String
           @JvmName("getPrice")
@@ -436,14 +457,14 @@ public object SwapPoolsResponseKt {
             _builder.setPrice(value)
           }
         /**
-         * <code>string price = 8 [json_name = "price"];</code>
+         * <code>string price = 8;</code>
          */
         public fun clearPrice() {
           _builder.clearPrice()
         }
 
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          */
         public var owner: kotlin.String
           @JvmName("getOwner")
@@ -453,14 +474,14 @@ public object SwapPoolsResponseKt {
             _builder.setOwner(value)
           }
         /**
-         * <code>string owner = 5 [json_name = "owner"];</code>
+         * <code>string owner = 5;</code>
          */
         public fun clearOwner() {
           _builder.clearOwner()
         }
 
         /**
-         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * <code>uint64 height = 6;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -470,7 +491,7 @@ public object SwapPoolsResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 6 [json_name = "height"];</code>
+         * <code>uint64 height = 6;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
@@ -482,9 +503,12 @@ public object SwapPoolsResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SwapPoolsResponse.copy(block: counters.minter.grpc.client.SwapPoolsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse =
   counters.minter.grpc.client.SwapPoolsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SwapPoolsResponse.SwapPool.copy(block: counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse.SwapPool =
   counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder.copy(block: counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.LimitOrderKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsResponse.SwapPool.LimitOrder =
   counters.minter.grpc.client.SwapPoolsResponseKt.SwapPoolKt.LimitOrderKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

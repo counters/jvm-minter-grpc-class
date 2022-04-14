@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoin")
 public inline fun coin(block: counters.minter.grpc.client.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.Coin =
   counters.minter.grpc.client.CoinKt.Dsl._create(counters.minter.grpc.client.Coin.newBuilder()).apply { block() }._build()
 public object CoinKt {
@@ -25,11 +25,11 @@ public object CoinKt {
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public var id: kotlin.Long
       @JvmName("getId")
@@ -41,18 +41,18 @@ public object CoinKt {
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;": &#92;"0&#92;", &#92;"symbol&#92;": &#92;"BIP&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public var symbol: kotlin.String
       @JvmName("getSymbol")
@@ -62,7 +62,7 @@ public object CoinKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public fun clearSymbol() {
       _builder.clearSymbol()
@@ -72,3 +72,4 @@ public object CoinKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.Coin.copy(block: counters.minter.grpc.client.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.Coin =
   counters.minter.grpc.client.CoinKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

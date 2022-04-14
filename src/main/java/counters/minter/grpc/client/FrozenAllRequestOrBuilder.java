@@ -8,42 +8,42 @@ public interface FrozenAllRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+   * <code>uint64 start_height = 1;</code>
    * @return The startHeight.
    */
   long getStartHeight();
 
   /**
-   * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+   * <code>uint64 end_height = 2;</code>
    * @return The endHeight.
    */
   long getEndHeight();
 
   /**
-   * <code>uint64 height = 3 [json_name = "height"];</code>
+   * <code>uint64 height = 3;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @return A list containing the addresses.
    */
   java.util.List<java.lang.String>
       getAddressesList();
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @return The count of addresses.
    */
   int getAddressesCount();
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @param index The index of the element to return.
    * @return The addresses at the given index.
    */
   java.lang.String getAddresses(int index);
   /**
-   * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+   * <code>repeated string addresses = 4;</code>
    * @param index The index of the value to return.
    * @return The bytes of the addresses at the given index.
    */
@@ -51,17 +51,17 @@ public interface FrozenAllRequestOrBuilder extends
       getAddressesBytes(int index);
 
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @return A list containing the coinIds.
    */
   java.util.List<java.lang.Long> getCoinIdsList();
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @return The count of coinIds.
    */
   int getCoinIdsCount();
   /**
-   * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+   * <code>repeated uint64 coin_ids = 5;</code>
    * @param index The index of the element to return.
    * @return The coinIds at the given index.
    */

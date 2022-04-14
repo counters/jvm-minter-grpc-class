@@ -81,6 +81,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -105,7 +107,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN0_FIELD_NUMBER = 1;
   private long coin0_;
   /**
-   * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+   * <code>uint64 coin0 = 1;</code>
    * @return The coin0.
    */
   @java.lang.Override
@@ -116,7 +118,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN1_FIELD_NUMBER = 2;
   private long coin1_;
   /**
-   * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+   * <code>uint64 coin1 = 2;</code>
    * @return The coin1.
    */
   @java.lang.Override
@@ -127,7 +129,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROVIDER_FIELD_NUMBER = 3;
   private volatile java.lang.Object provider_;
   /**
-   * <code>string provider = 3 [json_name = "provider"];</code>
+   * <code>string provider = 3;</code>
    * @return The provider.
    */
   @java.lang.Override
@@ -144,7 +146,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string provider = 3 [json_name = "provider"];</code>
+   * <code>string provider = 3;</code>
    * @return The bytes for provider.
    */
   @java.lang.Override
@@ -165,7 +167,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 4;
   private long height_;
   /**
-   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * <code>uint64 height = 4;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -531,7 +533,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin0_ ;
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      * @return The coin0.
      */
     @java.lang.Override
@@ -539,7 +541,7 @@ private static final long serialVersionUID = 0L;
       return coin0_;
     }
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      * @param value The coin0 to set.
      * @return This builder for chaining.
      */
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin0() {
@@ -562,7 +564,7 @@ private static final long serialVersionUID = 0L;
 
     private long coin1_ ;
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      * @return The coin1.
      */
     @java.lang.Override
@@ -570,7 +572,7 @@ private static final long serialVersionUID = 0L;
       return coin1_;
     }
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      * @param value The coin1 to set.
      * @return This builder for chaining.
      */
@@ -581,7 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCoin1() {
@@ -593,7 +595,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object provider_ = "";
     /**
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      * @return The provider.
      */
     public java.lang.String getProvider() {
@@ -609,7 +611,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      * @return The bytes for provider.
      */
     public com.google.protobuf.ByteString
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      * @param value The provider to set.
      * @return This builder for chaining.
      */
@@ -641,7 +643,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearProvider() {
@@ -651,7 +653,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string provider = 3 [json_name = "provider"];</code>
+     * <code>string provider = 3;</code>
      * @param value The bytes for provider to set.
      * @return This builder for chaining.
      */
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -677,7 +679,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -688,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

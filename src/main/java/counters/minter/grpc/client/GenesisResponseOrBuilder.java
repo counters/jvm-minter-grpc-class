@@ -8,74 +8,74 @@ public interface GenesisResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
+   * <code>string genesis_time = 1;</code>
    * @return The genesisTime.
    */
   java.lang.String getGenesisTime();
   /**
-   * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
+   * <code>string genesis_time = 1;</code>
    * @return The bytes for genesisTime.
    */
   com.google.protobuf.ByteString
       getGenesisTimeBytes();
 
   /**
-   * <code>string chain_id = 2 [json_name = "chainId"];</code>
+   * <code>string chain_id = 2;</code>
    * @return The chainId.
    */
   java.lang.String getChainId();
   /**
-   * <code>string chain_id = 2 [json_name = "chainId"];</code>
+   * <code>string chain_id = 2;</code>
    * @return The bytes for chainId.
    */
   com.google.protobuf.ByteString
       getChainIdBytes();
 
   /**
-   * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
+   * <code>uint64 initial_height = 6;</code>
    * @return The initialHeight.
    */
   long getInitialHeight();
 
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
    * @return Whether the consensusParams field is set.
    */
   boolean hasConsensusParams();
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
    * @return The consensusParams.
    */
   counters.minter.grpc.client.GenesisResponse.ConsensusParams getConsensusParams();
   /**
-   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+   * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
    */
   counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder getConsensusParamsOrBuilder();
 
   /**
-   * <code>string app_hash = 4 [json_name = "appHash"];</code>
+   * <code>string app_hash = 4;</code>
    * @return The appHash.
    */
   java.lang.String getAppHash();
   /**
-   * <code>string app_hash = 4 [json_name = "appHash"];</code>
+   * <code>string app_hash = 4;</code>
    * @return The bytes for appHash.
    */
   com.google.protobuf.ByteString
       getAppHashBytes();
 
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
    * @return Whether the appState field is set.
    */
   boolean hasAppState();
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
    * @return The appState.
    */
   counters.minter.grpc.client.GenesisResponse.AppState getAppState();
   /**
-   * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+   * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
    */
   counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder getAppStateOrBuilder();
 }

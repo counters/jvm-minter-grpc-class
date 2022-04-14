@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeditCandidateCommission")
 public inline fun editCandidateCommission(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateCommission =
   counters.minter.grpc.client.EditCandidateCommissionKt.Dsl._create(counters.minter.grpc.client.EditCandidateCommission.newBuilder()).apply { block() }._build()
 public object EditCandidateCommissionKt {
@@ -23,7 +23,7 @@ public object EditCandidateCommissionKt {
     internal fun _build(): counters.minter.grpc.client.EditCandidateCommission = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -33,14 +33,14 @@ public object EditCandidateCommissionKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 commission = 2 [json_name = "commission"];</code>
+     * <code>uint64 commission = 2;</code>
      */
     public var commission: kotlin.Long
       @JvmName("getCommission")
@@ -50,7 +50,7 @@ public object EditCandidateCommissionKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>uint64 commission = 2 [json_name = "commission"];</code>
+     * <code>uint64 commission = 2;</code>
      */
     public fun clearCommission() {
       _builder.clearCommission()
@@ -60,3 +60,4 @@ public object EditCandidateCommissionKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EditCandidateCommission.copy(block: counters.minter.grpc.client.EditCandidateCommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateCommission =
   counters.minter.grpc.client.EditCandidateCommissionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

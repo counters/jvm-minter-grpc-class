@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecreateMultisigData")
 public inline fun createMultisigData(block: counters.minter.grpc.client.CreateMultisigDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CreateMultisigData =
   counters.minter.grpc.client.CreateMultisigDataKt.Dsl._create(counters.minter.grpc.client.CreateMultisigData.newBuilder()).apply { block() }._build()
 public object CreateMultisigDataKt {
@@ -23,7 +23,7 @@ public object CreateMultisigDataKt {
     internal fun _build(): counters.minter.grpc.client.CreateMultisigData = _builder.build()
 
     /**
-     * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+     * <code>uint64 threshold = 1;</code>
      */
     public var threshold: kotlin.Long
       @JvmName("getThreshold")
@@ -33,7 +33,7 @@ public object CreateMultisigDataKt {
         _builder.setThreshold(value)
       }
     /**
-     * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+     * <code>uint64 threshold = 1;</code>
      */
     public fun clearThreshold() {
       _builder.clearThreshold()
@@ -46,7 +46,7 @@ public object CreateMultisigDataKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class WeightsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      */
      public val weights: com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -54,7 +54,7 @@ public object CreateMultisigDataKt {
         _builder.getWeightsList()
       )
     /**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param value The weights to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -62,7 +62,7 @@ public object CreateMultisigDataKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.add(value: kotlin.Long) {
       _builder.addWeights(value)
     }/**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param value The weights to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -71,7 +71,7 @@ public object CreateMultisigDataKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param values The weights to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -79,7 +79,7 @@ public object CreateMultisigDataKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllWeights(values)
     }/**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param values The weights to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -88,7 +88,7 @@ public object CreateMultisigDataKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      * @param index The index to set the value at.
      * @param value The weights to set.
      */
@@ -97,7 +97,7 @@ public object CreateMultisigDataKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setWeights(index, value)
     }/**
-     * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+     * <code>repeated uint64 weights = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearWeights")
@@ -111,7 +111,7 @@ public object CreateMultisigDataKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @return A list containing the addresses.
      */
     public val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
@@ -120,7 +120,7 @@ public object CreateMultisigDataKt {
         _builder.getAddressesList()
       )
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -129,7 +129,7 @@ public object CreateMultisigDataKt {
       _builder.addAddresses(value)
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -139,7 +139,7 @@ public object CreateMultisigDataKt {
       add(value)
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -148,7 +148,7 @@ public object CreateMultisigDataKt {
       _builder.addAllAddresses(values)
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -158,7 +158,7 @@ public object CreateMultisigDataKt {
       addAll(values)
     }
     /**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      */
@@ -167,7 +167,7 @@ public object CreateMultisigDataKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setAddresses(index, value)
     }/**
-     * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearAddresses")
@@ -178,3 +178,4 @@ public object CreateMultisigDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CreateMultisigData.copy(block: counters.minter.grpc.client.CreateMultisigDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CreateMultisigData =
   counters.minter.grpc.client.CreateMultisigDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

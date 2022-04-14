@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeremoveCandidateEvent")
 public inline fun removeCandidateEvent(block: counters.minter.grpc.client.RemoveCandidateEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveCandidateEvent =
   counters.minter.grpc.client.RemoveCandidateEventKt.Dsl._create(counters.minter.grpc.client.RemoveCandidateEvent.newBuilder()).apply { block() }._build()
 public object RemoveCandidateEventKt {
@@ -23,7 +23,7 @@ public object RemoveCandidateEventKt {
     internal fun _build(): counters.minter.grpc.client.RemoveCandidateEvent = _builder.build()
 
     /**
-     * <code>string candidate_pub_key = 1 [json_name = "candidatePubKey"];</code>
+     * <code>string candidate_pub_key = 1;</code>
      */
     public var candidatePubKey: kotlin.String
       @JvmName("getCandidatePubKey")
@@ -33,7 +33,7 @@ public object RemoveCandidateEventKt {
         _builder.setCandidatePubKey(value)
       }
     /**
-     * <code>string candidate_pub_key = 1 [json_name = "candidatePubKey"];</code>
+     * <code>string candidate_pub_key = 1;</code>
      */
     public fun clearCandidatePubKey() {
       _builder.clearCandidatePubKey()
@@ -43,3 +43,4 @@ public object RemoveCandidateEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.RemoveCandidateEvent.copy(block: counters.minter.grpc.client.RemoveCandidateEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveCandidateEvent =
   counters.minter.grpc.client.RemoveCandidateEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

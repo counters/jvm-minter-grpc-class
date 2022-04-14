@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializefrozenAllRequest")
 public inline fun frozenAllRequest(block: counters.minter.grpc.client.FrozenAllRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenAllRequest =
   counters.minter.grpc.client.FrozenAllRequestKt.Dsl._create(counters.minter.grpc.client.FrozenAllRequest.newBuilder()).apply { block() }._build()
 public object FrozenAllRequestKt {
@@ -23,7 +23,7 @@ public object FrozenAllRequestKt {
     internal fun _build(): counters.minter.grpc.client.FrozenAllRequest = _builder.build()
 
     /**
-     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * <code>uint64 start_height = 1;</code>
      */
     public var startHeight: kotlin.Long
       @JvmName("getStartHeight")
@@ -33,14 +33,14 @@ public object FrozenAllRequestKt {
         _builder.setStartHeight(value)
       }
     /**
-     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * <code>uint64 start_height = 1;</code>
      */
     public fun clearStartHeight() {
       _builder.clearStartHeight()
     }
 
     /**
-     * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+     * <code>uint64 end_height = 2;</code>
      */
     public var endHeight: kotlin.Long
       @JvmName("getEndHeight")
@@ -50,14 +50,14 @@ public object FrozenAllRequestKt {
         _builder.setEndHeight(value)
       }
     /**
-     * <code>uint64 end_height = 2 [json_name = "endHeight"];</code>
+     * <code>uint64 end_height = 2;</code>
      */
     public fun clearEndHeight() {
       _builder.clearEndHeight()
     }
 
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -67,7 +67,7 @@ public object FrozenAllRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -80,7 +80,7 @@ public object FrozenAllRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @return A list containing the addresses.
      */
     public val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
@@ -89,7 +89,7 @@ public object FrozenAllRequestKt {
         _builder.getAddressesList()
       )
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -98,7 +98,7 @@ public object FrozenAllRequestKt {
       _builder.addAddresses(value)
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param value The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -108,7 +108,7 @@ public object FrozenAllRequestKt {
       add(value)
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -117,7 +117,7 @@ public object FrozenAllRequestKt {
       _builder.addAllAddresses(values)
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param values The addresses to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -127,7 +127,7 @@ public object FrozenAllRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      * @param index The index to set the value at.
      * @param value The addresses to set.
      */
@@ -136,7 +136,7 @@ public object FrozenAllRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setAddresses(index, value)
     }/**
-     * <code>repeated string addresses = 4 [json_name = "addresses"];</code>
+     * <code>repeated string addresses = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearAddresses")
@@ -150,7 +150,7 @@ public object FrozenAllRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class CoinIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      */
      public val coinIds: com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -158,7 +158,7 @@ public object FrozenAllRequestKt {
         _builder.getCoinIdsList()
       )
     /**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param value The coinIds to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -166,7 +166,7 @@ public object FrozenAllRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>.add(value: kotlin.Long) {
       _builder.addCoinIds(value)
     }/**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param value The coinIds to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -175,7 +175,7 @@ public object FrozenAllRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param values The coinIds to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -183,7 +183,7 @@ public object FrozenAllRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllCoinIds(values)
     }/**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param values The coinIds to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -192,7 +192,7 @@ public object FrozenAllRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      * @param index The index to set the value at.
      * @param value The coinIds to set.
      */
@@ -201,7 +201,7 @@ public object FrozenAllRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, CoinIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setCoinIds(index, value)
     }/**
-     * <code>repeated uint64 coin_ids = 5 [json_name = "coinIds"];</code>
+     * <code>repeated uint64 coin_ids = 5;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearCoinIds")
@@ -212,3 +212,4 @@ public object FrozenAllRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.FrozenAllRequest.copy(block: counters.minter.grpc.client.FrozenAllRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenAllRequest =
   counters.minter.grpc.client.FrozenAllRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -8,24 +8,24 @@ public interface UpdatedBlockRewardEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>string value = 1;</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>string value = 1;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
       getValueBytes();
 
   /**
-   * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+   * <code>string value_locked_stake_rewards = 2;</code>
    * @return The valueLockedStakeRewards.
    */
   java.lang.String getValueLockedStakeRewards();
   /**
-   * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+   * <code>string value_locked_stake_rewards = 2;</code>
    * @return The bytes for valueLockedStakeRewards.
    */
   com.google.protobuf.ByteString

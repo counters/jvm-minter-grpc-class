@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesubscribeResponse")
 public inline fun subscribeResponse(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse =
   counters.minter.grpc.client.SubscribeResponseKt.Dsl._create(counters.minter.grpc.client.SubscribeResponse.newBuilder()).apply { block() }._build()
 public object SubscribeResponseKt {
@@ -23,7 +23,7 @@ public object SubscribeResponseKt {
     internal fun _build(): counters.minter.grpc.client.SubscribeResponse = _builder.build()
 
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public var query: kotlin.String
       @JvmName("getQuery")
@@ -33,14 +33,14 @@ public object SubscribeResponseKt {
         _builder.setQuery(value)
       }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public fun clearQuery() {
       _builder.clearQuery()
     }
 
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public var data: com.google.protobuf.Struct
       @JvmName("getData")
@@ -50,13 +50,13 @@ public object SubscribeResponseKt {
         _builder.setData(value)
       }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public fun clearData() {
       _builder.clearData()
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      * @return Whether the data field is set.
      */
     public fun hasData(): kotlin.Boolean {
@@ -70,7 +70,7 @@ public object SubscribeResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
      public val events: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -78,15 +78,16 @@ public object SubscribeResponseKt {
         _builder.getEventsList()
       )
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addEvents")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.add(value: counters.minter.grpc.client.SubscribeResponse.Event) {
       _builder.addEvents(value)
-    }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param value The events to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -94,16 +95,18 @@ public object SubscribeResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(value: counters.minter.grpc.client.SubscribeResponse.Event) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllEvents")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
       _builder.addAllEvents(values)
-    }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param values The events to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -111,8 +114,9 @@ public object SubscribeResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.SubscribeResponse.Event>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      * @param index The index to set the value at.
      * @param value The events to set.
      */
@@ -120,15 +124,18 @@ public object SubscribeResponseKt {
     @kotlin.jvm.JvmName("setEvents")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.SubscribeResponse.Event) {
       _builder.setEvents(index, value)
-    }/**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearEvents")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.SubscribeResponse.Event, EventsProxy>.clear() {
       _builder.clearEvents()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializeevent")
   public inline fun event(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse.Event =
     counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl._create(counters.minter.grpc.client.SubscribeResponse.Event.newBuilder()).apply { block() }._build()
   public object EventKt {
@@ -148,7 +155,7 @@ public object SubscribeResponseKt {
       internal fun _build(): counters.minter.grpc.client.SubscribeResponse.Event = _builder.build()
 
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        */
       public var key: kotlin.String
         @JvmName("getKey")
@@ -158,7 +165,7 @@ public object SubscribeResponseKt {
           _builder.setKey(value)
         }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        */
       public fun clearKey() {
         _builder.clearKey()
@@ -171,7 +178,7 @@ public object SubscribeResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class EventsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @return A list containing the events.
        */
       public val events: com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>
@@ -180,7 +187,7 @@ public object SubscribeResponseKt {
           _builder.getEventsList()
         )
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The events to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -189,7 +196,7 @@ public object SubscribeResponseKt {
         _builder.addEvents(value)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The events to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -199,7 +206,7 @@ public object SubscribeResponseKt {
         add(value)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param values The events to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -208,7 +215,7 @@ public object SubscribeResponseKt {
         _builder.addAllEvents(values)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param values The events to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -218,7 +225,7 @@ public object SubscribeResponseKt {
         addAll(values)
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param index The index to set the value at.
        * @param value The events to set.
        */
@@ -227,7 +234,7 @@ public object SubscribeResponseKt {
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, EventsProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setEvents(index, value)
       }/**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearEvents")
@@ -239,6 +246,11 @@ public object SubscribeResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SubscribeResponse.copy(block: counters.minter.grpc.client.SubscribeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse =
   counters.minter.grpc.client.SubscribeResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SubscribeResponse.Event.copy(block: counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeResponse.Event =
   counters.minter.grpc.client.SubscribeResponseKt.EventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.SubscribeResponseOrBuilder.dataOrNull: com.google.protobuf.Struct?
+  get() = if (hasData()) getData() else null
+

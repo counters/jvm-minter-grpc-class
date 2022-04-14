@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeswapPoolsRequest")
 public inline fun swapPoolsRequest(block: counters.minter.grpc.client.SwapPoolsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsRequest =
   counters.minter.grpc.client.SwapPoolsRequestKt.Dsl._create(counters.minter.grpc.client.SwapPoolsRequest.newBuilder()).apply { block() }._build()
 public object SwapPoolsRequestKt {
@@ -23,7 +23,7 @@ public object SwapPoolsRequestKt {
     internal fun _build(): counters.minter.grpc.client.SwapPoolsRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,14 +33,14 @@ public object SwapPoolsRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>bool orders = 2 [json_name = "orders"];</code>
+     * <code>bool orders = 2;</code>
      */
     public var orders: kotlin.Boolean
       @JvmName("getOrders")
@@ -50,7 +50,7 @@ public object SwapPoolsRequestKt {
         _builder.setOrders(value)
       }
     /**
-     * <code>bool orders = 2 [json_name = "orders"];</code>
+     * <code>bool orders = 2;</code>
      */
     public fun clearOrders() {
       _builder.clearOrders()
@@ -60,3 +60,4 @@ public object SwapPoolsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SwapPoolsRequest.copy(block: counters.minter.grpc.client.SwapPoolsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolsRequest =
   counters.minter.grpc.client.SwapPoolsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

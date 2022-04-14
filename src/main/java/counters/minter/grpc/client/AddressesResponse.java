@@ -73,6 +73,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -111,25 +113,25 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     java.util.List<counters.minter.grpc.client.AddressBalance> 
         getBalanceList();
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     counters.minter.grpc.client.AddressBalance getBalance(int index);
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     int getBalanceCount();
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
         getBalanceOrBuilderList();
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     counters.minter.grpc.client.AddressBalanceOrBuilder getBalanceOrBuilder(
         int index);
@@ -139,7 +141,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     java.util.List<counters.minter.grpc.client.AddressDelegatedBalance> 
         getDelegatedList();
@@ -148,7 +150,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     counters.minter.grpc.client.AddressDelegatedBalance getDelegated(int index);
     /**
@@ -156,7 +158,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     int getDelegatedCount();
     /**
@@ -164,7 +166,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     java.util.List<? extends counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder> 
         getDelegatedOrBuilderList();
@@ -173,7 +175,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder getDelegatedOrBuilder(
         int index);
@@ -183,7 +185,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     java.util.List<counters.minter.grpc.client.AddressBalance> 
         getTotalList();
@@ -192,7 +194,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     counters.minter.grpc.client.AddressBalance getTotal(int index);
     /**
@@ -200,7 +202,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     int getTotalCount();
     /**
@@ -208,7 +210,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
         getTotalOrBuilderList();
@@ -217,47 +219,47 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     counters.minter.grpc.client.AddressBalanceOrBuilder getTotalOrBuilder(
         int index);
 
     /**
-     * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 3;</code>
      * @return The transactionCount.
      */
     long getTransactionCount();
 
     /**
-     * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 5;</code>
      * @return The bipValue.
      */
     java.lang.String getBipValue();
     /**
-     * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 5;</code>
      * @return The bytes for bipValue.
      */
     com.google.protobuf.ByteString
         getBipValueBytes();
 
     /**
-     * <code>uint64 locked_stake_until_block = 7 [json_name = "lockedStakeUntilBlock"];</code>
+     * <code>uint64 locked_stake_until_block = 7;</code>
      * @return The lockedStakeUntilBlock.
      */
     long getLockedStakeUntilBlock();
 
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      * @return Whether the multisig field is set.
      */
     boolean hasMultisig();
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      * @return The multisig.
      */
     counters.minter.grpc.client.Multisig getMultisig();
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      */
     counters.minter.grpc.client.MultisigOrBuilder getMultisigOrBuilder();
   }
@@ -378,6 +380,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -411,14 +415,14 @@ private static final long serialVersionUID = 0L;
     public static final int BALANCE_FIELD_NUMBER = 2;
     private java.util.List<counters.minter.grpc.client.AddressBalance> balance_;
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.AddressBalance> getBalanceList() {
       return balance_;
     }
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
@@ -426,21 +430,21 @@ private static final long serialVersionUID = 0L;
       return balance_;
     }
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     @java.lang.Override
     public int getBalanceCount() {
       return balance_.size();
     }
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressBalance getBalance(int index) {
       return balance_.get(index);
     }
     /**
-     * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+     * <code>repeated .api_pb.AddressBalance balance = 2;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressBalanceOrBuilder getBalanceOrBuilder(
@@ -455,7 +459,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.AddressDelegatedBalance> getDelegatedList() {
@@ -466,7 +470,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder> 
@@ -478,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     @java.lang.Override
     public int getDelegatedCount() {
@@ -489,7 +493,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressDelegatedBalance getDelegated(int index) {
@@ -500,7 +504,7 @@ private static final long serialVersionUID = 0L;
      * Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+     * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder getDelegatedOrBuilder(
@@ -515,7 +519,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     @java.lang.Override
     public java.util.List<counters.minter.grpc.client.AddressBalance> getTotalList() {
@@ -526,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
@@ -538,7 +542,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     @java.lang.Override
     public int getTotalCount() {
@@ -549,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressBalance getTotal(int index) {
@@ -560,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * Sum of balance and delegated by coins. Filled in when request delegated
      * </pre>
      *
-     * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+     * <code>repeated .api_pb.AddressBalance total = 4;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.AddressBalanceOrBuilder getTotalOrBuilder(
@@ -571,7 +575,7 @@ private static final long serialVersionUID = 0L;
     public static final int TRANSACTION_COUNT_FIELD_NUMBER = 3;
     private long transactionCount_;
     /**
-     * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 3;</code>
      * @return The transactionCount.
      */
     @java.lang.Override
@@ -582,7 +586,7 @@ private static final long serialVersionUID = 0L;
     public static final int BIP_VALUE_FIELD_NUMBER = 5;
     private volatile java.lang.Object bipValue_;
     /**
-     * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 5;</code>
      * @return The bipValue.
      */
     @java.lang.Override
@@ -599,7 +603,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 5;</code>
      * @return The bytes for bipValue.
      */
     @java.lang.Override
@@ -620,7 +624,7 @@ private static final long serialVersionUID = 0L;
     public static final int LOCKED_STAKE_UNTIL_BLOCK_FIELD_NUMBER = 7;
     private long lockedStakeUntilBlock_;
     /**
-     * <code>uint64 locked_stake_until_block = 7 [json_name = "lockedStakeUntilBlock"];</code>
+     * <code>uint64 locked_stake_until_block = 7;</code>
      * @return The lockedStakeUntilBlock.
      */
     @java.lang.Override
@@ -631,7 +635,7 @@ private static final long serialVersionUID = 0L;
     public static final int MULTISIG_FIELD_NUMBER = 8;
     private counters.minter.grpc.client.Multisig multisig_;
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      * @return Whether the multisig field is set.
      */
     @java.lang.Override
@@ -639,7 +643,7 @@ private static final long serialVersionUID = 0L;
       return multisig_ != null;
     }
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      * @return The multisig.
      */
     @java.lang.Override
@@ -647,7 +651,7 @@ private static final long serialVersionUID = 0L;
       return multisig_ == null ? counters.minter.grpc.client.Multisig.getDefaultInstance() : multisig_;
     }
     /**
-     * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+     * <code>.api_pb.Multisig multisig = 8;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.MultisigOrBuilder getMultisigOrBuilder() {
@@ -1202,7 +1206,7 @@ private static final long serialVersionUID = 0L;
           counters.minter.grpc.client.AddressBalance, counters.minter.grpc.client.AddressBalance.Builder, counters.minter.grpc.client.AddressBalanceOrBuilder> balanceBuilder_;
 
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressBalance> getBalanceList() {
         if (balanceBuilder_ == null) {
@@ -1212,7 +1216,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public int getBalanceCount() {
         if (balanceBuilder_ == null) {
@@ -1222,7 +1226,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public counters.minter.grpc.client.AddressBalance getBalance(int index) {
         if (balanceBuilder_ == null) {
@@ -1232,7 +1236,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder setBalance(
           int index, counters.minter.grpc.client.AddressBalance value) {
@@ -1249,7 +1253,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder setBalance(
           int index, counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1263,7 +1267,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder addBalance(counters.minter.grpc.client.AddressBalance value) {
         if (balanceBuilder_ == null) {
@@ -1279,7 +1283,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder addBalance(
           int index, counters.minter.grpc.client.AddressBalance value) {
@@ -1296,7 +1300,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder addBalance(
           counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1310,7 +1314,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder addBalance(
           int index, counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1324,7 +1328,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder addAllBalance(
           java.lang.Iterable<? extends counters.minter.grpc.client.AddressBalance> values) {
@@ -1339,7 +1343,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder clearBalance() {
         if (balanceBuilder_ == null) {
@@ -1352,7 +1356,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public Builder removeBalance(int index) {
         if (balanceBuilder_ == null) {
@@ -1365,14 +1369,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder getBalanceBuilder(
           int index) {
         return getBalanceFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public counters.minter.grpc.client.AddressBalanceOrBuilder getBalanceOrBuilder(
           int index) {
@@ -1382,7 +1386,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
            getBalanceOrBuilderList() {
@@ -1393,14 +1397,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder addBalanceBuilder() {
         return getBalanceFieldBuilder().addBuilder(
             counters.minter.grpc.client.AddressBalance.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder addBalanceBuilder(
           int index) {
@@ -1408,7 +1412,7 @@ private static final long serialVersionUID = 0L;
             index, counters.minter.grpc.client.AddressBalance.getDefaultInstance());
       }
       /**
-       * <code>repeated .api_pb.AddressBalance balance = 2 [json_name = "balance"];</code>
+       * <code>repeated .api_pb.AddressBalance balance = 2;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressBalance.Builder> 
            getBalanceBuilderList() {
@@ -1446,7 +1450,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressDelegatedBalance> getDelegatedList() {
         if (delegatedBuilder_ == null) {
@@ -1460,7 +1464,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public int getDelegatedCount() {
         if (delegatedBuilder_ == null) {
@@ -1474,7 +1478,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public counters.minter.grpc.client.AddressDelegatedBalance getDelegated(int index) {
         if (delegatedBuilder_ == null) {
@@ -1488,7 +1492,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder setDelegated(
           int index, counters.minter.grpc.client.AddressDelegatedBalance value) {
@@ -1509,7 +1513,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder setDelegated(
           int index, counters.minter.grpc.client.AddressDelegatedBalance.Builder builderForValue) {
@@ -1527,7 +1531,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder addDelegated(counters.minter.grpc.client.AddressDelegatedBalance value) {
         if (delegatedBuilder_ == null) {
@@ -1547,7 +1551,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder addDelegated(
           int index, counters.minter.grpc.client.AddressDelegatedBalance value) {
@@ -1568,7 +1572,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder addDelegated(
           counters.minter.grpc.client.AddressDelegatedBalance.Builder builderForValue) {
@@ -1586,7 +1590,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder addDelegated(
           int index, counters.minter.grpc.client.AddressDelegatedBalance.Builder builderForValue) {
@@ -1604,7 +1608,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder addAllDelegated(
           java.lang.Iterable<? extends counters.minter.grpc.client.AddressDelegatedBalance> values) {
@@ -1623,7 +1627,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder clearDelegated() {
         if (delegatedBuilder_ == null) {
@@ -1640,7 +1644,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public Builder removeDelegated(int index) {
         if (delegatedBuilder_ == null) {
@@ -1657,7 +1661,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public counters.minter.grpc.client.AddressDelegatedBalance.Builder getDelegatedBuilder(
           int index) {
@@ -1668,7 +1672,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder getDelegatedOrBuilder(
           int index) {
@@ -1682,7 +1686,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder> 
            getDelegatedOrBuilderList() {
@@ -1697,7 +1701,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public counters.minter.grpc.client.AddressDelegatedBalance.Builder addDelegatedBuilder() {
         return getDelegatedFieldBuilder().addBuilder(
@@ -1708,7 +1712,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public counters.minter.grpc.client.AddressDelegatedBalance.Builder addDelegatedBuilder(
           int index) {
@@ -1720,7 +1724,7 @@ private static final long serialVersionUID = 0L;
        * Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6 [json_name = "delegated"];</code>
+       * <code>repeated .api_pb.AddressDelegatedBalance delegated = 6;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressDelegatedBalance.Builder> 
            getDelegatedBuilderList() {
@@ -1758,7 +1762,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressBalance> getTotalList() {
         if (totalBuilder_ == null) {
@@ -1772,7 +1776,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public int getTotalCount() {
         if (totalBuilder_ == null) {
@@ -1786,7 +1790,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public counters.minter.grpc.client.AddressBalance getTotal(int index) {
         if (totalBuilder_ == null) {
@@ -1800,7 +1804,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder setTotal(
           int index, counters.minter.grpc.client.AddressBalance value) {
@@ -1821,7 +1825,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder setTotal(
           int index, counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1839,7 +1843,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder addTotal(counters.minter.grpc.client.AddressBalance value) {
         if (totalBuilder_ == null) {
@@ -1859,7 +1863,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder addTotal(
           int index, counters.minter.grpc.client.AddressBalance value) {
@@ -1880,7 +1884,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder addTotal(
           counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1898,7 +1902,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder addTotal(
           int index, counters.minter.grpc.client.AddressBalance.Builder builderForValue) {
@@ -1916,7 +1920,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder addAllTotal(
           java.lang.Iterable<? extends counters.minter.grpc.client.AddressBalance> values) {
@@ -1935,7 +1939,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder clearTotal() {
         if (totalBuilder_ == null) {
@@ -1952,7 +1956,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public Builder removeTotal(int index) {
         if (totalBuilder_ == null) {
@@ -1969,7 +1973,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder getTotalBuilder(
           int index) {
@@ -1980,7 +1984,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public counters.minter.grpc.client.AddressBalanceOrBuilder getTotalOrBuilder(
           int index) {
@@ -1994,7 +1998,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public java.util.List<? extends counters.minter.grpc.client.AddressBalanceOrBuilder> 
            getTotalOrBuilderList() {
@@ -2009,7 +2013,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder addTotalBuilder() {
         return getTotalFieldBuilder().addBuilder(
@@ -2020,7 +2024,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public counters.minter.grpc.client.AddressBalance.Builder addTotalBuilder(
           int index) {
@@ -2032,7 +2036,7 @@ private static final long serialVersionUID = 0L;
        * Sum of balance and delegated by coins. Filled in when request delegated
        * </pre>
        *
-       * <code>repeated .api_pb.AddressBalance total = 4 [json_name = "total"];</code>
+       * <code>repeated .api_pb.AddressBalance total = 4;</code>
        */
       public java.util.List<counters.minter.grpc.client.AddressBalance.Builder> 
            getTotalBuilderList() {
@@ -2055,7 +2059,7 @@ private static final long serialVersionUID = 0L;
 
       private long transactionCount_ ;
       /**
-       * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+       * <code>uint64 transaction_count = 3;</code>
        * @return The transactionCount.
        */
       @java.lang.Override
@@ -2063,7 +2067,7 @@ private static final long serialVersionUID = 0L;
         return transactionCount_;
       }
       /**
-       * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+       * <code>uint64 transaction_count = 3;</code>
        * @param value The transactionCount to set.
        * @return This builder for chaining.
        */
@@ -2074,7 +2078,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 transaction_count = 3 [json_name = "transactionCount"];</code>
+       * <code>uint64 transaction_count = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransactionCount() {
@@ -2086,7 +2090,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object bipValue_ = "";
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        * @return The bipValue.
        */
       public java.lang.String getBipValue() {
@@ -2102,7 +2106,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        * @return The bytes for bipValue.
        */
       public com.google.protobuf.ByteString
@@ -2119,7 +2123,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        * @param value The bipValue to set.
        * @return This builder for chaining.
        */
@@ -2134,7 +2138,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearBipValue() {
@@ -2144,7 +2148,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string bip_value = 5 [json_name = "bipValue"];</code>
+       * <code>string bip_value = 5;</code>
        * @param value The bytes for bipValue to set.
        * @return This builder for chaining.
        */
@@ -2162,7 +2166,7 @@ private static final long serialVersionUID = 0L;
 
       private long lockedStakeUntilBlock_ ;
       /**
-       * <code>uint64 locked_stake_until_block = 7 [json_name = "lockedStakeUntilBlock"];</code>
+       * <code>uint64 locked_stake_until_block = 7;</code>
        * @return The lockedStakeUntilBlock.
        */
       @java.lang.Override
@@ -2170,7 +2174,7 @@ private static final long serialVersionUID = 0L;
         return lockedStakeUntilBlock_;
       }
       /**
-       * <code>uint64 locked_stake_until_block = 7 [json_name = "lockedStakeUntilBlock"];</code>
+       * <code>uint64 locked_stake_until_block = 7;</code>
        * @param value The lockedStakeUntilBlock to set.
        * @return This builder for chaining.
        */
@@ -2181,7 +2185,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 locked_stake_until_block = 7 [json_name = "lockedStakeUntilBlock"];</code>
+       * <code>uint64 locked_stake_until_block = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearLockedStakeUntilBlock() {
@@ -2195,14 +2199,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Multisig, counters.minter.grpc.client.Multisig.Builder, counters.minter.grpc.client.MultisigOrBuilder> multisigBuilder_;
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        * @return Whether the multisig field is set.
        */
       public boolean hasMultisig() {
         return multisigBuilder_ != null || multisig_ != null;
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        * @return The multisig.
        */
       public counters.minter.grpc.client.Multisig getMultisig() {
@@ -2213,7 +2217,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public Builder setMultisig(counters.minter.grpc.client.Multisig value) {
         if (multisigBuilder_ == null) {
@@ -2229,7 +2233,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public Builder setMultisig(
           counters.minter.grpc.client.Multisig.Builder builderForValue) {
@@ -2243,7 +2247,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public Builder mergeMultisig(counters.minter.grpc.client.Multisig value) {
         if (multisigBuilder_ == null) {
@@ -2261,7 +2265,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public Builder clearMultisig() {
         if (multisigBuilder_ == null) {
@@ -2275,7 +2279,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public counters.minter.grpc.client.Multisig.Builder getMultisigBuilder() {
         
@@ -2283,7 +2287,7 @@ private static final long serialVersionUID = 0L;
         return getMultisigFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       public counters.minter.grpc.client.MultisigOrBuilder getMultisigOrBuilder() {
         if (multisigBuilder_ != null) {
@@ -2294,7 +2298,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Multisig multisig = 8 [json_name = "multisig"];</code>
+       * <code>.api_pb.Multisig multisig = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Multisig, counters.minter.grpc.client.Multisig.Builder, counters.minter.grpc.client.MultisigOrBuilder> 
@@ -2389,7 +2393,7 @@ private static final long serialVersionUID = 0L;
     return internalGetAddresses().getMap().size();
   }
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
 
   @java.lang.Override
@@ -2407,7 +2411,7 @@ private static final long serialVersionUID = 0L;
     return getAddressesMap();
   }
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   @java.lang.Override
 
@@ -2415,7 +2419,7 @@ private static final long serialVersionUID = 0L;
     return internalGetAddresses().getMap();
   }
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   @java.lang.Override
 
@@ -2428,7 +2432,7 @@ private static final long serialVersionUID = 0L;
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+   * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
    */
   @java.lang.Override
 
@@ -2806,7 +2810,7 @@ private static final long serialVersionUID = 0L;
       return internalGetAddresses().getMap().size();
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
 
     @java.lang.Override
@@ -2824,7 +2828,7 @@ private static final long serialVersionUID = 0L;
       return getAddressesMap();
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @java.lang.Override
 
@@ -2832,7 +2836,7 @@ private static final long serialVersionUID = 0L;
       return internalGetAddresses().getMap();
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @java.lang.Override
 
@@ -2845,7 +2849,7 @@ private static final long serialVersionUID = 0L;
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     @java.lang.Override
 
@@ -2866,7 +2870,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
 
     public Builder removeAddresses(
@@ -2885,7 +2889,7 @@ private static final long serialVersionUID = 0L;
       return internalGetMutableAddresses().getMutableMap();
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
     public Builder putAddresses(
         java.lang.String key,
@@ -2900,7 +2904,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3 [json_name = "addresses"];</code>
+     * <code>map&lt;string, .api_pb.AddressesResponse.Result&gt; addresses = 3;</code>
      */
 
     public Builder putAllAddresses(

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializerecreateCoinData")
 public inline fun recreateCoinData(block: counters.minter.grpc.client.RecreateCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateCoinData =
   counters.minter.grpc.client.RecreateCoinDataKt.Dsl._create(counters.minter.grpc.client.RecreateCoinData.newBuilder()).apply { block() }._build()
 public object RecreateCoinDataKt {
@@ -23,7 +23,7 @@ public object RecreateCoinDataKt {
     internal fun _build(): counters.minter.grpc.client.RecreateCoinData = _builder.build()
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
     public var name: kotlin.String
       @JvmName("getName")
@@ -33,14 +33,14 @@ public object RecreateCoinDataKt {
         _builder.setName(value)
       }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      */
     public fun clearName() {
       _builder.clearName()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public var symbol: kotlin.String
       @JvmName("getSymbol")
@@ -50,14 +50,14 @@ public object RecreateCoinDataKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public fun clearSymbol() {
       _builder.clearSymbol()
     }
 
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      */
     public var initialAmount: kotlin.String
       @JvmName("getInitialAmount")
@@ -67,14 +67,14 @@ public object RecreateCoinDataKt {
         _builder.setInitialAmount(value)
       }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      */
     public fun clearInitialAmount() {
       _builder.clearInitialAmount()
     }
 
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      */
     public var initialReserve: kotlin.String
       @JvmName("getInitialReserve")
@@ -84,14 +84,14 @@ public object RecreateCoinDataKt {
         _builder.setInitialReserve(value)
       }
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      */
     public fun clearInitialReserve() {
       _builder.clearInitialReserve()
     }
 
     /**
-     * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+     * <code>uint64 constant_reserve_ratio = 5;</code>
      */
     public var constantReserveRatio: kotlin.Long
       @JvmName("getConstantReserveRatio")
@@ -101,14 +101,14 @@ public object RecreateCoinDataKt {
         _builder.setConstantReserveRatio(value)
       }
     /**
-     * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+     * <code>uint64 constant_reserve_ratio = 5;</code>
      */
     public fun clearConstantReserveRatio() {
       _builder.clearConstantReserveRatio()
     }
 
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      */
     public var maxSupply: kotlin.String
       @JvmName("getMaxSupply")
@@ -118,7 +118,7 @@ public object RecreateCoinDataKt {
         _builder.setMaxSupply(value)
       }
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      */
     public fun clearMaxSupply() {
       _builder.clearMaxSupply()
@@ -128,3 +128,4 @@ public object RecreateCoinDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.RecreateCoinData.copy(block: counters.minter.grpc.client.RecreateCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RecreateCoinData =
   counters.minter.grpc.client.RecreateCoinDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

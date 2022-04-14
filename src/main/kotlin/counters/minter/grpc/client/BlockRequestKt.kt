@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeblockRequest")
 public inline fun blockRequest(block: counters.minter.grpc.client.BlockRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockRequest =
   counters.minter.grpc.client.BlockRequestKt.Dsl._create(counters.minter.grpc.client.BlockRequest.newBuilder()).apply { block() }._build()
 public object BlockRequestKt {
@@ -23,7 +23,7 @@ public object BlockRequestKt {
     internal fun _build(): counters.minter.grpc.client.BlockRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,7 +33,7 @@ public object BlockRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -46,7 +46,7 @@ public object BlockRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class FieldsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      */
      public val fields: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -54,7 +54,7 @@ public object BlockRequestKt {
         _builder.getFieldsList()
       )
     /**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param value The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -62,7 +62,7 @@ public object BlockRequestKt {
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.add(value: counters.minter.grpc.client.BlockField) {
       _builder.addFields(value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param value The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -71,7 +71,7 @@ public object BlockRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(value: counters.minter.grpc.client.BlockField) {
       add(value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param values The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -79,7 +79,7 @@ public object BlockRequestKt {
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       _builder.addAllFields(values)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param values The fields to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -88,7 +88,7 @@ public object BlockRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.BlockField>) {
       addAll(values)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
      */
@@ -97,7 +97,7 @@ public object BlockRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.BlockField, FieldsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.BlockField) {
       _builder.setFields(index, value)
     }/**
-     * <code>repeated .api_pb.BlockField fields = 2 [json_name = "fields"];</code>
+     * <code>repeated .api_pb.BlockField fields = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearFields")
@@ -105,7 +105,7 @@ public object BlockRequestKt {
       _builder.clearFields()
     }
     /**
-     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * <code>bool failed_txs = 3;</code>
      */
     public var failedTxs: kotlin.Boolean
       @JvmName("getFailedTxs")
@@ -115,14 +115,14 @@ public object BlockRequestKt {
         _builder.setFailedTxs(value)
       }
     /**
-     * <code>bool failed_txs = 3 [json_name = "failedTxs"];</code>
+     * <code>bool failed_txs = 3;</code>
      */
     public fun clearFailedTxs() {
       _builder.clearFailedTxs()
     }
 
     /**
-     * <code>bool events = 4 [json_name = "events"];</code>
+     * <code>bool events = 4;</code>
      */
     public var events: kotlin.Boolean
       @JvmName("getEvents")
@@ -132,7 +132,7 @@ public object BlockRequestKt {
         _builder.setEvents(value)
       }
     /**
-     * <code>bool events = 4 [json_name = "events"];</code>
+     * <code>bool events = 4;</code>
      */
     public fun clearEvents() {
       _builder.clearEvents()
@@ -142,3 +142,4 @@ public object BlockRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.BlockRequest.copy(block: counters.minter.grpc.client.BlockRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BlockRequest =
   counters.minter.grpc.client.BlockRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

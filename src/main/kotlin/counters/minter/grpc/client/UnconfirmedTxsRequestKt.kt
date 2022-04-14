@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeunconfirmedTxsRequest")
 public inline fun unconfirmedTxsRequest(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
   counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl._create(counters.minter.grpc.client.UnconfirmedTxsRequest.newBuilder()).apply { block() }._build()
 public object UnconfirmedTxsRequestKt {
@@ -23,7 +23,7 @@ public object UnconfirmedTxsRequestKt {
     internal fun _build(): counters.minter.grpc.client.UnconfirmedTxsRequest = _builder.build()
 
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      */
     public var limit: kotlin.Int
       @JvmName("getLimit")
@@ -33,7 +33,7 @@ public object UnconfirmedTxsRequestKt {
         _builder.setLimit(value)
       }
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      */
     public fun clearLimit() {
       _builder.clearLimit()
@@ -43,3 +43,4 @@ public object UnconfirmedTxsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.UnconfirmedTxsRequest.copy(block: counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnconfirmedTxsRequest =
   counters.minter.grpc.client.UnconfirmedTxsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

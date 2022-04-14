@@ -10,104 +10,104 @@ public interface CoinInfoResponseOrBuilder extends
   /**
    * <pre>
    *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-   * };
+   *example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+   *};
    * </pre>
    *
-   * <code>uint64 id = 6 [json_name = "id"];</code>
+   * <code>uint64 id = 6;</code>
    * @return The id.
    */
   long getId();
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString
       getSymbolBytes();
 
   /**
-   * <code>string volume = 3 [json_name = "volume"];</code>
+   * <code>string volume = 3;</code>
    * @return The volume.
    */
   java.lang.String getVolume();
   /**
-   * <code>string volume = 3 [json_name = "volume"];</code>
+   * <code>string volume = 3;</code>
    * @return The bytes for volume.
    */
   com.google.protobuf.ByteString
       getVolumeBytes();
 
   /**
-   * <code>uint64 crr = 4 [json_name = "crr"];</code>
+   * <code>uint64 crr = 4;</code>
    * @return The crr.
    */
   long getCrr();
 
   /**
-   * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+   * <code>string reserve_balance = 5;</code>
    * @return The reserveBalance.
    */
   java.lang.String getReserveBalance();
   /**
-   * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+   * <code>string reserve_balance = 5;</code>
    * @return The bytes for reserveBalance.
    */
   com.google.protobuf.ByteString
       getReserveBalanceBytes();
 
   /**
-   * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 8;</code>
    * @return The maxSupply.
    */
   java.lang.String getMaxSupply();
   /**
-   * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 8;</code>
    * @return The bytes for maxSupply.
    */
   com.google.protobuf.ByteString
       getMaxSupplyBytes();
 
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    * @return Whether the ownerAddress field is set.
    */
   boolean hasOwnerAddress();
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    * @return The ownerAddress.
    */
   com.google.protobuf.StringValue getOwnerAddress();
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    */
   com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder();
 
   /**
-   * <code>bool mintable = 9 [json_name = "mintable"];</code>
+   * <code>bool mintable = 9;</code>
    * @return The mintable.
    */
   boolean getMintable();
 
   /**
-   * <code>bool burnable = 10 [json_name = "burnable"];</code>
+   * <code>bool burnable = 10;</code>
    * @return The burnable.
    */
   boolean getBurnable();

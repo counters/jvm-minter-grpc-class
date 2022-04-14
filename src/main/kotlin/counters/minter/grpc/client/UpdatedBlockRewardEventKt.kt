@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeupdatedBlockRewardEvent")
 public inline fun updatedBlockRewardEvent(block: counters.minter.grpc.client.UpdatedBlockRewardEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdatedBlockRewardEvent =
   counters.minter.grpc.client.UpdatedBlockRewardEventKt.Dsl._create(counters.minter.grpc.client.UpdatedBlockRewardEvent.newBuilder()).apply { block() }._build()
 public object UpdatedBlockRewardEventKt {
@@ -23,7 +23,7 @@ public object UpdatedBlockRewardEventKt {
     internal fun _build(): counters.minter.grpc.client.UpdatedBlockRewardEvent = _builder.build()
 
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -33,14 +33,14 @@ public object UpdatedBlockRewardEventKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
     }
 
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      */
     public var valueLockedStakeRewards: kotlin.String
       @JvmName("getValueLockedStakeRewards")
@@ -50,7 +50,7 @@ public object UpdatedBlockRewardEventKt {
         _builder.setValueLockedStakeRewards(value)
       }
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      */
     public fun clearValueLockedStakeRewards() {
       _builder.clearValueLockedStakeRewards()
@@ -60,3 +60,4 @@ public object UpdatedBlockRewardEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.UpdatedBlockRewardEvent.copy(block: counters.minter.grpc.client.UpdatedBlockRewardEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdatedBlockRewardEvent =
   counters.minter.grpc.client.UpdatedBlockRewardEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -73,6 +73,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,7 +99,7 @@ private static final long serialVersionUID = 0L;
   public static final int SYMBOL_FIELD_NUMBER = 1;
   private volatile java.lang.Object symbol_;
   /**
-   * <code>string symbol = 1 [json_name = "symbol"];</code>
+   * <code>string symbol = 1;</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -114,7 +116,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string symbol = 1 [json_name = "symbol"];</code>
+   * <code>string symbol = 1;</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -135,7 +137,7 @@ private static final long serialVersionUID = 0L;
   public static final int NEW_OWNER_FIELD_NUMBER = 2;
   private volatile java.lang.Object newOwner_;
   /**
-   * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+   * <code>string new_owner = 2;</code>
    * @return The newOwner.
    */
   @java.lang.Override
@@ -152,7 +154,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+   * <code>string new_owner = 2;</code>
    * @return The bytes for newOwner.
    */
   @java.lang.Override
@@ -491,7 +493,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object symbol_ = "";
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -507,7 +509,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -524,7 +526,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -539,7 +541,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -549,7 +551,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * <code>string symbol = 1;</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */
@@ -567,7 +569,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object newOwner_ = "";
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      * @return The newOwner.
      */
     public java.lang.String getNewOwner() {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      * @return The bytes for newOwner.
      */
     public com.google.protobuf.ByteString
@@ -600,7 +602,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      * @param value The newOwner to set.
      * @return This builder for chaining.
      */
@@ -615,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearNewOwner() {
@@ -625,7 +627,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * <code>string new_owner = 2;</code>
      * @param value The bytes for newOwner to set.
      * @return This builder for chaining.
      */

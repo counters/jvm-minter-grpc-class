@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeswapPoolRequest")
 public inline fun swapPoolRequest(block: counters.minter.grpc.client.SwapPoolRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolRequest =
   counters.minter.grpc.client.SwapPoolRequestKt.Dsl._create(counters.minter.grpc.client.SwapPoolRequest.newBuilder()).apply { block() }._build()
 public object SwapPoolRequestKt {
@@ -23,7 +23,7 @@ public object SwapPoolRequestKt {
     internal fun _build(): counters.minter.grpc.client.SwapPoolRequest = _builder.build()
 
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      */
     public var coin0: kotlin.Long
       @JvmName("getCoin0")
@@ -33,14 +33,14 @@ public object SwapPoolRequestKt {
         _builder.setCoin0(value)
       }
     /**
-     * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+     * <code>uint64 coin0 = 1;</code>
      */
     public fun clearCoin0() {
       _builder.clearCoin0()
     }
 
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      */
     public var coin1: kotlin.Long
       @JvmName("getCoin1")
@@ -50,14 +50,14 @@ public object SwapPoolRequestKt {
         _builder.setCoin1(value)
       }
     /**
-     * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+     * <code>uint64 coin1 = 2;</code>
      */
     public fun clearCoin1() {
       _builder.clearCoin1()
     }
 
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -67,7 +67,7 @@ public object SwapPoolRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -77,3 +77,4 @@ public object SwapPoolRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SwapPoolRequest.copy(block: counters.minter.grpc.client.SwapPoolRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SwapPoolRequest =
   counters.minter.grpc.client.SwapPoolRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

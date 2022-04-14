@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int BLOCKS_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.BlockResponse> blocks_;
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.BlockResponse> getBlocksList() {
     return blocks_;
   }
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.BlockResponseOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return blocks_;
   }
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
    */
   @java.lang.Override
   public int getBlocksCount() {
     return blocks_.size();
   }
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.BlockResponse getBlocks(int index) {
     return blocks_.get(index);
   }
   /**
-   * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+   * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.BlockResponseOrBuilder getBlocksOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.BlockResponse, counters.minter.grpc.client.BlockResponse.Builder, counters.minter.grpc.client.BlockResponseOrBuilder> blocksBuilder_;
 
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.BlockResponse> getBlocksList() {
       if (blocksBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public int getBlocksCount() {
       if (blocksBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public counters.minter.grpc.client.BlockResponse getBlocks(int index) {
       if (blocksBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder setBlocks(
         int index, counters.minter.grpc.client.BlockResponse value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder setBlocks(
         int index, counters.minter.grpc.client.BlockResponse.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder addBlocks(counters.minter.grpc.client.BlockResponse value) {
       if (blocksBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder addBlocks(
         int index, counters.minter.grpc.client.BlockResponse value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder addBlocks(
         counters.minter.grpc.client.BlockResponse.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder addBlocks(
         int index, counters.minter.grpc.client.BlockResponse.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder addAllBlocks(
         java.lang.Iterable<? extends counters.minter.grpc.client.BlockResponse> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder clearBlocks() {
       if (blocksBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public Builder removeBlocks(int index) {
       if (blocksBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public counters.minter.grpc.client.BlockResponse.Builder getBlocksBuilder(
         int index) {
       return getBlocksFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public counters.minter.grpc.client.BlockResponseOrBuilder getBlocksOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.BlockResponseOrBuilder> 
          getBlocksOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public counters.minter.grpc.client.BlockResponse.Builder addBlocksBuilder() {
       return getBlocksFieldBuilder().addBuilder(
           counters.minter.grpc.client.BlockResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public counters.minter.grpc.client.BlockResponse.Builder addBlocksBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.BlockResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.BlockResponse blocks = 1 [json_name = "blocks"];</code>
+     * <code>repeated .api_pb.BlockResponse blocks = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.BlockResponse.Builder> 
          getBlocksBuilderList() {

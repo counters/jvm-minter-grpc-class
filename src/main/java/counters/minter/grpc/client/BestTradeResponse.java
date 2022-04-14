@@ -89,6 +89,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -116,7 +118,7 @@ private static final long serialVersionUID = 0L;
   public static final int PATH_FIELD_NUMBER = 1;
   private com.google.protobuf.Internal.LongList path_;
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @return A list containing the path.
    */
   @java.lang.Override
@@ -125,14 +127,14 @@ private static final long serialVersionUID = 0L;
     return path_;
   }
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @return The count of path.
    */
   public int getPathCount() {
     return path_.size();
   }
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @param index The index of the element to return.
    * @return The path at the given index.
    */
@@ -144,7 +146,7 @@ private static final long serialVersionUID = 0L;
   public static final int RESULT_FIELD_NUMBER = 2;
   private volatile java.lang.Object result_;
   /**
-   * <code>string result = 2 [json_name = "result"];</code>
+   * <code>string result = 2;</code>
    * @return The result.
    */
   @java.lang.Override
@@ -161,7 +163,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string result = 2 [json_name = "result"];</code>
+   * <code>string result = 2;</code>
    * @return The bytes for result.
    */
   @java.lang.Override
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @return A list containing the path.
      */
     public java.util.List<java.lang.Long>
@@ -545,14 +547,14 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(path_) : path_;
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @return The count of path.
      */
     public int getPathCount() {
       return path_.size();
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param index The index of the element to return.
      * @return The path at the given index.
      */
@@ -560,7 +562,7 @@ private static final long serialVersionUID = 0L;
       return path_.getLong(index);
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param index The index to set the value at.
      * @param value The path to set.
      * @return This builder for chaining.
@@ -573,7 +575,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param value The path to add.
      * @return This builder for chaining.
      */
@@ -584,7 +586,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param values The path to add.
      * @return This builder for chaining.
      */
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearPath() {
@@ -609,7 +611,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object result_ = "";
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      * @return The result.
      */
     public java.lang.String getResult() {
@@ -625,7 +627,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      * @return The bytes for result.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +644,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      * @param value The result to set.
      * @return This builder for chaining.
      */
@@ -657,7 +659,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearResult() {
@@ -667,7 +669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      * @param value The bytes for result to set.
      * @return This builder for chaining.
      */

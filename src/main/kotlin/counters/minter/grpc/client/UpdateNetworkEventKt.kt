@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeupdateNetworkEvent")
 public inline fun updateNetworkEvent(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateNetworkEvent =
   counters.minter.grpc.client.UpdateNetworkEventKt.Dsl._create(counters.minter.grpc.client.UpdateNetworkEvent.newBuilder()).apply { block() }._build()
 public object UpdateNetworkEventKt {
@@ -23,7 +23,7 @@ public object UpdateNetworkEventKt {
     internal fun _build(): counters.minter.grpc.client.UpdateNetworkEvent = _builder.build()
 
     /**
-     * <code>string version = 1 [json_name = "version"];</code>
+     * <code>string version = 1;</code>
      */
     public var version: kotlin.String
       @JvmName("getVersion")
@@ -33,7 +33,7 @@ public object UpdateNetworkEventKt {
         _builder.setVersion(value)
       }
     /**
-     * <code>string version = 1 [json_name = "version"];</code>
+     * <code>string version = 1;</code>
      */
     public fun clearVersion() {
       _builder.clearVersion()
@@ -43,3 +43,4 @@ public object UpdateNetworkEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.UpdateNetworkEvent.copy(block: counters.minter.grpc.client.UpdateNetworkEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateNetworkEvent =
   counters.minter.grpc.client.UpdateNetworkEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -8,13 +8,13 @@ public interface SwapPoolsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   long getHeight();
 
   /**
-   * <code>bool orders = 2 [json_name = "orders"];</code>
+   * <code>bool orders = 2;</code>
    * @return The orders.
    */
   boolean getOrders();

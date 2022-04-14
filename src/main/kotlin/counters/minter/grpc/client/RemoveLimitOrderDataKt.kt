@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeremoveLimitOrderData")
 public inline fun removeLimitOrderData(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLimitOrderData =
   counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl._create(counters.minter.grpc.client.RemoveLimitOrderData.newBuilder()).apply { block() }._build()
 public object RemoveLimitOrderDataKt {
@@ -23,7 +23,7 @@ public object RemoveLimitOrderDataKt {
     internal fun _build(): counters.minter.grpc.client.RemoveLimitOrderData = _builder.build()
 
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public var id: kotlin.Long
       @JvmName("getId")
@@ -33,7 +33,7 @@ public object RemoveLimitOrderDataKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public fun clearId() {
       _builder.clearId()
@@ -43,3 +43,4 @@ public object RemoveLimitOrderDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.RemoveLimitOrderData.copy(block: counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.RemoveLimitOrderData =
   counters.minter.grpc.client.RemoveLimitOrderDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

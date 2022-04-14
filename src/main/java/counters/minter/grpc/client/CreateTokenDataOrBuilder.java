@@ -8,61 +8,61 @@ public interface CreateTokenDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString
       getSymbolBytes();
 
   /**
-   * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+   * <code>string initial_amount = 3;</code>
    * @return The initialAmount.
    */
   java.lang.String getInitialAmount();
   /**
-   * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+   * <code>string initial_amount = 3;</code>
    * @return The bytes for initialAmount.
    */
   com.google.protobuf.ByteString
       getInitialAmountBytes();
 
   /**
-   * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 4;</code>
    * @return The maxSupply.
    */
   java.lang.String getMaxSupply();
   /**
-   * <code>string max_supply = 4 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 4;</code>
    * @return The bytes for maxSupply.
    */
   com.google.protobuf.ByteString
       getMaxSupplyBytes();
 
   /**
-   * <code>bool mintable = 5 [json_name = "mintable"];</code>
+   * <code>bool mintable = 5;</code>
    * @return The mintable.
    */
   boolean getMintable();
 
   /**
-   * <code>bool burnable = 6 [json_name = "burnable"];</code>
+   * <code>bool burnable = 6;</code>
    * @return The burnable.
    */
   boolean getBurnable();

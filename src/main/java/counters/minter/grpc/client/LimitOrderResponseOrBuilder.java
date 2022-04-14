@@ -8,91 +8,91 @@ public interface LimitOrderResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 id = 7 [json_name = "id"];</code>
+   * <code>uint64 id = 7;</code>
    * @return The id.
    */
   long getId();
 
   /**
-   * <code>.api_pb.Coin coin_sell = 1 [json_name = "coinSell"];</code>
+   * <code>.api_pb.Coin coin_sell = 1;</code>
    * @return Whether the coinSell field is set.
    */
   boolean hasCoinSell();
   /**
-   * <code>.api_pb.Coin coin_sell = 1 [json_name = "coinSell"];</code>
+   * <code>.api_pb.Coin coin_sell = 1;</code>
    * @return The coinSell.
    */
   counters.minter.grpc.client.Coin getCoinSell();
   /**
-   * <code>.api_pb.Coin coin_sell = 1 [json_name = "coinSell"];</code>
+   * <code>.api_pb.Coin coin_sell = 1;</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinSellOrBuilder();
 
   /**
-   * <code>.api_pb.Coin coin_buy = 2 [json_name = "coinBuy"];</code>
+   * <code>.api_pb.Coin coin_buy = 2;</code>
    * @return Whether the coinBuy field is set.
    */
   boolean hasCoinBuy();
   /**
-   * <code>.api_pb.Coin coin_buy = 2 [json_name = "coinBuy"];</code>
+   * <code>.api_pb.Coin coin_buy = 2;</code>
    * @return The coinBuy.
    */
   counters.minter.grpc.client.Coin getCoinBuy();
   /**
-   * <code>.api_pb.Coin coin_buy = 2 [json_name = "coinBuy"];</code>
+   * <code>.api_pb.Coin coin_buy = 2;</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinBuyOrBuilder();
 
   /**
-   * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+   * <code>string want_sell = 3;</code>
    * @return The wantSell.
    */
   java.lang.String getWantSell();
   /**
-   * <code>string want_sell = 3 [json_name = "wantSell"];</code>
+   * <code>string want_sell = 3;</code>
    * @return The bytes for wantSell.
    */
   com.google.protobuf.ByteString
       getWantSellBytes();
 
   /**
-   * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+   * <code>string want_buy = 4;</code>
    * @return The wantBuy.
    */
   java.lang.String getWantBuy();
   /**
-   * <code>string want_buy = 4 [json_name = "wantBuy"];</code>
+   * <code>string want_buy = 4;</code>
    * @return The bytes for wantBuy.
    */
   com.google.protobuf.ByteString
       getWantBuyBytes();
 
   /**
-   * <code>string price = 8 [json_name = "price"];</code>
+   * <code>string price = 8;</code>
    * @return The price.
    */
   java.lang.String getPrice();
   /**
-   * <code>string price = 8 [json_name = "price"];</code>
+   * <code>string price = 8;</code>
    * @return The bytes for price.
    */
   com.google.protobuf.ByteString
       getPriceBytes();
 
   /**
-   * <code>string owner = 5 [json_name = "owner"];</code>
+   * <code>string owner = 5;</code>
    * @return The owner.
    */
   java.lang.String getOwner();
   /**
-   * <code>string owner = 5 [json_name = "owner"];</code>
+   * <code>string owner = 5;</code>
    * @return The bytes for owner.
    */
   com.google.protobuf.ByteString
       getOwnerBytes();
 
   /**
-   * <code>uint64 height = 6 [json_name = "height"];</code>
+   * <code>uint64 height = 6;</code>
    * @return The height.
    */
   long getHeight();

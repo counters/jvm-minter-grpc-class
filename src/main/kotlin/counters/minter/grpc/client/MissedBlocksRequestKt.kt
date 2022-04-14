@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemissedBlocksRequest")
 public inline fun missedBlocksRequest(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksRequest =
   counters.minter.grpc.client.MissedBlocksRequestKt.Dsl._create(counters.minter.grpc.client.MissedBlocksRequest.newBuilder()).apply { block() }._build()
 public object MissedBlocksRequestKt {
@@ -23,7 +23,7 @@ public object MissedBlocksRequestKt {
     internal fun _build(): counters.minter.grpc.client.MissedBlocksRequest = _builder.build()
 
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
     public var publicKey: kotlin.String
       @JvmName("getPublicKey")
@@ -33,14 +33,14 @@ public object MissedBlocksRequestKt {
         _builder.setPublicKey(value)
       }
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
     public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -50,7 +50,7 @@ public object MissedBlocksRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -60,3 +60,4 @@ public object MissedBlocksRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.MissedBlocksRequest.copy(block: counters.minter.grpc.client.MissedBlocksRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MissedBlocksRequest =
   counters.minter.grpc.client.MissedBlocksRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

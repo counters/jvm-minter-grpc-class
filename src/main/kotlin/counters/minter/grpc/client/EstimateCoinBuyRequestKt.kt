@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeestimateCoinBuyRequest")
 public inline fun estimateCoinBuyRequest(block: counters.minter.grpc.client.EstimateCoinBuyRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinBuyRequest =
   counters.minter.grpc.client.EstimateCoinBuyRequestKt.Dsl._create(counters.minter.grpc.client.EstimateCoinBuyRequest.newBuilder()).apply { block() }._build()
 public object EstimateCoinBuyRequestKt {
@@ -23,7 +23,7 @@ public object EstimateCoinBuyRequestKt {
     internal fun _build(): counters.minter.grpc.client.EstimateCoinBuyRequest = _builder.build()
 
     /**
-     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * <code>uint64 coin_id_to_buy = 1;</code>
      */
     public var coinIdToBuy: kotlin.Long
       @JvmName("getCoinIdToBuy")
@@ -33,13 +33,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinIdToBuy(value)
       }
     /**
-     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * <code>uint64 coin_id_to_buy = 1;</code>
      */
     public fun clearCoinIdToBuy() {
       _builder.clearCoinIdToBuy()
     }
     /**
-     * <code>uint64 coin_id_to_buy = 1 [json_name = "coinIdToBuy"];</code>
+     * <code>uint64 coin_id_to_buy = 1;</code>
      * @return Whether the coinIdToBuy field is set.
      */
     public fun hasCoinIdToBuy(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+     * <code>string coin_to_buy = 5;</code>
      */
     public var coinToBuy: kotlin.String
       @JvmName("getCoinToBuy")
@@ -57,13 +57,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+     * <code>string coin_to_buy = 5;</code>
      */
     public fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <code>string coin_to_buy = 5 [json_name = "coinToBuy"];</code>
+     * <code>string coin_to_buy = 5;</code>
      * @return Whether the coinToBuy field is set.
      */
     public fun hasCoinToBuy(): kotlin.Boolean {
@@ -71,7 +71,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * <code>uint64 coin_id_to_sell = 2;</code>
      */
     public var coinIdToSell: kotlin.Long
       @JvmName("getCoinIdToSell")
@@ -81,13 +81,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinIdToSell(value)
       }
     /**
-     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * <code>uint64 coin_id_to_sell = 2;</code>
      */
     public fun clearCoinIdToSell() {
       _builder.clearCoinIdToSell()
     }
     /**
-     * <code>uint64 coin_id_to_sell = 2 [json_name = "coinIdToSell"];</code>
+     * <code>uint64 coin_id_to_sell = 2;</code>
      * @return Whether the coinIdToSell field is set.
      */
     public fun hasCoinIdToSell(): kotlin.Boolean {
@@ -95,7 +95,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+     * <code>string coin_to_sell = 6;</code>
      */
     public var coinToSell: kotlin.String
       @JvmName("getCoinToSell")
@@ -105,13 +105,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+     * <code>string coin_to_sell = 6;</code>
      */
     public fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <code>string coin_to_sell = 6 [json_name = "coinToSell"];</code>
+     * <code>string coin_to_sell = 6;</code>
      * @return Whether the coinToSell field is set.
      */
     public fun hasCoinToSell(): kotlin.Boolean {
@@ -119,7 +119,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 3;</code>
      */
     public var valueToBuy: kotlin.String
       @JvmName("getValueToBuy")
@@ -129,14 +129,14 @@ public object EstimateCoinBuyRequestKt {
         _builder.setValueToBuy(value)
       }
     /**
-     * <code>string value_to_buy = 3 [json_name = "valueToBuy"];</code>
+     * <code>string value_to_buy = 3;</code>
      */
     public fun clearValueToBuy() {
       _builder.clearValueToBuy()
     }
 
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -146,14 +146,14 @@ public object EstimateCoinBuyRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * <code>uint64 coin_id_commission = 9;</code>
      */
     public var coinIdCommission: kotlin.Long
       @JvmName("getCoinIdCommission")
@@ -163,13 +163,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinIdCommission(value)
       }
     /**
-     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * <code>uint64 coin_id_commission = 9;</code>
      */
     public fun clearCoinIdCommission() {
       _builder.clearCoinIdCommission()
     }
     /**
-     * <code>uint64 coin_id_commission = 9 [json_name = "coinIdCommission"];</code>
+     * <code>uint64 coin_id_commission = 9;</code>
      * @return Whether the coinIdCommission field is set.
      */
     public fun hasCoinIdCommission(): kotlin.Boolean {
@@ -177,7 +177,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+     * <code>string coin_commission = 10;</code>
      */
     public var coinCommission: kotlin.String
       @JvmName("getCoinCommission")
@@ -187,13 +187,13 @@ public object EstimateCoinBuyRequestKt {
         _builder.setCoinCommission(value)
       }
     /**
-     * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+     * <code>string coin_commission = 10;</code>
      */
     public fun clearCoinCommission() {
       _builder.clearCoinCommission()
     }
     /**
-     * <code>string coin_commission = 10 [json_name = "coinCommission"];</code>
+     * <code>string coin_commission = 10;</code>
      * @return Whether the coinCommission field is set.
      */
     public fun hasCoinCommission(): kotlin.Boolean {
@@ -201,7 +201,7 @@ public object EstimateCoinBuyRequestKt {
     }
 
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 8;</code>
      */
     public var swapFrom: counters.minter.grpc.client.SwapFrom
       @JvmName("getSwapFrom")
@@ -211,7 +211,7 @@ public object EstimateCoinBuyRequestKt {
         _builder.setSwapFrom(value)
       }
     /**
-     * <code>.api_pb.SwapFrom swap_from = 8 [json_name = "swapFrom"];</code>
+     * <code>.api_pb.SwapFrom swap_from = 8;</code>
      */
     public fun clearSwapFrom() {
       _builder.clearSwapFrom()
@@ -224,7 +224,7 @@ public object EstimateCoinBuyRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class RouteProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      */
      public val route: com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>
       @kotlin.jvm.JvmSynthetic
@@ -232,7 +232,7 @@ public object EstimateCoinBuyRequestKt {
         _builder.getRouteList()
       )
     /**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      * @param value The route to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -240,7 +240,7 @@ public object EstimateCoinBuyRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>.add(value: kotlin.Long) {
       _builder.addRoute(value)
     }/**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      * @param value The route to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -249,7 +249,7 @@ public object EstimateCoinBuyRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      * @param values The route to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -257,7 +257,7 @@ public object EstimateCoinBuyRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllRoute(values)
     }/**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      * @param values The route to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -266,7 +266,7 @@ public object EstimateCoinBuyRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      * @param index The index to set the value at.
      * @param value The route to set.
      */
@@ -275,7 +275,7 @@ public object EstimateCoinBuyRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, RouteProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setRoute(index, value)
     }/**
-     * <code>repeated uint64 route = 11 [json_name = "route"];</code>
+     * <code>repeated uint64 route = 11;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearRoute")
@@ -307,3 +307,4 @@ public object EstimateCoinBuyRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EstimateCoinBuyRequest.copy(block: counters.minter.grpc.client.EstimateCoinBuyRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateCoinBuyRequest =
   counters.minter.grpc.client.EstimateCoinBuyRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -90,6 +90,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -126,7 +128,7 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      * @return Whether the latestBlockHeight field is set.
      */
     boolean hasLatestBlockHeight();
@@ -135,7 +137,7 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      * @return The latestBlockHeight.
      */
     com.google.protobuf.UInt64Value getLatestBlockHeight();
@@ -144,53 +146,53 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      */
     com.google.protobuf.UInt64ValueOrBuilder getLatestBlockHeightOrBuilder();
 
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      * @return Whether the nodeInfo field is set.
      */
     boolean hasNodeInfo();
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      * @return The nodeInfo.
      */
     counters.minter.grpc.client.NodeInfo getNodeInfo();
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      */
     counters.minter.grpc.client.NodeInfoOrBuilder getNodeInfoOrBuilder();
 
     /**
-     * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+     * <code>bool is_outbound = 1;</code>
      * @return The isOutbound.
      */
     boolean getIsOutbound();
 
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      * @return Whether the connectionStatus field is set.
      */
     boolean hasConnectionStatus();
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      * @return The connectionStatus.
      */
     counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus getConnectionStatus();
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      */
     counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatusOrBuilder getConnectionStatusOrBuilder();
 
     /**
-     * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+     * <code>string remote_ip = 3;</code>
      * @return The remoteIp.
      */
     java.lang.String getRemoteIp();
     /**
-     * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+     * <code>string remote_ip = 3;</code>
      * @return The bytes for remoteIp.
      */
     com.google.protobuf.ByteString
@@ -303,6 +305,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -329,61 +333,61 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint64 duration = 4 [json_name = "duration"];</code>
+       * <code>uint64 duration = 4;</code>
        * @return The duration.
        */
       long getDuration();
 
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        * @return Whether the sendMonitor field is set.
        */
       boolean hasSendMonitor();
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        * @return The sendMonitor.
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor getSendMonitor();
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getSendMonitorOrBuilder();
 
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        * @return Whether the recvMonitor field is set.
        */
       boolean hasRecvMonitor();
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        * @return The recvMonitor.
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor getRecvMonitor();
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getRecvMonitorOrBuilder();
 
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel> 
           getChannelsList();
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel getChannels(int index);
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       int getChannelsCount();
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       java.util.List<? extends counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder> 
           getChannelsOrBuilderList();
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder getChannelsOrBuilder(
           int index);
@@ -486,6 +490,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -515,85 +521,85 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>bool active = 13 [json_name = "active"];</code>
+         * <code>bool active = 13;</code>
          * @return The active.
          */
         boolean getActive();
 
         /**
-         * <code>string start = 1 [json_name = "start"];</code>
+         * <code>string start = 1;</code>
          * @return The start.
          */
         java.lang.String getStart();
         /**
-         * <code>string start = 1 [json_name = "start"];</code>
+         * <code>string start = 1;</code>
          * @return The bytes for start.
          */
         com.google.protobuf.ByteString
             getStartBytes();
 
         /**
-         * <code>int64 duration = 2 [json_name = "duration"];</code>
+         * <code>int64 duration = 2;</code>
          * @return The duration.
          */
         long getDuration();
 
         /**
-         * <code>int64 idle = 3 [json_name = "idle"];</code>
+         * <code>int64 idle = 3;</code>
          * @return The idle.
          */
         long getIdle();
 
         /**
-         * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+         * <code>int64 bytes = 4;</code>
          * @return The bytes.
          */
         long getBytes();
 
         /**
-         * <code>int64 samples = 5 [json_name = "samples"];</code>
+         * <code>int64 samples = 5;</code>
          * @return The samples.
          */
         long getSamples();
 
         /**
-         * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+         * <code>int64 inst_rate = 6;</code>
          * @return The instRate.
          */
         long getInstRate();
 
         /**
-         * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+         * <code>int64 cur_rate = 7;</code>
          * @return The curRate.
          */
         long getCurRate();
 
         /**
-         * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+         * <code>int64 avg_rate = 8;</code>
          * @return The avgRate.
          */
         long getAvgRate();
 
         /**
-         * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+         * <code>int64 peak_rate = 9;</code>
          * @return The peakRate.
          */
         long getPeakRate();
 
         /**
-         * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+         * <code>int64 bytes_rem = 10;</code>
          * @return The bytesRem.
          */
         long getBytesRem();
 
         /**
-         * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+         * <code>int64 time_rem = 11;</code>
          * @return The timeRem.
          */
         long getTimeRem();
 
         /**
-         * <code>uint64 progress = 12 [json_name = "progress"];</code>
+         * <code>uint64 progress = 12;</code>
          * @return The progress.
          */
         long getProgress();
@@ -721,6 +727,8 @@ private static final long serialVersionUID = 0L;
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -745,7 +753,7 @@ private static final long serialVersionUID = 0L;
         public static final int ACTIVE_FIELD_NUMBER = 13;
         private boolean active_;
         /**
-         * <code>bool active = 13 [json_name = "active"];</code>
+         * <code>bool active = 13;</code>
          * @return The active.
          */
         @java.lang.Override
@@ -756,7 +764,7 @@ private static final long serialVersionUID = 0L;
         public static final int START_FIELD_NUMBER = 1;
         private volatile java.lang.Object start_;
         /**
-         * <code>string start = 1 [json_name = "start"];</code>
+         * <code>string start = 1;</code>
          * @return The start.
          */
         @java.lang.Override
@@ -773,7 +781,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>string start = 1 [json_name = "start"];</code>
+         * <code>string start = 1;</code>
          * @return The bytes for start.
          */
         @java.lang.Override
@@ -794,7 +802,7 @@ private static final long serialVersionUID = 0L;
         public static final int DURATION_FIELD_NUMBER = 2;
         private long duration_;
         /**
-         * <code>int64 duration = 2 [json_name = "duration"];</code>
+         * <code>int64 duration = 2;</code>
          * @return The duration.
          */
         @java.lang.Override
@@ -805,7 +813,7 @@ private static final long serialVersionUID = 0L;
         public static final int IDLE_FIELD_NUMBER = 3;
         private long idle_;
         /**
-         * <code>int64 idle = 3 [json_name = "idle"];</code>
+         * <code>int64 idle = 3;</code>
          * @return The idle.
          */
         @java.lang.Override
@@ -816,7 +824,7 @@ private static final long serialVersionUID = 0L;
         public static final int BYTES_FIELD_NUMBER = 4;
         private long bytes_;
         /**
-         * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+         * <code>int64 bytes = 4;</code>
          * @return The bytes.
          */
         @java.lang.Override
@@ -827,7 +835,7 @@ private static final long serialVersionUID = 0L;
         public static final int SAMPLES_FIELD_NUMBER = 5;
         private long samples_;
         /**
-         * <code>int64 samples = 5 [json_name = "samples"];</code>
+         * <code>int64 samples = 5;</code>
          * @return The samples.
          */
         @java.lang.Override
@@ -838,7 +846,7 @@ private static final long serialVersionUID = 0L;
         public static final int INST_RATE_FIELD_NUMBER = 6;
         private long instRate_;
         /**
-         * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+         * <code>int64 inst_rate = 6;</code>
          * @return The instRate.
          */
         @java.lang.Override
@@ -849,7 +857,7 @@ private static final long serialVersionUID = 0L;
         public static final int CUR_RATE_FIELD_NUMBER = 7;
         private long curRate_;
         /**
-         * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+         * <code>int64 cur_rate = 7;</code>
          * @return The curRate.
          */
         @java.lang.Override
@@ -860,7 +868,7 @@ private static final long serialVersionUID = 0L;
         public static final int AVG_RATE_FIELD_NUMBER = 8;
         private long avgRate_;
         /**
-         * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+         * <code>int64 avg_rate = 8;</code>
          * @return The avgRate.
          */
         @java.lang.Override
@@ -871,7 +879,7 @@ private static final long serialVersionUID = 0L;
         public static final int PEAK_RATE_FIELD_NUMBER = 9;
         private long peakRate_;
         /**
-         * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+         * <code>int64 peak_rate = 9;</code>
          * @return The peakRate.
          */
         @java.lang.Override
@@ -882,7 +890,7 @@ private static final long serialVersionUID = 0L;
         public static final int BYTES_REM_FIELD_NUMBER = 10;
         private long bytesRem_;
         /**
-         * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+         * <code>int64 bytes_rem = 10;</code>
          * @return The bytesRem.
          */
         @java.lang.Override
@@ -893,7 +901,7 @@ private static final long serialVersionUID = 0L;
         public static final int TIME_REM_FIELD_NUMBER = 11;
         private long timeRem_;
         /**
-         * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+         * <code>int64 time_rem = 11;</code>
          * @return The timeRem.
          */
         @java.lang.Override
@@ -904,7 +912,7 @@ private static final long serialVersionUID = 0L;
         public static final int PROGRESS_FIELD_NUMBER = 12;
         private long progress_;
         /**
-         * <code>uint64 progress = 12 [json_name = "progress"];</code>
+         * <code>uint64 progress = 12;</code>
          * @return The progress.
          */
         @java.lang.Override
@@ -1432,7 +1440,7 @@ private static final long serialVersionUID = 0L;
 
           private boolean active_ ;
           /**
-           * <code>bool active = 13 [json_name = "active"];</code>
+           * <code>bool active = 13;</code>
            * @return The active.
            */
           @java.lang.Override
@@ -1440,7 +1448,7 @@ private static final long serialVersionUID = 0L;
             return active_;
           }
           /**
-           * <code>bool active = 13 [json_name = "active"];</code>
+           * <code>bool active = 13;</code>
            * @param value The active to set.
            * @return This builder for chaining.
            */
@@ -1451,7 +1459,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>bool active = 13 [json_name = "active"];</code>
+           * <code>bool active = 13;</code>
            * @return This builder for chaining.
            */
           public Builder clearActive() {
@@ -1463,7 +1471,7 @@ private static final long serialVersionUID = 0L;
 
           private java.lang.Object start_ = "";
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            * @return The start.
            */
           public java.lang.String getStart() {
@@ -1479,7 +1487,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            * @return The bytes for start.
            */
           public com.google.protobuf.ByteString
@@ -1496,7 +1504,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            * @param value The start to set.
            * @return This builder for chaining.
            */
@@ -1511,7 +1519,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            * @return This builder for chaining.
            */
           public Builder clearStart() {
@@ -1521,7 +1529,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>string start = 1 [json_name = "start"];</code>
+           * <code>string start = 1;</code>
            * @param value The bytes for start to set.
            * @return This builder for chaining.
            */
@@ -1539,7 +1547,7 @@ private static final long serialVersionUID = 0L;
 
           private long duration_ ;
           /**
-           * <code>int64 duration = 2 [json_name = "duration"];</code>
+           * <code>int64 duration = 2;</code>
            * @return The duration.
            */
           @java.lang.Override
@@ -1547,7 +1555,7 @@ private static final long serialVersionUID = 0L;
             return duration_;
           }
           /**
-           * <code>int64 duration = 2 [json_name = "duration"];</code>
+           * <code>int64 duration = 2;</code>
            * @param value The duration to set.
            * @return This builder for chaining.
            */
@@ -1558,7 +1566,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 duration = 2 [json_name = "duration"];</code>
+           * <code>int64 duration = 2;</code>
            * @return This builder for chaining.
            */
           public Builder clearDuration() {
@@ -1570,7 +1578,7 @@ private static final long serialVersionUID = 0L;
 
           private long idle_ ;
           /**
-           * <code>int64 idle = 3 [json_name = "idle"];</code>
+           * <code>int64 idle = 3;</code>
            * @return The idle.
            */
           @java.lang.Override
@@ -1578,7 +1586,7 @@ private static final long serialVersionUID = 0L;
             return idle_;
           }
           /**
-           * <code>int64 idle = 3 [json_name = "idle"];</code>
+           * <code>int64 idle = 3;</code>
            * @param value The idle to set.
            * @return This builder for chaining.
            */
@@ -1589,7 +1597,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 idle = 3 [json_name = "idle"];</code>
+           * <code>int64 idle = 3;</code>
            * @return This builder for chaining.
            */
           public Builder clearIdle() {
@@ -1601,7 +1609,7 @@ private static final long serialVersionUID = 0L;
 
           private long bytes_ ;
           /**
-           * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+           * <code>int64 bytes = 4;</code>
            * @return The bytes.
            */
           @java.lang.Override
@@ -1609,7 +1617,7 @@ private static final long serialVersionUID = 0L;
             return bytes_;
           }
           /**
-           * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+           * <code>int64 bytes = 4;</code>
            * @param value The bytes to set.
            * @return This builder for chaining.
            */
@@ -1620,7 +1628,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 bytes = 4 [json_name = "bytes"];</code>
+           * <code>int64 bytes = 4;</code>
            * @return This builder for chaining.
            */
           public Builder clearBytes() {
@@ -1632,7 +1640,7 @@ private static final long serialVersionUID = 0L;
 
           private long samples_ ;
           /**
-           * <code>int64 samples = 5 [json_name = "samples"];</code>
+           * <code>int64 samples = 5;</code>
            * @return The samples.
            */
           @java.lang.Override
@@ -1640,7 +1648,7 @@ private static final long serialVersionUID = 0L;
             return samples_;
           }
           /**
-           * <code>int64 samples = 5 [json_name = "samples"];</code>
+           * <code>int64 samples = 5;</code>
            * @param value The samples to set.
            * @return This builder for chaining.
            */
@@ -1651,7 +1659,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 samples = 5 [json_name = "samples"];</code>
+           * <code>int64 samples = 5;</code>
            * @return This builder for chaining.
            */
           public Builder clearSamples() {
@@ -1663,7 +1671,7 @@ private static final long serialVersionUID = 0L;
 
           private long instRate_ ;
           /**
-           * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+           * <code>int64 inst_rate = 6;</code>
            * @return The instRate.
            */
           @java.lang.Override
@@ -1671,7 +1679,7 @@ private static final long serialVersionUID = 0L;
             return instRate_;
           }
           /**
-           * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+           * <code>int64 inst_rate = 6;</code>
            * @param value The instRate to set.
            * @return This builder for chaining.
            */
@@ -1682,7 +1690,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 inst_rate = 6 [json_name = "instRate"];</code>
+           * <code>int64 inst_rate = 6;</code>
            * @return This builder for chaining.
            */
           public Builder clearInstRate() {
@@ -1694,7 +1702,7 @@ private static final long serialVersionUID = 0L;
 
           private long curRate_ ;
           /**
-           * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+           * <code>int64 cur_rate = 7;</code>
            * @return The curRate.
            */
           @java.lang.Override
@@ -1702,7 +1710,7 @@ private static final long serialVersionUID = 0L;
             return curRate_;
           }
           /**
-           * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+           * <code>int64 cur_rate = 7;</code>
            * @param value The curRate to set.
            * @return This builder for chaining.
            */
@@ -1713,7 +1721,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 cur_rate = 7 [json_name = "curRate"];</code>
+           * <code>int64 cur_rate = 7;</code>
            * @return This builder for chaining.
            */
           public Builder clearCurRate() {
@@ -1725,7 +1733,7 @@ private static final long serialVersionUID = 0L;
 
           private long avgRate_ ;
           /**
-           * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+           * <code>int64 avg_rate = 8;</code>
            * @return The avgRate.
            */
           @java.lang.Override
@@ -1733,7 +1741,7 @@ private static final long serialVersionUID = 0L;
             return avgRate_;
           }
           /**
-           * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+           * <code>int64 avg_rate = 8;</code>
            * @param value The avgRate to set.
            * @return This builder for chaining.
            */
@@ -1744,7 +1752,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 avg_rate = 8 [json_name = "avgRate"];</code>
+           * <code>int64 avg_rate = 8;</code>
            * @return This builder for chaining.
            */
           public Builder clearAvgRate() {
@@ -1756,7 +1764,7 @@ private static final long serialVersionUID = 0L;
 
           private long peakRate_ ;
           /**
-           * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+           * <code>int64 peak_rate = 9;</code>
            * @return The peakRate.
            */
           @java.lang.Override
@@ -1764,7 +1772,7 @@ private static final long serialVersionUID = 0L;
             return peakRate_;
           }
           /**
-           * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+           * <code>int64 peak_rate = 9;</code>
            * @param value The peakRate to set.
            * @return This builder for chaining.
            */
@@ -1775,7 +1783,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 peak_rate = 9 [json_name = "peakRate"];</code>
+           * <code>int64 peak_rate = 9;</code>
            * @return This builder for chaining.
            */
           public Builder clearPeakRate() {
@@ -1787,7 +1795,7 @@ private static final long serialVersionUID = 0L;
 
           private long bytesRem_ ;
           /**
-           * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+           * <code>int64 bytes_rem = 10;</code>
            * @return The bytesRem.
            */
           @java.lang.Override
@@ -1795,7 +1803,7 @@ private static final long serialVersionUID = 0L;
             return bytesRem_;
           }
           /**
-           * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+           * <code>int64 bytes_rem = 10;</code>
            * @param value The bytesRem to set.
            * @return This builder for chaining.
            */
@@ -1806,7 +1814,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 bytes_rem = 10 [json_name = "bytesRem"];</code>
+           * <code>int64 bytes_rem = 10;</code>
            * @return This builder for chaining.
            */
           public Builder clearBytesRem() {
@@ -1818,7 +1826,7 @@ private static final long serialVersionUID = 0L;
 
           private long timeRem_ ;
           /**
-           * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+           * <code>int64 time_rem = 11;</code>
            * @return The timeRem.
            */
           @java.lang.Override
@@ -1826,7 +1834,7 @@ private static final long serialVersionUID = 0L;
             return timeRem_;
           }
           /**
-           * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+           * <code>int64 time_rem = 11;</code>
            * @param value The timeRem to set.
            * @return This builder for chaining.
            */
@@ -1837,7 +1845,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 time_rem = 11 [json_name = "timeRem"];</code>
+           * <code>int64 time_rem = 11;</code>
            * @return This builder for chaining.
            */
           public Builder clearTimeRem() {
@@ -1849,7 +1857,7 @@ private static final long serialVersionUID = 0L;
 
           private long progress_ ;
           /**
-           * <code>uint64 progress = 12 [json_name = "progress"];</code>
+           * <code>uint64 progress = 12;</code>
            * @return The progress.
            */
           @java.lang.Override
@@ -1857,7 +1865,7 @@ private static final long serialVersionUID = 0L;
             return progress_;
           }
           /**
-           * <code>uint64 progress = 12 [json_name = "progress"];</code>
+           * <code>uint64 progress = 12;</code>
            * @param value The progress to set.
            * @return This builder for chaining.
            */
@@ -1868,7 +1876,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>uint64 progress = 12 [json_name = "progress"];</code>
+           * <code>uint64 progress = 12;</code>
            * @return This builder for chaining.
            */
           public Builder clearProgress() {
@@ -1935,31 +1943,31 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>int64 id = 5 [json_name = "id"];</code>
+         * <code>int64 id = 5;</code>
          * @return The id.
          */
         long getId();
 
         /**
-         * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+         * <code>int64 send_queue_capacity = 1;</code>
          * @return The sendQueueCapacity.
          */
         long getSendQueueCapacity();
 
         /**
-         * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+         * <code>int64 send_queue_size = 2;</code>
          * @return The sendQueueSize.
          */
         long getSendQueueSize();
 
         /**
-         * <code>int64 priority = 3 [json_name = "priority"];</code>
+         * <code>int64 priority = 3;</code>
          * @return The priority.
          */
         long getPriority();
 
         /**
-         * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+         * <code>int64 recently_sent = 4;</code>
          * @return The recentlySent.
          */
         long getRecentlySent();
@@ -2045,6 +2053,8 @@ private static final long serialVersionUID = 0L;
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -2069,7 +2079,7 @@ private static final long serialVersionUID = 0L;
         public static final int ID_FIELD_NUMBER = 5;
         private long id_;
         /**
-         * <code>int64 id = 5 [json_name = "id"];</code>
+         * <code>int64 id = 5;</code>
          * @return The id.
          */
         @java.lang.Override
@@ -2080,7 +2090,7 @@ private static final long serialVersionUID = 0L;
         public static final int SEND_QUEUE_CAPACITY_FIELD_NUMBER = 1;
         private long sendQueueCapacity_;
         /**
-         * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+         * <code>int64 send_queue_capacity = 1;</code>
          * @return The sendQueueCapacity.
          */
         @java.lang.Override
@@ -2091,7 +2101,7 @@ private static final long serialVersionUID = 0L;
         public static final int SEND_QUEUE_SIZE_FIELD_NUMBER = 2;
         private long sendQueueSize_;
         /**
-         * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+         * <code>int64 send_queue_size = 2;</code>
          * @return The sendQueueSize.
          */
         @java.lang.Override
@@ -2102,7 +2112,7 @@ private static final long serialVersionUID = 0L;
         public static final int PRIORITY_FIELD_NUMBER = 3;
         private long priority_;
         /**
-         * <code>int64 priority = 3 [json_name = "priority"];</code>
+         * <code>int64 priority = 3;</code>
          * @return The priority.
          */
         @java.lang.Override
@@ -2113,7 +2123,7 @@ private static final long serialVersionUID = 0L;
         public static final int RECENTLY_SENT_FIELD_NUMBER = 4;
         private long recentlySent_;
         /**
-         * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+         * <code>int64 recently_sent = 4;</code>
          * @return The recentlySent.
          */
         @java.lang.Override
@@ -2498,7 +2508,7 @@ private static final long serialVersionUID = 0L;
 
           private long id_ ;
           /**
-           * <code>int64 id = 5 [json_name = "id"];</code>
+           * <code>int64 id = 5;</code>
            * @return The id.
            */
           @java.lang.Override
@@ -2506,7 +2516,7 @@ private static final long serialVersionUID = 0L;
             return id_;
           }
           /**
-           * <code>int64 id = 5 [json_name = "id"];</code>
+           * <code>int64 id = 5;</code>
            * @param value The id to set.
            * @return This builder for chaining.
            */
@@ -2517,7 +2527,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 id = 5 [json_name = "id"];</code>
+           * <code>int64 id = 5;</code>
            * @return This builder for chaining.
            */
           public Builder clearId() {
@@ -2529,7 +2539,7 @@ private static final long serialVersionUID = 0L;
 
           private long sendQueueCapacity_ ;
           /**
-           * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+           * <code>int64 send_queue_capacity = 1;</code>
            * @return The sendQueueCapacity.
            */
           @java.lang.Override
@@ -2537,7 +2547,7 @@ private static final long serialVersionUID = 0L;
             return sendQueueCapacity_;
           }
           /**
-           * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+           * <code>int64 send_queue_capacity = 1;</code>
            * @param value The sendQueueCapacity to set.
            * @return This builder for chaining.
            */
@@ -2548,7 +2558,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 send_queue_capacity = 1 [json_name = "sendQueueCapacity"];</code>
+           * <code>int64 send_queue_capacity = 1;</code>
            * @return This builder for chaining.
            */
           public Builder clearSendQueueCapacity() {
@@ -2560,7 +2570,7 @@ private static final long serialVersionUID = 0L;
 
           private long sendQueueSize_ ;
           /**
-           * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+           * <code>int64 send_queue_size = 2;</code>
            * @return The sendQueueSize.
            */
           @java.lang.Override
@@ -2568,7 +2578,7 @@ private static final long serialVersionUID = 0L;
             return sendQueueSize_;
           }
           /**
-           * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+           * <code>int64 send_queue_size = 2;</code>
            * @param value The sendQueueSize to set.
            * @return This builder for chaining.
            */
@@ -2579,7 +2589,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 send_queue_size = 2 [json_name = "sendQueueSize"];</code>
+           * <code>int64 send_queue_size = 2;</code>
            * @return This builder for chaining.
            */
           public Builder clearSendQueueSize() {
@@ -2591,7 +2601,7 @@ private static final long serialVersionUID = 0L;
 
           private long priority_ ;
           /**
-           * <code>int64 priority = 3 [json_name = "priority"];</code>
+           * <code>int64 priority = 3;</code>
            * @return The priority.
            */
           @java.lang.Override
@@ -2599,7 +2609,7 @@ private static final long serialVersionUID = 0L;
             return priority_;
           }
           /**
-           * <code>int64 priority = 3 [json_name = "priority"];</code>
+           * <code>int64 priority = 3;</code>
            * @param value The priority to set.
            * @return This builder for chaining.
            */
@@ -2610,7 +2620,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 priority = 3 [json_name = "priority"];</code>
+           * <code>int64 priority = 3;</code>
            * @return This builder for chaining.
            */
           public Builder clearPriority() {
@@ -2622,7 +2632,7 @@ private static final long serialVersionUID = 0L;
 
           private long recentlySent_ ;
           /**
-           * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+           * <code>int64 recently_sent = 4;</code>
            * @return The recentlySent.
            */
           @java.lang.Override
@@ -2630,7 +2640,7 @@ private static final long serialVersionUID = 0L;
             return recentlySent_;
           }
           /**
-           * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+           * <code>int64 recently_sent = 4;</code>
            * @param value The recentlySent to set.
            * @return This builder for chaining.
            */
@@ -2641,7 +2651,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>int64 recently_sent = 4 [json_name = "recentlySent"];</code>
+           * <code>int64 recently_sent = 4;</code>
            * @return This builder for chaining.
            */
           public Builder clearRecentlySent() {
@@ -2706,7 +2716,7 @@ private static final long serialVersionUID = 0L;
       public static final int DURATION_FIELD_NUMBER = 4;
       private long duration_;
       /**
-       * <code>uint64 duration = 4 [json_name = "duration"];</code>
+       * <code>uint64 duration = 4;</code>
        * @return The duration.
        */
       @java.lang.Override
@@ -2717,7 +2727,7 @@ private static final long serialVersionUID = 0L;
       public static final int SENDMONITOR_FIELD_NUMBER = 1;
       private counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor sendMonitor_;
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        * @return Whether the sendMonitor field is set.
        */
       @java.lang.Override
@@ -2725,7 +2735,7 @@ private static final long serialVersionUID = 0L;
         return sendMonitor_ != null;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        * @return The sendMonitor.
        */
       @java.lang.Override
@@ -2733,7 +2743,7 @@ private static final long serialVersionUID = 0L;
         return sendMonitor_ == null ? counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.getDefaultInstance() : sendMonitor_;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getSendMonitorOrBuilder() {
@@ -2743,7 +2753,7 @@ private static final long serialVersionUID = 0L;
       public static final int RECVMONITOR_FIELD_NUMBER = 2;
       private counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor recvMonitor_;
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        * @return Whether the recvMonitor field is set.
        */
       @java.lang.Override
@@ -2751,7 +2761,7 @@ private static final long serialVersionUID = 0L;
         return recvMonitor_ != null;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        * @return The recvMonitor.
        */
       @java.lang.Override
@@ -2759,7 +2769,7 @@ private static final long serialVersionUID = 0L;
         return recvMonitor_ == null ? counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.getDefaultInstance() : recvMonitor_;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getRecvMonitorOrBuilder() {
@@ -2769,14 +2779,14 @@ private static final long serialVersionUID = 0L;
       public static final int CHANNELS_FIELD_NUMBER = 3;
       private java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel> channels_;
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       @java.lang.Override
       public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel> getChannelsList() {
         return channels_;
       }
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       @java.lang.Override
       public java.util.List<? extends counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder> 
@@ -2784,21 +2794,21 @@ private static final long serialVersionUID = 0L;
         return channels_;
       }
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       @java.lang.Override
       public int getChannelsCount() {
         return channels_.size();
       }
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel getChannels(int index) {
         return channels_.get(index);
       }
       /**
-       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+       * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
        */
       @java.lang.Override
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder getChannelsOrBuilder(
@@ -3228,7 +3238,7 @@ private static final long serialVersionUID = 0L;
 
         private long duration_ ;
         /**
-         * <code>uint64 duration = 4 [json_name = "duration"];</code>
+         * <code>uint64 duration = 4;</code>
          * @return The duration.
          */
         @java.lang.Override
@@ -3236,7 +3246,7 @@ private static final long serialVersionUID = 0L;
           return duration_;
         }
         /**
-         * <code>uint64 duration = 4 [json_name = "duration"];</code>
+         * <code>uint64 duration = 4;</code>
          * @param value The duration to set.
          * @return This builder for chaining.
          */
@@ -3247,7 +3257,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>uint64 duration = 4 [json_name = "duration"];</code>
+         * <code>uint64 duration = 4;</code>
          * @return This builder for chaining.
          */
         public Builder clearDuration() {
@@ -3261,14 +3271,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder> sendMonitorBuilder_;
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          * @return Whether the sendMonitor field is set.
          */
         public boolean hasSendMonitor() {
           return sendMonitorBuilder_ != null || sendMonitor_ != null;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          * @return The sendMonitor.
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor getSendMonitor() {
@@ -3279,7 +3289,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public Builder setSendMonitor(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor value) {
           if (sendMonitorBuilder_ == null) {
@@ -3295,7 +3305,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public Builder setSendMonitor(
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder builderForValue) {
@@ -3309,7 +3319,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public Builder mergeSendMonitor(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor value) {
           if (sendMonitorBuilder_ == null) {
@@ -3327,7 +3337,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public Builder clearSendMonitor() {
           if (sendMonitorBuilder_ == null) {
@@ -3341,7 +3351,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder getSendMonitorBuilder() {
           
@@ -3349,7 +3359,7 @@ private static final long serialVersionUID = 0L;
           return getSendMonitorFieldBuilder().getBuilder();
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getSendMonitorOrBuilder() {
           if (sendMonitorBuilder_ != null) {
@@ -3360,7 +3370,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1 [json_name = "SendMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor SendMonitor = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder> 
@@ -3380,14 +3390,14 @@ private static final long serialVersionUID = 0L;
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder> recvMonitorBuilder_;
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          * @return Whether the recvMonitor field is set.
          */
         public boolean hasRecvMonitor() {
           return recvMonitorBuilder_ != null || recvMonitor_ != null;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          * @return The recvMonitor.
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor getRecvMonitor() {
@@ -3398,7 +3408,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public Builder setRecvMonitor(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor value) {
           if (recvMonitorBuilder_ == null) {
@@ -3414,7 +3424,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public Builder setRecvMonitor(
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder builderForValue) {
@@ -3428,7 +3438,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public Builder mergeRecvMonitor(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor value) {
           if (recvMonitorBuilder_ == null) {
@@ -3446,7 +3456,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public Builder clearRecvMonitor() {
           if (recvMonitorBuilder_ == null) {
@@ -3460,7 +3470,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder getRecvMonitorBuilder() {
           
@@ -3468,7 +3478,7 @@ private static final long serialVersionUID = 0L;
           return getRecvMonitorFieldBuilder().getBuilder();
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder getRecvMonitorOrBuilder() {
           if (recvMonitorBuilder_ != null) {
@@ -3479,7 +3489,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2 [json_name = "RecvMonitor"];</code>
+         * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus.Monitor RecvMonitor = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Monitor.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.MonitorOrBuilder> 
@@ -3508,7 +3518,7 @@ private static final long serialVersionUID = 0L;
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder> channelsBuilder_;
 
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel> getChannelsList() {
           if (channelsBuilder_ == null) {
@@ -3518,7 +3528,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public int getChannelsCount() {
           if (channelsBuilder_ == null) {
@@ -3528,7 +3538,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel getChannels(int index) {
           if (channelsBuilder_ == null) {
@@ -3538,7 +3548,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder setChannels(
             int index, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel value) {
@@ -3555,7 +3565,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder setChannels(
             int index, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder builderForValue) {
@@ -3569,7 +3579,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder addChannels(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel value) {
           if (channelsBuilder_ == null) {
@@ -3585,7 +3595,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder addChannels(
             int index, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel value) {
@@ -3602,7 +3612,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder addChannels(
             counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder builderForValue) {
@@ -3616,7 +3626,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder addChannels(
             int index, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder builderForValue) {
@@ -3630,7 +3640,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder addAllChannels(
             java.lang.Iterable<? extends counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel> values) {
@@ -3645,7 +3655,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder clearChannels() {
           if (channelsBuilder_ == null) {
@@ -3658,7 +3668,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public Builder removeChannels(int index) {
           if (channelsBuilder_ == null) {
@@ -3671,14 +3681,14 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder getChannelsBuilder(
             int index) {
           return getChannelsFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder getChannelsOrBuilder(
             int index) {
@@ -3688,7 +3698,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public java.util.List<? extends counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.ChannelOrBuilder> 
              getChannelsOrBuilderList() {
@@ -3699,14 +3709,14 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder addChannelsBuilder() {
           return getChannelsFieldBuilder().addBuilder(
               counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder addChannelsBuilder(
             int index) {
@@ -3714,7 +3724,7 @@ private static final long serialVersionUID = 0L;
               index, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.getDefaultInstance());
         }
         /**
-         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3 [json_name = "channels"];</code>
+         * <code>repeated .api_pb.NetInfoResponse.Peer.ConnectionStatus.Channel channels = 3;</code>
          */
         public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Channel.Builder> 
              getChannelsBuilderList() {
@@ -3794,7 +3804,7 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      * @return Whether the latestBlockHeight field is set.
      */
     @java.lang.Override
@@ -3806,7 +3816,7 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      * @return The latestBlockHeight.
      */
     @java.lang.Override
@@ -3818,7 +3828,7 @@ private static final long serialVersionUID = 0L;
      * Unknown while client is in fast_syncing mode
      * </pre>
      *
-     * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+     * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
      */
     @java.lang.Override
     public com.google.protobuf.UInt64ValueOrBuilder getLatestBlockHeightOrBuilder() {
@@ -3828,7 +3838,7 @@ private static final long serialVersionUID = 0L;
     public static final int NODE_INFO_FIELD_NUMBER = 4;
     private counters.minter.grpc.client.NodeInfo nodeInfo_;
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      * @return Whether the nodeInfo field is set.
      */
     @java.lang.Override
@@ -3836,7 +3846,7 @@ private static final long serialVersionUID = 0L;
       return nodeInfo_ != null;
     }
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      * @return The nodeInfo.
      */
     @java.lang.Override
@@ -3844,7 +3854,7 @@ private static final long serialVersionUID = 0L;
       return nodeInfo_ == null ? counters.minter.grpc.client.NodeInfo.getDefaultInstance() : nodeInfo_;
     }
     /**
-     * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+     * <code>.api_pb.NodeInfo node_info = 4;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.NodeInfoOrBuilder getNodeInfoOrBuilder() {
@@ -3854,7 +3864,7 @@ private static final long serialVersionUID = 0L;
     public static final int IS_OUTBOUND_FIELD_NUMBER = 1;
     private boolean isOutbound_;
     /**
-     * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+     * <code>bool is_outbound = 1;</code>
      * @return The isOutbound.
      */
     @java.lang.Override
@@ -3865,7 +3875,7 @@ private static final long serialVersionUID = 0L;
     public static final int CONNECTION_STATUS_FIELD_NUMBER = 2;
     private counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus connectionStatus_;
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      * @return Whether the connectionStatus field is set.
      */
     @java.lang.Override
@@ -3873,7 +3883,7 @@ private static final long serialVersionUID = 0L;
       return connectionStatus_ != null;
     }
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      * @return The connectionStatus.
      */
     @java.lang.Override
@@ -3881,7 +3891,7 @@ private static final long serialVersionUID = 0L;
       return connectionStatus_ == null ? counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.getDefaultInstance() : connectionStatus_;
     }
     /**
-     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+     * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatusOrBuilder getConnectionStatusOrBuilder() {
@@ -3891,7 +3901,7 @@ private static final long serialVersionUID = 0L;
     public static final int REMOTE_IP_FIELD_NUMBER = 3;
     private volatile java.lang.Object remoteIp_;
     /**
-     * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+     * <code>string remote_ip = 3;</code>
      * @return The remoteIp.
      */
     @java.lang.Override
@@ -3908,7 +3918,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+     * <code>string remote_ip = 3;</code>
      * @return The bytes for remoteIp.
      */
     @java.lang.Override
@@ -4344,7 +4354,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        * @return Whether the latestBlockHeight field is set.
        */
       public boolean hasLatestBlockHeight() {
@@ -4355,7 +4365,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        * @return The latestBlockHeight.
        */
       public com.google.protobuf.UInt64Value getLatestBlockHeight() {
@@ -4370,7 +4380,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public Builder setLatestBlockHeight(com.google.protobuf.UInt64Value value) {
         if (latestBlockHeightBuilder_ == null) {
@@ -4390,7 +4400,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public Builder setLatestBlockHeight(
           com.google.protobuf.UInt64Value.Builder builderForValue) {
@@ -4408,7 +4418,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public Builder mergeLatestBlockHeight(com.google.protobuf.UInt64Value value) {
         if (latestBlockHeightBuilder_ == null) {
@@ -4430,7 +4440,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public Builder clearLatestBlockHeight() {
         if (latestBlockHeightBuilder_ == null) {
@@ -4448,7 +4458,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public com.google.protobuf.UInt64Value.Builder getLatestBlockHeightBuilder() {
         
@@ -4460,7 +4470,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       public com.google.protobuf.UInt64ValueOrBuilder getLatestBlockHeightOrBuilder() {
         if (latestBlockHeightBuilder_ != null) {
@@ -4475,7 +4485,7 @@ private static final long serialVersionUID = 0L;
        * Unknown while client is in fast_syncing mode
        * </pre>
        *
-       * <code>.google.protobuf.UInt64Value latest_block_height = 5 [json_name = "latestBlockHeight"];</code>
+       * <code>.google.protobuf.UInt64Value latest_block_height = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> 
@@ -4495,14 +4505,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.NodeInfo, counters.minter.grpc.client.NodeInfo.Builder, counters.minter.grpc.client.NodeInfoOrBuilder> nodeInfoBuilder_;
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        * @return Whether the nodeInfo field is set.
        */
       public boolean hasNodeInfo() {
         return nodeInfoBuilder_ != null || nodeInfo_ != null;
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        * @return The nodeInfo.
        */
       public counters.minter.grpc.client.NodeInfo getNodeInfo() {
@@ -4513,7 +4523,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public Builder setNodeInfo(counters.minter.grpc.client.NodeInfo value) {
         if (nodeInfoBuilder_ == null) {
@@ -4529,7 +4539,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public Builder setNodeInfo(
           counters.minter.grpc.client.NodeInfo.Builder builderForValue) {
@@ -4543,7 +4553,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public Builder mergeNodeInfo(counters.minter.grpc.client.NodeInfo value) {
         if (nodeInfoBuilder_ == null) {
@@ -4561,7 +4571,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public Builder clearNodeInfo() {
         if (nodeInfoBuilder_ == null) {
@@ -4575,7 +4585,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public counters.minter.grpc.client.NodeInfo.Builder getNodeInfoBuilder() {
         
@@ -4583,7 +4593,7 @@ private static final long serialVersionUID = 0L;
         return getNodeInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       public counters.minter.grpc.client.NodeInfoOrBuilder getNodeInfoOrBuilder() {
         if (nodeInfoBuilder_ != null) {
@@ -4594,7 +4604,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.NodeInfo node_info = 4 [json_name = "nodeInfo"];</code>
+       * <code>.api_pb.NodeInfo node_info = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.NodeInfo, counters.minter.grpc.client.NodeInfo.Builder, counters.minter.grpc.client.NodeInfoOrBuilder> 
@@ -4612,7 +4622,7 @@ private static final long serialVersionUID = 0L;
 
       private boolean isOutbound_ ;
       /**
-       * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+       * <code>bool is_outbound = 1;</code>
        * @return The isOutbound.
        */
       @java.lang.Override
@@ -4620,7 +4630,7 @@ private static final long serialVersionUID = 0L;
         return isOutbound_;
       }
       /**
-       * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+       * <code>bool is_outbound = 1;</code>
        * @param value The isOutbound to set.
        * @return This builder for chaining.
        */
@@ -4631,7 +4641,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>bool is_outbound = 1 [json_name = "isOutbound"];</code>
+       * <code>bool is_outbound = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOutbound() {
@@ -4645,14 +4655,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatusOrBuilder> connectionStatusBuilder_;
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        * @return Whether the connectionStatus field is set.
        */
       public boolean hasConnectionStatus() {
         return connectionStatusBuilder_ != null || connectionStatus_ != null;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        * @return The connectionStatus.
        */
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus getConnectionStatus() {
@@ -4663,7 +4673,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public Builder setConnectionStatus(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus value) {
         if (connectionStatusBuilder_ == null) {
@@ -4679,7 +4689,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public Builder setConnectionStatus(
           counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder builderForValue) {
@@ -4693,7 +4703,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public Builder mergeConnectionStatus(counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus value) {
         if (connectionStatusBuilder_ == null) {
@@ -4711,7 +4721,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public Builder clearConnectionStatus() {
         if (connectionStatusBuilder_ == null) {
@@ -4725,7 +4735,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder getConnectionStatusBuilder() {
         
@@ -4733,7 +4743,7 @@ private static final long serialVersionUID = 0L;
         return getConnectionStatusFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       public counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatusOrBuilder getConnectionStatusOrBuilder() {
         if (connectionStatusBuilder_ != null) {
@@ -4744,7 +4754,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2 [json_name = "connectionStatus"];</code>
+       * <code>.api_pb.NetInfoResponse.Peer.ConnectionStatus connection_status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatus.Builder, counters.minter.grpc.client.NetInfoResponse.Peer.ConnectionStatusOrBuilder> 
@@ -4762,7 +4772,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object remoteIp_ = "";
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        * @return The remoteIp.
        */
       public java.lang.String getRemoteIp() {
@@ -4778,7 +4788,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        * @return The bytes for remoteIp.
        */
       public com.google.protobuf.ByteString
@@ -4795,7 +4805,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        * @param value The remoteIp to set.
        * @return This builder for chaining.
        */
@@ -4810,7 +4820,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRemoteIp() {
@@ -4820,7 +4830,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string remote_ip = 3 [json_name = "remoteIp"];</code>
+       * <code>string remote_ip = 3;</code>
        * @param value The bytes for remoteIp to set.
        * @return This builder for chaining.
        */
@@ -4891,7 +4901,7 @@ private static final long serialVersionUID = 0L;
   public static final int LISTENING_FIELD_NUMBER = 4;
   private boolean listening_;
   /**
-   * <code>bool listening = 4 [json_name = "listening"];</code>
+   * <code>bool listening = 4;</code>
    * @return The listening.
    */
   @java.lang.Override
@@ -4902,7 +4912,7 @@ private static final long serialVersionUID = 0L;
   public static final int LISTENERS_FIELD_NUMBER = 1;
   private com.google.protobuf.LazyStringList listeners_;
   /**
-   * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+   * <code>repeated string listeners = 1;</code>
    * @return A list containing the listeners.
    */
   public com.google.protobuf.ProtocolStringList
@@ -4910,14 +4920,14 @@ private static final long serialVersionUID = 0L;
     return listeners_;
   }
   /**
-   * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+   * <code>repeated string listeners = 1;</code>
    * @return The count of listeners.
    */
   public int getListenersCount() {
     return listeners_.size();
   }
   /**
-   * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+   * <code>repeated string listeners = 1;</code>
    * @param index The index of the element to return.
    * @return The listeners at the given index.
    */
@@ -4925,7 +4935,7 @@ private static final long serialVersionUID = 0L;
     return listeners_.get(index);
   }
   /**
-   * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+   * <code>repeated string listeners = 1;</code>
    * @param index The index of the value to return.
    * @return The bytes of the listeners at the given index.
    */
@@ -4937,7 +4947,7 @@ private static final long serialVersionUID = 0L;
   public static final int COUNT_PEERS_FIELD_NUMBER = 2;
   private long countPeers_;
   /**
-   * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+   * <code>int64 count_peers = 2;</code>
    * @return The countPeers.
    */
   @java.lang.Override
@@ -4948,14 +4958,14 @@ private static final long serialVersionUID = 0L;
   public static final int PEERS_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer> peers_;
   /**
-   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer> getPeersList() {
     return peers_;
   }
   /**
-   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.NetInfoResponse.PeerOrBuilder> 
@@ -4963,21 +4973,21 @@ private static final long serialVersionUID = 0L;
     return peers_;
   }
   /**
-   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
    */
   @java.lang.Override
   public int getPeersCount() {
     return peers_.size();
   }
   /**
-   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.NetInfoResponse.Peer getPeers(int index) {
     return peers_.get(index);
   }
   /**
-   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+   * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.NetInfoResponse.PeerOrBuilder getPeersOrBuilder(
@@ -5399,7 +5409,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean listening_ ;
     /**
-     * <code>bool listening = 4 [json_name = "listening"];</code>
+     * <code>bool listening = 4;</code>
      * @return The listening.
      */
     @java.lang.Override
@@ -5407,7 +5417,7 @@ private static final long serialVersionUID = 0L;
       return listening_;
     }
     /**
-     * <code>bool listening = 4 [json_name = "listening"];</code>
+     * <code>bool listening = 4;</code>
      * @param value The listening to set.
      * @return This builder for chaining.
      */
@@ -5418,7 +5428,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool listening = 4 [json_name = "listening"];</code>
+     * <code>bool listening = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearListening() {
@@ -5436,7 +5446,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @return A list containing the listeners.
      */
     public com.google.protobuf.ProtocolStringList
@@ -5444,14 +5454,14 @@ private static final long serialVersionUID = 0L;
       return listeners_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @return The count of listeners.
      */
     public int getListenersCount() {
       return listeners_.size();
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param index The index of the element to return.
      * @return The listeners at the given index.
      */
@@ -5459,7 +5469,7 @@ private static final long serialVersionUID = 0L;
       return listeners_.get(index);
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the listeners at the given index.
      */
@@ -5468,7 +5478,7 @@ private static final long serialVersionUID = 0L;
       return listeners_.getByteString(index);
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param index The index to set the value at.
      * @param value The listeners to set.
      * @return This builder for chaining.
@@ -5484,7 +5494,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param value The listeners to add.
      * @return This builder for chaining.
      */
@@ -5499,7 +5509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param values The listeners to add.
      * @return This builder for chaining.
      */
@@ -5512,7 +5522,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearListeners() {
@@ -5522,7 +5532,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string listeners = 1 [json_name = "listeners"];</code>
+     * <code>repeated string listeners = 1;</code>
      * @param value The bytes of the listeners to add.
      * @return This builder for chaining.
      */
@@ -5540,7 +5550,7 @@ private static final long serialVersionUID = 0L;
 
     private long countPeers_ ;
     /**
-     * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+     * <code>int64 count_peers = 2;</code>
      * @return The countPeers.
      */
     @java.lang.Override
@@ -5548,7 +5558,7 @@ private static final long serialVersionUID = 0L;
       return countPeers_;
     }
     /**
-     * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+     * <code>int64 count_peers = 2;</code>
      * @param value The countPeers to set.
      * @return This builder for chaining.
      */
@@ -5559,7 +5569,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 count_peers = 2 [json_name = "countPeers"];</code>
+     * <code>int64 count_peers = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountPeers() {
@@ -5582,7 +5592,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.NetInfoResponse.Peer, counters.minter.grpc.client.NetInfoResponse.Peer.Builder, counters.minter.grpc.client.NetInfoResponse.PeerOrBuilder> peersBuilder_;
 
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer> getPeersList() {
       if (peersBuilder_ == null) {
@@ -5592,7 +5602,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public int getPeersCount() {
       if (peersBuilder_ == null) {
@@ -5602,7 +5612,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public counters.minter.grpc.client.NetInfoResponse.Peer getPeers(int index) {
       if (peersBuilder_ == null) {
@@ -5612,7 +5622,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder setPeers(
         int index, counters.minter.grpc.client.NetInfoResponse.Peer value) {
@@ -5629,7 +5639,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder setPeers(
         int index, counters.minter.grpc.client.NetInfoResponse.Peer.Builder builderForValue) {
@@ -5643,7 +5653,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder addPeers(counters.minter.grpc.client.NetInfoResponse.Peer value) {
       if (peersBuilder_ == null) {
@@ -5659,7 +5669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder addPeers(
         int index, counters.minter.grpc.client.NetInfoResponse.Peer value) {
@@ -5676,7 +5686,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder addPeers(
         counters.minter.grpc.client.NetInfoResponse.Peer.Builder builderForValue) {
@@ -5690,7 +5700,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder addPeers(
         int index, counters.minter.grpc.client.NetInfoResponse.Peer.Builder builderForValue) {
@@ -5704,7 +5714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder addAllPeers(
         java.lang.Iterable<? extends counters.minter.grpc.client.NetInfoResponse.Peer> values) {
@@ -5719,7 +5729,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder clearPeers() {
       if (peersBuilder_ == null) {
@@ -5732,7 +5742,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public Builder removePeers(int index) {
       if (peersBuilder_ == null) {
@@ -5745,14 +5755,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public counters.minter.grpc.client.NetInfoResponse.Peer.Builder getPeersBuilder(
         int index) {
       return getPeersFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public counters.minter.grpc.client.NetInfoResponse.PeerOrBuilder getPeersOrBuilder(
         int index) {
@@ -5762,7 +5772,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.NetInfoResponse.PeerOrBuilder> 
          getPeersOrBuilderList() {
@@ -5773,14 +5783,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public counters.minter.grpc.client.NetInfoResponse.Peer.Builder addPeersBuilder() {
       return getPeersFieldBuilder().addBuilder(
           counters.minter.grpc.client.NetInfoResponse.Peer.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public counters.minter.grpc.client.NetInfoResponse.Peer.Builder addPeersBuilder(
         int index) {
@@ -5788,7 +5798,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.NetInfoResponse.Peer.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3 [json_name = "peers"];</code>
+     * <code>repeated .api_pb.NetInfoResponse.Peer peers = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.NetInfoResponse.Peer.Builder> 
          getPeersBuilderList() {

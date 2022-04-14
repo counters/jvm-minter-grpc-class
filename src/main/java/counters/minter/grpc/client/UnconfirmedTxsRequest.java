@@ -64,6 +64,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -88,7 +90,7 @@ private static final long serialVersionUID = 0L;
   public static final int LIMIT_FIELD_NUMBER = 1;
   private int limit_;
   /**
-   * <code>int32 limit = 1 [json_name = "limit"];</code>
+   * <code>int32 limit = 1;</code>
    * @return The limit.
    */
   @java.lang.Override
@@ -400,7 +402,7 @@ private static final long serialVersionUID = 0L;
 
     private int limit_ ;
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -408,7 +410,7 @@ private static final long serialVersionUID = 0L;
       return limit_;
     }
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      * @param value The limit to set.
      * @return This builder for chaining.
      */
@@ -419,7 +421,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 limit = 1 [json_name = "limit"];</code>
+     * <code>int32 limit = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearLimit() {

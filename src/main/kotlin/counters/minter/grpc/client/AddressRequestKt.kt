@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeaddressRequest")
 public inline fun addressRequest(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressRequest =
   counters.minter.grpc.client.AddressRequestKt.Dsl._create(counters.minter.grpc.client.AddressRequest.newBuilder()).apply { block() }._build()
 public object AddressRequestKt {
@@ -23,7 +23,7 @@ public object AddressRequestKt {
     internal fun _build(): counters.minter.grpc.client.AddressRequest = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -33,14 +33,14 @@ public object AddressRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -50,14 +50,14 @@ public object AddressRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
     public var delegated: kotlin.Boolean
       @JvmName("getDelegated")
@@ -67,7 +67,7 @@ public object AddressRequestKt {
         _builder.setDelegated(value)
       }
     /**
-     * <code>bool delegated = 4 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4;</code>
      */
     public fun clearDelegated() {
       _builder.clearDelegated()
@@ -77,3 +77,4 @@ public object AddressRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.AddressRequest.copy(block: counters.minter.grpc.client.AddressRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressRequest =
   counters.minter.grpc.client.AddressRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

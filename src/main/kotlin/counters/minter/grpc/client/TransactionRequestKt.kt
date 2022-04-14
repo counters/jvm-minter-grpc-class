@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializetransactionRequest")
 public inline fun transactionRequest(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionRequest =
   counters.minter.grpc.client.TransactionRequestKt.Dsl._create(counters.minter.grpc.client.TransactionRequest.newBuilder()).apply { block() }._build()
 public object TransactionRequestKt {
@@ -23,7 +23,7 @@ public object TransactionRequestKt {
     internal fun _build(): counters.minter.grpc.client.TransactionRequest = _builder.build()
 
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      */
     public var hash: kotlin.String
       @JvmName("getHash")
@@ -33,7 +33,7 @@ public object TransactionRequestKt {
         _builder.setHash(value)
       }
     /**
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string hash = 1;</code>
      */
     public fun clearHash() {
       _builder.clearHash()
@@ -43,3 +43,4 @@ public object TransactionRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.TransactionRequest.copy(block: counters.minter.grpc.client.TransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.TransactionRequest =
   counters.minter.grpc.client.TransactionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int ORDERS_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.LimitOrderResponse> orders_;
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.LimitOrderResponse> getOrdersList() {
     return orders_;
   }
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.LimitOrderResponseOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return orders_;
   }
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
    */
   @java.lang.Override
   public int getOrdersCount() {
     return orders_.size();
   }
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.LimitOrderResponse getOrders(int index) {
     return orders_.get(index);
   }
   /**
-   * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+   * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.LimitOrderResponseOrBuilder getOrdersOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.LimitOrderResponse, counters.minter.grpc.client.LimitOrderResponse.Builder, counters.minter.grpc.client.LimitOrderResponseOrBuilder> ordersBuilder_;
 
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.LimitOrderResponse> getOrdersList() {
       if (ordersBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public int getOrdersCount() {
       if (ordersBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public counters.minter.grpc.client.LimitOrderResponse getOrders(int index) {
       if (ordersBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder setOrders(
         int index, counters.minter.grpc.client.LimitOrderResponse value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder setOrders(
         int index, counters.minter.grpc.client.LimitOrderResponse.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder addOrders(counters.minter.grpc.client.LimitOrderResponse value) {
       if (ordersBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder addOrders(
         int index, counters.minter.grpc.client.LimitOrderResponse value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder addOrders(
         counters.minter.grpc.client.LimitOrderResponse.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder addOrders(
         int index, counters.minter.grpc.client.LimitOrderResponse.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder addAllOrders(
         java.lang.Iterable<? extends counters.minter.grpc.client.LimitOrderResponse> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder clearOrders() {
       if (ordersBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public Builder removeOrders(int index) {
       if (ordersBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public counters.minter.grpc.client.LimitOrderResponse.Builder getOrdersBuilder(
         int index) {
       return getOrdersFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public counters.minter.grpc.client.LimitOrderResponseOrBuilder getOrdersOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.LimitOrderResponseOrBuilder> 
          getOrdersOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public counters.minter.grpc.client.LimitOrderResponse.Builder addOrdersBuilder() {
       return getOrdersFieldBuilder().addBuilder(
           counters.minter.grpc.client.LimitOrderResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public counters.minter.grpc.client.LimitOrderResponse.Builder addOrdersBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.LimitOrderResponse.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.LimitOrderResponse orders = 1 [json_name = "orders"];</code>
+     * <code>repeated .api_pb.LimitOrderResponse orders = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.LimitOrderResponse.Builder> 
          getOrdersBuilderList() {

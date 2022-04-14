@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializegenesisResponse")
 public inline fun genesisResponse(block: counters.minter.grpc.client.GenesisResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse =
   counters.minter.grpc.client.GenesisResponseKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.newBuilder()).apply { block() }._build()
 public object GenesisResponseKt {
@@ -23,7 +23,7 @@ public object GenesisResponseKt {
     internal fun _build(): counters.minter.grpc.client.GenesisResponse = _builder.build()
 
     /**
-     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
+     * <code>string genesis_time = 1;</code>
      */
     public var genesisTime: kotlin.String
       @JvmName("getGenesisTime")
@@ -33,14 +33,14 @@ public object GenesisResponseKt {
         _builder.setGenesisTime(value)
       }
     /**
-     * <code>string genesis_time = 1 [json_name = "genesisTime"];</code>
+     * <code>string genesis_time = 1;</code>
      */
     public fun clearGenesisTime() {
       _builder.clearGenesisTime()
     }
 
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * <code>string chain_id = 2;</code>
      */
     public var chainId: kotlin.String
       @JvmName("getChainId")
@@ -50,14 +50,14 @@ public object GenesisResponseKt {
         _builder.setChainId(value)
       }
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * <code>string chain_id = 2;</code>
      */
     public fun clearChainId() {
       _builder.clearChainId()
     }
 
     /**
-     * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
+     * <code>uint64 initial_height = 6;</code>
      */
     public var initialHeight: kotlin.Long
       @JvmName("getInitialHeight")
@@ -67,14 +67,14 @@ public object GenesisResponseKt {
         _builder.setInitialHeight(value)
       }
     /**
-     * <code>uint64 initial_height = 6 [json_name = "initialHeight"];</code>
+     * <code>uint64 initial_height = 6;</code>
      */
     public fun clearInitialHeight() {
       _builder.clearInitialHeight()
     }
 
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
      */
     public var consensusParams: counters.minter.grpc.client.GenesisResponse.ConsensusParams
       @JvmName("getConsensusParams")
@@ -84,13 +84,13 @@ public object GenesisResponseKt {
         _builder.setConsensusParams(value)
       }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
      */
     public fun clearConsensusParams() {
       _builder.clearConsensusParams()
     }
     /**
-     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
+     * <code>.api_pb.GenesisResponse.ConsensusParams consensus_params = 3;</code>
      * @return Whether the consensusParams field is set.
      */
     public fun hasConsensusParams(): kotlin.Boolean {
@@ -98,7 +98,7 @@ public object GenesisResponseKt {
     }
 
     /**
-     * <code>string app_hash = 4 [json_name = "appHash"];</code>
+     * <code>string app_hash = 4;</code>
      */
     public var appHash: kotlin.String
       @JvmName("getAppHash")
@@ -108,14 +108,14 @@ public object GenesisResponseKt {
         _builder.setAppHash(value)
       }
     /**
-     * <code>string app_hash = 4 [json_name = "appHash"];</code>
+     * <code>string app_hash = 4;</code>
      */
     public fun clearAppHash() {
       _builder.clearAppHash()
     }
 
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
      */
     public var appState: counters.minter.grpc.client.GenesisResponse.AppState
       @JvmName("getAppState")
@@ -125,20 +125,20 @@ public object GenesisResponseKt {
         _builder.setAppState(value)
       }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
      */
     public fun clearAppState() {
       _builder.clearAppState()
     }
     /**
-     * <code>.api_pb.GenesisResponse.AppState app_state = 5 [json_name = "appState"];</code>
+     * <code>.api_pb.GenesisResponse.AppState app_state = 5;</code>
      * @return Whether the appState field is set.
      */
     public fun hasAppState(): kotlin.Boolean {
       return _builder.hasAppState()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeconsensusParams")
   public inline fun consensusParams(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams =
     counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.ConsensusParams.newBuilder()).apply { block() }._build()
   public object ConsensusParamsKt {
@@ -158,7 +158,7 @@ public object GenesisResponseKt {
       internal fun _build(): counters.minter.grpc.client.GenesisResponse.ConsensusParams = _builder.build()
 
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
        */
       public var block: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block
         @JvmName("getBlock")
@@ -168,13 +168,13 @@ public object GenesisResponseKt {
           _builder.setBlock(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
        */
       public fun clearBlock() {
         _builder.clearBlock()
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1 [json_name = "block"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Block block = 1;</code>
        * @return Whether the block field is set.
        */
       public fun hasBlock(): kotlin.Boolean {
@@ -182,7 +182,7 @@ public object GenesisResponseKt {
       }
 
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
        */
       public var evidence: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence
         @JvmName("getEvidence")
@@ -192,13 +192,13 @@ public object GenesisResponseKt {
           _builder.setEvidence(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
        */
       public fun clearEvidence() {
         _builder.clearEvidence()
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2 [json_name = "evidence"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Evidence evidence = 2;</code>
        * @return Whether the evidence field is set.
        */
       public fun hasEvidence(): kotlin.Boolean {
@@ -206,7 +206,7 @@ public object GenesisResponseKt {
       }
 
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
        */
       public var validator: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator
         @JvmName("getValidator")
@@ -216,13 +216,13 @@ public object GenesisResponseKt {
           _builder.setValidator(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
        */
       public fun clearValidator() {
         _builder.clearValidator()
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3 [json_name = "validator"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Validator validator = 3;</code>
        * @return Whether the validator field is set.
        */
       public fun hasValidator(): kotlin.Boolean {
@@ -230,7 +230,7 @@ public object GenesisResponseKt {
       }
 
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4;</code>
        */
       public var version: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version
         @JvmName("getVersion")
@@ -240,20 +240,20 @@ public object GenesisResponseKt {
           _builder.setVersion(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4;</code>
        */
       public fun clearVersion() {
         _builder.clearVersion()
       }
       /**
-       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4 [json_name = "version"];</code>
+       * <code>.api_pb.GenesisResponse.ConsensusParams.Version version = 4;</code>
        * @return Whether the version field is set.
        */
       public fun hasVersion(): kotlin.Boolean {
         return _builder.hasVersion()
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeblock")
     public inline fun block(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.BlockKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block =
       counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.BlockKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.newBuilder()).apply { block() }._build()
     public object BlockKt {
@@ -273,7 +273,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block = _builder.build()
 
         /**
-         * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
+         * <code>int64 max_bytes = 1;</code>
          */
         public var maxBytes: kotlin.Long
           @JvmName("getMaxBytes")
@@ -283,14 +283,14 @@ public object GenesisResponseKt {
             _builder.setMaxBytes(value)
           }
         /**
-         * <code>int64 max_bytes = 1 [json_name = "maxBytes"];</code>
+         * <code>int64 max_bytes = 1;</code>
          */
         public fun clearMaxBytes() {
           _builder.clearMaxBytes()
         }
 
         /**
-         * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
+         * <code>int64 max_gas = 2;</code>
          */
         public var maxGas: kotlin.Long
           @JvmName("getMaxGas")
@@ -300,14 +300,14 @@ public object GenesisResponseKt {
             _builder.setMaxGas(value)
           }
         /**
-         * <code>int64 max_gas = 2 [json_name = "maxGas"];</code>
+         * <code>int64 max_gas = 2;</code>
          */
         public fun clearMaxGas() {
           _builder.clearMaxGas()
         }
 
         /**
-         * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
+         * <code>int64 time_iota_ms = 3;</code>
          */
         public var timeIotaMs: kotlin.Long
           @JvmName("getTimeIotaMs")
@@ -317,14 +317,14 @@ public object GenesisResponseKt {
             _builder.setTimeIotaMs(value)
           }
         /**
-         * <code>int64 time_iota_ms = 3 [json_name = "timeIotaMs"];</code>
+         * <code>int64 time_iota_ms = 3;</code>
          */
         public fun clearTimeIotaMs() {
           _builder.clearTimeIotaMs()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeevidence")
     public inline fun evidence(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.EvidenceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence =
       counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.EvidenceKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.newBuilder()).apply { block() }._build()
     public object EvidenceKt {
@@ -344,7 +344,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence = _builder.build()
 
         /**
-         * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
+         * <code>int64 max_age_num_blocks = 1;</code>
          */
         public var maxAgeNumBlocks: kotlin.Long
           @JvmName("getMaxAgeNumBlocks")
@@ -354,14 +354,14 @@ public object GenesisResponseKt {
             _builder.setMaxAgeNumBlocks(value)
           }
         /**
-         * <code>int64 max_age_num_blocks = 1 [json_name = "maxAgeNumBlocks"];</code>
+         * <code>int64 max_age_num_blocks = 1;</code>
          */
         public fun clearMaxAgeNumBlocks() {
           _builder.clearMaxAgeNumBlocks()
         }
 
         /**
-         * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
+         * <code>int64 max_age_duration = 2;</code>
          */
         public var maxAgeDuration: kotlin.Long
           @JvmName("getMaxAgeDuration")
@@ -371,14 +371,14 @@ public object GenesisResponseKt {
             _builder.setMaxAgeDuration(value)
           }
         /**
-         * <code>int64 max_age_duration = 2 [json_name = "maxAgeDuration"];</code>
+         * <code>int64 max_age_duration = 2;</code>
          */
         public fun clearMaxAgeDuration() {
           _builder.clearMaxAgeDuration()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializevalidator")
     public inline fun validator(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.ValidatorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator =
       counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.ValidatorKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.newBuilder()).apply { block() }._build()
     public object ValidatorKt {
@@ -404,7 +404,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class PubKeyTypesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @return A list containing the pubKeyTypes.
          */
         public val pubKeyTypes: com.google.protobuf.kotlin.DslList<kotlin.String, PubKeyTypesProxy>
@@ -413,7 +413,7 @@ public object GenesisResponseKt {
             _builder.getPubKeyTypesList()
           )
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @param value The pubKeyTypes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -422,7 +422,7 @@ public object GenesisResponseKt {
           _builder.addPubKeyTypes(value)
         }
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @param value The pubKeyTypes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -432,7 +432,7 @@ public object GenesisResponseKt {
           add(value)
         }
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @param values The pubKeyTypes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -441,7 +441,7 @@ public object GenesisResponseKt {
           _builder.addAllPubKeyTypes(values)
         }
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @param values The pubKeyTypes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -451,7 +451,7 @@ public object GenesisResponseKt {
           addAll(values)
         }
         /**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          * @param index The index to set the value at.
          * @param value The pubKeyTypes to set.
          */
@@ -460,7 +460,7 @@ public object GenesisResponseKt {
         public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PubKeyTypesProxy>.set(index: kotlin.Int, value: kotlin.String) {
           _builder.setPubKeyTypes(index, value)
         }/**
-         * <code>repeated string pub_key_types = 1 [json_name = "pubKeyTypes"];</code>
+         * <code>repeated string pub_key_types = 1;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearPubKeyTypes")
@@ -468,7 +468,7 @@ public object GenesisResponseKt {
           _builder.clearPubKeyTypes()
         }}
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeversion")
     public inline fun version(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version =
       counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.VersionKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.newBuilder()).apply { block() }._build()
     public object VersionKt {
@@ -488,7 +488,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version = _builder.build()
 
         /**
-         * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+         * <code>uint64 app_version = 1;</code>
          */
         public var appVersion: kotlin.Long
           @JvmName("getAppVersion")
@@ -498,7 +498,7 @@ public object GenesisResponseKt {
             _builder.setAppVersion(value)
           }
         /**
-         * <code>uint64 app_version = 1 [json_name = "appVersion"];</code>
+         * <code>uint64 app_version = 1;</code>
          */
         public fun clearAppVersion() {
           _builder.clearAppVersion()
@@ -506,7 +506,7 @@ public object GenesisResponseKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeappState")
   public inline fun appState(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState =
     counters.minter.grpc.client.GenesisResponseKt.AppStateKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.newBuilder()).apply { block() }._build()
   public object AppStateKt {
@@ -526,7 +526,7 @@ public object GenesisResponseKt {
       internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState = _builder.build()
 
       /**
-       * <code>string version = 19 [json_name = "version"];</code>
+       * <code>string version = 19;</code>
        */
       public var version: kotlin.String
         @JvmName("getVersion")
@@ -536,14 +536,14 @@ public object GenesisResponseKt {
           _builder.setVersion(value)
         }
       /**
-       * <code>string version = 19 [json_name = "version"];</code>
+       * <code>string version = 19;</code>
        */
       public fun clearVersion() {
         _builder.clearVersion()
       }
 
       /**
-       * <code>string note = 10 [json_name = "note"];</code>
+       * <code>string note = 10;</code>
        */
       public var note: kotlin.String
         @JvmName("getNote")
@@ -553,7 +553,7 @@ public object GenesisResponseKt {
           _builder.setNote(value)
         }
       /**
-       * <code>string note = 10 [json_name = "note"];</code>
+       * <code>string note = 10;</code>
        */
       public fun clearNote() {
         _builder.clearNote()
@@ -566,7 +566,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class ValidatorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        */
        public val validators: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -574,15 +574,16 @@ public object GenesisResponseKt {
           _builder.getValidatorsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        * @param value The validators to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addValidators")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Validators) {
         _builder.addValidators(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        * @param value The validators to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -590,16 +591,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Validators) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        * @param values The validators to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllValidators")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Validators>) {
         _builder.addAllValidators(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        * @param values The validators to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -607,8 +610,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Validators>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        * @param index The index to set the value at.
        * @param value The validators to set.
        */
@@ -616,14 +620,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setValidators")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Validators) {
         _builder.setValidators(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2 [json_name = "validators"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Validators validators = 2;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearValidators")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Validators, ValidatorsProxy>.clear() {
         _builder.clearValidators()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -631,7 +638,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class CandidatesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        */
        public val candidates: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>
         @kotlin.jvm.JvmSynthetic
@@ -639,15 +646,16 @@ public object GenesisResponseKt {
           _builder.getCandidatesList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        * @param value The candidates to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate) {
         _builder.addCandidates(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        * @param value The candidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -655,16 +663,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        * @param values The candidates to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate>) {
         _builder.addAllCandidates(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        * @param values The candidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -672,8 +682,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        * @param index The index to set the value at.
        * @param value The candidates to set.
        */
@@ -681,14 +692,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setCandidates")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate) {
         _builder.setCandidates(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3 [json_name = "candidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Candidate candidates = 3;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate, CandidatesProxy>.clear() {
         _builder.clearCandidates()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -696,7 +710,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class DeletedCandidatesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        */
        public val deletedCandidates: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>
         @kotlin.jvm.JvmSynthetic
@@ -704,15 +718,16 @@ public object GenesisResponseKt {
           _builder.getDeletedCandidatesList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        * @param value The deletedCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addDeletedCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) {
         _builder.addDeletedCandidates(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        * @param value The deletedCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -720,16 +735,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        * @param values The deletedCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllDeletedCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate>) {
         _builder.addAllDeletedCandidates(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        * @param values The deletedCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -737,8 +754,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        * @param index The index to set the value at.
        * @param value The deletedCandidates to set.
        */
@@ -746,14 +764,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setDeletedCandidates")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate) {
         _builder.setDeletedCandidates(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20 [json_name = "deletedCandidates"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.DeletedCandidate deleted_candidates = 20;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearDeletedCandidates")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate, DeletedCandidatesProxy>.clear() {
         _builder.clearDeletedCandidates()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -761,7 +782,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class CoinsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        */
        public val coins: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -769,15 +790,16 @@ public object GenesisResponseKt {
           _builder.getCoinsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        * @param value The coins to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addCoins")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Coin) {
         _builder.addCoins(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        * @param value The coins to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -785,16 +807,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Coin) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        * @param values The coins to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllCoins")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Coin>) {
         _builder.addAllCoins(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        * @param values The coins to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -802,8 +826,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Coin>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        * @param index The index to set the value at.
        * @param value The coins to set.
        */
@@ -811,14 +836,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setCoins")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Coin) {
         _builder.setCoins(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5 [json_name = "coins"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Coin coins = 5;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearCoins")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Coin, CoinsProxy>.clear() {
         _builder.clearCoins()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -826,7 +854,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class FrozenFundsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        */
        public val frozenFunds: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -834,15 +862,16 @@ public object GenesisResponseKt {
           _builder.getFrozenFundsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        * @param value The frozenFunds to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addFrozenFunds")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund) {
         _builder.addFrozenFunds(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        * @param value The frozenFunds to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -850,16 +879,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        * @param values The frozenFunds to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllFrozenFunds")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund>) {
         _builder.addAllFrozenFunds(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        * @param values The frozenFunds to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -867,8 +898,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        * @param index The index to set the value at.
        * @param value The frozenFunds to set.
        */
@@ -876,14 +908,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setFrozenFunds")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund) {
         _builder.setFrozenFunds(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6 [json_name = "frozenFunds"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.FrozenFund frozen_funds = 6;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearFrozenFunds")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund, FrozenFundsProxy>.clear() {
         _builder.clearFrozenFunds()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -891,7 +926,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class BlockListCandidatesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @return A list containing the blockListCandidates.
        */
       public val blockListCandidates: com.google.protobuf.kotlin.DslList<kotlin.String, BlockListCandidatesProxy>
@@ -900,7 +935,7 @@ public object GenesisResponseKt {
           _builder.getBlockListCandidatesList()
         )
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @param value The blockListCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -909,7 +944,7 @@ public object GenesisResponseKt {
         _builder.addBlockListCandidates(value)
       }
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @param value The blockListCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -919,7 +954,7 @@ public object GenesisResponseKt {
         add(value)
       }
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @param values The blockListCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -928,7 +963,7 @@ public object GenesisResponseKt {
         _builder.addAllBlockListCandidates(values)
       }
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @param values The blockListCandidates to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -938,7 +973,7 @@ public object GenesisResponseKt {
         addAll(values)
       }
       /**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        * @param index The index to set the value at.
        * @param value The blockListCandidates to set.
        */
@@ -947,7 +982,7 @@ public object GenesisResponseKt {
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, BlockListCandidatesProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setBlockListCandidates(index, value)
       }/**
-       * <code>repeated string block_list_candidates = 18 [json_name = "blockListCandidates"];</code>
+       * <code>repeated string block_list_candidates = 18;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearBlockListCandidates")
@@ -961,7 +996,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class WaitlistProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        */
        public val waitlist: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>
         @kotlin.jvm.JvmSynthetic
@@ -969,15 +1004,16 @@ public object GenesisResponseKt {
           _builder.getWaitlistList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        * @param value The waitlist to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addWaitlist")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Waitlist) {
         _builder.addWaitlist(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        * @param value The waitlist to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -985,16 +1021,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Waitlist) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        * @param values The waitlist to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllWaitlist")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist>) {
         _builder.addAllWaitlist(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        * @param values The waitlist to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1002,8 +1040,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        * @param index The index to set the value at.
        * @param value The waitlist to set.
        */
@@ -1011,14 +1050,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setWaitlist")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Waitlist) {
         _builder.setWaitlist(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13 [json_name = "waitlist"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Waitlist waitlist = 13;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearWaitlist")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Waitlist, WaitlistProxy>.clear() {
         _builder.clearWaitlist()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1026,7 +1068,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class AccountsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        */
        public val accounts: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1034,15 +1076,16 @@ public object GenesisResponseKt {
           _builder.getAccountsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        * @param value The accounts to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAccounts")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Account) {
         _builder.addAccounts(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        * @param value The accounts to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1050,16 +1093,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Account) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        * @param values The accounts to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllAccounts")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Account>) {
         _builder.addAllAccounts(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        * @param values The accounts to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1067,8 +1112,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Account>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        * @param index The index to set the value at.
        * @param value The accounts to set.
        */
@@ -1076,14 +1122,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setAccounts")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Account) {
         _builder.setAccounts(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14 [json_name = "accounts"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Account accounts = 14;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearAccounts")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account, AccountsProxy>.clear() {
         _builder.clearAccounts()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1091,7 +1140,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class HaltBlocksProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        */
        public val haltBlocks: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1099,15 +1148,16 @@ public object GenesisResponseKt {
           _builder.getHaltBlocksList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        * @param value The haltBlocks to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addHaltBlocks")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock) {
         _builder.addHaltBlocks(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        * @param value The haltBlocks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1115,16 +1165,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        * @param values The haltBlocks to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllHaltBlocks")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock>) {
         _builder.addAllHaltBlocks(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        * @param values The haltBlocks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1132,8 +1184,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        * @param index The index to set the value at.
        * @param value The haltBlocks to set.
        */
@@ -1141,14 +1194,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setHaltBlocks")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock) {
         _builder.setHaltBlocks(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12 [json_name = "haltBlocks"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.HaltBlock halt_blocks = 12;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearHaltBlocks")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock, HaltBlocksProxy>.clear() {
         _builder.clearHaltBlocks()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1156,7 +1212,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class PoolsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        */
        public val pools: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1164,15 +1220,16 @@ public object GenesisResponseKt {
           _builder.getPoolsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        * @param value The pools to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addPools")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Pool) {
         _builder.addPools(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        * @param value The pools to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1180,16 +1237,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Pool) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        * @param values The pools to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllPools")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Pool>) {
         _builder.addAllPools(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        * @param values The pools to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1197,8 +1256,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Pool>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        * @param index The index to set the value at.
        * @param value The pools to set.
        */
@@ -1206,16 +1266,19 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setPools")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Pool) {
         _builder.setPools(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15 [json_name = "pools"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Pool pools = 15;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearPools")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool, PoolsProxy>.clear() {
         _builder.clearPools()
       }
+
+
       /**
-       * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+       * <code>uint64 next_order_id = 21;</code>
        */
       public var nextOrderId: kotlin.Long
         @JvmName("getNextOrderId")
@@ -1225,14 +1288,14 @@ public object GenesisResponseKt {
           _builder.setNextOrderId(value)
         }
       /**
-       * <code>uint64 next_order_id = 21 [json_name = "nextOrderId"];</code>
+       * <code>uint64 next_order_id = 21;</code>
        */
       public fun clearNextOrderId() {
         _builder.clearNextOrderId()
       }
 
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
        */
       public var commission: counters.minter.grpc.client.GenesisResponse.AppState.Commission
         @JvmName("getCommission")
@@ -1242,13 +1305,13 @@ public object GenesisResponseKt {
           _builder.setCommission(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
        */
       public fun clearCommission() {
         _builder.clearCommission()
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16 [json_name = "commission"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.Commission commission = 16;</code>
        * @return Whether the commission field is set.
        */
       public fun hasCommission(): kotlin.Boolean {
@@ -1262,7 +1325,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class CommissionVotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        */
        public val commissionVotes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1270,15 +1333,16 @@ public object GenesisResponseKt {
           _builder.getCommissionVotesList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        * @param value The commissionVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addCommissionVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote) {
         _builder.addCommissionVotes(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        * @param value The commissionVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1286,16 +1350,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        * @param values The commissionVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllCommissionVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote>) {
         _builder.addAllCommissionVotes(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        * @param values The commissionVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1303,8 +1369,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        * @param index The index to set the value at.
        * @param value The commissionVotes to set.
        */
@@ -1312,14 +1379,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setCommissionVotes")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote) {
         _builder.setCommissionVotes(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17 [json_name = "commissionVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.CommissionVote commission_votes = 17;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearCommissionVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote, CommissionVotesProxy>.clear() {
         _builder.clearCommissionVotes()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1327,7 +1397,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class UpdateVotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        */
        public val updateVotes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1335,15 +1405,16 @@ public object GenesisResponseKt {
           _builder.getUpdateVotesList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        * @param value The updateVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addUpdateVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) {
         _builder.addUpdateVotes(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        * @param value The updateVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1351,16 +1422,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        * @param values The updateVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllUpdateVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote>) {
         _builder.addAllUpdateVotes(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        * @param values The updateVotes to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1368,8 +1441,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        * @param index The index to set the value at.
        * @param value The updateVotes to set.
        */
@@ -1377,14 +1451,17 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setUpdateVotes")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote) {
         _builder.setUpdateVotes(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22 [json_name = "updateVotes"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.UpdateVote update_votes = 22;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearUpdateVotes")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote, UpdateVotesProxy>.clear() {
         _builder.clearUpdateVotes()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1392,7 +1469,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class UsedChecksProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @return A list containing the usedChecks.
        */
       public val usedChecks: com.google.protobuf.kotlin.DslList<kotlin.String, UsedChecksProxy>
@@ -1401,7 +1478,7 @@ public object GenesisResponseKt {
           _builder.getUsedChecksList()
         )
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @param value The usedChecks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1410,7 +1487,7 @@ public object GenesisResponseKt {
         _builder.addUsedChecks(value)
       }
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @param value The usedChecks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1420,7 +1497,7 @@ public object GenesisResponseKt {
         add(value)
       }
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @param values The usedChecks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1429,7 +1506,7 @@ public object GenesisResponseKt {
         _builder.addAllUsedChecks(values)
       }
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @param values The usedChecks to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1439,7 +1516,7 @@ public object GenesisResponseKt {
         addAll(values)
       }
       /**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        * @param index The index to set the value at.
        * @param value The usedChecks to set.
        */
@@ -1448,7 +1525,7 @@ public object GenesisResponseKt {
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, UsedChecksProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setUsedChecks(index, value)
       }/**
-       * <code>repeated string used_checks = 11 [json_name = "usedChecks"];</code>
+       * <code>repeated string used_checks = 11;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearUsedChecks")
@@ -1456,7 +1533,7 @@ public object GenesisResponseKt {
         _builder.clearUsedChecks()
       }
       /**
-       * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
+       * <code>uint64 max_gas = 7;</code>
        */
       public var maxGas: kotlin.Long
         @JvmName("getMaxGas")
@@ -1466,14 +1543,14 @@ public object GenesisResponseKt {
           _builder.setMaxGas(value)
         }
       /**
-       * <code>uint64 max_gas = 7 [json_name = "maxGas"];</code>
+       * <code>uint64 max_gas = 7;</code>
        */
       public fun clearMaxGas() {
         _builder.clearMaxGas()
       }
 
       /**
-       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
+       * <code>string total_slashed = 8;</code>
        */
       public var totalSlashed: kotlin.String
         @JvmName("getTotalSlashed")
@@ -1483,7 +1560,7 @@ public object GenesisResponseKt {
           _builder.setTotalSlashed(value)
         }
       /**
-       * <code>string total_slashed = 8 [json_name = "totalSlashed"];</code>
+       * <code>string total_slashed = 8;</code>
        */
       public fun clearTotalSlashed() {
         _builder.clearTotalSlashed()
@@ -1496,7 +1573,7 @@ public object GenesisResponseKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class VersionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        */
        public val versions: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>
         @kotlin.jvm.JvmSynthetic
@@ -1504,15 +1581,16 @@ public object GenesisResponseKt {
           _builder.getVersionsList()
         )
       /**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        * @param value The versions to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addVersions")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Version) {
         _builder.addVersions(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        * @param value The versions to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1520,16 +1598,18 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Version) {
         add(value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        * @param values The versions to add.
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("addAllVersions")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Version>) {
         _builder.addAllVersions(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        * @param values The versions to add.
        */
       @kotlin.jvm.JvmSynthetic
@@ -1537,8 +1617,9 @@ public object GenesisResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Version>) {
         addAll(values)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        * @param index The index to set the value at.
        * @param value The versions to set.
        */
@@ -1546,16 +1627,19 @@ public object GenesisResponseKt {
       @kotlin.jvm.JvmName("setVersions")
       public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Version) {
         _builder.setVersions(index, value)
-      }/**
-       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23 [json_name = "versions"];</code>
+      }
+      /**
+       * <code>repeated .api_pb.GenesisResponse.AppState.Version versions = 23;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearVersions")
       public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Version, VersionsProxy>.clear() {
         _builder.clearVersions()
       }
+
+
       /**
-       * <code>string emission = 24 [json_name = "emission"];</code>
+       * <code>string emission = 24;</code>
        */
       public var emission: kotlin.String
         @JvmName("getEmission")
@@ -1565,14 +1649,14 @@ public object GenesisResponseKt {
           _builder.setEmission(value)
         }
       /**
-       * <code>string emission = 24 [json_name = "emission"];</code>
+       * <code>string emission = 24;</code>
        */
       public fun clearEmission() {
         _builder.clearEmission()
       }
 
       /**
-       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25;</code>
        */
       public var prevReward: counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice
         @JvmName("getPrevReward")
@@ -1582,20 +1666,20 @@ public object GenesisResponseKt {
           _builder.setPrevReward(value)
         }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25;</code>
        */
       public fun clearPrevReward() {
         _builder.clearPrevReward()
       }
       /**
-       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25 [json_name = "prevReward"];</code>
+       * <code>.api_pb.GenesisResponse.AppState.RewardPrice prev_reward = 25;</code>
        * @return Whether the prevReward field is set.
        */
       public fun hasPrevReward(): kotlin.Boolean {
         return _builder.hasPrevReward()
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializevalidators")
     public inline fun validators(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.ValidatorsKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Validators =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.ValidatorsKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Validators.newBuilder()).apply { block() }._build()
     public object ValidatorsKt {
@@ -1615,7 +1699,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Validators = _builder.build()
 
         /**
-         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
+         * <code>string total_bip_stake = 4;</code>
          */
         public var totalBipStake: kotlin.String
           @JvmName("getTotalBipStake")
@@ -1625,14 +1709,14 @@ public object GenesisResponseKt {
             _builder.setTotalBipStake(value)
           }
         /**
-         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
+         * <code>string total_bip_stake = 4;</code>
          */
         public fun clearTotalBipStake() {
           _builder.clearTotalBipStake()
         }
 
         /**
-         * <code>string public_key = 1 [json_name = "publicKey"];</code>
+         * <code>string public_key = 1;</code>
          */
         public var publicKey: kotlin.String
           @JvmName("getPublicKey")
@@ -1642,14 +1726,14 @@ public object GenesisResponseKt {
             _builder.setPublicKey(value)
           }
         /**
-         * <code>string public_key = 1 [json_name = "publicKey"];</code>
+         * <code>string public_key = 1;</code>
          */
         public fun clearPublicKey() {
           _builder.clearPublicKey()
         }
 
         /**
-         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
+         * <code>string accum_reward = 2;</code>
          */
         public var accumReward: kotlin.String
           @JvmName("getAccumReward")
@@ -1659,14 +1743,14 @@ public object GenesisResponseKt {
             _builder.setAccumReward(value)
           }
         /**
-         * <code>string accum_reward = 2 [json_name = "accumReward"];</code>
+         * <code>string accum_reward = 2;</code>
          */
         public fun clearAccumReward() {
           _builder.clearAccumReward()
         }
 
         /**
-         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
+         * <code>string absent_times = 3;</code>
          */
         public var absentTimes: kotlin.String
           @JvmName("getAbsentTimes")
@@ -1676,14 +1760,14 @@ public object GenesisResponseKt {
             _builder.setAbsentTimes(value)
           }
         /**
-         * <code>string absent_times = 3 [json_name = "absentTimes"];</code>
+         * <code>string absent_times = 3;</code>
          */
         public fun clearAbsentTimes() {
           _builder.clearAbsentTimes()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializecandidate")
     public inline fun candidate(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Candidate =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Candidate.newBuilder()).apply { block() }._build()
     public object CandidateKt {
@@ -1703,7 +1787,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Candidate = _builder.build()
 
         /**
-         * <code>uint64 id = 10 [json_name = "id"];</code>
+         * <code>uint64 id = 10;</code>
          */
         public var id: kotlin.Long
           @JvmName("getId")
@@ -1713,14 +1797,14 @@ public object GenesisResponseKt {
             _builder.setId(value)
           }
         /**
-         * <code>uint64 id = 10 [json_name = "id"];</code>
+         * <code>uint64 id = 10;</code>
          */
         public fun clearId() {
           _builder.clearId()
         }
 
         /**
-         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+         * <code>string reward_address = 1;</code>
          */
         public var rewardAddress: kotlin.String
           @JvmName("getRewardAddress")
@@ -1730,14 +1814,14 @@ public object GenesisResponseKt {
             _builder.setRewardAddress(value)
           }
         /**
-         * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+         * <code>string reward_address = 1;</code>
          */
         public fun clearRewardAddress() {
           _builder.clearRewardAddress()
         }
 
         /**
-         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
+         * <code>string owner_address = 2;</code>
          */
         public var ownerAddress: kotlin.String
           @JvmName("getOwnerAddress")
@@ -1747,14 +1831,14 @@ public object GenesisResponseKt {
             _builder.setOwnerAddress(value)
           }
         /**
-         * <code>string owner_address = 2 [json_name = "ownerAddress"];</code>
+         * <code>string owner_address = 2;</code>
          */
         public fun clearOwnerAddress() {
           _builder.clearOwnerAddress()
         }
 
         /**
-         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
+         * <code>string control_address = 3;</code>
          */
         public var controlAddress: kotlin.String
           @JvmName("getControlAddress")
@@ -1764,14 +1848,14 @@ public object GenesisResponseKt {
             _builder.setControlAddress(value)
           }
         /**
-         * <code>string control_address = 3 [json_name = "controlAddress"];</code>
+         * <code>string control_address = 3;</code>
          */
         public fun clearControlAddress() {
           _builder.clearControlAddress()
         }
 
         /**
-         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
+         * <code>string total_bip_stake = 4;</code>
          */
         public var totalBipStake: kotlin.String
           @JvmName("getTotalBipStake")
@@ -1781,14 +1865,14 @@ public object GenesisResponseKt {
             _builder.setTotalBipStake(value)
           }
         /**
-         * <code>string total_bip_stake = 4 [json_name = "totalBipStake"];</code>
+         * <code>string total_bip_stake = 4;</code>
          */
         public fun clearTotalBipStake() {
           _builder.clearTotalBipStake()
         }
 
         /**
-         * <code>string public_key = 5 [json_name = "publicKey"];</code>
+         * <code>string public_key = 5;</code>
          */
         public var publicKey: kotlin.String
           @JvmName("getPublicKey")
@@ -1798,14 +1882,14 @@ public object GenesisResponseKt {
             _builder.setPublicKey(value)
           }
         /**
-         * <code>string public_key = 5 [json_name = "publicKey"];</code>
+         * <code>string public_key = 5;</code>
          */
         public fun clearPublicKey() {
           _builder.clearPublicKey()
         }
 
         /**
-         * <code>uint64 commission = 6 [json_name = "commission"];</code>
+         * <code>uint64 commission = 6;</code>
          */
         public var commission: kotlin.Long
           @JvmName("getCommission")
@@ -1815,7 +1899,7 @@ public object GenesisResponseKt {
             _builder.setCommission(value)
           }
         /**
-         * <code>uint64 commission = 6 [json_name = "commission"];</code>
+         * <code>uint64 commission = 6;</code>
          */
         public fun clearCommission() {
           _builder.clearCommission()
@@ -1828,7 +1912,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class StakesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          */
          public val stakes: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>
           @kotlin.jvm.JvmSynthetic
@@ -1836,15 +1920,16 @@ public object GenesisResponseKt {
             _builder.getStakesList()
           )
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          * @param value The stakes to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addStakes")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           _builder.addStakes(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          * @param value The stakes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -1852,16 +1937,18 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           add(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          * @param values The stakes to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addAllStakes")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake>) {
           _builder.addAllStakes(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          * @param values The stakes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -1869,8 +1956,9 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake>) {
           addAll(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          * @param index The index to set the value at.
          * @param value The stakes to set.
          */
@@ -1878,14 +1966,17 @@ public object GenesisResponseKt {
         @kotlin.jvm.JvmName("setStakes")
         public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           _builder.setStakes(index, value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7 [json_name = "stakes"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake stakes = 7;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearStakes")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, StakesProxy>.clear() {
           _builder.clearStakes()
         }
+
+
         /**
          * An uninstantiable, behaviorless type to represent the field in
          * generics.
@@ -1893,7 +1984,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class UpdatesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          */
          public val updates: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>
           @kotlin.jvm.JvmSynthetic
@@ -1901,15 +1992,16 @@ public object GenesisResponseKt {
             _builder.getUpdatesList()
           )
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          * @param value The updates to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addUpdates")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           _builder.addUpdates(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          * @param value The updates to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -1917,16 +2009,18 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           add(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          * @param values The updates to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addAllUpdates")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake>) {
           _builder.addAllUpdates(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          * @param values The updates to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -1934,8 +2028,9 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake>) {
           addAll(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          * @param index The index to set the value at.
          * @param value The updates to set.
          */
@@ -1943,16 +2038,19 @@ public object GenesisResponseKt {
         @kotlin.jvm.JvmName("setUpdates")
         public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake) {
           _builder.setUpdates(index, value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8 [json_name = "updates"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Candidate.Stake updates = 8;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearUpdates")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake, UpdatesProxy>.clear() {
           _builder.clearUpdates()
         }
+
+
         /**
-         * <code>int64 status = 9 [json_name = "status"];</code>
+         * <code>int64 status = 9;</code>
          */
         public var status: kotlin.Long
           @JvmName("getStatus")
@@ -1962,14 +2060,14 @@ public object GenesisResponseKt {
             _builder.setStatus(value)
           }
         /**
-         * <code>int64 status = 9 [json_name = "status"];</code>
+         * <code>int64 status = 9;</code>
          */
         public fun clearStatus() {
           _builder.clearStatus()
         }
 
         /**
-         * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
+         * <code>int64 jailed_until = 11;</code>
          */
         public var jailedUntil: kotlin.Long
           @JvmName("getJailedUntil")
@@ -1979,14 +2077,14 @@ public object GenesisResponseKt {
             _builder.setJailedUntil(value)
           }
         /**
-         * <code>int64 jailed_until = 11 [json_name = "jailedUntil"];</code>
+         * <code>int64 jailed_until = 11;</code>
          */
         public fun clearJailedUntil() {
           _builder.clearJailedUntil()
         }
 
         /**
-         * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
+         * <code>int64 last_edit_commission_height = 12;</code>
          */
         public var lastEditCommissionHeight: kotlin.Long
           @JvmName("getLastEditCommissionHeight")
@@ -1996,13 +2094,13 @@ public object GenesisResponseKt {
             _builder.setLastEditCommissionHeight(value)
           }
         /**
-         * <code>int64 last_edit_commission_height = 12 [json_name = "lastEditCommissionHeight"];</code>
+         * <code>int64 last_edit_commission_height = 12;</code>
          */
         public fun clearLastEditCommissionHeight() {
           _builder.clearLastEditCommissionHeight()
         }
       }
-      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("-initializestake")
       public inline fun stake(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.StakeKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake =
         counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.StakeKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.newBuilder()).apply { block() }._build()
       public object StakeKt {
@@ -2022,7 +2120,7 @@ public object GenesisResponseKt {
           internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake = _builder.build()
 
           /**
-           * <code>string owner = 4 [json_name = "owner"];</code>
+           * <code>string owner = 4;</code>
            */
           public var owner: kotlin.String
             @JvmName("getOwner")
@@ -2032,14 +2130,14 @@ public object GenesisResponseKt {
               _builder.setOwner(value)
             }
           /**
-           * <code>string owner = 4 [json_name = "owner"];</code>
+           * <code>string owner = 4;</code>
            */
           public fun clearOwner() {
             _builder.clearOwner()
           }
 
           /**
-           * <code>uint64 coin = 1 [json_name = "coin"];</code>
+           * <code>uint64 coin = 1;</code>
            */
           public var coin: kotlin.Long
             @JvmName("getCoin")
@@ -2049,14 +2147,14 @@ public object GenesisResponseKt {
               _builder.setCoin(value)
             }
           /**
-           * <code>uint64 coin = 1 [json_name = "coin"];</code>
+           * <code>uint64 coin = 1;</code>
            */
           public fun clearCoin() {
             _builder.clearCoin()
           }
 
           /**
-           * <code>string value = 2 [json_name = "value"];</code>
+           * <code>string value = 2;</code>
            */
           public var value: kotlin.String
             @JvmName("getValue")
@@ -2066,14 +2164,14 @@ public object GenesisResponseKt {
               _builder.setValue(value)
             }
           /**
-           * <code>string value = 2 [json_name = "value"];</code>
+           * <code>string value = 2;</code>
            */
           public fun clearValue() {
             _builder.clearValue()
           }
 
           /**
-           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+           * <code>string bip_value = 3;</code>
            */
           public var bipValue: kotlin.String
             @JvmName("getBipValue")
@@ -2083,7 +2181,7 @@ public object GenesisResponseKt {
               _builder.setBipValue(value)
             }
           /**
-           * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+           * <code>string bip_value = 3;</code>
            */
           public fun clearBipValue() {
             _builder.clearBipValue()
@@ -2091,7 +2189,7 @@ public object GenesisResponseKt {
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializedeletedCandidate")
     public inline fun deletedCandidate(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.DeletedCandidateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.DeletedCandidateKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.newBuilder()).apply { block() }._build()
     public object DeletedCandidateKt {
@@ -2111,7 +2209,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate = _builder.build()
 
         /**
-         * <code>uint64 id = 1 [json_name = "id"];</code>
+         * <code>uint64 id = 1;</code>
          */
         public var id: kotlin.Long
           @JvmName("getId")
@@ -2121,14 +2219,14 @@ public object GenesisResponseKt {
             _builder.setId(value)
           }
         /**
-         * <code>uint64 id = 1 [json_name = "id"];</code>
+         * <code>uint64 id = 1;</code>
          */
         public fun clearId() {
           _builder.clearId()
         }
 
         /**
-         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * <code>string public_key = 2;</code>
          */
         public var publicKey: kotlin.String
           @JvmName("getPublicKey")
@@ -2138,14 +2236,14 @@ public object GenesisResponseKt {
             _builder.setPublicKey(value)
           }
         /**
-         * <code>string public_key = 2 [json_name = "publicKey"];</code>
+         * <code>string public_key = 2;</code>
          */
         public fun clearPublicKey() {
           _builder.clearPublicKey()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializecoin")
     public inline fun coin(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Coin =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CoinKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Coin.newBuilder()).apply { block() }._build()
     public object CoinKt {
@@ -2165,7 +2263,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Coin = _builder.build()
 
         /**
-         * <code>uint64 id = 9 [json_name = "id"];</code>
+         * <code>uint64 id = 9;</code>
          */
         public var id: kotlin.Long
           @JvmName("getId")
@@ -2175,14 +2273,14 @@ public object GenesisResponseKt {
             _builder.setId(value)
           }
         /**
-         * <code>uint64 id = 9 [json_name = "id"];</code>
+         * <code>uint64 id = 9;</code>
          */
         public fun clearId() {
           _builder.clearId()
         }
 
         /**
-         * <code>string name = 1 [json_name = "name"];</code>
+         * <code>string name = 1;</code>
          */
         public var name: kotlin.String
           @JvmName("getName")
@@ -2192,14 +2290,14 @@ public object GenesisResponseKt {
             _builder.setName(value)
           }
         /**
-         * <code>string name = 1 [json_name = "name"];</code>
+         * <code>string name = 1;</code>
          */
         public fun clearName() {
           _builder.clearName()
         }
 
         /**
-         * <code>string symbol = 2 [json_name = "symbol"];</code>
+         * <code>string symbol = 2;</code>
          */
         public var symbol: kotlin.String
           @JvmName("getSymbol")
@@ -2209,14 +2307,14 @@ public object GenesisResponseKt {
             _builder.setSymbol(value)
           }
         /**
-         * <code>string symbol = 2 [json_name = "symbol"];</code>
+         * <code>string symbol = 2;</code>
          */
         public fun clearSymbol() {
           _builder.clearSymbol()
         }
 
         /**
-         * <code>string volume = 3 [json_name = "volume"];</code>
+         * <code>string volume = 3;</code>
          */
         public var volume: kotlin.String
           @JvmName("getVolume")
@@ -2226,14 +2324,14 @@ public object GenesisResponseKt {
             _builder.setVolume(value)
           }
         /**
-         * <code>string volume = 3 [json_name = "volume"];</code>
+         * <code>string volume = 3;</code>
          */
         public fun clearVolume() {
           _builder.clearVolume()
         }
 
         /**
-         * <code>uint64 crr = 4 [json_name = "crr"];</code>
+         * <code>uint64 crr = 4;</code>
          */
         public var crr: kotlin.Long
           @JvmName("getCrr")
@@ -2243,14 +2341,14 @@ public object GenesisResponseKt {
             _builder.setCrr(value)
           }
         /**
-         * <code>uint64 crr = 4 [json_name = "crr"];</code>
+         * <code>uint64 crr = 4;</code>
          */
         public fun clearCrr() {
           _builder.clearCrr()
         }
 
         /**
-         * <code>string reserve = 5 [json_name = "reserve"];</code>
+         * <code>string reserve = 5;</code>
          */
         public var reserve: kotlin.String
           @JvmName("getReserve")
@@ -2260,14 +2358,14 @@ public object GenesisResponseKt {
             _builder.setReserve(value)
           }
         /**
-         * <code>string reserve = 5 [json_name = "reserve"];</code>
+         * <code>string reserve = 5;</code>
          */
         public fun clearReserve() {
           _builder.clearReserve()
         }
 
         /**
-         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+         * <code>string max_supply = 6;</code>
          */
         public var maxSupply: kotlin.String
           @JvmName("getMaxSupply")
@@ -2277,14 +2375,14 @@ public object GenesisResponseKt {
             _builder.setMaxSupply(value)
           }
         /**
-         * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+         * <code>string max_supply = 6;</code>
          */
         public fun clearMaxSupply() {
           _builder.clearMaxSupply()
         }
 
         /**
-         * <code>uint64 version = 7 [json_name = "version"];</code>
+         * <code>uint64 version = 7;</code>
          */
         public var version: kotlin.Long
           @JvmName("getVersion")
@@ -2294,14 +2392,14 @@ public object GenesisResponseKt {
             _builder.setVersion(value)
           }
         /**
-         * <code>uint64 version = 7 [json_name = "version"];</code>
+         * <code>uint64 version = 7;</code>
          */
         public fun clearVersion() {
           _builder.clearVersion()
         }
 
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
+         * <code>.google.protobuf.StringValue owner_address = 8;</code>
          */
         public var ownerAddress: com.google.protobuf.StringValue
           @JvmName("getOwnerAddress")
@@ -2311,13 +2409,13 @@ public object GenesisResponseKt {
             _builder.setOwnerAddress(value)
           }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
+         * <code>.google.protobuf.StringValue owner_address = 8;</code>
          */
         public fun clearOwnerAddress() {
           _builder.clearOwnerAddress()
         }
         /**
-         * <code>.google.protobuf.StringValue owner_address = 8 [json_name = "ownerAddress"];</code>
+         * <code>.google.protobuf.StringValue owner_address = 8;</code>
          * @return Whether the ownerAddress field is set.
          */
         public fun hasOwnerAddress(): kotlin.Boolean {
@@ -2325,7 +2423,7 @@ public object GenesisResponseKt {
         }
 
         /**
-         * <code>bool mintable = 10 [json_name = "mintable"];</code>
+         * <code>bool mintable = 10;</code>
          */
         public var mintable: kotlin.Boolean
           @JvmName("getMintable")
@@ -2335,14 +2433,14 @@ public object GenesisResponseKt {
             _builder.setMintable(value)
           }
         /**
-         * <code>bool mintable = 10 [json_name = "mintable"];</code>
+         * <code>bool mintable = 10;</code>
          */
         public fun clearMintable() {
           _builder.clearMintable()
         }
 
         /**
-         * <code>bool burnable = 11 [json_name = "burnable"];</code>
+         * <code>bool burnable = 11;</code>
          */
         public var burnable: kotlin.Boolean
           @JvmName("getBurnable")
@@ -2352,14 +2450,14 @@ public object GenesisResponseKt {
             _builder.setBurnable(value)
           }
         /**
-         * <code>bool burnable = 11 [json_name = "burnable"];</code>
+         * <code>bool burnable = 11;</code>
          */
         public fun clearBurnable() {
           _builder.clearBurnable()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializefrozenFund")
     public inline fun frozenFund(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.FrozenFundKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.FrozenFundKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.newBuilder()).apply { block() }._build()
     public object FrozenFundKt {
@@ -2379,7 +2477,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund = _builder.build()
 
         /**
-         * <code>uint64 height = 5 [json_name = "height"];</code>
+         * <code>uint64 height = 5;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -2389,14 +2487,14 @@ public object GenesisResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 5 [json_name = "height"];</code>
+         * <code>uint64 height = 5;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
         }
 
         /**
-         * <code>string address = 1 [json_name = "address"];</code>
+         * <code>string address = 1;</code>
          */
         public var address: kotlin.String
           @JvmName("getAddress")
@@ -2406,14 +2504,14 @@ public object GenesisResponseKt {
             _builder.setAddress(value)
           }
         /**
-         * <code>string address = 1 [json_name = "address"];</code>
+         * <code>string address = 1;</code>
          */
         public fun clearAddress() {
           _builder.clearAddress()
         }
 
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
          */
         public var candidateKey: com.google.protobuf.StringValue
           @JvmName("getCandidateKey")
@@ -2423,13 +2521,13 @@ public object GenesisResponseKt {
             _builder.setCandidateKey(value)
           }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
          */
         public fun clearCandidateKey() {
           _builder.clearCandidateKey()
         }
         /**
-         * <code>.google.protobuf.StringValue candidate_key = 2 [json_name = "candidateKey"];</code>
+         * <code>.google.protobuf.StringValue candidate_key = 2;</code>
          * @return Whether the candidateKey field is set.
          */
         public fun hasCandidateKey(): kotlin.Boolean {
@@ -2437,7 +2535,7 @@ public object GenesisResponseKt {
         }
 
         /**
-         * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
+         * <code>uint64 candidate_id = 6;</code>
          */
         public var candidateId: kotlin.Long
           @JvmName("getCandidateId")
@@ -2447,14 +2545,14 @@ public object GenesisResponseKt {
             _builder.setCandidateId(value)
           }
         /**
-         * <code>uint64 candidate_id = 6 [json_name = "candidateId"];</code>
+         * <code>uint64 candidate_id = 6;</code>
          */
         public fun clearCandidateId() {
           _builder.clearCandidateId()
         }
 
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public var coin: kotlin.Long
           @JvmName("getCoin")
@@ -2464,14 +2562,14 @@ public object GenesisResponseKt {
             _builder.setCoin(value)
           }
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public fun clearCoin() {
           _builder.clearCoin()
         }
 
         /**
-         * <code>string value = 4 [json_name = "value"];</code>
+         * <code>string value = 4;</code>
          */
         public var value: kotlin.String
           @JvmName("getValue")
@@ -2481,14 +2579,14 @@ public object GenesisResponseKt {
             _builder.setValue(value)
           }
         /**
-         * <code>string value = 4 [json_name = "value"];</code>
+         * <code>string value = 4;</code>
          */
         public fun clearValue() {
           _builder.clearValue()
         }
 
         /**
-         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         * <code>.google.protobuf.StringValue to_candidate_key = 7;</code>
          */
         public var toCandidateKey: com.google.protobuf.StringValue
           @JvmName("getToCandidateKey")
@@ -2498,13 +2596,13 @@ public object GenesisResponseKt {
             _builder.setToCandidateKey(value)
           }
         /**
-         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         * <code>.google.protobuf.StringValue to_candidate_key = 7;</code>
          */
         public fun clearToCandidateKey() {
           _builder.clearToCandidateKey()
         }
         /**
-         * <code>.google.protobuf.StringValue to_candidate_key = 7 [json_name = "toCandidateKey"];</code>
+         * <code>.google.protobuf.StringValue to_candidate_key = 7;</code>
          * @return Whether the toCandidateKey field is set.
          */
         public fun hasToCandidateKey(): kotlin.Boolean {
@@ -2512,7 +2610,7 @@ public object GenesisResponseKt {
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializewaitlist")
     public inline fun waitlist(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.WaitlistKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Waitlist =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.WaitlistKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.newBuilder()).apply { block() }._build()
     public object WaitlistKt {
@@ -2532,7 +2630,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Waitlist = _builder.build()
 
         /**
-         * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
+         * <code>uint64 candidate_id = 1;</code>
          */
         public var candidateId: kotlin.Long
           @JvmName("getCandidateId")
@@ -2542,14 +2640,14 @@ public object GenesisResponseKt {
             _builder.setCandidateId(value)
           }
         /**
-         * <code>uint64 candidate_id = 1 [json_name = "candidateId"];</code>
+         * <code>uint64 candidate_id = 1;</code>
          */
         public fun clearCandidateId() {
           _builder.clearCandidateId()
         }
 
         /**
-         * <code>string owner = 2 [json_name = "owner"];</code>
+         * <code>string owner = 2;</code>
          */
         public var owner: kotlin.String
           @JvmName("getOwner")
@@ -2559,14 +2657,14 @@ public object GenesisResponseKt {
             _builder.setOwner(value)
           }
         /**
-         * <code>string owner = 2 [json_name = "owner"];</code>
+         * <code>string owner = 2;</code>
          */
         public fun clearOwner() {
           _builder.clearOwner()
         }
 
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public var coin: kotlin.Long
           @JvmName("getCoin")
@@ -2576,14 +2674,14 @@ public object GenesisResponseKt {
             _builder.setCoin(value)
           }
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public fun clearCoin() {
           _builder.clearCoin()
         }
 
         /**
-         * <code>string value = 4 [json_name = "value"];</code>
+         * <code>string value = 4;</code>
          */
         public var value: kotlin.String
           @JvmName("getValue")
@@ -2593,14 +2691,14 @@ public object GenesisResponseKt {
             _builder.setValue(value)
           }
         /**
-         * <code>string value = 4 [json_name = "value"];</code>
+         * <code>string value = 4;</code>
          */
         public fun clearValue() {
           _builder.clearValue()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeaccount")
     public inline fun account(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Account.newBuilder()).apply { block() }._build()
     public object AccountKt {
@@ -2620,7 +2718,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Account = _builder.build()
 
         /**
-         * <code>string address = 1 [json_name = "address"];</code>
+         * <code>string address = 1;</code>
          */
         public var address: kotlin.String
           @JvmName("getAddress")
@@ -2630,7 +2728,7 @@ public object GenesisResponseKt {
             _builder.setAddress(value)
           }
         /**
-         * <code>string address = 1 [json_name = "address"];</code>
+         * <code>string address = 1;</code>
          */
         public fun clearAddress() {
           _builder.clearAddress()
@@ -2643,7 +2741,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class BalanceProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          */
          public val balance: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>
           @kotlin.jvm.JvmSynthetic
@@ -2651,15 +2749,16 @@ public object GenesisResponseKt {
             _builder.getBalanceList()
           )
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          * @param value The balance to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addBalance")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance) {
           _builder.addBalance(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          * @param value The balance to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -2667,16 +2766,18 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance) {
           add(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          * @param values The balance to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addAllBalance")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance>) {
           _builder.addAllBalance(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          * @param values The balance to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -2684,8 +2785,9 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance>) {
           addAll(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          * @param index The index to set the value at.
          * @param value The balance to set.
          */
@@ -2693,16 +2795,19 @@ public object GenesisResponseKt {
         @kotlin.jvm.JvmName("setBalance")
         public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance) {
           _builder.setBalance(index, value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2 [json_name = "balance"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Account.Balance balance = 2;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearBalance")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance, BalanceProxy>.clear() {
           _builder.clearBalance()
         }
+
+
         /**
-         * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+         * <code>uint64 nonce = 3;</code>
          */
         public var nonce: kotlin.Long
           @JvmName("getNonce")
@@ -2712,14 +2817,14 @@ public object GenesisResponseKt {
             _builder.setNonce(value)
           }
         /**
-         * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+         * <code>uint64 nonce = 3;</code>
          */
         public fun clearNonce() {
           _builder.clearNonce()
         }
 
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
          */
         public var multisigData: counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData
           @JvmName("getMultisigData")
@@ -2729,13 +2834,13 @@ public object GenesisResponseKt {
             _builder.setMultisigData(value)
           }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
          */
         public fun clearMultisigData() {
           _builder.clearMultisigData()
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4 [json_name = "multisigData"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Account.MultisigData multisig_data = 4;</code>
          * @return Whether the multisigData field is set.
          */
         public fun hasMultisigData(): kotlin.Boolean {
@@ -2743,7 +2848,7 @@ public object GenesisResponseKt {
         }
 
         /**
-         * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+         * <code>uint64 lock_stake_until_block = 5;</code>
          */
         public var lockStakeUntilBlock: kotlin.Long
           @JvmName("getLockStakeUntilBlock")
@@ -2753,13 +2858,13 @@ public object GenesisResponseKt {
             _builder.setLockStakeUntilBlock(value)
           }
         /**
-         * <code>uint64 lock_stake_until_block = 5 [json_name = "lockStakeUntilBlock"];</code>
+         * <code>uint64 lock_stake_until_block = 5;</code>
          */
         public fun clearLockStakeUntilBlock() {
           _builder.clearLockStakeUntilBlock()
         }
       }
-      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("-initializebalance")
       public inline fun balance(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.BalanceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance =
         counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.BalanceKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.newBuilder()).apply { block() }._build()
       public object BalanceKt {
@@ -2779,7 +2884,7 @@ public object GenesisResponseKt {
           internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance = _builder.build()
 
           /**
-           * <code>uint64 coin = 1 [json_name = "coin"];</code>
+           * <code>uint64 coin = 1;</code>
            */
           public var coin: kotlin.Long
             @JvmName("getCoin")
@@ -2789,14 +2894,14 @@ public object GenesisResponseKt {
               _builder.setCoin(value)
             }
           /**
-           * <code>uint64 coin = 1 [json_name = "coin"];</code>
+           * <code>uint64 coin = 1;</code>
            */
           public fun clearCoin() {
             _builder.clearCoin()
           }
 
           /**
-           * <code>string value = 2 [json_name = "value"];</code>
+           * <code>string value = 2;</code>
            */
           public var value: kotlin.String
             @JvmName("getValue")
@@ -2806,14 +2911,14 @@ public object GenesisResponseKt {
               _builder.setValue(value)
             }
           /**
-           * <code>string value = 2 [json_name = "value"];</code>
+           * <code>string value = 2;</code>
            */
           public fun clearValue() {
             _builder.clearValue()
           }
         }
       }
-      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("-initializemultisigData")
       public inline fun multisigData(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.MultisigDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData =
         counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.MultisigDataKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.newBuilder()).apply { block() }._build()
       public object MultisigDataKt {
@@ -2833,7 +2938,7 @@ public object GenesisResponseKt {
           internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData = _builder.build()
 
           /**
-           * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+           * <code>uint64 threshold = 1;</code>
            */
           public var threshold: kotlin.Long
             @JvmName("getThreshold")
@@ -2843,7 +2948,7 @@ public object GenesisResponseKt {
               _builder.setThreshold(value)
             }
           /**
-           * <code>uint64 threshold = 1 [json_name = "threshold"];</code>
+           * <code>uint64 threshold = 1;</code>
            */
           public fun clearThreshold() {
             _builder.clearThreshold()
@@ -2856,7 +2961,7 @@ public object GenesisResponseKt {
           @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
           public class WeightsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
           /**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            */
            public val weights: com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>
             @kotlin.jvm.JvmSynthetic
@@ -2864,7 +2969,7 @@ public object GenesisResponseKt {
               _builder.getWeightsList()
             )
           /**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            * @param value The weights to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2872,7 +2977,7 @@ public object GenesisResponseKt {
           public fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.add(value: kotlin.Long) {
             _builder.addWeights(value)
           }/**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            * @param value The weights to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2881,7 +2986,7 @@ public object GenesisResponseKt {
           public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.plusAssign(value: kotlin.Long) {
             add(value)
           }/**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            * @param values The weights to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2889,7 +2994,7 @@ public object GenesisResponseKt {
           public fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
             _builder.addAllWeights(values)
           }/**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            * @param values The weights to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2898,7 +3003,7 @@ public object GenesisResponseKt {
           public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
             addAll(values)
           }/**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            * @param index The index to set the value at.
            * @param value The weights to set.
            */
@@ -2907,7 +3012,7 @@ public object GenesisResponseKt {
           public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, WeightsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
             _builder.setWeights(index, value)
           }/**
-           * <code>repeated uint64 weights = 2 [json_name = "weights"];</code>
+           * <code>repeated uint64 weights = 2;</code>
            */
           @kotlin.jvm.JvmSynthetic
           @kotlin.jvm.JvmName("clearWeights")
@@ -2921,7 +3026,7 @@ public object GenesisResponseKt {
           @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
           public class AddressesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @return A list containing the addresses.
            */
           public val addresses: com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>
@@ -2930,7 +3035,7 @@ public object GenesisResponseKt {
               _builder.getAddressesList()
             )
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @param value The addresses to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2939,7 +3044,7 @@ public object GenesisResponseKt {
             _builder.addAddresses(value)
           }
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @param value The addresses to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2949,7 +3054,7 @@ public object GenesisResponseKt {
             add(value)
           }
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @param values The addresses to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2958,7 +3063,7 @@ public object GenesisResponseKt {
             _builder.addAllAddresses(values)
           }
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @param values The addresses to add.
            */
           @kotlin.jvm.JvmSynthetic
@@ -2968,7 +3073,7 @@ public object GenesisResponseKt {
             addAll(values)
           }
           /**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            * @param index The index to set the value at.
            * @param value The addresses to set.
            */
@@ -2977,7 +3082,7 @@ public object GenesisResponseKt {
           public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AddressesProxy>.set(index: kotlin.Int, value: kotlin.String) {
             _builder.setAddresses(index, value)
           }/**
-           * <code>repeated string addresses = 3 [json_name = "addresses"];</code>
+           * <code>repeated string addresses = 3;</code>
            */
           @kotlin.jvm.JvmSynthetic
           @kotlin.jvm.JvmName("clearAddresses")
@@ -2986,7 +3091,7 @@ public object GenesisResponseKt {
           }}
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializehaltBlock")
     public inline fun haltBlock(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.HaltBlockKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.HaltBlockKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.newBuilder()).apply { block() }._build()
     public object HaltBlockKt {
@@ -3006,7 +3111,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock = _builder.build()
 
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -3016,14 +3121,14 @@ public object GenesisResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
         }
 
         /**
-         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
+         * <code>string candidate_key = 2;</code>
          */
         public var candidateKey: kotlin.String
           @JvmName("getCandidateKey")
@@ -3033,14 +3138,14 @@ public object GenesisResponseKt {
             _builder.setCandidateKey(value)
           }
         /**
-         * <code>string candidate_key = 2 [json_name = "candidateKey"];</code>
+         * <code>string candidate_key = 2;</code>
          */
         public fun clearCandidateKey() {
           _builder.clearCandidateKey()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializepool")
     public inline fun pool(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Pool =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Pool.newBuilder()).apply { block() }._build()
     public object PoolKt {
@@ -3060,7 +3165,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Pool = _builder.build()
 
         /**
-         * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+         * <code>uint64 coin0 = 1;</code>
          */
         public var coin0: kotlin.Long
           @JvmName("getCoin0")
@@ -3070,14 +3175,14 @@ public object GenesisResponseKt {
             _builder.setCoin0(value)
           }
         /**
-         * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+         * <code>uint64 coin0 = 1;</code>
          */
         public fun clearCoin0() {
           _builder.clearCoin0()
         }
 
         /**
-         * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+         * <code>uint64 coin1 = 2;</code>
          */
         public var coin1: kotlin.Long
           @JvmName("getCoin1")
@@ -3087,14 +3192,14 @@ public object GenesisResponseKt {
             _builder.setCoin1(value)
           }
         /**
-         * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+         * <code>uint64 coin1 = 2;</code>
          */
         public fun clearCoin1() {
           _builder.clearCoin1()
         }
 
         /**
-         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
+         * <code>string reserve0 = 3;</code>
          */
         public var reserve0: kotlin.String
           @JvmName("getReserve0")
@@ -3104,14 +3209,14 @@ public object GenesisResponseKt {
             _builder.setReserve0(value)
           }
         /**
-         * <code>string reserve0 = 3 [json_name = "reserve0"];</code>
+         * <code>string reserve0 = 3;</code>
          */
         public fun clearReserve0() {
           _builder.clearReserve0()
         }
 
         /**
-         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
+         * <code>string reserve1 = 4;</code>
          */
         public var reserve1: kotlin.String
           @JvmName("getReserve1")
@@ -3121,14 +3226,14 @@ public object GenesisResponseKt {
             _builder.setReserve1(value)
           }
         /**
-         * <code>string reserve1 = 4 [json_name = "reserve1"];</code>
+         * <code>string reserve1 = 4;</code>
          */
         public fun clearReserve1() {
           _builder.clearReserve1()
         }
 
         /**
-         * <code>uint64 id = 5 [json_name = "id"];</code>
+         * <code>uint64 id = 5;</code>
          */
         public var id: kotlin.Long
           @JvmName("getId")
@@ -3138,7 +3243,7 @@ public object GenesisResponseKt {
             _builder.setId(value)
           }
         /**
-         * <code>uint64 id = 5 [json_name = "id"];</code>
+         * <code>uint64 id = 5;</code>
          */
         public fun clearId() {
           _builder.clearId()
@@ -3151,7 +3256,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class OrdersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          */
          public val orders: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>
           @kotlin.jvm.JvmSynthetic
@@ -3159,15 +3264,16 @@ public object GenesisResponseKt {
             _builder.getOrdersList()
           )
         /**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          * @param value The orders to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addOrders")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.add(value: counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) {
           _builder.addOrders(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          * @param value The orders to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -3175,16 +3281,18 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.plusAssign(value: counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) {
           add(value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          * @param values The orders to add.
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("addAllOrders")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order>) {
           _builder.addAllOrders(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          * @param values The orders to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -3192,8 +3300,9 @@ public object GenesisResponseKt {
         @Suppress("NOTHING_TO_INLINE")
         public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order>) {
           addAll(values)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          * @param index The index to set the value at.
          * @param value The orders to set.
          */
@@ -3201,15 +3310,18 @@ public object GenesisResponseKt {
         @kotlin.jvm.JvmName("setOrders")
         public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order) {
           _builder.setOrders(index, value)
-        }/**
-         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6 [json_name = "orders"];</code>
+        }
+        /**
+         * <code>repeated .api_pb.GenesisResponse.AppState.Pool.Order orders = 6;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearOrders")
         public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order, OrdersProxy>.clear() {
           _builder.clearOrders()
-        }}
-      @kotlin.jvm.JvmSynthetic
+        }
+
+      }
+      @kotlin.jvm.JvmName("-initializeorder")
       public inline fun order(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.OrderKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order =
         counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.OrderKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.newBuilder()).apply { block() }._build()
       public object OrderKt {
@@ -3229,7 +3341,7 @@ public object GenesisResponseKt {
           internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order = _builder.build()
 
           /**
-           * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+           * <code>bool is_sale = 1;</code>
            */
           public var isSale: kotlin.Boolean
             @JvmName("getIsSale")
@@ -3239,7 +3351,7 @@ public object GenesisResponseKt {
               _builder.setIsSale(value)
             }
           /**
-           * <code>bool is_sale = 1 [json_name = "isSale"];</code>
+           * <code>bool is_sale = 1;</code>
            */
           public fun clearIsSale() {
             _builder.clearIsSale()
@@ -3250,7 +3362,7 @@ public object GenesisResponseKt {
            * buy
            * </pre>
            *
-           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * <code>string volume0 = 2;</code>
            */
           public var volume0: kotlin.String
             @JvmName("getVolume0")
@@ -3264,7 +3376,7 @@ public object GenesisResponseKt {
            * buy
            * </pre>
            *
-           * <code>string volume0 = 2 [json_name = "volume0"];</code>
+           * <code>string volume0 = 2;</code>
            */
           public fun clearVolume0() {
             _builder.clearVolume0()
@@ -3275,7 +3387,7 @@ public object GenesisResponseKt {
            * sell
            * </pre>
            *
-           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * <code>string volume1 = 3;</code>
            */
           public var volume1: kotlin.String
             @JvmName("getVolume1")
@@ -3289,14 +3401,14 @@ public object GenesisResponseKt {
            * sell
            * </pre>
            *
-           * <code>string volume1 = 3 [json_name = "volume1"];</code>
+           * <code>string volume1 = 3;</code>
            */
           public fun clearVolume1() {
             _builder.clearVolume1()
           }
 
           /**
-           * <code>uint64 id = 4 [json_name = "id"];</code>
+           * <code>uint64 id = 4;</code>
            */
           public var id: kotlin.Long
             @JvmName("getId")
@@ -3306,14 +3418,14 @@ public object GenesisResponseKt {
               _builder.setId(value)
             }
           /**
-           * <code>uint64 id = 4 [json_name = "id"];</code>
+           * <code>uint64 id = 4;</code>
            */
           public fun clearId() {
             _builder.clearId()
           }
 
           /**
-           * <code>string owner = 5 [json_name = "owner"];</code>
+           * <code>string owner = 5;</code>
            */
           public var owner: kotlin.String
             @JvmName("getOwner")
@@ -3323,14 +3435,14 @@ public object GenesisResponseKt {
               _builder.setOwner(value)
             }
           /**
-           * <code>string owner = 5 [json_name = "owner"];</code>
+           * <code>string owner = 5;</code>
            */
           public fun clearOwner() {
             _builder.clearOwner()
           }
 
           /**
-           * <code>uint64 height = 6 [json_name = "height"];</code>
+           * <code>uint64 height = 6;</code>
            */
           public var height: kotlin.Long
             @JvmName("getHeight")
@@ -3340,7 +3452,7 @@ public object GenesisResponseKt {
               _builder.setHeight(value)
             }
           /**
-           * <code>uint64 height = 6 [json_name = "height"];</code>
+           * <code>uint64 height = 6;</code>
            */
           public fun clearHeight() {
             _builder.clearHeight()
@@ -3348,7 +3460,7 @@ public object GenesisResponseKt {
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializecommission")
     public inline fun commission(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Commission =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Commission.newBuilder()).apply { block() }._build()
     public object CommissionKt {
@@ -3368,7 +3480,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Commission = _builder.build()
 
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public var coin: kotlin.Long
           @JvmName("getCoin")
@@ -3378,14 +3490,14 @@ public object GenesisResponseKt {
             _builder.setCoin(value)
           }
         /**
-         * <code>uint64 coin = 3 [json_name = "coin"];</code>
+         * <code>uint64 coin = 3;</code>
          */
         public fun clearCoin() {
           _builder.clearCoin()
         }
 
         /**
-         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
+         * <code>string payload_byte = 4;</code>
          */
         public var payloadByte: kotlin.String
           @JvmName("getPayloadByte")
@@ -3395,14 +3507,14 @@ public object GenesisResponseKt {
             _builder.setPayloadByte(value)
           }
         /**
-         * <code>string payload_byte = 4 [json_name = "payloadByte"];</code>
+         * <code>string payload_byte = 4;</code>
          */
         public fun clearPayloadByte() {
           _builder.clearPayloadByte()
         }
 
         /**
-         * <code>string send = 5 [json_name = "send"];</code>
+         * <code>string send = 5;</code>
          */
         public var send: kotlin.String
           @JvmName("getSend")
@@ -3412,14 +3524,14 @@ public object GenesisResponseKt {
             _builder.setSend(value)
           }
         /**
-         * <code>string send = 5 [json_name = "send"];</code>
+         * <code>string send = 5;</code>
          */
         public fun clearSend() {
           _builder.clearSend()
         }
 
         /**
-         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
+         * <code>string buy_bancor = 38;</code>
          */
         public var buyBancor: kotlin.String
           @JvmName("getBuyBancor")
@@ -3429,14 +3541,14 @@ public object GenesisResponseKt {
             _builder.setBuyBancor(value)
           }
         /**
-         * <code>string buy_bancor = 38 [json_name = "buyBancor"];</code>
+         * <code>string buy_bancor = 38;</code>
          */
         public fun clearBuyBancor() {
           _builder.clearBuyBancor()
         }
 
         /**
-         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
+         * <code>string sell_bancor = 39;</code>
          */
         public var sellBancor: kotlin.String
           @JvmName("getSellBancor")
@@ -3446,14 +3558,14 @@ public object GenesisResponseKt {
             _builder.setSellBancor(value)
           }
         /**
-         * <code>string sell_bancor = 39 [json_name = "sellBancor"];</code>
+         * <code>string sell_bancor = 39;</code>
          */
         public fun clearSellBancor() {
           _builder.clearSellBancor()
         }
 
         /**
-         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
+         * <code>string sell_all_bancor = 40;</code>
          */
         public var sellAllBancor: kotlin.String
           @JvmName("getSellAllBancor")
@@ -3463,14 +3575,14 @@ public object GenesisResponseKt {
             _builder.setSellAllBancor(value)
           }
         /**
-         * <code>string sell_all_bancor = 40 [json_name = "sellAllBancor"];</code>
+         * <code>string sell_all_bancor = 40;</code>
          */
         public fun clearSellAllBancor() {
           _builder.clearSellAllBancor()
         }
 
         /**
-         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
+         * <code>string buy_pool_base = 41;</code>
          */
         public var buyPoolBase: kotlin.String
           @JvmName("getBuyPoolBase")
@@ -3480,14 +3592,14 @@ public object GenesisResponseKt {
             _builder.setBuyPoolBase(value)
           }
         /**
-         * <code>string buy_pool_base = 41 [json_name = "buyPoolBase"];</code>
+         * <code>string buy_pool_base = 41;</code>
          */
         public fun clearBuyPoolBase() {
           _builder.clearBuyPoolBase()
         }
 
         /**
-         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
+         * <code>string buy_pool_delta = 53;</code>
          */
         public var buyPoolDelta: kotlin.String
           @JvmName("getBuyPoolDelta")
@@ -3497,14 +3609,14 @@ public object GenesisResponseKt {
             _builder.setBuyPoolDelta(value)
           }
         /**
-         * <code>string buy_pool_delta = 53 [json_name = "buyPoolDelta"];</code>
+         * <code>string buy_pool_delta = 53;</code>
          */
         public fun clearBuyPoolDelta() {
           _builder.clearBuyPoolDelta()
         }
 
         /**
-         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
+         * <code>string sell_pool_base = 42;</code>
          */
         public var sellPoolBase: kotlin.String
           @JvmName("getSellPoolBase")
@@ -3514,14 +3626,14 @@ public object GenesisResponseKt {
             _builder.setSellPoolBase(value)
           }
         /**
-         * <code>string sell_pool_base = 42 [json_name = "sellPoolBase"];</code>
+         * <code>string sell_pool_base = 42;</code>
          */
         public fun clearSellPoolBase() {
           _builder.clearSellPoolBase()
         }
 
         /**
-         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
+         * <code>string sell_pool_delta = 54;</code>
          */
         public var sellPoolDelta: kotlin.String
           @JvmName("getSellPoolDelta")
@@ -3531,14 +3643,14 @@ public object GenesisResponseKt {
             _builder.setSellPoolDelta(value)
           }
         /**
-         * <code>string sell_pool_delta = 54 [json_name = "sellPoolDelta"];</code>
+         * <code>string sell_pool_delta = 54;</code>
          */
         public fun clearSellPoolDelta() {
           _builder.clearSellPoolDelta()
         }
 
         /**
-         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
+         * <code>string sell_all_pool_base = 43;</code>
          */
         public var sellAllPoolBase: kotlin.String
           @JvmName("getSellAllPoolBase")
@@ -3548,14 +3660,14 @@ public object GenesisResponseKt {
             _builder.setSellAllPoolBase(value)
           }
         /**
-         * <code>string sell_all_pool_base = 43 [json_name = "sellAllPoolBase"];</code>
+         * <code>string sell_all_pool_base = 43;</code>
          */
         public fun clearSellAllPoolBase() {
           _builder.clearSellAllPoolBase()
         }
 
         /**
-         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
+         * <code>string sell_all_pool_delta = 55;</code>
          */
         public var sellAllPoolDelta: kotlin.String
           @JvmName("getSellAllPoolDelta")
@@ -3565,14 +3677,14 @@ public object GenesisResponseKt {
             _builder.setSellAllPoolDelta(value)
           }
         /**
-         * <code>string sell_all_pool_delta = 55 [json_name = "sellAllPoolDelta"];</code>
+         * <code>string sell_all_pool_delta = 55;</code>
          */
         public fun clearSellAllPoolDelta() {
           _builder.clearSellAllPoolDelta()
         }
 
         /**
-         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
+         * <code>string create_ticker3 = 7;</code>
          */
         public var createTicker3: kotlin.String
           @JvmName("getCreateTicker3")
@@ -3582,14 +3694,14 @@ public object GenesisResponseKt {
             _builder.setCreateTicker3(value)
           }
         /**
-         * <code>string create_ticker3 = 7 [json_name = "createTicker3"];</code>
+         * <code>string create_ticker3 = 7;</code>
          */
         public fun clearCreateTicker3() {
           _builder.clearCreateTicker3()
         }
 
         /**
-         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
+         * <code>string create_ticker4 = 8;</code>
          */
         public var createTicker4: kotlin.String
           @JvmName("getCreateTicker4")
@@ -3599,14 +3711,14 @@ public object GenesisResponseKt {
             _builder.setCreateTicker4(value)
           }
         /**
-         * <code>string create_ticker4 = 8 [json_name = "createTicker4"];</code>
+         * <code>string create_ticker4 = 8;</code>
          */
         public fun clearCreateTicker4() {
           _builder.clearCreateTicker4()
         }
 
         /**
-         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
+         * <code>string create_ticker5 = 9;</code>
          */
         public var createTicker5: kotlin.String
           @JvmName("getCreateTicker5")
@@ -3616,14 +3728,14 @@ public object GenesisResponseKt {
             _builder.setCreateTicker5(value)
           }
         /**
-         * <code>string create_ticker5 = 9 [json_name = "createTicker5"];</code>
+         * <code>string create_ticker5 = 9;</code>
          */
         public fun clearCreateTicker5() {
           _builder.clearCreateTicker5()
         }
 
         /**
-         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
+         * <code>string create_ticker6 = 10;</code>
          */
         public var createTicker6: kotlin.String
           @JvmName("getCreateTicker6")
@@ -3633,14 +3745,14 @@ public object GenesisResponseKt {
             _builder.setCreateTicker6(value)
           }
         /**
-         * <code>string create_ticker6 = 10 [json_name = "createTicker6"];</code>
+         * <code>string create_ticker6 = 10;</code>
          */
         public fun clearCreateTicker6() {
           _builder.clearCreateTicker6()
         }
 
         /**
-         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
+         * <code>string create_ticker7_10 = 11;</code>
          */
         public var createTicker710: kotlin.String
           @JvmName("getCreateTicker710")
@@ -3650,14 +3762,14 @@ public object GenesisResponseKt {
             _builder.setCreateTicker710(value)
           }
         /**
-         * <code>string create_ticker7_10 = 11 [json_name = "createTicker710"];</code>
+         * <code>string create_ticker7_10 = 11;</code>
          */
         public fun clearCreateTicker710() {
           _builder.clearCreateTicker710()
         }
 
         /**
-         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
+         * <code>string create_coin = 34;</code>
          */
         public var createCoin: kotlin.String
           @JvmName("getCreateCoin")
@@ -3667,14 +3779,14 @@ public object GenesisResponseKt {
             _builder.setCreateCoin(value)
           }
         /**
-         * <code>string create_coin = 34 [json_name = "createCoin"];</code>
+         * <code>string create_coin = 34;</code>
          */
         public fun clearCreateCoin() {
           _builder.clearCreateCoin()
         }
 
         /**
-         * <code>string create_token = 35 [json_name = "createToken"];</code>
+         * <code>string create_token = 35;</code>
          */
         public var createToken: kotlin.String
           @JvmName("getCreateToken")
@@ -3684,14 +3796,14 @@ public object GenesisResponseKt {
             _builder.setCreateToken(value)
           }
         /**
-         * <code>string create_token = 35 [json_name = "createToken"];</code>
+         * <code>string create_token = 35;</code>
          */
         public fun clearCreateToken() {
           _builder.clearCreateToken()
         }
 
         /**
-         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
+         * <code>string recreate_coin = 36;</code>
          */
         public var recreateCoin: kotlin.String
           @JvmName("getRecreateCoin")
@@ -3701,14 +3813,14 @@ public object GenesisResponseKt {
             _builder.setRecreateCoin(value)
           }
         /**
-         * <code>string recreate_coin = 36 [json_name = "recreateCoin"];</code>
+         * <code>string recreate_coin = 36;</code>
          */
         public fun clearRecreateCoin() {
           _builder.clearRecreateCoin()
         }
 
         /**
-         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
+         * <code>string recreate_token = 37;</code>
          */
         public var recreateToken: kotlin.String
           @JvmName("getRecreateToken")
@@ -3718,14 +3830,14 @@ public object GenesisResponseKt {
             _builder.setRecreateToken(value)
           }
         /**
-         * <code>string recreate_token = 37 [json_name = "recreateToken"];</code>
+         * <code>string recreate_token = 37;</code>
          */
         public fun clearRecreateToken() {
           _builder.clearRecreateToken()
         }
 
         /**
-         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
+         * <code>string declare_candidacy = 13;</code>
          */
         public var declareCandidacy: kotlin.String
           @JvmName("getDeclareCandidacy")
@@ -3735,14 +3847,14 @@ public object GenesisResponseKt {
             _builder.setDeclareCandidacy(value)
           }
         /**
-         * <code>string declare_candidacy = 13 [json_name = "declareCandidacy"];</code>
+         * <code>string declare_candidacy = 13;</code>
          */
         public fun clearDeclareCandidacy() {
           _builder.clearDeclareCandidacy()
         }
 
         /**
-         * <code>string delegate = 14 [json_name = "delegate"];</code>
+         * <code>string delegate = 14;</code>
          */
         public var delegate: kotlin.String
           @JvmName("getDelegate")
@@ -3752,14 +3864,14 @@ public object GenesisResponseKt {
             _builder.setDelegate(value)
           }
         /**
-         * <code>string delegate = 14 [json_name = "delegate"];</code>
+         * <code>string delegate = 14;</code>
          */
         public fun clearDelegate() {
           _builder.clearDelegate()
         }
 
         /**
-         * <code>string unbond = 15 [json_name = "unbond"];</code>
+         * <code>string unbond = 15;</code>
          */
         public var unbond: kotlin.String
           @JvmName("getUnbond")
@@ -3769,14 +3881,14 @@ public object GenesisResponseKt {
             _builder.setUnbond(value)
           }
         /**
-         * <code>string unbond = 15 [json_name = "unbond"];</code>
+         * <code>string unbond = 15;</code>
          */
         public fun clearUnbond() {
           _builder.clearUnbond()
         }
 
         /**
-         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
+         * <code>string redeem_check = 16;</code>
          */
         public var redeemCheck: kotlin.String
           @JvmName("getRedeemCheck")
@@ -3786,14 +3898,14 @@ public object GenesisResponseKt {
             _builder.setRedeemCheck(value)
           }
         /**
-         * <code>string redeem_check = 16 [json_name = "redeemCheck"];</code>
+         * <code>string redeem_check = 16;</code>
          */
         public fun clearRedeemCheck() {
           _builder.clearRedeemCheck()
         }
 
         /**
-         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
+         * <code>string set_candidate_on = 44;</code>
          */
         public var setCandidateOn: kotlin.String
           @JvmName("getSetCandidateOn")
@@ -3803,14 +3915,14 @@ public object GenesisResponseKt {
             _builder.setSetCandidateOn(value)
           }
         /**
-         * <code>string set_candidate_on = 44 [json_name = "setCandidateOn"];</code>
+         * <code>string set_candidate_on = 44;</code>
          */
         public fun clearSetCandidateOn() {
           _builder.clearSetCandidateOn()
         }
 
         /**
-         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
+         * <code>string set_candidate_off = 45;</code>
          */
         public var setCandidateOff: kotlin.String
           @JvmName("getSetCandidateOff")
@@ -3820,14 +3932,14 @@ public object GenesisResponseKt {
             _builder.setSetCandidateOff(value)
           }
         /**
-         * <code>string set_candidate_off = 45 [json_name = "setCandidateOff"];</code>
+         * <code>string set_candidate_off = 45;</code>
          */
         public fun clearSetCandidateOff() {
           _builder.clearSetCandidateOff()
         }
 
         /**
-         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
+         * <code>string create_multisig = 18;</code>
          */
         public var createMultisig: kotlin.String
           @JvmName("getCreateMultisig")
@@ -3837,14 +3949,14 @@ public object GenesisResponseKt {
             _builder.setCreateMultisig(value)
           }
         /**
-         * <code>string create_multisig = 18 [json_name = "createMultisig"];</code>
+         * <code>string create_multisig = 18;</code>
          */
         public fun clearCreateMultisig() {
           _builder.clearCreateMultisig()
         }
 
         /**
-         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
+         * <code>string multisend_base = 51;</code>
          */
         public var multisendBase: kotlin.String
           @JvmName("getMultisendBase")
@@ -3854,14 +3966,14 @@ public object GenesisResponseKt {
             _builder.setMultisendBase(value)
           }
         /**
-         * <code>string multisend_base = 51 [json_name = "multisendBase"];</code>
+         * <code>string multisend_base = 51;</code>
          */
         public fun clearMultisendBase() {
           _builder.clearMultisendBase()
         }
 
         /**
-         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
+         * <code>string multisend_delta = 52;</code>
          */
         public var multisendDelta: kotlin.String
           @JvmName("getMultisendDelta")
@@ -3871,14 +3983,14 @@ public object GenesisResponseKt {
             _builder.setMultisendDelta(value)
           }
         /**
-         * <code>string multisend_delta = 52 [json_name = "multisendDelta"];</code>
+         * <code>string multisend_delta = 52;</code>
          */
         public fun clearMultisendDelta() {
           _builder.clearMultisendDelta()
         }
 
         /**
-         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
+         * <code>string edit_candidate = 20;</code>
          */
         public var editCandidate: kotlin.String
           @JvmName("getEditCandidate")
@@ -3888,14 +4000,14 @@ public object GenesisResponseKt {
             _builder.setEditCandidate(value)
           }
         /**
-         * <code>string edit_candidate = 20 [json_name = "editCandidate"];</code>
+         * <code>string edit_candidate = 20;</code>
          */
         public fun clearEditCandidate() {
           _builder.clearEditCandidate()
         }
 
         /**
-         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
+         * <code>string set_halt_block = 21;</code>
          */
         public var setHaltBlock: kotlin.String
           @JvmName("getSetHaltBlock")
@@ -3905,14 +4017,14 @@ public object GenesisResponseKt {
             _builder.setSetHaltBlock(value)
           }
         /**
-         * <code>string set_halt_block = 21 [json_name = "setHaltBlock"];</code>
+         * <code>string set_halt_block = 21;</code>
          */
         public fun clearSetHaltBlock() {
           _builder.clearSetHaltBlock()
         }
 
         /**
-         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
+         * <code>string edit_ticker_owner = 22;</code>
          */
         public var editTickerOwner: kotlin.String
           @JvmName("getEditTickerOwner")
@@ -3922,14 +4034,14 @@ public object GenesisResponseKt {
             _builder.setEditTickerOwner(value)
           }
         /**
-         * <code>string edit_ticker_owner = 22 [json_name = "editTickerOwner"];</code>
+         * <code>string edit_ticker_owner = 22;</code>
          */
         public fun clearEditTickerOwner() {
           _builder.clearEditTickerOwner()
         }
 
         /**
-         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
+         * <code>string edit_multisig = 23;</code>
          */
         public var editMultisig: kotlin.String
           @JvmName("getEditMultisig")
@@ -3939,14 +4051,14 @@ public object GenesisResponseKt {
             _builder.setEditMultisig(value)
           }
         /**
-         * <code>string edit_multisig = 23 [json_name = "editMultisig"];</code>
+         * <code>string edit_multisig = 23;</code>
          */
         public fun clearEditMultisig() {
           _builder.clearEditMultisig()
         }
 
         /**
-         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
+         * <code>string edit_candidate_public_key = 25;</code>
          */
         public var editCandidatePublicKey: kotlin.String
           @JvmName("getEditCandidatePublicKey")
@@ -3956,14 +4068,14 @@ public object GenesisResponseKt {
             _builder.setEditCandidatePublicKey(value)
           }
         /**
-         * <code>string edit_candidate_public_key = 25 [json_name = "editCandidatePublicKey"];</code>
+         * <code>string edit_candidate_public_key = 25;</code>
          */
         public fun clearEditCandidatePublicKey() {
           _builder.clearEditCandidatePublicKey()
         }
 
         /**
-         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
+         * <code>string create_swap_pool = 48;</code>
          */
         public var createSwapPool: kotlin.String
           @JvmName("getCreateSwapPool")
@@ -3973,14 +4085,14 @@ public object GenesisResponseKt {
             _builder.setCreateSwapPool(value)
           }
         /**
-         * <code>string create_swap_pool = 48 [json_name = "createSwapPool"];</code>
+         * <code>string create_swap_pool = 48;</code>
          */
         public fun clearCreateSwapPool() {
           _builder.clearCreateSwapPool()
         }
 
         /**
-         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
+         * <code>string add_liquidity = 49;</code>
          */
         public var addLiquidity: kotlin.String
           @JvmName("getAddLiquidity")
@@ -3990,14 +4102,14 @@ public object GenesisResponseKt {
             _builder.setAddLiquidity(value)
           }
         /**
-         * <code>string add_liquidity = 49 [json_name = "addLiquidity"];</code>
+         * <code>string add_liquidity = 49;</code>
          */
         public fun clearAddLiquidity() {
           _builder.clearAddLiquidity()
         }
 
         /**
-         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
+         * <code>string remove_liquidity = 50;</code>
          */
         public var removeLiquidity: kotlin.String
           @JvmName("getRemoveLiquidity")
@@ -4007,14 +4119,14 @@ public object GenesisResponseKt {
             _builder.setRemoveLiquidity(value)
           }
         /**
-         * <code>string remove_liquidity = 50 [json_name = "removeLiquidity"];</code>
+         * <code>string remove_liquidity = 50;</code>
          */
         public fun clearRemoveLiquidity() {
           _builder.clearRemoveLiquidity()
         }
 
         /**
-         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
+         * <code>string edit_candidate_commission = 28;</code>
          */
         public var editCandidateCommission: kotlin.String
           @JvmName("getEditCandidateCommission")
@@ -4024,14 +4136,14 @@ public object GenesisResponseKt {
             _builder.setEditCandidateCommission(value)
           }
         /**
-         * <code>string edit_candidate_commission = 28 [json_name = "editCandidateCommission"];</code>
+         * <code>string edit_candidate_commission = 28;</code>
          */
         public fun clearEditCandidateCommission() {
           _builder.clearEditCandidateCommission()
         }
 
         /**
-         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
+         * <code>string mint_token = 46;</code>
          */
         public var mintToken: kotlin.String
           @JvmName("getMintToken")
@@ -4041,14 +4153,14 @@ public object GenesisResponseKt {
             _builder.setMintToken(value)
           }
         /**
-         * <code>string mint_token = 46 [json_name = "mintToken"];</code>
+         * <code>string mint_token = 46;</code>
          */
         public fun clearMintToken() {
           _builder.clearMintToken()
         }
 
         /**
-         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
+         * <code>string burn_token = 47;</code>
          */
         public var burnToken: kotlin.String
           @JvmName("getBurnToken")
@@ -4058,14 +4170,14 @@ public object GenesisResponseKt {
             _builder.setBurnToken(value)
           }
         /**
-         * <code>string burn_token = 47 [json_name = "burnToken"];</code>
+         * <code>string burn_token = 47;</code>
          */
         public fun clearBurnToken() {
           _builder.clearBurnToken()
         }
 
         /**
-         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
+         * <code>string vote_commission = 31;</code>
          */
         public var voteCommission: kotlin.String
           @JvmName("getVoteCommission")
@@ -4075,14 +4187,14 @@ public object GenesisResponseKt {
             _builder.setVoteCommission(value)
           }
         /**
-         * <code>string vote_commission = 31 [json_name = "voteCommission"];</code>
+         * <code>string vote_commission = 31;</code>
          */
         public fun clearVoteCommission() {
           _builder.clearVoteCommission()
         }
 
         /**
-         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
+         * <code>string vote_update = 32;</code>
          */
         public var voteUpdate: kotlin.String
           @JvmName("getVoteUpdate")
@@ -4092,14 +4204,14 @@ public object GenesisResponseKt {
             _builder.setVoteUpdate(value)
           }
         /**
-         * <code>string vote_update = 32 [json_name = "voteUpdate"];</code>
+         * <code>string vote_update = 32;</code>
          */
         public fun clearVoteUpdate() {
           _builder.clearVoteUpdate()
         }
 
         /**
-         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
+         * <code>string failed_tx = 56;</code>
          */
         public var failedTx: kotlin.String
           @JvmName("getFailedTx")
@@ -4109,14 +4221,14 @@ public object GenesisResponseKt {
             _builder.setFailedTx(value)
           }
         /**
-         * <code>string failed_tx = 56 [json_name = "failedTx"];</code>
+         * <code>string failed_tx = 56;</code>
          */
         public fun clearFailedTx() {
           _builder.clearFailedTx()
         }
 
         /**
-         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
+         * <code>string add_limit_order = 57;</code>
          */
         public var addLimitOrder: kotlin.String
           @JvmName("getAddLimitOrder")
@@ -4126,14 +4238,14 @@ public object GenesisResponseKt {
             _builder.setAddLimitOrder(value)
           }
         /**
-         * <code>string add_limit_order = 57 [json_name = "addLimitOrder"];</code>
+         * <code>string add_limit_order = 57;</code>
          */
         public fun clearAddLimitOrder() {
           _builder.clearAddLimitOrder()
         }
 
         /**
-         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
+         * <code>string remove_limit_order = 58;</code>
          */
         public var removeLimitOrder: kotlin.String
           @JvmName("getRemoveLimitOrder")
@@ -4143,14 +4255,14 @@ public object GenesisResponseKt {
             _builder.setRemoveLimitOrder(value)
           }
         /**
-         * <code>string remove_limit_order = 58 [json_name = "removeLimitOrder"];</code>
+         * <code>string remove_limit_order = 58;</code>
          */
         public fun clearRemoveLimitOrder() {
           _builder.clearRemoveLimitOrder()
         }
 
         /**
-         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * <code>string move_stake = 59;</code>
          */
         public var moveStake: kotlin.String
           @JvmName("getMoveStake")
@@ -4160,14 +4272,14 @@ public object GenesisResponseKt {
             _builder.setMoveStake(value)
           }
         /**
-         * <code>string move_stake = 59 [json_name = "moveStake"];</code>
+         * <code>string move_stake = 59;</code>
          */
         public fun clearMoveStake() {
           _builder.clearMoveStake()
         }
 
         /**
-         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * <code>string lock_stake = 60;</code>
          */
         public var lockStake: kotlin.String
           @JvmName("getLockStake")
@@ -4177,14 +4289,14 @@ public object GenesisResponseKt {
             _builder.setLockStake(value)
           }
         /**
-         * <code>string lock_stake = 60 [json_name = "lockStake"];</code>
+         * <code>string lock_stake = 60;</code>
          */
         public fun clearLockStake() {
           _builder.clearLockStake()
         }
 
         /**
-         * <code>string lock = 61 [json_name = "lock"];</code>
+         * <code>string lock = 61;</code>
          */
         public var lock: kotlin.String
           @JvmName("getLock")
@@ -4194,14 +4306,14 @@ public object GenesisResponseKt {
             _builder.setLock(value)
           }
         /**
-         * <code>string lock = 61 [json_name = "lock"];</code>
+         * <code>string lock = 61;</code>
          */
         public fun clearLock() {
           _builder.clearLock()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializecommissionVote")
     public inline fun commissionVote(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionVoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionVoteKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.newBuilder()).apply { block() }._build()
     public object CommissionVoteKt {
@@ -4221,7 +4333,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote = _builder.build()
 
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -4231,7 +4343,7 @@ public object GenesisResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
@@ -4244,7 +4356,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class VotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @return A list containing the votes.
          */
         public val votes: com.google.protobuf.kotlin.DslList<kotlin.String, VotesProxy>
@@ -4253,7 +4365,7 @@ public object GenesisResponseKt {
             _builder.getVotesList()
           )
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param value The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4262,7 +4374,7 @@ public object GenesisResponseKt {
           _builder.addVotes(value)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param value The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4272,7 +4384,7 @@ public object GenesisResponseKt {
           add(value)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param values The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4281,7 +4393,7 @@ public object GenesisResponseKt {
           _builder.addAllVotes(values)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param values The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4291,7 +4403,7 @@ public object GenesisResponseKt {
           addAll(values)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param index The index to set the value at.
          * @param value The votes to set.
          */
@@ -4300,7 +4412,7 @@ public object GenesisResponseKt {
         public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, VotesProxy>.set(index: kotlin.Int, value: kotlin.String) {
           _builder.setVotes(index, value)
         }/**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearVotes")
@@ -4308,7 +4420,7 @@ public object GenesisResponseKt {
           _builder.clearVotes()
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
          */
         public var commission: counters.minter.grpc.client.GenesisResponse.AppState.Commission
           @JvmName("getCommission")
@@ -4318,13 +4430,13 @@ public object GenesisResponseKt {
             _builder.setCommission(value)
           }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
          */
         public fun clearCommission() {
           _builder.clearCommission()
         }
         /**
-         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3 [json_name = "commission"];</code>
+         * <code>.api_pb.GenesisResponse.AppState.Commission commission = 3;</code>
          * @return Whether the commission field is set.
          */
         public fun hasCommission(): kotlin.Boolean {
@@ -4332,7 +4444,7 @@ public object GenesisResponseKt {
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeupdateVote")
     public inline fun updateVote(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.UpdateVoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.UpdateVoteKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.newBuilder()).apply { block() }._build()
     public object UpdateVoteKt {
@@ -4352,7 +4464,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote = _builder.build()
 
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -4362,7 +4474,7 @@ public object GenesisResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
@@ -4375,7 +4487,7 @@ public object GenesisResponseKt {
         @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
         public class VotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @return A list containing the votes.
          */
         public val votes: com.google.protobuf.kotlin.DslList<kotlin.String, VotesProxy>
@@ -4384,7 +4496,7 @@ public object GenesisResponseKt {
             _builder.getVotesList()
           )
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param value The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4393,7 +4505,7 @@ public object GenesisResponseKt {
           _builder.addVotes(value)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param value The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4403,7 +4515,7 @@ public object GenesisResponseKt {
           add(value)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param values The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4412,7 +4524,7 @@ public object GenesisResponseKt {
           _builder.addAllVotes(values)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param values The votes to add.
          */
         @kotlin.jvm.JvmSynthetic
@@ -4422,7 +4534,7 @@ public object GenesisResponseKt {
           addAll(values)
         }
         /**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          * @param index The index to set the value at.
          * @param value The votes to set.
          */
@@ -4431,7 +4543,7 @@ public object GenesisResponseKt {
         public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, VotesProxy>.set(index: kotlin.Int, value: kotlin.String) {
           _builder.setVotes(index, value)
         }/**
-         * <code>repeated string votes = 2 [json_name = "votes"];</code>
+         * <code>repeated string votes = 2;</code>
          */
         @kotlin.jvm.JvmSynthetic
         @kotlin.jvm.JvmName("clearVotes")
@@ -4439,7 +4551,7 @@ public object GenesisResponseKt {
           _builder.clearVotes()
         }
         /**
-         * <code>string version = 3 [json_name = "version"];</code>
+         * <code>string version = 3;</code>
          */
         public var version: kotlin.String
           @JvmName("getVersion")
@@ -4449,14 +4561,14 @@ public object GenesisResponseKt {
             _builder.setVersion(value)
           }
         /**
-         * <code>string version = 3 [json_name = "version"];</code>
+         * <code>string version = 3;</code>
          */
         public fun clearVersion() {
           _builder.clearVersion()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeversion")
     public inline fun version(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Version =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.VersionKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.Version.newBuilder()).apply { block() }._build()
     public object VersionKt {
@@ -4476,7 +4588,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.Version = _builder.build()
 
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public var height: kotlin.Long
           @JvmName("getHeight")
@@ -4486,14 +4598,14 @@ public object GenesisResponseKt {
             _builder.setHeight(value)
           }
         /**
-         * <code>uint64 height = 1 [json_name = "height"];</code>
+         * <code>uint64 height = 1;</code>
          */
         public fun clearHeight() {
           _builder.clearHeight()
         }
 
         /**
-         * <code>string name = 2 [json_name = "name"];</code>
+         * <code>string name = 2;</code>
          */
         public var name: kotlin.String
           @JvmName("getName")
@@ -4503,14 +4615,14 @@ public object GenesisResponseKt {
             _builder.setName(value)
           }
         /**
-         * <code>string name = 2 [json_name = "name"];</code>
+         * <code>string name = 2;</code>
          */
         public fun clearName() {
           _builder.clearName()
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializerewardPrice")
     public inline fun rewardPrice(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.RewardPriceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice =
       counters.minter.grpc.client.GenesisResponseKt.AppStateKt.RewardPriceKt.Dsl._create(counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.newBuilder()).apply { block() }._build()
     public object RewardPriceKt {
@@ -4530,7 +4642,7 @@ public object GenesisResponseKt {
         internal fun _build(): counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice = _builder.build()
 
         /**
-         * <code>uint64 time = 1 [json_name = "time"];</code>
+         * <code>uint64 time = 1;</code>
          */
         public var time: kotlin.Long
           @JvmName("getTime")
@@ -4540,14 +4652,14 @@ public object GenesisResponseKt {
             _builder.setTime(value)
           }
         /**
-         * <code>uint64 time = 1 [json_name = "time"];</code>
+         * <code>uint64 time = 1;</code>
          */
         public fun clearTime() {
           _builder.clearTime()
         }
 
         /**
-         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * <code>string amount_bip = 2;</code>
          */
         public var amountBip: kotlin.String
           @JvmName("getAmountBip")
@@ -4557,14 +4669,14 @@ public object GenesisResponseKt {
             _builder.setAmountBip(value)
           }
         /**
-         * <code>string amount_bip = 2 [json_name = "amountBip"];</code>
+         * <code>string amount_bip = 2;</code>
          */
         public fun clearAmountBip() {
           _builder.clearAmountBip()
         }
 
         /**
-         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * <code>string amount_usdt = 3;</code>
          */
         public var amountUsdt: kotlin.String
           @JvmName("getAmountUsdt")
@@ -4574,14 +4686,14 @@ public object GenesisResponseKt {
             _builder.setAmountUsdt(value)
           }
         /**
-         * <code>string amount_usdt = 3 [json_name = "amountUsdt"];</code>
+         * <code>string amount_usdt = 3;</code>
          */
         public fun clearAmountUsdt() {
           _builder.clearAmountUsdt()
         }
 
         /**
-         * <code>bool off = 4 [json_name = "off"];</code>
+         * <code>bool off = 4;</code>
          */
         public var off: kotlin.Boolean
           @JvmName("getOff")
@@ -4591,14 +4703,14 @@ public object GenesisResponseKt {
             _builder.setOff(value)
           }
         /**
-         * <code>bool off = 4 [json_name = "off"];</code>
+         * <code>bool off = 4;</code>
          */
         public fun clearOff() {
           _builder.clearOff()
         }
 
         /**
-         * <code>string reward = 5 [json_name = "reward"];</code>
+         * <code>string reward = 5;</code>
          */
         public var reward: kotlin.String
           @JvmName("getReward")
@@ -4608,7 +4720,7 @@ public object GenesisResponseKt {
             _builder.setReward(value)
           }
         /**
-         * <code>string reward = 5 [json_name = "reward"];</code>
+         * <code>string reward = 5;</code>
          */
         public fun clearReward() {
           _builder.clearReward()
@@ -4620,75 +4732,139 @@ public object GenesisResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.copy(block: counters.minter.grpc.client.GenesisResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse =
   counters.minter.grpc.client.GenesisResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.ConsensusParams.copy(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams =
   counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block.copy(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.BlockKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block =
   counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.BlockKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence.copy(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.EvidenceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence =
   counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.EvidenceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator.copy(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.ValidatorKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator =
   counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.ValidatorKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version.copy(block: counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version =
   counters.minter.grpc.client.GenesisResponseKt.ConsensusParamsKt.VersionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder.blockOrNull: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Block?
+  get() = if (hasBlock()) getBlock() else null
+
+val counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder.evidenceOrNull: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Evidence?
+  get() = if (hasEvidence()) getEvidence() else null
+
+val counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder.validatorOrNull: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Validator?
+  get() = if (hasValidator()) getValidator() else null
+
+val counters.minter.grpc.client.GenesisResponse.ConsensusParamsOrBuilder.versionOrNull: counters.minter.grpc.client.GenesisResponse.ConsensusParams.Version?
+  get() = if (hasVersion()) getVersion() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Validators.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.ValidatorsKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Validators =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.ValidatorsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Candidate.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Candidate =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.StakeKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Candidate.Stake =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CandidateKt.StakeKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.DeletedCandidateKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.DeletedCandidate =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.DeletedCandidateKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Coin.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CoinKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Coin =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CoinKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.AppState.CoinOrBuilder.ownerAddressOrNull: com.google.protobuf.StringValue?
+  get() = if (hasOwnerAddress()) getOwnerAddress() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.FrozenFundKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.FrozenFund =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.FrozenFundKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder.candidateKeyOrNull: com.google.protobuf.StringValue?
+  get() = if (hasCandidateKey()) getCandidateKey() else null
+
+val counters.minter.grpc.client.GenesisResponse.AppState.FrozenFundOrBuilder.toCandidateKeyOrNull: com.google.protobuf.StringValue?
+  get() = if (hasToCandidateKey()) getToCandidateKey() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Waitlist.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.WaitlistKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Waitlist =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.WaitlistKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Account.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.BalanceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account.Balance =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.BalanceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.MultisigDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.AccountKt.MultisigDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.AppState.AccountOrBuilder.multisigDataOrNull: counters.minter.grpc.client.GenesisResponse.AppState.Account.MultisigData?
+  get() = if (hasMultisigData()) getMultisigData() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.HaltBlockKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.HaltBlock =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.HaltBlockKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Pool.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Pool =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.OrderKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Pool.Order =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.PoolKt.OrderKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Commission.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Commission =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionVoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.CommissionVote =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.CommissionVoteKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.AppState.CommissionVoteOrBuilder.commissionOrNull: counters.minter.grpc.client.GenesisResponse.AppState.Commission?
+  get() = if (hasCommission()) getCommission() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.UpdateVoteKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.UpdateVote =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.UpdateVoteKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.Version.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.Version =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.VersionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice.copy(block: counters.minter.grpc.client.GenesisResponseKt.AppStateKt.RewardPriceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice =
   counters.minter.grpc.client.GenesisResponseKt.AppStateKt.RewardPriceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder.commissionOrNull: counters.minter.grpc.client.GenesisResponse.AppState.Commission?
+  get() = if (hasCommission()) getCommission() else null
+
+val counters.minter.grpc.client.GenesisResponse.AppStateOrBuilder.prevRewardOrNull: counters.minter.grpc.client.GenesisResponse.AppState.RewardPrice?
+  get() = if (hasPrevReward()) getPrevReward() else null
+
+val counters.minter.grpc.client.GenesisResponseOrBuilder.consensusParamsOrNull: counters.minter.grpc.client.GenesisResponse.ConsensusParams?
+  get() = if (hasConsensusParams()) getConsensusParams() else null
+
+val counters.minter.grpc.client.GenesisResponseOrBuilder.appStateOrNull: counters.minter.grpc.client.GenesisResponse.AppState?
+  get() = if (hasAppState()) getAppState() else null
+

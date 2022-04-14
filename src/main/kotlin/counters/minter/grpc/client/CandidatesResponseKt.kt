@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecandidatesResponse")
 public inline fun candidatesResponse(block: counters.minter.grpc.client.CandidatesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidatesResponse =
   counters.minter.grpc.client.CandidatesResponseKt.Dsl._create(counters.minter.grpc.client.CandidatesResponse.newBuilder()).apply { block() }._build()
 public object CandidatesResponseKt {
@@ -29,7 +29,7 @@ public object CandidatesResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class CandidatesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
      public val candidates: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,15 +37,16 @@ public object CandidatesResponseKt {
         _builder.getCandidatesList()
       )
     /**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      * @param value The candidates to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addCandidates")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.add(value: counters.minter.grpc.client.CandidateResponse) {
       _builder.addCandidates(value)
-    }/**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      * @param value The candidates to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -53,16 +54,18 @@ public object CandidatesResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.plusAssign(value: counters.minter.grpc.client.CandidateResponse) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      * @param values The candidates to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllCandidates")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse>) {
       _builder.addAllCandidates(values)
-    }/**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      * @param values The candidates to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,8 +73,9 @@ public object CandidatesResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.CandidateResponse>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      * @param index The index to set the value at.
      * @param value The candidates to set.
      */
@@ -79,15 +83,19 @@ public object CandidatesResponseKt {
     @kotlin.jvm.JvmName("setCandidates")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.CandidateResponse) {
       _builder.setCandidates(index, value)
-    }/**
-     * <code>repeated .api_pb.CandidateResponse candidates = 3 [json_name = "candidates"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.CandidateResponse candidates = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearCandidates")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.CandidateResponse, CandidatesProxy>.clear() {
       _builder.clearCandidates()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CandidatesResponse.copy(block: counters.minter.grpc.client.CandidatesResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CandidatesResponse =
   counters.minter.grpc.client.CandidatesResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

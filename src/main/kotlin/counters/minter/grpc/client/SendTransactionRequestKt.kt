@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesendTransactionRequest")
 public inline fun sendTransactionRequest(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendTransactionRequest =
   counters.minter.grpc.client.SendTransactionRequestKt.Dsl._create(counters.minter.grpc.client.SendTransactionRequest.newBuilder()).apply { block() }._build()
 public object SendTransactionRequestKt {
@@ -23,7 +23,7 @@ public object SendTransactionRequestKt {
     internal fun _build(): counters.minter.grpc.client.SendTransactionRequest = _builder.build()
 
     /**
-     * <code>string tx = 1 [json_name = "tx"];</code>
+     * <code>string tx = 1;</code>
      */
     public var tx: kotlin.String
       @JvmName("getTx")
@@ -33,7 +33,7 @@ public object SendTransactionRequestKt {
         _builder.setTx(value)
       }
     /**
-     * <code>string tx = 1 [json_name = "tx"];</code>
+     * <code>string tx = 1;</code>
      */
     public fun clearTx() {
       _builder.clearTx()
@@ -43,3 +43,4 @@ public object SendTransactionRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SendTransactionRequest.copy(block: counters.minter.grpc.client.SendTransactionRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SendTransactionRequest =
   counters.minter.grpc.client.SendTransactionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

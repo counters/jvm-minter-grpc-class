@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeunlockEvent")
 public inline fun unlockEvent(block: counters.minter.grpc.client.UnlockEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnlockEvent =
   counters.minter.grpc.client.UnlockEventKt.Dsl._create(counters.minter.grpc.client.UnlockEvent.newBuilder()).apply { block() }._build()
 public object UnlockEventKt {
@@ -23,7 +23,7 @@ public object UnlockEventKt {
     internal fun _build(): counters.minter.grpc.client.UnlockEvent = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -33,14 +33,14 @@ public object UnlockEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
     public var amount: kotlin.String
       @JvmName("getAmount")
@@ -50,14 +50,14 @@ public object UnlockEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public var coin: kotlin.Long
       @JvmName("getCoin")
@@ -67,7 +67,7 @@ public object UnlockEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
@@ -77,3 +77,4 @@ public object UnlockEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.UnlockEvent.copy(block: counters.minter.grpc.client.UnlockEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UnlockEvent =
   counters.minter.grpc.client.UnlockEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

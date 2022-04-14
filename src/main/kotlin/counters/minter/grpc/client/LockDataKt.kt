@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelockData")
 public inline fun lockData(block: counters.minter.grpc.client.LockDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LockData =
   counters.minter.grpc.client.LockDataKt.Dsl._create(counters.minter.grpc.client.LockData.newBuilder()).apply { block() }._build()
 public object LockDataKt {
@@ -23,7 +23,7 @@ public object LockDataKt {
     internal fun _build(): counters.minter.grpc.client.LockData = _builder.build()
 
     /**
-     * <code>uint64 due_block = 1 [json_name = "dueBlock"];</code>
+     * <code>uint64 due_block = 1;</code>
      */
     public var dueBlock: kotlin.Long
       @JvmName("getDueBlock")
@@ -33,14 +33,14 @@ public object LockDataKt {
         _builder.setDueBlock(value)
       }
     /**
-     * <code>uint64 due_block = 1 [json_name = "dueBlock"];</code>
+     * <code>uint64 due_block = 1;</code>
      */
     public fun clearDueBlock() {
       _builder.clearDueBlock()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -50,13 +50,13 @@ public object LockDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -64,7 +64,7 @@ public object LockDataKt {
     }
 
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -74,7 +74,7 @@ public object LockDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
@@ -84,3 +84,7 @@ public object LockDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.LockData.copy(block: counters.minter.grpc.client.LockDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LockData =
   counters.minter.grpc.client.LockDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.LockDataOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

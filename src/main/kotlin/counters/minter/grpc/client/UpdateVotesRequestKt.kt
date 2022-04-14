@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeupdateVotesRequest")
 public inline fun updateVotesRequest(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateVotesRequest =
   counters.minter.grpc.client.UpdateVotesRequestKt.Dsl._create(counters.minter.grpc.client.UpdateVotesRequest.newBuilder()).apply { block() }._build()
 public object UpdateVotesRequestKt {
@@ -23,7 +23,7 @@ public object UpdateVotesRequestKt {
     internal fun _build(): counters.minter.grpc.client.UpdateVotesRequest = _builder.build()
 
     /**
-     * <code>uint64 target_version = 1 [json_name = "targetVersion"];</code>
+     * <code>uint64 target_version = 1;</code>
      */
     public var targetVersion: kotlin.Long
       @JvmName("getTargetVersion")
@@ -33,14 +33,14 @@ public object UpdateVotesRequestKt {
         _builder.setTargetVersion(value)
       }
     /**
-     * <code>uint64 target_version = 1 [json_name = "targetVersion"];</code>
+     * <code>uint64 target_version = 1;</code>
      */
     public fun clearTargetVersion() {
       _builder.clearTargetVersion()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -50,7 +50,7 @@ public object UpdateVotesRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -60,3 +60,4 @@ public object UpdateVotesRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.UpdateVotesRequest.copy(block: counters.minter.grpc.client.UpdateVotesRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.UpdateVotesRequest =
   counters.minter.grpc.client.UpdateVotesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

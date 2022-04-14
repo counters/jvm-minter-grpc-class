@@ -127,6 +127,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -153,11 +155,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-   * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-   * };
+   *example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+   *};
    * </pre>
    *
-   * <code>uint64 id = 6 [json_name = "id"];</code>
+   * <code>uint64 id = 6;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -168,7 +170,7 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -185,7 +187,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -206,7 +208,7 @@ private static final long serialVersionUID = 0L;
   public static final int SYMBOL_FIELD_NUMBER = 2;
   private volatile java.lang.Object symbol_;
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -223,7 +225,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -244,7 +246,7 @@ private static final long serialVersionUID = 0L;
   public static final int VOLUME_FIELD_NUMBER = 3;
   private volatile java.lang.Object volume_;
   /**
-   * <code>string volume = 3 [json_name = "volume"];</code>
+   * <code>string volume = 3;</code>
    * @return The volume.
    */
   @java.lang.Override
@@ -261,7 +263,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string volume = 3 [json_name = "volume"];</code>
+   * <code>string volume = 3;</code>
    * @return The bytes for volume.
    */
   @java.lang.Override
@@ -282,7 +284,7 @@ private static final long serialVersionUID = 0L;
   public static final int CRR_FIELD_NUMBER = 4;
   private long crr_;
   /**
-   * <code>uint64 crr = 4 [json_name = "crr"];</code>
+   * <code>uint64 crr = 4;</code>
    * @return The crr.
    */
   @java.lang.Override
@@ -293,7 +295,7 @@ private static final long serialVersionUID = 0L;
   public static final int RESERVE_BALANCE_FIELD_NUMBER = 5;
   private volatile java.lang.Object reserveBalance_;
   /**
-   * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+   * <code>string reserve_balance = 5;</code>
    * @return The reserveBalance.
    */
   @java.lang.Override
@@ -310,7 +312,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+   * <code>string reserve_balance = 5;</code>
    * @return The bytes for reserveBalance.
    */
   @java.lang.Override
@@ -331,7 +333,7 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_SUPPLY_FIELD_NUMBER = 8;
   private volatile java.lang.Object maxSupply_;
   /**
-   * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 8;</code>
    * @return The maxSupply.
    */
   @java.lang.Override
@@ -348,7 +350,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 8;</code>
    * @return The bytes for maxSupply.
    */
   @java.lang.Override
@@ -369,7 +371,7 @@ private static final long serialVersionUID = 0L;
   public static final int OWNER_ADDRESS_FIELD_NUMBER = 7;
   private com.google.protobuf.StringValue ownerAddress_;
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    * @return Whether the ownerAddress field is set.
    */
   @java.lang.Override
@@ -377,7 +379,7 @@ private static final long serialVersionUID = 0L;
     return ownerAddress_ != null;
   }
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    * @return The ownerAddress.
    */
   @java.lang.Override
@@ -385,7 +387,7 @@ private static final long serialVersionUID = 0L;
     return ownerAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ownerAddress_;
   }
   /**
-   * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+   * <code>.google.protobuf.StringValue owner_address = 7;</code>
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder() {
@@ -395,7 +397,7 @@ private static final long serialVersionUID = 0L;
   public static final int MINTABLE_FIELD_NUMBER = 9;
   private boolean mintable_;
   /**
-   * <code>bool mintable = 9 [json_name = "mintable"];</code>
+   * <code>bool mintable = 9;</code>
    * @return The mintable.
    */
   @java.lang.Override
@@ -406,7 +408,7 @@ private static final long serialVersionUID = 0L;
   public static final int BURNABLE_FIELD_NUMBER = 10;
   private boolean burnable_;
   /**
-   * <code>bool burnable = 10 [json_name = "burnable"];</code>
+   * <code>bool burnable = 10;</code>
    * @return The burnable.
    */
   @java.lang.Override
@@ -890,11 +892,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-     * };
+     *example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 6 [json_name = "id"];</code>
+     * <code>uint64 id = 6;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -904,11 +906,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-     * };
+     *example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 6 [json_name = "id"];</code>
+     * <code>uint64 id = 6;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -921,11 +923,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
-     * };
+     *example: "{&#92;"id&#92;":&#92;"0&#92;",&#92;"name&#92;":&#92;"&#92;",&#92;"symbol&#92;":&#92;"BIP&#92;",&#92;"volume&#92;":&#92;"0&#92;",&#92;"crr&#92;":&#92;"0&#92;",&#92;"reserve_balance&#92;":&#92;"0&#92;",&#92;"max_supply&#92;":&#92;"10000000000000000000000000000&#92;",&#92;"owner_address&#92;":null}"
+     *};
      * </pre>
      *
-     * <code>uint64 id = 6 [json_name = "id"];</code>
+     * <code>uint64 id = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -937,7 +939,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -953,7 +955,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -970,7 +972,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -985,7 +987,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -995,7 +997,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1013,7 +1015,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object symbol_ = "";
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -1029,7 +1031,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -1046,7 +1048,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -1061,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -1071,7 +1073,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */
@@ -1089,7 +1091,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object volume_ = "";
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      * @return The volume.
      */
     public java.lang.String getVolume() {
@@ -1105,7 +1107,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      * @return The bytes for volume.
      */
     public com.google.protobuf.ByteString
@@ -1122,7 +1124,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      * @param value The volume to set.
      * @return This builder for chaining.
      */
@@ -1137,7 +1139,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearVolume() {
@@ -1147,7 +1149,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume = 3 [json_name = "volume"];</code>
+     * <code>string volume = 3;</code>
      * @param value The bytes for volume to set.
      * @return This builder for chaining.
      */
@@ -1165,7 +1167,7 @@ private static final long serialVersionUID = 0L;
 
     private long crr_ ;
     /**
-     * <code>uint64 crr = 4 [json_name = "crr"];</code>
+     * <code>uint64 crr = 4;</code>
      * @return The crr.
      */
     @java.lang.Override
@@ -1173,7 +1175,7 @@ private static final long serialVersionUID = 0L;
       return crr_;
     }
     /**
-     * <code>uint64 crr = 4 [json_name = "crr"];</code>
+     * <code>uint64 crr = 4;</code>
      * @param value The crr to set.
      * @return This builder for chaining.
      */
@@ -1184,7 +1186,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 crr = 4 [json_name = "crr"];</code>
+     * <code>uint64 crr = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCrr() {
@@ -1196,7 +1198,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object reserveBalance_ = "";
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      * @return The reserveBalance.
      */
     public java.lang.String getReserveBalance() {
@@ -1212,7 +1214,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      * @return The bytes for reserveBalance.
      */
     public com.google.protobuf.ByteString
@@ -1229,7 +1231,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      * @param value The reserveBalance to set.
      * @return This builder for chaining.
      */
@@ -1244,7 +1246,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearReserveBalance() {
@@ -1254,7 +1256,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string reserve_balance = 5 [json_name = "reserveBalance"];</code>
+     * <code>string reserve_balance = 5;</code>
      * @param value The bytes for reserveBalance to set.
      * @return This builder for chaining.
      */
@@ -1272,7 +1274,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object maxSupply_ = "";
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      * @return The maxSupply.
      */
     public java.lang.String getMaxSupply() {
@@ -1288,7 +1290,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      * @return The bytes for maxSupply.
      */
     public com.google.protobuf.ByteString
@@ -1305,7 +1307,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      * @param value The maxSupply to set.
      * @return This builder for chaining.
      */
@@ -1320,7 +1322,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxSupply() {
@@ -1330,7 +1332,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string max_supply = 8 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 8;</code>
      * @param value The bytes for maxSupply to set.
      * @return This builder for chaining.
      */
@@ -1350,14 +1352,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ownerAddressBuilder_;
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      * @return Whether the ownerAddress field is set.
      */
     public boolean hasOwnerAddress() {
       return ownerAddressBuilder_ != null || ownerAddress_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      * @return The ownerAddress.
      */
     public com.google.protobuf.StringValue getOwnerAddress() {
@@ -1368,7 +1370,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public Builder setOwnerAddress(com.google.protobuf.StringValue value) {
       if (ownerAddressBuilder_ == null) {
@@ -1384,7 +1386,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public Builder setOwnerAddress(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1398,7 +1400,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public Builder mergeOwnerAddress(com.google.protobuf.StringValue value) {
       if (ownerAddressBuilder_ == null) {
@@ -1416,7 +1418,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public Builder clearOwnerAddress() {
       if (ownerAddressBuilder_ == null) {
@@ -1430,7 +1432,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public com.google.protobuf.StringValue.Builder getOwnerAddressBuilder() {
       
@@ -1438,7 +1440,7 @@ private static final long serialVersionUID = 0L;
       return getOwnerAddressFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOwnerAddressOrBuilder() {
       if (ownerAddressBuilder_ != null) {
@@ -1449,7 +1451,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.StringValue owner_address = 7 [json_name = "ownerAddress"];</code>
+     * <code>.google.protobuf.StringValue owner_address = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1467,7 +1469,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean mintable_ ;
     /**
-     * <code>bool mintable = 9 [json_name = "mintable"];</code>
+     * <code>bool mintable = 9;</code>
      * @return The mintable.
      */
     @java.lang.Override
@@ -1475,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       return mintable_;
     }
     /**
-     * <code>bool mintable = 9 [json_name = "mintable"];</code>
+     * <code>bool mintable = 9;</code>
      * @param value The mintable to set.
      * @return This builder for chaining.
      */
@@ -1486,7 +1488,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool mintable = 9 [json_name = "mintable"];</code>
+     * <code>bool mintable = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearMintable() {
@@ -1498,7 +1500,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean burnable_ ;
     /**
-     * <code>bool burnable = 10 [json_name = "burnable"];</code>
+     * <code>bool burnable = 10;</code>
      * @return The burnable.
      */
     @java.lang.Override
@@ -1506,7 +1508,7 @@ private static final long serialVersionUID = 0L;
       return burnable_;
     }
     /**
-     * <code>bool burnable = 10 [json_name = "burnable"];</code>
+     * <code>bool burnable = 10;</code>
      * @param value The burnable to set.
      * @return This builder for chaining.
      */
@@ -1517,7 +1519,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool burnable = 10 [json_name = "burnable"];</code>
+     * <code>bool burnable = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearBurnable() {

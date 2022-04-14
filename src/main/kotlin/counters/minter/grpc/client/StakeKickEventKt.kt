@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializestakeKickEvent")
 public inline fun stakeKickEvent(block: counters.minter.grpc.client.StakeKickEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.StakeKickEvent =
   counters.minter.grpc.client.StakeKickEventKt.Dsl._create(counters.minter.grpc.client.StakeKickEvent.newBuilder()).apply { block() }._build()
 public object StakeKickEventKt {
@@ -23,7 +23,7 @@ public object StakeKickEventKt {
     internal fun _build(): counters.minter.grpc.client.StakeKickEvent = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -33,14 +33,14 @@ public object StakeKickEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
     public var amount: kotlin.String
       @JvmName("getAmount")
@@ -50,14 +50,14 @@ public object StakeKickEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 2 [json_name = "amount"];</code>
+     * <code>string amount = 2;</code>
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
 
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public var coin: kotlin.Long
       @JvmName("getCoin")
@@ -67,14 +67,14 @@ public object StakeKickEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
 
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      */
     public var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
@@ -84,7 +84,7 @@ public object StakeKickEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 4 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 4;</code>
      */
     public fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
@@ -94,3 +94,4 @@ public object StakeKickEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.StakeKickEvent.copy(block: counters.minter.grpc.client.StakeKickEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.StakeKickEvent =
   counters.minter.grpc.client.StakeKickEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

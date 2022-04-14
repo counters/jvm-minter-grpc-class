@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializefrozenRequest")
 public inline fun frozenRequest(block: counters.minter.grpc.client.FrozenRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenRequest =
   counters.minter.grpc.client.FrozenRequestKt.Dsl._create(counters.minter.grpc.client.FrozenRequest.newBuilder()).apply { block() }._build()
 public object FrozenRequestKt {
@@ -23,7 +23,7 @@ public object FrozenRequestKt {
     internal fun _build(): counters.minter.grpc.client.FrozenRequest = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -33,14 +33,14 @@ public object FrozenRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
      */
     public var coinId: com.google.protobuf.UInt64Value
       @JvmName("getCoinId")
@@ -50,13 +50,13 @@ public object FrozenRequestKt {
         _builder.setCoinId(value)
       }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
      */
     public fun clearCoinId() {
       _builder.clearCoinId()
     }
     /**
-     * <code>.google.protobuf.UInt64Value coin_id = 2 [json_name = "coinId"];</code>
+     * <code>.google.protobuf.UInt64Value coin_id = 2;</code>
      * @return Whether the coinId field is set.
      */
     public fun hasCoinId(): kotlin.Boolean {
@@ -64,7 +64,7 @@ public object FrozenRequestKt {
     }
 
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -74,7 +74,7 @@ public object FrozenRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -84,3 +84,7 @@ public object FrozenRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.FrozenRequest.copy(block: counters.minter.grpc.client.FrozenRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenRequest =
   counters.minter.grpc.client.FrozenRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.FrozenRequestOrBuilder.coinIdOrNull: com.google.protobuf.UInt64Value?
+  get() = if (hasCoinId()) getCoinId() else null
+

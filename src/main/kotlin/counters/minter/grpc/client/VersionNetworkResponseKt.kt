@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeversionNetworkResponse")
 public inline fun versionNetworkResponse(block: counters.minter.grpc.client.VersionNetworkResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkResponse =
   counters.minter.grpc.client.VersionNetworkResponseKt.Dsl._create(counters.minter.grpc.client.VersionNetworkResponse.newBuilder()).apply { block() }._build()
 public object VersionNetworkResponseKt {
@@ -23,7 +23,7 @@ public object VersionNetworkResponseKt {
     internal fun _build(): counters.minter.grpc.client.VersionNetworkResponse = _builder.build()
 
     /**
-     * <code>string current = 1 [json_name = "current"];</code>
+     * <code>string current = 1;</code>
      */
     public var current: kotlin.String
       @JvmName("getCurrent")
@@ -33,7 +33,7 @@ public object VersionNetworkResponseKt {
         _builder.setCurrent(value)
       }
     /**
-     * <code>string current = 1 [json_name = "current"];</code>
+     * <code>string current = 1;</code>
      */
     public fun clearCurrent() {
       _builder.clearCurrent()
@@ -46,7 +46,7 @@ public object VersionNetworkResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class VersionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      */
      public val versions: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -54,15 +54,16 @@ public object VersionNetworkResponseKt {
         _builder.getVersionsList()
       )
     /**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      * @param value The versions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addVersions")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.add(value: counters.minter.grpc.client.VersionNetworkResponse.Version) {
       _builder.addVersions(value)
-    }/**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      * @param value The versions to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,16 +71,18 @@ public object VersionNetworkResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.plusAssign(value: counters.minter.grpc.client.VersionNetworkResponse.Version) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      * @param values The versions to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllVersions")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.VersionNetworkResponse.Version>) {
       _builder.addAllVersions(values)
-    }/**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      * @param values The versions to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -87,8 +90,9 @@ public object VersionNetworkResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.VersionNetworkResponse.Version>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      * @param index The index to set the value at.
      * @param value The versions to set.
      */
@@ -96,15 +100,18 @@ public object VersionNetworkResponseKt {
     @kotlin.jvm.JvmName("setVersions")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.VersionNetworkResponse.Version) {
       _builder.setVersions(index, value)
-    }/**
-     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3 [json_name = "versions"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.VersionNetworkResponse.Version versions = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearVersions")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.VersionNetworkResponse.Version, VersionsProxy>.clear() {
       _builder.clearVersions()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializeversion")
   public inline fun version(block: counters.minter.grpc.client.VersionNetworkResponseKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkResponse.Version =
     counters.minter.grpc.client.VersionNetworkResponseKt.VersionKt.Dsl._create(counters.minter.grpc.client.VersionNetworkResponse.Version.newBuilder()).apply { block() }._build()
   public object VersionKt {
@@ -124,7 +131,7 @@ public object VersionNetworkResponseKt {
       internal fun _build(): counters.minter.grpc.client.VersionNetworkResponse.Version = _builder.build()
 
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
+       * <code>string name = 1;</code>
        */
       public var name: kotlin.String
         @JvmName("getName")
@@ -134,14 +141,14 @@ public object VersionNetworkResponseKt {
           _builder.setName(value)
         }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
+       * <code>string name = 1;</code>
        */
       public fun clearName() {
         _builder.clearName()
       }
 
       /**
-       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * <code>uint64 height = 2;</code>
        */
       public var height: kotlin.Long
         @JvmName("getHeight")
@@ -151,7 +158,7 @@ public object VersionNetworkResponseKt {
           _builder.setHeight(value)
         }
       /**
-       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * <code>uint64 height = 2;</code>
        */
       public fun clearHeight() {
         _builder.clearHeight()
@@ -162,6 +169,8 @@ public object VersionNetworkResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.VersionNetworkResponse.copy(block: counters.minter.grpc.client.VersionNetworkResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkResponse =
   counters.minter.grpc.client.VersionNetworkResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.VersionNetworkResponse.Version.copy(block: counters.minter.grpc.client.VersionNetworkResponseKt.VersionKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VersionNetworkResponse.Version =
   counters.minter.grpc.client.VersionNetworkResponseKt.VersionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

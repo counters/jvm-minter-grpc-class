@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializevoteUpdateData")
 public inline fun voteUpdateData(block: counters.minter.grpc.client.VoteUpdateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VoteUpdateData =
   counters.minter.grpc.client.VoteUpdateDataKt.Dsl._create(counters.minter.grpc.client.VoteUpdateData.newBuilder()).apply { block() }._build()
 public object VoteUpdateDataKt {
@@ -23,7 +23,7 @@ public object VoteUpdateDataKt {
     internal fun _build(): counters.minter.grpc.client.VoteUpdateData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -33,14 +33,14 @@ public object VoteUpdateDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -50,14 +50,14 @@ public object VoteUpdateDataKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      */
     public var version: kotlin.String
       @JvmName("getVersion")
@@ -67,7 +67,7 @@ public object VoteUpdateDataKt {
         _builder.setVersion(value)
       }
     /**
-     * <code>string version = 3 [json_name = "version"];</code>
+     * <code>string version = 3;</code>
      */
     public fun clearVersion() {
       _builder.clearVersion()
@@ -77,3 +77,4 @@ public object VoteUpdateDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.VoteUpdateData.copy(block: counters.minter.grpc.client.VoteUpdateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.VoteUpdateData =
   counters.minter.grpc.client.VoteUpdateDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

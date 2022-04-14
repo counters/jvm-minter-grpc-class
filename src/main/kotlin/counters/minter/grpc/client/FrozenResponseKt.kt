@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializefrozenResponse")
 public inline fun frozenResponse(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse =
   counters.minter.grpc.client.FrozenResponseKt.Dsl._create(counters.minter.grpc.client.FrozenResponse.newBuilder()).apply { block() }._build()
 public object FrozenResponseKt {
@@ -29,7 +29,7 @@ public object FrozenResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class FrozenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
      public val frozen: com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,15 +37,16 @@ public object FrozenResponseKt {
         _builder.getFrozenList()
       )
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param value The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addFrozen")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.add(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       _builder.addFrozen(value)
-    }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param value The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -53,16 +54,18 @@ public object FrozenResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       add(value)
-    }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param values The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllFrozen")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.addAll(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
       _builder.addAllFrozen(values)
-    }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param values The frozen to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -70,8 +73,9 @@ public object FrozenResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.plusAssign(values: kotlin.collections.Iterable<counters.minter.grpc.client.FrozenResponse.Frozen>) {
       addAll(values)
-    }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      * @param index The index to set the value at.
      * @param value The frozen to set.
      */
@@ -79,15 +83,18 @@ public object FrozenResponseKt {
     @kotlin.jvm.JvmName("setFrozen")
     public operator fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.set(index: kotlin.Int, value: counters.minter.grpc.client.FrozenResponse.Frozen) {
       _builder.setFrozen(index, value)
-    }/**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+    }
+    /**
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearFrozen")
     public fun com.google.protobuf.kotlin.DslList<counters.minter.grpc.client.FrozenResponse.Frozen, FrozenProxy>.clear() {
       _builder.clearFrozen()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializefrozen")
   public inline fun frozen(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
     counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl._create(counters.minter.grpc.client.FrozenResponse.Frozen.newBuilder()).apply { block() }._build()
   public object FrozenKt {
@@ -107,7 +114,7 @@ public object FrozenResponseKt {
       internal fun _build(): counters.minter.grpc.client.FrozenResponse.Frozen = _builder.build()
 
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        */
       public var height: kotlin.Long
         @JvmName("getHeight")
@@ -117,14 +124,14 @@ public object FrozenResponseKt {
           _builder.setHeight(value)
         }
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        */
       public fun clearHeight() {
         _builder.clearHeight()
       }
 
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        */
       public var address: kotlin.String
         @JvmName("getAddress")
@@ -134,14 +141,14 @@ public object FrozenResponseKt {
           _builder.setAddress(value)
         }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        */
       public fun clearAddress() {
         _builder.clearAddress()
       }
 
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public var candidateKey: com.google.protobuf.StringValue
         @JvmName("getCandidateKey")
@@ -151,13 +158,13 @@ public object FrozenResponseKt {
           _builder.setCandidateKey(value)
         }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public fun clearCandidateKey() {
         _builder.clearCandidateKey()
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        * @return Whether the candidateKey field is set.
        */
       public fun hasCandidateKey(): kotlin.Boolean {
@@ -165,7 +172,7 @@ public object FrozenResponseKt {
       }
 
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public var coin: counters.minter.grpc.client.Coin
         @JvmName("getCoin")
@@ -175,13 +182,13 @@ public object FrozenResponseKt {
           _builder.setCoin(value)
         }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public fun clearCoin() {
         _builder.clearCoin()
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        * @return Whether the coin field is set.
        */
       public fun hasCoin(): kotlin.Boolean {
@@ -189,7 +196,7 @@ public object FrozenResponseKt {
       }
 
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        */
       public var value: kotlin.String
         @JvmName("getValue")
@@ -199,14 +206,14 @@ public object FrozenResponseKt {
           _builder.setValue(value)
         }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        */
       public fun clearValue() {
         _builder.clearValue()
       }
 
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public var moveToCandidateKey: com.google.protobuf.StringValue
         @JvmName("getMoveToCandidateKey")
@@ -216,13 +223,13 @@ public object FrozenResponseKt {
           _builder.setMoveToCandidateKey(value)
         }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public fun clearMoveToCandidateKey() {
         _builder.clearMoveToCandidateKey()
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        * @return Whether the moveToCandidateKey field is set.
        */
       public fun hasMoveToCandidateKey(): kotlin.Boolean {
@@ -234,6 +241,17 @@ public object FrozenResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.FrozenResponse.copy(block: counters.minter.grpc.client.FrozenResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse =
   counters.minter.grpc.client.FrozenResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.FrozenResponse.Frozen.copy(block: counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.FrozenResponse.Frozen =
   counters.minter.grpc.client.FrozenResponseKt.FrozenKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder.candidateKeyOrNull: com.google.protobuf.StringValue?
+  get() = if (hasCandidateKey()) getCandidateKey() else null
+
+val counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+
+val counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder.moveToCandidateKeyOrNull: com.google.protobuf.StringValue?
+  get() = if (hasMoveToCandidateKey()) getMoveToCandidateKey() else null
+

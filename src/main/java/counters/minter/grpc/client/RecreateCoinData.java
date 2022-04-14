@@ -99,6 +99,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -123,7 +125,7 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -140,7 +142,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -161,7 +163,7 @@ private static final long serialVersionUID = 0L;
   public static final int SYMBOL_FIELD_NUMBER = 2;
   private volatile java.lang.Object symbol_;
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -178,7 +180,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string symbol = 2 [json_name = "symbol"];</code>
+   * <code>string symbol = 2;</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -199,7 +201,7 @@ private static final long serialVersionUID = 0L;
   public static final int INITIAL_AMOUNT_FIELD_NUMBER = 3;
   private volatile java.lang.Object initialAmount_;
   /**
-   * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+   * <code>string initial_amount = 3;</code>
    * @return The initialAmount.
    */
   @java.lang.Override
@@ -216,7 +218,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+   * <code>string initial_amount = 3;</code>
    * @return The bytes for initialAmount.
    */
   @java.lang.Override
@@ -237,7 +239,7 @@ private static final long serialVersionUID = 0L;
   public static final int INITIAL_RESERVE_FIELD_NUMBER = 4;
   private volatile java.lang.Object initialReserve_;
   /**
-   * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+   * <code>string initial_reserve = 4;</code>
    * @return The initialReserve.
    */
   @java.lang.Override
@@ -254,7 +256,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+   * <code>string initial_reserve = 4;</code>
    * @return The bytes for initialReserve.
    */
   @java.lang.Override
@@ -275,7 +277,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONSTANT_RESERVE_RATIO_FIELD_NUMBER = 5;
   private long constantReserveRatio_;
   /**
-   * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+   * <code>uint64 constant_reserve_ratio = 5;</code>
    * @return The constantReserveRatio.
    */
   @java.lang.Override
@@ -286,7 +288,7 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_SUPPLY_FIELD_NUMBER = 6;
   private volatile java.lang.Object maxSupply_;
   /**
-   * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 6;</code>
    * @return The maxSupply.
    */
   @java.lang.Override
@@ -303,7 +305,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+   * <code>string max_supply = 6;</code>
    * @return The bytes for maxSupply.
    */
   @java.lang.Override
@@ -711,7 +713,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -727,7 +729,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -744,7 +746,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -759,7 +761,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -769,7 +771,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -787,7 +789,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object symbol_ = "";
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -803,7 +805,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -820,7 +822,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -835,7 +837,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -845,7 +847,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */
@@ -863,7 +865,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object initialAmount_ = "";
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      * @return The initialAmount.
      */
     public java.lang.String getInitialAmount() {
@@ -879,7 +881,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      * @return The bytes for initialAmount.
      */
     public com.google.protobuf.ByteString
@@ -896,7 +898,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      * @param value The initialAmount to set.
      * @return This builder for chaining.
      */
@@ -911,7 +913,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearInitialAmount() {
@@ -921,7 +923,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string initial_amount = 3 [json_name = "initialAmount"];</code>
+     * <code>string initial_amount = 3;</code>
      * @param value The bytes for initialAmount to set.
      * @return This builder for chaining.
      */
@@ -939,7 +941,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object initialReserve_ = "";
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      * @return The initialReserve.
      */
     public java.lang.String getInitialReserve() {
@@ -955,7 +957,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      * @return The bytes for initialReserve.
      */
     public com.google.protobuf.ByteString
@@ -972,7 +974,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      * @param value The initialReserve to set.
      * @return This builder for chaining.
      */
@@ -987,7 +989,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearInitialReserve() {
@@ -997,7 +999,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string initial_reserve = 4 [json_name = "initialReserve"];</code>
+     * <code>string initial_reserve = 4;</code>
      * @param value The bytes for initialReserve to set.
      * @return This builder for chaining.
      */
@@ -1015,7 +1017,7 @@ private static final long serialVersionUID = 0L;
 
     private long constantReserveRatio_ ;
     /**
-     * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+     * <code>uint64 constant_reserve_ratio = 5;</code>
      * @return The constantReserveRatio.
      */
     @java.lang.Override
@@ -1023,7 +1025,7 @@ private static final long serialVersionUID = 0L;
       return constantReserveRatio_;
     }
     /**
-     * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+     * <code>uint64 constant_reserve_ratio = 5;</code>
      * @param value The constantReserveRatio to set.
      * @return This builder for chaining.
      */
@@ -1034,7 +1036,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 constant_reserve_ratio = 5 [json_name = "constantReserveRatio"];</code>
+     * <code>uint64 constant_reserve_ratio = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearConstantReserveRatio() {
@@ -1046,7 +1048,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object maxSupply_ = "";
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      * @return The maxSupply.
      */
     public java.lang.String getMaxSupply() {
@@ -1062,7 +1064,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      * @return The bytes for maxSupply.
      */
     public com.google.protobuf.ByteString
@@ -1079,7 +1081,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      * @param value The maxSupply to set.
      * @return This builder for chaining.
      */
@@ -1094,7 +1096,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxSupply() {
@@ -1104,7 +1106,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string max_supply = 6 [json_name = "maxSupply"];</code>
+     * <code>string max_supply = 6;</code>
      * @param value The bytes for maxSupply to set.
      * @return This builder for chaining.
      */

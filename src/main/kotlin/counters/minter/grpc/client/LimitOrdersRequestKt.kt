@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelimitOrdersRequest")
 public inline fun limitOrdersRequest(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersRequest =
   counters.minter.grpc.client.LimitOrdersRequestKt.Dsl._create(counters.minter.grpc.client.LimitOrdersRequest.newBuilder()).apply { block() }._build()
 public object LimitOrdersRequestKt {
@@ -29,7 +29,7 @@ public object LimitOrdersRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class IdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      */
      public val ids: com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,7 +37,7 @@ public object LimitOrdersRequestKt {
         _builder.getIdsList()
       )
     /**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param value The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -45,7 +45,7 @@ public object LimitOrdersRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.add(value: kotlin.Long) {
       _builder.addIds(value)
     }/**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param value The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -54,7 +54,7 @@ public object LimitOrdersRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param values The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -62,7 +62,7 @@ public object LimitOrdersRequestKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllIds(values)
     }/**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param values The ids to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -71,7 +71,7 @@ public object LimitOrdersRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      * @param index The index to set the value at.
      * @param value The ids to set.
      */
@@ -80,7 +80,7 @@ public object LimitOrdersRequestKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, IdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setIds(index, value)
     }/**
-     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * <code>repeated uint64 ids = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearIds")
@@ -88,7 +88,7 @@ public object LimitOrdersRequestKt {
       _builder.clearIds()
     }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -98,7 +98,7 @@ public object LimitOrdersRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * <code>uint64 height = 2;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -108,3 +108,4 @@ public object LimitOrdersRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.LimitOrdersRequest.copy(block: counters.minter.grpc.client.LimitOrdersRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.LimitOrdersRequest =
   counters.minter.grpc.client.LimitOrdersRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

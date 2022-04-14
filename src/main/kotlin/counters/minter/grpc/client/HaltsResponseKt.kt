@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializehaltsResponse")
 public inline fun haltsResponse(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsResponse =
   counters.minter.grpc.client.HaltsResponseKt.Dsl._create(counters.minter.grpc.client.HaltsResponse.newBuilder()).apply { block() }._build()
 public object HaltsResponseKt {
@@ -29,7 +29,7 @@ public object HaltsResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class PublicKeysProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     public val publicKeys: com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>
@@ -38,7 +38,7 @@ public object HaltsResponseKt {
         _builder.getPublicKeysList()
       )
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -47,7 +47,7 @@ public object HaltsResponseKt {
       _builder.addPublicKeys(value)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param value The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -57,7 +57,7 @@ public object HaltsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param values The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -66,7 +66,7 @@ public object HaltsResponseKt {
       _builder.addAllPublicKeys(values)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param values The publicKeys to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -76,7 +76,7 @@ public object HaltsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index to set the value at.
      * @param value The publicKeys to set.
      */
@@ -85,7 +85,7 @@ public object HaltsResponseKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PublicKeysProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setPublicKeys(index, value)
     }/**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearPublicKeys")
@@ -96,3 +96,4 @@ public object HaltsResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.HaltsResponse.copy(block: counters.minter.grpc.client.HaltsResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsResponse =
   counters.minter.grpc.client.HaltsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

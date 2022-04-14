@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializehaltsRequest")
 public inline fun haltsRequest(block: counters.minter.grpc.client.HaltsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsRequest =
   counters.minter.grpc.client.HaltsRequestKt.Dsl._create(counters.minter.grpc.client.HaltsRequest.newBuilder()).apply { block() }._build()
 public object HaltsRequestKt {
@@ -23,7 +23,7 @@ public object HaltsRequestKt {
     internal fun _build(): counters.minter.grpc.client.HaltsRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,7 +33,7 @@ public object HaltsRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -43,3 +43,4 @@ public object HaltsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.HaltsRequest.copy(block: counters.minter.grpc.client.HaltsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.HaltsRequest =
   counters.minter.grpc.client.HaltsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

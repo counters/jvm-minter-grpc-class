@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesetCandidateOffData")
 public inline fun setCandidateOffData(block: counters.minter.grpc.client.SetCandidateOffDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SetCandidateOffData =
   counters.minter.grpc.client.SetCandidateOffDataKt.Dsl._create(counters.minter.grpc.client.SetCandidateOffData.newBuilder()).apply { block() }._build()
 public object SetCandidateOffDataKt {
@@ -23,7 +23,7 @@ public object SetCandidateOffDataKt {
     internal fun _build(): counters.minter.grpc.client.SetCandidateOffData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -33,7 +33,7 @@ public object SetCandidateOffDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
@@ -43,3 +43,4 @@ public object SetCandidateOffDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SetCandidateOffData.copy(block: counters.minter.grpc.client.SetCandidateOffDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SetCandidateOffData =
   counters.minter.grpc.client.SetCandidateOffDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

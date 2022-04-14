@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializejailEvent")
 public inline fun jailEvent(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.JailEvent =
   counters.minter.grpc.client.JailEventKt.Dsl._create(counters.minter.grpc.client.JailEvent.newBuilder()).apply { block() }._build()
 public object JailEventKt {
@@ -23,7 +23,7 @@ public object JailEventKt {
     internal fun _build(): counters.minter.grpc.client.JailEvent = _builder.build()
 
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      */
     public var validatorPubKey: kotlin.String
       @JvmName("getValidatorPubKey")
@@ -33,14 +33,14 @@ public object JailEventKt {
         _builder.setValidatorPubKey(value)
       }
     /**
-     * <code>string validator_pub_key = 1 [json_name = "validatorPubKey"];</code>
+     * <code>string validator_pub_key = 1;</code>
      */
     public fun clearValidatorPubKey() {
       _builder.clearValidatorPubKey()
     }
 
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      */
     public var jailedUntil: kotlin.Long
       @JvmName("getJailedUntil")
@@ -50,7 +50,7 @@ public object JailEventKt {
         _builder.setJailedUntil(value)
       }
     /**
-     * <code>uint64 jailed_until = 2 [json_name = "jailedUntil"];</code>
+     * <code>uint64 jailed_until = 2;</code>
      */
     public fun clearJailedUntil() {
       _builder.clearJailedUntil()
@@ -60,3 +60,4 @@ public object JailEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.JailEvent.copy(block: counters.minter.grpc.client.JailEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.JailEvent =
   counters.minter.grpc.client.JailEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

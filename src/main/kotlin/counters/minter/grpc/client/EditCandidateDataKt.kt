@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeditCandidateData")
 public inline fun editCandidateData(block: counters.minter.grpc.client.EditCandidateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateData =
   counters.minter.grpc.client.EditCandidateDataKt.Dsl._create(counters.minter.grpc.client.EditCandidateData.newBuilder()).apply { block() }._build()
 public object EditCandidateDataKt {
@@ -23,7 +23,7 @@ public object EditCandidateDataKt {
     internal fun _build(): counters.minter.grpc.client.EditCandidateData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -33,14 +33,14 @@ public object EditCandidateDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 3;</code>
      */
     public var rewardAddress: kotlin.String
       @JvmName("getRewardAddress")
@@ -50,14 +50,14 @@ public object EditCandidateDataKt {
         _builder.setRewardAddress(value)
       }
     /**
-     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * <code>string reward_address = 3;</code>
      */
     public fun clearRewardAddress() {
       _builder.clearRewardAddress()
     }
 
     /**
-     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 4;</code>
      */
     public var ownerAddress: kotlin.String
       @JvmName("getOwnerAddress")
@@ -67,14 +67,14 @@ public object EditCandidateDataKt {
         _builder.setOwnerAddress(value)
       }
     /**
-     * <code>string owner_address = 4 [json_name = "ownerAddress"];</code>
+     * <code>string owner_address = 4;</code>
      */
     public fun clearOwnerAddress() {
       _builder.clearOwnerAddress()
     }
 
     /**
-     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 5;</code>
      */
     public var controlAddress: kotlin.String
       @JvmName("getControlAddress")
@@ -84,7 +84,7 @@ public object EditCandidateDataKt {
         _builder.setControlAddress(value)
       }
     /**
-     * <code>string control_address = 5 [json_name = "controlAddress"];</code>
+     * <code>string control_address = 5;</code>
      */
     public fun clearControlAddress() {
       _builder.clearControlAddress()
@@ -94,3 +94,4 @@ public object EditCandidateDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EditCandidateData.copy(block: counters.minter.grpc.client.EditCandidateDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidateData =
   counters.minter.grpc.client.EditCandidateDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemaxGasPriceRequest")
 public inline fun maxGasPriceRequest(block: counters.minter.grpc.client.MaxGasPriceRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MaxGasPriceRequest =
   counters.minter.grpc.client.MaxGasPriceRequestKt.Dsl._create(counters.minter.grpc.client.MaxGasPriceRequest.newBuilder()).apply { block() }._build()
 public object MaxGasPriceRequestKt {
@@ -23,7 +23,7 @@ public object MaxGasPriceRequestKt {
     internal fun _build(): counters.minter.grpc.client.MaxGasPriceRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,7 +33,7 @@ public object MaxGasPriceRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -43,3 +43,4 @@ public object MaxGasPriceRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.MaxGasPriceRequest.copy(block: counters.minter.grpc.client.MaxGasPriceRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MaxGasPriceRequest =
   counters.minter.grpc.client.MaxGasPriceRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

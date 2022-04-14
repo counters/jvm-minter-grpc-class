@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializedeclareCandidacyData")
 public inline fun declareCandidacyData(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DeclareCandidacyData =
   counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl._create(counters.minter.grpc.client.DeclareCandidacyData.newBuilder()).apply { block() }._build()
 public object DeclareCandidacyDataKt {
@@ -23,7 +23,7 @@ public object DeclareCandidacyDataKt {
     internal fun _build(): counters.minter.grpc.client.DeclareCandidacyData = _builder.build()
 
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -33,14 +33,14 @@ public object DeclareCandidacyDataKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 1 [json_name = "address"];</code>
+     * <code>string address = 1;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 2;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -50,14 +50,14 @@ public object DeclareCandidacyDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 2;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>uint64 commission = 3 [json_name = "commission"];</code>
+     * <code>uint64 commission = 3;</code>
      */
     public var commission: kotlin.Long
       @JvmName("getCommission")
@@ -67,14 +67,14 @@ public object DeclareCandidacyDataKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>uint64 commission = 3 [json_name = "commission"];</code>
+     * <code>uint64 commission = 3;</code>
      */
     public fun clearCommission() {
       _builder.clearCommission()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -84,13 +84,13 @@ public object DeclareCandidacyDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -98,7 +98,7 @@ public object DeclareCandidacyDataKt {
     }
 
     /**
-     * <code>string stake = 5 [json_name = "stake"];</code>
+     * <code>string stake = 5;</code>
      */
     public var stake: kotlin.String
       @JvmName("getStake")
@@ -108,7 +108,7 @@ public object DeclareCandidacyDataKt {
         _builder.setStake(value)
       }
     /**
-     * <code>string stake = 5 [json_name = "stake"];</code>
+     * <code>string stake = 5;</code>
      */
     public fun clearStake() {
       _builder.clearStake()
@@ -118,3 +118,7 @@ public object DeclareCandidacyDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.DeclareCandidacyData.copy(block: counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.DeclareCandidacyData =
   counters.minter.grpc.client.DeclareCandidacyDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.DeclareCandidacyDataOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

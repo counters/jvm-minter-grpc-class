@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -99,77 +101,77 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     long getHeight();
 
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The address.
      */
     java.lang.String getAddress();
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      * @return Whether the candidateKey field is set.
      */
     boolean hasCandidateKey();
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      * @return The candidateKey.
      */
     com.google.protobuf.StringValue getCandidateKey();
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      */
     com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder();
 
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      * @return Whether the coin field is set.
      */
     boolean hasCoin();
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      * @return The coin.
      */
     counters.minter.grpc.client.Coin getCoin();
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      */
     counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
     /**
-     * <code>string value = 5 [json_name = "value"];</code>
+     * <code>string value = 5;</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <code>string value = 5 [json_name = "value"];</code>
+     * <code>string value = 5;</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
 
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      * @return Whether the moveToCandidateKey field is set.
      */
     boolean hasMoveToCandidateKey();
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      * @return The moveToCandidateKey.
      */
     com.google.protobuf.StringValue getMoveToCandidateKey();
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      */
     com.google.protobuf.StringValueOrBuilder getMoveToCandidateKeyOrBuilder();
   }
@@ -287,6 +289,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -311,7 +315,7 @@ private static final long serialVersionUID = 0L;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_;
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -322,7 +326,7 @@ private static final long serialVersionUID = 0L;
     public static final int ADDRESS_FIELD_NUMBER = 2;
     private volatile java.lang.Object address_;
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The address.
      */
     @java.lang.Override
@@ -339,7 +343,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      * @return The bytes for address.
      */
     @java.lang.Override
@@ -360,7 +364,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANDIDATE_KEY_FIELD_NUMBER = 8;
     private com.google.protobuf.StringValue candidateKey_;
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      * @return Whether the candidateKey field is set.
      */
     @java.lang.Override
@@ -368,7 +372,7 @@ private static final long serialVersionUID = 0L;
       return candidateKey_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      * @return The candidateKey.
      */
     @java.lang.Override
@@ -376,7 +380,7 @@ private static final long serialVersionUID = 0L;
       return candidateKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : candidateKey_;
     }
     /**
-     * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+     * <code>.google.protobuf.StringValue candidate_key = 8;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder() {
@@ -386,7 +390,7 @@ private static final long serialVersionUID = 0L;
     public static final int COIN_FIELD_NUMBER = 4;
     private counters.minter.grpc.client.Coin coin_;
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      * @return Whether the coin field is set.
      */
     @java.lang.Override
@@ -394,7 +398,7 @@ private static final long serialVersionUID = 0L;
       return coin_ != null;
     }
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      * @return The coin.
      */
     @java.lang.Override
@@ -402,7 +406,7 @@ private static final long serialVersionUID = 0L;
       return coin_ == null ? counters.minter.grpc.client.Coin.getDefaultInstance() : coin_;
     }
     /**
-     * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 4;</code>
      */
     @java.lang.Override
     public counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder() {
@@ -412,7 +416,7 @@ private static final long serialVersionUID = 0L;
     public static final int VALUE_FIELD_NUMBER = 5;
     private volatile java.lang.Object value_;
     /**
-     * <code>string value = 5 [json_name = "value"];</code>
+     * <code>string value = 5;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -429,7 +433,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 5 [json_name = "value"];</code>
+     * <code>string value = 5;</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -450,7 +454,7 @@ private static final long serialVersionUID = 0L;
     public static final int MOVE_TO_CANDIDATE_KEY_FIELD_NUMBER = 7;
     private com.google.protobuf.StringValue moveToCandidateKey_;
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      * @return Whether the moveToCandidateKey field is set.
      */
     @java.lang.Override
@@ -458,7 +462,7 @@ private static final long serialVersionUID = 0L;
       return moveToCandidateKey_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      * @return The moveToCandidateKey.
      */
     @java.lang.Override
@@ -466,7 +470,7 @@ private static final long serialVersionUID = 0L;
       return moveToCandidateKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : moveToCandidateKey_;
     }
     /**
-     * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+     * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getMoveToCandidateKeyOrBuilder() {
@@ -902,7 +906,7 @@ private static final long serialVersionUID = 0L;
 
       private long height_ ;
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        * @return The height.
        */
       @java.lang.Override
@@ -910,7 +914,7 @@ private static final long serialVersionUID = 0L;
         return height_;
       }
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
@@ -921,7 +925,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * <code>uint64 height = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
@@ -933,7 +937,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object address_ = "";
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        * @return The address.
        */
       public java.lang.String getAddress() {
@@ -949,7 +953,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
@@ -966,7 +970,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        * @param value The address to set.
        * @return This builder for chaining.
        */
@@ -981,7 +985,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAddress() {
@@ -991,7 +995,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string address = 2 [json_name = "address"];</code>
+       * <code>string address = 2;</code>
        * @param value The bytes for address to set.
        * @return This builder for chaining.
        */
@@ -1011,14 +1015,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> candidateKeyBuilder_;
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        * @return Whether the candidateKey field is set.
        */
       public boolean hasCandidateKey() {
         return candidateKeyBuilder_ != null || candidateKey_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        * @return The candidateKey.
        */
       public com.google.protobuf.StringValue getCandidateKey() {
@@ -1029,7 +1033,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public Builder setCandidateKey(com.google.protobuf.StringValue value) {
         if (candidateKeyBuilder_ == null) {
@@ -1045,7 +1049,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public Builder setCandidateKey(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1059,7 +1063,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public Builder mergeCandidateKey(com.google.protobuf.StringValue value) {
         if (candidateKeyBuilder_ == null) {
@@ -1077,7 +1081,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public Builder clearCandidateKey() {
         if (candidateKeyBuilder_ == null) {
@@ -1091,7 +1095,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public com.google.protobuf.StringValue.Builder getCandidateKeyBuilder() {
         
@@ -1099,7 +1103,7 @@ private static final long serialVersionUID = 0L;
         return getCandidateKeyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCandidateKeyOrBuilder() {
         if (candidateKeyBuilder_ != null) {
@@ -1110,7 +1114,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.StringValue candidate_key = 8 [json_name = "candidateKey"];</code>
+       * <code>.google.protobuf.StringValue candidate_key = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1130,14 +1134,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> coinBuilder_;
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        * @return Whether the coin field is set.
        */
       public boolean hasCoin() {
         return coinBuilder_ != null || coin_ != null;
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        * @return The coin.
        */
       public counters.minter.grpc.client.Coin getCoin() {
@@ -1148,7 +1152,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public Builder setCoin(counters.minter.grpc.client.Coin value) {
         if (coinBuilder_ == null) {
@@ -1164,7 +1168,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public Builder setCoin(
           counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -1178,7 +1182,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public Builder mergeCoin(counters.minter.grpc.client.Coin value) {
         if (coinBuilder_ == null) {
@@ -1196,7 +1200,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public Builder clearCoin() {
         if (coinBuilder_ == null) {
@@ -1210,7 +1214,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public counters.minter.grpc.client.Coin.Builder getCoinBuilder() {
         
@@ -1218,7 +1222,7 @@ private static final long serialVersionUID = 0L;
         return getCoinFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       public counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder() {
         if (coinBuilder_ != null) {
@@ -1229,7 +1233,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.api_pb.Coin coin = 4 [json_name = "coin"];</code>
+       * <code>.api_pb.Coin coin = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> 
@@ -1247,7 +1251,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        * @return The value.
        */
       public java.lang.String getValue() {
@@ -1263,7 +1267,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
@@ -1280,7 +1284,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -1295,7 +1299,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -1305,7 +1309,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string value = 5 [json_name = "value"];</code>
+       * <code>string value = 5;</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
@@ -1325,14 +1329,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> moveToCandidateKeyBuilder_;
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        * @return Whether the moveToCandidateKey field is set.
        */
       public boolean hasMoveToCandidateKey() {
         return moveToCandidateKeyBuilder_ != null || moveToCandidateKey_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        * @return The moveToCandidateKey.
        */
       public com.google.protobuf.StringValue getMoveToCandidateKey() {
@@ -1343,7 +1347,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public Builder setMoveToCandidateKey(com.google.protobuf.StringValue value) {
         if (moveToCandidateKeyBuilder_ == null) {
@@ -1359,7 +1363,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public Builder setMoveToCandidateKey(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1373,7 +1377,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public Builder mergeMoveToCandidateKey(com.google.protobuf.StringValue value) {
         if (moveToCandidateKeyBuilder_ == null) {
@@ -1391,7 +1395,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public Builder clearMoveToCandidateKey() {
         if (moveToCandidateKeyBuilder_ == null) {
@@ -1405,7 +1409,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public com.google.protobuf.StringValue.Builder getMoveToCandidateKeyBuilder() {
         
@@ -1413,7 +1417,7 @@ private static final long serialVersionUID = 0L;
         return getMoveToCandidateKeyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       public com.google.protobuf.StringValueOrBuilder getMoveToCandidateKeyOrBuilder() {
         if (moveToCandidateKeyBuilder_ != null) {
@@ -1424,7 +1428,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.StringValue move_to_candidate_key = 7 [json_name = "moveToCandidateKey"];</code>
+       * <code>.google.protobuf.StringValue move_to_candidate_key = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1495,14 +1499,14 @@ private static final long serialVersionUID = 0L;
   public static final int FROZEN_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.FrozenResponse.Frozen> frozen_;
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.FrozenResponse.Frozen> getFrozenList() {
     return frozen_;
   }
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder> 
@@ -1510,21 +1514,21 @@ private static final long serialVersionUID = 0L;
     return frozen_;
   }
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
    */
   @java.lang.Override
   public int getFrozenCount() {
     return frozen_.size();
   }
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.FrozenResponse.Frozen getFrozen(int index) {
     return frozen_.get(index);
   }
   /**
-   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+   * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder getFrozenOrBuilder(
@@ -1887,7 +1891,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.FrozenResponse.Frozen, counters.minter.grpc.client.FrozenResponse.Frozen.Builder, counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder> frozenBuilder_;
 
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.FrozenResponse.Frozen> getFrozenList() {
       if (frozenBuilder_ == null) {
@@ -1897,7 +1901,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public int getFrozenCount() {
       if (frozenBuilder_ == null) {
@@ -1907,7 +1911,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public counters.minter.grpc.client.FrozenResponse.Frozen getFrozen(int index) {
       if (frozenBuilder_ == null) {
@@ -1917,7 +1921,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder setFrozen(
         int index, counters.minter.grpc.client.FrozenResponse.Frozen value) {
@@ -1934,7 +1938,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder setFrozen(
         int index, counters.minter.grpc.client.FrozenResponse.Frozen.Builder builderForValue) {
@@ -1948,7 +1952,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder addFrozen(counters.minter.grpc.client.FrozenResponse.Frozen value) {
       if (frozenBuilder_ == null) {
@@ -1964,7 +1968,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder addFrozen(
         int index, counters.minter.grpc.client.FrozenResponse.Frozen value) {
@@ -1981,7 +1985,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder addFrozen(
         counters.minter.grpc.client.FrozenResponse.Frozen.Builder builderForValue) {
@@ -1995,7 +1999,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder addFrozen(
         int index, counters.minter.grpc.client.FrozenResponse.Frozen.Builder builderForValue) {
@@ -2009,7 +2013,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder addAllFrozen(
         java.lang.Iterable<? extends counters.minter.grpc.client.FrozenResponse.Frozen> values) {
@@ -2024,7 +2028,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder clearFrozen() {
       if (frozenBuilder_ == null) {
@@ -2037,7 +2041,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public Builder removeFrozen(int index) {
       if (frozenBuilder_ == null) {
@@ -2050,14 +2054,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public counters.minter.grpc.client.FrozenResponse.Frozen.Builder getFrozenBuilder(
         int index) {
       return getFrozenFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder getFrozenOrBuilder(
         int index) {
@@ -2067,7 +2071,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.FrozenResponse.FrozenOrBuilder> 
          getFrozenOrBuilderList() {
@@ -2078,14 +2082,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public counters.minter.grpc.client.FrozenResponse.Frozen.Builder addFrozenBuilder() {
       return getFrozenFieldBuilder().addBuilder(
           counters.minter.grpc.client.FrozenResponse.Frozen.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public counters.minter.grpc.client.FrozenResponse.Frozen.Builder addFrozenBuilder(
         int index) {
@@ -2093,7 +2097,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.FrozenResponse.Frozen.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1 [json_name = "frozen"];</code>
+     * <code>repeated .api_pb.FrozenResponse.Frozen frozen = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.FrozenResponse.Frozen.Builder> 
          getFrozenBuilderList() {

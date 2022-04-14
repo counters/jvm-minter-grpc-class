@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -99,36 +101,36 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 2;</code>
      * @return The version.
      */
     java.lang.String getVersion();
     /**
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 2;</code>
      * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     java.util.List<java.lang.String>
         getPublicKeysList();
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return The count of publicKeys.
      */
     int getPublicKeysCount();
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the element to return.
      * @return The publicKeys at the given index.
      */
     java.lang.String getPublicKeys(int index);
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the publicKeys at the given index.
      */
@@ -209,6 +211,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -236,7 +240,7 @@ private static final long serialVersionUID = 0L;
     public static final int VERSION_FIELD_NUMBER = 2;
     private volatile java.lang.Object version_;
     /**
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 2;</code>
      * @return The version.
      */
     @java.lang.Override
@@ -253,7 +257,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string version = 2 [json_name = "version"];</code>
+     * <code>string version = 2;</code>
      * @return The bytes for version.
      */
     @java.lang.Override
@@ -274,7 +278,7 @@ private static final long serialVersionUID = 0L;
     public static final int PUBLIC_KEYS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList publicKeys_;
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return A list containing the publicKeys.
      */
     public com.google.protobuf.ProtocolStringList
@@ -282,14 +286,14 @@ private static final long serialVersionUID = 0L;
       return publicKeys_;
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @return The count of publicKeys.
      */
     public int getPublicKeysCount() {
       return publicKeys_.size();
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the element to return.
      * @return The publicKeys at the given index.
      */
@@ -297,7 +301,7 @@ private static final long serialVersionUID = 0L;
       return publicKeys_.get(index);
     }
     /**
-     * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+     * <code>repeated string public_keys = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the publicKeys at the given index.
      */
@@ -646,7 +650,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object version_ = "";
       /**
-       * <code>string version = 2 [json_name = "version"];</code>
+       * <code>string version = 2;</code>
        * @return The version.
        */
       public java.lang.String getVersion() {
@@ -662,7 +666,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string version = 2 [json_name = "version"];</code>
+       * <code>string version = 2;</code>
        * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
@@ -679,7 +683,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string version = 2 [json_name = "version"];</code>
+       * <code>string version = 2;</code>
        * @param value The version to set.
        * @return This builder for chaining.
        */
@@ -694,7 +698,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string version = 2 [json_name = "version"];</code>
+       * <code>string version = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
@@ -704,7 +708,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string version = 2 [json_name = "version"];</code>
+       * <code>string version = 2;</code>
        * @param value The bytes for version to set.
        * @return This builder for chaining.
        */
@@ -728,7 +732,7 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return A list containing the publicKeys.
        */
       public com.google.protobuf.ProtocolStringList
@@ -736,14 +740,14 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return The count of publicKeys.
        */
       public int getPublicKeysCount() {
         return publicKeys_.size();
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index of the element to return.
        * @return The publicKeys at the given index.
        */
@@ -751,7 +755,7 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.get(index);
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the publicKeys at the given index.
        */
@@ -760,7 +764,7 @@ private static final long serialVersionUID = 0L;
         return publicKeys_.getByteString(index);
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param index The index to set the value at.
        * @param value The publicKeys to set.
        * @return This builder for chaining.
@@ -776,7 +780,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The publicKeys to add.
        * @return This builder for chaining.
        */
@@ -791,7 +795,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param values The publicKeys to add.
        * @return This builder for chaining.
        */
@@ -804,7 +808,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPublicKeys() {
@@ -814,7 +818,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string public_keys = 1 [json_name = "publicKeys"];</code>
+       * <code>repeated string public_keys = 1;</code>
        * @param value The bytes of the publicKeys to add.
        * @return This builder for chaining.
        */
@@ -885,14 +889,14 @@ private static final long serialVersionUID = 0L;
   public static final int VOTES_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.UpdateVotesResponse.Vote> votes_;
   /**
-   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.UpdateVotesResponse.Vote> getVotesList() {
     return votes_;
   }
   /**
-   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.UpdateVotesResponse.VoteOrBuilder> 
@@ -900,21 +904,21 @@ private static final long serialVersionUID = 0L;
     return votes_;
   }
   /**
-   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public int getVotesCount() {
     return votes_.size();
   }
   /**
-   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.UpdateVotesResponse.Vote getVotes(int index) {
     return votes_.get(index);
   }
   /**
-   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+   * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.UpdateVotesResponse.VoteOrBuilder getVotesOrBuilder(
@@ -1277,7 +1281,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.UpdateVotesResponse.Vote, counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder, counters.minter.grpc.client.UpdateVotesResponse.VoteOrBuilder> votesBuilder_;
 
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.UpdateVotesResponse.Vote> getVotesList() {
       if (votesBuilder_ == null) {
@@ -1287,7 +1291,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public int getVotesCount() {
       if (votesBuilder_ == null) {
@@ -1297,7 +1301,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.UpdateVotesResponse.Vote getVotes(int index) {
       if (votesBuilder_ == null) {
@@ -1307,7 +1311,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder setVotes(
         int index, counters.minter.grpc.client.UpdateVotesResponse.Vote value) {
@@ -1324,7 +1328,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder setVotes(
         int index, counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder builderForValue) {
@@ -1338,7 +1342,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(counters.minter.grpc.client.UpdateVotesResponse.Vote value) {
       if (votesBuilder_ == null) {
@@ -1354,7 +1358,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         int index, counters.minter.grpc.client.UpdateVotesResponse.Vote value) {
@@ -1371,7 +1375,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder builderForValue) {
@@ -1385,7 +1389,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder addVotes(
         int index, counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder builderForValue) {
@@ -1399,7 +1403,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder addAllVotes(
         java.lang.Iterable<? extends counters.minter.grpc.client.UpdateVotesResponse.Vote> values) {
@@ -1414,7 +1418,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder clearVotes() {
       if (votesBuilder_ == null) {
@@ -1427,7 +1431,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public Builder removeVotes(int index) {
       if (votesBuilder_ == null) {
@@ -1440,14 +1444,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder getVotesBuilder(
         int index) {
       return getVotesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.UpdateVotesResponse.VoteOrBuilder getVotesOrBuilder(
         int index) {
@@ -1457,7 +1461,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.UpdateVotesResponse.VoteOrBuilder> 
          getVotesOrBuilderList() {
@@ -1468,14 +1472,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder addVotesBuilder() {
       return getVotesFieldBuilder().addBuilder(
           counters.minter.grpc.client.UpdateVotesResponse.Vote.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder addVotesBuilder(
         int index) {
@@ -1483,7 +1487,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.UpdateVotesResponse.Vote.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1 [json_name = "votes"];</code>
+     * <code>repeated .api_pb.UpdateVotesResponse.Vote votes = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.UpdateVotesResponse.Vote.Builder> 
          getVotesBuilderList() {

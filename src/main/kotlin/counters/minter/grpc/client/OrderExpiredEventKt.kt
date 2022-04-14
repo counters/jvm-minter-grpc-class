@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeorderExpiredEvent")
 public inline fun orderExpiredEvent(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.OrderExpiredEvent =
   counters.minter.grpc.client.OrderExpiredEventKt.Dsl._create(counters.minter.grpc.client.OrderExpiredEvent.newBuilder()).apply { block() }._build()
 public object OrderExpiredEventKt {
@@ -23,7 +23,7 @@ public object OrderExpiredEventKt {
     internal fun _build(): counters.minter.grpc.client.OrderExpiredEvent = _builder.build()
 
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public var id: kotlin.Long
       @JvmName("getId")
@@ -33,14 +33,14 @@ public object OrderExpiredEventKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * <code>uint64 id = 1;</code>
      */
     public fun clearId() {
       _builder.clearId()
     }
 
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -50,14 +50,14 @@ public object OrderExpiredEventKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public var coin: kotlin.Long
       @JvmName("getCoin")
@@ -67,14 +67,14 @@ public object OrderExpiredEventKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>uint64 coin = 3 [json_name = "coin"];</code>
+     * <code>uint64 coin = 3;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
 
     /**
-     * <code>string amount = 4 [json_name = "amount"];</code>
+     * <code>string amount = 4;</code>
      */
     public var amount: kotlin.String
       @JvmName("getAmount")
@@ -84,7 +84,7 @@ public object OrderExpiredEventKt {
         _builder.setAmount(value)
       }
     /**
-     * <code>string amount = 4 [json_name = "amount"];</code>
+     * <code>string amount = 4;</code>
      */
     public fun clearAmount() {
       _builder.clearAmount()
@@ -94,3 +94,4 @@ public object OrderExpiredEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.OrderExpiredEvent.copy(block: counters.minter.grpc.client.OrderExpiredEventKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.OrderExpiredEvent =
   counters.minter.grpc.client.OrderExpiredEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

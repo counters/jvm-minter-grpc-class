@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializebestTradeResponse")
 public inline fun bestTradeResponse(block: counters.minter.grpc.client.BestTradeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BestTradeResponse =
   counters.minter.grpc.client.BestTradeResponseKt.Dsl._create(counters.minter.grpc.client.BestTradeResponse.newBuilder()).apply { block() }._build()
 public object BestTradeResponseKt {
@@ -29,7 +29,7 @@ public object BestTradeResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class PathProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      */
      public val path: com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>
       @kotlin.jvm.JvmSynthetic
@@ -37,7 +37,7 @@ public object BestTradeResponseKt {
         _builder.getPathList()
       )
     /**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param value The path to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -45,7 +45,7 @@ public object BestTradeResponseKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>.add(value: kotlin.Long) {
       _builder.addPath(value)
     }/**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param value The path to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -54,7 +54,7 @@ public object BestTradeResponseKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param values The path to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -62,7 +62,7 @@ public object BestTradeResponseKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllPath(values)
     }/**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param values The path to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -71,7 +71,7 @@ public object BestTradeResponseKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      * @param index The index to set the value at.
      * @param value The path to set.
      */
@@ -80,7 +80,7 @@ public object BestTradeResponseKt {
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, PathProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setPath(index, value)
     }/**
-     * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+     * <code>repeated uint64 path = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearPath")
@@ -88,7 +88,7 @@ public object BestTradeResponseKt {
       _builder.clearPath()
     }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      */
     public var result: kotlin.String
       @JvmName("getResult")
@@ -98,7 +98,7 @@ public object BestTradeResponseKt {
         _builder.setResult(value)
       }
     /**
-     * <code>string result = 2 [json_name = "result"];</code>
+     * <code>string result = 2;</code>
      */
     public fun clearResult() {
       _builder.clearResult()
@@ -108,3 +108,4 @@ public object BestTradeResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.BestTradeResponse.copy(block: counters.minter.grpc.client.BestTradeResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.BestTradeResponse =
   counters.minter.grpc.client.BestTradeResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

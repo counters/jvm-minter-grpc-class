@@ -73,6 +73,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,7 +99,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_FIELD_NUMBER = 1;
   private volatile java.lang.Object value_;
   /**
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>string value = 1;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -114,7 +116,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>string value = 1;</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -135,7 +137,7 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_LOCKED_STAKE_REWARDS_FIELD_NUMBER = 2;
   private volatile java.lang.Object valueLockedStakeRewards_;
   /**
-   * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+   * <code>string value_locked_stake_rewards = 2;</code>
    * @return The valueLockedStakeRewards.
    */
   @java.lang.Override
@@ -152,7 +154,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+   * <code>string value_locked_stake_rewards = 2;</code>
    * @return The bytes for valueLockedStakeRewards.
    */
   @java.lang.Override
@@ -491,7 +493,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -507,7 +509,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -524,7 +526,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -539,7 +541,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -549,7 +551,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>string value = 1;</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -567,7 +569,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object valueLockedStakeRewards_ = "";
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      * @return The valueLockedStakeRewards.
      */
     public java.lang.String getValueLockedStakeRewards() {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      * @return The bytes for valueLockedStakeRewards.
      */
     public com.google.protobuf.ByteString
@@ -600,7 +602,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      * @param value The valueLockedStakeRewards to set.
      * @return This builder for chaining.
      */
@@ -615,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearValueLockedStakeRewards() {
@@ -625,7 +627,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value_locked_stake_rewards = 2 [json_name = "valueLockedStakeRewards"];</code>
+     * <code>string value_locked_stake_rewards = 2;</code>
      * @param value The bytes for valueLockedStakeRewards to set.
      * @return This builder for chaining.
      */

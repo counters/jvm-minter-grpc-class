@@ -8,31 +8,31 @@ public interface SwapPoolProviderRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 coin0 = 1 [json_name = "coin0"];</code>
+   * <code>uint64 coin0 = 1;</code>
    * @return The coin0.
    */
   long getCoin0();
 
   /**
-   * <code>uint64 coin1 = 2 [json_name = "coin1"];</code>
+   * <code>uint64 coin1 = 2;</code>
    * @return The coin1.
    */
   long getCoin1();
 
   /**
-   * <code>string provider = 3 [json_name = "provider"];</code>
+   * <code>string provider = 3;</code>
    * @return The provider.
    */
   java.lang.String getProvider();
   /**
-   * <code>string provider = 3 [json_name = "provider"];</code>
+   * <code>string provider = 3;</code>
    * @return The bytes for provider.
    */
   com.google.protobuf.ByteString
       getProviderBytes();
 
   /**
-   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * <code>uint64 height = 4;</code>
    * @return The height.
    */
   long getHeight();

@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeditCandidatePublicKeyData")
 public inline fun editCandidatePublicKeyData(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
   counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl._create(counters.minter.grpc.client.EditCandidatePublicKeyData.newBuilder()).apply { block() }._build()
 public object EditCandidatePublicKeyDataKt {
@@ -23,7 +23,7 @@ public object EditCandidatePublicKeyDataKt {
     internal fun _build(): counters.minter.grpc.client.EditCandidatePublicKeyData = _builder.build()
 
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public var pubKey: kotlin.String
       @JvmName("getPubKey")
@@ -33,14 +33,14 @@ public object EditCandidatePublicKeyDataKt {
         _builder.setPubKey(value)
       }
     /**
-     * <code>string pub_key = 1 [json_name = "pubKey"];</code>
+     * <code>string pub_key = 1;</code>
      */
     public fun clearPubKey() {
       _builder.clearPubKey()
     }
 
     /**
-     * <code>string new_pub_key = 2 [json_name = "newPubKey"];</code>
+     * <code>string new_pub_key = 2;</code>
      */
     public var newPubKey: kotlin.String
       @JvmName("getNewPubKey")
@@ -50,7 +50,7 @@ public object EditCandidatePublicKeyDataKt {
         _builder.setNewPubKey(value)
       }
     /**
-     * <code>string new_pub_key = 2 [json_name = "newPubKey"];</code>
+     * <code>string new_pub_key = 2;</code>
      */
     public fun clearNewPubKey() {
       _builder.clearNewPubKey()
@@ -60,3 +60,4 @@ public object EditCandidatePublicKeyDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EditCandidatePublicKeyData.copy(block: counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EditCandidatePublicKeyData =
   counters.minter.grpc.client.EditCandidatePublicKeyDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

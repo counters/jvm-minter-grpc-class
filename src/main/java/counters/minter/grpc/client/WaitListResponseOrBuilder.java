@@ -8,25 +8,25 @@ public interface WaitListResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
    */
   java.util.List<counters.minter.grpc.client.WaitListResponse.Wait> 
       getListList();
   /**
-   * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
    */
   counters.minter.grpc.client.WaitListResponse.Wait getList(int index);
   /**
-   * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
    */
   int getListCount();
   /**
-   * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
    */
   java.util.List<? extends counters.minter.grpc.client.WaitListResponse.WaitOrBuilder> 
       getListOrBuilderList();
   /**
-   * <code>repeated .api_pb.WaitListResponse.Wait list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.WaitListResponse.Wait list = 1;</code>
    */
   counters.minter.grpc.client.WaitListResponse.WaitOrBuilder getListOrBuilder(
       int index);

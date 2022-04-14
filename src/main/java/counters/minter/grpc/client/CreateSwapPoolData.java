@@ -99,6 +99,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -123,7 +125,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN0_FIELD_NUMBER = 1;
   private counters.minter.grpc.client.Coin coin0_;
   /**
-   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+   * <code>.api_pb.Coin coin0 = 1;</code>
    * @return Whether the coin0 field is set.
    */
   @java.lang.Override
@@ -131,7 +133,7 @@ private static final long serialVersionUID = 0L;
     return coin0_ != null;
   }
   /**
-   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+   * <code>.api_pb.Coin coin0 = 1;</code>
    * @return The coin0.
    */
   @java.lang.Override
@@ -139,7 +141,7 @@ private static final long serialVersionUID = 0L;
     return coin0_ == null ? counters.minter.grpc.client.Coin.getDefaultInstance() : coin0_;
   }
   /**
-   * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+   * <code>.api_pb.Coin coin0 = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CoinOrBuilder getCoin0OrBuilder() {
@@ -149,7 +151,7 @@ private static final long serialVersionUID = 0L;
   public static final int COIN1_FIELD_NUMBER = 2;
   private counters.minter.grpc.client.Coin coin1_;
   /**
-   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+   * <code>.api_pb.Coin coin1 = 2;</code>
    * @return Whether the coin1 field is set.
    */
   @java.lang.Override
@@ -157,7 +159,7 @@ private static final long serialVersionUID = 0L;
     return coin1_ != null;
   }
   /**
-   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+   * <code>.api_pb.Coin coin1 = 2;</code>
    * @return The coin1.
    */
   @java.lang.Override
@@ -165,7 +167,7 @@ private static final long serialVersionUID = 0L;
     return coin1_ == null ? counters.minter.grpc.client.Coin.getDefaultInstance() : coin1_;
   }
   /**
-   * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+   * <code>.api_pb.Coin coin1 = 2;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.CoinOrBuilder getCoin1OrBuilder() {
@@ -175,7 +177,7 @@ private static final long serialVersionUID = 0L;
   public static final int VOLUME0_FIELD_NUMBER = 3;
   private volatile java.lang.Object volume0_;
   /**
-   * <code>string volume0 = 3 [json_name = "volume0"];</code>
+   * <code>string volume0 = 3;</code>
    * @return The volume0.
    */
   @java.lang.Override
@@ -192,7 +194,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string volume0 = 3 [json_name = "volume0"];</code>
+   * <code>string volume0 = 3;</code>
    * @return The bytes for volume0.
    */
   @java.lang.Override
@@ -213,7 +215,7 @@ private static final long serialVersionUID = 0L;
   public static final int VOLUME1_FIELD_NUMBER = 4;
   private volatile java.lang.Object volume1_;
   /**
-   * <code>string volume1 = 4 [json_name = "volume1"];</code>
+   * <code>string volume1 = 4;</code>
    * @return The volume1.
    */
   @java.lang.Override
@@ -230,7 +232,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string volume1 = 4 [json_name = "volume1"];</code>
+   * <code>string volume1 = 4;</code>
    * @return The bytes for volume1.
    */
   @java.lang.Override
@@ -631,14 +633,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> coin0Builder_;
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      * @return Whether the coin0 field is set.
      */
     public boolean hasCoin0() {
       return coin0Builder_ != null || coin0_ != null;
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      * @return The coin0.
      */
     public counters.minter.grpc.client.Coin getCoin0() {
@@ -649,7 +651,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public Builder setCoin0(counters.minter.grpc.client.Coin value) {
       if (coin0Builder_ == null) {
@@ -665,7 +667,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public Builder setCoin0(
         counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -679,7 +681,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public Builder mergeCoin0(counters.minter.grpc.client.Coin value) {
       if (coin0Builder_ == null) {
@@ -697,7 +699,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public Builder clearCoin0() {
       if (coin0Builder_ == null) {
@@ -711,7 +713,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public counters.minter.grpc.client.Coin.Builder getCoin0Builder() {
       
@@ -719,7 +721,7 @@ private static final long serialVersionUID = 0L;
       return getCoin0FieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     public counters.minter.grpc.client.CoinOrBuilder getCoin0OrBuilder() {
       if (coin0Builder_ != null) {
@@ -730,7 +732,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin coin0 = 1 [json_name = "coin0"];</code>
+     * <code>.api_pb.Coin coin0 = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> 
@@ -750,14 +752,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> coin1Builder_;
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      * @return Whether the coin1 field is set.
      */
     public boolean hasCoin1() {
       return coin1Builder_ != null || coin1_ != null;
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      * @return The coin1.
      */
     public counters.minter.grpc.client.Coin getCoin1() {
@@ -768,7 +770,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public Builder setCoin1(counters.minter.grpc.client.Coin value) {
       if (coin1Builder_ == null) {
@@ -784,7 +786,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public Builder setCoin1(
         counters.minter.grpc.client.Coin.Builder builderForValue) {
@@ -798,7 +800,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public Builder mergeCoin1(counters.minter.grpc.client.Coin value) {
       if (coin1Builder_ == null) {
@@ -816,7 +818,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public Builder clearCoin1() {
       if (coin1Builder_ == null) {
@@ -830,7 +832,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public counters.minter.grpc.client.Coin.Builder getCoin1Builder() {
       
@@ -838,7 +840,7 @@ private static final long serialVersionUID = 0L;
       return getCoin1FieldBuilder().getBuilder();
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     public counters.minter.grpc.client.CoinOrBuilder getCoin1OrBuilder() {
       if (coin1Builder_ != null) {
@@ -849,7 +851,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api_pb.Coin coin1 = 2 [json_name = "coin1"];</code>
+     * <code>.api_pb.Coin coin1 = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         counters.minter.grpc.client.Coin, counters.minter.grpc.client.Coin.Builder, counters.minter.grpc.client.CoinOrBuilder> 
@@ -867,7 +869,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object volume0_ = "";
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      * @return The volume0.
      */
     public java.lang.String getVolume0() {
@@ -883,7 +885,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      * @return The bytes for volume0.
      */
     public com.google.protobuf.ByteString
@@ -900,7 +902,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      * @param value The volume0 to set.
      * @return This builder for chaining.
      */
@@ -915,7 +917,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearVolume0() {
@@ -925,7 +927,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume0 = 3 [json_name = "volume0"];</code>
+     * <code>string volume0 = 3;</code>
      * @param value The bytes for volume0 to set.
      * @return This builder for chaining.
      */
@@ -943,7 +945,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object volume1_ = "";
     /**
-     * <code>string volume1 = 4 [json_name = "volume1"];</code>
+     * <code>string volume1 = 4;</code>
      * @return The volume1.
      */
     public java.lang.String getVolume1() {
@@ -959,7 +961,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume1 = 4 [json_name = "volume1"];</code>
+     * <code>string volume1 = 4;</code>
      * @return The bytes for volume1.
      */
     public com.google.protobuf.ByteString
@@ -976,7 +978,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string volume1 = 4 [json_name = "volume1"];</code>
+     * <code>string volume1 = 4;</code>
      * @param value The volume1 to set.
      * @return This builder for chaining.
      */
@@ -991,7 +993,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume1 = 4 [json_name = "volume1"];</code>
+     * <code>string volume1 = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearVolume1() {
@@ -1001,7 +1003,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string volume1 = 4 [json_name = "volume1"];</code>
+     * <code>string volume1 = 4;</code>
      * @param value The bytes for volume1 to set.
      * @return This builder for chaining.
      */

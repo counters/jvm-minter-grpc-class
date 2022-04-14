@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializewaitListRequest")
 public inline fun waitListRequest(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListRequest =
   counters.minter.grpc.client.WaitListRequestKt.Dsl._create(counters.minter.grpc.client.WaitListRequest.newBuilder()).apply { block() }._build()
 public object WaitListRequestKt {
@@ -23,7 +23,7 @@ public object WaitListRequestKt {
     internal fun _build(): counters.minter.grpc.client.WaitListRequest = _builder.build()
 
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
     public var publicKey: kotlin.String
       @JvmName("getPublicKey")
@@ -33,14 +33,14 @@ public object WaitListRequestKt {
         _builder.setPublicKey(value)
       }
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      */
     public fun clearPublicKey() {
       _builder.clearPublicKey()
     }
 
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      */
     public var address: kotlin.String
       @JvmName("getAddress")
@@ -50,14 +50,14 @@ public object WaitListRequestKt {
         _builder.setAddress(value)
       }
     /**
-     * <code>string address = 2 [json_name = "address"];</code>
+     * <code>string address = 2;</code>
      */
     public fun clearAddress() {
       _builder.clearAddress()
     }
 
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -67,7 +67,7 @@ public object WaitListRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint64 height = 3;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -77,3 +77,4 @@ public object WaitListRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.WaitListRequest.copy(block: counters.minter.grpc.client.WaitListRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.WaitListRequest =
   counters.minter.grpc.client.WaitListRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -66,6 +66,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -90,7 +92,7 @@ private static final long serialVersionUID = 0L;
   public static final int QUERY_FIELD_NUMBER = 1;
   private volatile java.lang.Object query_;
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The query.
    */
   @java.lang.Override
@@ -107,7 +109,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The bytes for query.
    */
   @java.lang.Override
@@ -429,7 +431,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object query_ = "";
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return The query.
      */
     public java.lang.String getQuery() {
@@ -445,7 +447,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return The bytes for query.
      */
     public com.google.protobuf.ByteString
@@ -462,7 +464,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @param value The query to set.
      * @return This builder for chaining.
      */
@@ -477,7 +479,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
@@ -487,7 +489,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @param value The bytes for query to set.
      * @return This builder for chaining.
      */

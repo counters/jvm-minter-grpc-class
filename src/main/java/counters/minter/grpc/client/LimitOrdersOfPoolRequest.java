@@ -79,6 +79,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -103,7 +105,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_COIN_FIELD_NUMBER = 1;
   private long sellCoin_;
   /**
-   * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+   * <code>uint64 sell_coin = 1;</code>
    * @return The sellCoin.
    */
   @java.lang.Override
@@ -114,7 +116,7 @@ private static final long serialVersionUID = 0L;
   public static final int BUY_COIN_FIELD_NUMBER = 2;
   private long buyCoin_;
   /**
-   * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+   * <code>uint64 buy_coin = 2;</code>
    * @return The buyCoin.
    */
   @java.lang.Override
@@ -125,7 +127,7 @@ private static final long serialVersionUID = 0L;
   public static final int LIMIT_FIELD_NUMBER = 3;
   private int limit_;
   /**
-   * <code>int32 limit = 3 [json_name = "limit"];</code>
+   * <code>int32 limit = 3;</code>
    * @return The limit.
    */
   @java.lang.Override
@@ -136,7 +138,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 4;
   private long height_;
   /**
-   * <code>uint64 height = 4 [json_name = "height"];</code>
+   * <code>uint64 height = 4;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -502,7 +504,7 @@ private static final long serialVersionUID = 0L;
 
     private long sellCoin_ ;
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @return The sellCoin.
      */
     @java.lang.Override
@@ -510,7 +512,7 @@ private static final long serialVersionUID = 0L;
       return sellCoin_;
     }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @param value The sellCoin to set.
      * @return This builder for chaining.
      */
@@ -521,7 +523,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearSellCoin() {
@@ -533,7 +535,7 @@ private static final long serialVersionUID = 0L;
 
     private long buyCoin_ ;
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @return The buyCoin.
      */
     @java.lang.Override
@@ -541,7 +543,7 @@ private static final long serialVersionUID = 0L;
       return buyCoin_;
     }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @param value The buyCoin to set.
      * @return This builder for chaining.
      */
@@ -552,7 +554,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearBuyCoin() {
@@ -564,7 +566,7 @@ private static final long serialVersionUID = 0L;
 
     private int limit_ ;
     /**
-     * <code>int32 limit = 3 [json_name = "limit"];</code>
+     * <code>int32 limit = 3;</code>
      * @return The limit.
      */
     @java.lang.Override
@@ -572,7 +574,7 @@ private static final long serialVersionUID = 0L;
       return limit_;
     }
     /**
-     * <code>int32 limit = 3 [json_name = "limit"];</code>
+     * <code>int32 limit = 3;</code>
      * @param value The limit to set.
      * @return This builder for chaining.
      */
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 limit = 3 [json_name = "limit"];</code>
+     * <code>int32 limit = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearLimit() {
@@ -595,7 +597,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -603,7 +605,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -614,7 +616,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 4 [json_name = "height"];</code>
+     * <code>uint64 height = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {

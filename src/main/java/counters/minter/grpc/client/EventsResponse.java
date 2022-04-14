@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int EVENTS_FIELD_NUMBER = 1;
   private java.util.List<com.google.protobuf.Struct> events_;
   /**
-   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Struct events = 1;</code>
    */
   @java.lang.Override
   public java.util.List<com.google.protobuf.Struct> getEventsList() {
     return events_;
   }
   /**
-   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Struct events = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return events_;
   }
   /**
-   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Struct events = 1;</code>
    */
   @java.lang.Override
   public int getEventsCount() {
     return events_.size();
   }
   /**
-   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Struct events = 1;</code>
    */
   @java.lang.Override
   public com.google.protobuf.Struct getEvents(int index) {
     return events_.get(index);
   }
   /**
-   * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+   * <code>repeated .google.protobuf.Struct events = 1;</code>
    */
   @java.lang.Override
   public com.google.protobuf.StructOrBuilder getEventsOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> eventsBuilder_;
 
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public java.util.List<com.google.protobuf.Struct> getEventsList() {
       if (eventsBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public int getEventsCount() {
       if (eventsBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public com.google.protobuf.Struct getEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder setEvents(
         int index, com.google.protobuf.Struct value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder setEvents(
         int index, com.google.protobuf.Struct.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder addEvents(com.google.protobuf.Struct value) {
       if (eventsBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder addEvents(
         int index, com.google.protobuf.Struct value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder addEvents(
         com.google.protobuf.Struct.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder addEvents(
         int index, com.google.protobuf.Struct.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder addAllEvents(
         java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder clearEvents() {
       if (eventsBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public Builder removeEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public com.google.protobuf.Struct.Builder getEventsBuilder(
         int index) {
       return getEventsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public com.google.protobuf.StructOrBuilder getEventsOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
          getEventsOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public com.google.protobuf.Struct.Builder addEventsBuilder() {
       return getEventsFieldBuilder().addBuilder(
           com.google.protobuf.Struct.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public com.google.protobuf.Struct.Builder addEventsBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, com.google.protobuf.Struct.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.Struct events = 1 [json_name = "events"];</code>
+     * <code>repeated .google.protobuf.Struct events = 1;</code>
      */
     public java.util.List<com.google.protobuf.Struct.Builder> 
          getEventsBuilderList() {

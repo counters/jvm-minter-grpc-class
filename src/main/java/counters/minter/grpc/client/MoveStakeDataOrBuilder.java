@@ -8,51 +8,51 @@ public interface MoveStakeDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string from_pub_key = 1 [json_name = "fromPubKey"];</code>
+   * <code>string from_pub_key = 1;</code>
    * @return The fromPubKey.
    */
   java.lang.String getFromPubKey();
   /**
-   * <code>string from_pub_key = 1 [json_name = "fromPubKey"];</code>
+   * <code>string from_pub_key = 1;</code>
    * @return The bytes for fromPubKey.
    */
   com.google.protobuf.ByteString
       getFromPubKeyBytes();
 
   /**
-   * <code>string to_pub_key = 4 [json_name = "toPubKey"];</code>
+   * <code>string to_pub_key = 4;</code>
    * @return The toPubKey.
    */
   java.lang.String getToPubKey();
   /**
-   * <code>string to_pub_key = 4 [json_name = "toPubKey"];</code>
+   * <code>string to_pub_key = 4;</code>
    * @return The bytes for toPubKey.
    */
   com.google.protobuf.ByteString
       getToPubKeyBytes();
 
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    * @return Whether the coin field is set.
    */
   boolean hasCoin();
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    * @return The coin.
    */
   counters.minter.grpc.client.Coin getCoin();
   /**
-   * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+   * <code>.api_pb.Coin coin = 2;</code>
    */
   counters.minter.grpc.client.CoinOrBuilder getCoinOrBuilder();
 
   /**
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 3;</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 3;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

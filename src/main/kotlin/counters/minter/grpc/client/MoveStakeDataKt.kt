@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemoveStakeData")
 public inline fun moveStakeData(block: counters.minter.grpc.client.MoveStakeDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MoveStakeData =
   counters.minter.grpc.client.MoveStakeDataKt.Dsl._create(counters.minter.grpc.client.MoveStakeData.newBuilder()).apply { block() }._build()
 public object MoveStakeDataKt {
@@ -23,7 +23,7 @@ public object MoveStakeDataKt {
     internal fun _build(): counters.minter.grpc.client.MoveStakeData = _builder.build()
 
     /**
-     * <code>string from_pub_key = 1 [json_name = "fromPubKey"];</code>
+     * <code>string from_pub_key = 1;</code>
      */
     public var fromPubKey: kotlin.String
       @JvmName("getFromPubKey")
@@ -33,14 +33,14 @@ public object MoveStakeDataKt {
         _builder.setFromPubKey(value)
       }
     /**
-     * <code>string from_pub_key = 1 [json_name = "fromPubKey"];</code>
+     * <code>string from_pub_key = 1;</code>
      */
     public fun clearFromPubKey() {
       _builder.clearFromPubKey()
     }
 
     /**
-     * <code>string to_pub_key = 4 [json_name = "toPubKey"];</code>
+     * <code>string to_pub_key = 4;</code>
      */
     public var toPubKey: kotlin.String
       @JvmName("getToPubKey")
@@ -50,14 +50,14 @@ public object MoveStakeDataKt {
         _builder.setToPubKey(value)
       }
     /**
-     * <code>string to_pub_key = 4 [json_name = "toPubKey"];</code>
+     * <code>string to_pub_key = 4;</code>
      */
     public fun clearToPubKey() {
       _builder.clearToPubKey()
     }
 
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -67,13 +67,13 @@ public object MoveStakeDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 2 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 2;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -81,7 +81,7 @@ public object MoveStakeDataKt {
     }
 
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -91,7 +91,7 @@ public object MoveStakeDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 3;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
@@ -101,3 +101,7 @@ public object MoveStakeDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.MoveStakeData.copy(block: counters.minter.grpc.client.MoveStakeDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MoveStakeData =
   counters.minter.grpc.client.MoveStakeDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.MoveStakeDataOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

@@ -85,6 +85,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -112,7 +114,7 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTION_COUNT_FIELD_NUMBER = 1;
   private long transactionCount_;
   /**
-   * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
+   * <code>uint64 transaction_count = 1;</code>
    * @return The transactionCount.
    */
   @java.lang.Override
@@ -123,7 +125,7 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_TRANSACTIONS_FIELD_NUMBER = 2;
   private long totalTransactions_;
   /**
-   * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
+   * <code>uint64 total_transactions = 2;</code>
    * @return The totalTransactions.
    */
   @java.lang.Override
@@ -134,7 +136,7 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_BYTES_FIELD_NUMBER = 3;
   private long totalBytes_;
   /**
-   * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
+   * <code>uint64 total_bytes = 3;</code>
    * @return The totalBytes.
    */
   @java.lang.Override
@@ -145,7 +147,7 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTIONS_FIELD_NUMBER = 4;
   private com.google.protobuf.LazyStringList transactions_;
   /**
-   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+   * <code>repeated string transactions = 4;</code>
    * @return A list containing the transactions.
    */
   public com.google.protobuf.ProtocolStringList
@@ -153,14 +155,14 @@ private static final long serialVersionUID = 0L;
     return transactions_;
   }
   /**
-   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+   * <code>repeated string transactions = 4;</code>
    * @return The count of transactions.
    */
   public int getTransactionsCount() {
     return transactions_.size();
   }
   /**
-   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+   * <code>repeated string transactions = 4;</code>
    * @param index The index of the element to return.
    * @return The transactions at the given index.
    */
@@ -168,7 +170,7 @@ private static final long serialVersionUID = 0L;
     return transactions_.get(index);
   }
   /**
-   * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+   * <code>repeated string transactions = 4;</code>
    * @param index The index of the value to return.
    * @return The bytes of the transactions at the given index.
    */
@@ -554,7 +556,7 @@ private static final long serialVersionUID = 0L;
 
     private long transactionCount_ ;
     /**
-     * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 1;</code>
      * @return The transactionCount.
      */
     @java.lang.Override
@@ -562,7 +564,7 @@ private static final long serialVersionUID = 0L;
       return transactionCount_;
     }
     /**
-     * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 1;</code>
      * @param value The transactionCount to set.
      * @return This builder for chaining.
      */
@@ -573,7 +575,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 transaction_count = 1 [json_name = "transactionCount"];</code>
+     * <code>uint64 transaction_count = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionCount() {
@@ -585,7 +587,7 @@ private static final long serialVersionUID = 0L;
 
     private long totalTransactions_ ;
     /**
-     * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
+     * <code>uint64 total_transactions = 2;</code>
      * @return The totalTransactions.
      */
     @java.lang.Override
@@ -593,7 +595,7 @@ private static final long serialVersionUID = 0L;
       return totalTransactions_;
     }
     /**
-     * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
+     * <code>uint64 total_transactions = 2;</code>
      * @param value The totalTransactions to set.
      * @return This builder for chaining.
      */
@@ -604,7 +606,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 total_transactions = 2 [json_name = "totalTransactions"];</code>
+     * <code>uint64 total_transactions = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalTransactions() {
@@ -616,7 +618,7 @@ private static final long serialVersionUID = 0L;
 
     private long totalBytes_ ;
     /**
-     * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
+     * <code>uint64 total_bytes = 3;</code>
      * @return The totalBytes.
      */
     @java.lang.Override
@@ -624,7 +626,7 @@ private static final long serialVersionUID = 0L;
       return totalBytes_;
     }
     /**
-     * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
+     * <code>uint64 total_bytes = 3;</code>
      * @param value The totalBytes to set.
      * @return This builder for chaining.
      */
@@ -635,7 +637,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 total_bytes = 3 [json_name = "totalBytes"];</code>
+     * <code>uint64 total_bytes = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalBytes() {
@@ -653,7 +655,7 @@ private static final long serialVersionUID = 0L;
        }
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @return A list containing the transactions.
      */
     public com.google.protobuf.ProtocolStringList
@@ -661,14 +663,14 @@ private static final long serialVersionUID = 0L;
       return transactions_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @return The count of transactions.
      */
     public int getTransactionsCount() {
       return transactions_.size();
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param index The index of the element to return.
      * @return The transactions at the given index.
      */
@@ -676,7 +678,7 @@ private static final long serialVersionUID = 0L;
       return transactions_.get(index);
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param index The index of the value to return.
      * @return The bytes of the transactions at the given index.
      */
@@ -685,7 +687,7 @@ private static final long serialVersionUID = 0L;
       return transactions_.getByteString(index);
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param index The index to set the value at.
      * @param value The transactions to set.
      * @return This builder for chaining.
@@ -701,7 +703,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param value The transactions to add.
      * @return This builder for chaining.
      */
@@ -716,7 +718,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param values The transactions to add.
      * @return This builder for chaining.
      */
@@ -729,7 +731,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactions() {
@@ -739,7 +741,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string transactions = 4 [json_name = "transactions"];</code>
+     * <code>repeated string transactions = 4;</code>
      * @param value The bytes of the transactions to add.
      * @return This builder for chaining.
      */

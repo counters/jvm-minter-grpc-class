@@ -71,6 +71,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -95,7 +97,7 @@ private static final long serialVersionUID = 0L;
   public static final int MISSED_BLOCKS_FIELD_NUMBER = 1;
   private volatile java.lang.Object missedBlocks_;
   /**
-   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+   * <code>string missed_blocks = 1;</code>
    * @return The missedBlocks.
    */
   @java.lang.Override
@@ -112,7 +114,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+   * <code>string missed_blocks = 1;</code>
    * @return The bytes for missedBlocks.
    */
   @java.lang.Override
@@ -133,7 +135,7 @@ private static final long serialVersionUID = 0L;
   public static final int MISSED_BLOCKS_COUNT_FIELD_NUMBER = 2;
   private long missedBlocksCount_;
   /**
-   * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+   * <code>int64 missed_blocks_count = 2;</code>
    * @return The missedBlocksCount.
    */
   @java.lang.Override
@@ -463,7 +465,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object missedBlocks_ = "";
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      * @return The missedBlocks.
      */
     public java.lang.String getMissedBlocks() {
@@ -479,7 +481,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      * @return The bytes for missedBlocks.
      */
     public com.google.protobuf.ByteString
@@ -496,7 +498,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      * @param value The missedBlocks to set.
      * @return This builder for chaining.
      */
@@ -511,7 +513,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearMissedBlocks() {
@@ -521,7 +523,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string missed_blocks = 1 [json_name = "missedBlocks"];</code>
+     * <code>string missed_blocks = 1;</code>
      * @param value The bytes for missedBlocks to set.
      * @return This builder for chaining.
      */
@@ -539,7 +541,7 @@ private static final long serialVersionUID = 0L;
 
     private long missedBlocksCount_ ;
     /**
-     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+     * <code>int64 missed_blocks_count = 2;</code>
      * @return The missedBlocksCount.
      */
     @java.lang.Override
@@ -547,7 +549,7 @@ private static final long serialVersionUID = 0L;
       return missedBlocksCount_;
     }
     /**
-     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+     * <code>int64 missed_blocks_count = 2;</code>
      * @param value The missedBlocksCount to set.
      * @return This builder for chaining.
      */
@@ -558,7 +560,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 missed_blocks_count = 2 [json_name = "missedBlocksCount"];</code>
+     * <code>int64 missed_blocks_count = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMissedBlocksCount() {

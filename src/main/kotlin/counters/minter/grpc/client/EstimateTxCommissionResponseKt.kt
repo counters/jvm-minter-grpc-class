@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeestimateTxCommissionResponse")
 public inline fun estimateTxCommissionResponse(block: counters.minter.grpc.client.EstimateTxCommissionResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateTxCommissionResponse =
   counters.minter.grpc.client.EstimateTxCommissionResponseKt.Dsl._create(counters.minter.grpc.client.EstimateTxCommissionResponse.newBuilder()).apply { block() }._build()
 public object EstimateTxCommissionResponseKt {
@@ -23,7 +23,7 @@ public object EstimateTxCommissionResponseKt {
     internal fun _build(): counters.minter.grpc.client.EstimateTxCommissionResponse = _builder.build()
 
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      */
     public var commission: kotlin.String
       @JvmName("getCommission")
@@ -33,7 +33,7 @@ public object EstimateTxCommissionResponseKt {
         _builder.setCommission(value)
       }
     /**
-     * <code>string commission = 1 [json_name = "commission"];</code>
+     * <code>string commission = 1;</code>
      */
     public fun clearCommission() {
       _builder.clearCommission()
@@ -43,3 +43,4 @@ public object EstimateTxCommissionResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EstimateTxCommissionResponse.copy(block: counters.minter.grpc.client.EstimateTxCommissionResponseKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EstimateTxCommissionResponse =
   counters.minter.grpc.client.EstimateTxCommissionResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

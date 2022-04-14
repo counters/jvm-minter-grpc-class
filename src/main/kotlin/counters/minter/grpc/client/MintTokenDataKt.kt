@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemintTokenData")
 public inline fun mintTokenData(block: counters.minter.grpc.client.MintTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MintTokenData =
   counters.minter.grpc.client.MintTokenDataKt.Dsl._create(counters.minter.grpc.client.MintTokenData.newBuilder()).apply { block() }._build()
 public object MintTokenDataKt {
@@ -23,7 +23,7 @@ public object MintTokenDataKt {
     internal fun _build(): counters.minter.grpc.client.MintTokenData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -33,13 +33,13 @@ public object MintTokenDataKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object MintTokenDataKt {
     }
 
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <code>string value = 2;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -57,7 +57,7 @@ public object MintTokenDataKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <code>string value = 2;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
@@ -67,3 +67,7 @@ public object MintTokenDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.MintTokenData.copy(block: counters.minter.grpc.client.MintTokenDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.MintTokenData =
   counters.minter.grpc.client.MintTokenDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.MintTokenDataOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

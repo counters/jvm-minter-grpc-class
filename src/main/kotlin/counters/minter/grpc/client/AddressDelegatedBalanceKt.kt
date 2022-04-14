@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeaddressDelegatedBalance")
 public inline fun addressDelegatedBalance(block: counters.minter.grpc.client.AddressDelegatedBalanceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressDelegatedBalance =
   counters.minter.grpc.client.AddressDelegatedBalanceKt.Dsl._create(counters.minter.grpc.client.AddressDelegatedBalance.newBuilder()).apply { block() }._build()
 public object AddressDelegatedBalanceKt {
@@ -23,7 +23,7 @@ public object AddressDelegatedBalanceKt {
     internal fun _build(): counters.minter.grpc.client.AddressDelegatedBalance = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public var coin: counters.minter.grpc.client.Coin
       @JvmName("getCoin")
@@ -33,13 +33,13 @@ public object AddressDelegatedBalanceKt {
         _builder.setCoin(value)
       }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      */
     public fun clearCoin() {
       _builder.clearCoin()
     }
     /**
-     * <code>.api_pb.Coin coin = 1 [json_name = "coin"];</code>
+     * <code>.api_pb.Coin coin = 1;</code>
      * @return Whether the coin field is set.
      */
     public fun hasCoin(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object AddressDelegatedBalanceKt {
     }
 
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <code>string value = 2;</code>
      */
     public var value: kotlin.String
       @JvmName("getValue")
@@ -57,14 +57,14 @@ public object AddressDelegatedBalanceKt {
         _builder.setValue(value)
       }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <code>string value = 2;</code>
      */
     public fun clearValue() {
       _builder.clearValue()
     }
 
     /**
-     * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 3;</code>
      */
     public var bipValue: kotlin.String
       @JvmName("getBipValue")
@@ -74,14 +74,14 @@ public object AddressDelegatedBalanceKt {
         _builder.setBipValue(value)
       }
     /**
-     * <code>string bip_value = 3 [json_name = "bipValue"];</code>
+     * <code>string bip_value = 3;</code>
      */
     public fun clearBipValue() {
       _builder.clearBipValue()
     }
 
     /**
-     * <code>string delegate_bip_value = 4 [json_name = "delegateBipValue"];</code>
+     * <code>string delegate_bip_value = 4;</code>
      */
     public var delegateBipValue: kotlin.String
       @JvmName("getDelegateBipValue")
@@ -91,7 +91,7 @@ public object AddressDelegatedBalanceKt {
         _builder.setDelegateBipValue(value)
       }
     /**
-     * <code>string delegate_bip_value = 4 [json_name = "delegateBipValue"];</code>
+     * <code>string delegate_bip_value = 4;</code>
      */
     public fun clearDelegateBipValue() {
       _builder.clearDelegateBipValue()
@@ -101,3 +101,7 @@ public object AddressDelegatedBalanceKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.AddressDelegatedBalance.copy(block: counters.minter.grpc.client.AddressDelegatedBalanceKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.AddressDelegatedBalance =
   counters.minter.grpc.client.AddressDelegatedBalanceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.AddressDelegatedBalanceOrBuilder.coinOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoin()) getCoin() else null
+

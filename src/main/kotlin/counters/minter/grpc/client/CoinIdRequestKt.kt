@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoinIdRequest")
 public inline fun coinIdRequest(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinIdRequest =
   counters.minter.grpc.client.CoinIdRequestKt.Dsl._create(counters.minter.grpc.client.CoinIdRequest.newBuilder()).apply { block() }._build()
 public object CoinIdRequestKt {
@@ -25,11 +25,11 @@ public object CoinIdRequestKt {
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -41,18 +41,18 @@ public object CoinIdRequestKt {
     /**
      * <pre>
      *option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-     * example: "{&#92;"id&#92;":&#92;"0&#92;"}"
-     * };
+     *example: "{&#92;"id&#92;":&#92;"0&#92;"}"
+     *};
      * </pre>
      *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * <code>uint64 id = 2;</code>
      */
     public var id: kotlin.Long
       @JvmName("getId")
@@ -62,7 +62,7 @@ public object CoinIdRequestKt {
         _builder.setId(value)
       }
     /**
-     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * <code>uint64 id = 2;</code>
      */
     public fun clearId() {
       _builder.clearId()
@@ -72,3 +72,4 @@ public object CoinIdRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CoinIdRequest.copy(block: counters.minter.grpc.client.CoinIdRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinIdRequest =
   counters.minter.grpc.client.CoinIdRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -99,19 +101,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The publicKey.
      */
     java.lang.String getPublicKey();
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The bytes for publicKey.
      */
     com.google.protobuf.ByteString
         getPublicKeyBytes();
 
     /**
-     * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+     * <code>uint64 voting_power = 2;</code>
      * @return The votingPower.
      */
     long getVotingPower();
@@ -184,6 +186,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -208,7 +212,7 @@ private static final long serialVersionUID = 0L;
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object publicKey_;
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The publicKey.
      */
     @java.lang.Override
@@ -225,7 +229,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
+     * <code>string public_key = 1;</code>
      * @return The bytes for publicKey.
      */
     @java.lang.Override
@@ -246,7 +250,7 @@ private static final long serialVersionUID = 0L;
     public static final int VOTING_POWER_FIELD_NUMBER = 2;
     private long votingPower_;
     /**
-     * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+     * <code>uint64 voting_power = 2;</code>
      * @return The votingPower.
      */
     @java.lang.Override
@@ -576,7 +580,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object publicKey_ = "";
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        * @return The publicKey.
        */
       public java.lang.String getPublicKey() {
@@ -592,7 +596,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        * @return The bytes for publicKey.
        */
       public com.google.protobuf.ByteString
@@ -609,7 +613,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        * @param value The publicKey to set.
        * @return This builder for chaining.
        */
@@ -624,7 +628,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPublicKey() {
@@ -634,7 +638,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
+       * <code>string public_key = 1;</code>
        * @param value The bytes for publicKey to set.
        * @return This builder for chaining.
        */
@@ -652,7 +656,7 @@ private static final long serialVersionUID = 0L;
 
       private long votingPower_ ;
       /**
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+       * <code>uint64 voting_power = 2;</code>
        * @return The votingPower.
        */
       @java.lang.Override
@@ -660,7 +664,7 @@ private static final long serialVersionUID = 0L;
         return votingPower_;
       }
       /**
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+       * <code>uint64 voting_power = 2;</code>
        * @param value The votingPower to set.
        * @return This builder for chaining.
        */
@@ -671,7 +675,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
+       * <code>uint64 voting_power = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearVotingPower() {
@@ -736,14 +740,14 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATORS_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.ValidatorsResponse.Result> validators_;
   /**
-   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.ValidatorsResponse.Result> getValidatorsList() {
     return validators_;
   }
   /**
-   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.ValidatorsResponse.ResultOrBuilder> 
@@ -751,21 +755,21 @@ private static final long serialVersionUID = 0L;
     return validators_;
   }
   /**
-   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
    */
   @java.lang.Override
   public int getValidatorsCount() {
     return validators_.size();
   }
   /**
-   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.ValidatorsResponse.Result getValidators(int index) {
     return validators_.get(index);
   }
   /**
-   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+   * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.ValidatorsResponse.ResultOrBuilder getValidatorsOrBuilder(
@@ -1128,7 +1132,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.ValidatorsResponse.Result, counters.minter.grpc.client.ValidatorsResponse.Result.Builder, counters.minter.grpc.client.ValidatorsResponse.ResultOrBuilder> validatorsBuilder_;
 
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.ValidatorsResponse.Result> getValidatorsList() {
       if (validatorsBuilder_ == null) {
@@ -1138,7 +1142,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public int getValidatorsCount() {
       if (validatorsBuilder_ == null) {
@@ -1148,7 +1152,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public counters.minter.grpc.client.ValidatorsResponse.Result getValidators(int index) {
       if (validatorsBuilder_ == null) {
@@ -1158,7 +1162,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder setValidators(
         int index, counters.minter.grpc.client.ValidatorsResponse.Result value) {
@@ -1175,7 +1179,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder setValidators(
         int index, counters.minter.grpc.client.ValidatorsResponse.Result.Builder builderForValue) {
@@ -1189,7 +1193,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder addValidators(counters.minter.grpc.client.ValidatorsResponse.Result value) {
       if (validatorsBuilder_ == null) {
@@ -1205,7 +1209,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder addValidators(
         int index, counters.minter.grpc.client.ValidatorsResponse.Result value) {
@@ -1222,7 +1226,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder addValidators(
         counters.minter.grpc.client.ValidatorsResponse.Result.Builder builderForValue) {
@@ -1236,7 +1240,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder addValidators(
         int index, counters.minter.grpc.client.ValidatorsResponse.Result.Builder builderForValue) {
@@ -1250,7 +1254,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder addAllValidators(
         java.lang.Iterable<? extends counters.minter.grpc.client.ValidatorsResponse.Result> values) {
@@ -1265,7 +1269,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder clearValidators() {
       if (validatorsBuilder_ == null) {
@@ -1278,7 +1282,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public Builder removeValidators(int index) {
       if (validatorsBuilder_ == null) {
@@ -1291,14 +1295,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public counters.minter.grpc.client.ValidatorsResponse.Result.Builder getValidatorsBuilder(
         int index) {
       return getValidatorsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public counters.minter.grpc.client.ValidatorsResponse.ResultOrBuilder getValidatorsOrBuilder(
         int index) {
@@ -1308,7 +1312,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.ValidatorsResponse.ResultOrBuilder> 
          getValidatorsOrBuilderList() {
@@ -1319,14 +1323,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public counters.minter.grpc.client.ValidatorsResponse.Result.Builder addValidatorsBuilder() {
       return getValidatorsFieldBuilder().addBuilder(
           counters.minter.grpc.client.ValidatorsResponse.Result.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public counters.minter.grpc.client.ValidatorsResponse.Result.Builder addValidatorsBuilder(
         int index) {
@@ -1334,7 +1338,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.ValidatorsResponse.Result.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3 [json_name = "validators"];</code>
+     * <code>repeated .api_pb.ValidatorsResponse.Result validators = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.ValidatorsResponse.Result.Builder> 
          getValidatorsBuilderList() {

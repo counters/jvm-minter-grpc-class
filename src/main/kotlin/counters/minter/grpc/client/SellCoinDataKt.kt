@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesellCoinData")
 public inline fun sellCoinData(block: counters.minter.grpc.client.SellCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SellCoinData =
   counters.minter.grpc.client.SellCoinDataKt.Dsl._create(counters.minter.grpc.client.SellCoinData.newBuilder()).apply { block() }._build()
 public object SellCoinDataKt {
@@ -23,7 +23,7 @@ public object SellCoinDataKt {
     internal fun _build(): counters.minter.grpc.client.SellCoinData = _builder.build()
 
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      */
     public var coinToSell: counters.minter.grpc.client.Coin
       @JvmName("getCoinToSell")
@@ -33,13 +33,13 @@ public object SellCoinDataKt {
         _builder.setCoinToSell(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      */
     public fun clearCoinToSell() {
       _builder.clearCoinToSell()
     }
     /**
-     * <code>.api_pb.Coin coin_to_sell = 1 [json_name = "coinToSell"];</code>
+     * <code>.api_pb.Coin coin_to_sell = 1;</code>
      * @return Whether the coinToSell field is set.
      */
     public fun hasCoinToSell(): kotlin.Boolean {
@@ -47,7 +47,7 @@ public object SellCoinDataKt {
     }
 
     /**
-     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
+     * <code>string value_to_sell = 2;</code>
      */
     public var valueToSell: kotlin.String
       @JvmName("getValueToSell")
@@ -57,14 +57,14 @@ public object SellCoinDataKt {
         _builder.setValueToSell(value)
       }
     /**
-     * <code>string value_to_sell = 2 [json_name = "valueToSell"];</code>
+     * <code>string value_to_sell = 2;</code>
      */
     public fun clearValueToSell() {
       _builder.clearValueToSell()
     }
 
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      */
     public var coinToBuy: counters.minter.grpc.client.Coin
       @JvmName("getCoinToBuy")
@@ -74,13 +74,13 @@ public object SellCoinDataKt {
         _builder.setCoinToBuy(value)
       }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      */
     public fun clearCoinToBuy() {
       _builder.clearCoinToBuy()
     }
     /**
-     * <code>.api_pb.Coin coin_to_buy = 3 [json_name = "coinToBuy"];</code>
+     * <code>.api_pb.Coin coin_to_buy = 3;</code>
      * @return Whether the coinToBuy field is set.
      */
     public fun hasCoinToBuy(): kotlin.Boolean {
@@ -88,7 +88,7 @@ public object SellCoinDataKt {
     }
 
     /**
-     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
+     * <code>string minimum_value_to_buy = 4;</code>
      */
     public var minimumValueToBuy: kotlin.String
       @JvmName("getMinimumValueToBuy")
@@ -98,7 +98,7 @@ public object SellCoinDataKt {
         _builder.setMinimumValueToBuy(value)
       }
     /**
-     * <code>string minimum_value_to_buy = 4 [json_name = "minimumValueToBuy"];</code>
+     * <code>string minimum_value_to_buy = 4;</code>
      */
     public fun clearMinimumValueToBuy() {
       _builder.clearMinimumValueToBuy()
@@ -108,3 +108,10 @@ public object SellCoinDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SellCoinData.copy(block: counters.minter.grpc.client.SellCoinDataKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SellCoinData =
   counters.minter.grpc.client.SellCoinDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val counters.minter.grpc.client.SellCoinDataOrBuilder.coinToSellOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoinToSell()) getCoinToSell() else null
+
+val counters.minter.grpc.client.SellCoinDataOrBuilder.coinToBuyOrNull: counters.minter.grpc.client.Coin?
+  get() = if (hasCoinToBuy()) getCoinToBuy() else null
+

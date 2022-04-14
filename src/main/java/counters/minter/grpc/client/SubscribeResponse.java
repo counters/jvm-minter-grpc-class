@@ -90,6 +90,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -119,36 +121,36 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @return A list containing the events.
      */
     java.util.List<java.lang.String>
         getEventsList();
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @return The count of events.
      */
     int getEventsCount();
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @param index The index of the element to return.
      * @return The events at the given index.
      */
     java.lang.String getEvents(int index);
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the events at the given index.
      */
@@ -229,6 +231,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -256,7 +260,7 @@ private static final long serialVersionUID = 0L;
     public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -273,7 +277,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     @java.lang.Override
@@ -294,7 +298,7 @@ private static final long serialVersionUID = 0L;
     public static final int EVENTS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList events_;
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @return A list containing the events.
      */
     public com.google.protobuf.ProtocolStringList
@@ -302,14 +306,14 @@ private static final long serialVersionUID = 0L;
       return events_;
     }
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @return The count of events.
      */
     public int getEventsCount() {
       return events_.size();
     }
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @param index The index of the element to return.
      * @return The events at the given index.
      */
@@ -317,7 +321,7 @@ private static final long serialVersionUID = 0L;
       return events_.get(index);
     }
     /**
-     * <code>repeated string events = 2 [json_name = "events"];</code>
+     * <code>repeated string events = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the events at the given index.
      */
@@ -666,7 +670,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object key_ = "";
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        * @return The key.
        */
       public java.lang.String getKey() {
@@ -682,7 +686,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        * @return The bytes for key.
        */
       public com.google.protobuf.ByteString
@@ -699,7 +703,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -714,7 +718,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -724,7 +728,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string key = 1 [json_name = "key"];</code>
+       * <code>string key = 1;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
@@ -748,7 +752,7 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @return A list containing the events.
        */
       public com.google.protobuf.ProtocolStringList
@@ -756,14 +760,14 @@ private static final long serialVersionUID = 0L;
         return events_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @return The count of events.
        */
       public int getEventsCount() {
         return events_.size();
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param index The index of the element to return.
        * @return The events at the given index.
        */
@@ -771,7 +775,7 @@ private static final long serialVersionUID = 0L;
         return events_.get(index);
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the events at the given index.
        */
@@ -780,7 +784,7 @@ private static final long serialVersionUID = 0L;
         return events_.getByteString(index);
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param index The index to set the value at.
        * @param value The events to set.
        * @return This builder for chaining.
@@ -796,7 +800,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The events to add.
        * @return This builder for chaining.
        */
@@ -811,7 +815,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param values The events to add.
        * @return This builder for chaining.
        */
@@ -824,7 +828,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEvents() {
@@ -834,7 +838,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * <code>repeated string events = 2;</code>
        * @param value The bytes of the events to add.
        * @return This builder for chaining.
        */
@@ -905,7 +909,7 @@ private static final long serialVersionUID = 0L;
   public static final int QUERY_FIELD_NUMBER = 1;
   private volatile java.lang.Object query_;
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The query.
    */
   @java.lang.Override
@@ -922,7 +926,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string query = 1 [json_name = "query"];</code>
+   * <code>string query = 1;</code>
    * @return The bytes for query.
    */
   @java.lang.Override
@@ -943,7 +947,7 @@ private static final long serialVersionUID = 0L;
   public static final int DATA_FIELD_NUMBER = 2;
   private com.google.protobuf.Struct data_;
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -951,7 +955,7 @@ private static final long serialVersionUID = 0L;
     return data_ != null;
   }
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    * @return The data.
    */
   @java.lang.Override
@@ -959,7 +963,7 @@ private static final long serialVersionUID = 0L;
     return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
   }
   /**
-   * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+   * <code>.google.protobuf.Struct data = 2;</code>
    */
   @java.lang.Override
   public com.google.protobuf.StructOrBuilder getDataOrBuilder() {
@@ -969,14 +973,14 @@ private static final long serialVersionUID = 0L;
   public static final int EVENTS_FIELD_NUMBER = 3;
   private java.util.List<counters.minter.grpc.client.SubscribeResponse.Event> events_;
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.SubscribeResponse.Event> getEventsList() {
     return events_;
   }
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.SubscribeResponse.EventOrBuilder> 
@@ -984,21 +988,21 @@ private static final long serialVersionUID = 0L;
     return events_;
   }
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   @java.lang.Override
   public int getEventsCount() {
     return events_.size();
   }
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SubscribeResponse.Event getEvents(int index) {
     return events_.get(index);
   }
   /**
-   * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+   * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SubscribeResponse.EventOrBuilder getEventsOrBuilder(
@@ -1397,7 +1401,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object query_ = "";
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return The query.
      */
     public java.lang.String getQuery() {
@@ -1413,7 +1417,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return The bytes for query.
      */
     public com.google.protobuf.ByteString
@@ -1430,7 +1434,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @param value The query to set.
      * @return This builder for chaining.
      */
@@ -1445,7 +1449,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
@@ -1455,7 +1459,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      * @param value The bytes for query to set.
      * @return This builder for chaining.
      */
@@ -1475,14 +1479,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> dataBuilder_;
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      * @return The data.
      */
     public com.google.protobuf.Struct getData() {
@@ -1493,7 +1497,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public Builder setData(com.google.protobuf.Struct value) {
       if (dataBuilder_ == null) {
@@ -1509,7 +1513,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public Builder setData(
         com.google.protobuf.Struct.Builder builderForValue) {
@@ -1523,7 +1527,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public Builder mergeData(com.google.protobuf.Struct value) {
       if (dataBuilder_ == null) {
@@ -1541,7 +1545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public Builder clearData() {
       if (dataBuilder_ == null) {
@@ -1555,7 +1559,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public com.google.protobuf.Struct.Builder getDataBuilder() {
       
@@ -1563,7 +1567,7 @@ private static final long serialVersionUID = 0L;
       return getDataFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     public com.google.protobuf.StructOrBuilder getDataOrBuilder() {
       if (dataBuilder_ != null) {
@@ -1574,7 +1578,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
@@ -1603,7 +1607,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.SubscribeResponse.Event, counters.minter.grpc.client.SubscribeResponse.Event.Builder, counters.minter.grpc.client.SubscribeResponse.EventOrBuilder> eventsBuilder_;
 
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.SubscribeResponse.Event> getEventsList() {
       if (eventsBuilder_ == null) {
@@ -1613,7 +1617,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public int getEventsCount() {
       if (eventsBuilder_ == null) {
@@ -1623,7 +1627,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public counters.minter.grpc.client.SubscribeResponse.Event getEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -1633,7 +1637,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder setEvents(
         int index, counters.minter.grpc.client.SubscribeResponse.Event value) {
@@ -1650,7 +1654,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder setEvents(
         int index, counters.minter.grpc.client.SubscribeResponse.Event.Builder builderForValue) {
@@ -1664,7 +1668,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder addEvents(counters.minter.grpc.client.SubscribeResponse.Event value) {
       if (eventsBuilder_ == null) {
@@ -1680,7 +1684,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder addEvents(
         int index, counters.minter.grpc.client.SubscribeResponse.Event value) {
@@ -1697,7 +1701,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder addEvents(
         counters.minter.grpc.client.SubscribeResponse.Event.Builder builderForValue) {
@@ -1711,7 +1715,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder addEvents(
         int index, counters.minter.grpc.client.SubscribeResponse.Event.Builder builderForValue) {
@@ -1725,7 +1729,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder addAllEvents(
         java.lang.Iterable<? extends counters.minter.grpc.client.SubscribeResponse.Event> values) {
@@ -1740,7 +1744,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder clearEvents() {
       if (eventsBuilder_ == null) {
@@ -1753,7 +1757,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public Builder removeEvents(int index) {
       if (eventsBuilder_ == null) {
@@ -1766,14 +1770,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public counters.minter.grpc.client.SubscribeResponse.Event.Builder getEventsBuilder(
         int index) {
       return getEventsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public counters.minter.grpc.client.SubscribeResponse.EventOrBuilder getEventsOrBuilder(
         int index) {
@@ -1783,7 +1787,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.SubscribeResponse.EventOrBuilder> 
          getEventsOrBuilderList() {
@@ -1794,14 +1798,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public counters.minter.grpc.client.SubscribeResponse.Event.Builder addEventsBuilder() {
       return getEventsFieldBuilder().addBuilder(
           counters.minter.grpc.client.SubscribeResponse.Event.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public counters.minter.grpc.client.SubscribeResponse.Event.Builder addEventsBuilder(
         int index) {
@@ -1809,7 +1813,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.SubscribeResponse.Event.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SubscribeResponse.Event events = 3 [json_name = "events"];</code>
+     * <code>repeated .api_pb.SubscribeResponse.Event events = 3;</code>
      */
     public java.util.List<counters.minter.grpc.client.SubscribeResponse.Event.Builder> 
          getEventsBuilderList() {

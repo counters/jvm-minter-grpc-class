@@ -70,6 +70,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,14 +99,14 @@ private static final long serialVersionUID = 0L;
   public static final int LIST_FIELD_NUMBER = 1;
   private java.util.List<counters.minter.grpc.client.SendData> list_;
   /**
-   * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.SendData list = 1;</code>
    */
   @java.lang.Override
   public java.util.List<counters.minter.grpc.client.SendData> getListList() {
     return list_;
   }
   /**
-   * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.SendData list = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends counters.minter.grpc.client.SendDataOrBuilder> 
@@ -112,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return list_;
   }
   /**
-   * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.SendData list = 1;</code>
    */
   @java.lang.Override
   public int getListCount() {
     return list_.size();
   }
   /**
-   * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.SendData list = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SendData getList(int index) {
     return list_.get(index);
   }
   /**
-   * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+   * <code>repeated .api_pb.SendData list = 1;</code>
    */
   @java.lang.Override
   public counters.minter.grpc.client.SendDataOrBuilder getListOrBuilder(
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
         counters.minter.grpc.client.SendData, counters.minter.grpc.client.SendData.Builder, counters.minter.grpc.client.SendDataOrBuilder> listBuilder_;
 
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.SendData> getListList() {
       if (listBuilder_ == null) {
@@ -499,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public int getListCount() {
       if (listBuilder_ == null) {
@@ -509,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public counters.minter.grpc.client.SendData getList(int index) {
       if (listBuilder_ == null) {
@@ -519,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder setList(
         int index, counters.minter.grpc.client.SendData value) {
@@ -536,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder setList(
         int index, counters.minter.grpc.client.SendData.Builder builderForValue) {
@@ -550,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder addList(counters.minter.grpc.client.SendData value) {
       if (listBuilder_ == null) {
@@ -566,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder addList(
         int index, counters.minter.grpc.client.SendData value) {
@@ -583,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder addList(
         counters.minter.grpc.client.SendData.Builder builderForValue) {
@@ -597,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder addList(
         int index, counters.minter.grpc.client.SendData.Builder builderForValue) {
@@ -611,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder addAllList(
         java.lang.Iterable<? extends counters.minter.grpc.client.SendData> values) {
@@ -626,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder clearList() {
       if (listBuilder_ == null) {
@@ -639,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public Builder removeList(int index) {
       if (listBuilder_ == null) {
@@ -652,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public counters.minter.grpc.client.SendData.Builder getListBuilder(
         int index) {
       return getListFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public counters.minter.grpc.client.SendDataOrBuilder getListOrBuilder(
         int index) {
@@ -669,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public java.util.List<? extends counters.minter.grpc.client.SendDataOrBuilder> 
          getListOrBuilderList() {
@@ -680,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public counters.minter.grpc.client.SendData.Builder addListBuilder() {
       return getListFieldBuilder().addBuilder(
           counters.minter.grpc.client.SendData.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public counters.minter.grpc.client.SendData.Builder addListBuilder(
         int index) {
@@ -695,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, counters.minter.grpc.client.SendData.getDefaultInstance());
     }
     /**
-     * <code>repeated .api_pb.SendData list = 1 [json_name = "list"];</code>
+     * <code>repeated .api_pb.SendData list = 1;</code>
      */
     public java.util.List<counters.minter.grpc.client.SendData.Builder> 
          getListBuilderList() {

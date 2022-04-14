@@ -8,29 +8,29 @@ public interface BestTradeResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @return A list containing the path.
    */
   java.util.List<java.lang.Long> getPathList();
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @return The count of path.
    */
   int getPathCount();
   /**
-   * <code>repeated uint64 path = 1 [json_name = "path"];</code>
+   * <code>repeated uint64 path = 1;</code>
    * @param index The index of the element to return.
    * @return The path at the given index.
    */
   long getPath(int index);
 
   /**
-   * <code>string result = 2 [json_name = "result"];</code>
+   * <code>string result = 2;</code>
    * @return The result.
    */
   java.lang.String getResult();
   /**
-   * <code>string result = 2 [json_name = "result"];</code>
+   * <code>string result = 2;</code>
    * @return The bytes for result.
    */
   com.google.protobuf.ByteString

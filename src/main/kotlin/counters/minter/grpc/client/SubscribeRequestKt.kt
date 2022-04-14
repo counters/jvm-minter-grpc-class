@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesubscribeRequest")
 public inline fun subscribeRequest(block: counters.minter.grpc.client.SubscribeRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeRequest =
   counters.minter.grpc.client.SubscribeRequestKt.Dsl._create(counters.minter.grpc.client.SubscribeRequest.newBuilder()).apply { block() }._build()
 public object SubscribeRequestKt {
@@ -23,7 +23,7 @@ public object SubscribeRequestKt {
     internal fun _build(): counters.minter.grpc.client.SubscribeRequest = _builder.build()
 
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public var query: kotlin.String
       @JvmName("getQuery")
@@ -33,7 +33,7 @@ public object SubscribeRequestKt {
         _builder.setQuery(value)
       }
     /**
-     * <code>string query = 1 [json_name = "query"];</code>
+     * <code>string query = 1;</code>
      */
     public fun clearQuery() {
       _builder.clearQuery()
@@ -43,3 +43,4 @@ public object SubscribeRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.SubscribeRequest.copy(block: counters.minter.grpc.client.SubscribeRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.SubscribeRequest =
   counters.minter.grpc.client.SubscribeRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

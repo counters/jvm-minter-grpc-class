@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoinInfoRequest")
 public inline fun coinInfoRequest(block: counters.minter.grpc.client.CoinInfoRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoRequest =
   counters.minter.grpc.client.CoinInfoRequestKt.Dsl._create(counters.minter.grpc.client.CoinInfoRequest.newBuilder()).apply { block() }._build()
 public object CoinInfoRequestKt {
@@ -23,7 +23,7 @@ public object CoinInfoRequestKt {
     internal fun _build(): counters.minter.grpc.client.CoinInfoRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,14 +33,14 @@ public object CoinInfoRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
     }
 
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public var symbol: kotlin.String
       @JvmName("getSymbol")
@@ -50,7 +50,7 @@ public object CoinInfoRequestKt {
         _builder.setSymbol(value)
       }
     /**
-     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * <code>string symbol = 2;</code>
      */
     public fun clearSymbol() {
       _builder.clearSymbol()
@@ -60,3 +60,4 @@ public object CoinInfoRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.CoinInfoRequest.copy(block: counters.minter.grpc.client.CoinInfoRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.CoinInfoRequest =
   counters.minter.grpc.client.CoinInfoRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

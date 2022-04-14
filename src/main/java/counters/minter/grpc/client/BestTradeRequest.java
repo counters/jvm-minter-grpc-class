@@ -93,6 +93,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -225,7 +227,7 @@ private static final long serialVersionUID = 0L;
   public static final int SELL_COIN_FIELD_NUMBER = 1;
   private long sellCoin_;
   /**
-   * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+   * <code>uint64 sell_coin = 1;</code>
    * @return The sellCoin.
    */
   @java.lang.Override
@@ -236,7 +238,7 @@ private static final long serialVersionUID = 0L;
   public static final int BUY_COIN_FIELD_NUMBER = 2;
   private long buyCoin_;
   /**
-   * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+   * <code>uint64 buy_coin = 2;</code>
    * @return The buyCoin.
    */
   @java.lang.Override
@@ -247,7 +249,7 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT_FIELD_NUMBER = 3;
   private volatile java.lang.Object amount_;
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The amount.
    */
   @java.lang.Override
@@ -264,7 +266,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string amount = 3 [json_name = "amount"];</code>
+   * <code>string amount = 3;</code>
    * @return The bytes for amount.
    */
   @java.lang.Override
@@ -285,14 +287,14 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 4;
   private int type_;
   /**
-   * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+   * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
    * @return The enum numeric value on the wire for type.
    */
   @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
-   * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+   * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
    * @return The type.
    */
   @java.lang.Override public counters.minter.grpc.client.BestTradeRequest.Type getType() {
@@ -304,7 +306,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 5;
   private long height_;
   /**
-   * <code>uint64 height = 5 [json_name = "height"];</code>
+   * <code>uint64 height = 5;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -315,7 +317,7 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_DEPTH_FIELD_NUMBER = 6;
   private int maxDepth_;
   /**
-   * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+   * <code>int32 max_depth = 6;</code>
    * @return The maxDepth.
    */
   @java.lang.Override
@@ -714,7 +716,7 @@ private static final long serialVersionUID = 0L;
 
     private long sellCoin_ ;
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @return The sellCoin.
      */
     @java.lang.Override
@@ -722,7 +724,7 @@ private static final long serialVersionUID = 0L;
       return sellCoin_;
     }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @param value The sellCoin to set.
      * @return This builder for chaining.
      */
@@ -733,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 sell_coin = 1 [json_name = "sellCoin"];</code>
+     * <code>uint64 sell_coin = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearSellCoin() {
@@ -745,7 +747,7 @@ private static final long serialVersionUID = 0L;
 
     private long buyCoin_ ;
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @return The buyCoin.
      */
     @java.lang.Override
@@ -753,7 +755,7 @@ private static final long serialVersionUID = 0L;
       return buyCoin_;
     }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @param value The buyCoin to set.
      * @return This builder for chaining.
      */
@@ -764,7 +766,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 buy_coin = 2 [json_name = "buyCoin"];</code>
+     * <code>uint64 buy_coin = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearBuyCoin() {
@@ -776,7 +778,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount_ = "";
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return The amount.
      */
     public java.lang.String getAmount() {
@@ -792,7 +794,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return The bytes for amount.
      */
     public com.google.protobuf.ByteString
@@ -809,7 +811,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @param value The amount to set.
      * @return This builder for chaining.
      */
@@ -824,7 +826,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount() {
@@ -834,7 +836,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string amount = 3 [json_name = "amount"];</code>
+     * <code>string amount = 3;</code>
      * @param value The bytes for amount to set.
      * @return This builder for chaining.
      */
@@ -852,14 +854,14 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
@@ -870,7 +872,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      * @return The type.
      */
     @java.lang.Override
@@ -880,7 +882,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? counters.minter.grpc.client.BestTradeRequest.Type.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -894,7 +896,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api_pb.BestTradeRequest.Type type = 4 [json_name = "type"];</code>
+     * <code>.api_pb.BestTradeRequest.Type type = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -906,7 +908,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * <code>uint64 height = 5;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -914,7 +916,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * <code>uint64 height = 5;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -925,7 +927,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 5 [json_name = "height"];</code>
+     * <code>uint64 height = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -937,7 +939,7 @@ private static final long serialVersionUID = 0L;
 
     private int maxDepth_ ;
     /**
-     * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+     * <code>int32 max_depth = 6;</code>
      * @return The maxDepth.
      */
     @java.lang.Override
@@ -945,7 +947,7 @@ private static final long serialVersionUID = 0L;
       return maxDepth_;
     }
     /**
-     * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+     * <code>int32 max_depth = 6;</code>
      * @param value The maxDepth to set.
      * @return This builder for chaining.
      */
@@ -956,7 +958,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 max_depth = 6 [json_name = "maxDepth"];</code>
+     * <code>int32 max_depth = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxDepth() {

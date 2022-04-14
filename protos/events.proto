@@ -2,11 +2,9 @@ syntax = "proto3";
 
 package api_pb;
 
+option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
 option java_multiple_files = true;
 option java_package = "counters.minter.grpc.client";
-
-option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
-
 message JailEvent {
     string validator_pub_key = 1;
     uint64 jailed_until = 2;

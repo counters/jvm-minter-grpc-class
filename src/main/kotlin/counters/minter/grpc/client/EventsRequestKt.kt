@@ -3,7 +3,7 @@
 
 package counters.minter.grpc.client;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeventsRequest")
 public inline fun eventsRequest(block: counters.minter.grpc.client.EventsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EventsRequest =
   counters.minter.grpc.client.EventsRequestKt.Dsl._create(counters.minter.grpc.client.EventsRequest.newBuilder()).apply { block() }._build()
 public object EventsRequestKt {
@@ -23,7 +23,7 @@ public object EventsRequestKt {
     internal fun _build(): counters.minter.grpc.client.EventsRequest = _builder.build()
 
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public var height: kotlin.Long
       @JvmName("getHeight")
@@ -33,7 +33,7 @@ public object EventsRequestKt {
         _builder.setHeight(value)
       }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      */
     public fun clearHeight() {
       _builder.clearHeight()
@@ -50,7 +50,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @return A list containing the search.
      */
     public val search: com.google.protobuf.kotlin.DslList<kotlin.String, SearchProxy>
@@ -63,7 +63,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @param value The search to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -76,7 +76,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @param value The search to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -90,7 +90,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @param values The search to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -103,7 +103,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @param values The search to add.
      */
     @kotlin.jvm.JvmSynthetic
@@ -117,7 +117,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      * @param index The index to set the value at.
      * @param value The search to set.
      */
@@ -130,7 +130,7 @@ public object EventsRequestKt {
      * Array of public keys of validators and wallet addresses of delegators for filtering
      * </pre>
      *
-     * <code>repeated string search = 2 [json_name = "search"];</code>
+     * <code>repeated string search = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearSearch")
@@ -141,3 +141,4 @@ public object EventsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun counters.minter.grpc.client.EventsRequest.copy(block: counters.minter.grpc.client.EventsRequestKt.Dsl.() -> kotlin.Unit): counters.minter.grpc.client.EventsRequest =
   counters.minter.grpc.client.EventsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

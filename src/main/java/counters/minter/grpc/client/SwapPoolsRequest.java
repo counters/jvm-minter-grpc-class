@@ -69,6 +69,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -93,7 +95,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEIGHT_FIELD_NUMBER = 1;
   private long height_;
   /**
-   * <code>uint64 height = 1 [json_name = "height"];</code>
+   * <code>uint64 height = 1;</code>
    * @return The height.
    */
   @java.lang.Override
@@ -104,7 +106,7 @@ private static final long serialVersionUID = 0L;
   public static final int ORDERS_FIELD_NUMBER = 2;
   private boolean orders_;
   /**
-   * <code>bool orders = 2 [json_name = "orders"];</code>
+   * <code>bool orders = 2;</code>
    * @return The orders.
    */
   @java.lang.Override
@@ -435,7 +437,7 @@ private static final long serialVersionUID = 0L;
 
     private long height_ ;
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return The height.
      */
     @java.lang.Override
@@ -443,7 +445,7 @@ private static final long serialVersionUID = 0L;
       return height_;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @param value The height to set.
      * @return This builder for chaining.
      */
@@ -454,7 +456,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * <code>uint64 height = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeight() {
@@ -466,7 +468,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean orders_ ;
     /**
-     * <code>bool orders = 2 [json_name = "orders"];</code>
+     * <code>bool orders = 2;</code>
      * @return The orders.
      */
     @java.lang.Override
@@ -474,7 +476,7 @@ private static final long serialVersionUID = 0L;
       return orders_;
     }
     /**
-     * <code>bool orders = 2 [json_name = "orders"];</code>
+     * <code>bool orders = 2;</code>
      * @param value The orders to set.
      * @return This builder for chaining.
      */
@@ -485,7 +487,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool orders = 2 [json_name = "orders"];</code>
+     * <code>bool orders = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrders() {
