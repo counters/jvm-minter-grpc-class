@@ -3,15 +3,12 @@ import com.google.protobuf.gradle.*
 
 plugins {
     kotlin("jvm") version "1.5.20"
-//    application
     id("com.google.protobuf") version "0.9.1"
     `maven-publish`
 }
-//val grpcKotlinVersion = "1.3.0"
-//val coroutinesVersion = "1.6.4"
 
 group = "counters"
-version = "1.2.1"
+version = "1.3.2"
 
 repositories {
     mavenCentral()
@@ -81,9 +78,3 @@ protobuf {
     }
     generatedFilesBaseDir = "$projectDir/src/generated"
 }
-
-/*
-application {
-    mainClass.set("MainKt")
-}
-*/
