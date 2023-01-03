@@ -846,7 +846,7 @@ message TransactionResponse {
     Coin gas_coin = 9;
     string type_hex = 17;
     enum Type {
-        _ = 0;
+        NULL = 0;
         Send = 1;
         SellCoin = 2;
         SellAllCoin = 3;
